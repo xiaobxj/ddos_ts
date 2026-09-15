@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "scope": "HTTP, concurrency, read-only metrics and real preclose worker; no browser automation available"
+}

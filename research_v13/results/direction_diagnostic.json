@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-11T06:13:48.084845+00:00",
+  "post_result_diagnostic": true,
+  "additional_fitting": false,
+  "new_predictions": false,
+  "outer_optimal_alpha_estimated": false,
+  "identity": "For alpha>0, m+alpha*(p-m)>0 iff p>m*(1-1/alpha). All outer training means are positive.",
+  "input_sha256": "5907ebbe46a3242b6f9888d6ca56907dddb9af1ef76f421a2d0f6cbf23dd8f18",
+  "files": {
+    "direction_changes.csv": "49e7fb388af604a38cd8cc08b3eb76bf38392049fc28dea700efc516bcb70401",
+    "implied_direction_thresholds.csv": "1803e3619e9136c61bdb883413f529c0f13d412814955532473d963b29693df3"
+  }
+}

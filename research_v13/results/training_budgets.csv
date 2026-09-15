@@ -1,0 +1,4 @@
+cutoff,train_n,epochs,seeds,steps_per_epoch,last_batch_n,total_steps_all_seeds,presentations_all_seeds
+2014-12-31,1077,20,3,9,53,540,64620
+2015-12-31,1190,20,3,10,38,600,71400
+2016-12-31,1434,20,3,12,26,720,86040

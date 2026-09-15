@@ -1,0 +1,11 @@
+{
+  "status":"FAILED_BEFORE_FORMAL_TRAINING",
+  "phase":"contract12.py: repeat restoration of a serialized optimizer snapshot",
+  "error":"common12.restore_payload optimizer fingerprint assertion on second restoration of an in-memory snapshot",
+  "diagnosis":"PyTorch AdamW load_state_dict can retain the saved CPU step tensor by reference. Further updates of the restored optimizer mutated the in-memory source snapshot's counter. A minimal CPU probe showed identical counter storage and saved_step changing from1 to2 after stepping only the restored optimizer.",
+  "completed_contract_checks":"Causal arrays/scales, literal legacy update parity, first serialized restart parity and dropout audit isolation reached their assertions successfully before this failure.",
+  "formal_reconstructions":0,
+  "formal_continuations":0,
+  "new_validation_predictions":0,
+  "correction":"Deep-copy the optimizer state at load_state_dict and assert the loaded source snapshot remains immutable after resumed updates. Preserve this complete preflight directory, then freeze a fresh study with identical data, schedules, seeds, budgets and endpoints."
+}

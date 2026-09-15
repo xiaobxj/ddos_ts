@@ -1,0 +1,134 @@
+[
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_clip",
+    "reference": "learned_probe",
+    "metric": "brier",
+    "difference": 0.0005037986898636515,
+    "ci95_low": -0.00013354264518089238,
+    "ci95_high": 0.00114990122431422,
+    "p": 0.12868713128687131,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_clip",
+    "reference": "learned_probe",
+    "metric": "direction_error",
+    "difference": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.0,
+    "p": 1.0,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw25_clip",
+    "reference": "raw25_probe",
+    "metric": "brier",
+    "difference": -0.008416750122571948,
+    "ci95_low": -0.022613005729142478,
+    "ci95_high": 0.001173082891284721,
+    "p": 0.15158484151584842,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw25_clip",
+    "reference": "raw25_probe",
+    "metric": "direction_error",
+    "difference": 0.0,
+    "ci95_low": -0.016666666666666666,
+    "ci95_high": 0.016666666666666666,
+    "p": 1.0,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_clip",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.012798426511056702,
+    "ci95_low": -0.0035548154955311884,
+    "ci95_high": 0.029402276075284024,
+    "p": 0.12838716128387162,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw25_clip",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.03383671287806547,
+    "ci95_low": 0.013185180077134916,
+    "ci95_high": 0.05561537432311026,
+    "p": 0.0014998500149985001,
+    "holm_adjusted_p": 0.017998200179982
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_clip",
+    "reference": "learned_probe",
+    "metric": "brier",
+    "difference": -9.886073333307144e-05,
+    "ci95_low": -0.0005872316365165281,
+    "ci95_high": 0.00041178337717505013,
+    "p": 0.7015298470152985,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_clip",
+    "reference": "learned_probe",
+    "metric": "direction_error",
+    "difference": -0.014184397163120567,
+    "ci95_low": -0.03546099290780142,
+    "ci95_high": 0.0,
+    "p": 0.12098790120987901,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw25_clip",
+    "reference": "raw25_probe",
+    "metric": "brier",
+    "difference": -0.0018787698164627795,
+    "ci95_low": -0.0058999439240891875,
+    "ci95_high": 0.0012524868168539728,
+    "p": 0.30056994300569945,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw25_clip",
+    "reference": "raw25_probe",
+    "metric": "direction_error",
+    "difference": -0.014184397163120567,
+    "ci95_low": -0.04964539007092199,
+    "ci95_high": 0.014184397163120567,
+    "p": 0.39316068393160686,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_clip",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": -0.006761445500795724,
+    "ci95_low": -0.022820150847980843,
+    "ci95_high": 0.008536493634341853,
+    "p": 0.39376062393760625,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw25_clip",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.0021954832560972955,
+    "ci95_low": -0.010214992652667959,
+    "ci95_high": 0.015439101676364846,
+    "p": 0.7369263073692631,
+    "holm_adjusted_p": 1.0
+  }
+]

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\ddos_v3\research_v26\contract26.py", line 61, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\ddos_v3\research_v26\contract26.py", line 58, in main
+    d=data_contract();s=synthetic();old=inherited_contract();pd.DataFrame(old).to_csv(OUT/'inherited_recipe_parity.csv',index=False)
+  File "D:\ddos_v3\research_v26\contract26.py", line 10, in data_contract
+    assert (w[:,:4]>0).all() and (w[:,4]>=0).all() and (w[:,1]>=np.maximum(w[:,0],w[:,3])).all() and (w[:,2]<=np.minimum(w[:,0],w[:,3])).all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+EXIT_CODE=1

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "unit_tests": 8,
+  "predictions": 5168,
+  "variants": 19,
+  "model_variants": 12,
+  "scored_weekly_observations": 272,
+  "validation_weekly_observations": 141,
+  "refit_folds_checked": 212,
+  "old_files_preserved": 81,
+  "executed_core_source_hashes_match": true,
+  "labels_recomputed_from_frozen_opens": true,
+  "all_folds_purged": true,
+  "rolling_window_boundaries_match": true,
+  "old_backtests_reconciled": true,
+  "daily_weekly_wealth_reconciled": true,
+  "cost_monotonicity": true,
+  "validation_selection_recomputed": true,
+  "chosen_pipeline": "f_multi_exp_quarter",
+  "checked_utc": "2026-09-09T09:54:41.469155+00:00"
+}

@@ -1,0 +1,114 @@
+{
+  "selected_lambdas": {
+    "a_close_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009571336929100162,
+      "return_rmse": 0.03093757736006516,
+      "feature": "legacy",
+      "model": "ridge",
+      "memory": 0,
+      "cadence": "annual"
+    },
+    "b_exec_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009582620060706685,
+      "return_rmse": 0.030955807307687332,
+      "feature": "legacy",
+      "model": "ridge",
+      "memory": 0,
+      "cadence": "annual"
+    },
+    "c_econ_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009346636241669324,
+      "return_rmse": 0.0305722688750268,
+      "feature": "econ",
+      "model": "ridge",
+      "memory": 0,
+      "cadence": "annual"
+    },
+    "d_multi_exp_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009388566601553151,
+      "return_rmse": 0.030640767943302515,
+      "feature": "multi",
+      "model": "ridge",
+      "memory": 0,
+      "cadence": "annual"
+    },
+    "e_adaptive_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009407029214143673,
+      "return_rmse": 0.03067088067555882,
+      "feature": "adaptive",
+      "model": "ridge",
+      "memory": 0,
+      "cadence": "annual"
+    },
+    "f_multi_exp_quarter": {
+      "lam": 10.0,
+      "criterion": 0.0009340237316456947,
+      "return_rmse": 0.030561801838990037,
+      "feature": "multi",
+      "model": "ridge",
+      "memory": 0,
+      "cadence": "quarter"
+    },
+    "g_multi_3y_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009717038227313431,
+      "return_rmse": 0.031172164229186,
+      "feature": "multi",
+      "model": "ridge",
+      "memory": 3,
+      "cadence": "annual"
+    },
+    "h_multi_5y_annual": {
+      "lam": 10.0,
+      "criterion": 0.0009471990327817157,
+      "return_rmse": 0.030776598785143813,
+      "feature": "multi",
+      "model": "ridge",
+      "memory": 5,
+      "cadence": "annual"
+    },
+    "i_multi_3y_quarter": {
+      "lam": 10.0,
+      "criterion": 0.0009697969754958844,
+      "return_rmse": 0.031141563472245327,
+      "feature": "multi",
+      "model": "ridge",
+      "memory": 3,
+      "cadence": "quarter"
+    },
+    "j_multi_5y_quarter": {
+      "lam": 10.0,
+      "criterion": 0.0009420817521151531,
+      "return_rmse": 0.030693350291474426,
+      "feature": "multi",
+      "model": "ridge",
+      "memory": 5,
+      "cadence": "quarter"
+    },
+    "k_logit_exp_annual": {
+      "lam": 1.0,
+      "criterion": 0.6839870981804353,
+      "return_rmse": 0.030463314172184956,
+      "feature": "multi",
+      "model": "logistic",
+      "memory": 0,
+      "cadence": "annual"
+    },
+    "l_logit_5y_quarter": {
+      "lam": 10.0,
+      "criterion": 0.6850661640049165,
+      "return_rmse": 0.030648460716733127,
+      "feature": "multi",
+      "model": "logistic",
+      "memory": 5,
+      "cadence": "quarter"
+    }
+  },
+  "validation_selected_pipeline": "f_multi_exp_quarter",
+  "selected_before_development": "2026-09-09T09:50:40.518064+00:00"
+}

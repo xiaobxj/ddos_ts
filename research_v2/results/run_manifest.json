@@ -1,0 +1,319 @@
+{
+  "started_utc": "2026-09-09T09:50:20.805831+00:00",
+  "protocol": {
+    "experiment": "CSI300 follow-up: execution label, economic representation, rolling refits",
+    "version": 2,
+    "classification": "development walk-forward; 2021-2026 outcomes have been inspected in v1, not a virgin holdout",
+    "data": "reuse unchanged research/data frozen Tencent OHLCV snapshots, end 2026-08-31",
+    "evaluation_anchors": "exactly the 272 v1 adaptive_normalized Friday anchors, 2021-01-08 through 2026-08-21",
+    "lookback": 125,
+    "quality": "keep calendar rows; exclude training observations whose 125 input bars, close label interval, or execution label interval contain flagged invalid OHLC bars",
+    "execution_label": "open after next observed same-weekday signal / open after current signal - 1; for evaluated Fridays this is exactly next Friday rebalance open-to-open",
+    "daily_training": "all weekdays; next same weekday creates analogous weekly open-to-open labels; all label endpoints must be observed by training cutoff",
+    "paired_training_samples": "close-return and execution-return arms share the intersection of completed, valid close and execution labels",
+    "close_label": "close[t+5]/close[t]-1; bridge arm separating direct-return target from v1 normalized-price target",
+    "validation": "rolling simulation 2018-01-01 to 2020-12-31; validation labels must end by 2020-12-31; tune only here",
+    "regularization": "min mean squared loss + lambda*||coef||^2; n-scaled penalty for comparable strength across window sizes",
+    "lambdas": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "lambda_selection": "lowest validation execution-return RMSE for ridge; lowest validation log loss for logistic; ties favor stronger penalty",
+    "pipeline_selection": "lowest validation execution-return RMSE among economic/multiscale/adaptive ridge candidates, excluding legacy patch arms; freeze before development predictions are evaluated",
+    "legacy_features": "unchanged v1 normalized-adaptive 700-coordinate patch representation, using saved annual P0; validation uses saved pre-2018 P0",
+    "economic_base": "75 coordinates: last 5 candles x 8 economic channels plus 7 summaries at lengths 5/10/20/60/125",
+    "economic_channels": [
+      "log close return",
+      "log opening gap",
+      "log candle body",
+      "log high/low range",
+      "log upper shadow",
+      "log lower shadow",
+      "log volume relative to trailing <=20 bars inside window",
+      "close location within candle"
+    ],
+    "boundary": "first input bar's return and gap set to zero because preceding close is outside 125-bar window; volume average uses only currently observed prefix within the window",
+    "economic_summaries": [
+      "sum log returns",
+      "return std",
+      "root mean squared downside return",
+      "mean high/low log range",
+      "mean relative log volume",
+      "trailing close drawdown",
+      "current log close minus trailing mean log close"
+    ],
+    "multiscale": "append 4 statistics (sum returns, return std, mean range, mean relative log volume) for right-aligned fixed 5/10/20-day partitions: 180 coordinates; total 255",
+    "economic_adaptive": "append 4 economic statistics plus duration/end-position/valid mask for <=25 annual-P0 adaptive-normalized segments: 175 coordinates; total 250",
+    "prototype_schedule": "legacy and economic-adaptive arms use unchanged v1 annual prototypes for 2021+; fixed pre-2018 prototype during validation; other arms do not use P0",
+    "refit_factors": {
+      "memory": [
+        "expanding",
+        "3 calendar years",
+        "5 calendar years"
+      ],
+      "cadence": [
+        "annual",
+        "quarterly"
+      ]
+    },
+    "quarterly_cutoff": "last calendar day before quarter; all training label endpoints <= cutoff",
+    "feature_scaler": "training rows only per refit; constants sd=1; no test clipping or normalization fitted on test distribution",
+    "probability_comparator": "L2 logistic regression on multiscale features, expanding annual and rolling-5y quarterly; position p_up>0.5; forecast return uses p_up*training_mean_up + (1-p_up)*training_mean_nonup",
+    "cost_bps": [
+      0,
+      5,
+      10,
+      20
+    ],
+    "execution": "same v1 next-open, persistent long/cash positions, terminal liquidation 2026-08-31; price-index proxy with hypothetical one-way friction",
+    "threshold_diagnostic": "validation-selected ridge pipeline only, fixed entry thresholds 0/10/20/40 bps; set long iff predicted return exceeds threshold; no test-selected threshold",
+    "selection_seed": 20260909,
+    "bootstrap": {
+      "block_observations": 8,
+      "replicates": 10000,
+      "seed": 20260910
+    },
+    "inference": "paired moving-block bootstrap; all improvement claims exploratory; Holm-adjust mean-squared-error p-values across prespecified ridge comparisons",
+    "prespecified_comparisons": [
+      [
+        "b_exec_annual",
+        "a_close_annual"
+      ],
+      [
+        "c_econ_annual",
+        "b_exec_annual"
+      ],
+      [
+        "d_multi_exp_annual",
+        "c_econ_annual"
+      ],
+      [
+        "e_adaptive_annual",
+        "c_econ_annual"
+      ],
+      [
+        "e_adaptive_annual",
+        "d_multi_exp_annual"
+      ],
+      [
+        "f_multi_exp_quarter",
+        "d_multi_exp_annual"
+      ],
+      [
+        "g_multi_3y_annual",
+        "d_multi_exp_annual"
+      ],
+      [
+        "h_multi_5y_annual",
+        "d_multi_exp_annual"
+      ],
+      [
+        "i_multi_3y_quarter",
+        "g_multi_3y_annual"
+      ],
+      [
+        "j_multi_5y_quarter",
+        "h_multi_5y_annual"
+      ]
+    ],
+    "scope": "complete proposed next round of target/feature/training ablations plus probability and threshold diagnostics; no new price downloads, no pretrained Kronos/Crossformer, no account or deployment actions"
+  },
+  "methods": [
+    {
+      "name": "a_close_annual",
+      "feature": "legacy",
+      "target": "close_return",
+      "memory": 0,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "b_exec_annual",
+      "feature": "legacy",
+      "target": "exec_return",
+      "memory": 0,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "c_econ_annual",
+      "feature": "econ",
+      "target": "exec_return",
+      "memory": 0,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "d_multi_exp_annual",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 0,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "e_adaptive_annual",
+      "feature": "adaptive",
+      "target": "exec_return",
+      "memory": 0,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "f_multi_exp_quarter",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 0,
+      "cadence": "quarter",
+      "model": "ridge"
+    },
+    {
+      "name": "g_multi_3y_annual",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 3,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "h_multi_5y_annual",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 5,
+      "cadence": "annual",
+      "model": "ridge"
+    },
+    {
+      "name": "i_multi_3y_quarter",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 3,
+      "cadence": "quarter",
+      "model": "ridge"
+    },
+    {
+      "name": "j_multi_5y_quarter",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 5,
+      "cadence": "quarter",
+      "model": "ridge"
+    },
+    {
+      "name": "k_logit_exp_annual",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 0,
+      "cadence": "annual",
+      "model": "logistic"
+    },
+    {
+      "name": "l_logit_5y_quarter",
+      "feature": "multi",
+      "target": "exec_return",
+      "memory": 5,
+      "cadence": "quarter",
+      "model": "logistic"
+    }
+  ],
+  "protocol_sha256": "5fa0126438c5a521b9ea8539b9fc3e8312e17038a32e40a6484d546c95ec3e4d",
+  "code_sha256": {
+    "core.py": "076c6957c28660b5b529a8a28679e478f3a52e2b11c5684e7df11facef18bda3",
+    "run.py": "5d5d42b23eafb875619b372556c9bee7d81aa7bb6c1dd126edb0a43cfa16bcd5",
+    "test_core.py": "afe3cd5ed92dffd5cbb285e3bdcca18682323d93855d26e1bb8bf34b24e88f15"
+  },
+  "v1_sha256": {
+    "download_data.py": "8296888faedd27bc45d5790d6934cc6a12d1b6c54a7780dbd08bbd8a9b7a7596",
+    "download_tencent.py": "70ef30f31b4a5280d55a30b3549ef897f08b644efe77755d0c029aa2fcf3c067",
+    "evaluate.py": "7fa9bec6f78b02560c8858f945d8fb12775ae37deada7fb86d0f8c67dd7b8373",
+    "make_report.py": "42d44565d3abebbeae71d6725f0ea4121987858bfa54d02b1218d45e082b672f",
+    "probe_data.py": "253d06982d484756e973ac4a35fa78fd8831bc3b84e55d80ae5098f147a91516",
+    "protocol.json": "cd297fb273a682eb05872972af0d3d44fc8580f2683f9d53427c888babdcf318",
+    "protocol_six_channel_draft.json": "c62ddfca2e878b94691a872bc1d2f6e09669dc1b7e57ba8b82f113cbb0e66517",
+    "README.md": "3aea523d31468dc6791c53badb7788b73aaea590a7b4e6db6561b14c053ec755",
+    "run_experiment.py": "d523770803697fc7a510574c89fac8110b4ea486c5d46c2f2d3f48bcf265b2f7",
+    "segmentation.py": "e742213965a79966c57f08ac4a03cf8b38218ca053387b6578de4a927b5ebaa8",
+    "test_invariants.py": "1ad543890c1fd785067f009aa2cbcf72308f8c70736364fd356453d7fd367ae6",
+    "verify_results.py": "e4469937fbcede10a9f67120e02752c21d16c7eff45439d913e4d7992f79ea80",
+    "data\\0_399001.csv": "bca32527c6a96debd808281c1fa2da8b5a383c66dd4103c70e000d05bb22c61e",
+    "data\\0_399001_tencent_2010.json": "eed62ddc0d6ff9231f26efa3216cfbf88a94130d35205ed5ff826b40b4de7ece",
+    "data\\0_399001_tencent_2015.json": "7ee2cad937b83b4a79c78222ad8d23cd14677358e0abc501826802a21bc58b33",
+    "data\\0_399001_tencent_2020.json": "ac4518abbdfc094278c83eaef263451a4416d8dd5b750297a30badf53c7e8795",
+    "data\\0_399001_tencent_2025.json": "3a0578e68d80a74036e0e027f3e3b4b61032842bfd067e1ece6894de460e9cc5",
+    "data\\0_399005.csv": "003acd067e6769c0ff9419af4cb2676d6cc653d6d50482ef5e7d17664f35d736",
+    "data\\0_399005_tencent_2010.json": "5f82dec764583813a4cafeb29191c367be49beba555656fe9212e3e2f2746411",
+    "data\\0_399005_tencent_2015.json": "c97ea5f1a1d3ba923862b6f42768158734f7abc3f0c14b06bf8827096a35e78c",
+    "data\\0_399005_tencent_2020.json": "c47b7d85b7dd52c6d928d7935d84acb64a5effbdbf4b87b38de0422377419353",
+    "data\\0_399005_tencent_2025.json": "1a618b714c1e6a1a6df1984052e53d8b2c68c35bb8e1e80387c03502b9f92217",
+    "data\\0_399006.csv": "ea85b97a32c64e2bd673cf9d4d0755c6b6813146aaa91c050120f14e7439263e",
+    "data\\0_399006_tencent_2010.json": "be52ee7c44f132e0ff0cf932276eb96c3e68c36bb31e1063631887ecce9b5d06",
+    "data\\0_399006_tencent_2015.json": "4566cb518bb2959ab59869e3a9423c3e099ee10708a02655de84165788c85d96",
+    "data\\0_399006_tencent_2020.json": "cbd0f86232437c6849013ca536d2ceac1f790393d64da5d075cc504c7f2e931d",
+    "data\\0_399006_tencent_2025.json": "650162bde0f5f928655bc6de5f7c491d24d84e6ef61ce97b2ae84e30ca4cdce6",
+    "data\\1_000001.csv": "9ce4f09c62b7b05a15563fd1d04d7876ddbb20bc9dbc7bc60afa5003b06ddabb",
+    "data\\1_000001_tencent_2010.json": "008462958f3b646e413805a02bc83ed5ed477cf1b07ecfc41a0702bdad1cc2c6",
+    "data\\1_000001_tencent_2015.json": "a1a1be7f0d84d54e0aa4cfed31cf0ba0295e5575d09778e9c2575cb47eb3f1d1",
+    "data\\1_000001_tencent_2020.json": "df3e5b2e8cc353267ff57d90fad7f96fd219c84a2c77885a1877a29253ddfc41",
+    "data\\1_000001_tencent_2025.json": "02e2ca1f0ec1a48cd8796e8529e59df337f5a9d75abd9e7ef39d7717bd7dca72",
+    "data\\1_000016.csv": "df67b2eed46516f52e5c583599e9ef56d4b901de618eaaf94dca53a306e2d554",
+    "data\\1_000016_tencent_2010.json": "5dc1af617d9fb36a48938dbfc79e1fcf35b46dc4b205b327acbc2447c40fbc94",
+    "data\\1_000016_tencent_2015.json": "1372652fbd85947f05c16a29d386cf801d1fe047d2074468b08cfa4a4e98e5cc",
+    "data\\1_000016_tencent_2020.json": "21f16cde2dd416fe2086ec64e43043c6c05e81d08779aff4c92c370f33099b39",
+    "data\\1_000016_tencent_2025.json": "2f133da0d9bd5e156753323c68a502d1ff8e846dec974a3eaad43c3dc6662451",
+    "data\\1_000300.csv": "e3a1eddea03ce5c24d50068b4ef68ba8dfea257c92c8c27a314e1b0e8a90ac86",
+    "data\\1_000300_tencent_2010.json": "caa3d0d445445716f64e7c5c24f5a95e2a85a75db1830e2ce618d862e769a531",
+    "data\\1_000300_tencent_2015.json": "2fe5bc86a4dd3dc3b330841f3ad3c3db111dee2864297a10b9a1c8141975324e",
+    "data\\1_000300_tencent_2020.json": "6dc3a6ebb9f4035da5ee2c49dee6c2109e8fb0b0600e28698ce69908d8b9c95e",
+    "data\\1_000300_tencent_2025.json": "ee353f59cfc8c9027663907e3fede32d57b2f7998402908ed0b626c0a606047b",
+    "data\\1_000852.csv": "987bd0b2b4328f1221fb95f6693bfe6f707c29c4d8c5771caab844820e66f761",
+    "data\\1_000852_tencent_2010.json": "d78563d28bf8d9af56b7817ea9205bfd7be7ed422a7f775900a701ab49a137e1",
+    "data\\1_000852_tencent_2015.json": "a2ac807bac9a27f4c30f121dedd66c7c29a0f37b75aced19bafe956c00f492d6",
+    "data\\1_000852_tencent_2020.json": "13b6246b5bbe08bcc019a489b9fd07ddde150455556db96669ef4140adce508a",
+    "data\\1_000852_tencent_2025.json": "ac036a27cfe7b39d2aaad1cea761c577ba9e733341d259aae721cc573386509f",
+    "data\\1_000905.csv": "cf05d31eeeff6f5f44bcfbfcd89e4870181d63fef816d0c20c9292098593db33",
+    "data\\1_000905_tencent_2010.json": "36cf4ff8f34620ba6775eeed3c45efc5698aa5918b427cbc08466fa5f23301d4",
+    "data\\1_000905_tencent_2015.json": "7a29e80c83cb2ddbb6842c6fce9dfc9200f94960d328906dc773c5bd7fdad024",
+    "data\\1_000905_tencent_2020.json": "fb28e95e16c57f56f662047a25439104126e52185952c5f3e64ebd7de20bdb90",
+    "data\\1_000905_tencent_2025.json": "e161348963bec41942c1e6a0f7c3a6b560c98b0f5b036695009f167b2239bc54",
+    "data\\manifest.json": "3d77e4cedc6a06498c3b81b7b320d9679468dd47e8ab87096a96ead6ab5e3abd",
+    "results\\bootstrap_block_sensitivity.json": "3f8dbdd7a79145d30f232ac57c54267955542ebe6b442f4126ffe325db6643c1",
+    "results\\cost_sensitivity.csv": "3e1691f5c390858b7be4610a9ac12bfb3e23fb1dbe781a8883edee0f4b562521",
+    "results\\delivery_manifest.json": "be889b30191977fd07bfd66f7c6aac830863151b4b3bab9411da824aa8723c86",
+    "results\\equity_curves_10bps.csv": "d6d96be4a27ef8dd50c11fb1b26ea961cd21067cf64a1c4cd04b128c7235809b",
+    "results\\evaluation_audit.json": "69723af00865b3fad111c3d024843f3b53339f0a088a284ac1844eb7d3e5664e",
+    "results\\experiment_overview.png": "9820a5dcc18cf9bd1c35e5e72c38d777031883c548acdc32dfaaa17a2f742da3",
+    "results\\folds.json": "6caac8553ebd822f7aa3fdb1b140185dbb84eb6d1dc8190383f6adeb47535125",
+    "results\\length_bias_summary.json": "4e45da1f42a0362bf4558a15b15e579d20a9c5fa0d44ac8e341f0c4e61ae7e2a",
+    "results\\metrics.csv": "c28b951dfa3807b664a0e0a2f7f29b68055ae27c4961c62c392b9a4ca0461e88",
+    "results\\paired_statistics.json": "5e1a5b87431f5163d6ec50e3c213017fbd634165caf0c258a212e9463ead8f5e",
+    "results\\predictions.csv": "fc7c0e8f18ee28f095bb84a9e26ff10400dea757b024212d41dbcdd34d5920d2",
+    "results\\prototypes_2021.npz": "63e0aefd6c3d5bd070adeb1f9e6748e4d9b41e0d10035cd4006edfb91833cd76",
+    "results\\prototypes_2022.npz": "0dc5e384e4e0a833fcbf2410ad95971f006a9dba2b6f7334480d584868d7e2bb",
+    "results\\prototypes_2023.npz": "472fd4d998564424c6a40dcbdfe8a3739fe6097e386c61b9f9ffd8f5969bfc6a",
+    "results\\prototypes_2024.npz": "1fd5b2ae7fef2623c4c15b56133c845da553da5da4e4a56c480f85a1537cfb55",
+    "results\\prototypes_2025.npz": "6216b4452b0889f362ba663b336d0d05466dcc24068323bebc1bb1992250a7a1",
+    "results\\prototypes_2026.npz": "1372230922b0972d66a1e81381dda726d8d9e6188dc7cdf66fe8a6b3daef5e23",
+    "results\\run_manifest.json": "3bcb0cbc97c07aa07f0b2b8e12ce100a0c4cc5dc0fec75b10c93ff03a688807f",
+    "results\\segmentation_diagnostics.csv": "285aeec88cee0d1cfdc78b42ebf05582e64b5925b6be97bc734edd0a77ede046",
+    "results\\segmentation_example.png": "647746f9d4e5e7e47dce0efa0a4bd5559f02d7cbe732e139d29e62cf0f10c477",
+    "results\\segmentation_examples.json": "8a62c8e1c594f12023d95909117f04d0d9e4fcbb1b5f059354f848673256faa8",
+    "results\\selected_alphas.json": "b248ab910041c8728deddfeda0bf682d804f64e723c21d44985043f6c6b3787a",
+    "results\\test_results.txt": "0fa9a304507ce194d348ad0fc5af6444637c9f576c7ca077f998bd64442b7b66",
+    "results\\validation.csv": "e98842500b2773065b6372a622464f3a6d489c984dfe9df27cb5dd058fed8ba6",
+    "results\\validation_prototypes.npz": "984c3eb5647e8738d634391806926c07951eca832a3dbe8d9cd0f8d83f57da24",
+    "results\\verification.json": "15df7ba010ea757fc296dc9d208ce7e949e542bdd79a1d30c3db3a3f9660a827",
+    "results\\yearly_metrics.csv": "5abd4f399a42b23872683437ef19f1ece7215fa28121df3d7a6f80766bf11c93",
+    "results\\\u65b9\u6cd5\u6d4b\u8bd5\u62a5\u544a.md": "072ba9decb898c0b365200670bd7f36093207b193ba882d591fea91d5d0ef38b"
+  },
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "F:\\aido\\artifacts\\experiments\\mse_tv\\regression\\511520-recovery-backtest\\20260826_memory_parity_r1\\runtime\\python313\\python.exe",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.5.2",
+  "pandas": "3.0.5",
+  "finished_utc": "2026-09-09T09:51:16.118826+00:00",
+  "elapsed_seconds": 55.31316804885864,
+  "v1_preserved": true
+}

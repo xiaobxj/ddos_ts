@@ -1,0 +1,122 @@
+[
+  {
+    "job": "learned_2014-12-31_20260910",
+    "cache_file": "research_v16\\cache\\validation_learned_2014-12-31_20260910.npz",
+    "cache_sha256": "518a5a6051d9f8c8b2a005797dbc6fe7b1d60225f6cfc075b2fdffcae06d129c"
+  },
+  {
+    "job": "learned_2014-12-31_20260911",
+    "cache_file": "research_v16\\cache\\validation_learned_2014-12-31_20260911.npz",
+    "cache_sha256": "2127240169e7a39bf681d71aa12a11c874963f3373d3b646488bd2117ce6475f"
+  },
+  {
+    "job": "learned_2014-12-31_20260912",
+    "cache_file": "research_v16\\cache\\validation_learned_2014-12-31_20260912.npz",
+    "cache_sha256": "a23f5a0650b6d73dd33e402bc5f3f00bd1c46d70beb7c841df890f2205b1597f"
+  },
+  {
+    "job": "learned_2015-12-31_20260910",
+    "cache_file": "research_v16\\cache\\validation_learned_2015-12-31_20260910.npz",
+    "cache_sha256": "9db089017ed5811cece06b2461cc878fe09bdda4bf02b44f2066819addd0addd"
+  },
+  {
+    "job": "learned_2015-12-31_20260911",
+    "cache_file": "research_v16\\cache\\validation_learned_2015-12-31_20260911.npz",
+    "cache_sha256": "bafcfd1192f29996ff39cf7fa349b271944fb71b2a75edb9e906c2d1866b0f36"
+  },
+  {
+    "job": "learned_2015-12-31_20260912",
+    "cache_file": "research_v16\\cache\\validation_learned_2015-12-31_20260912.npz",
+    "cache_sha256": "4702499b85d68e518db58a645063a154ebe88d10e11ad66b9ae429d97eb3336a"
+  },
+  {
+    "job": "learned_2016-12-31_20260910",
+    "cache_file": "research_v16\\cache\\validation_learned_2016-12-31_20260910.npz",
+    "cache_sha256": "3125bc603b9a7e1edb98244b0e40f08afb1516b2a512a64b932dfbc087c792ec"
+  },
+  {
+    "job": "learned_2016-12-31_20260911",
+    "cache_file": "research_v16\\cache\\validation_learned_2016-12-31_20260911.npz",
+    "cache_sha256": "595f3566054d6c56c985694cdad082fa4df50ce0dbe65fab682a359afaaaff43"
+  },
+  {
+    "job": "learned_2016-12-31_20260912",
+    "cache_file": "research_v16\\cache\\validation_learned_2016-12-31_20260912.npz",
+    "cache_sha256": "5437a2fe2e5c1648b4c39d93a81f6b444f4bce22d85b5f88260bbd25dd6e831a"
+  },
+  {
+    "job": "learned_2017-12-31_20260910",
+    "cache_file": "research_v16\\cache\\validation_learned_2017-12-31_20260910.npz",
+    "cache_sha256": "61a6eb94587a02bccf306d942ae89398cfe990c92e21c1fa88dcbf0ee0670d5a"
+  },
+  {
+    "job": "learned_2017-12-31_20260911",
+    "cache_file": "research_v16\\cache\\validation_learned_2017-12-31_20260911.npz",
+    "cache_sha256": "f49950b0720e05055b29aecc1d1ddec6b5631f96f7e9403dbf3843b4ec877c45"
+  },
+  {
+    "job": "learned_2017-12-31_20260912",
+    "cache_file": "research_v16\\cache\\validation_learned_2017-12-31_20260912.npz",
+    "cache_sha256": "43f49847a5e79f5c329dbef6ac5844dc3870be9e783cc98f136e0b7594354a75"
+  },
+  {
+    "job": "learned_2018-12-31_20260910",
+    "cache_file": "research_v16\\cache\\validation_learned_2018-12-31_20260910.npz",
+    "cache_sha256": "65438734699a7e319ccba5acc7e41d8196c7db09247df6fbfe78a1638a8ee372"
+  },
+  {
+    "job": "learned_2018-12-31_20260911",
+    "cache_file": "research_v16\\cache\\validation_learned_2018-12-31_20260911.npz",
+    "cache_sha256": "b07e77edb63fe3804a8b81f35f80ccd5a6e7acfea14ee071073463359d079ee8"
+  },
+  {
+    "job": "learned_2018-12-31_20260912",
+    "cache_file": "research_v16\\cache\\validation_learned_2018-12-31_20260912.npz",
+    "cache_sha256": "8e61aef54e253b53203472808228295bdb2fe8e64067b0ed6012a4e53f788f85"
+  },
+  {
+    "job": "learned_2019-12-31_20260910",
+    "cache_file": "research_v16\\cache\\validation_learned_2019-12-31_20260910.npz",
+    "cache_sha256": "04fc47151383c9f7ace8085c717a3b69464ccdbd9bee2300c9e753eeae0c80da"
+  },
+  {
+    "job": "learned_2019-12-31_20260911",
+    "cache_file": "research_v16\\cache\\validation_learned_2019-12-31_20260911.npz",
+    "cache_sha256": "2195e7628e80f624649d93647e6c9774fdf50cfcc8f5b451ee930ba45aa13489"
+  },
+  {
+    "job": "learned_2019-12-31_20260912",
+    "cache_file": "research_v16\\cache\\validation_learned_2019-12-31_20260912.npz",
+    "cache_sha256": "8222094dc47ace4116d67d96a5e8f1a040e4abc380ad7268a959476e5838b4e2"
+  },
+  {
+    "job": "raw_2014-12-31_-1",
+    "cache_file": "research_v16\\cache\\validation_raw_2014-12-31_-1.npz",
+    "cache_sha256": "b17969031f1866469c9bf6c9459a6bd0488f9048b14b04b37d20287f17400ad4"
+  },
+  {
+    "job": "raw_2015-12-31_-1",
+    "cache_file": "research_v16\\cache\\validation_raw_2015-12-31_-1.npz",
+    "cache_sha256": "0491607eb6409fe188c6a1497594b1b3c056046edde6740ee3f7c42ec8ab4894"
+  },
+  {
+    "job": "raw_2016-12-31_-1",
+    "cache_file": "research_v16\\cache\\validation_raw_2016-12-31_-1.npz",
+    "cache_sha256": "b72bbf1a5e04a8796211fd2981603bbd91a4274828959f6caa1503930a28cd5c"
+  },
+  {
+    "job": "raw_2017-12-31_-1",
+    "cache_file": "research_v16\\cache\\validation_raw_2017-12-31_-1.npz",
+    "cache_sha256": "b27264ce68efc60f038d6dd8f04a0286ae2981cad2f3b603ed312dd03db4060a"
+  },
+  {
+    "job": "raw_2018-12-31_-1",
+    "cache_file": "research_v16\\cache\\validation_raw_2018-12-31_-1.npz",
+    "cache_sha256": "91c4b02a23fda3b72ea53f258e566625b2cdd54a96499ba802df47156b2b695a"
+  },
+  {
+    "job": "raw_2019-12-31_-1",
+    "cache_file": "research_v16\\cache\\validation_raw_2019-12-31_-1.npz",
+    "cache_sha256": "63a7149715becb7ca222dcd813330c7c3b87f89d1d909d35e7f075c64fef032b"
+  }
+]

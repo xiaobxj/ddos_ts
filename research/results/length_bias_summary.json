@@ -1,0 +1,14 @@
+{
+  "raw": {
+    "average_patches": 13.533088235294118,
+    "mean_length": 9.236620483564248,
+    "five_day_share": 0.1749429223744292,
+    "twentyfive_day_share": 0.003424657534246575
+  },
+  "normalized": {
+    "average_patches": 9.419117647058824,
+    "mean_length": 13.27088212334114,
+    "five_day_share": 0.07355371900826446,
+    "twentyfive_day_share": 0.07809917355371901
+  }
+}

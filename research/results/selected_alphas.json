@@ -1,0 +1,8 @@
+{
+  "fixed_5": 100,
+  "fixed_10": 100,
+  "fixed_20": 100,
+  "adaptive_raw": 1000,
+  "adaptive_normalized": 1000,
+  "random_partition": 100
+}

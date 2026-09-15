@@ -1,0 +1,9 @@
+window,method,reference,date,actual_up,candidate_probability,reference_probability,candidate_correct
+extension_2021_2023,learned_order_extension,learned_vol_interaction,2021-07-23,0,0.49682642277712086,0.5027434609101581,True
+extension_2021_2023,learned_order_extension,learned_vol_interaction,2022-08-19,0,0.5212543680449752,0.4838189295813922,False
+extension_2021_2023,learned_order_offset,learned_vol_interaction,2021-07-23,0,0.4967947366683207,0.5027434609101581,True
+extension_2021_2023,learned_order_offset,learned_vol_interaction,2022-08-19,0,0.5214896914594834,0.4838189295813922,False
+recent_2024_2026,learned_order_extension,learned_vol_interaction,2024-05-17,0,0.49995725800818075,0.5029614057177866,True
+recent_2024_2026,learned_order_extension,learned_vol_interaction,2026-04-17,1,0.49574281855737173,0.5003904794968905,False
+recent_2024_2026,learned_order_offset,learned_vol_interaction,2026-04-17,1,0.4956949017097001,0.5003904794968905,False
+recent_2024_2026,learned_order_offset,learned_order_extension,2024-05-17,0,0.5000789728806496,0.49995725800818075,False

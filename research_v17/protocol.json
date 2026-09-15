@@ -1,0 +1,176 @@
+{
+  "version": 17,
+  "experiment": "Training-only 1%-99% feature winsorization plus causal market-state diagnostics",
+  "scope": "Authorized research-only continuation. All261Friday observations have been inspected in earlier rounds. Design selected after round16 findings; per-fold causality is not an independent holdout. No new data, live actions, trading-profitability test, neural training or claim of full paper replication.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "features": "Reuse all24 hash-verified round16 training and validation feature caches:18 frozen MSE20 decoded representations plus6 deterministic raw25 representations. Same25 coordinates and sources. Retain unmodified native and two probe references exactly. No new representation or target.",
+  "clipping": {
+    "quantiles": [
+      0.01,
+      0.99
+    ],
+    "quantile_method": "linear",
+    "description": "Each coordinate uses its own annual training 1st/99th percentile. Clip training features; compute training mean and population SD after clipping; use those same bounds and moments on future features. Refit all24 logistic heads with the unchanged objective. No percentile/regularization/threshold grid and no probability clipping for prediction."
+  },
+  "standardization": {
+    "sd_floor": 1e-06,
+    "description": "Each head uses its own training-column means and population SDs only. Apply frozen statistics to future rows. No normalization across folds, seed averaging before feature fitting, or rotations."
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "Verify all24heads with an independent objective/gradient; never use alternate coefficients for forecasts."
+  },
+  "market_states": {
+    "purpose": "Diagnostic labels only; states do not enter any classifier, calibration, weighting, threshold, date screening or model switching this round.",
+    "descriptors": {
+      "trend60": "log(C_t/C_(t-60)) divided by max(populationSD of60 close log returns,1e-8)*sqrt(60)",
+      "volatility20": "Population SD of last20 daily close log returns",
+      "range20": "Mean of log(H_s/L_s) over last20 sessions, including signal date",
+      "volume_change20": "log(1+V_t)-log(1+V_(t-20))"
+    },
+    "thresholds": "Fit separately at each cutoff using exactly its matured-label training input rows, without reading the label values: trend terciles 1/3 and2/3; volatility/range/volume medians. Freeze thresholds through the next calendar year. Use <= for the lower cell at a boundary. Annual labels are relative to that fold training distribution, not universal bull/bear labels.",
+    "primary_partition": "Six cells: low/mid/high trend score crossed with low/high20-session volatility.",
+    "secondary_partitions": "Volatility, range and volume-change binary partitions separately. No high-dimensional cross-product, hidden-state smoothing, clustering search or forward-return state definitions.",
+    "partitions": {
+      "trend_volatility": [
+        "low_trend__low_vol",
+        "low_trend__high_vol",
+        "mid_trend__low_vol",
+        "mid_trend__high_vol",
+        "high_trend__low_vol",
+        "high_trend__high_vol"
+      ],
+      "volatility": [
+        "low_vol",
+        "high_vol"
+      ],
+      "range": [
+        "low_range",
+        "high_range"
+      ],
+      "volume": [
+        "low_volume_change",
+        "high_volume_change"
+      ]
+    },
+    "minimum_descriptive_cell_n": 20,
+    "sparse": "Always report every prespecified cell and its count. Cells with n<20 are marked sparse and are not grounds for selecting an expert. One-class cells have undefined balanced accuracy and AUROC. No subgroup significance tests or state-selected aggregate."
+  },
+  "budget": "24 new deterministic Newton fits:18 learned_clip and6 raw25_clip. Complete all24 before any new held-out score. Reuse18 neural states with zero neural training steps.1044new seed/head probability forecasts;1827retained model forecasts;2871model rows and1827ensemble rows=7methods*261dates. Three probabilities averaged for learned_clip; raw25_clip is one head per fold, seed=-1 is a deterministic identifier. Independent solution replay is verification, not another candidate.",
+  "forecasts": "Strict probability>0.5; average probabilities across inherited learned seeds. Native MSE retains its average-return sign and has no probability metrics. No state-conditioned model fitted this round.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_clip",
+      "reference": "learned_probe",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_clip",
+      "reference": "learned_probe",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw25_clip",
+      "reference": "raw25_probe",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw25_clip",
+      "reference": "raw25_probe",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_clip",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw25_clip",
+      "reference": "training_frequency",
+      "metric": "brier"
+    }
+  ],
+  "inference": "12prespecified contrasts=6in each window, candidate-minus-reference losses,negativebetter. Circular8retained-observation blocks,10000replicates,seed20260910 separately for each window; centered two-sided p and Holm across all12. Blocks refer to retained observations, not necessarily8calendar weeks, because exclusions create gaps. Percentile95% intervals descriptive; no coverage claim for fitting, retrospective selection or repeated research. No pooled primary tests.",
+  "descriptive_screen": "Eight strict flags per candidate per window: accuracy beats its unmodified probe, nativeMSE and trainingfrequency; Brier beats its unmodified probe and trainingfrequency; logloss beats trainingfrequency; at least2/3years beat native accuracy; at least2/3years beat frequency Brier. All8 in bothwindows required for a cross-period descriptive pass. Ties fail. No automatic promotion; all dates previously examined.",
+  "shift_diagnostics": "Per-head training and validation coordinate clipping fractions, validation row clipping fractions, before/after maximum standardized distance using clipped training moments, and per-state diagnostics. New clipped bounds do not reconstruct missing training regimes and may remove signal; no causal attribution from error subgroup differences.",
+  "verification": "Freeze and preserve2716old evidence files. Verify scalar descriptor formulas, future/truncated-path invariance, cutoff threshold invariance, quantile order statistics, exact maturity/date masks, and labels absent from state fitting. Independently solve all24 heads with L-BFGS-B; replay new forecasts, old reference equality, metric/confusion/AUROC calculations and12block contrasts. Replay18 inherited neural representations and6raw representations from the original inputs; no weight changes. Recompute all state assignments and nonempty state metrics, including sparse cells."
+}

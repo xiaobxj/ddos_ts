@@ -1,0 +1,32 @@
+[
+  {
+    "cutoff": "2014-12-31",
+    "cache_file": "research_v21\\cache\\validation_hmm_2014-12-31.npz",
+    "cache_sha256": "5e04c1030f55697a86f7fe15cc0d1b6095975e36ad144f56802f6c5cebc595a1"
+  },
+  {
+    "cutoff": "2015-12-31",
+    "cache_file": "research_v21\\cache\\validation_hmm_2015-12-31.npz",
+    "cache_sha256": "ed8e4bbb13493144185c47489a7ac517b586946684c7d1901a980f3fa0be2b79"
+  },
+  {
+    "cutoff": "2016-12-31",
+    "cache_file": "research_v21\\cache\\validation_hmm_2016-12-31.npz",
+    "cache_sha256": "50448117357bcb9b6f16e164273749987d60bc01e6d9e805c009c118a0c3eaf8"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "cache_file": "research_v21\\cache\\validation_hmm_2017-12-31.npz",
+    "cache_sha256": "b46adaa42f141af2cb8445198c6a81bdcb6d00f15637cf0b8fa84795f48b86ba"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "cache_file": "research_v21\\cache\\validation_hmm_2018-12-31.npz",
+    "cache_sha256": "13801ab7347d9555b798e05125c6ea28a0303ff1b2d0255555b3c7177a25c065"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "cache_file": "research_v21\\cache\\validation_hmm_2019-12-31.npz",
+    "cache_sha256": "7b7188c6dc04f4e88698454f8c2e0537f00413005c9be5cfb61a30c11e40883d"
+  }
+]

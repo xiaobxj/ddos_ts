@@ -1,0 +1,22 @@
+{
+  "blobs": {
+    "25204fd884d5787b380a65534e6346b2682149e53f57eb090d1a9c8cdfcb496d.csv": "25204fd884d5787b380a65534e6346b2682149e53f57eb090d1a9c8cdfcb496d"
+  },
+  "key": "2026-09-28T10:30:00+00:00:25204fd884d5787b380a65534e6346b2682149e53f57eb090d1a9c8cdfcb496d",
+  "kind": "snapshot",
+  "payload": {
+    "csv_blob": "25204fd884d5787b380a65534e6346b2682149e53f57eb090d1a9c8cdfcb496d.csv",
+    "end": "2026-09-28",
+    "n": 4066,
+    "provider_vintage": "retrieved snapshot; not an independently notarized point-in-time feed",
+    "source": {
+      "fixture_clock": true,
+      "provider": "SYNTHETIC_TEST_ONLY"
+    },
+    "start": "2010-01-04"
+  },
+  "previous_sha256": "4ca0a22cb47eba9e0c653f7c111f8598b8629d71aae5426a940c3c180b9b20a6",
+  "recorded_utc": "2026-09-28T10:30:00+00:00",
+  "scope": "prospective",
+  "sequence": 5
+}

@@ -1,0 +1,2581 @@
+=== PAGE 1 ===
+TimeMosaic: Temporal Heterogeneity Guided Time Series Forecasting via
+Adaptive Granularity Patch and Segment-wise Decoding
+Kuiye Ding1, Fanda Fan1†, Chunyi Hou2, Zheya Wang3,
+Lei Wang1, Zhengxin Yang1, Jianfeng Zhan1,4
+1Institute of Computing Technology, Chinese Academy of Sciences
+2School of Information Science and Technology, Beijing University of Technology
+3Department of Mathematical Sciences, Durham University
+4University of Chinese Academy of Sciences
+{dingkuiye, fanfanda, wanglei 2011, yangzhengxin, zhanjianfeng}@ict.ac.cn,
+houchunyi@emails.bjut.edu.cn, zheya.wang@durham.ac.uk
+Abstract
+Multivariate time series forecasting is essential in domains
+such as finance, transportation, climate, and energy. How-
+ever, existing patch-based methods typically adopt fixed-
+length segmentation, overlooking the heterogeneity of local
+temporal dynamics and the decoding heterogeneity of fore-
+casting. Such designs lose details in information-dense re-
+gions, introduce redundancy in stable segments, and fail to
+capture the distinct complexities of short-term and long-term
+horizons. We proposeTimeMosaic, a forecasting framework
+that aims to address temporal heterogeneity. TimeMosaic em-
+ploys adaptive patch embedding to dynamically adjust granu-
+larity according to local information density, balancing motif
+reuse with structural clarity while preserving temporal con-
+tinuity. In addition, it introduces segment-wise decoding that
+treats each prediction horizon as a related subtask and adapts
+to horizon-specific difficulty and information requirements,
+rather than applying a single uniform decoder. Extensive eval-
+uations on benchmark datasets demonstrate that TimeMosaic
+delivers consistent improvements over existing methods, and
+our model trained on the large-scale corpus with 321 billion
+observations achieves performance competitive with state-of-
+the-art TSFMs.
+Code— https://github.com/BenchCouncil/TimeMosaic
+1 Instruction
+Multivariate time series forecasting (Yu et al. 2024, 2023;
+Zheng et al. 2023) plays a critical role in numerous real-
+world domains (Qiu et al. 2025a,c), such as finance (Zhu
+et al. 2024a,b), transportation (Shu, Cai, and Xiong 2021),
+climate (Schneider and Dickinson 1974), healthcare (Morid,
+Sheng, and Dunbar 2023), and energy management (Liu
+et al. 2023). These applications require accurate and efficient
+modeling of intricate temporal relationships among multi-
+ple correlated variables. Recently, forecasting methods em-
+ploying patch-based representations have shown remarkable
+performance and have become increasingly prevalent (Chen
+et al. 2024; Jin et al. 2024; Kudrat et al. 2025; Nie et al.
+†Corresponding author: fanfanda@ict.ac.cn.
+Copyright © 2026, Association for the Advancement of Artificial
+Intelligence (www.aaai.org). All rights reserved.
+Existing fixed-length encoding 
+and global decoding ignore 
+temporal heterogeneity
+Our adaptive encoding and 
+segment-wise decoding model 
+temporal heterogeneity
+Input
+PatchEmbed
+Model
+Output
+Input
+Adaptive PatchEmbed
+Model
+Output
+Patch Segment
+ Time Stamp 
+Model Main Bolck
+①
+② ③
+①
+②
+③
+High Information Density
+Low Information Density
+More Codes
+Less Codes
+Existing fixed-length encoding 
+and global decoding ignore 
+temporal heterogeneity
+Our adaptive encoding and 
+segment-wise decoding model 
+temporal heterogeneity
+Input
+PatchEmbed
+Model
+Output
+Input
+Adaptive PatchEmbed
+Model
+Output
+Patch Segment
+ Time Stamp 
+Model Main Bolck
+①
+② ③
+①
+②
+③
+High Information Density
+Low Information Density
+More Codes
+Less Codes
+Figure 1: Comparison between existing fixed-patch models
+and our adaptive patching design, highlighting differences in
+input representation and prediction structure.
+2023). Patch-based approaches excel at capturing localized
+temporal structures and mitigating noise through segmented
+encoding. Recently proposed time series models, such as
+Sundial (Liu et al. 2025), also use patch-based time series
+segmentation to organize event contexts for benchmarking
+time series foundation models. Typically, these methods di-
+vide input sequences into fixed-length patches, implicitly as-
+suming uniform information density and temporal complex-
+ity across the entire sequence.
+However, real-world time series often exhibit significant
+variability in local information density (Huang et al. 2023;
+Warren Liao 2005). Segments characterized by complex or
+abrupt changes inherently contain higher information den-
+sities, whereas smoother or stationary regions possess rel-
+atively lower densities. Current methods employing fixed-
+size temporal segments disregard this inherent variability,
+resulting in inadequate modeling of information-rich re-
+gions and redundant encoding in smoother ones. Beyond
+local variability, empirical evidence (Xie et al. 2025) also
+reveals two key structural properties:motif reuse, charac-
+terized by Zipf-like frequency distributions, andstructural
+arXiv:2509.19406v5  [cs.LG]  5 Jan 2026
+
+=== PAGE 2 ===
+clarity, measured by latent-space separability (see Section 2
+for definitions and illustrations), which further highlight
+a structural limitation of fixed-length patching: it cannot
+simultaneously preserve reusable long-range patterns and
+maintain well-delimited local boundaries. A similar limita-
+tion has been observed in autoregressive image generation,
+such as DQ-V AE (Huang et al. 2023), where fixed-size re-
+gion encodings likewise fail to adapt to diverse structural
+patterns.
+These observations indicate that the limitations of fixed-
+length patching are not incidental but stem from a deeper
+property of time series data:heterogeneity. On the input
+side, local temporal regions vary greatly in complexity and
+information density, which we refer to asencoding hetero-
+geneity. On the output side, forecasting horizons differ in
+both difficulty and information requirements, which we refer
+to asdecoding heterogeneity. Addressing these two dimen-
+sions of heterogeneity is crucial for advancing time series
+forecasting.
+Overall, multivariate time series forecasting faces two
+fundamental challenges:①Encoding heterogeneity.Fixed-
+length segmentation fails to adapt to the variability of local
+temporal complexity, leading to a trade-off between reusing
+long-term motifs and preserving clear structural boundaries.
+②Decoding heterogeneity.Forecasting demands differ
+substantially across horizons: short-term forecasting mainly
+rely on recent local information, while long-term forecast-
+ing require modeling more abstract and uncertain dynamics
+over broader contexts. Existing methods typically overlook
+this asymmetry by applying a single decoder to all horizons.
+To address these two challenges, we proposeTimeMo-
+saic, a novel forecasting framework that integrates adap-
+tive patch embedding with segment-wise decoding. On the
+input side, we design an adaptive granularity patch em-
+bedding strategy inspired by dynamic quantization (Huang
+et al. 2023). Our approach segments input sequences into
+variable-length patches based on local temporal information
+density, balancing motif reuse with structural clarity. Unlike
+prior multi-granularity methods that produce overlapping or
+re-ordered patches, TimeMosaic ensures that each time step
+belongs to exactly one patch, thereby preserving strict tem-
+poral continuity that is essential for forecasting. As illus-
+trated in Figure 1, fixed-length patching overlooks temporal
+heterogeneity: it loses details in information-dense regions
+and introduces redundancy in smooth intervals.
+On the output side, we introduce a segment-wise pre-
+diction framework based on multi-task prompt tuning (Liu
+et al. 2021; Crawshaw 2020a). By treating different hori-
+zons as distinct yet related subtasks, our method equips
+the model with segment-aware prompt embeddings that
+capture horizon-specific difficulty and information require-
+ments without modifying the backbone parameters. This de-
+sign enables specialization across prediction segments, ef-
+fectively leveraging the rich and heterogeneous information
+captured by adaptive patches. As illustrated in Figure 1,
+TimeMosaic adopting segment-wise forecasting that treats
+each horizon as a dedicated subtask.
+We summarized our main contributions as follows:
+16 32 48 64 80 96 112 128 144 160 176 192 208 224 240
+Number of Clusters (K)
+Patch 16
+Patch 32
+Patch 64
+Patch 128
+Patch 256Patch Size
+Zipf Deviation Heatmap
+(Blue=Worse, Red=Better)
+0.5
+0.6
+0.7
+0.8
+16 32 48 64 80 96 112 128 144 160 176 192 208 224 240
+Number of Clusters (K)
+Patch 16
+Patch 32
+Patch 64
+Patch 128
+Patch 256Patch Size
+Silhouette Score Heatmap
+(Blue=Worse, Red=Better)
+0.10
+0.15
+0.20
+0.25
+Figure 2: Zipf deviation and Silhouette score. These results
+are obtained by extracting patches of different lengths from
+a large-scale collection of time series forecasting datasets
+(see Appendix A), followed by K-Means clustering under
+various cluster settings.
+• We proposeTimeMosaic, a novel forecasting framework
+that explicitly addresses both encoding heterogeneity and
+decoding heterogeneity in multivariate time series.
+• We design an Adaptive Patch Embedding module that
+dynamically allocates region-specific patch sizes accord-
+ing to local information density, effectively balancing
+motif reuse with structural clarity.
+• We introduce a segment-wise prompt tuning strategy that
+models horizon-specific difficulty and information re-
+quirements by treating each prediction segment as a dis-
+tinct subtask within a unified multi-task framework.
+• We conduct extensive experiments across 9 real-world
+datasets, showing that TimeMosaic achieves state-of-the-
+art performance in long-term forecasting.
+2 Related Work
+Patch-based Time Series Forecasting.Recent advances
+in time series forecasting have been driven by patch-based
+representations. PatchTST (Nie et al. 2023) first introduced
+temporal patches into Transformer-based models, followed
+by Patchwise (Kudrat et al. 2025), which utilized local
+statistics, and TimeFilter (Hu et al. 2025), which applied
+fine-grained filtration. Time-LLM (Jin et al. 2024) further
+demonstrated the utility of patches in LLM-based forecast-
+ing. However, all these models adopt fixed-length patching,
+assuming uniform temporal complexity and lacking flexibil-
+ity to adapt to local variations.
+To overcome this limitation, multi-granularity patching
+has been explored. PatchMLP (Tang and Zhang 2025) intro-
+duced multiple segment lengths to enrich temporal features,
+while PathFormer (Chen et al. 2024) and DualSG (Ding
+et al. 2025) selected patch sizes based on importance scores
+or maps. Although effective, these methods may break tem-
+poral consistency due to overlapping or misordered patches.
+For instance, coarse patches can appear earlier than fine ones
+
+=== PAGE 3 ===
+in the sequence, distorting input chronology and undermin-
+ing forecasting coherence, see Appendix Figure 7.
+In contrast, our method introduces adaptive patch embed-
+ding with strict temporal alignment, dynamically adjusting
+patch sizes based on local information density while pre-
+serving the original time order.
+Zipf Conformity and Clustering Clarity.Recent re-
+search (Xie et al. 2025) shows that temporal patches in
+time series follow a Zipf-like frequency distribution (Axtell
+2001), exhibit clear clustering properties (measured by Sil-
+houette scores (Rousseeuw 1987)), and display strong se-
+quential dependencies. Zipf conformity reveals the emer-
+gence of reusable temporal motifs, enabling compact repre-
+sentation and pattern reuse, while structural clarity reflects
+how distinctly different temporal patterns can be separated
+in latent space, facilitating stable representation learning and
+reliable generalization.
+Building on these findings, we identify a key trade-off:
+fixed-length segmentation cannot optimize Zipf conformity
+and clustering clarity at the same time. Larger patches cap-
+ture longer recurring patterns and thus improve Zipf con-
+formity, but they blur behavioral boundaries. In contrast,
+smaller patches sharpen clustering clarity, yet they fragment
+long-term patterns and reduce reuse, as shown in Figure 2.
+Autoregressive Forecasting Paradigm.Autoregressive
+(AR) models (Lin et al. 2023; Khaldi et al. 2023; Stankevi-
+ciute, M Alaa, and Van der Schaar 2021) such as RNNs and
+LSTMs (Kong et al. 2025; Yadav and Thakkar 2024) have
+long dominated time series forecasting. Even recent founda-
+tion models (Shi et al. 2025; Liu et al. 2024b; Ansari et al.
+2024) largely follow the AR formulation. However, these
+methods suffer from exposure bias (Ranzato et al. 2016) and
+equal treatment of short- and long-term predictions, despite
+their differing complexity and uncertainty.
+Our approach departs from this paradigm by adopting a
+segment-wise multi-task formulation. This design avoids re-
+cursive error accumulation and allows segment-specific spe-
+cialization, addressing both exposure bias and forecasting
+asymmetry.
+Multi-task Learning and Prompt-based Adaptation.
+Multi-task learning (MTL) (Ruder 2017; Crawshaw 2020b)
+enhances generalization by sharing knowledge across tasks.
+In the context of large language models, it has been applied
+to summarization (Laban et al. 2023), QA (Zhuang et al.
+2023), and sentiment analysis (Zhang et al. 2024; Cao et al.
+2024), often in combination with parameter-efficient meth-
+ods like LoRA (Xia et al. 2024) and prompt tuning (Lester,
+Al-Rfou, and Constant 2021).
+We follow this trend by introducing prompt-based
+MTL into time series forecasting. Compared to basis-
+reconstruction methods such as TimeBase (Huang et al.
+2025), which rely on strong periodicity assumptions and
+static segment structures, our model learns dynamic,
+segment-aware prompts for flexible and efficient temporal
+adaptation. This enables better modeling of local hetero-
+geneity without assuming low-rank structure or modifying
+the shared encoder.
+3 Preliminaries and Definition
+Preliminaries.In multivariate time series forecasting, we
+are given a historical sequenceX∈R C×L, whereCis the
+number of channels andLis the number of past timesteps.
+The goal is to predict the futureHsteps, denoted asY∈
+RC×H . A forecasting model learns a mappingf:R C×L→
+RC×H from past observations to future values.
+Temporal heterogeneity.Temporal heterogeneity refers
+to the non-uniform characteristics of time series across dif-
+ferent temporal regions, encompassing both input-side vari-
+ability and output-side forecasting challenges. On the in-
+put side, real-world sequences exhibit varying local com-
+plexity—volatile regions contain rapid fluctuations requir-
+ing fine-grained modeling, while stable segments allow for
+coarser abstraction. On the output side, prediction targets
+across different horizons pose asymmetric difficulties: short-
+term predictions often rely on recent patterns, whereas long-
+term predictions involve more abstract, uncertain dynamics.
+Ignoring such heterogeneity leads to suboptimal representa-
+tions and a mismatch between model capacity and forecast-
+ing needs.
+4 Proposed Method
+4.1 Rethinking Temporal Heterogeneity in Time
+Series Encoding and Decoding
+Real-world time series exhibit varying local complexity
+and asymmetric forecasting difficulty. Existing patch-based
+models typically adopt fixed-length segmentation, assuming
+uniform temporal dynamics. However, volatile regions de-
+mand fine-grained modeling, while smooth segments can be
+coarsely encoded; using a single patch size thus leads to ei-
+ther detail loss or redundant computation. This motivates a
+rethinking of both encoding and decoding strategies.
+Forecasting over long horizons further introduces diverse
+semantic demands: early segments rely on recent trends,
+whereas distant predictions involve more abstract and un-
+certain dynamics. Yet most models decode all horizons with
+a shared head, ignoring this temporal asymmetry.
+To address these challenges, we propose (1) an adaptive
+patch embedding module that learns region-specific granu-
+larity from local information density, and (2) a segment-wise
+prompt tuning framework that treats each forecast segment
+as a subtask. This design enables input-aware encoding and
+horizon-specific specialization, improving performance and
+robustness while maintaining parameter efficiency.
+4.2 Method Overview
+We propose a forecasting framework that combines adap-
+tive patch embedding and segment-wise prompt tuning.
+The model first partitions the input into fixed-length re-
+gions, then selects a patch size per region from a candi-
+date set. This yields variable-length patch sequences aligned
+to a uniform format via replication, enabling Transformer-
+compatible processing while preserving temporal coher-
+ence.
+To forecast multi-step targets, we treat each future seg-
+ment as a distinct subtask and assign it a learnable prompt.
+
+=== PAGE 4 ===
+Figure 3: Overall architecture of TimeMosaic, which shares the same modular arrangement with the encoder of Transformer.
+(a) The input multivariate time series is first processed by the Adaptive Patch Embedding module, which segments the sequence
+into patches of varying granularity based on learnable region-aware decisions. (b) A set of learnable prompt tokens are injected
+into the input sequence and interact with patch embeddings via multi-head attention to guide segment-wise forecasting. The
+attention maps in this panel visualize the interactions among adaptive patches as well as between patches and prompts. (c) Input
+sequence are normalized at the Channel level, same as iTransformer (Liu et al. 2024a). (d) The model performs segment-wise
+forecasting, from the short-term to the long-term.
+These prompts inject segment-specific biases into a shared
+encoder, allowing the model to specialize without alter-
+ing backbone parameters. Additionally, we support both
+channel-independent and channel-dependent processing to
+flexibly handle inter-variable correlations. The entire frame-
+work is trained end-to-end with a loss that balances forecast-
+ing accuracy and patch usage diversity.
+4.3 Adaptive Patch Embedding
+To effectively model temporal heterogeneity in time series,
+we introduce an Adaptive Patch Embedding (APE) module
+that adjusts patch granularity based on local dynamics.
+Patch Granularity Search Space.We refer toregionsas
+local partitions of the input used for adaptive patching, and
+segmentsas forecast sub-horizons used in multi-task predic-
+tion. This distinction allows us to separately model spatial
+encoding and temporal decoding. Given an input time series
+x∈R B×C×L , we divide the sequence intoR=L/f max
+non-overlapping regions, wheref max is the maximum patch
+length in the candidate set:
+F={f 1,f 2,...,f K}, f 1 <f 2 <···<f K.(1)
+Each candidate patch sizefk represents a different temporal
+granularity. For each region, our goal is to select the most
+suitablefk to match its local information density.
+Region-wise Granularity Classification.To predict the
+optimal patch size for each region, we employ a lightweight
+classifierGθ:
+gr =G θ(xr)∈R K, θ r = arg max
+k
+gr,k,(2)
+whereg r is the predicted logits over candidate patch sizes
+for regionx r, andθ r is the index of the selected patch size.
+The classifier is shared across all regions and channels, and
+is implemented as a two-layer MLP. To ensure end-to-end
+differentiability, we apply the Gumbel-Softmax (Jang, Gu,
+and Poole 2017) during training.
+Patch Alignment and Embedding.After determining the
+patch sizefθr for regionxr, we unfold it into patches of size
+fθr:
+zr =Linear fθr (Unfold(xr;fθr ))∈R Nr×d,(3)
+wherez r is the embedded patch sequence,N r =f max/fθr
+is the number of patches in regionr, anddis the embed-
+ding dimension. Each patch is projected to a shared latent
+dimensiondusing a dedicated linear layer.
+To maintain a uniform input shape across regions, we up-
+sample all patch sequences to a fixed lengthN=f max/fmin
+using replication:
+˜zr =RepeatPad(zr;N).(4)
+where˜zr is the length-aligned patch sequence for region
+r, padded toN=f max/fmin using replication. RepeatPad
+preserves temporal alignment and avoids introducing artifi-
+cial content. In practice, we find it more stable than interpo-
+lation or learned resampling under varying patch configura-
+tions.
+All region patch embeddings{˜z 1,...,˜z R}are concate-
+nated and enriched with positional encodings to form the
+final input:
+Z=PE(Concat(˜z 1,...,˜z R))∈R B·C×N·R×d.(5)
+whereZis the final encoder input sequence after adding
+positional encodings,PE(·)denotes the positional encoding
+function, andRis the number of input regions. We explore
+
+=== PAGE 5 ===
+several alternative designs for positional encoding, including
+fixed, learnable, and hybrid schemes, which are analyzed in
+Section 5.
+Regularization via Budget LossWithout constraints, the
+classifier may degenerate to always selecting the finest patch
+size. To avoid this, we introduce abudget lossto match the
+empirical distribution of selected granularities to a prede-
+fined target:
+Lbudget =
+K−1X
+k=1
+(rk−ˆrk)2,(6)
+whererk is the desired usage ratio of patch sizefk, andˆrk is
+the actual usage in the current batch. The last ratio is defined
+by normalization:
+rK = 1−
+K−1X
+k=1
+rk,ˆr K = 1−
+K−1X
+k=1
+ˆrk.(7)
+Training Objective.We jointly optimize the forecasting
+loss and the budget regularization. The total training loss is
+defined as:
+Ltotal =L forecast +λL budget,(8)
+whereL forecast is the standard mean squared error (MSE) be-
+tween the predictionˆyand ground truthy:
+Lforecast = 1
+B
+BX
+i=1
+∥ˆy(i)−y (i)∥2
+2.(9)
+λis a hyperparameter balancing the two terms.
+4.4 Prompt Tuning for Segment-wise Forecasting
+We formulate multi-interval time series forecasting as a
+segment-wise multitask learning problem, where each fore-
+cast segment corresponds to an individual prediction sub-
+task. To achieve parameter-efficient segment adaptation, we
+draw inspiration from Prompt Tuning (Lester, Al-Rfou, and
+Constant 2021; Liu et al. 2021) and extend it to the tempo-
+ral domain. Specifically, we design learnable segment-aware
+prompts to inject segment-specific inductive biases into a
+shared encoder, allowing the model to specialize its atten-
+tion behavior for each segment without modifying backbone
+parameters.
+Following standard practices in prompt tuning, these
+prompts are inserted only into the key and value paths of
+the attention mechanism, while the query vectors are derived
+exclusively from the input data. This asymmetric design
+ensures that the original data tokens retain their semantic
+role as information seekers, while prompts act as soft guid-
+ance to steer the attention focus in a segment-aware man-
+ner. Compared with adapter-based or decoder-tuning ap-
+proaches, prompt tuning achieves similar segment-level spe-
+cialization with fewer trainable parameters and better modu-
+larity, as prompts can be flexibly added or removed without
+altering the shared encoder.
+For a given segmentk∈ {1,...,K}, we associate a
+prompt embeddingϕ k∈R l×d and prepend it to the input
+representationX∈R n×d:
+˜Xk =Concat(ϕ k,X).(10)
+To preserve a clear functional separation between prompts
+and data tokens, we apply a prompt-masked attention mech-
+anism. In the self-attention computation, query vectors are
+derived exclusively from data tokens, while key and value
+vectors include both data and prompts:
+Qk =XW Q,K k = ˜XkWK,V k = ˜XkWV.(11)
+This allows the segment-aware prompt to modulate atten-
+tion flow and inject task-relevant semantics, while being ex-
+cluded from explicit decoding.
+After encoding, each segment is decoded by a segment-
+specific headf k(·;θk), yielding the prediction ˆY(k) ∈
+Rmk×C:
+ˆY(k) =f k(Hk;θk),(12)
+whereHk is the shared encoder output.
+This segment-wise prompt tuning framework enables
+flexible modeling of segment-specific dynamics, improves
+parameter efficiency, and avoids interference across sub-
+tasks. All encoder parameters remain frozen during training,
+and only prompts{ϕ k}and decoding heads{θ k}are up-
+dated.
+5 Experiments
+We thoroughly evaluate the proposed TimeMosaic on vari-
+ous time series forecasting applications, validate the general-
+ity of the proposed framework and further delve into the ef-
+fectiveness of adaptive patch embedding and Segment-wise
+Forecasting in other models.
+Datasets.We conduct extensive experiments on 17 real-
+world multivariate time series datasets, which are di-
+vided into long-term and short-term forecasting tasks. For
+long-term forecasting, we use ETTh1, ETTh2, ETTm1,
+ETTm2 (Zhou et al. 2021), Weather, Traffic, Electricity,
+ExchangeRate (Wu et al. 2023), Solar-Energy (Lai et al.
+2018), and Wind (Location1–4) (Xie et al. 2025). For short-
+term forecasting, we adopt four benchmark traffic datasets:
+PEMS03, PEMS04, PEMS07, and PEMS08 (Wang et al.
+2024, 2025b).
+Baselines.We choose the last state-of-the-art LTSF mod-
+els, including TimeFilter (Hu et al. 2025), SimpleTM (Chen
+et al. 2025), PatchMLP (Tang and Zhang 2025), xPatch (Stit-
+syuk and Choi 2025), DUET (Qiu et al. 2025b), Path-
+Former (Chen et al. 2024), iTransformer (Liu et al. 2024a),
+TimeMixer (Wang et al. 2024), PatchTST (Nie et al.
+2023), FreTS (Yi et al. 2023), DLinear (Zeng et al. 2023),
+LightTS (Zhang et al. 2022) as baselines for our exper-
+iments. We compared the ability of zero-shot with the
+GPT4TS (Zhou et al. 2023) and LLMTime (Nate Gruver
+and Wilson 2023).And we compare against pre-trained foun-
+dation time series models, including TimeMoE (Shi et al.
+2025), MOIRAI (Woo et al. 2024), Chronos (Ansari et al.
+2024), TimesFM (Das et al. 2024), and Moment (Goswami
+et al. 2024), using the parameter settings as specified in their
+respective publications.
+Evaluation Metrics.Following previous works, we use
+Mean Squared Error (MSE) and Mean Absolute Error
+(MAE) metrics to assess the performance.
+
+=== PAGE 6 ===
+Models TimeMosaic SimpleTM TimeFilter xPatch PatchMLP DUET PathFormer iTransformer TimeMixer PatchTST DLinear
+(Ours) (2025) (2025) (2025) (2025) (2025) (2024) (2024) (2024) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTm1 0.381 0.381 0.391 0.403 0.395 0.407 0.391 0.402 0.401 0.407 0.416 0.407 0.392 0.385 0.409 0.411 0.381 0.396 0.387 0.398 0.407 0.409
+ETTm2 0.273 0.314 0.283 0.325 0.282 0.329 0.283 0.327 0.287 0.331 0.286 0.328 0.2690.314 0.293 0.334 0.279 0.325 0.279 0.323 0.350 0.400
+ETTh1 0.425 0.424 0.442 0.436 0.463 0.447 0.446 0.439 0.455 0.445 0.447 0.440 0.454 0.428 0.450 0.442 0.445 0.439 0.432 0.431 0.462 0.459
+ETTh2 0.363 0.388 0.424 0.413 0.389 0.422 0.409 0.405 0.402 0.416 0.379 0.400 0.372 0.397 0.386 0.407 0.381 0.404 0.376 0.402 0.556 0.516
+Weather 0.251 0.267 0.258 0.282 0.242 0.273 0.264 0.284 0.254 0.289 0.269 0.304 0.242 0.266 0.346 0.276 0.309 0.360 0.264 0.283 0.265 0.317
+Traffic 0.458 0.283 0.545 0.347 0.461 0.309 0.520 0.335 0.495 0.337 0.628 0.392 0.581 0.343 0.4530.303 0.499 0.291 0.486 0.314 0.627 0.387
+Electricity 0.187 0.279 0.248 0.284 0.170 0.266 0.209 0.292 0.224 0.289 0.216 0.311 0.214 0.293 0.225 0.310 0.185 0.294 0.205 0.292 0.215 0.305
+Exchange 0.3480.403 0.356 0.411 0.366 0.411 0.372 0.410 0.374 0.412 0.356 0.400 0.375 0.411 0.366 0.414 0.385 0.423 0.3590.401 0.354 0.420
+Solar 0.2400.270 0.315 0.333 0.248 0.270 0.248 0.276 0.255 0.280 0.349 0.350 0.2550.258 0.378 0.350 0.292 0.281 0.326 0.397 0.256 0.304
+Table 1: Averaged forecasting results under unified experimental settings. Forlong-termforecasting tasks, we use a fixed
+lookback window ofL= 96. Long-term forecasting results are averaged over four prediction lengths:T={96,192,336,720}.
+The best model is inboldface, and the second best is underlined . See Table 20 in Appendix G for complete results.
+Channel Modeling Strategy.Although our core design
+centers on segment-wise forecasting with adaptive patch
+granularity, handling multivariate inputs remains essential.
+To ensure compatibility, we incorporate a modularchan-
+nel modeling component, which supports both Channel-
+Independent (CI) (Nie et al. 2023) and Channel-Dependent
+(CD) (Hu et al. 2025) schemes. Specifically, we provide
+multiple instantiations ranging from simple per-variable
+modeling to prompt-augmented or calendar-aware variants.
+These options are fully pluggable and do not interfere with
+the main forecasting pipeline. By default, we adopt the
+Channel dependent strategy. A comprehensive description
+and comparison of all variants are provided in Appendix D.
+Implementation Details.All the experiments are imple-
+mented in PyTorch (Paszke et al. 2019), and conducted on
+eight A800 GPU. Even in recent studies, it is common to set
+drop last=Trueduring data preprocessing (Chen et al.
+2025; Wang et al. 2025a), and this issue has been explicitly
+discussed in the TFB (Qiu et al. 2024), highlighting its po-
+tential impact on evaluation fairness. Following the time se-
+ries forecasting benchmark TFB’s settings (Qiu et al. 2024),
+we do not use the ”drop last” trick during the testing phase to
+ensure a fair comparison. Our benchmark comprehensively
+includes 20+ state-of-the-art forecasting models across 17
+real-world datasets, ensuring a fair comparison by unifying
+implementation settings and avoiding over-tuning parame-
+ter. And some approaches (Hu et al. 2025) discard the use
+ofEarlyStopping, which in our view disregards the essential
+role of the validation set. Therefore, when integrating with
+other methods, we consistently retain this setting to ensure
+fair and reliable evaluation.
+Model Variant MSE MAE
+Baseline 0.277 0.326
++ Adaptive Patch Embedding (APE) 0.258 0.302
++ APE and Segment-wise Prompt Tuning0.254 0.301
+Table 2: Ablation study of each component on five datasets.
+See datils in Appendix Table 14.
+Figure 4: Segments of different sizes on five datasets with a
+prediction length of 192. Left: MSE. Right: MAE.
+Granularity MSE MAE
+[8, 16]0.231 0.288
+[8, 32]0.228 0.286
+[8, 16, 32]0.232 0.290
+[8, 16, 64]0.230 0.289
+[8, 32, 64]0.235 0.289
+[4, 8, 16, 32]0.232 0.290
+[8, 16, 32, 64]0.228 0.286
+Table 3: Impact of patch granularity on six datasets, see de-
+tails in Appendix Table 13.
+Unified Experimental Settings.To ensure fair compari-
+son, we conduct two types of experiments. For long-term
+forecasting, we follow the unified evaluation protocol pro-
+posed by TimesNet (Wu et al. 2023), using a lookback length
+L= 96and prediction lengthsT= 96,192,336,720across
+all long-term datasets. For short-term forecasting, we adopt
+a fixed prediction lengthT= 12, which is commonly used
+in traffic prediction tasks. The lookback length is also set to
+L= 96. The averaged results under this unified setting are
+reported in Table 1. Table 1 presents results across all models
+using best configurations obtained via hyperparameter tun-
+ing, including the number of layers, attention heads, hidden
+dimension (dmodel), and feedforward dimension (dff), with a
+lookback window of 96. In contrast, Table 5 reports results
+with an identical parameter setting shared by all models, us-
+ing a longer lookback window of 320.
+
+=== PAGE 7 ===
+Methods TimeMosaic TimeMoEl TimeMoEb MOIRAIl MOIRAIb Chronosb Chronoss TimesFM Moment
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTh1
+96 0.367 0.395 0.3500.382 0.357 0.381 0.381 0.388 0.376 0.392 0.3840.379 0.394 0.381 0.414 0.404 0.688 0.557
+192 0.395 0.412 0.388 0.412 0.384 0.404 0.434 0.415 0.412 0.413 0.441 0.412 0.455 0.414 0.465 0.434 0.688 0.560
+336 0.410 0.423 0.411 0.430 0.411 0.434 0.495 0.445 0.433 0.428 0.475 0.430 0.499 0.444 0.503 0.456 0.675 0.563
+720 0.422 0.443 0.427 0.455 0.449 0.477 0.611 0.510 0.447 0.444 0.472 0.446 0.520 0.476 0.511 0.481 0.683 0.585
+Avg 0.399 0.418 0.3940.419 0.400 0.424 0.480 0.439 0.417 0.419 0.4430.416 0.467 0.428 0.473 0.443 0.683 0.566
+ETTm2
+96 0.190 0.276 0.197 0.286 0.201 0.291 0.211 0.274 0.205 0.273 0.177 0.244 0.180 0.251 0.202 0.270 0.260 0.335
+192 0.2490.313 0.250 0.322 0.258 0.334 0.281 0.318 0.275 0.316 0.251 0.293 0.251 0.298 0.289 0.321 0.289 0.350
+336 0.3050.347 0.337 0.375 0.324 0.373 0.341 0.355 0.329 0.350 0.305 0.327 0.315 0.338 0.360 0.366 0.324 0.369
+720 0.396 0.407 0.480 0.461 0.488 0.464 0.428 0.428 0.437 0.411 0.4190.394 0.4210.403 0.462 0.430 0.3940.409
+Avg 0.2850.336 0.316 0.361 0.317 0.365 0.315 0.343 0.311 0.337 0.288 0.314 0.291 0.330 0.328 0.346 0.316 0.365
+Table 4: Zero-shot forecasting results on two datasets. TimeMosaic is trained with an input length of 512 and an output horizon
+of 720. The symbolss,b, andlrepresent the small, base, and large versions, respectively. See details in Appendix Table 24
+Models TimeMosaic SimpleTM TimeFilter xPatch PatchMLP DUET iTransformer TimeMixer PatchTST DLinear FreTS
+(Ours) (2025) (2025) (2025) (2025) (2025) (2024) (2024) (2023) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTm1 0.3600.377 0.3500.379 0.399 0.408 0.354 0.386 0.374 0.396 0.360 0.380 0.386 0.406 0.356 0.385 0.372 0.399 0.357 0380 0.369 0.391
+ETTm2 0.256 0.310 0.263 0.318 0.278 0.330 0.262 0.322 0.269 0.324 0.257 0.314 0.293 0.338 0.265 0.323 0.278 0.332 0.282 0.348 0.284 0.339
+ETTh1 0.412 0.423 0.428 0.438 0.511 0.482 0.446 0.445 0.462 0.460 0.414 0.429 0.487 0.475 0.430 0.438 0.503 0.485 0.429 0.444 0.461 0.465
+ETTh2 0.363 0.393 0.377 0.404 0.402 0.421 0.354 0.397 0.380 0.416 0.344 0.389 0.411 0.425 0.358 0.396 0.398 0.427 0.492 0.478 0.495 0.483
+Weather 0.2310.256 0.230 0.267 0.231 0.270 0.2240.262 0.230 0.267 0.248 0.280 0.237 0.272 0.227 0.266 0.236 0.271 0.246 0.299 0.230 0.277
+Traffic 0.433 0.287 0.468 0.336 0.420 0.284 0.430 0.300 0.525 0.382 0.462 0.330 0.463 0.335 0.444 0.316 0.428 0.297 0.445 0.308 0.461 0.313
+Electricity 0.170 0.263 0.180 0.277 0.167 0.260 0.170 0.264 0.200 0.302 0.185 0.287 0.180 0.277 0.173 0.267 0.173 0.272 0.170 0.269 0.171 0.270
+Wind 0.7740.680 0.779 0.690 0.815 0.703 0.762 0.682 0.772 0.689 0.762 0.683 0.807 0.701 0.762 0.684 0.811 0.710 0.744 0.681 0.742 0.680
+Solar 0.2260.241 0.272 0.314 0.2000.255 0.2000.253 0.250 0.288 0.265 0.289 0.232 0.280 0.224 0.276 0.221 0.262 0.255 0.315 0.212 0.267
+Table 5: Averaged forecasting results under a unified and more fair evaluation setting with a farther lookback window. Compared
+to Table 1, Table 5 offers a fairer comparison by adopting an extended lookback window, which better supports models like
+DUET and TimeFilter to realize their potential. Moreover, we fix key hyperparameters such asd model,d ff, learning rate,
+and training epochs, avoiding test-set-based tuning and ensuring a fair evaluation. See details in Appendix G and Table 21.
+Ablation Experiments.We evaluate the contributions of
+each component in Table 2. Adaptive Patch Embedding
+(APE) improves performance by enabling input-aware to-
+kenization, while segment-wise prompt tuning further en-
+hances accuracy through localized decoding. Table 3 shows
+the results of different patch size combination. Figure 4
+demonstrates that segmented prediction consistently outper-
+forms non-segmented baselines, while showing robustness
+across different segment sizes, see details in Appendix Fig-
+ure 12. We adopt a fixed segment length ofL/3without
+cherry-picking.
+Main Results.As shown in Table 1, TimeMosaic consis-
+tently achieves the best or second-best performance across
+all benchmarks. In the more fair comparison shown in Ta-
+ble 5, our method also achieves competitive performance.
+Furthermore, TimeMosaic demonstrates robust performance
+under longer lookback windows, as illustrated in Figure 6.
+See short-term forecasting results in Appendix Table 17. Ta-
+ble 6 compares the best hyperparameter configurations of
+seven SOTA models, where all models are tuned under the
+same search protocol. Due to the extremely high computa-
+tional cost, each model requires exploring10,800different
+parameter settings, we only report results on seven models
+across five datasets.
+Zero−shot.To assess cross-dataset generalization, we
+conduct zero-shot forecasting where models are trained
+on one dataset and tested on another. As shown in Ap-
+pendix Table 23, TimeMosaic consistently achieves the
+best performance across all transfer settings, outperform-
+ing GPT4TS (Zhou et al. 2023), DLinear, and PatchTST. In
+addition, we further scale up TimeMosaic on the BLAST
+dataset (Shao et al. 2025) with an input length of 512 and
+an output horizon of 720. This large-scale setting (27M pa-
+rameters, trained on two V100 GPUs for about 40 hours) al-
+lows a direct comparison with recent time series foundation
+models (TSFMs). The results (Appendix J, Tables 4 and 16)
+show that TimeMosaic achieves zero-shot performance on
+par with representative TSFMs such as TimeMoe (Shi et al.
+2025), Moirai (Woo et al. 2024), Chronos (Ansari et al.
+2024), TimesFM (Das et al. 2024), and Moment (Goswami
+et al. 2024) while maintaining a moderate model size and in-
+ference cost. This confirms that the architectural choices of
+adaptive patch embedding and segment-wise decoding re-
+main effective even at the foundation-model scale.
+
+=== PAGE 8 ===
+Models TimeMosaicSimpleTM TimeFilter DUET iTransformer TimeMixer PatchTST DLinear
+Ours (2025) (2025) (2025b) (2024a) (2024) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTm10.342 0.3670.346 0.378 0.353 0.377 0.354 0.377 0.356 0.385 0.349 0.392 0.348 0.380 0.356 0.378
+ETTm20.250 0.3050.257 0.316 0.253 0.317 0.253 0.313 0.267 0.325 0.256 0.315 0.256 0.318 0.262 0.326
+ETTh10.397 0.4170.416 0.434 0.414 0.429 0.406 0.425 0.425 0.438 0.416 0.428 0.410 0.430 0.419 0.437
+ETTh2 0.3480.3830.358 0.396 0.347 0.3940.3340.384 0.362 0.398 0.349 0.392 0.359 0.399 0.412 0.433
+Weather 0.223 0.251 0.2200.259 0.2200.261 0.240 0.277 0.230 0.269 0.229 0.265 0.223 0.260 0.240 0.291
+Table 6: Results under the hyperparameter search setting described in Appendix Section I. The lookback window is selected
+from{96,192,320,512}, and the best configuration is reported for each model. This setup ensures that the comparison reflects
+each model’s optimal performance rather than a fixed setting constraint. As far as we know, we are the first open source
+parameter search script. See Details in Appendix Table 22.
+Figure 5: Attention Pattern Visualization Across Models.
+96 192 320 512 736
+Look-back Window H
+0.22
+0.24
+0.26MSE
+Ours
+SimpleTM
+PatchTST
+iTransformer
+96 192 320 512 736
+Look-back Window H
+0.20
+0.22
+0.24MSE
+Ours
+SimpleTM
+PatchTST
+iTransformer
+Figure 6: Sensitivity of multivariate forecasting performance
+to look-back window size. We evaluate four models across
+five input lengths (T= 192) on ETTm2 and Weather. See
+more details in Appendix G.
+Efficiency Analysis.Appendix Table 15 reports forecast-
+ing error and efficiency under the unified search protocol de-
+scribed in Appendix Section I. For each dataset and model,
+we first conduct hyperparameter search and select the con-
+figuration that achieves the lowest validation error averaged
+over MSE and MAE. We then measure parameter count,
+inference latency, and GPU memory usage at this setting.
+This protocol anchors every method at its best attainable
+error level within the same search space and avoids biased
+comparisons that could arise from deliberately changing hy-
+perparameters to influence efficiency. The results show that
+TimeMosaic achieves competitive or leading error on all five
+datasets, for example attaining the lowest MSE on ETTm2
+and the lowest MAE on Weather, while keeping parame-
+ter scale in the range of a few hundred thousand, which is
+substantially smaller than SimpleTM or iTransformer. Al-
+though its inference time is higher than that of extremely
+lightweight models such as iTransformer, it remains within
+a reasonable margin and consistently uses moderate mem-
+ory. The slightly slower inference mainly arises from the
+segment-wise step-by-step decoding design, and this behav-
+ior is consistent with our experimental observations. Over-
+all, TimeMosaic presents a balanced error–efficiency perfor-
+mance, showing that its gains stem from architectural design
+rather than hyperparameter tuning.
+Visualization.Existing models differ in their attention
+interaction schemes. PatchTST slices each variable into
+temporal patches and applies self-attention across patches
+within the same variable. iTransformer treats each variable
+as a token and performs self-attention across channels. In
+contrast, SimpleTM constructs time-frequency tokens via
+wavelet transforms and enables joint attention across both
+time and channels. Our TimeMosaic instead interacts pri-
+marily through learnableprompt embeddingsassigned to
+different forecast segments, guiding the model to specialize
+decoding over distinct temporal intervals in Figure 5.
+6 Conclusion
+We proposed TimeMosaic, a forecasting framework that
+jointly addresses the dual challenges of encoding hetero-
+geneity and decoding heterogeneity in multivariate time se-
+ries. Through adaptive patch embedding, TimeMosaic dy-
+namically adjusts granularity according to local informa-
+tion density, ensuring both motif reuse and structural clarity
+while maintaining temporal coherence. Complementarily,
+segment-wise prompt tuning enables horizon-aware fore-
+casting by treating different prediction segments as related
+subtasks within a unified multi-task paradigm. Extensive ex-
+periments verify that TimeMosaic achieves consistent im-
+provements in forecasting accuracy and efficiency. In future
+work, we will extend TimeMosaic to streaming scenarios
+and investigate its potential for large-scale pretraining to-
+wards time series foundation modeling.
+
+=== PAGE 9 ===
+Acknowledgments
+This research was partly supported by the National Natural
+Science Foundation of China under Grant Nos. U24A20232
+and 62402475.
+References
+Ansari, A. F.; Stella, L.; Turkmen, C.; Zhang, X.; Mercado,
+P.; Shen, H.; Shchur, O.; Rangapuram, S. S.; Pineda Arango,
+S.; Kapoor, S.; Zschiegner, J.; Maddix, D. C.; Mahoney,
+M. W.; Torkkola, K.; Gordon Wilson, A.; Bohlke-Schneider,
+M.; and Wang, Y . 2024. Chronos: Learning the Language of
+Time Series.Transactions on Machine Learning Research
+(TMLR).
+Axtell, R. L. 2001. Zipf Distribution of U.S. Firm Sizes.
+Science, 293(5536): 1818–1820.
+Cao, J.; Li, J.; Yang, Z.; and Zhou, R. 2024. Enhanced
+Multimodal Aspect-Based Sentiment Analysis by LLM-
+Generated Rationales. InInternational Conference on Neu-
+ral Information Processing, 228–243. Springer.
+Chen, H.; Luong, V .; Mukherjee, L.; and Singh, V . 2025.
+SimpleTM: A Simple Baseline for Multivariate Time Series
+Forecasting. InThe Thirteenth International Conference on
+Learning Representations.
+Chen, P.; Zhang, Y .; Cheng, Y .; Shu, Y .; Wang, Y .; Wen, Q.;
+Yang, B.; and Guo, C. 2024. Pathformer: Multi-scale Trans-
+formers with Adaptive Pathways for Time Series Forecast-
+ing. InInternational Conference on Learning Representa-
+tions (ICLR).
+Crawshaw, M. 2020a. Multi-Task Learning with Deep Neu-
+ral Networks: A Survey.
+Crawshaw, M. 2020b. Multi-Task Learning with Deep Neu-
+ral Networks: A Survey.CoRR, abs/2009.09796.
+Das, A.; Kong, W.; Sen, R.; and Zhou, Y . 2024. A decoder-
+only foundation model for time-series forecasting. InPro-
+ceedings of the 41st International Conference on Machine
+Learning (ICML).
+Ding, K.; Fan, F.; Wang, Y .; Jian, R.; Wang, X.; Gong, L.;
+Jiang, Y .; Luo, C.; and Zhan, J. 2025. DualSG: A Dual-
+Stream Explicit Semantic-Guided Multivariate Time Series
+Forecasting Framework. InProceedings of the 33rd ACM
+International Conference on Multimedia.
+Emami, P.; Sahu, A.; and Graf, P. 2023. BuildingsBench:
+A Large-Scale Dataset of 900K Buildings and Benchmark
+for Short-Term Load Forecasting. InThirty-seventh Con-
+ference on Neural Information Processing Systems Datasets
+and Benchmarks Track.
+Eyring, V .; Bony, S.; Meehl, G. A.; Senior, C. A.; Stevens,
+B.; Stouffer, R. J.; and Taylor, K. E. 2016. Overview of the
+Coupled Model Intercomparison Project Phase 6 (CMIP6)
+experimental design and organization.Geoscientific Model
+Development, 9(5): 1937–1958.
+Goswami, M.; Szafer, K.; Choudhry, A.; Cai, Y .; Li, S.; and
+Dubrawski, A. 2024. MOMENT: A Family of Open Time-
+series Foundation Models. InInternational Conference on
+Machine Learning (ICML).
+Hersbach, H.; Bell, B.; Berrisford, P.; Hirahara, S.; Hor´anyi,
+A.; Mu ˜noz-Sabater, J.; Nicolas, J.; Peubey, C.; Radu, R.;
+Schepers, D.; Simmons, A.; Soci, C.; Abdalla, S.; Abel-
+lan, X.; Balsamo, G.; Bechtold, P.; Biavati, G.; Bidlot, J.;
+Bonavita, M.; De Chiara, G.; Dahlgren, P.; Dee, D.; Diaman-
+takis, M.; Dragani, R.; Flemming, J.; Forbes, R.; Fuentes,
+M.; Geer, A.; Haimberger, L.; Healy, S.; Hogan, R. J.; H´olm,
+E.; Janiskov´a, M.; Keeley, S.; Laloyaux, P.; Lopez, P.; Lupu,
+C.; Radnoti, G.; de Rosnay, P.; Rozum, I.; Vamborg, F.; Vil-
+laume, S.; and Th ´epaut, J.-N. 2020. The ERA5 global re-
+analysis.Quarterly Journal of the Royal Meteorological So-
+ciety, 146(730): 1999–2049.
+Hu, Y .; Zhang, G.; Liu, P.; Lan, D.; Li, N.; Cheng, D.; Dai,
+T.; Xia, S.-T.; and Pan, S. 2025. TimeFilter: Patch-Specific
+Spatial-Temporal Graph Filtration for Time Series Forecast-
+ing. InInternational Conference on Machine Learning.
+Huang, M.; Mao, Z.; Chen, Z.; and Zhang, Y . 2023. Towards
+Accurate Image Coding: Improved Autoregressive Image
+Generation With Dynamic Vector Quantization. InProceed-
+ings of the IEEE/CVF Conference on Computer Vision and
+Pattern Recognition (CVPR), 22596–22605.
+Huang, Q.; Zhou, Z.; Yang, K.; Yi, Z.; Wang, X.; Jiang, W.;
+and Wang, Y . 2025. TimeBase: The Power of Minimalism in
+Long-term Time Series Forecasting. InInternational Con-
+ference on Learning Representations (ICLR).
+Jang, E.; Gu, S.; and Poole, B. 2017. Categorical Repa-
+rameterization with Gumbel-Softmax.arXiv preprint
+arXiv:1611.01144.
+Jin, M.; Wang, S.; Ma, L.; Chu, Z.; Zhang, J. Y .; Shi, X.;
+Chen, P.-Y .; Liang, Y .; Li, Y .-F.; Pan, S.; and Wen, Q. 2024.
+Time-LLM: Time Series Forecasting by Reprogramming
+Large Language Models. InInternational Conference on
+Learning Representations (ICLR).
+Khaldi, R.; El Afia, A.; Chiheb, R.; and Tabik, S. 2023. What
+is the best RNN-cell structure to forecast each time series
+behavior?Expert Systems with Applications, 215: 119140.
+Kim, T.; Kim, J.; Tae, Y .; Park, C.; Choi, J.-H.; and Choo,
+J. 2021. Reversible Instance Normalization for Accurate
+Time-Series Forecasting against Distribution Shift. InIn-
+ternational Conference on Learning Representations.
+Kong, Y .; Wang, Z.; Nie, Y .; Zhou, T.; Zohren, S.; Liang, Y .;
+Sun, P.; and Wen, Q. 2025. Unlocking the Power of LSTM
+for Long Term Time Series Forecasting. InProceedings of
+the AAAI Conference on Artificial Intelligence.
+Kudrat, D.; Xie, Z.; Sun, Y .; Jia, T.; and Hu, Q. 2025. Patch-
+wise Structural Loss for Time Series Forecasting. InICML.
+Laban, P.; Kryscinski, W.; Agarwal, D.; Fabbri, A.; Xiong,
+C.; Joty, S.; and Wu, C.-S. 2023. SummEdits: Measuring
+LLM Ability at Factual Reasoning Through The Lens of
+Summarization. InEMNLP.
+Lai, G.; Chang, W.-C.; Yang, Y .; and Liu, H. 2018. Modeling
+Long- and Short-Term Temporal Patterns with Deep Neural
+Networks. InACM SIGIR.
+Lester, B.; Al-Rfou, R.; and Constant, N. 2021. The Power
+of Scale for Parameter-Efficient Prompt Tuning. InEMNLP.
+
+=== PAGE 10 ===
+Lin, S.; Lin, W.; Wu, W.; Zhao, F.; Mo, R.; and Zhang,
+H. 2023. Segrnn: Segment recurrent neural network
+for long-term time series forecasting.arXiv preprint
+arXiv:2308.11200.
+Liu, H.; Ma, Z.; Yang, L.; Zhou, T.; Xia, R.; Wang, Y .; Wen,
+Q.; and Sun, L. 2023. SADI: A Self-Adaptive Decomposed
+Interpretable Framework for Electric Load Forecasting Un-
+der Extreme Events. InIEEE International Conference on
+Acoustics, Speech and Signal Processing.
+Liu, X.; Zheng, Y .; Du, Z.; Ding, M.; Qian, Y .; Yang, Z.; and
+Tang, J. 2021. GPT Understands, Too.arXiv:2103.10385.
+Liu, Y .; Hu, T.; Zhang, H.; Wu, H.; Wang, S.; Ma, L.; and
+Long, M. 2024a. iTransformer: Inverted Transformers Are
+Effective for Time Series Forecasting. InInternational Con-
+ference on Learning Representations (ICLR).
+Liu, Y .; Qin, G.; Shi, Z.; Chen, Z.; Yang, C.; Huang, X.;
+Wang, J.; and Long, M. 2025. Sundial: A Family of Highly
+Capable Time Series Foundation Models. InInternational
+Conference on Machine Learning.
+Liu, Y .; Zhang, H.; Li, C.; Huang, X.; Wang, J.; and Long,
+M. 2024b. Timer: Generative Pre-trained Transformers Are
+Large Time Series Models. InForty-first International Con-
+ference on Machine Learning.
+Morid, M. A.; Sheng, O. R. L.; and Dunbar, J. 2023. Time
+Series Prediction Using Deep Learning Methods in Health-
+care.ACM Trans. Manage. Inf. Syst., 14.
+Nate Gruver, S. Q., Marc Finzi; and Wilson, A. G. 2023.
+Large Language Models Are Zero Shot Time Series Fore-
+casters. InAdvances in Neural Information Processing Sys-
+tems.
+Nie, Y .; Nguyen, N. H.; Sinthong, P.; and Kalagnanam, J.
+2023. A Time Series is Worth 64 Words: Long-term Fore-
+casting with Transformers. InInternational Conference on
+Learning Representations (ICLR).
+Paszke, A.; Gross, S.; Massa, F.; Lerer, A.; Bradbury, J.;
+Chanan, G.; Killeen, T.; Lin, Z.; Gimelshein, N.; Antiga, L.;
+Desmaison, A.; K¨opf, A.; Yang, E.; DeVito, Z.; Raison, M.;
+Tejani, A.; Chilamkurthy, S.; Steiner, B.; Fang, L.; Bai, J.;
+and Chintala, S. 2019. PyTorch: An Imperative Style, High-
+Performance Deep Learning Library.
+Qiu, X.; Hu, J.; Zhou, L.; Wu, X.; Du, J.; Zhang, B.; Guo, C.;
+Zhou, A.; Jensen, C. S.; Sheng, Z.; and Yang, B. 2024. TFB:
+Towards Comprehensive and Fair Benchmarking of Time
+Series Forecasting Methods.Proc. VLDB Endow., 17(9):
+2363–2377.
+Qiu, X.; Wu, X.; Cheng, H.; Liu, X.; Guo, C.; Hu, J.; and
+Yang, B. 2025a. DBLoss: Decomposition-based Loss Func-
+tion for Time Series Forecasting. InNeurIPS.
+Qiu, X.; Wu, X.; Lin, Y .; Guo, C.; Hu, J.; and Yang, B.
+2025b. DUET: Dual Clustering Enhanced Multivariate Time
+Series Forecasting. InSIGKDD, 1185–1196.
+Qiu, X.; Zhu, Y .; Li, Z.; Cheng, H.; Wu, X.; Guo, C.; Yang,
+B.; and Hu, J. 2025c. DAG: A dual causal network for time
+series forecasting with exogenous variables.arXiv preprint
+arXiv:2509.14933.
+Ranzato, M.; Chopra, S.; Auli, M.; and Zaremba, W. 2016.
+Sequence Level Training with Recurrent Neural Networks.
+arXiv:1511.06732.
+Rasp, S.; Dueben, P. D.; Scher, S.; Weyn, J. A.; Mouata-
+did, S.; and Thuerey, N. 2020. WeatherBench: A Bench-
+mark Data Set for Data-Driven Weather Forecasting.Jour-
+nal of Advances in Modeling Earth Systems, 12(11):
+e2020MS002203.
+Rousseeuw, P. J. 1987. Silhouettes: A graphical aid to the
+interpretation and validation of cluster analysis.Journal of
+Computational and Applied Mathematics, 20: 53–65.
+Ruder, S. 2017. An Overview of Multi-Task Learning in
+Deep Neural Networks. arXiv:1706.05098.
+Schneider, S. H.; and Dickinson, R. E. 1974. Climate mod-
+eling.Reviews of Geophysics, 12(3): 447–493.
+Shao, Z.; Li, Y .; Wang, F.; Yu, C.; Fu, Y .; Qian, T.; Xu,
+B.; Diao, B.; Xu, Y .; and Cheng, X. 2025. BLAST: Bal-
+anced Sampling Time Series Corpus for Universal Forecast-
+ing Models. InProceedings of the 31st ACM SIGKDD Con-
+ference on Knowledge Discovery and Data Mining V .2.
+Shi, X.; Wang, S.; Nie, Y .; Li, D.; Ye, Z.; Wen, Q.; and Jin,
+M. 2025. Time-MoE: Billion-Scale Time Series Foundation
+Models with Mixture of Experts. InInternational Confer-
+ence on Learning Representations (ICLR).
+Shu, W.; Cai, K.; and Xiong, N. N. 2021. A short-term traf-
+fic flow prediction model based on an improved gate recur-
+rent unit neural network.IEEE Transactions on Intelligent
+Transportation Systems, 23(9): 16654–16665.
+Stankeviciute, K.; M Alaa, A.; and Van der Schaar, M. 2021.
+Conformal time-series forecasting.Advances in neural in-
+formation processing systems, 34: 6216–6228.
+Stitsyuk, A.; and Choi, J. 2025. xPatch: Dual-Stream Time
+Series Forecasting with Exponential Seasonal-Trend De-
+composition. InProceedings of the AAAI Conference on
+Artificial Intelligence.
+Tang, P.; and Zhang, W. 2025. Unlocking the Power of
+Patch: Patch-Based MLP for Long-Term Time Series Fore-
+casting. InAAAI.
+Wang, H.; Pan, L.; Chen, Z.; Yang, D.; Zhang, S.; Yang,
+Y .; Liu, X.; Li, H.; and Tao, D. 2025a. FreDF: Learning to
+Forecast in the Frequency Domain. InICLR.
+Wang, S.; Li, J.; Shi, X.; Ye, Z.; Mo, B.; Lin, W.; Ju, S.;
+Chu, Z.; and Jin, M. 2025b. TimeMixer++: A General Time
+Series Pattern Machine for Universal Predictive Analysis.
+InInternational Conference on Learning Representations
+(ICLR).
+Wang, S.; Wu, H.; Shi, X.; Hu, T.; Luo, H.; Ma, L.; Zhang,
+J. Y .; and ZHOU, J. 2024. TimeMixer: Decomposable Mul-
+tiscale Mixing for Time Series Forecasting. InInternational
+Conference on Learning Representations (ICLR).
+Warren Liao, T. 2005. Clustering of time series data—a sur-
+vey.Pattern Recognition, 38(11): 1857–1874.
+Woo, G.; Liu, C.; Kumar, A.; Xiong, C.; Savarese, S.; and
+Sahoo, D. 2024. Unified Training of Universal Time Series
+Forecasting Transformers. InForty-first International Con-
+ference on Machine Learning (ICML).
+
+=== PAGE 11 ===
+Wu, H.; Hu, T.; Liu, Y .; Zhou, H.; Wang, J.; and Long, M.
+2023. TimesNet: Temporal 2D-Variation Modeling for Gen-
+eral Time Series Analysis. InInternational Conference on
+Learning Representations.
+Xia, Y .; Fu, F.; Zhang, W.; Jiang, J.; and Cui, B. 2024. Ef-
+ficient Multi-task LLM Quantization and Serving for Mul-
+tiple LoRA Adapters. InAdvances in Neural Information
+Processing Systems.
+Xie, Y .; Xiong, Y .; Shi, Z.; Niu, H.; and Liu, Z. 2025. The
+language of time: a language model perspective on time-
+series foundation models.
+Yadav, H.; and Thakkar, A. 2024. NOA-LSTM: An efficient
+LSTM cell architecture for time series forecasting.Expert
+Systems with Applications, 238: 122333.
+Yi, K.; Zhang, Q.; Fan, W.; Wang, S.; Wang, P.; He, H.; An,
+N.; Lian, D.; Cao, L.; and Niu, Z. 2023. Frequency-domain
+MLPs are More Effective Learners in Time Series Forecast-
+ing. InAdvances in Neural Information Processing Systems.
+Yu, C.; Wang, F.; Shao, Z.; Qian, T.; Zhang, Z.; Wei, W.; and
+Xu, Y . 2024. Ginar: An end-to-end multivariate time series
+forecasting model suitable for variable missing. InSIGKDD.
+Yu, C.; Wang, F.; Shao, Z.; Sun, T.; Wu, L.; and Xu, Y . 2023.
+DSformer: A Double Sampling Transformer for Multivari-
+ate Time Series Long-term Prediction. InCIKM.
+Zeng, A.; Chen, M.; Zhang, L.; and Xu, Q. 2023. Are Trans-
+formers Effective for Time Series Forecasting? InProceed-
+ings of the AAAI Conference on Artificial Intelligence.
+Zhang, T.; Zhang, Y .; Cao, W.; Bian, J.; Yi, X.; Zheng, S.;
+and Li, J. 2022. Less Is More: Fast Multivariate Time Series
+Forecasting with Light Sampling-oriented MLP Structures.
+arXiv:2207.01186.
+Zhang, W.; Deng, Y .; Liu, B.; Pan, S.; and Bing, L. 2024.
+Sentiment Analysis in the Era of Large Language Models:
+A Reality Check. InNAACL.
+Zheng, W.; Zhao, P.; Chen, G.; Zhou, H.; and Tian, Y . 2023.
+A Hybrid Spiking Neurons Embedded LSTM Network for
+Multivariate Time Series Learning Under Concept-Drift En-
+vironment.IEEE Trans. Knowl. Data Eng., 35(7): 6561–
+6574.
+Zhou, H.; Zhang, S.; Peng, J.; Zhang, S.; Li, J.; Xiong, H.;
+and Zhang, W. 2021. Informer: Beyond Efficient Trans-
+former for Long Sequence Time-Series Forecasting. InPro-
+ceedings of the AAAI Conference on Artificial Intelligence.
+Zhou, T.; Niu, P.; Wang, X.; Sun, L.; and Jin, R. 2023. One
+Fits All: Power General Time Series Analysis by Pretrained
+LM. InAdvances in Neural Information Processing Systems.
+Zhu, P.; Li, Y .; Hu, Y .; Liu, Q.; Cheng, D.; and Liang, Y .
+2024a. LSR-IGRU: Stock Trend Prediction Based on Long
+Short-Term Relationships and Improved GRU.International
+Conference on Information and Knowledge Management.
+Zhu, P.; Li, Y .; Hu, Y .; Xiang, S.; Liu, Q.; Cheng, D.; and
+Liang, Y . 2024b. MCI-GRU: Stock Prediction Model Based
+on Multi-Head Cross-Attention and Improved GRU.arXiv
+preprint arXiv:2410.20679.
+Zhuang, Y .; Yu, Y .; Wang, K.; Sun, H.; and Zhang, C. 2023.
+ToolQA: A Dataset for LLM Question Answering with Ex-
+ternal Tools. InAdvances in Neural Information Processing
+Systems.
+
+=== PAGE 12 ===
+Appendix
+A Experiment Details
+Datasets.We evaluate our model on a total ofseventeen
+real-world multivariate time series datasets, covering both
+long-termandshort-termforecasting tasks. The datasets
+span diverse domains including electricity, weather, traffic,
+and renewable energy, ensuring the robustness and general-
+ity of our approach. Details are as follows:
+•Electricity Transformer Temperature (ETT) 1: Con-
+sists of four subsets. ETTh1 and ETTh2 are recorded
+hourly, while ETTm1 and ETTm2 are recorded every 15
+minutes. The data is collected from two different electric
+transformers.
+•Weather 2: Contains 21 meteorological indicators col-
+lected every 10 minutes in Germany in 2020, from the
+Weather Station of the Max Planck Biogeochemistry In-
+stitute.
+•Traffic 3: Hourly road occupancy rates recorded by 862
+sensors on freeways in the San Francisco Bay Area from
+January 2015 to December 2016.
+•Electricity 4: Hourly electricity consumption data from
+321 clients spanning the period from 2012 to 2014.
+•Exchange-rate 5: Daily exchange rates of 8 countries
+from 1990 to 2016.
+•Solar-energy 6: 10-minute solar power production
+records from 137 photovoltaic plants throughout 2006.
+•Wind 7: Wind power and meteorological measurements
+collected from four real-world wind farm locations. The
+dataset includes hourly wind speed and power generation
+data, designed for wind power forecasting tasks.
+•PEMS 8: The PEMS datasets are designed for short-
+term forecasting and contain high-frequency traffic mea-
+surements at multiple locations. It includes four sub-
+sets: PEMS03, PEMS04, PEMS07, and PEMS08, with
+5-minute sampling intervals and varying spatial dimen-
+sions (number of sensors).
+Forecasting Settings.In accordance with prior works
+such as (Wu et al. 2023), we adopt prediction lengths of
+{96,192,336,720}for long-term forecasting tasks, and a
+fixed length of12for short-term forecasting. However, we
+identify a common experimental flaw: the test data loader
+in these works often setsdrop last=True, which may
+discard up tobatch size - 1samples during evalua-
+tion. This issue has been discussed in (Qiu et al. 2024), yet
+persists in recent literature (Chen et al. 2025; Wang et al.
+1https://github.com/zhouhaoyi/ETDataset
+2https://www.bgc-jena.mpg.de/wetter
+3https://pems.dot.ca.gov
+4https://archive.ics.uci.edu/dataset/321/
+electricityloaddiagrams20112014
+5https://github.com/laiguokun/multivariate-time-series-data
+6https://www.nrel.gov/grid/solar-power-data.html
+7https://www.kaggle.com/datasets/mubashirrahim/wind-
+power-generation-data-forecasting
+8https://pems.dot.ca.gov/
+2025a). To ensure fair comparison and full test coverage, we
+uniformly setdrop last=Falsein our experiments.
+Table 7 summarizes the statistics of all datasets used.
+Dataset Dim Dataset Size Frequency
+ETTh1,ETTh2 7 (8545,2881,2881) Hourly
+ETTm1,ETTm2 7 (34465,11521,11521) 15 min
+Weather 21 (36792,5271,10540) 10 min
+Traffic 862 (12185,1757,3509) Hourly
+Electricity 321 (18317,2633,5261) Hourly
+Exchange-rate 8 (5120,665,1422) Daily
+Solar-energy 137 (36792,5271,10540) 10 min
+Wind 9 (30468,4286,8665) Hourly
+PEMS03 358 (15617,5135,5135) 5 min
+PEMS04 307 (10172,3375,3375) 5 min
+PEMS07 883 (16911,5622,5622) 5 min
+PEMS08 170 (10690,3548,265) 5 min
+Table 7: Detailed dataset descriptions. Dim denotes dimen-
+sion, which is the variate number of each dataset. Dataset
+size denotes the total number of time points in (Train, Vali-
+dation, Test) split. Frequency denotes the sampling interval
+of time points.
+22
+11 22 33 44
+11 55
+77
+33
+Raw Time Seires
+Temporal Postion
+11 22
+11 22 33 44 55 66 77 88
+11 22 33 44
+11
+22
+11 3344
+55
+66
+88
+1122
+44
+22
+Patch Pool
+Select
+66 44
+5>4    6 > 4
+3>2    4 > 2
+Break temporal consistency due to 
+overlapping or misordered patches.
+Raw Time Seires
+Adaptive Granularity
+Patch
+Maintain temporal consistency
+Muti-Scale Patch
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4 5 6
+Existing
+Ours
+Figure 7: Comparison between existing multi-granularity
+patching methods and our approach. Previous methods may
+disrupt temporal order by inserting coarse and fine patches
+out of sequence, whereas our method ensures strict chrono-
+logical alignment with adaptive patch sizes.
+B Construction of Patch Transition Matrix
+To visualize sequential dependencies among temporal
+patches, we construct a patch-level transition probability
+matrix based on clustered patch assignments. The procedure
+is as follows:
+Patch extraction.We collect a large-scale corpus of mul-
+tivariate time series forecasting datasets (see Appendix A
+for full dataset list). For each univariate channel, we nor-
+malize the values using min-max scaling and segment the
+
+=== PAGE 13 ===
+sequence into non-overlapping fixed-length patches of size
+P(set to 16 by default). This yields a collection of patch
+vectors{xi∈R P}N
+i=1 extracted from diverse domains.
+Patch quantization.We apply K-Means clustering to
+the patch collection to obtain a discrete tokenization of
+the continuous patch space. Each patchx i is assigned to
+one ofKclusters, resulting in a token sequence{t i ∈
+{1,...,K}} N
+i=1.
+Transition matrix computation.We define a transition
+matrixC∈N K×K whereCi,j counts the number of times a
+patch of clusteriis immediately followed by a patch of clus-
+terjin the tokenized sequence. The row-normalized transi-
+tion probability matrixP∈[0,1] K×K is then computed as:
+Pi,j = Ci,jP
+j′ Ci,j′ +ϵ
+whereϵis a small constant to avoid division by zero.
+Visualization.We identify the top-kmost frequent patch
+clusters based on row-wise sums ofCand extract the cor-
+respondingk×ksubmatrix fromP. This submatrix is vi-
+sualized using a heatmap (Figure 2, where high-probability
+transitions indicate strong sequential dependencies between
+dominant patch types.
+Implementation.The full construction and visualization
+pipeline is implemented in Python usingscikit-learn,
+seaborn, andmatplotlib. The source code is included
+in our supplementary materials. The key parameters are set
+toP= 16,K= 100, andk= 20in our default configura-
+tion.
+C Patch Granularity Selection.
+Figure 9 and Figure 8 compare the distribution of selected
+patch sizes under different look-back windows across four
+datasets (ETTh1, ETTh2, ETTm1, and ETTm2), with and
+without the proposedbudgetstrategy, respectively. Without
+the budget constraint (Figure 8), the model exhibits a clear
+tendency to select coarse-grained patches, withPatch 32
+dominating across all settings. In contrast, the budget-aware
+variant (Figure 9) promotes a more balanced selection across
+all three patch sizes, indicating that the budget loss effec-
+tively encourages granularity diversity and prevents overuse
+of coarse patterns.
+Figure 10 shows the Zipf deviation (top) and Silhouette
+score (bottom) across different patch granularities (8,16,
+32, andMixed) under varying numbers of clusters. These
+metrics are computed after applying PCA projection and
+k-means clustering on patch representations. We observe a
+clear trade-off: finer patches (e.g.,Patch 8) exhibit better
+structural clarity (higher Silhouette score) but lower pattern
+reuse (higher Zipf deviation), while coarser patches (e.g.,
+Patch 32) show better reuse but less cluster cohesion. The
+Mixedconfiguration balances both objectives by projecting
+patches of different granularities into a shared space before
+clustering, achieving a favorable compromise between di-
+versity and structural consistency.
+Quantitative Analysis.Table 8 reports the Zipf deviation
+and Silhouette scores under various patch sizes and cluster
+configurations. Finer-grained patches (e.g., size 8) exhibit
+clearer clustering structure (higher Silhouette scores) but re-
+duced pattern reuse (higher Zipf deviation), while coarser
+patches (e.g., size 64) show the opposite trend. Notably,
+theMixedconfiguration, which merges patches of size 8,
+16, and 32, achieves a favorable balance between diversity
+and structural clarity, further supporting the effectiveness of
+patch granularity mixing.
+Patch Size Global Patches Clusters (C) Silhouette Zipf Deviation
+8 152,418
+16 0.2978 0.4853
+32 0.2392 0.5678
+48 0.2073 0.6301
+16 76,202
+16 0.2717 0.5804
+32 0.2188 0.6856
+48 0.1845 0.6749
+32 38,094
+16 0.2454 0.6066
+32 0.1783 0.7204
+48 0.1623 0.7529
+64 19,040
+16 0.2115 0.6896
+32 0.1862 0.7597
+48 0.1547 0.7530
+Mixed 266,714
+16 0.2913 0.7171
+32 0.2491 0.6844
+48 0.2021 0.7147
+Table 8: Zipf deviation and Silhouette score across different
+patch granularities and cluster sizes. (ETT Datasets)
+D Channel Modeling Variants
+To support multivariate time series forecasting, our frame-
+work incorporates a modularchannel modeling interface
+that controls how variables interact before temporal encod-
+ing. While the main paper adopts the CI+ strategy by default,
+we provide several alternative implementations, which can
+be flexibly selected based on the correlation structure of the
+dataset. All variants generate an auxiliary token sequence
+extra tokento be concatenated with the patch sequence
+for each variable before encoding.
+CI (Channel-Independent):Each variable is modeled in-
+dependently by reshaping the inputx∈R B×T×C to[B·
+C,T], and computing patch embeddings separately. No in-
+formation is shared across variables.
+CD-G (Channel-Dependent with Global Token):The
+mean signal across all variables is pooled to generate a
+global context token, which is broadcast to all variable
+streams and prepended to their patch embeddings.
+CD-P (Channel-Dependent Plus).An enhanced channel-
+dependent modeling strategy that incorporates timestamp
+(time feature) information into inter-channel interactions.
+Unlike CI or basic CD designs, CD-P explicitly injects
+temporal encoding (e.g., positional or calendar time) into
+
+=== PAGE 14 ===
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+Figure 8: No budget strategy. Segments of different sizes on different dataset with a predicted length of 192. From left to right
+the datasets are ETTh1, ETTh2, ETTm1 and ETTm2.
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+96 192 320 512 736
+Look-back Window H
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Proportion
+Patch 32 Patch 16 Patch 8
+Figure 9: Segments of different sizes on different dataset with a predicted length of 192. From left to right the datasets are
+ETTh1, ETTh2, ETTm1 and ETTm2.
+16 32 48
+Number of Clusters (K)
+Patch 8
+Patch 16
+Patch 32
+Patch 64
+Patch MixedPatch Size
+Zipf Deviation Heatmap
+(Blue=Worse, Red=Better)
+0.5
+0.6
+0.7
+16 32 48
+Number of Clusters (K)
+Patch 8
+Patch 16
+Patch 32
+Patch 64
+Patch MixedPatch Size
+Silhouette Score Heatmap
+(Blue=Worse, Red=Better)
+0.20
+0.25
+Figure 10: Zipf deviation and Silhouette score with Patch
+Mixed.
+each variable’s representation, facilitating temporally aware
+cross-channel modeling.
+CD-A (Channel-Dependent with Calendar-Aware
+Prompts):Time encoding features (e.g., timestamps,
+day-of-week) are embedded to generate calendar-aware
+prompt tokens shared across all variables. This variant is
+especially effective in periodic domains.
+CI+ (Channel-Independent with Prompt Conditioning):
+Combines the advantages of CI with prompt-based guid-
+ance: each variable retains its independence but is aug-
+mented with its own channel token andKglobal prompt
+tokens. This hybrid design preserves robustness while intro-
+ducing controllable task-level bias.
+Usage Notes.All variants are plug-and-play, require min-
+imal code change, and share the same forecasting back-
+bone. In our experiments, CI+ consistently offers a good
+balance between performance and stability across diverse
+datasets, especially when variable correlation is moderate or
+unknown.
+Ablation Results.Table 9 compares five channel model-
+ing strategies on ETTh2 and Weather datasets under a uni-
+fied backbone and training protocol. CI+ achieves the best or
+near-best performance on both datasets, validating the ben-
+efit of shared channel interaction. Notably, CD-P and CD-A
+perform more competitively on the Weather dataset, which
+contains 21 variables (vs. 7 in ETTh2), indicating that richer
+inter-variable relationships allow channel-dependent strate-
+gies to better exploit temporal or global correlations.
+Notes Experiment Setting.In Table 20, we search over
+several channel modeling strategies and report the best-
+performing configuration, while in Table 21, we fix the
+channel-independent setting for all models.
+
+=== PAGE 15 ===
+Method ETTh2 Weather
+96 192 336 720 96 192 336 720
+CI 0.295 0.3800.4210.425 0.178 0.223 0.281 0.358
+CI+ 0.2910.3750.4250.415 0.170 0.2210.276 0.354
+CDG 0.299 0.395 0.427 0.444 0.174 0.222 0.280 0.357
+CDP 0.292 0.377 0.425 0.425 0.1690.222 0.279 0.357
+CDA 0.2970.3750.429 0.424 0.1730.218 0.2760.355
+Table 9: Ablation of channel modeling strategies (MSE) on
+two representative datasets.
+E Benchmark Implementation
+To ensure a comprehensive and fair evaluation, we have im-
+plemented a broad suite of representative time series fore-
+casting models within a unified benchmarking framework.
+Our benchmark includes 30+ models spanning diverse archi-
+tectural paradigms, such as Transformer-based, MLP-based,
+and hybrid designs.
+Specifically, our benchmark covers mainstream
+Transformer-based models including PatchTST, iTrans-
+former, SimpleTM, TimesNet, TimeMixer, TimeMixer++,
+Informer, Autoformer, FEDformer, Pyraformer, Reformer,
+ETSformer, Crossformer, TiDE, SCINet, MICN, and
+SegRNN. These models capture various design philoso-
+phies such as decomposition, frequency-domain modeling,
+inverted attention, and non-stationary transformation.
+We also include lightweight and MLP-based approaches
+such as DLinear, LightTS, TSMixer, PatchMLP, xPatch, and
+TimeFilter, which emphasize efficiency and simplicity over
+architectural complexity.
+In addition, we integrate several recently proposed hybrid
+and multi-resolution models, including DUET, PathFormer,
+FreTS, and WPMixer, to assess the effectiveness of multi-
+scale temporal modeling strategies.
+Finally, our own method, TimeMosaic, is evaluated un-
+der the same pipeline. All models share consistent training
+protocols, data loading procedures, and evaluation metrics.
+This unified implementation allows for a rigorous and repro-
+ducible comparison across a diverse range of baselines.
+Discussion on the Unified Benchmark Setting.All ex-
+perimental results reported in this paper are based on our
+own constructed unified benchmark, where we deliberately
+avoided over-tuning hyperparameters and fixed them consis-
+tently across models. It is therefore understandable that our
+reported results differ from those in original papers. How-
+ever, this difference does not imply that the results in other
+papers are incorrect or unreliable; rather, it simply reflects
+performance under our more strictly controlled and unified
+evaluation setting. Currently, there remains debate within the
+community regarding the fairness of this approach: one per-
+spective argues that unified hyperparameter settings provide
+a fairer basis for comparison, while another contends that
+certain models require specific hyperparameter choices to
+achieve convergence or optimal performance. Investigating
+this trade-off comprehensively is an important direction for
+our future research.
+Dataset TimeMosaic SimpleTM PatchTST Improve vs ST Improve vs PT
+ETTm1 0.381 0.403 0.398 +5.45% +4.27%
+ETTm2 0.314 0.325 0.323 +3.38% +2.79%
+ETTh1 0.424 0.436 0.431 +2.75% +1.63%
+ETTh2 0.388 0.413 0.402 +6.06% +3.48%
+Weather 0.267 0.282 0.283 +5.32% +5.65%
+Traffic 0.283 0.347 0.314 +18.45% +9.87%
+Electricity 0.279 0.284 0.292 +1.76% +4.45%
+Exchange 0.403 0.411 0.401 +1.95% -0.50%
+Solar 0.270 0.333 0.397 +18.92% +32.00%
+Average — — — +7.12% +7.07%
+Table 10: Per-dataset MAE and relative improvement of
+TimeMosaic over SimpleTM (ST) and PatchTST (PT).
+F Statistical Significance Analysis
+To evaluate the statistical significance of our model’s im-
+provements, we compare TimeMosaic against two baselines,
+SimpleTM and PatchTST, on the 9 benchmark datasets us-
+ing the MAE metric. For each dataset, we report the MAE
+values and compute the relative improvement of TimeMo-
+saic over each baseline. Furthermore, we conduct Wilcoxon
+signed-rank tests to assess whether the improvements are
+statistically significant.
+We further perform Wilcoxon signed-rank tests to assess
+the significance of these improvements. The results confirm
+that the improvements are statistically significant:
+• TimeMosaic vs SimpleTM:p= 0.00195
+• TimeMosaic vs PatchTST:p= 0.00391
+These results demonstrate that TimeMosaic consis-
+tently and significantly outperforms strong baselines across
+datasets under the MAE metric.
+G Detailed Results
+In accordance with prior works such as (Wu et al. 2023), we
+adopt the standard prediction lengths of{96,192,336,720}
+for long-term forecasting tasks, and a fixed length of 12 for
+short-term forecasting.
+Drop Last.We further identify a common experimen-
+tal flaw in many recent works: the test dataloader is of-
+ten configured withdrop last=True, which can silently
+discard up tobatch size - 1samples during evalua-
+tion. Although this issue has been highlighted in (Qiu et al.
+2024), it remains present in recent literature (Chen et al.
+2025; Wang et al. 2025a). To address this, we explicitly set
+drop last=Falsein all our evaluations, ensuring com-
+plete coverage of the test set.
+Over-tuning hyperparameters.Moreover, we observe
+that several recent methods rely on overly aggressive hyper-
+parameter tuning strategies, such as assigning distinct learn-
+ing rates to each forecasting length (e.g.,lr={2.42×
+10−4,2.01×10 −4,1.32×10 −4,2.39×10 −4}forT=
+{96,192,336,720}) or customizing hyperparameters for
+each dataset. Such practices inflate performance but under-
+mine comparability. In contrast, we use consistent settings
+across horizons and datasets unless explicitly stated, thereby
+ensuring a level playing field for all methods evaluated.
+
+=== PAGE 16 ===
+96 192 320 512 736
+Input Length
+0.40
+0.42MAE
+ETTh1
+96 192 320 512 736
+Input Length
+0.34
+0.36
+0.38
+0.40MAE
+ETTh2
+96 192 320 512 736
+Input Length
+0.34
+0.36MAE
+ETTm1
+96 192 320 512 736
+Input Length
+0.26
+0.28MAE
+ETTm2
+96 192 320 512 736
+Input Length
+0.20
+0.22
+0.24MAE
+Weather
+DLinear PatchTST SimpleTM TimeMosaic iTransformer
+Figure 11: MAE performance across different input lengths for five benchmark datasets. Each subplot compares five models
+under varying look-back windows.
+16 32 64 96 192
+Segment Size
+0.400
+0.405
+0.410
+0.415
+0.420Error
+MSE
+MAE
+16 32 64 96 192
+Segment Size
+0.355
+0.360
+0.365
+0.370
+0.375
+0.380
+0.385Error
+MSE
+MAE
+16 32 64 96 192
+Segment Size
+0.34
+0.35
+0.36
+0.37Error
+MSE
+MAE
+16 32 64 96 192
+Segment Size
+0.24
+0.26
+0.28Error
+MSE
+MAE
+16 32 64 96 192
+Segment Size
+0.20
+0.21
+0.22
+0.23Error
+MSE
+MAE
+Figure 12: Segments of different sizes on five datasets with a predicted length of 192. Each figure presents both MSE and MAE
+performance curves across different segment sizes.
+Details Results.Table 20 and Table 21 presents the com-
+plete results of long-term forecasting. Table 23 shows the
+results of zero-shot prediction.As shown in Table 13, to en-
+sure fairness and robust performance across datasets, we
+choose the patch granularity[8, 16, 32]as a represen-
+tative configuration for all subsequent experiments.
+Lookback Windows.Our model is designed to leverage
+longer lookback windows more effectively, which can po-
+tentially lead to even better forecasting performance. How-
+ever, due to time and resource constraints, we have not con-
+ducted a comprehensive evaluation across extended look-
+back lengths. We plan to include this analysis in future work
+to further validate the robustness of our approach. We ob-
+served that the Exchange dataset is highly sensitive to the
+length of the lookback window, and its forecasting perfor-
+mance drops substantially as the window increases across
+all model. To ensure fairness and representativeness in the
+long-window comparison (Table 21), we report results on
+the Wind1 dataset.
+Short-term Forecasting.To validate the effectiveness of
+our approach in short-term forecasting, we selected a rep-
+resentative subset of baseline models for comparison, as
+shown in Table 17. Under unified experimental settings,
+our method achieves consistently competitive performance
+across multiple traffic datasets. While we do not claim abso-
+lute superiority, the results indicate that our design is capable
+of delivering robust short-term predictions without signifi-
+cant degradation.
+ERROR BARS.In this paper, we repeat the experiments
+three times. Here we report the standard deviation of our
+model, as well as the statistical significance test in Table 18.
+Experiment Details.All experiments were conducted on
+four NVIDIA A800 GPUs and implemented using PyTorch.
+We ran each experiment three times and report the average
+results. The initial learning rate was set to10 −3 and opti-
+mized using the Adam optimizer with MAE loss. We applied
+an early stopping strategy with a patience of 3 epochs. The
+batch size was set to 16 for smaller datasets such as ECL,
+Traffic, and Solar, and 32 for the others. To ensure consis-
+tency across datasets, we fixed the training epochs to 10.
+Model configurations, including the number of layers, hid-
+den dimensions, and attention heads, were selected based
+on dataset scale and complexity to balance performance and
+efficiency. Detailed model and training settings are summa-
+rized in Table 11 about Table 21.
+Effect of Lookback Window.To investigate how mod-
+els perform under varying input lengths, we evaluate five
+representative methods on six datasets with a fixed predic-
+tion length of 96 and increasing lookback windows ranging
+from 96 to 736. As illustrated in Figure 11, the performance
+of each model exhibits distinct trends as the input window
+lengthens. Traditional models like DLinear generally bene-
+fit from longer inputs, showing steady MAE improvements
+on datasets such as ETTh2 and Weather. In contrast, token-
+heavy transformer models like PatchTST and iTransformer
+often degrade in performance with longer inputs, likely due
+to the increased difficulty in extracting relevant temporal
+patterns from excessive tokens. SimpleTM shows moderate
+stability but still suffers mild degradation on some datasets.
+Notably, TimeMosaic consistently achieves the lowest
+MAE across all datasets and most input lengths, demonstrat-
+ing superior robustness to input size variation. For example,
+on the ETTh2 dataset, TimeMosaic maintains low and sta-
+ble MAE across all input lengths (from 0.3294 to 0.3445),
+while PatchTST and iTransformer show increasing errors.
+This suggests that our model’s adaptive granularity mecha-
+nism and segment-wise decoding enable it to effectively uti-
+lize longer contexts without overfitting or introducing noise,
+
+=== PAGE 17 ===
+Dataset dmodel dff Layers Heads Batch Size Epochs LR ∗ Patience
+ECL 128 256 1 2 16 1010 −4 3
+Traffic 128 256 1 2 16 1010 −4 3
+Solar 128 256 1 2 16 1010 −4 3
+ETTh1 512 2048 2 8 32 1010 −4 3
+ETTh2 512 2048 2 8 32 1010 −4 3
+ETTm1 512 2048 2 8 32 1010 −4 3
+ETTm2 512 2048 2 8 32 1010 −4 3
+Weather 512 2048 2 8 32 1010 −4 3
+Exchange 512 2048 2 8 32 1010 −4 3
+Wind 512 2048 2 8 32 1010 −4 3
+Table 11: Experiment configuration of TimeMosaic in Table 21. All experiments use the Adam optimizer with a learning rate
+of10 −3 and early stopping (patience = 3).
+Figure 13: Overview of position embedding adopted in ours.
+supporting both scalability and stability.
+Experimental Settings and Fairness Considerations.To
+ensure a fair and reproducible comparison across models,
+we adopt a unified evaluation setting in Table 21, which is
+more rigorous than the setup used in Table 20. Specifically,
+Table 21 employs an extended lookback window, enabling
+models such as DUET and TimeFilter to better realize their
+potential. Furthermore, to avoid test-set-driven tuning, we
+strictly fix all major hyperparameters, includingd model,
+d ff, the number of layers, attention heads, learning rate,
+training epochs, patience, and batch size. We summarize the
+detailed hyperparameter settings in Table 12.
+Note that we excluded PathFormer from Table 21 due to
+its excessive GPU memory requirements when extending the
+lookback window, which made its evaluation computation-
+ally infeasible.
+Ablation on Normalization, Position Encoding, and
+Budget Loss Settings.Table 19 presents a comprehen-
+sive comparison of ablation studies on the Wind1–Wind4
+datasets, focusing on three key model components: normal-
+ization method, position encoding strategy, and budget loss
+configuration. Specifically, we compare the following vari-
+ants:
+•TimeMosaic: The standard model, using z-score normal-
+ization, sinusoidal position encoding, and a default bud-
+get loss weight of 0.01.
+•Revin: Replaces z-score normalization with RevIN (Kim
+et al. 2021). We note that z-score normalization is also
+used for all experiments in Table 20.
+•LearnPos: Substitutes sinusoidal encoding with learn-
+able position embeddings. For adaptive patching, po-
+sitional indices are assigned sequentially starting from
+each region (see visualization in Fig. 13).
+•NoPos: Removes position encoding entirely.
+•Budget 0.001: Sets budget loss weight to 0.001.
+•NoBudget: Removes budget loss term.
+All variants are evaluated on the Wind1–Wind4 datasets,
+using the same backbone architecture.
+As shown in Table 25, we compare z-score and RevIN
+normalization across eight benchmark datasets and four
+forecasting horizons. We observe that RevIN achieves lower
+MSE or MAE in the majority of cases, especially on datasets
+such as ETTh1, Weather, and Solar-Energy. However, z-
+score normalization still performs competitively on datasets
+like ETTm1 and Traffic. These results suggest that the ef-
+fectiveness of normalization methods is data-dependent, and
+RevIN tends to offer better robustness on datasets with com-
+plex or shifting distributions.
+Analysis.Across all settings, TimeMosaic and its abla-
+tions demonstrate robust performance. Notably, switching
+from z-score to RevIN normalization provides a slight and
+consistent improvement in MSE and MAE across most
+datasets and horizons, indicating RevIN’s suitability for
+wind series with non-stationary statistics.
+Replacing sinusoidal with learnable position encodings
+(LearnPos) yields comparable or slightly improved results,
+confirming the effectiveness of data-driven position em-
+beddings when patch boundaries are not fixed. In contrast,
+removing positional encoding (NoPos) generally leads to
+marginally worse performance, highlighting the importance
+of explicit temporal cues, especially under adaptive patch-
+ing.
+Regarding budget loss, decreasing its weight from 0.01
+to 0.001 (Budget 0.001) or removing it altogether (NoBud-
+
+=== PAGE 18 ===
+Datasetsd model d ffLayers Heads LR Epochs (Patience) Batch Size
+ETT, Weather, Exchange 512 2048 2 8 0.0001 10 (3) 32
+Traffic, Electricity, Solar 128 256 1 2 0.0001 10 (3) 16
+Traffic (TimeFilter only) 128 256 1 2 0.0001 10 (3) 2*
+Table 12: Unified hyperparameter settings used for experiments in Table 21. *Batch size is set to 2 specifically for TimeFilter
+on Traffic due to GPU memory constraints (59,551 MiB / 81,920 MiB).
+get) results in nearly identical outcomes, suggesting that the
+model is relatively insensitive to this hyperparameter within
+the tested range.
+Overall, these results validate the robustness of TimeM-
+osaic to different normalization, positional encoding, and
+budget loss configurations.
+H Detailed Analysis of Forecasting Results.
+Table 21 presents an extensive evaluation of our proposed
+method TimeMosaic compared to eleven state-of-the-art
+baseline models across eight widely-used multivariate time
+series datasets (ETTm1, ETTm2, ETTh1, ETTh2, Weather,
+Electricity, Traffic, Solar-Energy, Wind) with four prediction
+horizons (96, 192, 336, and 720). Our analysis highlights
+TimeMosaic’s consistent superiority in forecasting perfor-
+mance, and we summarize key insights below.
+1) Comprehensive Performance Advantage.TimeMo-
+saic distinctly outperforms all competing methods in terms
+of the number of times it achieves top performance, lead-
+ing in 32 cases—significantly ahead of other models such
+as TimeFilter (22 cases) and DUET (16 cases). This demon-
+strates TimeMosaic’s broad effectiveness and robustness in
+diverse forecasting contexts.
+2) Dataset-specific Observations.On ETTm1, TimeM-
+osaic shows a clear advantage at the longest horizon (720),
+achieving the best MSE/MAE and the lowest average MAE
+across all horizons. OnETTm2, it consistently ranks in the
+top two, with particularly strong long-term forecasting. On
+ETTh1andETTh2, it outperforms others in average metrics
+and maintains strong short-horizon accuracy. OnWeather
+andSolar-Energy, TimeMosaic performs best or second-
+best in most cases, validating its generalization to nonlinear
+and periodic signals. OnElectricityandTraffic, it remains
+competitive with TimeFilter, ranking second-best in MAE
+consistently. OnWind, despite LightTS’s lead, TimeMosaic
+still ranks second-best on average, demonstrating robust be-
+havior on highly volatile data.
+3) Horizon-wise Analysis.TimeMosaic maintains strong
+performance across all horizons. Its capability is especially
+notable at longer horizons (e.g., ETTm1 at 720 with MAE =
+0.413), highlighting its effectiveness in reducing long-range
+error accumulation.
+4) Methodological Insights.The superior performance
+of TimeMosaic stems from itsadaptive patch embedding
+andsegment-wise prompt tuning, which jointly address tem-
+poral heterogeneity in both input and output. Unlike fixed-
+patch methods (e.g., PatchTST) or simple baselines (e.g.,
+DLinear), our design enables finer modeling where needed
+and coarser abstraction elsewhere, achieving high accuracy
+with efficiency.
+Overall, the results in Table 21 show thatTimeMosaic
+sets a new state-of-the-art in long-term multivariate fore-
+casting, demonstrating consistent, robust, and interpretable
+performance across diverse datasets and conditions.
+I Hyperparameter Search Protocol
+To ensure a fair comparison across models, we adopt
+a unified grid-search strategy on standard long-term
+forecasting benchmarks (ETTh1, ETTh2, ETTm1,
+ETTm2, Weather). The search space covers input se-
+quence lengths{96,192,320,512}, prediction horizons
+{96,192,336,720}, model dimensions{16,128,512}
+with feed-forward size4×d model, encoder depths
+{1,3,5}, training epochs{10,50,100}, and learning
+rates{10 −5,10 −4,10 −3,10 −2,0.05}. Other hyperparam-
+eters (batch size, number of heads, decoder layers, etc.)
+follow common defaults to keep the search tractable. This
+design yields2160configurations per dataset, leading to
+10,800candidate runs per model over the five datasets
+considered. Results are reported based on the best validation
+performance under this unified search space.
+For fairness, all models are treated identically. When
+models involve auxiliary loss terms in addition to the main
+forecasting objective, we fix the auxiliary loss weight to
+0.001, including for TimeMosaic. Model-specific hyperpa-
+rameters such as the number and size of granularities in
+TimeMosaic, or thetopkparameter in other architectures,
+are kept at their default values rather than tuned. Like-
+wise, dropout is uniformly disabled across all methods to
+avoid providing implicit advantages to any single model. Fi-
+nally, certain models such as DLinear do not make use of
+d modelor feed-forward dimensions; in these cases, the
+corresponding search dimensions are skipped.
+J Comparison with TSFMs
+To further evaluate the scalability and generalization abil-
+ity of TimeMosaic, we conduct large-scale experiments un-
+der the same settings as Table 21, comparing against repre-
+sentative Time Series Foundation Models (TSFMs). Specif-
+ically, TimeMosaic is trained with an input length of 512
+and an output horizon of 720 on two NVIDIA V100 GPUs,
+requiring approximately 40 hours of training. The forecast-
+ing segment length is set to 16, withtrain epochs=1,
+batch size of 256, a single Transformer layer, and 8 attention
+heads. The prompt embedding dimension is 8, and the adap-
+tive patch search space is defined as[8, 16, 32, 64].
+
+=== PAGE 19 ===
+Patch granularity ETTh1 ETTh2 ETTm1 ETTm2 Exchange Weather Average
+MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+[8, 16] 0.363 0.389 0.296 0.341 0.295 0.332 0.168 0.248 0.106 0.230 0.155 0.190 0.231 0.288
+[4, 8, 16, 32] 0.370 0.391 0.297 0.342 0.292 0.332 0.171 0.249 0.099 0.222 0.156 0.191 0.232 0.290
+[8, 16, 32] 0.359 0.387 0.307 0.346 0.300 0.339 0.169 0.248 0.105 0.230 0.154 0.190 0.231 0.289
+[8, 16, 32, 64] 0.359 0.384 0.298 0.341 0.295 0.336 0.167 0.246 0.093 0.217 0.153 0.191 0.228 0.286
+[8, 16, 64] 0.363 0.386 0.295 0.340 0.294 0.337 0.171 0.250 0.105 0.230 0.154 0.192 0.230 0.289
+[8, 32] 0.355 0.382 0.298 0.341 0.289 0.332 0.173 0.251 0.097 0.219 0.153 0.189 0.228 0.286
+[8, 32, 64] 0.369 0.390 0.306 0.345 0.303 0.336 0.166 0.245 0.108 0.231 0.155 0.191 0.235 0.289
+Table 13: Performance comparison of different patch granularities across six datasets (L= 320,H= 96).
+Dataset Baseline +APE +APE + Prompt
+MSE MAE MSE MAE MSE MAE
+ETTh1 0.403 0.423 0.361 0.387 0.362 0.387
+ETTh2 0.324 0.374 0.297 0.342 0.300 0.342
+ETTm1 0.321 0.361 0.298 0.335 0.304 0.344
+ETTm2 0.181 0.270 0.172 0.251 0.164 0.247
+Weather 0.155 0.204 0.160 0.196 0.144 0.189
+Average 0.277 0.326 0.258 0.302 0.254 0.301
+Table 14: Ablation results on five datasets with different
+module combinations. The length of input is 96.
+We adopt the BLAST dataset (Shao et al. 2025) for train-
+ing. Under this configuration, the total number of trainable
+parameters is 27,259,924.
+BLAST (BaLAnced Sampling Time series corpus) is a
+large-scale dataset specifically constructed for pre-training
+universal time series models. It consists of 321 billion
+observations, mainly from CMIP6 (Eyring et al. 2016)
+(32.5%), ERA5 (Hersbach et al. 2020) (30.0%), Weather-
+Bench (Rasp et al. 2020) (25.7%), Buildings 900K (Emami,
+Sahu, and Graf 2023) (6.9%), and over 300 additional pub-
+lic datasets (Shao et al. 2025) (4.9%), covering diverse do-
+mains such as climate, meteorology, and energy. To en-
+sure the independence of downstream evaluation, commonly
+used benchmark datasets (e.g., ETTh/ETTm, Weather, Glob-
+alTemp) are deliberately excluded. In our experiments, we
+adopt random sampling on BLAST to generate training data,
+ensuring broad coverage of diverse patterns.
+Table 24 reports the zero-shot forecasting results of
+TimeMosaic across six datasets. The results demonstrate
+that, when trained on large-scale data, TimeMosaic achieves
+performance comparable to state-of-the-art TSFMs, high-
+lighting the structural advantages of our design. In partic-
+ular, the adaptive patch embedding and segment-wise de-
+coding modules enable effective utilization of long histori-
+cal contexts and robust adaptation to diverse prediction hori-
+zons, which is crucial for foundation-model-level general-
+ization.
+As shown in Table 16, TimeMosaic maintains a bal-
+anced trade-off between model scale and inference effi-
+ciency. Its parameter count (27M) is larger than extremely
+compact baselines such as Moirai-Small (14M), yet smaller
+than medium- and large-scale TSFMs (e.g., Chronos-Small
+at 48M, Chronos-Base at 205M, and TimeMoe-200M at
+453M). More importantly, TimeMosaic achieves the fastest
+inference speed among all compared models (0.068s), sub-
+stantially outperforming both small baselines (e.g., Moirai-
+Small at 0.350s, Chronos-Small at 0.256s) and heavyweight
+TSFMs. These results confirm that TimeMosaic achieves a
+highly favorable balance between scalability and efficiency,
+making it well-suited for both research and practical deploy-
+ment.
+K Limitations and Future work
+While TimeMosaic achieves state-of-the-art forecasting per-
+formance, several limitations provide opportunities for fu-
+ture research. Firstly, TimeMosaic currently utilizes a mod-
+erate parameter scale, which restricts its capability to capture
+complex long-range dependencies. Future research could
+scale TimeMosaic into a foundational model via large-scale
+pretraining, potentially enhancing its temporal representa-
+tion and cross-domain generalization.Secondly, TimeMo-
+saic employs fixed prediction horizons, limiting its adapt-
+ability. Future work should develop dynamic, adaptive pre-
+diction horizons responsive to real-time data characteristics,
+improving practicality in streaming scenarios. Lastly, inte-
+grating continuous learning capabilities could help TimeM-
+osaic effectively handle temporal non-stationarities, main-
+taining long-term forecasting accuracy without frequent re-
+training. Addressing these aspects will significantly enhance
+TimeMosaic’s robustness and practical applicability.
+L Why called TimeMosaic?
+The name ’TimeMosaic’ reflects our core idea of decom-
+posing time series into a flexible arrangement of patches
+of variable length, much like assembling a mosaic from
+tiles of different shapes and sizes. By adaptively segment-
+ing the sequence based on local information density, our
+model constructs a holistic and coherent temporal represen-
+tation, where each patch plays a distinct but integrated role,
+analogous to mosaic fragments collectively forming a com-
+plete picture. This flexible composition enables the model
+to efficiently capture both fine-grained and coarse-grained
+patterns, addressing the inherent heterogeneity of real-world
+time series.
+
+=== PAGE 20 ===
+Dataset Model MSE MAE Total Parameter Inference Time (s) GPU Memory Footprint (MB) Peak Mem (MB)
+ETTh1
+TimeMosaic0.413 0.428 365,8250.05950421.78161.29
+TimeFilter 0.425 0.438 1,830,640 0.014385 81.95 240.01
+SimpleTM 0.429 0.443 9,893,368 0.017082 94.06 872.34
+iTransformer 0.437 0.450 3,588,4320.00215945.9553.66
+PatchTST 0.423 0.437 2,953,424 0.002301 43.54 155.70
+ETTh2
+TimeMosaic 0.3700.3972,367,329 0.010097 38.73 121.91
+TimeFilter0.3680.411 176,460 0.006502 26.61 175.04
+SimpleTM 0.381 0.413 14,216 0.003503 18.30 146.40
+iTransformer 0.385 0.41514,160 0.002070 18.29 19.75
+PatchTST 0.384 0.413 232,064 0.005510 20.29 99.58
+ETTm1
+TimeMosaic0.356 0.374227,169 0.033050 20.28 155.07
+TimeFilter 0.362 0.384 111,444 0.005413 25.37 83.53
+SimpleTM 0.362 0.387 3,490,184 0.005095 44.81 822.48
+iTransformer 0.370 0.39412,112 0.003450 18.01 19.37
+PatchTST 0.362 0.389 139,488 0.003512 19.31 40.52
+ETTm2
+TimeMosaic0.269 0.318365,825 0.031740 21.78 161.29
+TimeFilter 0.272 0.329 118,076 0.010274 25.44 83.88
+SimpleTM 0.273 0.328 1,076,328 0.079104 26.40 76.93
+iTransformer 0.287 0.34017,2320.00355018.71 20.57
+PatchTST 0.272 0.333 347,9680.00223921.54 109.19
+Weather
+TimeMosaic 0.2400.267372,413 0.055469 26.30 342.41
+TimeFilter0.2370.278 179,148 0.032229 35.48 1363.94
+SimpleTM 0.238 0.27617,4000.00830322.97 26.05
+iTransformer 0.247 0.284 1,100,624 0.006658 31.22 36.37
+PatchTST 0.243 0.279 347,9680.00260725.80 288.75
+Table 15: Comparison of model performance and resource utilization across different datasets. Metrics include Mean Squared
+Error (MSE), Mean Absolute Error(MAE), total parameter count, inference time (seconds), GPU memory footprint (MB), and
+peak memory usage (MB), the predicted length is fiexed 336.
+Table 16: Comparison of model size and inference effi-
+ciency. TimeMosaic maintains a moderate parameter scale
+and inference latency compared to existing TSFMs.
+Model Params Inference Time (s)
+TimeMoe-50M 113M 5.725
+TimeMoe-200M 453M 10.813
+Moirai-Small 14M 0.350
+Moirai-Base 91M 0.483
+Moirai-Large 311M 0.894
+Chronos-Small 48M 0.256
+Chronos-Base 205M 0.409
+TimeMosaic (Ours)27M 0.068
+Models TimeMosaic SimpleTM xPatch DLinear PatchTST
+(Ours) (2025) (2025) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+PEMS03 0.075 0.185 0.093 0.207 0.085 0.195 0.105 0.221 0.092 0.208
+PEMS04 0.0940.208 0.094 0.207 0.103 0.213 0.115 0.228 0.110 0.226
+PEMS07 0.075 0.188 0.074 0.187 0.078 0.187 0.100 0.216 0.086 0.0.203
+PEMS08 0.0900.207 0.096 0.206 0.097 0.204 0.112 0.223 0.104 0.222
+Table 17: Averaged forecasting results under unified experi-
+mental settings. Forshort-termforecasting tasks, we use a
+fixed lookback window ofL= 96. Short-term forecasting
+uses a single-step prediction lengthT= 12. The best model
+is inboldface, and the second best is underlined .
+0 100 200 300 400
+1.6
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+GroundTruth
+Prediction
+0 100 200 300 400
+1.6
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+GroundTruth
+Prediction
+0 100 200 300 400
+1.6
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+GroundTruth
+Prediction
+0 100 200 300 400
+1.6
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+GroundTruth
+Prediction
+Figure 14: Prediction cases from ETTh1 by different mod-
+els (TimeMosaic, SimpleTM, PatchTST, iTransformer) un-
+der input-320-predict-96 settings.
+
+=== PAGE 21 ===
+Dataset TimeMosaic (Ours) SimpleTM (ICLR’2025) Confidence IntervalMSE MAE MSE MAE
+Weather 0.251±0.004 0.267±0.003 0.258±0.005 0.282±0.004 99%
+Solar 0.240±0.005 0.270±0.004 0.315±0.006 0.333±0.005 99%
+Electricity 0.187±0.006 0.279±0.004 0.248±0.007 0.284±0.006 99%
+Traffic 0.458±0.008 0.283±0.005 0.545±0.009 0.347±0.007 99%
+ETTh1 0.425±0.006 0.424±0.004 0.442±0.005 0.436±0.004 99%
+ETTh2 0.363±0.005 0.388±0.006 0.424±0.006 0.413±0.005 99%
+ETTm1 0.381±0.004 0.381±0.004 0.391±0.005 0.403±0.004 99%
+ETTm2 0.273±0.003 0.314±0.003 0.283±0.004 0.325±0.004 99%
+Exchange 0.348±0.005 0.403±0.004 0.356±0.005 0.411±0.005 99%
+Table 18: Standard deviation and statistical tests for our TimeMosaic method and second-best method (SimpleTM) on ETT,
+Weather, Solar, Electricity and Traffic datasets.
+Methods TimeMosaic Revin LearnPos NoPos Budget 0.001 NoBudget
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+Wind1
+96 0.765 0.668 0.760 0.661 0.769 0.668 0.768 0.668 0.765 0.667 0.765 0.667
+192 0.819 0.701 0.813 0.693 0.822 0.701 0.822 0.701 0.820 0.701 0.822 0.702
+336 0.860 0.722 0.852 0.715 0.860 0.722 0.859 0.722 0.861 0.724 0.862 0.723
+720 0.884 0.738 0.880 0.733 0.883 0.738 0.883 0.738 0.886 0.739 0.885 0.739
+Avg 0.832 0.707 0.826 0.700 0.834 0.707 0.833 0.707 0.833 0.708 0.833 0.708
+Wind2
+96 0.747 0.655 0.736 0.646 0.747 0.654 0.747 0.654 0.745 0.654 0.745 0.653
+192 0.811 0.693 0.805 0.687 0.813 0.694 0.814 0.694 0.812 0.694 0.816 0.695
+336 0.845 0.713 0.839 0.706 0.846 0.713 0.844 0.712 0.846 0.713 0.847 0.713
+720 0.878 0.733 0.874 0.728 0.883 0.735 0.880 0.734 0.878 0.733 0.880 0.734
+Avg 0.820 0.698 0.813 0.692 0.822 0.699 0.821 0.698 0.820 0.698 0.822 0.699
+Wind3
+96 0.754 0.650 0.745 0.643 0.756 0.652 0.757 0.652 0.754 0.650 0.755 0.650
+192 0.808 0.686 0.804 0.682 0.815 0.689 0.813 0.688 0.810 0.687 0.814 0.688
+336 0.8430.708 0.843 0.705 0.8430.709 0.845 0.709 0.845 0.709 0.850 0.710
+720 0.883 0.727 0.882 0.725 0.884 0.728 0.885 0.729 0.886 0.729 0.889 0.729
+Avg 0.822 0.693 0.819 0.689 0.825 0.694 0.825 0.695 0.824 0.693 0.827 0.694
+Wind4
+96 0.820 0.687 0.809 0.679 0.818 0.687 0.819 0.688 0.820 0.688 0.820 0.687
+192 0.871 0.723 0.866 0.716 0.873 0.723 0.873 0.723 0.874 0.724 0.876 0.725
+336 0.898 0.738 0.891 0.730 0.899 0.738 0.898 0.738 0.898 0.738 0.900 0.739
+720 0.937 0.758 0.931 0.750 0.937 0.758 0.937 0.757 0.939 0.759 0.941 0.759
+Avg 0.881 0.726 0.874 0.718 0.882 0.727 0.882 0.727 0.883 0.727 0.884 0.727
+Table 19: Full results on Wind datasets under various ablation settings. We compare the original TimeMosaic with: (i) RevIN
+normalization, (ii) learnable and removed positional encoding, (iii) reduced or removed budget loss. All models are evaluated
+without any downstream fine-tuning. Results are reported as MSE and MAE (lower is better). The input length is96. For details
+on position encoding visualization, see Fig. 13.
+
+=== PAGE 22 ===
+Models TimeMosaic SimpleTM TimeFilter xPatch PatchMLP DUET PathFormer iTransformer TimeMxier PatchTST DLinear FreTS
+Ours (2025) (2025) (2025) (2025) (2025b) (2024) (2024a) (2024) (2023) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTm1
+96 0.308 0.338 0.323 0.364 0.317 0.359 0.332 0.369 0.329 0.367 0.359 0.375 0.315 0.345 0.330 0.365 0.327 0.362 0.320 0.361 0.345 0.372 0.340 0.375
+192 0.364 0.368 0.371 0.389 0.381 0.393 0.371 0.387 0.377 0.394 0.394 0.393 0.375 0.372 0.388 0.399 0.3580.380 0.364 0.382 0.389 0.396 0.392 0.406
+336 0.394 0.390 0.411 0.413 0.402 0.409 0.399 0.407 0.411 0.413 0.426 0.413 0.405 0.393 0.417 0.416 0.3850.400 0.402 0.406 0.419 0.417 0.428 0.429
+720 0.460 0.428 0.4600.445 0.481 0.468 0.463 0.443 0.485 0.454 0.486 0.448 0.471 0.430 0.499 0.465 0.455 0.443 0.461 0.442 0.476 0.452 0.495 0.472
+Avg. 0.381 0.381 0.391 0.403 0.395 0.407 0.391 0.402 0.401 0.407 0.416 0.407 0.392 0.385 0.409 0.411 0.3810.396 0.387 0.398 0.407 0.409 0.414 0.421
+ETTm2
+96 0.170 0.248 0.178 0.256 0.174 0.259 0.177 0.262 0.178 0.262 0.182 0.265 0.166 0.247 0.182 0.263 0.176 0.257 0.178 0.260 0.194 0.293 0.193 0.284
+192 0.236 0.291 0.242 0.300 0.241 0.304 0.244 0.306 0.244 0.307 0.246 0.305 0.2320.292 0.257 0.315 0.246 0.306 0.240 0.299 0.291 0.367 0.272 0.348
+336 0.295 0.331 0.309 0.344 0.305 0.344 0.304 0.342 0.307 0.343 0.307 0.343 0.2900.329 0.314 0.350 0.296 0.339 0.299 0.338 0.373 0.421 0.376 0.409
+720 0.392 0.386 0.401 0.399 0.410 0.407 0.404 0.399 0.420 0.413 0.408 0.399 0.3860.387 0.418 0.409 0.396 0.396 0.399 0.396 0.541 0.518 0.507 0.494
+Avg. 0.273 0.314 0.283 0.325 0.282 0.329 0.283 0.327 0.287 0.331 0.286 0.328 0.269 0.314 0.293 0.334 0.279 0.325 0.279 0.323 0.350 0.400 0.337 0.384
+ETTh1
+96 0.369 0.389 0.379 0.396 0.396 0.403 0.383 0.401 0.392 0.405 0.391 0.403 0.391 0.392 0.382 0.400 0.374 0.397 0.377 0.393 0.396 0.411 0.397 0.409
+192 0.416 0.415 0.432 0.425 0.467 0.446 0.431 0.427 0.442 0.434 0.437 0.428 0.442 0.419 0.443 0.433 0.432 0.429 0.426 0.422 0.447 0.443 0.455 0.448
+336 0.454 0.435 0.476 0.448 0.486 0.456 0.483 0.455 0.483 0.455 0.479 0.451 0.487 0.439 0.480 0.452 0.481 0.451 0.464 0.443 0.496 0.473 0.507 0.478
+720 0.461 0.458 0.481 0.473 0.503 0.481 0.486 0.474 0.502 0.484 0.482 0.477 0.494 0.463 0.493 0.481 0.493 0.477 0.4610.465 0.510 0.508 0.553 0.530
+Avg. 0.425 0.424 0.442 0.436 0.463 0.447 0.446 0.439 0.455 0.445 0.447 0.440 0.454 0.428 0.450 0.442 0.445 0.439 0.432 0.431 0.462 0.459 0.478 0.466
+ETTh2
+96 0.286 0.332 0.308 0.356 0.295 0.346 0.291 0.343 0.309 0.359 0.290 0.340 0.2840.333 0.305 0.352 0.290 0.341 0.292 0.343 0.347 0.401 0.369 0.411
+192 0.362 0.380 0.383 0.404 0.412 0.423 0.372 0.392 0.405 0.419 0.377 0.393 0.366 0.387 0.378 0.398 0.371 0.391 0.372 0.396 0.463 0.469 0.457 0.466
+336 0.409 0.416 0.422 0.436 0.456 0.449 0.423 0.433 0.432 0.441 0.419 0.429 0.410 0.421 0.420 0.427 0.423 0.432 0.414 0.426 0.573 0.533 0.547 0.519
+720 0.396 0.422 0.442 0.454 0.474 0.469 0.430 0.451 0.460 0.446 0.428 0.443 0.428 0.445 0.441 0.451 0.439 0.450 0.425 0.441 0.839 0.661 0.713 0.606
+Avg. 0.363 0.388 0.424 0.413 0.389 0.422 0.409 0.405 0.402 0.416 0.379 0.400 0.372 0.397 0.386 0.407 0.381 0.404 0.376 0.402 0.556 0.516 0.522 0.501
+Weather
+96 0.165 0.198 0.175 0.219 0.156 0.203 0.178 0.221 0.165 0.211 0.192 0.233 0.155 0.197 0.175 0.214 0.163 0.210 0.183 0.222 0.196 0.256 0.185 0.240
+192 0.215 0.243 0.217 0.257 0.208 0.253 0.231 0.263 0.212 0.252 0.236 0.269 0.203 0.241 0.227 0.261 0.208 0.251 0.226 0.258 0.236 0.295 0.223 0.273
+336 0.2720.286 0.282 0.302 0.2630.293 0.283 0.300 0.283 0.305 0.287 0.304 0.265 0.287 0.285 0.301 0.268 0.295 0.286 0.300 0.283 0.333 0.277 0.320
+720 0.353 0.340 0.357 0.351 0.3400.342 0.360 0.350 0.357 0.352 0.359 0.350 0.344 0.337 0.360 0.350 0.346 0.348 0.360 0.352 0.346 0.383 0.345 0.375
+Avg. 0.251 0.267 0.258 0.282 0.2420.273 0.264 0.284 0.254 0.289 0.269 0.304 0.242 0.266 0.346 0.276 0.309 0.360 0.264 0.283 0.265 0.317 0.256 0.302
+Electricity
+96 0.160 0.258 0.176 0.258 0.142 0.241 0.191 0.277 0.156 0.257 0.204 0.292 0.199 0.269 0.158 0.248 0.156 0.248 0.180 0.269 0.200 0.287 0.187 0.274
+192 0.174 0.269 0.184 0.267 0.159 0.256 0.193 0.278 0.174 0.270 0.205 0.296 0.203 0.276 0.170 0.259 0.170 0.261 0.188 0.277 0.200 0.290 0.190 0.278
+336 0.189 0.283 0.204 0.289 0.173 0.271 0.206 0.291 0.199 0.297 0.221 0.310 0.210 0.302 0.187 0.276 0.186 0.276 0.204 0.294 0.212 0.305 0.206 0.295
+720 0.225 0.304 0.244 0.321 0.206 0.297 0.244 0.321 0.242 0.331 0.264 0.344 0.245 0.326 0.280 0.363 0.228 0.312 0.247 0.329 0.248 0.338 0.244 0.330
+Avg. 0.187 0.279 0.248 0.284 0.170 0.192 0.209 0.292 0.224 0.289 0.216 0.311 0.214 0.293 0.225 0.310 0.185 0.294 0.205 0.292 0.215 0.305 0.207 0.294
+Traffic
+96 0.424 0.269 0.531 0.337 0.431 0.297 0.521 0.346 0.466 0.322 0.649 0.402 0.551 0.326 0.4210.289 0.480 0.298 0.463 0.302 0.652 0.400 0.529 0.341
+192 0.4480.279 0.530 0.342 0.447 0.299 0.506 0.330 0.475 0.325 0.602 0.381 0.553 0.334 0.4420.296 0.492 0.305 0.470 0.306 0.601 0.374 0.531 0.339
+336 0.4640.284 0.542 0.347 0.462 0.307 0.511 0.327 0.496 0.338 0.611 0.383 0.587 0.332 0.4590.305 0.504 0.304 0.487 0.313 0.608 0.377 0.552 0.347
+720 0.495 0.301 0.576 0.360 0.502 0.331 0.540 0.338 0.542 0.362 0.651 0.402 0.631 0.378 0.4910.323 0.521 0.320 0.522 0.334 0.648 0.398 0.599 0.367
+Avg. 0.458 0.283 0.545 0.347 0.461 0.309 0.520 0.335 0.495 0.337 0.628 0.392 0.581 0.343 0.4530.303 0.499 0.291 0.486 0.314 0.627 0.387 0.553 0.349
+Solar-Energy
+96 0.209 0.248 0.252 0.299 0.222 0.253 0.216 0.259 0.218 0.245 0.300 0.328 0.208 0.231 0.301 0.333 0.242 0.342 0.217 0.258 0.285 0.372 0.233 0.291
+192 0.2380.272 0.306 0.332 0.2560.265 0.244 0.276 0.258 0.288 0.338 0.350 0.278 0.268 0.339 0.347 0.285 0.380 0.247 0.280 0.316 0.393 0.256 0.308
+336 0.2550.277 0.372 0.360 0.254 0.283 0.262 0.286 0.274 0.290 0.377 0.362 0.2590.261 0.376 0.361 0.282 0.326 0.269 0.293 0.350 0.412 0.268 0.311
+720 0.2570.284 0.331 0.339 0.258 0.280 0.261 0.284 0.269 0.296 0.381 0.359 0.275 0.271 0.374 0.357 0.357 0.427 0.267 0.292 0.353 0.410 0.266 0.305
+Avg. 0.2400.270 0.315 0.333 0.248 0.270 0.248 0.276 0.255 0.280 0.349 0.350 0.2550.258 0.378 0.350 0.292 0.381 0.250 0.281 0.326 0.397 0.256 0.304
+Exchange
+96 0.082 0.200 0.088 0.206 0.096 0.215 0.089 0.208 0.093 0.213 0.082 0.199 0.087 0.207 0.105 0.228 0.084 0.203 0.081 0.197 0.094 0.227 0.104 0.236
+192 0.169 0.294 0.182 0.303 0.178 0.310 0.183 0.304 0.185 0.307 0.174 0.295 0.183 0.304 0.181 0.304 0.285 0.380 0.176 0.298 0.181 0.320 0.186 0.322
+336 0.328 0.414 0.321 0.411 0.362 0.435 0.338 0.422 0.339 0.423 0.326 0.413 0.368 0.442 0.361 0.437 0.337 0.421 0.339 0.421 0.344 0.450 0.479 0.533
+720 0.812 0.680 0.843 0.691 0.829 0.682 0.876 0.707 0.880 0.706 0.843 0.692 0.863 0.689 0.817 0.686 0.832 0.686 0.845 0.692 0.7960.683 1.036 0.770
+Avg. 0.348 0.403 0.356 0.411 0.366 0.411 0.372 0.410 0.374 0.412 0.356 0.400 0.375 0.411 0.366 0.414 0.385 0.423 0.359 0.401 0.354 0.420 0.451 0.465
+1st Count423 14 0 0 0 18 5 3 3 1 0
+Table 20: Full results for long-term forecasting consider prediction horizonsHwithin{96,192,336,512}. For all baselines,
+we adhere to the setting of the iTransformer with an input sequence length of 96. The term ‘Avg.” represents the average results
+across the four prediction lengths. The best and second best outcomes are highlighted inbestand second , respectively. The
+notation1 st Count” denotes the frequency of each method achieving the top results.
+
+=== PAGE 23 ===
+Models TimeMosaic SimpleTM TimeFilter xPatch PatchMLP DUET LightTS iTransformer TimeMxier PatchTST DLinear FreTS
+Ours (2025) (2025) (2025) (2025) (2025b) (2024) (2024a) (2024) (2023) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTm1
+96 0.304 0.344 0.286 0.338 0.355 0.373 0.293 0.347 0.305 0.357 0.305 0.348 0.313 0.363 0.327 0.371 0.307 0.352 0.321 0.361 0.299 0.344 0.308 0.353
+192 0.3390.364 0.326 0.364 0.376 0.396 0.332 0.371 0.351 0.384 0.336 0.365 0.350 0.387 0.357 0.388 0.332 0.373 0.342 0.385 0.337 0.370 0.346 0.377
+336 0.3750.385 0.364 0.388 0.401 0.413 0.364 0.395 0.387 0.403 0.374 0.388 0.399 0.418 0.393 0.412 0.3620.390 0.386 0.410 0.3690.385 0.382 0.399
+720 0.422 0.413 0.424 0.426 0.465 0.449 0.428 0.432 0.454 0.441 0.425 0.417 0.489 0.479 0.467 0.452 0.4220.426 0.439 0.441 0.424 0.419 0.440 0.433
+Avg. 0.3600.377 0.3500.379 0.399 0.408 0.354 0.386 0.374 0.396 0.360 0.380 0.388 0.412 0.386 0.406 0.356 0.385 0.372 0.399 0.357 0380 0.369 0.391
+ETTm2
+96 0.164 0.247 0.174 0.257 0.174 0.261 0.168 0.259 0.179 0.265 0.165 0.255 0.187 0.286 0.187 0.271 0.169 0.258 0.181 0.270 0.172 0.270 0.175 0.263
+192 0.226 0.291 0.233 0.297 0.229 0.298 0.226 0.299 0.232 0.301 0.220 0.291 0.311 0.384 0.251 0.314 0.240 0.308 0.241 0.311 0.239 0.322 0.248 0.314
+336 0.279 0.324 0.279 0.330 0.312 0.351 0.281 0.337 0.285 0.334 0.2720.325 0.399 0.418 0.319 0.355 0.282 0.334 0.303 0.348 0.305 0.367 0.321 0.364
+720 0.353 0.376 0.367 0.387 0.396 0.408 0.372 0.391 0.380 0.394 0.369 0.384 0.489 0.479 0.413 0.412 0.369 0.391 0.385 0.399 0.412 0.432 0.393 0.414
+Avg. 0.256 0.310 0.263 0.318 0.278 0.330 0.262 0.322 0.269 0.324 0.257 0.314 0.347 0.392 0.293 0.338 0.265 0.323 0.278 0.332 0.282 0.348 0.284 0.339
+ETTh1
+96 0.362 0.387 0.390 0.410 0.460 0.457 0.380 0.403 0.411 0.426 0.372 0.397 0.432 0.443 0.403 0.417 0.376 0.398 0.403 0.423 0.377 0.400 0.400 0.419
+192 0.400 0.411 0.422 0.428 0.439 0.443 0.425 0.430 0.443 0.445 0.410 0.420 0.474 0.472 0.443 0.444 0.412 0.420 0.479 0.478 0.410 0.420 0.436 0.441
+336 0.436 0.435 0.440 0.440 0.474 0.463 0.444 0.439 0.468 0.461 0.430 0.433 0.515 0.501 0.470 0.464 0.445 0.446 0.490 0.481 0.452 0.458 0.471 0.466
+720 0.451 0.460 0.459 0.475 0.670 0.564 0.534 0.509 0.525 0.508 0.4450.466 0.592 0.567 0.632 0.573 0.488 0.489 0.641 0.559 0.477 0.497 0.537 0.532
+Avg. 0.412 0.423 0.428 0.438 0.511 0.482 0.446 0.445 0.462 0.460 0.414 0.429 0.503 0.496 0.487 0.475 0.430 0.438 0.503 0.485 0.429 0.444 0.461 0.465
+ETTh2
+96 0.300 0.342 0.298 0.349 0.367 0.389 0.280 0.343 0.311 0.371 0.273 0.337 0.324 0.383 0.323 0.369 0.285 0.346 0.324 0.374 0.305 0.368 0.321 0.380
+192 0.354 0.387 0.379 0.396 0.372 0.404 0.345 0.386 0.381 0.413 0.335 0.379 0.438 0.455 0.421 0.422 0.358 0.391 0.378 0.416 0.407 0.435 0.396 0.429
+336 0.378 0.403 0.400 0.420 0.402 0.426 0.382 0.415 0.401 0.427 0.362 0.403 0.496 0.490 0.440 0.441 0.380 0.409 0.405 0.432 0.493 0.490 0.497 0.496
+720 0.421 0.439 0.432 0.451 0.465 0.464 0.408 0.443 0.426 0.451 0.406 0.437 1.151 0.749 0.459 0.466 0.410 0.439 0.484 0.484 0.762 0.620 0.766 0.628
+Avg. 0.363 0.393 0.377 0.404 0.402 0.421 0.354 0.397 0.380 0.416 0.344 0.389 0.602 0.519 0.411 0.425 0.358 0.396 0.398 0.427 0.492 0.478 0.495 0.483
+Weather
+96 0.144 0.189 0.148 0.197 0.156 0.209 0.148 0.196 0.153 0.206 0.176 0.227 0.152 0.212 0.160 0.209 0.150 0.199 0.155 0.204 0.177 0.242 0.156 0.213
+192 0.1970.232 0.195 0.244 0.195 0.246 0.1900.238 0.197 0.245 0.218 0.261 0.197 0.255 0.207 0.251 0.193 0.244 0.201 0.249 0.217 0.276 0.197 0.253
+336 0.2450.276 0.249 0.287 0.251 0.286 0.2410.280 0.247 0.282 0.265 0.294 0.249 0.299 0.256 0.289 0.244 0.283 0.255 0.289 0.262 0.312 0.246 0.293
+720 0.3270.327 0.329 0.339 0.322 0.339 0.3180.333 0.324 0.334 0.332 0.339 0.323 0.357 0.325 0.338 0.319 0.336 0.333 0.340 0.326 0.367 0.319 0.347
+Avg. 0.2310.256 0.230 0.267 0.231 0.270 0.2240.262 0.230 0.267 0.248 0.280 0.230 0.281 0.237 0.272 0.227 0.266 0.236 0.271 0.246 0.299 0.230 0.277
+Electricity
+96 0.140 0.236 0.146 0.245 0.137 0.233 0.143 0.241 0.165 0.271 0.152 0.257 0.171 0.285 0.145 0.244 0.141 0.238 0.142 0.245 0.143 0.242 0.144 0.245
+192 0.156 0.250 0.164 0.262 0.153 0.246 0.157 0.252 0.183 0.288 0.169 0.273 0.192 0.305 0.165 0.263 0.158 0.254 0.159 0.259 0.157 0.255 0.156 0.253
+336 0.173 0.267 0.183 0.281 0.169 0.263 0.172 0.266 0.201 0.304 0.188 0.291 0.214 0.324 0.184 0.282 0.175 0.270 0.176 0.276 0.172 0.272 0.173 0.272
+720 0.212 0.298 0.228 0.319 0.208 0.296 0.209 0.297 0.250 0.343 0.231 0.326 0.251 0.349 0.227 0.317 0.217 0.307 0.215 0.308 0.2070.305 0.210 0.308
+Avg. 0.170 0.263 0.180 0.277 0.167 0.260 0.170 0.264 0.200 0.302 0.185 0.287 0.207 0.316 0.180 0.277 0.173 0.267 0.173 0.272 0.170 0.269 0.171 0.270
+Traffic
+96 0.4090.274 0.429 0.313 0.397 0.274 0.413 0.297 0.486 0.361 0.426 0.309 0.493 0.367 0.422 0.310 0.421 0.297 0.403 0.285 0.422 0.296 0.417 0.301
+192 0.424 0.281 0.454 0.328 0.411 0.278 0.425 0.298 0.515 0.378 0.448 0.323 0.511 0.373 0.449 0.327 0.441 0.311 0.419 0.292 0.435 0.302 0.447 0.299
+336 0.435 0.287 0.474 0.341 0.423 0.284 0.430 0.297 0.533 0.386 0.468 0.334 0.521 0.378 0.469 0.339 0.425 0.317 0.432 0.298 0.447 0.308 0.468 0.311
+720 0.464 0.302 0.514 0.363 0.449 0.300 0.450 0.306 0.564 0.401 0.505 0.355 0.504 0.360 0.512 0.364 0.489 0.340 0.459 0.313 0.476 0.327 0.512 0.340
+Avg. 0.433 0.287 0.468 0.336 0.420 0.284 0.430 0.300 0.525 0.382 0.462 0.330 0.507 0.370 0.463 0.335 0.444 0.316 0.428 0.297 0.445 0.308 0.461 0.313
+Solar-Energy
+96 0.2000.226 0.239 0.285 0.1820.240 0.186 0.240 0.211 0.280 0.230 0.267 0.196 0.267 0.198 0.253 0.199 0.257 0.195 0.249 0.223 0.293 0.190 0.248
+192 0.2250.240 0.264 0.305 0.1990.255 0.1990.254 0.245 0.285 0.260 0.284 0.211 0.280 0.222 0.276 0.221 0.274 0.208 0.257 0.251 0.311 0.209 0.266
+336 0.2380.245 0.289 0.325 0.207 0.262 0.2050.257 0.271 0.302 0.285 0.301 0.229 0.299 0.251 0.293 0.230 0.284 0.220 0.269 0.272 0.327 0.222 0.274
+720 0.2410.251 0.295 0.339 0.213 0.264 0.2090.261 0.272 0.303 0.285 0.303 0.232 0.304 0.256 0.299 0.224 0.290 0.220 0.272 0.274 0.330 0.228 0.278
+Avg. 0.2260.241 0.272 0.314 0.2000.255 0.2000.253 0.250 0.288 0.265 0.289 0.217 0.288 0.232 0.280 0.224 0.276 0.221 0.262 0.255 0.315 0.212 0.267
+Wind
+96 0.731 0.653 0.746 0.664 0.798 0.683 0.717 0.653 0.740 0.668 0.718 0.654 0.695 0.645 0.792 0.683 0.724 0.658 0.796 0.691 0.704 0.653 0.711 0.656
+192 0.771 0.675 0.769 0.684 0.814 0.703 0.755 0.677 0.766 0.685 0.754 0.678 0.726 0.669 0.812 0.699 0.751 0.678 0.826 0.717 0.739 0.677 0.737 0.675
+336 0.787 0.688 0.791 0.696 0.817 0.707 0.774 0.689 0.783 0.695 0.775 0.691 0.733 0.676 0.800 0.700 0.777 0.692 0.822 0.717 0.756 0.689 0.752 0.685
+720 0.805 0.705 0.811 0.715 0.832 0.720 0.803 0.710 0.799 0.709 0.803 0.711 0.749 0.689 0.825 0.721 0.796 0.710 0.802 0.716 0.777 0.706 0.769 0.702
+Avg. 0.774 0.680 0.779 0.690 0.815 0.703 0.762 0.682 0.772 0.689 0.762 0.683 0.726 0.670 0.807 0.701 0.762 0.684 0.811 0.710 0.744 0.681 0.742 0.680
+1st Count335 22 8 0 16 10 0 2 0 2 0
+Table 21: Full results for long-term forecasting consider prediction horizonsHwithin{96,192,336,720}. For all baselines, we
+adhere an input sequence length of 320. The term ‘Avg.” represents the average results across the four prediction lengths. The
+best and second best outcomes are highlighted inbestand second , respectively. The notation ”1st Count” denotes the frequency
+of each method achieving the top results.
+
+=== PAGE 24 ===
+Models TimeMosaic SimpleTM TimeFilter DUET iTransformer TimeMixer PatchTST DLinear
+Ours (2025) (2025) (2025b) (2024a) (2024) (2023) (2023)
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTm1
+96 0.282 0.328 0.2800.337 0.290 0.342 0.300 0.345 0.299 0.348 0.2800.340 0.289 0.343 0.299 0.343
+192 0.318 0.354 0.326 0.365 0.334 0.368 0.335 0.366 0.334 0.373 0.347 0.387 0.332 0.367 0.336 0.367
+336 0.356 0.374 0.362 0.387 0.362 0.384 0.364 0.383 0.370 0.394 0.366 0.405 0.362 0.389 0.367 0.385
+720 0.4110.412 0.417 0.422 0.425 0.415 0.417 0.413 0.422 0.426 0.4030.432 0.408 0.420 0.420 0.418
+Avg. 0.342 0.367 0.346 0.378 0.353 0.377 0.354 0.377 0.356 0.385 0.349 0.392 0.348 0.380 0.356 0.378
+ETTm2
+96 0.161 0.245 0.168 0.252 0.1610.253 0.162 0.253 0.180 0.263 0.164 0.254 0.165 0.257 0.165 0.260
+192 0.216 0.284 0.223 0.297 0.221 0.296 0.217 0.290 0.236 0.307 0.223 0.295 0.223 0.294 0.219 0.297
+336 0.269 0.318 0.273 0.328 0.272 0.329 0.270 0.325 0.287 0.340 0.279 0.330 0.272 0.333 0.290 0.345
+720 0.354 0.373 0.364 0.386 0.359 0.391 0.361 0.384 0.364 0.391 0.359 0.383 0.363 0.386 0.375 0.403
+Avg. 0.250 0.305 0.257 0.316 0.253 0.317 0.253 0.313 0.267 0.325 0.256 0.315 0.256 0.318 0.262 0.326
+ETTh1
+96 0.359 0.384 0.375 0.394 0.377 0.397 0.364 0.392 0.380 0.401 0.375 0.398 0.370 0.397 0.368 0.393
+192 0.396 0.411 0.412 0.429 0.413 0.419 0.397 0.413 0.423 0.431 0.407 0.425 0.404 0.423 0.400 0.417
+336 0.413 0.428 0.429 0.443 0.425 0.438 0.422 0.432 0.437 0.450 0.431 0.435 0.423 0.437 0.430 0.441
+720 0.419 0.445 0.447 0.472 0.442 0.456 0.443 0.463 0.460 0.471 0.452 0.456 0.444 0.464 0.477 0.497
+Avg. 0.397 0.417 0.416 0.434 0.414 0.429 0.406 0.425 0.425 0.438 0.416 0.428 0.410 0.430 0.419 0.437
+ETTh2
+96 0.2820.329 0.291 0.339 0.281 0.343 0.2650.334 0.294 0.345 0.280 0.340 0.290 0.342 0.286 0.351
+192 0.342 0.376 0.349 0.390 0.333 0.383 0.324 0.373 0.358 0.395 0.348 0.388 0.354 0.397 0.352 0.394
+336 0.3700.397 0.381 0.413 0.368 0.411 0.3520.399 0.385 0.415 0.366 0.405 0.384 0.413 0.439 0.456
+720 0.400 0.428 0.410 0.442 0.407 0.440 0.3930.432 0.412 0.436 0.404 0.433 0.408 0.442 0.570 0.530
+Avg. 0.3480.383 0.358 0.396 0.347 0.394 0.3340.384 0.362 0.398 0.349 0.392 0.359 0.399 0.412 0.433
+Weather
+96 0.1470.184 0.143 0.195 0.1420.195 0.168 0.221 0.155 0.206 0.147 0.197 0.145 0.194 0.170 0.229
+192 0.1920.228 0.188 0.236 0.1860.238 0.212 0.258 0.199 0.249 0.190 0.240 0.191 0.237 0.212 0.268
+336 0.2400.270 0.238 0.276 0.2370.278 0.258 0.292 0.247 0.284 0.253 0.285 0.243 0.279 0.258 0.307
+720 0.3150.324 0.3120.327 0.313 0.330 0.324 0.338 0.318 0.336 0.326 0.339 0.313 0.330 0.321 0.359
+Avg. 0.223 0.251 0.2200.259 0.2200.261 0.240 0.277 0.230 0.269 0.229 0.265 0.223 0.260 0.240 0.291
+1st Count373 5 6 0 2 0 0
+Table 22: Results under the hyperparameter search setting described in Appendix Section I. The lookback window is selected
+from{96,192,320,512}, and the best configuration is reported for each model. This setup ensures that the comparison reflects
+each model’s optimal performance rather than a fixed setting constraint. As far as we know, we are the first open source
+parameter search script.
+
+=== PAGE 25 ===
+Methods TimeMosaic LLMTime GPT4TS DLinear PatchTST
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTh1→ETTh2
+96 0.301 0.341 0.510 0.576 0.335 0.374 0.347 0.400 0.304 0.350
+192 0.375 0.387 0.523 0.586 0.412 0.417 0.447 0.460 0.386 0.400
+336 0.411 0.416 0.640 0.637 0.441 0.444 0.515 0.505 0.414 0.428
+720 0.414 0.419 2.296 1.034 0.438 0.452 0.665 0.589 0.419 0.443
+Avg 0.375 0.391 0.992 0.708 0.406 0.422 0.493 0.488 0.380 0.405
+ETTh1→ETTm2
+96 0.212 0.302 0.646 0.563 0.236 0.315 0.255 0.357 0.215 0.304
+192 0.275 0.328 0.934 0.654 0.287 0.342 0.338 0.413 0.275 0.339
+336 0.331 0.361 1.157 0.728 0.341 0.374 0.425 0.465 0.334 0.373
+720 0.428 0.342 4.730 1.531 0.435 0.422 0.640 0.573 0.431 0.424
+Avg 0.312 0.333 1.867 0.869 0.325 0.363 0.415 0.452 0.314 0.360
+ETTh2→ETTh1
+96 0.471 0.454 1.130 0.777 0.732 0.577 0.689 0.555 0.485 0.465
+192 0.524 0.483 1.242 0.820 0.758 0.559 0.707 0.568 0.565 0.509
+336 0.586 0.509 1.328 0.864 0.759 0.578 0.710 0.577 0.581 0.515
+720 0.595 0.544 4.145 1.461 0.781 0.597 0.704 0.596 0.628 0.561
+Avg 0.544 0.498 1.961 0.981 0.757 0.578 0.703 0.574 0.565 0.513
+ETTh2→ETTm2
+96 0.226 0.308 0.646 0.563 0.253 0.329 0.240 0.336 0.226 0.309
+192 0.285 0.341 0.934 0.654 0.293 0.346 0.295 0.369 0.289 0.345
+336 0.340 0.370 1.157 0.728 0.347 0.376 0.345 0.397 0.348 0.379
+720 0.431 0.417 4.730 1.531 0.446 0.429 0.432 0.442 0.439 0.427
+Avg 0.321 0.359 1.867 0.869 0.335 0.370 0.328 0.386 0.325 0.365
+ETTm1→ETTh2
+96 0.331 0.379 0.510 0.576 0.353 0.392 0.365 0.415 0.354 0.385
+192 0.399 0.420 0.523 0.586 0.443 0.437 0.454 0.462 0.447 0.434
+336 0.418 0.443 0.640 0.637 0.469 0.461 0.496 0.494 0.481 0.463
+720 0.416 0.446 2.296 1.034 0.466 0.468 0.541 0.529 0.474 0.471
+Avg 0.391 0.422 0.992 0.708 0.433 0.439 0.464 0.475 0.439 0.438
+ETTm1→ETTm2
+96 0.179 0.267 0.646 0.563 0.217 0.294 0.221 0.314 0.195 0.271
+192 0.237 0.328 0.934 0.654 0.277 0.327 0.286 0.359 0.258 0.311
+336 0.300 0.348 1.157 0.728 0.331 0.360 0.357 0.406 0.317 0.348
+720 0.385 0.377 4.730 1.531 0.429 0.413 0.476 0.476 0.416 0.404
+Avg 0.278 0.330 1.867 0.869 0.313 0.348 0.335 0.389 0.296 0.334
+Table 23: Full zero-shot learning results on ETT datasets. A lower value indicates better performance.
+
+=== PAGE 26 ===
+Methods TimeMosaic TimeMoEl TimeMoEb MOIRAIl MOIRAIb Chronosb Chronoss TimesFM Moment
+Metric MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE MSE MAE
+ETTh1
+96 0.367 0.395 0.3500.382 0.357 0.381 0.381 0.388 0.376 0.392 0.3840.379 0.394 0.381 0.414 0.404 0.688 0.557
+192 0.395 0.412 0.388 0.412 0.384 0.404 0.434 0.415 0.412 0.413 0.441 0.412 0.455 0.414 0.465 0.434 0.688 0.560
+336 0.410 0.423 0.411 0.430 0.411 0.434 0.495 0.445 0.433 0.428 0.475 0.430 0.499 0.444 0.503 0.456 0.675 0.563
+720 0.422 0.443 0.427 0.455 0.449 0.477 0.611 0.510 0.447 0.444 0.472 0.446 0.520 0.476 0.511 0.481 0.683 0.585
+Avg 0.399 0.418 0.3940.419 0.400 0.424 0.480 0.439 0.417 0.419 0.4430.416 0.467 0.428 0.473 0.443 0.683 0.566
+ETTh2
+96 0.286 0.346 0.302 0.354 0.305 0.359 0.296 0.330 0.2940.325 0.289 0.330 0.2820.328 0.315 0.349 0.342 0.396
+192 0.353 0.389 0.364 0.385 0.3510.386 0.361 0.371 0.365 0.375 0.3590.369 0.354 0.373 0.388 0.395 0.354 0.402
+336 0.376 0.411 0.417 0.425 0.391 0.418 0.3900.390 0.376 0.390 0.399 0.400 0.416 0.410 0.422 0.427 0.3560.407
+720 0.402 0.435 0.537 0.496 0.419 0.454 0.423 0.418 0.416 0.433 0.420 0.425 0.428 0.431 0.443 0.454 0.3950.434
+Avg 0.3540.395 0.405 0.415 0.366 0.404 0.3670.377 0.362 0.382 0.366 0.381 0.370 0.385 0.392 0.406 0.361 0.409
+ETTm1
+96 0.392 0.399 0.3090.357 0.338 0.368 0.380 0.361 0.3630.356 0.331 0.333 0.328 0.332 0.361 0.370 0.654 0.527
+192 0.422 0.416 0.3460.381 0.353 0.388 0.412 0.383 0.388 0.375 0.3860.365 0.3650.384 0.414 0.405 0.662 0.532
+336 0.450 0.432 0.3730.408 0.381 0.413 0.436 0.400 0.416 0.392 0.4080.382 0.391 0.425 0.445 0.429 0.672 0.537
+720 0.500 0.459 0.475 0.477 0.504 0.493 0.462 0.420 0.460 0.418 0.503 0.430 0.445 0.525 0.512 0.471 0.692 0.551
+Avg 0.441 0.427 0.3750.405 0.394 0.415 0.422 0.391 0.406 0.385 0.4070.377 0.382 0.416 0.433 0.418 0.670 0.536
+ETTm2
+96 0.190 0.276 0.197 0.286 0.201 0.291 0.211 0.274 0.205 0.273 0.177 0.244 0.180 0.251 0.202 0.270 0.260 0.335
+192 0.2490.313 0.250 0.322 0.258 0.334 0.281 0.318 0.275 0.316 0.251 0.293 0.251 0.298 0.289 0.321 0.289 0.350
+336 0.3050.347 0.337 0.375 0.324 0.373 0.341 0.355 0.329 0.350 0.305 0.327 0.315 0.338 0.360 0.366 0.324 0.369
+720 0.396 0.407 0.480 0.461 0.488 0.464 0.428 0.428 0.437 0.411 0.4190.394 0.4210.403 0.462 0.430 0.3940.409
+Avg 0.2850.336 0.316 0.361 0.317 0.365 0.315 0.343 0.311 0.337 0.288 0.314 0.291 0.330 0.328 0.346 0.316 0.365
+Weather
+96 0.178 0.236 0.1590.213 0.160 0.214 0.278 0.376 0.220 0.217 0.177 0.210 0.1720.206 - - 0.243 0.255
+192 0.227 0.279 0.215 0.266 0.210 0.260 0.301 0.409 0.271 0.259 0.224 0.253 0.218 0.248 - - 0.278 0.329
+336 0.279 0.316 0.291 0.322 0.309 0.309 0.329 0.420 0.286 0.297 0.260 0.276 0.266 0.282 - - 0.306 0.346
+720 0.351 0.365 0.415 0.400 0.418 0.405 0.370 0.463 0.373 0.354 0.3450.331 0.358 0.339 - - 0.350 0.374
+Avg 0.259 0.299 0.270 0.300 0.274 0.297 0.319 0.417 0.287 0.281 0.251 0.267 0.253 0.268 - - 0.294 0.326
+Global Temp
+96 0.237 0.366 0.219 0.341 0.230 0.350 0.278 0.376 0.273 0.377 0.236 0.352 0.233 0.348 0.255 0.375 0.363 0.472
+192 0.288 0.409 0.265 0.381 0.268 0.385 0.301 0.409 0.304 0.409 0.287 0.398 0.287 0.397 0.313 0.423 0.387 0.489
+336 0.341 0.449 0.326 0.426 0.3260.427 0.329 0.420 0.332 0.437 0.332 0.433 0.320 0.430 0.362 0.460 0.430 0.517
+720 0.479 0.542 0.344 0.453 0.377 0.467 0.379 0.467 0.379 0.469 0.463 0.524 0.452 0.521 0.486 0.545 0.582 0.617
+Avg 0.336 0.442 0.288 0.400 0.300 0.407 0.321 0.418 0.322 0.423 0.329 0.426 0.323 0.424 0.354 0.451 0.440 0.524
+Table 24: Zero-shot forecasting results on six datasets. TimeMosaic is trained with an input length of 512 and an output horizon
+of 720. The symbolss,b, andlrepresent the small, base, and large versions, respectively.
+
+=== PAGE 27 ===
+Dataset z-score RevIN
+MSE MAE MSE MAE
+ETTm1
+96 0.304 0.344 0.299 0.340
+192 0.339 0.364 0.341 0.365
+336 0.375 0.385 0.359 0.380
+720 0.422 0.413 0.424 0.414
+ETTm2
+96 0.165 0.249 0.164 0.247
+192 0.230 0.290 0.226 0.291
+336 0.282 0.327 0.279 0.324
+720 0.356 0.374 0.353 0.376
+ETTh1
+96 0.362 0.387 0.358 0.386
+192 0.400 0.411 0.398 0.410
+336 0.436 0.435 0.435 0.435
+720 0.451 0.460 0.481 0.480
+ETTh2
+96 0.300 0.342 0.302 0.342
+192 0.354 0.387 0.356 0.386
+336 0.378 0.403 0.378 0.402
+720 0.421 0.439 0.438 0.451
+Weather
+96 0.144 0.241 0.152 0.189
+192 0.197 0.232 0.192 0.229
+336 0.245 0.276 0.245 0.272
+720 0.327 0.327 0.328 0.328
+Electricity
+96 0.140 0.236 0.140 0.236
+192 0.156 0.250 0.155 0.250
+336 0.173 0.267 0.173 0.267
+720 0.212 0.298 0.212 0.298
+Traffic
+96 0.410 0.276 0.409 0.274
+192 0.424 0.281 0.424 0.280
+336 0.435 0.287 0.437 0.287
+720 0.464 0.302 0.464 0.301
+Solar-Energy
+96 0.200 0.226 0.204 0.222
+192 0.225 0.244 0.223 0.235
+336 0.238 0.245 0.236 0.238
+720 0.241 0.251 0.236 0.243
+Table 25: Forecasting performance (MSE and MAE) under
+z-score vs. RevIN normalization across eight datasets.
+0 100 200 300 400
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+GroundTruth
+Prediction
+0 100 200 300 400
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+GroundTruth
+Prediction
+0 100 200 300 400
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+GroundTruth
+Prediction
+0 100 200 300 400
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+GroundTruth
+Prediction
+Figure 15: Prediction cases from ETTh2 by different mod-
+els (TimeMosaic, SimpleTM, PatchTST, iTransformer) un-
+der input-320-predict-96 settings.
+0 100 200 300 400
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+ GroundTruth
+Prediction
+0 100 200 300 400
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+ GroundTruth
+Prediction
+0 100 200 300 400
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+ GroundTruth
+Prediction
+0 100 200 300 400
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+ GroundTruth
+Prediction
+Figure 16: Prediction cases from ETTm1 by different mod-
+els (TimeMosaic, SimpleTM, PatchTST, iTransformer) un-
+der input-320-predict-96 settings.
+0 100 200 300 400
+0.8
+0.6
+0.4
+0.2
+0.0
+0.2
+0.4
+0.6
+0.8
+GroundTruth
+Prediction
+0 100 200 300 400
+0.8
+0.6
+0.4
+0.2
+0.0
+0.2
+0.4
+0.6
+0.8
+GroundTruth
+Prediction
+0 100 200 300 400
+0.8
+0.6
+0.4
+0.2
+0.0
+0.2
+0.4
+0.6
+0.8
+GroundTruth
+Prediction
+0 100 200 300 400
+0.8
+0.6
+0.4
+0.2
+0.0
+0.2
+0.4
+0.6
+0.8
+GroundTruth
+Prediction
+Figure 17: Prediction cases from ETTm2 by different mod-
+els (TimeMosaic, SimpleTM, PatchTST, iTransformer) un-
+der input-320-predict-96 settings.

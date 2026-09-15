@@ -1,0 +1,3 @@
+candidate,reference,mse_change,squared_bias_change,prediction_variance_change,negative_twice_covariance_change,target_variance_change
+constant40,archived20,5.2681597752836764e-05,9.944584559161675e-07,8.199499609957689e-05,-3.030785680265641e-05,0.0
+decay40,archived20,-8.017998234653061e-07,-6.397135996117738e-09,2.3292703303145573e-05,-2.408810599061487e-05,0.0

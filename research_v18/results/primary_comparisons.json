@@ -1,0 +1,156 @@
+[
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_market",
+    "reference": "learned_clip",
+    "metric": "brier",
+    "difference": 0.009262257886216672,
+    "ci95_low": -0.004507800835178126,
+    "ci95_high": 0.022982456994945315,
+    "p": 0.18438156184381563,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_market",
+    "reference": "learned_clip",
+    "metric": "direction_error",
+    "difference": 0.03333333333333333,
+    "ci95_low": -0.041666666666666664,
+    "ci95_high": 0.10833333333333334,
+    "p": 0.38686131386861317,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_trend",
+    "reference": "raw25_clip",
+    "metric": "brier",
+    "difference": 0.00138809705277418,
+    "ci95_low": -0.004000690223234613,
+    "ci95_high": 0.006888272087521622,
+    "p": 0.6164383561643836,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_trend",
+    "reference": "raw25_clip",
+    "metric": "direction_error",
+    "difference": 0.008333333333333333,
+    "ci95_low": -0.03333333333333333,
+    "ci95_high": 0.05,
+    "p": 0.706929307069293,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_market",
+    "reference": "market4",
+    "metric": "brier",
+    "difference": 0.003670562360102142,
+    "ci95_low": -0.01179224260656606,
+    "ci95_high": 0.01937736081596707,
+    "p": 0.639036096390361,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_trend",
+    "reference": "market4",
+    "metric": "brier",
+    "difference": 0.016834687893668415,
+    "ci95_low": 0.0016988147014455424,
+    "ci95_high": 0.038352120068398526,
+    "p": 0.06519348065193481,
+    "holm_adjusted_p": 0.8475152484751525
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "market4",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.018390122037171237,
+    "ci95_low": 0.0030916362040347744,
+    "ci95_high": 0.033679422774615254,
+    "p": 0.0165983401659834,
+    "holm_adjusted_p": 0.2323767623237676
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_market",
+    "reference": "learned_clip",
+    "metric": "brier",
+    "difference": -7.522435143292218e-06,
+    "ci95_low": -0.002653344731603105,
+    "ci95_high": 0.002748774473214492,
+    "p": 0.9965003499650035,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_market",
+    "reference": "learned_clip",
+    "metric": "direction_error",
+    "difference": -0.0070921985815602835,
+    "ci95_low": -0.0425531914893617,
+    "ci95_high": 0.028368794326241134,
+    "p": 0.7044295570442956,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_trend",
+    "reference": "raw25_clip",
+    "metric": "brier",
+    "difference": -0.0012500762321903784,
+    "ci95_low": -0.002839385385642455,
+    "ci95_high": 0.00035646595291759545,
+    "p": 0.12718728127187282,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_trend",
+    "reference": "raw25_clip",
+    "metric": "direction_error",
+    "difference": -0.014184397163120567,
+    "ci95_low": -0.04964539007092199,
+    "ci95_high": 0.02127659574468085,
+    "p": 0.43355664433556645,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_market",
+    "reference": "market4",
+    "metric": "brier",
+    "difference": -0.00724395717830667,
+    "ci95_low": -0.023528781240009622,
+    "ci95_high": 0.008136738563874632,
+    "p": 0.36476352364763526,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_trend",
+    "reference": "market4",
+    "metric": "brier",
+    "difference": 0.0004704177815392649,
+    "ci95_low": -0.01097963248795855,
+    "ci95_high": 0.011626770793176143,
+    "p": 0.9319068093190681,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "market4",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.00047498924236765306,
+    "ci95_low": -0.002849193656985045,
+    "ci95_high": 0.003917783891425787,
+    "p": 0.7936206379362064,
+    "holm_adjusted_p": 1.0
+  }
+]

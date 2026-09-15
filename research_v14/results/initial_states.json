@@ -1,0 +1,83 @@
+[
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "shared_initial_sha256": "deff516bff7cbe11a112bae5c17448e0728cdb854fe1cde9b8ee87969fc20026",
+    "initial_model_sha256": "e3930757d51383a43016b761e3dc881fcf70252dfa73126e6b5ae3a5f31ac1d0",
+    "initial_bias": 0.08109328150749207,
+    "initial_cpu_rng_sha256": "ce8afc94f456dd47b83759724d5b2a832c222a8b976b9c4e82a8a79dd2ee7ad4",
+    "initial_cuda_rng_sha256": "77f1a7f2e6fd309a2c0bda0a99b248f537246b5345f97ea10563fe828a18cb6f"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "shared_initial_sha256": "a3ffd389cc469a40939fca076018d14c0ee99f8801851468672c5417fdc81a52",
+    "initial_model_sha256": "f2abcb96d758582d47fc344e580c8543ec70671767287c807f0ce05614c7289d",
+    "initial_bias": 0.08109328150749207,
+    "initial_cpu_rng_sha256": "80d6facd1bc7fcc130b20984523f05d9d0c6595eb165512dd0110626facb12fc",
+    "initial_cuda_rng_sha256": "c7b014a76e1d73fb8dc5b8bff96cbbeabd073cae1838b46ef24b65ff87a85c1b"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "shared_initial_sha256": "a499e1db5b87196ecbe5558042de6dbc23d9b197a9f54fee5a177dcf4d306682",
+    "initial_model_sha256": "9d84d9dfc8a5b691884485b6dbbf660cdd941798f414f48f85a74833d274d3c1",
+    "initial_bias": 0.08109328150749207,
+    "initial_cpu_rng_sha256": "960bfa4e42137176eaa02bdb2422584310c47d01bec5801d3aa57c4c14cf6fdb",
+    "initial_cuda_rng_sha256": "7fc8a639ada2764c2e0380f0a18d94206fc38aeb6bb3cb59a6219ff5e485e953"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "shared_initial_sha256": "deff516bff7cbe11a112bae5c17448e0728cdb854fe1cde9b8ee87969fc20026",
+    "initial_model_sha256": "5f29d4c6a38839ee974854023cb744cf7e7f07ed2037422392edb960a54defd6",
+    "initial_bias": 0.0447758287191391,
+    "initial_cpu_rng_sha256": "ce8afc94f456dd47b83759724d5b2a832c222a8b976b9c4e82a8a79dd2ee7ad4",
+    "initial_cuda_rng_sha256": "77f1a7f2e6fd309a2c0bda0a99b248f537246b5345f97ea10563fe828a18cb6f"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "shared_initial_sha256": "a3ffd389cc469a40939fca076018d14c0ee99f8801851468672c5417fdc81a52",
+    "initial_model_sha256": "b7d62f9243eaed4b23b458331842b334dab7b1f3099fb8c1e6925b634a4b4d63",
+    "initial_bias": 0.0447758287191391,
+    "initial_cpu_rng_sha256": "80d6facd1bc7fcc130b20984523f05d9d0c6595eb165512dd0110626facb12fc",
+    "initial_cuda_rng_sha256": "c7b014a76e1d73fb8dc5b8bff96cbbeabd073cae1838b46ef24b65ff87a85c1b"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "shared_initial_sha256": "a499e1db5b87196ecbe5558042de6dbc23d9b197a9f54fee5a177dcf4d306682",
+    "initial_model_sha256": "95d9f6c3a3da3a8ecaedb5b1dc64459c7f3568387216ca066065ad628f96c37c",
+    "initial_bias": 0.0447758287191391,
+    "initial_cpu_rng_sha256": "960bfa4e42137176eaa02bdb2422584310c47d01bec5801d3aa57c4c14cf6fdb",
+    "initial_cuda_rng_sha256": "7fc8a639ada2764c2e0380f0a18d94206fc38aeb6bb3cb59a6219ff5e485e953"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "shared_initial_sha256": "deff516bff7cbe11a112bae5c17448e0728cdb854fe1cde9b8ee87969fc20026",
+    "initial_model_sha256": "6408e7b7bd92319345d7878a5ae893b2af48cbd486877bf1dde6cac37cd0a447",
+    "initial_bias": 0.08596514165401459,
+    "initial_cpu_rng_sha256": "ce8afc94f456dd47b83759724d5b2a832c222a8b976b9c4e82a8a79dd2ee7ad4",
+    "initial_cuda_rng_sha256": "77f1a7f2e6fd309a2c0bda0a99b248f537246b5345f97ea10563fe828a18cb6f"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "shared_initial_sha256": "a3ffd389cc469a40939fca076018d14c0ee99f8801851468672c5417fdc81a52",
+    "initial_model_sha256": "53fab5d10bf6abc5fa5258e12df3e8af0657e7b01c55f5d179ccc8d828dc4582",
+    "initial_bias": 0.08596514165401459,
+    "initial_cpu_rng_sha256": "80d6facd1bc7fcc130b20984523f05d9d0c6595eb165512dd0110626facb12fc",
+    "initial_cuda_rng_sha256": "c7b014a76e1d73fb8dc5b8bff96cbbeabd073cae1838b46ef24b65ff87a85c1b"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "shared_initial_sha256": "a499e1db5b87196ecbe5558042de6dbc23d9b197a9f54fee5a177dcf4d306682",
+    "initial_model_sha256": "5b78784fd0c7e2ad67e29f05c823555d65642b7d8c36aed02979496b0fc99af4",
+    "initial_bias": 0.08596514165401459,
+    "initial_cpu_rng_sha256": "960bfa4e42137176eaa02bdb2422584310c47d01bec5801d3aa57c4c14cf6fdb",
+    "initial_cuda_rng_sha256": "7fc8a639ada2764c2e0380f0a18d94206fc38aeb6bb3cb59a6219ff5e485e953"
+  }
+]

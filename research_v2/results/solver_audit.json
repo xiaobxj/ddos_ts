@@ -1,0 +1,834 @@
+[
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2017-12-31",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2017-12-31",
+    "lam": 1.0,
+    "iterations": 21,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2017-12-31",
+    "lam": 0.1,
+    "iterations": 38,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2017-12-31",
+    "lam": 0.01,
+    "iterations": 106,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2017-12-31",
+    "lam": 0.001,
+    "iterations": 271,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2018-12-31",
+    "lam": 10.0,
+    "iterations": 8,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2018-12-31",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2018-12-31",
+    "lam": 0.1,
+    "iterations": 39,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2018-12-31",
+    "lam": 0.01,
+    "iterations": 112,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2018-12-31",
+    "lam": 0.001,
+    "iterations": 258,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2019-12-31",
+    "lam": 10.0,
+    "iterations": 12,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2019-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2019-12-31",
+    "lam": 0.1,
+    "iterations": 39,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2019-12-31",
+    "lam": 0.01,
+    "iterations": 101,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2019-12-31",
+    "lam": 0.001,
+    "iterations": 261,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2017-12-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2017-12-31",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2017-12-31",
+    "lam": 0.1,
+    "iterations": 37,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2017-12-31",
+    "lam": 0.01,
+    "iterations": 106,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2017-12-31",
+    "lam": 0.001,
+    "iterations": 279,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-03-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-03-31",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-03-31",
+    "lam": 0.1,
+    "iterations": 37,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-03-31",
+    "lam": 0.01,
+    "iterations": 105,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-03-31",
+    "lam": 0.001,
+    "iterations": 268,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-06-30",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-06-30",
+    "lam": 0.1,
+    "iterations": 38,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-06-30",
+    "lam": 0.01,
+    "iterations": 101,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-06-30",
+    "lam": 0.001,
+    "iterations": 260,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-09-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-09-30",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-09-30",
+    "lam": 0.1,
+    "iterations": 38,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-09-30",
+    "lam": 0.01,
+    "iterations": 101,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-09-30",
+    "lam": 0.001,
+    "iterations": 267,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-12-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-12-31",
+    "lam": 0.1,
+    "iterations": 37,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-12-31",
+    "lam": 0.01,
+    "iterations": 99,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2018-12-31",
+    "lam": 0.001,
+    "iterations": 272,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-03-31",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-03-31",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-03-31",
+    "lam": 0.1,
+    "iterations": 38,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-03-31",
+    "lam": 0.01,
+    "iterations": 102,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-03-31",
+    "lam": 0.001,
+    "iterations": 276,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-06-30",
+    "lam": 1.0,
+    "iterations": 20,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-06-30",
+    "lam": 0.1,
+    "iterations": 37,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-06-30",
+    "lam": 0.01,
+    "iterations": 102,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-06-30",
+    "lam": 0.001,
+    "iterations": 276,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-09-30",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-09-30",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-09-30",
+    "lam": 0.1,
+    "iterations": 38,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-09-30",
+    "lam": 0.01,
+    "iterations": 100,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-09-30",
+    "lam": 0.001,
+    "iterations": 288,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-12-31",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-12-31",
+    "lam": 1.0,
+    "iterations": 21,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-12-31",
+    "lam": 0.1,
+    "iterations": 41,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-12-31",
+    "lam": 0.01,
+    "iterations": 103,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2019-12-31",
+    "lam": 0.001,
+    "iterations": 279,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-03-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-03-31",
+    "lam": 1.0,
+    "iterations": 20,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-03-31",
+    "lam": 0.1,
+    "iterations": 36,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-03-31",
+    "lam": 0.01,
+    "iterations": 105,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-03-31",
+    "lam": 0.001,
+    "iterations": 276,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-06-30",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-06-30",
+    "lam": 0.1,
+    "iterations": 39,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-06-30",
+    "lam": 0.01,
+    "iterations": 100,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-06-30",
+    "lam": 0.001,
+    "iterations": 281,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-09-30",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-09-30",
+    "lam": 1.0,
+    "iterations": 18,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-09-30",
+    "lam": 0.1,
+    "iterations": 41,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-09-30",
+    "lam": 0.01,
+    "iterations": 101,
+    "success": true
+  },
+  {
+    "phase": "validation",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-09-30",
+    "lam": 0.001,
+    "iterations": 285,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2020-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2021-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2022-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2023-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2024-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "k_logit_exp_annual",
+    "cutoff": "2025-12-31",
+    "lam": 1.0,
+    "iterations": 19,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2020-12-31",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2021-03-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2021-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2021-09-30",
+    "lam": 10.0,
+    "iterations": 14,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2021-12-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2022-03-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2022-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2022-09-30",
+    "lam": 10.0,
+    "iterations": 12,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2022-12-31",
+    "lam": 10.0,
+    "iterations": 6,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2023-03-31",
+    "lam": 10.0,
+    "iterations": 7,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2023-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2023-09-30",
+    "lam": 10.0,
+    "iterations": 12,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2023-12-31",
+    "lam": 10.0,
+    "iterations": 7,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2024-03-31",
+    "lam": 10.0,
+    "iterations": 12,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2024-06-30",
+    "lam": 10.0,
+    "iterations": 11,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2024-09-30",
+    "lam": 10.0,
+    "iterations": 11,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2024-12-31",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2025-03-31",
+    "lam": 10.0,
+    "iterations": 12,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2025-06-30",
+    "lam": 10.0,
+    "iterations": 13,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2025-09-30",
+    "lam": 10.0,
+    "iterations": 11,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2025-12-31",
+    "lam": 10.0,
+    "iterations": 11,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2026-03-31",
+    "lam": 10.0,
+    "iterations": 12,
+    "success": true
+  },
+  {
+    "phase": "development",
+    "method": "l_logit_5y_quarter",
+    "cutoff": "2026-06-30",
+    "lam": 10.0,
+    "iterations": 10,
+    "success": true
+  }
+]

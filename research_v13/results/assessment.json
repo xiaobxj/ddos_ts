@@ -1,0 +1,22 @@
+{
+  "candidate": "rolling_shrink",
+  "counts": {
+    "seeds_beating_original": 1,
+    "seeds_beating_training_mean": 0,
+    "years_beating_original": 1,
+    "years_beating_training_mean": 1
+  },
+  "flags": {
+    "ensemble_beats_original": false,
+    "ensemble_beats_training_mean": false,
+    "at_least_two_seeds_beat_original": false,
+    "at_least_two_seeds_beat_training_mean": false,
+    "at_least_two_years_beat_original": false,
+    "at_least_two_years_beat_training_mean": false
+  },
+  "descriptive_screen_pass": false,
+  "mse_skill_vs_original": -0.01729060390837467,
+  "significant_candidate_improvements": 0,
+  "independent_confirmation": false,
+  "strategy_promotion": false
+}

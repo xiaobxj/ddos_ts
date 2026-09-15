@@ -1,0 +1,9 @@
+{
+  "completed_utc": "2026-09-11T08:07:30.388278+00:00",
+  "stage": "after_frozen_evaluation_and_verification",
+  "fixed_models": true,
+  "new_predictions": 0,
+  "new_fits": 0,
+  "causal_explanation_claim": false,
+  "description": "Accounting identity: mean validation logit equals trained intercept plus the sum of coefficient times mean standardized validation features. Feature means use the frozen training scaler. This describes fixed-model behavior; it neither identifies causal market drivers nor tests a new policy."
+}

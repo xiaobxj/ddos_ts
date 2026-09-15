@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Exact causal training arrays, mature scales and unchanged validation masks/features",
+    "Exact real-model MSE, clipping, optimizer and RNG parity with literal legacy updates",
+    "Serialized model/moments/counters/RNG exactly match uninterrupted dropout training",
+    "Fixed-state dropout audits are repeatable and leave training state unchanged",
+    "Only learning rate changes at branch boundary; moments and complete permutation budgets match"
+  ],
+  "checks_passed": 5,
+  "legacy_update_fingerprints": {
+    "model_sha256": "5726bc36dac585544aef525e2252c26baf3cd3f42c3344f7ab8cc0f3d7ca5ce4",
+    "optimizer_sha256": "abe5f63d069921c0a922824003522a45aaaf918cb925a3791279eba3aa0209a5",
+    "rng_sha256": "6216c9457302bab57d5e167f3d3c6db3664df7ea465c0ce28384268b79bc64df"
+  },
+  "source_sha256": {
+    "research_v12\\common12.py": "a2fa769ab5eddb78940d455d7d3634911dd2c4b5133354bd41fe3517c4787cc4",
+    "research_v12\\prepare12.py": "91da05f5407cbfebbb66dcc6d70ebb1392f63a969b03c2df439deea23a57fb89",
+    "research_v12\\contract12.py": "4e67915ea3184d87401f81a30488e0fa257c5b033c7597f8329691e402d06724",
+    "research_v12\\reconstruct12.py": "88918a809a289bb4069ee2107d54283a4d0c3f0a2a7ef93b0c5fcea37f7ca3d9",
+    "research_v12\\continue12.py": "bf8e37a8b1eb479cceab73c0eb505bb26eb7b1e70a31bd6ecd1d2d6d9d31f4a7",
+    "research_v12\\score12.py": "e9cabd9373b1334d71d7735bcb820a7880736e8485a320dd6d9ac26879f271fe",
+    "research_v12\\evaluate12.py": "ff61d2b40fc52309faeb8275965e85ec623da434b0cd0a3074748cb7aedad96d",
+    "research_v12\\verify12.py": "00497dd6b3c8f3850d2ee10099ea90dc136812395586b9e2c0bc8e6af5093b9f",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v6\\train6.py": "e9e8ee6515f1e517d48c4db87aa534a174795c5cfe64ad5cc38d2c7c8301113e",
+    "research_v6\\evaluate6.py": "abd9e3b354e655d24fe80c0c4a2d61dda47303eece861b167668ce664d8eb7bf",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "protocol_sha256": "7168d8d58ea5aab399f84140ed6fc9d6871c6ed9d63f04f94c086e81e3e9b6ca",
+  "validation_predictions": 0,
+  "completed_utc": "2026-09-11T05:14:55.411305+00:00"
+}

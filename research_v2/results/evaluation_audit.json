@@ -1,0 +1,14 @@
+{
+  "classification": "development walk-forward; 2021-2026 outcomes have been inspected in v1, not a virgin holdout",
+  "n": 272,
+  "methods": 19,
+  "signal_start": "2021-01-08",
+  "signal_end": "2026-08-21",
+  "entry_start": "2021-01-11",
+  "exit_end": "2026-08-31",
+  "close_vs_execution_sign_disagreements": 27,
+  "v1_accuracy_on_execution_labels": 0.5330882352941176,
+  "validation_selected_pipeline": "f_multi_exp_quarter",
+  "weekly_daily_accounting_reconciled": true,
+  "zero_return_rmse": 0.026419142650054128
+}

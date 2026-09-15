@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "unit_test_exit_code": 0,
+  "unit_test_count": 8,
+  "predictions_independently_aligned": 2992,
+  "methods": 11,
+  "saved_training_code_matches_executed_code": {
+    "segmentation.py": true,
+    "run_experiment.py": true
+  },
+  "target_return_matches_frozen_bars": true,
+  "invalid_bars_excluded": true,
+  "buy_hold_matches_analytic_open_ratio_after_two_charges": true,
+  "raw_and_clean_data_hashes_match": true,
+  "versions": {
+    "python": "3.13.15",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "numba": "0.67.0"
+  },
+  "checked_utc": "2026-09-09T09:37:00.007464+00:00"
+}

@@ -1,0 +1,2324 @@
+[
+  {
+    "name": "backbone.enc_pos_embedding",
+    "count": 2000,
+    "shape": [
+      1,
+      5,
+      25,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.dec_pos_embedding",
+    "count": 80,
+    "shape": [
+      1,
+      5,
+      1,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.enc_value_embedding.linear.weight",
+    "count": 80,
+    "shape": [
+      16,
+      5
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.enc_value_embedding.linear.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.pre_norm.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.pre_norm.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.router",
+    "count": 1600,
+    "shape": [
+      25,
+      4,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.time_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_sender.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.dim_receiver.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm3.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm3.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm4.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.norm4.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP1.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP1.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP1.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP2.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP2.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP2.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.0.encode_layers.0.MLP2.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.merge_layer.linear_trans.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.merge_layer.linear_trans.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.merge_layer.norm.weight",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.merge_layer.norm.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.router",
+    "count": 832,
+    "shape": [
+      13,
+      4,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.time_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_sender.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.dim_receiver.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm3.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm3.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm4.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.norm4.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP1.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP1.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP1.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP2.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP2.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP2.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.encoder.encode_blocks.1.encode_layers.0.MLP2.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.router",
+    "count": 64,
+    "shape": [
+      1,
+      4,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.time_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_sender.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.dim_receiver.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm3.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm3.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm4.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.norm4.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP1.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP1.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP1.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP2.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP2.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP2.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.self_attention.MLP2.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.cross_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.MLP1.0.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.MLP1.0.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.MLP1.2.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.linear_pred.weight",
+    "count": 80,
+    "shape": [
+      5,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.0.linear_pred.bias",
+    "count": 5,
+    "shape": [
+      5
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.router",
+    "count": 64,
+    "shape": [
+      1,
+      4,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.time_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_sender.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.dim_receiver.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm3.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm3.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm4.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.norm4.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP1.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP1.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP1.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP2.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP2.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP2.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.self_attention.MLP2.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.cross_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.MLP1.0.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.MLP1.0.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.MLP1.2.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.linear_pred.weight",
+    "count": 80,
+    "shape": [
+      5,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.1.linear_pred.bias",
+    "count": 5,
+    "shape": [
+      5
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.router",
+    "count": 64,
+    "shape": [
+      1,
+      4,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.time_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_sender.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.dim_receiver.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm3.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm3.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm4.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.norm4.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP1.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP1.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP1.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP2.0.weight",
+    "count": 512,
+    "shape": [
+      32,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP2.0.bias",
+    "count": 32,
+    "shape": [
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP2.2.weight",
+    "count": 512,
+    "shape": [
+      16,
+      32
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.self_attention.MLP2.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.query_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.query_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.key_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.key_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.value_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.value_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.out_projection.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.cross_attention.out_projection.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.norm1.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.norm1.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.norm2.weight",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.norm2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.MLP1.0.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.MLP1.0.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.MLP1.2.weight",
+    "count": 256,
+    "shape": [
+      16,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.MLP1.2.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.linear_pred.weight",
+    "count": 80,
+    "shape": [
+      5,
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "backbone.decoder.decode_layers.2.linear_pred.bias",
+    "count": 5,
+    "shape": [
+      5
+    ],
+    "shared": true
+  },
+  {
+    "name": "geometry.weight",
+    "count": 32,
+    "shape": [
+      16,
+      2
+    ],
+    "shared": true
+  },
+  {
+    "name": "geometry.bias",
+    "count": 16,
+    "shape": [
+      16
+    ],
+    "shared": true
+  },
+  {
+    "name": "return_head.weight",
+    "count": 25,
+    "shape": [
+      1,
+      25
+    ],
+    "shared": false
+  },
+  {
+    "name": "return_head.bias",
+    "count": 1,
+    "shape": [
+      1
+    ],
+    "shared": false
+  },
+  {
+    "name": "auxiliary_head.weight",
+    "count": 25,
+    "shape": [
+      5,
+      5
+    ],
+    "shared": false
+  },
+  {
+    "name": "auxiliary_head.bias",
+    "count": 5,
+    "shape": [
+      5
+    ],
+    "shared": false
+  }
+]

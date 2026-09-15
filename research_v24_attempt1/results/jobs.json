@@ -1,0 +1,482 @@
+[
+  {
+    "job": "learned_order_shrink4_2014-12-31_20260910",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2014-12-31_20260910",
+    "cutoff": "2014-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2014-12-31_20260911",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2014-12-31_20260911",
+    "cutoff": "2014-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2014-12-31_20260912",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2014-12-31_20260912",
+    "cutoff": "2014-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2015-12-31_20260910",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2015-12-31_20260910",
+    "cutoff": "2015-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2015-12-31_20260911",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2015-12-31_20260911",
+    "cutoff": "2015-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2015-12-31_20260912",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2015-12-31_20260912",
+    "cutoff": "2015-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2016-12-31_20260910",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2016-12-31_20260910",
+    "cutoff": "2016-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2016-12-31_20260911",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2016-12-31_20260911",
+    "cutoff": "2016-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2016-12-31_20260912",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2016-12-31_20260912",
+    "cutoff": "2016-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2017-12-31_20260910",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2017-12-31_20260910",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2017-12-31_20260911",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2017-12-31_20260911",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2017-12-31_20260912",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2017-12-31_20260912",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2018-12-31_20260910",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2018-12-31_20260910",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2018-12-31_20260911",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2018-12-31_20260911",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2018-12-31_20260912",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2018-12-31_20260912",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2019-12-31_20260910",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2019-12-31_20260910",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2019-12-31_20260911",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2019-12-31_20260911",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink4_2019-12-31_20260912",
+    "method": "learned_order_shrink4",
+    "source_job": "learned_order_extension_2019-12-31_20260912",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "learned_order_shrink16_2014-12-31_20260910",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2014-12-31_20260910",
+    "cutoff": "2014-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2014-12-31_20260911",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2014-12-31_20260911",
+    "cutoff": "2014-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2014-12-31_20260912",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2014-12-31_20260912",
+    "cutoff": "2014-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2015-12-31_20260910",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2015-12-31_20260910",
+    "cutoff": "2015-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2015-12-31_20260911",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2015-12-31_20260911",
+    "cutoff": "2015-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2015-12-31_20260912",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2015-12-31_20260912",
+    "cutoff": "2015-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2016-12-31_20260910",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2016-12-31_20260910",
+    "cutoff": "2016-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2016-12-31_20260911",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2016-12-31_20260911",
+    "cutoff": "2016-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2016-12-31_20260912",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2016-12-31_20260912",
+    "cutoff": "2016-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2017-12-31_20260910",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2017-12-31_20260910",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2017-12-31_20260911",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2017-12-31_20260911",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2017-12-31_20260912",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2017-12-31_20260912",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2018-12-31_20260910",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2018-12-31_20260910",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2018-12-31_20260911",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2018-12-31_20260911",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2018-12-31_20260912",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2018-12-31_20260912",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2019-12-31_20260910",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2019-12-31_20260910",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2019-12-31_20260911",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2019-12-31_20260911",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "learned_order_shrink16_2019-12-31_20260912",
+    "method": "learned_order_shrink16",
+    "source_job": "learned_order_extension_2019-12-31_20260912",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "raw_order_shrink4_2014-12-31_-1",
+    "method": "raw_order_shrink4",
+    "source_job": "raw_order_extension_2014-12-31_-1",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "raw_order_shrink4_2015-12-31_-1",
+    "method": "raw_order_shrink4",
+    "source_job": "raw_order_extension_2015-12-31_-1",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "raw_order_shrink4_2016-12-31_-1",
+    "method": "raw_order_shrink4",
+    "source_job": "raw_order_extension_2016-12-31_-1",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "raw_order_shrink4_2017-12-31_-1",
+    "method": "raw_order_shrink4",
+    "source_job": "raw_order_extension_2017-12-31_-1",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "raw_order_shrink4_2018-12-31_-1",
+    "method": "raw_order_shrink4",
+    "source_job": "raw_order_extension_2018-12-31_-1",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "raw_order_shrink4_2019-12-31_-1",
+    "method": "raw_order_shrink4",
+    "source_job": "raw_order_extension_2019-12-31_-1",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 4,
+    "order_lambda": 0.04
+  },
+  {
+    "job": "raw_order_shrink16_2014-12-31_-1",
+    "method": "raw_order_shrink16",
+    "source_job": "raw_order_extension_2014-12-31_-1",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "raw_order_shrink16_2015-12-31_-1",
+    "method": "raw_order_shrink16",
+    "source_job": "raw_order_extension_2015-12-31_-1",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "raw_order_shrink16_2016-12-31_-1",
+    "method": "raw_order_shrink16",
+    "source_job": "raw_order_extension_2016-12-31_-1",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "raw_order_shrink16_2017-12-31_-1",
+    "method": "raw_order_shrink16",
+    "source_job": "raw_order_extension_2017-12-31_-1",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "raw_order_shrink16_2018-12-31_-1",
+    "method": "raw_order_shrink16",
+    "source_job": "raw_order_extension_2018-12-31_-1",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  },
+  {
+    "job": "raw_order_shrink16_2019-12-31_-1",
+    "method": "raw_order_shrink16",
+    "source_job": "raw_order_extension_2019-12-31_-1",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "multiplier": 16,
+    "order_lambda": 0.16
+  }
+]

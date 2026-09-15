@@ -1,0 +1,10 @@
+{
+  "completed_utc": "2026-09-11T08:38:12.819840+00:00",
+  "after_verification_utc": "2026-09-11T08:36:44.051036+00:00",
+  "new_fits": 0,
+  "new_predictions": 0,
+  "purpose": "Descriptive lower/upper clipping accounting chosen after evaluation. Does not rank causal importance or select states, features or models.",
+  "artifacts": {
+    "results\\posthoc_tail_details.csv": "f25ca60b01fb16ad559175d5d9cebd4728dc55caccad7c6ddce8b55d87fc1313"
+  }
+}

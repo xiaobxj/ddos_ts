@@ -1,0 +1,211 @@
+{
+  "version": 23,
+  "experiment": "Add one permutation-centered sign-order by signal interaction to the existing R19volatility-interaction model",
+  "scope": "Research only. Retain all26old methods. One new deterministic60day sign-order gate, two feature-family extensions and one gate-only control. The parent now is R19originalvolinteraction, not R18additive; R22comparison is descriptive, not isolated causal attribution to newgate.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "variants": [
+    {
+      "method": "learned_order_extension",
+      "parent": "learned_vol_interaction",
+      "gate": "excess_order",
+      "dimensions": 31,
+      "fits": 18
+    },
+    {
+      "method": "raw_order_extension",
+      "parent": "raw_vol_interaction",
+      "gate": "excess_order",
+      "dimensions": 28,
+      "fits": 6
+    },
+    {
+      "method": "order_only",
+      "parent": null,
+      "gate": "excess_order",
+      "dimensions": 1,
+      "fits": 6
+    }
+  ],
+  "order_state": {
+    "signs": "s_i=+1 if close_i>close_i-1, -1 if less,0 if exactly equal, on trailing60dailychanges. Use direct close comparison for neutral signs; no epsilon, demeaning or fitted classification threshold.",
+    "observed": "A=(1/59)*sum(s_i*s_i-1), i=2..60. Positive adjacent product for same nonzero signs,negative for opposite,zero when either sign is0.",
+    "permutation_expectation": "B=((sum s)^2-sum(s^2))/(60*59). Exact expected adjacentproduct when uniformly permuting the fixed60sign multiset. Not an estimate from future dates or random shuffles.",
+    "gate": "u=A-B. Positive indicates excess same-sign adjacency conditional on sign counts,negative excess alternation. Unstandardized before product; no clipping or lag/horizon grid. A and B are each in[-1,1]; u is a difference,not a posterior probability or a standard correlation statistic.",
+    "limits": "Allpositive,allnegative or allzero windows give u=0: with a single sign there is no order variation conditional on counts. Gate deliberately removes this count-imbalance explanation; it is not a universal trend detector. It ignores return magnitudes and is invariant to time reversal, though generally not arbitrary permutations.",
+    "context": "Require same121validOHLCbar context as R22for comparable state diagnostics; direct order formula itself needs61closes. Existing125bar samplemask is stricter,so no changes to classifier membership. Bad bars break diagnosis; no filling or compression.",
+    "labels": "For descriptivegroups only: u<-.05negative_order,u>.05positive_order,otherwise near_zero_order. No claim nearzero proves random order. Modelusescontinuousu."
+  },
+  "interaction": {
+    "parent": "Reuse exactly the R19standardized[X18,h_original_vol] cache and next-year transform; retain old interaction coordinate. Add one new residualized product h_order to these coordinates.",
+    "ray": "Reuse exactly R19cache.ray, originally R18parent.coefficients[:25]. Do not replace it by R19refitted coefficients. r=X_parent[:25]@ray, q=u*r. Same inherited supervised training ray is not OOF.",
+    "projection": "Training-only OLS q~[X_parent,1], numpy lstsq rcond1e-12. Standardize residual by training mean/popSDfloor1e-6. Freeze ray/projection/scale for next-year application.",
+    "fit": "Refit all parent slopes including originalvolinteraction,one addedorder slope,intercept. Same lambda=.01. Setting addedorder slope0 exactly nests frozen R19parent and its objective. Originalfeature retained; original coefficient is allowed to refit. Existing R19forecasts preserved separately."
+  },
+  "control": "order_only: one training-standardizedu coordinate,popSDfloor1e-6,one slope/intercept,same loss andlambda,sixfits.",
+  "probe": {
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "Verify all30new convexheads; alternate coefficients never supply forecasts."
+  },
+  "projection_verification": {
+    "method": "scipy.linalg.lstsq, pivoted-QR gelsy",
+    "rcond": 1e-12,
+    "training_fitted_value_absolute_tolerance": 1e-09,
+    "training_standardized_residual_absolute_tolerance": 1e-08,
+    "validation_standardized_residual_absolute_tolerance": 1e-08
+  },
+  "diagnostics": "Training and next-year causal daily states,sign counts,observed/expected lagproduct,u,run statistics and censoring. Correlations with rawvol20,abs trend60,priorER60,relativevol. Training gate/product OLS R2. Separate refittedbase,originalinteraction and neworder logitcomponents. No subgroupselection or projection-based feature selection.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_order_extension",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "order_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_extension",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_extension",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_extension",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_extension",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_extension",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_extension",
+      "reference": "order_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "order_only",
+      "reference": "training_frequency",
+      "metric": "brier"
+    }
+  ],
+  "inference": "26fixed contrasts jointlyHolm:13perperiod. Candidate-reference loss negativebetter. Circular8retained observations,10000replicates,seed20260910 separately perperiod; centeredtwo-sidedp and marginal95percentintervals. Not adjusted for repeated historicaldesign selection. No pooledprimary.",
+  "descriptive_screen": "11strict flags per candidate/window: accuracy above R19parent,R18additive,nativeMSE,frequency(4); Brier below R19parent,R18additive,frequency,order_only(4); logloss belowfrequency(1); at least2yearsaccuracy>native and2yearBrier<frequency(2). Tiesfail; bothwindows all11required. Gate-onlycontrol not auto-promoted.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "budget": "30heads (18learned,6raw,6orderonly),24newprojections,47325trainingrows,762classifiercoefficients.1305newprobabilities,11223old modelrows→12528;6786oldensembles→7569=29methods*261.26statecells including23old+3new:1508stategroups;1868allmetricgroups;280reliabilitybins;26contrasts.3292oldfiles preserved. No neuralforward/training/HMMfit.",
+  "sequencing": "Freeze protocol,core,inputs then contract; complete30fits before newheldoutscoring. Stateformulas are deterministic past-only,while parentfeatures,ray,projection andhead are training-insample. No new temporalOOF neuralrepresentation/ray claimed.",
+  "user_steering": "Keep originalvolinteraction and its later58.16percent accuracy. Test genuinely order-sensitive content as an addition before largerexperts. Retain R22smallBrier improvement as a researchrecord.",
+  "sources": [
+    "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm"
+  ],
+  "source_scope": "Runs-based sequence randomness is background; this custom centered signproduct is not a NIST runs p-value/test or a validated marketstate label."
+}

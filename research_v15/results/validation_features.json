@@ -1,0 +1,128 @@
+[
+  {
+    "family": "probe_mse",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "feature_file": "cache\\validation_probe_mse_2017-12-31_20260910.npz",
+    "sha256": "2fd16f764d7a9ab8df7aa7a477a1022b3640ed66dd337b3bca66d2b8b5709ba2"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "feature_file": "cache\\validation_probe_mse_2017-12-31_20260911.npz",
+    "sha256": "49f4a5f1be1bd2fd2ab61f41c3c23bc75c6a0835e078faad41a7583a5f6f4229"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "feature_file": "cache\\validation_probe_mse_2017-12-31_20260912.npz",
+    "sha256": "b097cf75cec251f4b8d550bf572e65de6d06c97bd3e76f056e389fba5a97dfc8"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "feature_file": "cache\\validation_probe_mse_2018-12-31_20260910.npz",
+    "sha256": "1d1460dd5b370e635e3091421add8513bcbd9156a2df2faaad01e0c5a37ad7ac"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "feature_file": "cache\\validation_probe_mse_2018-12-31_20260911.npz",
+    "sha256": "d2ed7e655da0e78e73a0a8f22ef9b32bd975160f08c984a9ff3618471143c60b"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "feature_file": "cache\\validation_probe_mse_2018-12-31_20260912.npz",
+    "sha256": "3cde15c3710c90f8be8b37e619dd4386a6a552ad3f50fe04b74487baa6504b3c"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "feature_file": "cache\\validation_probe_mse_2019-12-31_20260910.npz",
+    "sha256": "f1fa60a1e61164a441fe92aec90e38a757356c39d0ae47143bf2e7d7b17f8999"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "feature_file": "cache\\validation_probe_mse_2019-12-31_20260911.npz",
+    "sha256": "7e81f0a4ed8c0634e9a50f6fc212040a5d76bb255b71c3840e60059b421bf996"
+  },
+  {
+    "family": "probe_mse",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "feature_file": "cache\\validation_probe_mse_2019-12-31_20260912.npz",
+    "sha256": "fe94831f3bb4b9c00dbdfc3a36d2d714314d117784b45fe0884d34e1b1b633a7"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "feature_file": "cache\\validation_probe_bce_2017-12-31_20260910.npz",
+    "sha256": "c12e28e7ce8150b81039c8d8d391d0f2caad573c3cd319b20eb71e20360f2e51"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "feature_file": "cache\\validation_probe_bce_2017-12-31_20260911.npz",
+    "sha256": "a75bc078a09fea7f6b84df845c0b92f630aaf275bdec7c7e1450ab33b1cadc78"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "feature_file": "cache\\validation_probe_bce_2017-12-31_20260912.npz",
+    "sha256": "24e032103ae51e871ad1209726c52ece35474767116b2d0ff55dccac01e47d79"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "feature_file": "cache\\validation_probe_bce_2018-12-31_20260910.npz",
+    "sha256": "12d28e243e38fc8c48bf3313c910a2b66ffee2cb87460684de47c0c2f571dae2"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "feature_file": "cache\\validation_probe_bce_2018-12-31_20260911.npz",
+    "sha256": "ced7f3216ac6fb9dff810e14e19d7f86fdb6cb51bdd8728375ce2072bc14b0c6"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "feature_file": "cache\\validation_probe_bce_2018-12-31_20260912.npz",
+    "sha256": "fdfdbb8ee83f87a23516fe2dd690598437f80e68368f13a3373102dac9184b7f"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "feature_file": "cache\\validation_probe_bce_2019-12-31_20260910.npz",
+    "sha256": "4f0b8303fd782b52955a3c61538f6113f0bdc5eca88e71aec4872a818491ee0b"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "feature_file": "cache\\validation_probe_bce_2019-12-31_20260911.npz",
+    "sha256": "929529685b278d9af0b003c988b91e84e121f80d6a420875c1fbd1b95848df0c"
+  },
+  {
+    "family": "probe_bce",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "feature_file": "cache\\validation_probe_bce_2019-12-31_20260912.npz",
+    "sha256": "11c17473f618b069cefeca986392817a88bdbaa1928832ee3a5e032077fd8765"
+  }
+]

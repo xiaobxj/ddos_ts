@@ -1,0 +1,58 @@
+{
+  "after": {
+    "date_cst": "2026-09-18",
+    "due_parameter_cutoffs": [],
+    "fetch_needed": false,
+    "journal_events": 1,
+    "labels": 0,
+    "latest_snapshot_end": "2026-09-18",
+    "next_parameter_cutoff": "2026-06-30",
+    "next_unrecorded_signal": "2026-09-25",
+    "now_utc": "2026-09-18T15:00:01+00:00",
+    "pending_labels": 0,
+    "recorded_predictions": 0,
+    "recording_window_open": false,
+    "scheduler_installed": false,
+    "status": "READY_FOR_MANUAL_CYCLE"
+  },
+  "before": {
+    "date_cst": "2026-09-18",
+    "due_parameter_cutoffs": [],
+    "fetch_needed": true,
+    "journal_events": 0,
+    "labels": 0,
+    "latest_snapshot_end": null,
+    "next_parameter_cutoff": "2026-06-30",
+    "next_unrecorded_signal": "2026-09-18",
+    "now_utc": "2026-09-18T14:59:59+00:00",
+    "pending_labels": 0,
+    "recorded_predictions": 0,
+    "recording_window_open": true,
+    "scheduler_installed": false,
+    "status": "READY_FOR_MANUAL_CYCLE"
+  },
+  "completed_utc": "2026-09-18T15:00:01+00:00",
+  "evaluation": {
+    "status": "DESCRIPTIVE_ONLY"
+  },
+  "run_id": "ca8d86eb0d454f2aa3a9893cd13c24bb",
+  "source_freeze_sha256": "2c6f21ddfafc7dd3f20318cfb67c0ddacc26f7ac3c85372c3b47f87a91af13c2",
+  "started_utc": "2026-09-18T14:59:59+00:00",
+  "status": "COMPLETED",
+  "steps": [
+    {
+      "action": "fetch",
+      "end": "2026-09-18",
+      "sequence": 1
+    },
+    {
+      "action": "record",
+      "status": "OUTSIDE_RECORDING_WINDOW"
+    },
+    {
+      "action": "settle",
+      "committed": 0,
+      "pending": 0
+    }
+  ]
+}

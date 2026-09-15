@@ -1,0 +1,31 @@
+{
+  "status": "PRESERVED_PREFLIGHT_FAILURE",
+  "files": {
+    "cache\\training_2017-12-31.npz": "adbe1fd837072f54098ad6bd52c30aa23ddbb80bb368e27384fac89c09588912",
+    "cache\\training_2018-12-31.npz": "326cc3af04e7e45d23ba2731826b53f7522cb17c8cbe075e7ac410f25ac0c493",
+    "cache\\training_2019-12-31.npz": "fc5db5e44389666665164abbd55399fce04cb0433340764ec042008e50a25845",
+    "cache\\validation_2017-12-31.npz": "e2a0a6e047a306838394dfc372b87172b91a3d149212752ca805cb3b9edb5dad",
+    "cache\\validation_2018-12-31.npz": "abcf18529fec80e451d05f4bf1c5f990fd501ac6d49dec9ba5bef507f90fe91e",
+    "cache\\validation_2019-12-31.npz": "73b4baf35e6433e1c9b4efad02ded1f6d70f8fcf85c6016b3e11b61fd5457028",
+    "common12.py": "6265be8857d7993cb693c603c181184884fc53aca87479af67d62f9b4ff3e10e",
+    "continue12.py": "bf8e37a8b1eb479cceab73c0eb505bb26eb7b1e70a31bd6ecd1d2d6d9d31f4a7",
+    "contract12.py": "ef9ce61053047cd4f1bc4b5dae023f01aeea8403cff6650f3c7caf399868e082",
+    "evaluate12.py": "ff61d2b40fc52309faeb8275965e85ec623da434b0cd0a3074748cb7aedad96d",
+    "preflight_failure.json": "06c253b40aef322e88cb2859bcbf26b78661db24d766ff9cf3b20a9685659ba6",
+    "prepare12.py": "91da05f5407cbfebbb66dcc6d70ebb1392f63a969b03c2df439deea23a57fb89",
+    "protocol.json": "5cb53515adc8ec356a64d38505b73615a69d59a0ce1a3fa2281d98a36c0530ab",
+    "reconstruct12.py": "88918a809a289bb4069ee2107d54283a4d0c3f0a2a7ef93b0c5fcea37f7ca3d9",
+    "results\\archived_models.json": "034b2a96dd6ec91bbffe340d2507843d1df39117f176f9f259c5d21dcea88c66",
+    "results\\archived_predictions.csv": "a2afad23978b4ac1bd38ee506adea40a19312d3c1b278a998ff55f052756258c",
+    "results\\continuation_plan.json": "c8d79c7e49153187ff8c19171cec874ef7eab58e1244e7d16379f7dc9686cedf",
+    "results\\preparation_manifest.json": "ab78ca49bdad6b96b01ae1f35e33fa95ca1480f790f1058c1b77debe72b6cc2a",
+    "results\\schedule_budgets.csv": "0250f273bbe359635c3029218df3a13112e9cc98309ce2cb0a06d2d6e95b4e07",
+    "results\\training_rows.csv": "0fb2bd89bb8884292d31b78ae0fd4cd25e34abf12c6ce90027cea55475a06f57",
+    "results\\training_scales.json": "a1c7849e0c4331788530d100eae17a9d7fecb133279ad9ecc2a21105f9aecfeb",
+    "results\\validation_rows.csv": "c1e83bf93fdc06740bb3e6ad37f02eacc0a0f89c11991b7276efd8db8b442dbf",
+    "score12.py": "e9cabd9373b1334d71d7735bcb820a7880736e8485a320dd6d9ac26879f271fe",
+    "verify12.py": "00497dd6b3c8f3850d2ee10099ea90dc136812395586b9e2c0bc8e6af5093b9f"
+  },
+  "formal_training_fits": 0,
+  "new_validation_predictions": 0
+}

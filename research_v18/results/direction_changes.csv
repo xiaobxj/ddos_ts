@@ -1,0 +1,15 @@
+window,method,reference,changed,correct_to_wrong,wrong_to_correct
+early_2015_2017,learned_market,learned_clip,32,18,14
+early_2015_2017,learned_market,native_mse,28,14,14
+early_2015_2017,learned_market,market4,37,19,18
+early_2015_2017,raw_trend,raw25_clip,11,6,5
+early_2015_2017,raw_trend,native_mse,65,36,29
+early_2015_2017,raw_trend,market4,28,18,10
+early_2015_2017,market4,training_frequency,103,53,50
+late_2018_2020,learned_market,learned_clip,7,3,4
+late_2018_2020,learned_market,native_mse,16,10,6
+late_2018_2020,learned_market,market4,52,25,27
+late_2018_2020,raw_trend,raw25_clip,10,4,6
+late_2018_2020,raw_trend,native_mse,48,27,21
+late_2018_2020,raw_trend,market4,48,24,24
+late_2018_2020,market4,training_frequency,41,21,20

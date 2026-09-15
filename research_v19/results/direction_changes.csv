@@ -1,0 +1,17 @@
+window,method,reference,changed,correct_to_wrong,wrong_to_correct
+early_2015_2017,learned_vol_interaction,learned_market,7,5,2
+early_2015_2017,learned_vol_interaction,learned_clip,33,20,13
+early_2015_2017,learned_vol_interaction,native_mse,29,16,13
+early_2015_2017,learned_vol_interaction,training_frequency,75,41,34
+early_2015_2017,raw_vol_interaction,raw_trend,4,2,2
+early_2015_2017,raw_vol_interaction,raw25_clip,11,6,5
+early_2015_2017,raw_vol_interaction,native_mse,63,35,28
+early_2015_2017,raw_vol_interaction,training_frequency,83,47,36
+late_2018_2020,learned_vol_interaction,learned_market,4,1,3
+late_2018_2020,learned_vol_interaction,learned_clip,9,3,6
+late_2018_2020,learned_vol_interaction,native_mse,16,9,7
+late_2018_2020,learned_vol_interaction,training_frequency,61,29,32
+late_2018_2020,raw_vol_interaction,raw_trend,5,3,2
+late_2018_2020,raw_vol_interaction,raw25_clip,11,5,6
+late_2018_2020,raw_vol_interaction,native_mse,51,29,22
+late_2018_2020,raw_vol_interaction,training_frequency,60,31,29

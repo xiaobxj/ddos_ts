@@ -1,0 +1,53 @@
+[
+  {
+    "n": 118,
+    "signal_years": 3,
+    "numerator": -0.000171051587169982,
+    "denominator": 0.0025618096099687885,
+    "raw_alpha": -0.0667698280560615,
+    "alpha": 0.0,
+    "fallback": false,
+    "lower_clipped": true,
+    "upper_clipped": false,
+    "outer_cutoff": "2017-12-31",
+    "first_date": "2015-01-09",
+    "last_date": "2017-12-15",
+    "latest_label_completion": "2017-12-25",
+    "input_file": "results\\calibration_input_2017-12-31.csv",
+    "input_sha256": "fb4b83073672765f5ba2217f84dbd0f3a415dd497592efd4ade32f0d9889e60f"
+  },
+  {
+    "n": 145,
+    "signal_years": 3,
+    "numerator": 0.0008097266973049237,
+    "denominator": 0.0030331841693820635,
+    "raw_alpha": 0.2669559947854685,
+    "alpha": 0.2669559947854685,
+    "fallback": false,
+    "lower_clipped": false,
+    "upper_clipped": false,
+    "outer_cutoff": "2018-12-31",
+    "first_date": "2016-01-08",
+    "last_date": "2018-12-14",
+    "latest_label_completion": "2018-12-24",
+    "input_file": "results\\calibration_input_2018-12-31.csv",
+    "input_sha256": "b2b7bcd067954e2c348e638b11b2451899172a82f3a55160ec9922056619126f"
+  },
+  {
+    "n": 144,
+    "signal_years": 3,
+    "numerator": 0.003936677914642935,
+    "denominator": 0.004283174709493877,
+    "raw_alpha": 0.9191028107999157,
+    "alpha": 0.9191028107999157,
+    "fallback": false,
+    "lower_clipped": false,
+    "upper_clipped": false,
+    "outer_cutoff": "2019-12-31",
+    "first_date": "2017-01-06",
+    "last_date": "2019-12-20",
+    "latest_label_completion": "2019-12-30",
+    "input_file": "results\\calibration_input_2019-12-31.csv",
+    "input_sha256": "cf8f74168b646e6d3735a8813dd71a07e01ce3b385b2f0904db5750064e3544c"
+  }
+]

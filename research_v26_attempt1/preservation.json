@@ -1,0 +1,32 @@
+{
+  "status": "PRESERVED",
+  "reason": "New contract incorrectly used zero OHLC rounding tolerance; existing source uses0.011. Stopped before new-year neural execution or scoring. Correct checker only, preserve all sample masks and modelsettings.",
+  "new_year_fits": 0,
+  "new_year_forecasts": 0,
+  "files": {
+    "common26.py": "0431fbddee9147ec46dcd0b760380aa80722e58e31306421c98412472700332e",
+    "contract26.py": "a2c379039e4c14c4a12bc477cdd4c40bf96d057bb3e31bb40e9034fda920d7fd",
+    "delivery26.py": "9e58e8602906d716590c17f9001c9eee18afd3d5b9ae697c46bdfb88a6e40bee",
+    "evaluate26.py": "dbc00a9e86579d1d07d33d48c2ff2d65aba0e6d65594ab7f32ae62fd802da9ee",
+    "prepare26.py": "bda172985dd39cd995345a03082782ea3385fb64091dfd4eaf7faf90a4c6c84d",
+    "protocol.json": "3aba060ae1acaaf1cbcd918686f61971dec087604a548933943261cc4af65104",
+    "README.md": "a624be320bea8626829aefb65c1020ae93cb63eb10d8de18dba7fe178d9caf8e",
+    "report26.py": "32447c062b5a7be649cd75e7b00607ba59803fe0a2d670f6ac06a8852877be05",
+    "run26.py": "d9db9ddd4225f68502897cf524fa5f468817d1969de83b2bbf917560bd56b53f",
+    "score26.py": "4db47fd2904efe32a2e11907429e8be7d0ff979442de47c3d77172d10cfed237",
+    "train26.py": "873908ab68dade3dd0b79213620bd3d9a67991e67dcb094a62c426c54738e900",
+    "verify26.py": "e2990d730b3371977e4a2379ad4c303f1b6bda8ac3fbbe7eb6ca6f2a89359394",
+    "cache\\training_2020-12-31.npz": "f0fefb716a7d65db1a9f2c99926304124d395dca1d17f8056f297c75f8e0d087",
+    "cache\\training_2021-12-31.npz": "da02063fc27ce395396d30cc6604e6f1f285eacdc85b1c9665acecd2efb74d95",
+    "cache\\training_2022-12-31.npz": "83716c54d1cb1fac080d581d8091f531026d8954ce4b9ab9769b9a0efcdddba7",
+    "cache\\training_2023-12-31.npz": "e79e2414d93f4bc4df77d1c78b5e3083ca4b29d6dde5613ed190617ae5df9f10",
+    "cache\\training_2024-12-31.npz": "14c2ee2bf4d7555031ebc270a32b78fb7ffcd2392f2672e9643e03e99ace3d7c",
+    "cache\\training_2025-12-31.npz": "8d58b094e73fe201d274734cd98810c1996cc9fe4fb7bccf739e6cd17d86a4d2",
+    "results\\budgets.csv": "2c7482c6d25b410059046594b4ccbe82e9b944ff622624f236194a8aa5a03a1b",
+    "results\\membership.csv": "ceb9cd03551e968e2844725e5e88780e91880bd32ec31eaba85520dd07e54096",
+    "results\\preparation_manifest.json": "d56f1dfb23a0c1191100586619678ad340b16e5fcf90c2356272163a30de300c",
+    "results\\training_scales.json": "a8b9737862424d3a6a7e8e30d69046d1e64987b31509e7982590cffe28f3b940",
+    "results\\logs\\contract.log": "7348d6cc3183ab4e8723a07fb480b315ede50e229399d0c992059f12f84ff9a2",
+    "results\\logs\\prepare.log": "80253353acde3f058bba76e8082f7a97936c4f3d5b65e7914ce415742606e063"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "version": 26,
+  "experiment": "Annual learned R19/R23/R25 historical extension to 2021-2026",
+  "status": "Fixed protocol before new-year neural execution",
+  "scope": "Rebuild complete causal annual learned pipelines. Three main versions plus additive R18, native MSE and mature training frequency. No raw feature branch, new selector, state-dependent switch, ensemble weight search, hyperparameter search, transaction backtest or deployment.",
+  "folds": [
+    {
+      "cutoff": "2020-12-31",
+      "end": "2021-12-31",
+      "train_n": 2408,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2021-12-31",
+      "end": "2022-12-31",
+      "train_n": 2651,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2022-12-31",
+      "end": "2023-12-31",
+      "train_n": 2893,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2023-12-31",
+      "end": "2024-12-31",
+      "train_n": 3135,
+      "test_n": 47
+    },
+    {
+      "cutoff": "2024-12-31",
+      "end": "2025-12-31",
+      "train_n": 3377,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2025-12-31",
+      "end": "2026-08-31",
+      "train_n": 3620,
+      "test_n": 30
+    }
+  ],
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "features": "Frozen eval requires_grad=False; 25 flattened decoded coordinates; training 1/99 percent clipping and population standardization with sd floor1e-6. Four R18 market descriptors clipped/scaled separately on same training rows. Supervised R18 coefficient ray[:25] shared by both products. Volatility interaction residualized over R18+intercept; order interaction residualized over R19+intercept. Training least squares rcond1e-12, residual sd floor1e-6. Order uses exact trailing60close signs, mean adjacent product minus permutation expectation; neutral exact zero. R23 jointly refits all coefficients; R25 freezes R19 including intercept and fits only gamma. No full-pipeline OOF claim.",
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "decisions": "Equal mean of all three seed probabilities then strict p>.5. Native MSE equal mean of raw execution-return predictions then strict return>0, uses original requires_grad=True inference flags and all test rows as one batch. No invented probability for native MSE. Frequency uses exact mature annual train rows.",
+  "sequencing": "Freeze source,protocol,inputs before contract and all new-year fits. Complete18backbones and72heads before next-year forecast scoring. Failures halt and remain preserved; no outcome-dependent edits. Baseline recipe parity uses only old 2015-2020 evidence before new-year execution.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_order_extension",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_vol_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_vol_interaction",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_extension",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    }
+  ],
+  "inference": "24 comparisons jointly Holm. Candidate-reference losses,negative better. 10000 circular8-observation moving blocks,seed20260910 separately perwindow; centered two-sidedp, marginal95percentileinterval. Pooled272 descriptive only; no statistical adjustment can undo earlier historical design selection.",
+  "metrics": "All6years,2primarywindows,pooled descriptive, all3seeds and seedyears. Accuracy,balancedaccuracy,AUROC,confusion,Brier,NLL,5fixedcalibrationbins. NLL reporting clip[1e-12,1-1e-12]. Full paired direction-change counts and dates.",
+  "data_usage": "All272later-year signals were previously viewed in rounds1-3; R4viewed103. This is historical extension of currentrecipes, not untouched holdout. Yearly training labels joint_completed<=previous Dec31. Sample membership stays fixed, including invalidOHLC exclusions. Last eligible signal2026-08-21 matures2026-08-31.",
+  "budget": {
+    "neural_fits": 18,
+    "neural_epochs": 360,
+    "neural_optimizer_steps": 8640,
+    "neural_presentations": 1085040,
+    "training_feature_rows": 54252,
+    "head_fits": 72,
+    "head_primary_free_coefficients": 1692,
+    "projections": 36,
+    "new_model_prediction_rows": 4352,
+    "ensemble_rows": 1632,
+    "weeks": 272,
+    "independent_head_solutions": 72,
+    "old_files": 3697
+  },
+  "verification": "Reconstruct all3780rawwindows and labels from fixed price source. Check annual membership, train-only scales, prefixcausality and parity with18old learned feature pipelines plus oneold neuralfeature replay. Replay18newcheckpoints, alltraining/test features and native output, reproduce all learning batchorders and optimizersteps. Independent L-BFGS-B54solutions: objectivegap<=1e-10, probabilitygap<=1e-5,gradient<=5e-7; brentq18scalarroots coefficientgap<=1e-7. Independent featurealgebra, probabilities and pairwise AUC/metrics. All old evidence hashes unchanged.",
+  "decision": "No automatic promotion. Preserve original R19late58.16percent and R25early51.67percent historical records. Compare annual/seed consistency before proposing state-conditional work. Prospective confirmation requires timestamped predictions before outcome occurrence.",
+  "preparation_correction": "First attempt contract incorrectly imposed zero OHLC tolerance. Preserve24files+manifest from research_v26_attempt1; no new-year neural fits or forecasts occurred. Restore original0.011point tolerance from research/download_tencent.py without changing data, membership, models or statisticalsettings."
+}

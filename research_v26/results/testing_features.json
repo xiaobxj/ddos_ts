@@ -1,0 +1,110 @@
+[
+  {
+    "cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v26\\cache\\testing_2020-12-31_20260910.npz",
+    "cache_sha256": "a92888d7b52e0cc51a5abcace317e7df1958c1de49ac9d10721717fa6c335c6f"
+  },
+  {
+    "cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v26\\cache\\testing_2020-12-31_20260911.npz",
+    "cache_sha256": "c72fdb79489dc03c99222f1614453ff44b143ce86999802bfa6490cd1fcb6806"
+  },
+  {
+    "cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v26\\cache\\testing_2020-12-31_20260912.npz",
+    "cache_sha256": "8bd235bf1beeb0c8185418251efa3a42afad27789169dd091163981abf9c5f91"
+  },
+  {
+    "cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v26\\cache\\testing_2021-12-31_20260910.npz",
+    "cache_sha256": "067ac636e8f9da531652bb8af2805a746f61ced0afdaa6472d4b5b0b10e43ede"
+  },
+  {
+    "cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v26\\cache\\testing_2021-12-31_20260911.npz",
+    "cache_sha256": "68839fdef30014e18eeedfd1dcb1a4e068685aa95f2acaced2354ba52864c9a2"
+  },
+  {
+    "cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v26\\cache\\testing_2021-12-31_20260912.npz",
+    "cache_sha256": "22881874e7f9d8c41f1811fa953e4fa761cd009f9830c6ce2ed2b797be77011c"
+  },
+  {
+    "cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v26\\cache\\testing_2022-12-31_20260910.npz",
+    "cache_sha256": "686321c14b6091c9c9d74420096189685766b3fd1e400ec3233caa34617c5fa0"
+  },
+  {
+    "cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v26\\cache\\testing_2022-12-31_20260911.npz",
+    "cache_sha256": "a501f32ea90566455dd408fe5637d5236c0f5af7e744270c9cad6984e40665e4"
+  },
+  {
+    "cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v26\\cache\\testing_2022-12-31_20260912.npz",
+    "cache_sha256": "e481a4d378f88f86e2c0f0b985095a91317a3ed2df2ca7d09403957e3c03fe7b"
+  },
+  {
+    "cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v26\\cache\\testing_2023-12-31_20260910.npz",
+    "cache_sha256": "3e57bf64150de55b3a0556a60c12c0082b1494742201f2835f862e412f1903d5"
+  },
+  {
+    "cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v26\\cache\\testing_2023-12-31_20260911.npz",
+    "cache_sha256": "97e80c710e63a729a81f921258c093c4463400b0c6e42b3d367e8d2a2368d6b9"
+  },
+  {
+    "cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v26\\cache\\testing_2023-12-31_20260912.npz",
+    "cache_sha256": "3cd1c90600329d90bf427ccfd3df5671e56b36c78801ec07da4a919c24be21ac"
+  },
+  {
+    "cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v26\\cache\\testing_2024-12-31_20260910.npz",
+    "cache_sha256": "96a4d3e8f95ecb2df7e536b8b36230a435744e6bb7ffb725f18902ef6e9c4819"
+  },
+  {
+    "cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v26\\cache\\testing_2024-12-31_20260911.npz",
+    "cache_sha256": "1fc700d6b4569bae27fdbecefd38fa14d6a6f31ccd6c5f7d3890ac40d1832b76"
+  },
+  {
+    "cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v26\\cache\\testing_2024-12-31_20260912.npz",
+    "cache_sha256": "ac71eaefddb891e531f96c2d76d31d24ee10d50b69325e00d1f6ea79b88188d6"
+  },
+  {
+    "cutoff": "2025-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v26\\cache\\testing_2025-12-31_20260910.npz",
+    "cache_sha256": "9939f1476fa24f7bdfbd1db7248210209f97704df0e0f67cb86246390c046ad6"
+  },
+  {
+    "cutoff": "2025-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v26\\cache\\testing_2025-12-31_20260911.npz",
+    "cache_sha256": "08162e7240c50907b75b54ce44db3c09e105217cdc16bbf429787dfcb9534aa3"
+  },
+  {
+    "cutoff": "2025-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v26\\cache\\testing_2025-12-31_20260912.npz",
+    "cache_sha256": "6e4d17afcec036afb267928d2fe5ed5c60d351c94024c85d44069cdaae9a29da"
+  }
+]

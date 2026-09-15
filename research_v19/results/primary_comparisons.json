@@ -1,0 +1,178 @@
+[
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_vol_interaction",
+    "reference": "learned_market",
+    "metric": "brier",
+    "difference": -0.0023023572478044676,
+    "ci95_low": -0.008326635516750535,
+    "ci95_high": 0.003232963545024875,
+    "p": 0.42715728427157285,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_vol_interaction",
+    "reference": "learned_market",
+    "metric": "direction_error",
+    "difference": 0.025,
+    "ci95_low": -0.008333333333333333,
+    "ci95_high": 0.06666666666666667,
+    "p": 0.194980501949805,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_vol_interaction",
+    "reference": "raw_trend",
+    "metric": "brier",
+    "difference": -0.0014601844663714259,
+    "ci95_low": -0.007146110746774442,
+    "ci95_high": 0.004923925306770181,
+    "p": 0.6366363363663634,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_vol_interaction",
+    "reference": "raw_trend",
+    "metric": "direction_error",
+    "difference": 0.0,
+    "ci95_low": -0.025,
+    "ci95_high": 0.025,
+    "p": 1.0,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_vol_interaction",
+    "reference": "learned_clip",
+    "metric": "brier",
+    "difference": 0.006959900638412206,
+    "ci95_low": -0.010247958436006479,
+    "ci95_high": 0.02276108305140996,
+    "p": 0.40785921407859216,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_vol_interaction",
+    "reference": "raw25_clip",
+    "metric": "brier",
+    "difference": -7.208741359724565e-05,
+    "ci95_low": -0.008583515420610774,
+    "ci95_high": 0.0087597373976912,
+    "p": 0.9862013798620138,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "learned_vol_interaction",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.019758327149468905,
+    "ci95_low": 0.0007157716762399561,
+    "ci95_high": 0.03814202759595451,
+    "p": 0.039196080391960805,
+    "holm_adjusted_p": 0.5487451254874512
+  },
+  {
+    "window": "early_2015_2017",
+    "candidate": "raw_vol_interaction",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.03376462546446823,
+    "ci95_low": 0.013596271920095286,
+    "ci95_high": 0.05577028004935088,
+    "p": 0.0018998100189981002,
+    "holm_adjusted_p": 0.030396960303969604
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_vol_interaction",
+    "reference": "learned_market",
+    "metric": "brier",
+    "difference": 0.0022317259600068175,
+    "ci95_low": 0.0008167936380146368,
+    "ci95_high": 0.003884297381898012,
+    "p": 0.0047995200479952005,
+    "holm_adjusted_p": 0.071992800719928
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_vol_interaction",
+    "reference": "learned_market",
+    "metric": "direction_error",
+    "difference": -0.014184397163120567,
+    "ci95_low": -0.0425531914893617,
+    "ci95_high": 0.014184397163120567,
+    "p": 0.31126887311268875,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_vol_interaction",
+    "reference": "raw_trend",
+    "metric": "brier",
+    "difference": 0.0010819115504731264,
+    "ci95_low": -0.0005479284358744083,
+    "ci95_high": 0.002905306587151271,
+    "p": 0.22137786221377861,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_vol_interaction",
+    "reference": "raw_trend",
+    "metric": "direction_error",
+    "difference": 0.0070921985815602835,
+    "ci95_low": -0.028368794326241134,
+    "ci95_high": 0.04964539007092199,
+    "p": 0.6959304069593041,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_vol_interaction",
+    "reference": "learned_clip",
+    "metric": "brier",
+    "difference": 0.0022242035248635256,
+    "ci95_low": -0.0005902407630214411,
+    "ci95_high": 0.005119742109965758,
+    "p": 0.12588741125887412,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_vol_interaction",
+    "reference": "raw25_clip",
+    "metric": "brier",
+    "difference": -0.00016816468171725198,
+    "ci95_low": -0.0027820306515838945,
+    "ci95_high": 0.002593226066363968,
+    "p": 0.9022097790220978,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "learned_vol_interaction",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": -0.0045372419759322005,
+    "ci95_low": -0.021825394744588358,
+    "ci95_high": 0.012258487994520974,
+    "p": 0.5958404159584042,
+    "holm_adjusted_p": 1.0
+  },
+  {
+    "window": "late_2018_2020",
+    "candidate": "raw_vol_interaction",
+    "reference": "training_frequency",
+    "metric": "brier",
+    "difference": 0.0020273185743800446,
+    "ci95_low": -0.009707385451278937,
+    "ci95_high": 0.01419136408992512,
+    "p": 0.7393260673932607,
+    "holm_adjusted_p": 1.0
+  }
+]

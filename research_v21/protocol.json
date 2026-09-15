@@ -1,0 +1,250 @@
+{
+  "version": 21,
+  "experiment": "Frozen annual two-state zero-mean Gaussian volatility HMM with one residualized soft-state by inherited-signal interaction",
+  "scope": "Research only; same261previously evaluated dates. Retain all17round20methods including original round19interaction. Full history, equal row weights. No recency cutoff/decay, no neural training or forward calls, no strategy deployment.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "hmm": {
+    "states": 2,
+    "fixed_means": [
+      0.0,
+      0.0
+    ],
+    "initial_distribution": [
+      0.5,
+      0.5
+    ],
+    "variance_bounds": [
+      1e-08,
+      1.0
+    ],
+    "transition_floor": 0.0001,
+    "initial_variance_multipliers": [
+      0.5,
+      2.0
+    ],
+    "initial_stay_probability": 0.97,
+    "max_iterations": 3000,
+    "gradient_infinity_tolerance": 1e-07,
+    "likelihood_roundoff_tolerance": 1e-08,
+    "minimum_variance_ratio": 1.05,
+    "minimum_soft_occupancy": 20
+  },
+  "hmm_data": "Daily close log returns on each trading bar from price anchor1 through last date<=cutoff. Valid only when both adjacent OHLC bars valid and closes finite positive. Invalid returns have neutral emissions but still advance a trading-bar transition. No filling, no compression of missing bars. Fixed initial distribution applied to first emission without a prior transition.",
+  "hmm_fit": "Single deterministic constrained Baum-Welch EM initialization. Both emission means fixed zero, sort final states by variance. EM smoothed probabilities only for within-training likelihood estimation. Four free parameters per annual fit; local stationary point, not global optimum or observed ground-truth regimes.",
+  "hmm_features": "At each classifier training signal use forward-filtered high-variance posterior from parameters fit on the whole pre-cutoff daily sequence. This training feature is in-sample, not historically prequential/OOF. At held-out dates all parameters frozen; continue from last training filtered posterior times transition, through every next-year bar. No held-out smoothing/refitting. All six HMMs and30heads finish before any new held-out filtering/scoring.",
+  "interaction": {
+    "volatility": "Replace standardized volatility20 by u=2*filtered_high_variance_probability-1. Refit only this new training OLS product projection and residual normalization. Reuse unchanged R18 additive X and supervised first25coefficient ray.",
+    "signal": "r=X[:,0:25] @ parent.coefficients[0:25]. This is the representation-only logit contribution of the already fitted round18parent. It excludes that parent appended market coefficients and intercept. Raw25itself already contains three market summaries. Ray weights are supervised training-fit coefficients, not out-of-fold predictions; no next-year labels are used.",
+    "product": "q=v*r. Only one fixed product, no separate25-dimensional products, higher powers, horizon grid or expert models.",
+    "projection": "Using only this fold training inputs, solve min_gamma ||q-[X,1]gamma||^2 with numpy.linalg.lstsq rcond=1e-12. This removes the product component linearly representable by existing additive coordinates. Freeze gamma, training residual mean and populationSD (floor1e-6). h=(q-[X,1]gamma-residual_mean)/residual_sd; append h to unchanged X.",
+    "normalization": "No additional clipping of product or residual. Constituent inputs retain their existing training-only clipping. Do not recompute projection, means, SDs or ray on held-out data.",
+    "model": "Refit the full ridge logistic head on [X,h], one extra slope. All additive slopes and intercept may refit; interaction ray stays fixed. Zero new slope nests the original parent exactly. Same lambda=.01 applies to every slope, intercept unpenalized.",
+    "interpretation": "This is a one-dimensional interaction along an inherited signal direction, with training-linear redundancy removed. Residualization changes the ridge parameterization relative to an unresidualized-product model; that alternative is not tested. Coefficient signs/components are not causal importance or OOF calibration evidence.",
+    "sd_floor": 1e-06,
+    "projection_rcond": 1e-12,
+    "rank_tolerance": 1e-08,
+    "training_orthogonality_tolerance": 1e-08
+  },
+  "control": "hmm_only uses one coordinate u standardized by classifier-training mean and populationSD floor1e-6; same ridge logistic objective. Six deterministic fits. No learned signal inputs.",
+  "variants": [
+    {
+      "method": "learned_hmm_interaction",
+      "parent": "learned_market",
+      "dimensions": 30,
+      "fits": 18
+    },
+    {
+      "method": "raw_hmm_interaction",
+      "parent": "raw_trend",
+      "dimensions": 27,
+      "fits": 6
+    },
+    {
+      "method": "hmm_only",
+      "parent": null,
+      "dimensions": 1,
+      "fits": 6
+    }
+  ],
+  "probe": {
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "Independently verify all30new convex heads; alternate coefficients never score held-out data."
+  },
+  "projection_verification": {
+    "method": "scipy.linalg.lstsq, pivoted-QR gelsy",
+    "rcond": 1e-12,
+    "training_fitted_value_absolute_tolerance": 1e-09,
+    "training_standardized_residual_absolute_tolerance": 1e-08,
+    "validation_standardized_residual_absolute_tolerance": 1e-08
+  },
+  "independent_hmm": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-10,
+      "maxiter": 1000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-08,
+    "gradient_infinity_tolerance": 1e-06,
+    "filtered_probability_absolute_tolerance": 0.001,
+    "log_domain_likelihood_tolerance": 1e-08,
+    "log_domain_probability_tolerance": 1e-08,
+    "log_domain_transition_count_tolerance": 1e-06,
+    "purpose": "Independent log-domain recursion, toy exhaustive state paths and finite differences; locally refine EM result as stationarity check only. Alternate parameters never generate delivered forecasts; no claim of global optimality."
+  },
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_hmm_interaction",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_hmm_interaction",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_hmm_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_hmm_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_hmm_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_hmm_interaction",
+      "reference": "hmm_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_hmm_interaction",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_hmm_interaction",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_hmm_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_hmm_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_hmm_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_hmm_interaction",
+      "reference": "hmm_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "hmm_only",
+      "reference": "training_frequency",
+      "metric": "brier"
+    }
+  ],
+  "inference": "26fixed contrasts, jointly Holm adjusted. Candidate-reference Brier or direction error, negativebetter. Circular8retained-observation blocks,10000replicates,seed20260910 separately each period. Centered two-sided p. Intervals neither simultaneous nor adjusted for repeated historical design selection. No pooled primary.",
+  "descriptive_screen": "11strict flags per candidate per period: accuracy above R18parent,R19interaction,nativeMSE,fullfrequency(4); Brier below R18parent,R19interaction,fullfrequency,hmm_only(4); logloss below fullfrequency(1); at least2years accuracy above nativeMSE and at least2years Brier below fullfrequency(2). Ties fail. Both periods all11for descriptive PASS. Control not eligible for automatic promotion.",
+  "diagnostics": "Preserve old12state cells and add fixed HMM posterior buckets p<.2low,p>.8high,otherwiseuncertain; all cells including n<20. These thresholds only tabulate, never train/switch. All annual,seed,reliability,training fit and logit-component diagnostics. Probability is a latent-model posterior, not a known market label.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "budget": "6HMM fits on10924daily steps (10missing),24projections,30classifier fits on47325rows,738classifier coefficients plus24HMM free parameters.1305new model probabilities;7308old model records→8613;4437old ensemble records→5220(20methods*261).1462heldout daily filtering steps,2missing. Preserve3061old evidence files.852metricgroups,190reliabilitybins.",
+  "user_steering": "Keep the original full-history interaction and its late2018-2020accuracy58.16percent; failure of a later variant does not erase that hypothesis. Identify a state before separate expert training; this bounded round adds only one conditional signal direction, not two large expert networks.",
+  "sources": [
+    "https://hmmlearn.readthedocs.io/en/stable/tutorial.html",
+    "https://www.statsmodels.org/stable/examples/notebooks/generated/markov_autoregression.html"
+  ]
+}

@@ -1,0 +1,892 @@
+=== PAGE 1 ===
+Beyond Fixed Patches: Enhancing GPTs for Financial Prediction with Adaptive
+Segmentation and Learnable Wavelets
+Renjun Jia1∗ ,Zian Liu 2∗ ,Peng Zhu 1 ,Dawei Cheng 1† andYuqi Liang 3
+1School of Computer Science and Technology, Tongji University
+2School of Mathematical Sciences, Tongji University
+3Seek Data Group, Emoney Inc.
+{2332101, 2152632, pengzhu, dcheng}@example.com, roly.liang@seek-data.com
+Abstract
+The extensive adoption of web technologies in
+the finance and investment sectors has led to an
+explosion of financial data, which contributes to
+the complexity of the forecasting task. Traditional
+machine learning models exhibit limitations in
+this forecasting task constrained by their restricted
+model capacity. Recent advances in Generative
+Pre-trained Transformers (GPTs), with their
+greatly expanded parameter spaces, demonstrate
+promising potential for modeling complex depen-
+dencies in temporal sequences. However, existing
+pretraining-based approaches typically focus on
+fixed-length patch analysis, ignoring market data’s
+multi-scale pattern characteristics. In this study,
+we proposeGPT4FTS, a novel framework that
+enhances pretrained transformer capabilities for
+temporal sequence modeling through dynamic
+patch segmentation and learnable wavelet trans-
+form modules. Specifically, we first employ
+K-means++ clustering based on DTW distance to
+identify scale-invariant patterns in market data.
+Building upon pattern recognition results, we
+introduce adaptive patch segmentation that parti-
+tions temporal sequences while preserving pattern
+integrity. To accommodate time-varying frequency
+characteristics, we devise a dynamic wavelet trans-
+form module that emulates discrete wavelet trans-
+formation with enhanced flexibility in capturing
+time-frequency features. Extensive experiments
+on real-world financial datasets substantiate the
+framework’s efficacy. The source code is available:
+https://anonymous.4open.science/r/GPT4FTS-
+6BCC/.
+1 Introduction
+The task of financial time series prediction has grown pro-
+foundly challenging in quantitative analysis. While his-
+torically hindered by the inherently weak predictive sig-
+nals obscured by market noise and non-stationary tem-
+∗Both authors contributed equally to this research
+†Corresponding author
+(a) CSI 300 Price
+ (b) Price Dist
+ (c) Irregular Series
+(d) Use of Electricity
+ (e) Electricity Dist
+ (f) Regular Series
+Figure 1: Figures a and d reveal discrepancies in period patterns
+between financial and electricity data. Figures b and e illustrate de-
+viations in their frequency domain distributions. Figures c and f
+abstract the differences.
+poral dynamics [Huanget al., 2024 ], this challenge is
+now significantly amplified by the data explosion facili-
+tated by the widespread adoption of Web technology in fi-
+nance, which introduces massive volumes of complex, high-
+velocity data that further complicate robust time series anal-
+ysis. These challenges are aggravated by complex macro-
+economic interdependency [Ghironi, 2006 ], irregular event-
+driven disturbance, and the heterogeneous behavior of mar-
+ket participants[Frijnset al., 2010 ], which collectively mani-
+fest as intricate patterns that resist conventional market anal-
+ysis methods. As illustrated in Figure 1, the visual compar-
+ison between financial data and power data reveals that the
+intrinsic patterns in financial time series are more complex
+and exhibit similar patterns across different scales. Moreover,
+the frequency domain characteristics of financial time se-
+ries vary over time, which contrasts sharply with power time
+series. All of the above highlights the low signal-to-noise
+ratio and complex dependencies characteristic of financial
+time series. Traditional machine learning methods, includ-
+ing auto-regressive models [Taylor and Yu, 2016 ] gradient-
+boosted decision trees [Machadoet al., 2019 ] and recurrent
+neural networks [Hochreiter and Schmidhuber, 1997 ], face
+limitations when applied to financial prediction tasks. These
+limitations stem from their restricted model capacity to si-
+multaneously capture long-term sequence dependency, multi-
+resolution features, and nonlinear interactions among diverse
+arXiv:2505.02880v2  [cs.LG]  18 Jan 2026
+
+=== PAGE 2 ===
+market factors. Furthermore, the inherent assumption of sta-
+tionarity in many traditional models fails to account for the
+non-stationary nature of financial time series, where statis-
+tical properties such as volatility and correlation structures
+evolve over time. For instance, while recurrent neural net-
+works are capable of modeling sequences, their practical ef-
+ficacy is undermined by gradient vanishing issues and inflex-
+ible receptive fields when processing extended financial se-
+quences spanning multiple market regimes. This architec-
+tural rigidity prevents such models from adapting to the ever-
+evolving statistical property of financial markets.
+Recent advances in enerative Pre-trained Transformers
+(GPTs) have demonstrated strong capabilities for time se-
+ries modeling, leveraging their massive parameter scales to
+capture complex dependencies [Radfordet al., 2019; Brown
+et al., 2020; Touvronet al., 2023 ]. The transformer’s self-
+attention mechanism [Vaswaniet al., 2017 ] has shown par-
+ticular promise in modeling long-term dependencies through
+pairwise interactions across time steps [Wuet al., 2021;
+Zhouet al., 2021 ]. In finance, initial applications reveal
+GPTs’ potential in decoding structured temporal patterns for
+market prediction[Yuet al., 2023; Yanget al., 2023 ], sug-
+gesting their adaptability beyond textual analysis to numeri-
+cal forecasting tasks.
+Current GPT-based financial prediction methods face criti-
+cal limitations. For instance, Time-LLM [Jinet al., 2024a ]
+uses textual prompting to reprogram time series, yet the
+complex modalities within financial patches are often poorly
+captured by simple textual prototypes. Moreover, most ap-
+proaches rely on rigid, fixed-length patch segmentation[Bian
+et al., 2024; Zhouet al., 2023; Caoet al., 2024 ], which arbi-
+trarily divides time series without respecting the multi-scale
+nature of financial markets. This uniform segmentation dis-
+rupts semantically coherent patterns, discards contextual in-
+formation, and breaks inherent temporal dependencies. Addi-
+tionally, such static decomposition cannot adapt to the time-
+varying frequency characteristics of financial data, limiting
+model adaptability to evolving environments and structural
+breaks, ultimately impairing predictive performance.
+Recognizing the potential of GPTs in financial time se-
+ries modeling and the limitations of existing approaches, we
+propose the GPT4FTS framework to fully realize the poten-
+tial of GPTs for financial time series prediction. Our frame-
+work integrates an offline scale-invariant pattern recognition
+algorithm[Huanget al., 2024 ], a learnable patch segmenta-
+tion strategy, and a dynamic wavelet transform module[Chen
+et al., 2025] to enhance the modeling of financial time series
+data by capturing its multi-scale characteristics and complex
+temporal dependencies. In summary, the primary contribu-
+tions of this work include:
+• To the best of our knowledge, this is the first work to
+enhance foundation language models to model the com-
+plex interactions between patches while capturing the
+scale-invariant patterns in financial time series.
+• We devise scale-invariant pattern recognition algorithm,
+learnable patch segmentation strategy, and dynamic
+wavelet transform module to collectively enhance GPTs’
+capability in modeling financial time series.
+• We conduct experiments on four real-world datasets,
+showing that GPT4FTS outperforms state-of-the-art
+baselines. Ablation studies confirm improved accuracy.
+2 Related Works
+Methods For Financial PredictionFinancial predic-
+tion has evolved through several methodological shifts.
+Traditional approaches, including Exponential Smoothing
+[De Fariaet al., 2009 ] and ARIMA [Ariyoet al., 2014 ], were
+valued for modeling linear trends. Subsequently, machine
+learning techniques like Support Vector Machines [Kim,
+2003] and XGBoost [Wang and Guo, 2020 ] became promi-
+nent with increased data and computational resources. How-
+ever, the high volatility and low signal-to-noise ratio of finan-
+cial data often lead these models to overfit. Deep learning
+introduced Recurrent Neural Networks (RNNs) to better cap-
+ture sequential dependencies [Di Persioet al., 2017 ], though
+their ability to model long-range relationships remains lim-
+ited. To address this, methods like diffusion models have
+been adapted from image generation to synthesize financial
+time series and capture complex patterns, as seen in FTS-
+Diffusion [Huanget al., 2024 ].More recently, Transformers
+[Wuet al., 2021; Zhouet al., 2021 ] have gained traction
+for their multi-head self-attention and parallel computation,
+which efficiently handle long sequences. And growing body
+of work has begun to focus on the inherent properties of the
+market itself [Yanget al., 2025 ].
+GPTs for Financial PredictionBuilding on the success of
+Transformers, Generative Pre-trained Transformers (GPTs)
+have demonstrated remarkable capabilities not only in NLP
+and CV [Zhuet al., 2023; Brownet al., 2020; Touvronet al.,
+2023] but also show promise for financial time series model-
+ing. Their profound capacity for contextual understanding
+and knowledge reasoning is particularly suited to tackling
+the complex, noisy patterns characteristic of financial data
+[Jinet al., 2024b; Tanget al., 2024 ]. Existing GPT-based
+financial prediction methods fall into two main categories.
+The first category involves training GPTs with market-driven
+feedback. For instance, some works [Wanget al., 2024a;
+Yuet al., 2023 ] leverage textual news and price data for
+forecasting by treating prices as token sequences or using
+GPTs’ inherent reasoning capabilities. A common limitation
+of these approaches is their reliance on external, high-quality
+text data, which can be difficult to obtain. The second cat-
+egory adapts general-purpose GPTs for time series through
+prompting, reprogramming, or fine-tuning [Jinet al., 2024a;
+Caoet al., 2024; Zhouet al., 2023; Bianet al., 2024 ].
+While effective, these methods often employ fixed-length
+patch strategies that overlook the multi-scale patterns inher-
+ent in financial data. Unlike these approaches, our framework
+dynamically adapts to different scales through variable-length
+patches, explicitly capturing the intrinsic multi-scale charac-
+teristics and cross-scale dependencies in financial time series.
+This distinguishes our work from both general-purpose time-
+series models [Liuet al., 2024b; Liuet al., 2024a ] and ex-
+isting financial GPTs, providing a tailored solution for the
+unique challenges of financial forecasting.
+
+=== PAGE 3 ===
+Figure 2: The architecture of the proposed GPT4FTS model. Part (a) outlines the off-line learning time series scale invariant pattern recogni-
+tion module, which uses k-means++ clustering and DTW algorithms to match patterns of sequences of different lengths to obtain sequence
+cuts that minimize the total distance. Part (b) describes the training process using dynamic stepping. Part (c) introduces a learnable wavelet
+transform module that adaptively decomposes the input sequences.
+3 Methodology
+3.1 Problem Formulation
+The definition of the stock forecasting problem can vary de-
+pending on the specific investment strategy adopted by the in-
+vestor. In this paper, we adopt a paradigm widely accepted in
+the research field, namely cross-sectional analysis[Asgharian
+and Hansson, 2002]. Building on existing work, we input his-
+torical data on normalized stocks with multiple metrics and
+output a predict of the next day’s return score. Given a set of
+BstocksX={x 1,x 2,...,x n}consisting of all data from the
+stock market, each stockxi∈R L×M contains historical data
+with a backtracking window lengthL, whereMdenotes the
+indicator dimension at one time step. Our task is to predict the
+returnr t
+i on trading dayt. Denoting our model parameters as
+Θ, the process can be expressed as follows:
+X∈R B×M×L Θ
+−→r∈R B
+In this paper, we focus on predicting the stock’s return the
+next day. Therefore, the label of the predicted value r is de-
+fined asrs
+t =p s
+t+1/ps
+t−1, wherep s
+t denotes the closing price
+of the stock.
+3.2 Scale-Invariant Pattern Recognition
+In this section, we propose a method for identifying patterns
+in financial time-series data based on the scale-invariant prop-
+erty inherent to such data. A suitable approach involves em-
+ploying clustering techniques for sequence model recogni-
+tion. While investigating the impact of different clustering
+methods on subsequent predictions remains an important re-
+search direction, a detailed discussion of such methodological
+nuances falls beyond the scope of this study. For the purpose
+of this work, we focus on the K-means algorithm to establish
+a robust baseline.
+Specifically, we partition the entire financial time-series
+into variable-length segments and group them into K distinct
+clusters using the fundamental K-means algorithm with Dy-
+namic Time Warping (DTW) as the distance metric. Un-
+like conventional approaches that apply fixed-length parti-
+tioning across entire time series, we adopt a simple yet ef-
+fective splitting method to determine the optimal segment
+length for each portion adaptively. For the candidate length
+l∈[l min,lmax]at positiont= Pm−1
+τ=0 tτ of the sequence,
+we obtain it by minimizing the distance between the sub-
+sequence and the cluster centroids pattern for each possible
+length, whilexm =X t:t+l∗ is considered as the optimal seg-
+mentation:
+l∗ =argmin
+l∈[lmin,lmax]
+d(Xt:t+l,p),∀p∈P(1)
+wheremis the number of sequences that have been seg-
+mented andpis the cluster centroid sequence used for the
+comparison.
+To address the need for calculating distances between seg-
+ments of varying lengths and to focus on the differences be-
+tween various modes, we adopt the DTW distance measure
+in place of the standard Euclidean distance method. Consider
+X={x 1,x 2,...,x n}andY={y 1,y 2,...,y m}, wheren
+andmdenote the lengths of sequencesXandY, respectively.
+The DTW algorithm computes the minimum cumulative dis-
+tance between these sequences, allowing for non-linear align-
+ments. The cumulative distanceD i,j is defined as:
+Di,j =d(x i,yj) + min(Di−1,j,Di,j−1,Di−1,j−1)(2)
+whered(xi,yj)is the local distance between pointsxi andyj,
+typically the Euclidean distance, although it can be adapted to
+
+=== PAGE 4 ===
+Figure 3: The SWT tokenization method employs input padding and
+incorporates learnable filters with zero-insertion operations.
+other metrics. The final DTW distance isDN,M , representing
+the optimal alignment cost between the sequences.
+Inspired by the method used in FTS-Diffusion [Huanget
+al., 2024 ], we adapt it by using volatility-based weighted
+DTW distances in financial time series to mitigate the adverse
+effects of random initialization on clustering results. Specifi-
+cally, we first randomly select a segment of the predetermined
+length from all available segments. Then, from the remaining
+segments, we choose the one that is farthest from the already
+selected segment to ensure sufficient dissimilarity among the
+centroids. This method demonstrates greater robustness when
+dealing with segments of varying shapes.
+3.3 Next-patch Prediction Pre-Training
+In this section, we propose using next-patch prediction as
+a continual pre-training task. We introduce an efficient dy-
+namic patch partitioning strategy that adapts to historical se-
+quence segmentation based on references learned from mar-
+ket index data. This method guides partitioning stock data
+across temporal phases while maintaining training efficiency.
+Following [Bianet al., 2024 ], we frame time-series fore-
+casting as an autoregressive output process of the language
+model, enabling it to understand time-series patches.
+Given time-series data, we flatten them intoMunivariate
+sequences, where thei-th sequence with a look-back win-
+dow sizeLstarting at timetis denoted asx i
+t,...,x i
+t+L−1∈
+RL. Each sequence is then divided into overlapping patches
+pi
+tp,...,p i
+tp+Lp−1∈R Lp×P , with patch extraction dynami-
+cally determined by segment positions and a sliding window
+strategy. For each batch, we adjust segment positions relative
+to the batch start and combine them with stride-based starts
+to form the complete set of patch extraction points.
+3.4 Multi-Resolution Prediction Fine-tuning
+This section proposes a tokenization framework for finan-
+cial time series. The method extracts multi-scale temporal
+features, from high-frequency fluctuations to low-frequency
+trends, while preserving both local patterns and global char-
+acteristics of each variable. This comprehensive representa-
+tion aids the integration of temporal information for forecast-
+ing. Scale-specific processing modules can further enhance
+predictive performance by handling different temporal reso-
+lutions separately.
+The wavelet transform naturally meets these requirements,
+as demonstrated in transformer-based vision architectures
+[Yaoet al., 2022 ]. It decomposes signals across scales while
+maintaining precise time localization. Our framework pro-
+cesses each wavelet scale independently to capture scale-
+dependent feature interactions, filtering information relevant
+to tasks where predictive dependencies are scale-specific.
+To address financial non-stationarity, we employ a trainable
+wavelet transform that adapts to market dynamics.
+Data from different stocks are processed as independent
+channels. A learnable Stationary Wavelet Transform (SWT)
+generates a multi-scale representation:
+SWT(·;h 0,g 0) :R M×L→R M×L×(S+1),(3)
+using learnable filtersh 0,g 0∈R M×k of kernel sizekacross
+Sdecomposition levels. It produces time-frequency tokens
+{t(s)
+1 ,...,t (s)
+L }S
+s=0 that retain the original lengthLvia zero-
+padding and no downsampling, ensuring time-invariance
+across the sequence. This scale-invariant, channel-wise pro-
+cessing captures localized events across different temporal
+scales while keeping variables independent.
+The transform is mathematically founded on a mother
+waveletψ(t), which encodes localized oscillations, and a
+scaling functionϕ(t), which captures smooth approxima-
+tions. From these, a family of discrete wavelet basis functions
+is derived through scaling and translation:(
+ψs,k(t) = 2−s/2ψ(2−st−k)(4a)
+ϕs,k(t) = 2−s/2ϕ(2−st−k)(4b)
+Here,sis the scale parameter (largerscorresponds to lower
+frequency, broader support), andkis the translation param-
+eter. The factor2 −s/2 ensures energy normalization across
+scales. Equation (4a) generates wavelet functions that ex-
+tract detail (high-frequency) information, while Equation (4b)
+generates scaling functions that extract approximation (low-
+frequency) information.
+The transform decomposes the input series{x t}L
+t=1 using
+a low-pass filterh(fromϕ(t)) and a high-pass filterg(from
+ψ(t)): h(k) =⟨ϕ(t),ϕ(2t−k)⟩(5a)
+g(k) =⟨ψ(t),ϕ(2t−k)⟩(5b)
+Filterhin (5a) captures smooth trends; filtergin (5b) extracts
+high-frequency details. Starting withc (0)
+t =x t, the decom-
+position at levelsis:
+
+
+c(s+1)
+t =
+X
+h(s)(k)cs
+t+k (6a)
+d(s+1)
+t =
+X
+g(s)(k)cs
+t+k (6b)
+wherec (s)
+t are approximation coefficients (low-frequency
+trends) andd (s)
+t are detail coefficients (high-frequency com-
+ponents). Filtersh (s) andg (s) are upsampled by insert-
+ing2 s−1zeros to preserve lengthL. Unlike fixed fil-
+ters,handgare learnable parameters [Chenet al., 2025;
+Michauet al., 2022], allowing the decomposition to adapt and
+optimize for discriminative patterns in each variate, merging
+wavelet theory with data-driven flexibility.
+
+=== PAGE 5 ===
+Table 1: Comparing the experimental results of the models on four datasets. ARR measures the portfolio return rate of each predictive model,
+with higher values being better. A V ol and MDD measure the investment risk of each predictive model, with lower absolute values being
+better. ASR, CR, and IR measure profits under unit risk, with higher values being better.
+Datasets CSI300 CSI500
+Model ARR↑A V ol↓MDD↓ASR↑CR↑IR↑ARR↑A V ol↓MDD↓ASR↑CR↑IR↑
+LSTM 0.104 0.243 0.173 0.431 0.605 0.536 0.161 0.313 0.199 0.514 0.808 0.656
+GRU 0.166 0.234 0.154 0.707 1.076 0.779 0.135 0.292 0.199 0.461 0.677 0.565
+Transformer 0.235 0.221 0.158 1.065 1.492 1.112 0.193 0.306 0.228 0.629 0.845 0.695
+AlphaStcok 0.308 0.215 0.1051.431 2.924 1.360 0.051 0.273 0.172 0.187 0.297 0.318
+DeepPocket 0.2070.2030.135 1.016 1.528 1.029 0.1410.2600.174 0.541 0.809 0.637
+DeepTrader 0.385 0.293 0.162 1.313 2.377 1.323 0.273 0.331 0.155 0.825 1.759 1.002
+MASTER 0.194 0.223 0.107 0.869 1.816 0.960 0.413 0.333 0.205 1.241 2.013 1.201
+UMI 0.297 0.237 0.131 1.262 2.277 0.077 0.287 0.262 0.193 1.095 1.484 0.069
+Dlinear 0.192 0.287 0.143 0.669 1.341 0.816 0.347 0.336 0.174 1.033 1.987 1.070
+PatchTST 0.308 0.243 0.141 1.265 2.174 1.213 0.245 0.2810.1290.872 1.903 0.875
+iTransformer 0.372 0.309 0.148 1.203 2.498 1.184 0.218 0.329 0.149 0.662 1.461 0.748
+Crossformer 0.359 0.234 0.157 1.532 2.280 1.520 0.307 0.296 0.187 1.034 1.635 1.016
+TimeMixer 0.395 0.272 0.172 1.467 2.560 1.324 0.165 0.343 0.246 0.481 0.671 0.583
+GPT4TS 0.333 0.330 0.198 1.009 1.682 1.103 0.519 0.344 0.200 1.510 2.590 1.378
+TIME-LLM 0.370 0.323 0.209 1.145 1.771 1.205 0.563 0.340 0.194 1.704 2.9901.521
+aLLM4TS 0.312 0.331 0.177 0.943 1.764 1.057 0.376 0.337 0.247 1.115 1.523 1.115
+GPT4FTS 0.5280.233 0.1092.262 4.808 1.965 0.6430.351 0.2261.8292.839 1.591
+Datasets S&P500 NDX100
+Model ARR↑A V ol↓MDD↓ASR↑CR↑IR↑ARR↑A V ol↓MDD↓ASR↑CR↑IR↑
+LSTM 0.183 0.126 0.070 1.450 2.611 1.416 0.140 0.165 0.095 0.852 1.470 0.883
+GRU 0.204 0.131 0.075 1.558 2.697 1.456 0.229 0.239 0.148 0.957 1.542 1.088
+Transformer 0.244 0.145 0.102 1.682 2.376 1.630 0.258 0.271 0.221 0.951 1.167 1.074
+AlphaStcok 0.148 0.118 0.057 1.257 2.584 1.236 0.131 0.172 0.123 0.759 1.065 0.803
+DeepPocket 0.1340.1160.065 1.156 2.056 1.147 0.1060.1450.097 0.732 1.099 0.771
+DeepTrader 0.171 0.118 0.0491.457 3.467 1.460 0.183 0.196 0.108 0.934 1.698 1.161
+MASTER 0.150 0.147 0.079 1.014 1.896 1.032 0.229 0.194 0.151 1.180 1.515 1.219
+UMI 0.086 0.126 0.078 0.679 1.092 0.045 0.076 0.111 0.066 0.686 1.144 0.045
+Dlinear 0.167 0.150 0.085 1.111 1.952 1.095 0.081 0.222 0.181 0.362 0.444 0.489
+PatchTST 0.176 0.166 0.087 1.063 2.024 1.089 0.206 0.173 0.112 1.190 1.844 1.279
+iTransformer 0.082 0.156 0.095 0.523 0.860 0.644 0.088 0.253 0.163 0.349 0.544 0.590
+Crossformer 0.228 0.141 0.088 1.613 2.600 1.537 0.192 0.231 0.128 0.831 1.498 0.944
+TimeMixer 0.048 0.149 0.105 0.323 0.458 0.454 0.103 0.248 0.223 0.417 0.463 0.578
+GPT4TS 0.321 0.157 0.073 2.034 4.346 1.872 0.242 0.221 0.077 1.093 3.116 1.104
+TIME-LLM 0.130 0.240 0.155 0.543 0.842 0.682 0.183 0.246 0.139 0.745 1.320 0.896
+aLLM4TS 0.236 0.159 0.083 1.481 2.821 1.396 0.183 0.210 0.119 0.869 1.538 0.879
+GPT4FTS 0.3710.145 0.0812.559 4.585 2.258 0.4460.161 0.063 2.772 7.066 2.371
+4 Experiments
+4.1 Experimental Setup
+We conduct experiments using data from the Chinese and US
+stock markets, including the CSI 300, CSI 500, S&P 500,
+and NASDAQ 100 indices. For all datasets, we use basic
+technical indicators as input features. In backtesting, we pre-
+dict the daily return ranking of each stock, select the top-K
+stocks as positions, and compute their average true return as
+the daily investment return. The data are split chronologically
+into training (2018-2022), validation (2023), and test (2024)
+sets to prevent data leakage.
+We compare our method with state-of-the-art deep learning
+(DL) models (including LSTM [Hochreiter and Schmidhu-
+ber, 1997], GRU [Chunget al., 2014 ], Transformer [Vaswani
+et al., 2017 ], PatchTST [Nieet al., 2023 ], DLinear [Zeng
+et al., 2023 ], iTransformer [Liuet al., 2023 ], Crossformer
+[Zhang and Yan, 2023 ], TimeMixer [Wanget al., 2024b ],
+MASTER [Liet al., 2024 ]), and UMI [Yanget al., 2025 ],
+reinforcement learning (RL) models (including AlphaStock
+[Wanget al., 2019 ], DeepTrader [Wanget al., 2021 ], and
+DeepPocket [Soleymani and Paquet, 2021 ]), and GPTs for
+time series (including GPT4TS [Zhouet al., 2023 ], TIME-
+LLM [Jinet al., 2024a ], and aLLM4TS [Bianet al., 2024 ]).
+We use the following six metrics for performance evalu-
+ation: Annualized Return Rate (ARR), Annualized V olatil-
+ity (A V ol), Maximum Drawdown (MDD), Sharpe Ratio (SR),
+Calmar Ratio (CR), and Information Ratio (IR). To eliminate
+fluctuations, we average the metrics over five repeated tests
+for each model. We utilize a 6-layer GPT-2 as the backbone
+network for prediction, thereby achieving a balance between
+performance and computational cost. Additionally,we apply
+the DB4 wavelet basis function as the initialization parameter.
+
+=== PAGE 6 ===
+Table 2: Comparison of MSE (10−3) and MAE (10−3) metrics across four financial time series datasets using different methods.
+Dataset Metric LSTM TimeMixer MASTER Dlinear PatchTST iTrans GPT4TS Time-LLM aLLM4TSGPT4FTS
+CSI 300 MSE 0.487 0.498 0.491 0.484 0.489 0.511 0.575 0.550 0.4910.475
+MAE 1.487 1.522 1.496 1.485 1.509 1.562 1.659 1.618 1.5341.469
+CSI 500 MSE 0.726 0.742 0.731 0.713 0.728 0.767 0.811 0.732 0.7990.709
+MAE 1.898 1.930 1.910 1.887 1.908 1.990 2.168 1.912 2.0141.876
+NDX 100 MSE 0.484 0.496 0.479 0.476 0.481 0.511 0.495 0.483 0.4650.461
+MAE 1.459 1.483 1.452 1.442 1.446 1.529 1.709 1.453 1.4161.404
+S&P 500 MSE 0.338 0.345 0.339 0.332 0.337 0.342 0.348 0.335 0.3300.321
+MAE 1.232 1.247 1.239 1.216 1.225 1.245 1.256 1.220 1.2121.182
+Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Jan
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5Cumulative Return
+GPT4FTS
+aLLM4TS
+AlphaStock
+Crossformer
+PatchTST
+TIMELLM
+Dlinear
+LSTM
+Figure 4: The accumulated returns gained in the NASDAQ 100
+dataset (2024) by GPT4FTS and selected baselines.
+4.2 Financial Time Series Prediction
+Table 1 compares GPT4FTS with baselines across datasets,
+showing it achieves the highest values in all four financial
+metrics—ARR, ASR,CR, and IR. Following financial re-
+search practices [Sawhneyet al., 2021 ], we use return-based
+metrics rather than error statistics to better capture practical
+trading performance (Section 4.1).
+GPT4FTS delivers significant improvements. On CSI300,
+ARR is 0.528 (37.1% higher than DeepTrader’s 0.385), ASR
+is 2.262 (47.7% above Crossformer’s 1.532), and CR is
+4.808 (64.4% above AlphaStock’s 2.924). On CSI500, ARR
+reaches 0.643 (14.2% higher than TIME-LLM’s 0.563) with
+an ASR of 1.829 (7.3% improvement). For S&P 500, ARR is
+0.371 (15.6% above GPT4TS’s 0.321), ASR is 2.559 (25.8%
+higher), and CR is 4.585 (5.5% increase). The most notable
+gains are on NDX100: ARR of 0.446 (72.9% above Trans-
+former’s 0.258), ASR of 2.772 (133% higher than PatchTST’s
+1.190), CR of 7.066 (127% above GPT4TS’s 3.116), and the
+lowest Maximum Drawdown (0.063).
+Table 1 includes traditional deep learning models (LSTM,
+GRU, Transformer), which show balanced but modest per-
+formance; specialized price-prediction models (AlphaStock,
+DeepPocket, etc.) that improve via reinforcement learning;
+general time-series SOTA methods (Dlinear, iTransformer,
+etc.) with comparable results; and large-model time-series
+approaches (GPT4TS, Time-LLM, aLLM4TS) that outper-
+form most specialized models. GPT4FTS consistently sur-
+passes all baselines, especially in risk-adjusted metrics, indi-
+cating superior return generation and risk management.
+Figure 4 shows GPT4FTS’s return curve in 2024 exceeds
+all baselines, with more stable performance. Its consistent
+Table 3: Performance evaluation of ablated models for portfolio
+management on four datasets.
+Dataset Metric GPT-2 pt-GPT-2
+Base +SIPR +Wave Base +SIPR +Wave
+CSI 300 ARR 0.070 0.177 0.185 0.312 0.417 0.416
+ASR 0.261 0.671 0.635 0.943 1.450 1.472
+CSI 500 ARR -0.120 0.125 0.156 0.376 0.529 0.434
+ASR -0.376 0.415 0.489 1.115 1.728 1.289
+NDX 100 ARR 0.161 0.179 0.224 0.183 0.267 0.343
+ASR 0.786 0.761 1.201 0.869 1.143 1.532
+S&P 500 ARR 0.020 0.152 0.205 0.236 0.275 0.290
+ASR 0.084 1.040 1.272 1.481 1.854 1.897
+superiority across markets highlights strong robustness and
+generalization for financial applications.
+4.3 Ablation
+Comprehensive ablation studies thoroughly validate the ef-
+fectiveness of each component in our framework, with de-
+tailed results summarized in Table 3. The significant perfor-
+mance degradation observed when using the original GPT-
+2 module underscores the critical role of our two-stage pre-
+training strategy, which is specifically designed to enable the
+model to more effectively capture the complex temporal dy-
+namics inherent in financial time series data. Specifically,
+both the SIPR and wavelet modules consistently enhance pre-
+diction accuracy across all datasets when integrated with the
+pre-trained backbone, clearly demonstrating their comple-
+mentary and synergistic contributions to the overall architec-
+ture. The SIPR module excels in capturing long-term depen-
+dencies through its advanced pattern matching mechanism,
+while the wavelet module strengthens multi-scale feature ex-
+traction by adaptively responding to the varying frequency
+characteristics present in market data. Notably, the wavelet
+component demonstrates its particular strength in handling
+volatile datasets, such as the NDX 100, where it signifi-
+cantly improves the ASR from 0.869 to 1.532 in the pt-GPT-
+2 configuration. These compelling results further emphasize
+the importance of customizing GPTs for financial prediction
+tasks through specialized architectural designs, and confirm
+that maintaining structural integrity in financial time series
+data is absolutely crucial for achieving optimal performance.
+
+=== PAGE 7 ===
+Table 4: Cross-market generalization performance. Bold values in-
+dicate within-group best performance.
+Target Source ARR ASR CR IR
+CSI 300 CSI 300 0.5282.262 4.808 1.965
+CSI 5000.5361.791 3.575 1.647
+CSI 500 CSI 5000.643 1.8292.839 1.591
+CSI 300 0.598 1.8153.439 1.628
+NDX 100 NDX 1000.446 2.772 7.066 2.371
+S&P 500 0.325 1.301 2.031 1.353
+S&P 500 S&P 5000.371 2.559 4.585 2.258
+NDX 100 0.319 1.641 3.389 1.575
+4.4 Comparison with Fixed Wavelets
+We conducted extensive experiments comparing our learn-
+able wavelet filters with fixed wavelet transforms (Haar and
+Daubechies-4). The results in Fig 5 clearly demonstrate the
+superiority of our adaptive approach. While fixed wavelets
+provide modest improvements over the baseline, our learn-
+able filters consistently achieve superior performance across
+all datasets. Notably, Haar wavelets exhibit significant perfor-
+mance degradation compared to Daubechies-4, highlighting
+the high sensitivity to wavelet type selection. These findings
+validate that our learnable wavelet framework offers signifi-
+cantly enhanced adaptability to diverse financial data distri-
+butions compared to traditional fixed wavelet transforms.
+4.5 Cross-Market Generalization
+To validate the generalization capability of our wavelet-based
+framework, we conducted cross-market transfer experiments.
+Models were trained on one market and directly tested on an-
+other without fine-tuning, providing a rigorous assessment
+of the learned representations’ transferability. The results
+in Table 4 demonstrate compelling generalization capabili-
+ties. Between Chinese markets, wavelet filters trained on CSI
+500 achieve competitive performance on CSI 300, while CSI
+300 filters transfer effectively to CSI 500. This indicates that
+the learned frequency-domain representations capture funda-
+mental patterns transcending individual market characteris-
+tics. In US markets, filters show asymmetric transfer pat-
+terns. NDX 100 filters maintain reasonable performance on
+S&P 500, though reverse transfer exhibits larger degrada-
+tion. The consistent cross-market performance suggests our
+wavelet components learn universal multi-scale characteris-
+tics rather than market-specific artifacts. This generalization
+capability confirms the robustness of our approach and sug-
+gests practical utility for multi-market applications, where
+pre-trained wavelet filters could enable efficient knowledge
+transfer across different financial environments.
+4.6 Primary Evaluation Metrics
+While portfolio performance is important, it alone doesn’t
+provide a full evaluation of a model’s predictive capability.
+Therefore, we conducted additional experiments to assess
+the fundamental prediction accuracy of our method against
+strong baselines using MSE and MAE. As shown in Table 2,
+/uni00000026/uni00000036/uni0000002c/uni00000003/uni00000016/uni00000013/uni00000013/uni00000026/uni00000036/uni0000002c/uni00000003/uni00000018/uni00000013/uni00000013/uni00000031/uni00000027/uni0000003b/uni00000003/uni00000014/uni00000013/uni00000013/uni00000036/uni00000009/uni00000033/uni00000003/uni00000018/uni00000013/uni00000013
+/uni00000013/uni00000011/uni00000013
+/uni00000013/uni00000011/uni00000015
+/uni00000013/uni00000011/uni00000017
+/uni00000013/uni00000011/uni00000019/uni00000024/uni00000051/uni00000051/uni00000058/uni00000044/uni0000004f/uni0000004c/uni0000005d/uni00000048/uni00000047/uni00000003/uni00000035/uni00000048/uni00000057/uni00000058/uni00000055/uni00000051/uni00000003/uni00000035/uni00000044/uni00000057/uni00000048/uni00000003/uni0000000b/uni00000024/uni00000035/uni00000035/uni0000000c
+/uni0000000b/uni00000044/uni0000000c/uni00000003/uni00000024/uni00000035/uni00000035/uni00000003/uni00000033/uni00000048/uni00000055/uni00000049/uni00000052/uni00000055/uni00000050/uni00000044/uni00000051/uni00000046/uni00000048/uni00000003/uni00000026/uni00000052/uni00000050/uni00000053/uni00000044/uni00000055/uni0000004c/uni00000056/uni00000052/uni00000051/uni0000005a/uni00000012/uni00000052/uni00000003/uni0000005a/uni00000044/uni00000059/uni00000048
+/uni0000002b/uni00000044/uni00000044/uni00000055
+/uni00000027/uni00000025/uni00000017
+/uni0000002a/uni00000033/uni00000037/uni00000017/uni00000029/uni00000037/uni00000036
+/uni00000026/uni00000036/uni0000002c/uni00000003/uni00000016/uni00000013/uni00000013/uni00000026/uni00000036/uni0000002c/uni00000003/uni00000018/uni00000013/uni00000013/uni00000031/uni00000027/uni0000003b/uni00000003/uni00000014/uni00000013/uni00000013/uni00000036/uni00000009/uni00000033/uni00000003/uni00000018/uni00000013/uni00000013
+/uni00000013
+/uni00000014
+/uni00000015
+/uni00000016/uni00000024/uni00000051/uni00000051/uni00000058/uni00000044/uni0000004f/uni0000004c/uni0000005d/uni00000048/uni00000047/uni00000003/uni00000036/uni0000004b/uni00000044/uni00000055/uni00000053/uni00000048/uni00000003/uni00000035/uni00000044/uni00000057/uni0000004c/uni00000052/uni00000003/uni0000000b/uni00000024/uni00000036/uni00000035/uni0000000c
+/uni0000000b/uni00000045/uni0000000c/uni00000003/uni00000024/uni00000036/uni00000035/uni00000003/uni00000033/uni00000048/uni00000055/uni00000049/uni00000052/uni00000055/uni00000050/uni00000044/uni00000051/uni00000046/uni00000048/uni00000003/uni00000026/uni00000052/uni00000050/uni00000053/uni00000044/uni00000055/uni0000004c/uni00000056/uni00000052/uni00000051
+Figure 5: Performance comparison between fixed and learnable
+wavelet transforms.
+GPT4FTS outperforms all baselines in terms of predictive ac-
+curacy across four financial datasets.
+Specifically, on the challenging CSI 500 dataset, GPT4FTS
+achieves an MSE of 0.709×10 −3 and an MAE of
+1.876×10−3, outperforming Dlinear’s 0.713×10 −3 and
+1.887×10−3, respectively. In US markets, on the S&P 500,
+our method attains an MSE of 0.321×10−3 and an MAE of
+1.182×10−3, surpassing aLLM4TS.
+Across diverse market conditions, including Chinese
+A-shares and US indices, our wavelet-enhanced frame-
+work demonstrates robust performance. Notably, on the
+technology-heavy NDX 100, GPT4FTS shows the greatest
+improvement, with an MSE of 0.461×10 −3. This confirms
+the state-of-the-art predictive accuracy of our method across
+multiple financial time series benchmarks.
+5 Conclusion
+This paper introduces GPT4FTS, a framework specifically
+designed for enhancing generative pre-trained transformers
+for financial time series prediction. The proposed architecture
+integrates a scale-invariant pattern recognition module with
+an adaptive dynamic patch segmentation strategy, enhanced
+by trainable wavelet transform operators for multi-resolution
+temporal dependency modeling. This combination enables
+systematic analysis of complex historical patterns in finan-
+cial data through hierarchical feature extraction, effectively
+addressing the multi-scale characteristics of market dynam-
+ics. Comprehensive evaluations were conducted across four
+heterogeneous markets and diverse trading scenarios. Empiri-
+cal results demonstrate the framework’s superior performance
+against state-of-the-art baselines in both forecasting accuracy
+and generalization capability. To assess real-world perfor-
+mance, we integrated the model into the production-grade al-
+gorithmic trading infrastructure of a securities exchange plat-
+form. Comparative analysis with existing investment strate-
+gies reveals significant improvements in cumulative returns,
+confirming the operational efficacy and economic viability of
+our approach under real-market conditions.
+
+=== PAGE 8 ===
+References
+[Ariyoet al., 2014 ] Adebiyi A Ariyo, Adewumi O
+Adewumi, and Charles K Ayo. Stock price predic-
+tion using the arima model. InUKSim-AMSS 16th
+International Conference on Computer Modelling and
+Simulation, pages 106–112, 2014.
+[Asgharian and Hansson, 2002] Hossein Asgharian and
+Bj¨orn Hansson. Cross sectional analysis of the swedish
+stock market. 2002.
+[Bianet al., 2024 ] Yuxuan Bian, Xuan Ju, Jiangtong Li, Zhi-
+jian Xu, Dawei Cheng, and Qiang Xu. Multi-patch predic-
+tion: Adapting llms for time series representation learning.
+International Conference on Machine Learning, 2024.
+[Brownet al., 2020 ] Tom Brown, Benjamin Mann, Nick Ry-
+der, Melanie Subbiah, Jared D Kaplan, Prafulla Dhari-
+wal, Arvind Neelakantan, Pranav Shyam, Girish Sastry,
+Amanda Askell, et al. Language models are few-shot
+learners.Neural Information Processing Systems, 2020.
+[Caoet al., 2024 ] Defu Cao, Furong Jia, Sercan O Arik,
+Tomas Pfister, Yixiang Zheng, Wen Ye, and Yan Liu.
+TEMPO: Prompt-based generative pre-trained transformer
+for time series forecasting. InInternational Conference on
+Learning Representations, 2024.
+[Chenet al., 2025 ] Hui Chen, Viet Luong, Lopamudra
+Mukherjee, and Vikas Singh. SimpleTM: A simple base-
+line for multivariate time series forecasting. InThe Thir-
+teenth International Conference on Learning Representa-
+tions, 2025.
+[Chunget al., 2014 ] Junyoung Chung, Caglar Gulcehre,
+KyungHyun Cho, and Yoshua Bengio. Empirical evalua-
+tion of gated recurrent neural networks on sequence mod-
+eling.arXiv preprint arXiv:1412.3555, 2014.
+[De Fariaet al., 2009 ] EL De Faria, Marcelo P Albuquerque,
+JL Gonzalez, JTP Cavalcante, and Marcio P Albuquerque.
+Predicting the brazilian stock market through neural
+networks and adaptive exponential smoothing methods.
+Expert Systems with Applications, pages 12506–12509,
+2009.
+[Di Persioet al., 2017 ] Luca Di Persio, Oleksandr Honchar,
+et al. Recurrent neural networks approach to the financial
+forecast of google asets.International Journal of Mathe-
+matics and Computers in Simulation, pages 7–13, 2017.
+[Frijnset al., 2010 ] Bart Frijns, Thorsten Lehnert, and
+Remco CJ Zwinkels. Behavioral heterogeneity in the op-
+tion market.Journal of Economic Dynamics and Control,
+pages 2273–2287, 2010.
+[Ghironi, 2006] Fabio Ghironi. Macroeconomic interdepen-
+dence under incomplete markets.Journal of International
+Economics, pages 428–450, 2006.
+[Hochreiter and Schmidhuber, 1997] Sepp Hochreiter and
+J¨urgen Schmidhuber. Long short-term memory.Neural
+Computation, pages 1735–1780, 1997.
+[Huanget al., 2024 ] Hongbin Huang, Minghua Chen, and
+Xiao Qiao. Generative learning for financial time series
+with irregular and scale-invariant patterns. InInternational
+Conference on Learning Representations, 2024.
+[Jinet al., 2024a ] Ming Jin, Shiyu Wang, Lintao Ma, Zhix-
+uan Chu, James Y Zhang, Xiaoming Shi, Pin-Yu Chen,
+Yuxuan Liang, Yuan-Fang Li, Shirui Pan, and Qingsong
+Wen. Time-LLM: Time series forecasting by reprogram-
+ming large language models. InInternational Conference
+on Learning Representations, 2024.
+[Jinet al., 2024b ] Ming Jin, Yifan Zhang, Wei Chen, Kexin
+Zhang, Yuxuan Liang, Bin Yang, Jindong Wang, Shirui
+Pan, and Qingsong Wen. Position: What can large lan-
+guage models tell us about time series analysis. InInter-
+national Conference on Machine Learning, 2024.
+[Kim, 2003] Kyoung-jae Kim. Financial time series fore-
+casting using support vector machines.Neurocomputing,
+pages 307–319, 2003.
+[Liet al., 2024 ] Tong Li, Zhaoyang Liu, Yanyan Shen, Xue
+Wang, Haokun Chen, and Sen Huang. Master: Market-
+guided stock transformer for stock price forecasting. In
+Proceedings of the AAAI Conference on Artificial Intelli-
+gence, pages 162–170, 2024.
+[Liuet al., 2023 ] Yong Liu, Tengge Hu, Haoran Zhang,
+Haixu Wu, Shiyu Wang, Lintao Ma, and Mingsheng
+Long. itransformer: Inverted transformers are effective for
+time series forecasting.arXiv preprint arXiv:2310.06625,
+2023.
+[Liuet al., 2024a ] Xu Liu, Juncheng Liu, Gerald Woo, Taha
+Aksu, Yuxuan Liang, Roger Zimmermann, Chenghao
+Liu, Silvio Savarese, Caiming Xiong, and Doyen Sa-
+hoo. Moirai-moe: Empowering time series foundation
+models with sparse mixture of experts.arXiv preprint
+arXiv:2410.10469, 2024.
+[Liuet al., 2024b ] Yong Liu, Haoran Zhang, Chenyu Li, Xi-
+angdong Huang, Jianmin Wang, and Mingsheng Long.
+Timer: Generative pre-trained transformers are large time
+series models. InInternational Conference on Machine
+Learning, 2024.
+[Machadoet al., 2019 ] Marcos Roberto Machado, Salma
+Karray, and Ivaldo Tributino De Sousa. Lightgbm: An
+effective decision tree gradient boosting method to predict
+customer loyalty in the finance industry. In2019 14th In-
+ternational Conference on Computer Science & Education
+(ICCSE), pages 1111–1116, 2019.
+[Michauet al., 2022 ] Gabriel Michau, Gaetan Frusque, and
+Olga Fink. Fully learnable deep wavelet transform for un-
+supervised monitoring of high-frequency time series.Pro-
+ceedings of the National Academy of Sciences, 119(8),
+2022.
+[Nieet al., 2023 ] Yuqi Nie, Nam H. Nguyen, Phanwadee
+Sinthong, and Jayant Kalagnanam. A time series is worth
+64 words: Long-term forecasting with transformers. 2023.
+[Radfordet al., 2019 ] Alec Radford, Jeff Wu, Rewon Child,
+David Luan, Dario Amodei, and Ilya Sutskever. Language
+models are unsupervised multitask learners. 2019.
+
+=== PAGE 9 ===
+[Sawhneyet al., 2021 ] Ramit Sawhney, Shivam Agarwal,
+Arnav Wadhwa, Tyler Derr, and Rajiv Ratn Shah. Stock
+selection via spatiotemporal hypergraph attention net-
+work: A learning to rank approach. InProceedings of
+the AAAI Conference on Artificial Intelligence, volume 35,
+pages 497–504, 2021.
+[Soleymani and Paquet, 2021] Farzan Soleymani and Eric
+Paquet. Deep graph convolutional reinforcement learn-
+ing for financial portfolio management–deeppocket.Ex-
+pert Systems with Applications, 182:115127, 2021.
+[Tanget al., 2024 ] Hua Tang, Chong Zhang, Mingyu Jin,
+Qinkai Yu, Zhenting Wang, Xiaobo Jin, Yongfeng Zhang,
+and Mengnan Du. Time series forecasting with llms: Un-
+derstanding and enhancing model capabilities.SIGKDD
+Explor., pages 109–118, 2024.
+[Taylor and Yu, 2016] James W Taylor and Keming Yu. Us-
+ing auto-regressive logit models to forecast the exceedance
+probability for financial risk management.Journal of the
+Royal Statistical Society Series A: Statistics in Society,
+pages 1069–1092, 2016.
+[Touvronet al., 2023 ] Hugo Touvron, Thibaut Lavril, Gau-
+tier Izacard, Xavier Martinet, Marie-Anne Lachaux, Tim-
+oth´ee Lacroix, Baptiste Rozi`ere, Naman Goyal, Eric Ham-
+bro, Faisal Azhar, et al. Llama: Open and efficient founda-
+tion language models.arXiv preprint arXiv:2302.13971,
+2023.
+[Vaswaniet al., 2017 ] Ashish Vaswani, Noam M. Shazeer,
+Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N.
+Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention
+is all you need. 2017.
+[Wang and Guo, 2020] Yan Wang and Yuankai Guo. Fore-
+casting method of stock market volatility in time series
+data based on mixed model of arima and xgboost.China
+Communications, pages 205–221, 2020.
+[Wanget al., 2019 ] Jingyuan Wang, Yang Zhang, Ke Tang,
+Junjie Wu, and Zhang Xiong. Alphastock: A buying-
+winners-and-selling-losers investment strategy using inter-
+pretable deep reinforcement attention networks. InPro-
+ceedings of the 25th ACM SIGKDD international confer-
+ence on knowledge discovery & data mining, pages 1900–
+1908, 2019.
+[Wanget al., 2021 ] Zhicheng Wang, Biwei Huang, Shikui
+Tu, Kun Zhang, and Lei Xu. Deeptrader: a deep reinforce-
+ment learning approach for risk-return balanced portfolio
+management with market conditions embedding. InPro-
+ceedings of the AAAI conference on artificial intelligence,
+volume 35, pages 643–650, 2021.
+[Wanget al., 2024a ] Shengkun Wang, Taoran Ji, Linhan
+Wang, Yanshen Sun, Shang-Ching Liu, Amit Kumar, and
+Chang-Tien Lu. Stocktime: A time series specialized
+large language model architecture for stock price predic-
+tion.ArXiv, 2024.
+[Wanget al., 2024b ] Shiyu Wang, Haixu Wu, Xiaoming Shi,
+Tengge Hu, Huakun Luo, Lintao Ma, James Y Zhang, and
+JUN ZHOU. Timemixer: Decomposable multiscale mix-
+ing for time series forecasting. InInternational Confer-
+ence on Learning Representations (ICLR), 2024.
+[Wuet al., 2021 ] Haixu Wu, Jiehui Xu, Jianmin Wang, and
+Mingsheng Long. Autoformer: Decomposition transform-
+ers with auto-correlation for long-term series forecasting.
+Neural Information Processing Systems, pages 22419–
+22430, 2021.
+[Yanget al., 2023 ] Hongyang Yang, Xiao-Yang Liu, and
+Christina Dan Wang. Fingpt: Open-source financial large
+language models.arXiv preprint arXiv:2306.06031, 2023.
+[Yanget al., 2025 ] Chen Yang, Jingyuan Wang, Xiaohan
+Jiang, and Junjie Wu. Learning universal multi-level mar-
+ket irrationality factors to improve stock return forecast-
+ing.Proceedings of the 31st ACM SIGKDD Conference
+on Knowledge Discovery and Data Mining V .1, 2025.
+[Yaoet al., 2022 ] Ting Yao, Yingwei Pan, Yehao Li, Chong-
+Wah Ngo, and Tao Mei. Wave-vit: Unifying wavelet and
+transformers for visual representation learning. InPro-
+ceedings of the European conference on computer vision
+(ECCV), 2022.
+[Yuet al., 2023 ] Xinli Yu, Zheng Chen, Yuan Ling, Shujing
+Dong, Zongyi Liu, and Yanbin Lu. Temporal data meets
+llm–explainable financial time series forecasting.arXiv
+preprint arXiv:2306.11025, 2023.
+[Zenget al., 2023 ] Ailing Zeng, Muxi Chen, Lei Zhang, and
+Qiang Xu. Are transformers effective for time series fore-
+casting? InProceedings of the AAAI conference on artifi-
+cial intelligence, pages 11121–11128, 2023.
+[Zhang and Yan, 2023] Yunhao Zhang and Junchi Yan.
+Crossformer: Transformer utilizing cross-dimension de-
+pendency for multivariate time series forecasting. InInter-
+national Conference on Learning Representations, 2023.
+[Zhouet al., 2021 ] Haoyi Zhou, Shanghang Zhang, Jieqi
+Peng, Shuai Zhang, Jianxin Li, Hui Xiong, and Wancai
+Zhang. Informer: Beyond efficient transformer for long
+sequence time-series forecasting. InProceedings of the
+AAAI conference on Artificial Intelligence, pages 11106–
+11115, 2021.
+[Zhouet al., 2023 ] Tian Zhou, Peisong Niu, Liang Sun,
+Rong Jin, et al. One fits all: Power general time series
+analysis by pretrained lm.Neural Information Processing
+Systems, pages 43322–43355, 2023.
+[Zhuet al., 2023 ] Deyao Zhu, Jun Chen, Xiaoqian Shen, Xi-
+ang Li, and Mohamed Elhoseiny. Minigpt-4: Enhancing
+vision-language understanding with advanced large lan-
+guage models.arXiv preprint arXiv:2304.10592, 2023.

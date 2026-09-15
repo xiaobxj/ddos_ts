@@ -1,0 +1,28 @@
+{
+  "candidate": "decay40",
+  "flags": {
+    "ensemble_beats_constant40": true,
+    "ensemble_beats_archived20": true,
+    "ensemble_beats_mean": true,
+    "at_least_two_seeds_beat_mean": false,
+    "at_least_two_paired_seeds_beat_constant40": true,
+    "at_least_two_paired_seeds_beat_archived20": false,
+    "at_least_two_years_beat_constant40": true,
+    "at_least_two_years_beat_archived20": false
+  },
+  "descriptive_screen_pass": false,
+  "counts": {
+    "seeds_beat_mean": 1,
+    "paired_seeds_beat_constant40": 3,
+    "paired_seeds_beat_archived20": 1,
+    "years_beat_constant40": 3,
+    "years_beat_archived20": 1
+  },
+  "mse_skill_vs_constant40": 0.05475410667941638,
+  "mse_skill_vs_archived20": 0.0008676446428510509,
+  "candidate_significant_improvements": 0,
+  "four_primary_comparisons": 4,
+  "historical_reuse": true,
+  "no_selection": true,
+  "scored_utc": "2026-09-11T05:29:57.062630+00:00"
+}

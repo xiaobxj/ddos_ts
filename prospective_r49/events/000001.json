@@ -1,0 +1,26 @@
+{
+  "blobs": {
+    "07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5.csv": "07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5",
+    "db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29.response.json": "db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29"
+  },
+  "key": "2026-09-14T15:08:38.909314+00:00:07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5",
+  "kind": "snapshot",
+  "payload": {
+    "csv_blob": "07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5.csv",
+    "end": "2026-09-14",
+    "n": 4056,
+    "provider_vintage": "retrieved snapshot; not an independently notarized point-in-time feed",
+    "source": {
+      "adjustment": "raw index day branch",
+      "overlap_exact": true,
+      "overlap_rows": 403,
+      "provider": "Tencent",
+      "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2025-01-01,2026-09-14,2000,qfq"
+    },
+    "start": "2010-01-04"
+  },
+  "previous_sha256": "4288c11b9380c69b403162f3bbed64aaaedbd153e9804a01f225b015e954f6c6",
+  "recorded_utc": "2026-09-14T15:08:38.951038+00:00",
+  "scope": "prospective",
+  "sequence": 1
+}

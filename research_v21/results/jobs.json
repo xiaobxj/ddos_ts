@@ -1,0 +1,242 @@
+[
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2014-12-31_20260910",
+    "cutoff": "2014-12-31",
+    "seed": 20260910,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2014-12-31_20260910"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2014-12-31_20260911",
+    "cutoff": "2014-12-31",
+    "seed": 20260911,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2014-12-31_20260911"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2014-12-31_20260912",
+    "cutoff": "2014-12-31",
+    "seed": 20260912,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2014-12-31_20260912"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2015-12-31_20260910",
+    "cutoff": "2015-12-31",
+    "seed": 20260910,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2015-12-31_20260910"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2015-12-31_20260911",
+    "cutoff": "2015-12-31",
+    "seed": 20260911,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2015-12-31_20260911"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2015-12-31_20260912",
+    "cutoff": "2015-12-31",
+    "seed": 20260912,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2015-12-31_20260912"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2016-12-31_20260910",
+    "cutoff": "2016-12-31",
+    "seed": 20260910,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2016-12-31_20260910"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2016-12-31_20260911",
+    "cutoff": "2016-12-31",
+    "seed": 20260911,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2016-12-31_20260911"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2016-12-31_20260912",
+    "cutoff": "2016-12-31",
+    "seed": 20260912,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2016-12-31_20260912"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2017-12-31_20260910",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2017-12-31_20260910"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2017-12-31_20260911",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2017-12-31_20260911"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2017-12-31_20260912",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2017-12-31_20260912"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2018-12-31_20260910",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2018-12-31_20260910"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2018-12-31_20260911",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2018-12-31_20260911"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2018-12-31_20260912",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2018-12-31_20260912"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2019-12-31_20260910",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2019-12-31_20260910"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2019-12-31_20260911",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2019-12-31_20260911"
+  },
+  {
+    "method": "learned_hmm_interaction",
+    "source_job": "learned_market_2019-12-31_20260912",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "dimensions": 30,
+    "job": "learned_hmm_interaction_2019-12-31_20260912"
+  },
+  {
+    "method": "raw_hmm_interaction",
+    "source_job": "raw_trend_2014-12-31_-1",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "dimensions": 27,
+    "job": "raw_hmm_interaction_2014-12-31_-1"
+  },
+  {
+    "method": "raw_hmm_interaction",
+    "source_job": "raw_trend_2015-12-31_-1",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "dimensions": 27,
+    "job": "raw_hmm_interaction_2015-12-31_-1"
+  },
+  {
+    "method": "raw_hmm_interaction",
+    "source_job": "raw_trend_2016-12-31_-1",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "dimensions": 27,
+    "job": "raw_hmm_interaction_2016-12-31_-1"
+  },
+  {
+    "method": "raw_hmm_interaction",
+    "source_job": "raw_trend_2017-12-31_-1",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "dimensions": 27,
+    "job": "raw_hmm_interaction_2017-12-31_-1"
+  },
+  {
+    "method": "raw_hmm_interaction",
+    "source_job": "raw_trend_2018-12-31_-1",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "dimensions": 27,
+    "job": "raw_hmm_interaction_2018-12-31_-1"
+  },
+  {
+    "method": "raw_hmm_interaction",
+    "source_job": "raw_trend_2019-12-31_-1",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "dimensions": 27,
+    "job": "raw_hmm_interaction_2019-12-31_-1"
+  },
+  {
+    "method": "hmm_only",
+    "source_job": null,
+    "cutoff": "2014-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "hmm_only_2014-12-31_0"
+  },
+  {
+    "method": "hmm_only",
+    "source_job": null,
+    "cutoff": "2015-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "hmm_only_2015-12-31_0"
+  },
+  {
+    "method": "hmm_only",
+    "source_job": null,
+    "cutoff": "2016-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "hmm_only_2016-12-31_0"
+  },
+  {
+    "method": "hmm_only",
+    "source_job": null,
+    "cutoff": "2017-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "hmm_only_2017-12-31_0"
+  },
+  {
+    "method": "hmm_only",
+    "source_job": null,
+    "cutoff": "2018-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "hmm_only_2018-12-31_0"
+  },
+  {
+    "method": "hmm_only",
+    "source_job": null,
+    "cutoff": "2019-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "hmm_only_2019-12-31_0"
+  }
+]

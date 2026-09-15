@@ -1,0 +1,122 @@
+[
+  {
+    "window": "early_2015_2017",
+    "method": "learned_recent_interaction",
+    "recent_parent": "learned_recent_additive",
+    "full_interaction": "learned_vol_interaction",
+    "counts": {
+      "years_beating_native_accuracy": 2,
+      "years_beating_recent_frequency_brier": 1
+    },
+    "flags": {
+      "accuracy_beats_full_interaction": true,
+      "accuracy_beats_recent_additive": true,
+      "accuracy_beats_native": true,
+      "accuracy_beats_full_frequency": true,
+      "accuracy_beats_recent_frequency": false,
+      "brier_beats_full_interaction": true,
+      "brier_beats_recent_additive": true,
+      "brier_beats_full_frequency": false,
+      "brier_beats_recent_frequency": false,
+      "log_loss_beats_recent_frequency": false,
+      "two_years_beat_native_accuracy": true,
+      "two_years_beat_recent_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "interaction_hypothesis_retained": true,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  },
+  {
+    "window": "early_2015_2017",
+    "method": "raw_recent_interaction",
+    "recent_parent": "raw_recent_additive",
+    "full_interaction": "raw_vol_interaction",
+    "counts": {
+      "years_beating_native_accuracy": 1,
+      "years_beating_recent_frequency_brier": 0
+    },
+    "flags": {
+      "accuracy_beats_full_interaction": true,
+      "accuracy_beats_recent_additive": false,
+      "accuracy_beats_native": false,
+      "accuracy_beats_full_frequency": false,
+      "accuracy_beats_recent_frequency": false,
+      "brier_beats_full_interaction": true,
+      "brier_beats_recent_additive": false,
+      "brier_beats_full_frequency": false,
+      "brier_beats_recent_frequency": false,
+      "log_loss_beats_recent_frequency": false,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_recent_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "interaction_hypothesis_retained": true,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  },
+  {
+    "window": "late_2018_2020",
+    "method": "learned_recent_interaction",
+    "recent_parent": "learned_recent_additive",
+    "full_interaction": "learned_vol_interaction",
+    "counts": {
+      "years_beating_native_accuracy": 1,
+      "years_beating_recent_frequency_brier": 1
+    },
+    "flags": {
+      "accuracy_beats_full_interaction": false,
+      "accuracy_beats_recent_additive": false,
+      "accuracy_beats_native": false,
+      "accuracy_beats_full_frequency": false,
+      "accuracy_beats_recent_frequency": false,
+      "brier_beats_full_interaction": false,
+      "brier_beats_recent_additive": false,
+      "brier_beats_full_frequency": false,
+      "brier_beats_recent_frequency": false,
+      "log_loss_beats_recent_frequency": false,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_recent_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "interaction_hypothesis_retained": true,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  },
+  {
+    "window": "late_2018_2020",
+    "method": "raw_recent_interaction",
+    "recent_parent": "raw_recent_additive",
+    "full_interaction": "raw_vol_interaction",
+    "counts": {
+      "years_beating_native_accuracy": 0,
+      "years_beating_recent_frequency_brier": 0
+    },
+    "flags": {
+      "accuracy_beats_full_interaction": false,
+      "accuracy_beats_recent_additive": false,
+      "accuracy_beats_native": false,
+      "accuracy_beats_full_frequency": false,
+      "accuracy_beats_recent_frequency": false,
+      "brier_beats_full_interaction": false,
+      "brier_beats_recent_additive": true,
+      "brier_beats_full_frequency": false,
+      "brier_beats_recent_frequency": false,
+      "log_loss_beats_recent_frequency": false,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_recent_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "interaction_hypothesis_retained": true,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  }
+]

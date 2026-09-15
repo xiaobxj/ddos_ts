@@ -1,0 +1,21 @@
+{
+  "blobs": {
+    "360f5adfa7b6eee0d23e049bac181d29aa8bc186e7d428b273b3011b09579efd.csv": "360f5adfa7b6eee0d23e049bac181d29aa8bc186e7d428b273b3011b09579efd"
+  },
+  "key": "2026-09-29T10:30:00+00:00:360f5adfa7b6eee0d23e049bac181d29aa8bc186e7d428b273b3011b09579efd",
+  "kind": "snapshot",
+  "payload": {
+    "csv_blob": "360f5adfa7b6eee0d23e049bac181d29aa8bc186e7d428b273b3011b09579efd.csv",
+    "end": "2026-09-28",
+    "n": 4066,
+    "provider_vintage": "retrieved snapshot; not an independently notarized point-in-time feed",
+    "source": {
+      "provider": "SYNTHETIC_TEST_ONLY_CORRUPTION_CASE"
+    },
+    "start": "2010-01-04"
+  },
+  "previous_sha256": "870680f3dde5808767313709852ad907a41fea2b27b170ad1badacf2d576f377",
+  "recorded_utc": "2026-09-29T10:30:00+00:00",
+  "scope": "prospective",
+  "sequence": 7
+}

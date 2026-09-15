@@ -1,0 +1,13 @@
+{
+  "n_weekly": 272,
+  "prediction_start": "2021-01-08",
+  "prediction_end": "2026-08-21",
+  "label_end": "2026-08-28",
+  "overlapping_adjacent_5day_labels": 20,
+  "train_cutoff_before_every_signal": true,
+  "all_values_finite": true,
+  "no_duplicate_predictions": true,
+  "paired_identical_test_dates": true,
+  "inference_no_pretrained_components": true,
+  "execution": "after signal close, next observed open; index proxy; hypothetical bps; terminal liquidation"
+}

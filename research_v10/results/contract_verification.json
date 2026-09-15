@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "tests_run": 3,
+  "errors": 0,
+  "failures": 0,
+  "source_sha256": {
+    "research_v10\\common10.py": "fec231961eeef0237f313acaeef3fc40b88869b02b95266b22cea44fe487f71e",
+    "research_v10\\prepare10.py": "c6e59ac5398333f4bd7a190f3dfc3c0009a2048afcedba6d962d8b1c37936bd0",
+    "research_v10\\contract10.py": "0bf27fae86eea7aac048a5c5cf2f772b54a70aca77474f1b824759fac09fcfe7",
+    "research_v10\\train10.py": "3d1a1439af3d678f6762232edea5c271a01bc2d1aba790e9c74f2eabe0eb931c",
+    "research_v10\\evaluate10.py": "b6c3112fd5fbb33ea9836166d0fa88ee854021a5057be4e071148c12e8a5586a",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v6\\train6.py": "e9e8ee6515f1e517d48c4db87aa534a174795c5cfe64ad5cc38d2c7c8301113e",
+    "research_v6\\evaluate6.py": "abd9e3b354e655d24fe80c0c4a2d61dda47303eece861b167668ce664d8eb7bf",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "protocol_sha256": "07c5ed2394155417731d5036bb5e9046f47925564974b38d78ed93dbf5e167de",
+  "installed_reference": "2*torch.nn.functional.huber_loss(delta=1)",
+  "torch_version": "2.6.0+cu124",
+  "completed_utc": "2026-09-11T03:17:35.761017+00:00"
+}

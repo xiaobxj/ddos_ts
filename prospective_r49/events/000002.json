@@ -1,0 +1,19 @@
+{
+  "blobs": {},
+  "key": "2026-06-30",
+  "kind": "parameter_package",
+  "payload": {
+    "annual_cutoff": "2025-12-31",
+    "implementation_freeze_sha256": "d1ec04c82c10539db887b42a14c7da50cc7c5b43753bda68fb2fe17527929685",
+    "package_file": "research_v49\\results\\bootstrap_package.json",
+    "package_sha256": "13d5afbea2658c47aa0572c345d3168b018652193f69d4b4b26cd8e79d82030d",
+    "quarter_cutoff": "2026-06-30",
+    "valid_until": "2026-09-30",
+    "verification_file": "research_v50\\results\\bootstrap_verification.json",
+    "verification_sha256": "bd3f4ca85440d88418927fe490dd783d78b23050686769f98001cad03d8ae460"
+  },
+  "previous_sha256": "8d75c396a40e3e076d53ce69828cdf29adbbc104912bc228221f43eac11b26b6",
+  "recorded_utc": "2026-09-15T01:47:14.465127+00:00",
+  "scope": "prospective",
+  "sequence": 2
+}

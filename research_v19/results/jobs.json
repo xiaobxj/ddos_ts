@@ -1,0 +1,242 @@
+[
+  {
+    "job": "learned_vol_interaction_2014-12-31_20260910",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2014-12-31_20260910",
+    "cutoff": "2014-12-31",
+    "seed": 20260910,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2014-12-31_20260911",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2014-12-31_20260911",
+    "cutoff": "2014-12-31",
+    "seed": 20260911,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2014-12-31_20260912",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2014-12-31_20260912",
+    "cutoff": "2014-12-31",
+    "seed": 20260912,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2015-12-31_20260910",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2015-12-31_20260910",
+    "cutoff": "2015-12-31",
+    "seed": 20260910,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2015-12-31_20260911",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2015-12-31_20260911",
+    "cutoff": "2015-12-31",
+    "seed": 20260911,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2015-12-31_20260912",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2015-12-31_20260912",
+    "cutoff": "2015-12-31",
+    "seed": 20260912,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2016-12-31_20260910",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2016-12-31_20260910",
+    "cutoff": "2016-12-31",
+    "seed": 20260910,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2016-12-31_20260911",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2016-12-31_20260911",
+    "cutoff": "2016-12-31",
+    "seed": 20260911,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2016-12-31_20260912",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2016-12-31_20260912",
+    "cutoff": "2016-12-31",
+    "seed": 20260912,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2017-12-31_20260910",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2017-12-31_20260910",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2017-12-31_20260911",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2017-12-31_20260911",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2017-12-31_20260912",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2017-12-31_20260912",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2018-12-31_20260910",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2018-12-31_20260910",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2018-12-31_20260911",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2018-12-31_20260911",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2018-12-31_20260912",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2018-12-31_20260912",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2019-12-31_20260910",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2019-12-31_20260910",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2019-12-31_20260911",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2019-12-31_20260911",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "learned_vol_interaction_2019-12-31_20260912",
+    "method": "learned_vol_interaction",
+    "source_job": "learned_market_2019-12-31_20260912",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "parent_method": "learned_market",
+    "base_dimensions": 29,
+    "dimensions": 30
+  },
+  {
+    "job": "raw_vol_interaction_2014-12-31_-1",
+    "method": "raw_vol_interaction",
+    "source_job": "raw_trend_2014-12-31_-1",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "parent_method": "raw_trend",
+    "base_dimensions": 26,
+    "dimensions": 27
+  },
+  {
+    "job": "raw_vol_interaction_2015-12-31_-1",
+    "method": "raw_vol_interaction",
+    "source_job": "raw_trend_2015-12-31_-1",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "parent_method": "raw_trend",
+    "base_dimensions": 26,
+    "dimensions": 27
+  },
+  {
+    "job": "raw_vol_interaction_2016-12-31_-1",
+    "method": "raw_vol_interaction",
+    "source_job": "raw_trend_2016-12-31_-1",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "parent_method": "raw_trend",
+    "base_dimensions": 26,
+    "dimensions": 27
+  },
+  {
+    "job": "raw_vol_interaction_2017-12-31_-1",
+    "method": "raw_vol_interaction",
+    "source_job": "raw_trend_2017-12-31_-1",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "parent_method": "raw_trend",
+    "base_dimensions": 26,
+    "dimensions": 27
+  },
+  {
+    "job": "raw_vol_interaction_2018-12-31_-1",
+    "method": "raw_vol_interaction",
+    "source_job": "raw_trend_2018-12-31_-1",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "parent_method": "raw_trend",
+    "base_dimensions": 26,
+    "dimensions": 27
+  },
+  {
+    "job": "raw_vol_interaction_2019-12-31_-1",
+    "method": "raw_vol_interaction",
+    "source_job": "raw_trend_2019-12-31_-1",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "parent_method": "raw_trend",
+    "base_dimensions": 26,
+    "dimensions": 27
+  }
+]

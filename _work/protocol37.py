@@ -1,0 +1,26 @@
+from pathlib import Path
+import json
+root=Path('D:/ddos_v3/research_v37');root.mkdir(exist_ok=True)
+assert not (root/'results/preparation_manifest.json').exists()
+old=json.loads((root.parent/'research_v36/protocol.json').read_text(encoding='utf-8'))
+c={k:old[k] for k in ['label_end','windows','seeds','report_python','decision_dates','states','state_definition']}
+c.update(version=37,experiment='Frozen annual model plus bounded state-specific logit correction',
+    policies={'state':'annual_state_offset','global':'annual_shared_offset','half':'annual_state_offset_half'},
+    correction={'minimum_new_state_n':20,'ridge_sum_lambda':20.,'absolute_logit_cap':.5,'half_fraction':.5,'bisection_iterations':60},
+    training='For each annual A and quarter rolling5 Q, use only newly mature N=Q minus A, all daily rows with joint_completed<=cutoff. Reuse R36 annual state boundaries and R32 feature banks. Every quarter recomputes an offset from zero on cumulative N relative to that annual model; no compounding of older offsets, no pooling quarters, no annual training rows included in correction fit. Annual network, transforms, feature rays, projections and all original head coefficients are immutable. Reset corrections to zero at each annual rollover.',
+    objective='For each method and seed, freeze annual logits z_i. Eligible state k has n_k>=20 newly mature rows. Minimize sum_i in N_k[log(1+exp(z_i+d_k))-y_i*(z_i+d_k)]+20*d_k^2/2 subject to abs(d_k)<=0.5. Ineligible states d_k=0, including empty/single-class handling; single-class eligible cells still have finite ridge-bounded solution. Fit via fixed 60-step monotone gradient bisection or explicit bound optimum; no optimizer selection.',
+    global_control='Same eligible states, same rows, same fallback and cap. Impose all eligible d_k equal to d; sum likelihood across their rows plus 20*K*d^2/2 where K is number of eligible states. This is the equality-constrained version of the state objective. Apply shared correction only to eligible signal states. K=0 all zero, K=1 identical to state. Not an ungated all-new-data intercept.',
+    half_control='No new fit: use 0.5 times each primary state logit offset, then sigmoid per seed. Equal average of three probabilities, never sigmoid of mean logits. Diagnostic strength sensitivity only, not outcome-based policy selection.',
+    heuristic='Minimum20 inherited from R36 descriptive counts, now explicitly a heuristic fallback rule, not proven effective independent sample size. Ridge20 and cap0.5 chosen before new predictions; no grid search. At fixed annual logit the cap permits at most tanh(0.5/4)=12.44 probability percentage points; half permits6.24pp. Counts overlap in daily labels. No class balance gate or label-driven support gate.',
+    outcomes='All272 historical weekly outcomes previously viewed. Historical rolling extension, not a new blind holdout. Frozen row routing, direction target, Friday signals, next execution week open-to-open, joint maturity, strict>0.5, seeds and natural20 annual baseline unchanged. R18 diagnostic; R19/R23/R25 primary. R25 retains annual R19 nonorder coefficients and its own annual gamma; only additional state intercept fitted, so corrected R25 is explicitly a new model.',
+    baselines='Archive all13 R35 prediction histories byte-for-byte. Add3 policies, each4 learned methods; native_mse and training_frequency are exact copies of annual controls, not recalibrated models. Old R25 recent73/125=58.4% retained separately from natural20 annual R25 71/125=56.8%. No live trading or return backtest.',
+    inference='48 exploratory paired comparisons: each of3 new policies vs annual, plus state vs shared; 3 primary methods x2 losses(direction_error,Brier) x2 fixed windows. Circular8week block bootstrap10000 seed20260910, centered two-sided p, Holm across all48. Report all six years, pooled, seed and state diagnostics; no subgroup significance search. Correction for this family does not correct all prior research rounds or remove adaptive historical selection.',
+    sequencing='Freeze protocol, all source and inputs and5315old files, then synthetic/causal contract, fit all offsets and freeze, score once, evaluate, independent verification and report. Any postfreeze source change requires an explicit preserved attempt; no tuning after seeing results.',
+    budgets={'old_files':5315,'new_neural_fits':0,'new_transform_fits':0,'new_feature_inference':0,'quarter_seed_interfaces':51,'maximum_nonannual_state_parameters':816,'maximum_shared_parameters':204,'historical_weeks':272,'new_learned_seed_prediction_rows':9792,'new_total_seed_rows_including_copied_controls':13056,'comparisons':48})
+learned=['learned_vol_interaction','learned_order_extension','learned_order_offset'];p=c['policies'];pairs=[]
+for a,b in [(p['state'],'rolling5_annual20'),(p['global'],'rolling5_annual20'),(p['half'],'rolling5_annual20'),(p['state'],p['global'])]:
+    for m in learned:
+        for loss in ['direction_error','brier']:pairs.append(dict(history=a,candidate=m,reference_history=b,reference=m,metric=loss))
+c['primary_comparisons_per_window']=pairs
+(root/'protocol.json').write_text(json.dumps(c,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+print('R37 protocol drafted; no model fit or new prediction.')

@@ -1,0 +1,5 @@
+method,early_accuracy_retained,late_parent_accuracy_retained,early_brier_retained,late_brier_retained,all_targets_met,independent_confirmation
+learned_order_shrink4,False,False,False,True,False,False
+learned_order_shrink16,False,False,False,False,False,False
+raw_order_shrink4,False,True,False,True,False,False
+raw_order_shrink16,True,True,False,True,False,False

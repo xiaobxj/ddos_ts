@@ -1,0 +1,34 @@
+{
+  "significant_improvements": 0,
+  "significant_deteriorations": 0,
+  "retention_target_passes": 0,
+  "newton_updates": 186,
+  "total_primary_fit_executions": 96,
+  "attempt_forecasts_identical": true,
+  "coefficient_ratios": {
+    "learned_order_extension": {
+      "4": {
+        "min": 0.8683263849619605,
+        "mean": 0.8750741260827354,
+        "max": 0.8858809933096268
+      },
+      "16": {
+        "min": 0.5702001670490363,
+        "mean": 0.5850877242603049,
+        "max": 0.6086331430233355
+      }
+    },
+    "raw_order_extension": {
+      "4": {
+        "min": 0.8823768252890835,
+        "mean": 0.8881407466088357,
+        "max": 0.8920854392367212
+      },
+      "16": {
+        "min": 0.6003958520693972,
+        "mean": 0.6141680456083904,
+        "max": 0.6232546394295211
+      }
+    }
+  }
+}

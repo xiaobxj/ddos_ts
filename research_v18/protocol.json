@@ -1,0 +1,187 @@
+{
+  "version": 18,
+  "experiment": "Continuous market context in a shared additive classifier; explicit duplicate-column control",
+  "scope": "Authorized research-only continuation. Design follows round17 diagnostics. All261evaluated dates previously examined; causal yearly fitting is not independent confirmation. No new data, live actions, profitability test, neural training or full paper replication claim.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "model_form": "One annual ridge logistic classifier on concatenated standardized columns. Learned representation coefficients are shared across all market conditions; market terms shift the logit additively. No products/interactions, expert switching, cluster labels, HMM smoothing, state-dependent thresholds or outcome-based sample selection.",
+  "variants": [
+    {
+      "method": "learned_market",
+      "parent": "learned_clip",
+      "representation_dimensions": 25,
+      "market_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "dimensions": 29,
+      "fits": 18
+    },
+    {
+      "method": "raw_trend",
+      "parent": "raw25_clip",
+      "representation_dimensions": 25,
+      "market_indices": [
+        0
+      ],
+      "dimensions": 26,
+      "fits": 6
+    },
+    {
+      "method": "market4",
+      "parent": null,
+      "representation_dimensions": 0,
+      "market_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "dimensions": 4,
+      "fits": 6
+    }
+  ],
+  "market_features": {
+    "names": [
+      "trend60",
+      "volatility20",
+      "range20",
+      "volume_change20"
+    ],
+    "formulas": {
+      "trend60": "log(C_t/C_(t-60)) divided by max(populationSD of60 close log returns,1e-8)*sqrt(60)",
+      "volatility20": "Population SD of last20 daily close log returns",
+      "range20": "Mean of log(H_s/L_s) over last20 sessions, including signal date",
+      "volume_change20": "log(1+V_t)-log(1+V_(t-20))"
+    },
+    "normalization": "Reuse exact round17 causal descriptor values. Fit1st/99th percentile clipping bounds and then mean/populationSD from each annual training input only; floor SD at1e-6. Apply the same4-dimensional transform to all three families in that fold. All four variables derive from the existing OHLCV history; no external data or new lookback selection.",
+    "existing_representation": "Keep every old25-dimensional round17 clipped/standardized coordinate exactly. Jointly refit its slopes and the appended slopes with the same penalty. Do not refit the existing feature normalization.",
+    "duplicate_control": "Raw25 already includes volatility20 at index11, range20 at13 and volume_change20 at14. Do not append these exact duplicate columns because equal ridge penalties would change their effective penalty. The raw family appends only trend60, a nonlinear summary of existing60-session return/volatility. Verify raw and standardized parity for the three omitted columns; no duplicate-based model search."
+  },
+  "probe": {
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "Independently verify all30 new heads; alternate coefficients never used for forecasts."
+  },
+  "budget": "30 new deterministic CPU float64 primary fits:18learned_market,6raw_trend,6market4. Each head has one unpenalized intercept in addition to29/26/4slopes. Complete all30 fits before any new held-out scoring. Reuse frozen feature caches associated with18 prior neural states; no new neural forward/training pass.1305new probability records=783+261+261. Retain2871round17model records and1827ensemble records. Total4176model records,2610ensemble records=10methods*261dates.",
+  "forecasts": "Same strict p>0.5. Average the three inherited learned-seed probabilities; raw_trend and market4 have one deterministic head per cutoff, seed=-1 is not a random replicate. Keep all7round17ensemble references unchanged, including nativeMSE with no probability metric.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_market",
+      "reference": "learned_clip",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_market",
+      "reference": "learned_clip",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_trend",
+      "reference": "raw25_clip",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_trend",
+      "reference": "raw25_clip",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_market",
+      "reference": "market4",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_trend",
+      "reference": "market4",
+      "metric": "brier"
+    },
+    {
+      "candidate": "market4",
+      "reference": "training_frequency",
+      "metric": "brier"
+    }
+  ],
+  "inference": "14prespecified contrasts=7in each window. Candidate-minus-reference losses;negative better. Circular8retained-observation blocks,10000replicates,seed20260910 separately per window; centered two-sided p with Holm across all14. Retained blocks may span calendar gaps. Intervals do not cover fitting uncertainty, design selection or repeated use across rounds; no pooled primary test.",
+  "descriptive_screen": "For each augmented candidate in eachwindow use nine strict flags: accuracy beats its direct round17parent,nativeMSE,trainingfrequency; Brier beats parent,market4,trainingfrequency; logloss beats trainingfrequency; at least2/3years beat native accuracy; at least2/3years beat frequency Brier. Bothwindows need all9. Ties fail. Market4 is a prespecified simple comparator, not automatically substituted as a selected winner. No automatic promotion.",
+  "diagnostics": "Reuse all12state cells/partitions per window from round17, minimum20unique dates. All state metrics descriptive; no subgroup tests or model selection. Record fixed-head market logit contribution mean/SD and representation contribution mean/SD per fold, and all coefficients. Correlated contributions are not causal importance or an isolated intervention. No scoring of hypothetical feature-removal variants.",
+  "verification": "Preserve2795old evidence files and frozen protocols. Verify train-only market transforms against independent order statistics, full raw descriptor/scalar replay, exact row joins and three duplicate-column parity. Test solver in4/26/29dimensions and extension nesting of parent objectives. Independently solve30heads with L-BFGS-B and replay every new forecast. Verify old-reference equality, all aggregate/year/seed/state metrics and14paired contrasts. Neural feature extraction provenance relies on hash-unchanged round17 PASS with18backbone replays, not a newly claimed neural replay."
+}

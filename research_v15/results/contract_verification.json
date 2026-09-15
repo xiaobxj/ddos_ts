@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "tests": [
+    "analytic BCE/ridge gradient and Hessian versus central differences; unpenalized intercept",
+    "deterministic solver convergence and monotonic objective; constant-feature SD floor and probability baseline",
+    "real frozen model feature/readout reconstruction, labels, weight/RNG immutability and disabled gradients",
+    "original inference flag compatibility and restoration on training inputs; no gradients or tensor/RNG mutation"
+  ],
+  "completed_utc": "2026-09-11T07:31:36.257857+00:00",
+  "source_sha256": {
+    "research_v15\\common15.py": "1110bd5753c4cbf52323fb93f2149c1f542eddbd55bf90c2cb8650b1148a2c91",
+    "research_v15\\solver15.py": "a6d45d3e73a83f8911ab74aa06cd6e745074b3292c56a714c9b28364d70f9e85",
+    "research_v15\\prepare15.py": "30ab376bd50a6cb0c043dd4f53139e9696136306b644e737a10b1d5ece37bb88",
+    "research_v15\\contract15.py": "026597d5a29d40bf66d1d8243729af48afc5eb960c0332d3c132bbc795fc4868",
+    "research_v15\\extract15.py": "9561d319b2be8b402f45e7ed31e7b6f2cd609e8e929d8c3d1864315eee138750",
+    "research_v15\\fit15.py": "e283bdf4873907c99973dad1953f2b6283c2514d4aa81783f6877f6b64aa48f5",
+    "research_v15\\score15.py": "bb98185752f88e0fce7f594938bfe6cdc5732edfa409ea354ac73cf58734be3b",
+    "research_v15\\evaluate15.py": "bd15ae0e1f5fc5eb9f5fce8b592a263ec955a5063774285ad104528c135ea3ad",
+    "research_v15\\verify15.py": "69cde84967b5a07db378c53b0944c59e7ec989afb24d161580ec1bef100272e6",
+    "research_v14\\common14.py": "d5a1bc531e660370e49016d8cd084a3a91fcd52b2f6829ba47351e4af69520ec",
+    "research_v12\\common12.py": "a2fa769ab5eddb78940d455d7d3634911dd2c4b5133354bd41fe3517c4787cc4",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v6\\evaluate6.py": "abd9e3b354e655d24fe80c0c4a2d61dda47303eece861b167668ce664d8eb7bf",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "protocol_sha256": "7e5ad6b92c997e2248d1c1fb0baf28bd0840cfe500695c3d09b50a8aa42eca15"
+}

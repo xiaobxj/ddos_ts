@@ -1,0 +1,49 @@
+{
+  "status": "ALL_DATES_PREVIOUSLY_INSPECTED",
+  "sources": [
+    {
+      "source": "round13_rolling",
+      "unique_dates": 215,
+      "first_date": "2015-01-09",
+      "last_date": "2019-12-27",
+      "overlap_with_this_round": 215
+    },
+    {
+      "source": "round15_validation",
+      "unique_dates": 141,
+      "first_date": "2018-01-05",
+      "last_date": "2020-12-18",
+      "overlap_with_this_round": 141
+    },
+    {
+      "source": "round2_validation",
+      "unique_dates": 141,
+      "first_date": "2018-01-05",
+      "last_date": "2020-12-18",
+      "overlap_with_this_round": 141
+    },
+    {
+      "source": "round3_validation",
+      "unique_dates": 141,
+      "first_date": "2018-01-05",
+      "last_date": "2020-12-18",
+      "overlap_with_this_round": 141
+    },
+    {
+      "source": "round1_later_development",
+      "unique_dates": 272,
+      "first_date": "2021-01-08",
+      "last_date": "2026-08-21",
+      "overlap_with_this_round": 0
+    }
+  ],
+  "early_dates": 120,
+  "late_dates": 141,
+  "independent_holdout_dates": 0,
+  "notes": [
+    "Earlier120weeks already supplied causal forecasts/calibration in round13.",
+    "Later141weeks already informed previous model and research choices.",
+    "2021-2026development outcomes were also inspected previously; no new later forecasts here.",
+    "Year-end models satisfy chronological label maturity, but research design is retrospective."
+  ]
+}

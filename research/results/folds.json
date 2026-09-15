@@ -1,0 +1,152 @@
+[
+  {
+    "year": 2021,
+    "train_cutoff": "2020-12-31",
+    "prototype_cutoff": "2020-12-31",
+    "scaler_cutoff": "2020-12-31",
+    "train_n": 2415,
+    "test_n": 50,
+    "last_training_anchor": "2020-12-24",
+    "last_training_label": "2020-12-31",
+    "test_start": "2021-01-08",
+    "test_end": "2021-12-31",
+    "prototype_metadata": {
+      "candidate_count": 1200,
+      "medoid_ids": [
+        480,
+        659,
+        435,
+        145,
+        140,
+        582,
+        688,
+        359
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "train_cutoff": "2021-12-31",
+    "prototype_cutoff": "2021-12-31",
+    "scaler_cutoff": "2021-12-31",
+    "train_n": 2658,
+    "test_n": 49,
+    "last_training_anchor": "2021-12-24",
+    "last_training_label": "2021-12-31",
+    "test_start": "2022-01-07",
+    "test_end": "2022-12-30",
+    "prototype_metadata": {
+      "candidate_count": 1200,
+      "medoid_ids": [
+        306,
+        869,
+        106,
+        1181,
+        912,
+        689,
+        833,
+        441
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "train_cutoff": "2022-12-31",
+    "prototype_cutoff": "2022-12-31",
+    "scaler_cutoff": "2022-12-31",
+    "train_n": 2900,
+    "test_n": 48,
+    "last_training_anchor": "2022-12-23",
+    "last_training_label": "2022-12-30",
+    "test_start": "2023-01-06",
+    "test_end": "2023-12-29",
+    "prototype_metadata": {
+      "candidate_count": 1200,
+      "medoid_ids": [
+        561,
+        420,
+        911,
+        897,
+        515,
+        1035,
+        90,
+        116
+      ]
+    }
+  },
+  {
+    "year": 2024,
+    "train_cutoff": "2023-12-31",
+    "prototype_cutoff": "2023-12-31",
+    "scaler_cutoff": "2023-12-31",
+    "train_n": 3142,
+    "test_n": 47,
+    "last_training_anchor": "2023-12-22",
+    "last_training_label": "2023-12-29",
+    "test_start": "2024-01-05",
+    "test_end": "2024-12-27",
+    "prototype_metadata": {
+      "candidate_count": 1200,
+      "medoid_ids": [
+        60,
+        400,
+        166,
+        971,
+        1,
+        925,
+        543,
+        287
+      ]
+    }
+  },
+  {
+    "year": 2025,
+    "train_cutoff": "2024-12-31",
+    "prototype_cutoff": "2024-12-31",
+    "scaler_cutoff": "2024-12-31",
+    "train_n": 3384,
+    "test_n": 48,
+    "last_training_anchor": "2024-12-24",
+    "last_training_label": "2024-12-31",
+    "test_start": "2025-01-03",
+    "test_end": "2025-12-26",
+    "prototype_metadata": {
+      "candidate_count": 1200,
+      "medoid_ids": [
+        398,
+        962,
+        286,
+        1103,
+        684,
+        668,
+        438,
+        717
+      ]
+    }
+  },
+  {
+    "year": 2026,
+    "train_cutoff": "2025-12-31",
+    "prototype_cutoff": "2025-12-31",
+    "scaler_cutoff": "2025-12-31",
+    "train_n": 3627,
+    "test_n": 30,
+    "last_training_anchor": "2025-12-24",
+    "last_training_label": "2025-12-31",
+    "test_start": "2026-01-09",
+    "test_end": "2026-08-21",
+    "prototype_metadata": {
+      "candidate_count": 1200,
+      "medoid_ids": [
+        707,
+        765,
+        1118,
+        73,
+        987,
+        867,
+        1077,
+        119
+      ]
+    }
+  }
+]

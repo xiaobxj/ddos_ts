@@ -1,0 +1,11 @@
+{
+  "significant_improvements": 0,
+  "significant_deteriorations": 0,
+  "retention_target_passes": 0,
+  "newton_updates": 66,
+  "changed_signals_vs_joint": 2,
+  "parent_coefficients_unchanged": true,
+  "parent_intercepts_unchanged": true,
+  "minimum_joint_fit_advantage": 1.3554945166305288e-08,
+  "maximum_joint_fit_advantage": 3.556820063688182e-05
+}

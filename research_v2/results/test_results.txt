@@ -1,0 +1,13 @@
+test_feature_dimensions_and_adaptive_masks (__main__.FollowupTests.test_feature_dimensions_and_adaptive_masks) ... ok
+test_friday_execution_matches_actual_next_rebalance (__main__.FollowupTests.test_friday_execution_matches_actual_next_rebalance) ... ok
+test_holiday_label_must_be_completed_before_refit (__main__.FollowupTests.test_holiday_label_must_be_completed_before_refit) ... ok
+test_logistic_learns_known_signal (__main__.FollowupTests.test_logistic_learns_known_signal) ... ok
+test_memory_boundaries (__main__.FollowupTests.test_memory_boundaries) ... ok
+test_no_future_features (__main__.FollowupTests.test_no_future_features) ... ok
+test_ridge_matches_direct_normal_equations (__main__.FollowupTests.test_ridge_matches_direct_normal_equations) ... ok
+test_volume_features_are_prefix_causal (__main__.FollowupTests.test_volume_features_are_prefix_causal) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.202s
+
+OK

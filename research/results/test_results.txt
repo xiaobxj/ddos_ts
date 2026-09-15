@@ -1,0 +1,13 @@
+test_all_history_covered_and_residual_retained (__main__.ResearchInvariants.test_all_history_covered_and_residual_retained) ... ok
+test_cash_stays_cash_and_never_pays_fees (__main__.ResearchInvariants.test_cash_stays_cash_and_never_pays_fees) ... ok
+test_dtw_hand_computed (__main__.ResearchInvariants.test_dtw_hand_computed) ... ok
+test_execution_uses_next_open_and_charges_entry_exit (__main__.ResearchInvariants.test_execution_uses_next_open_and_charges_entry_exit) ... ok
+test_future_mutation_cannot_change_features (__main__.ResearchInvariants.test_future_mutation_cannot_change_features) ... ok
+test_mask_duration_endpoints_and_column_order (__main__.ResearchInvariants.test_mask_duration_endpoints_and_column_order) ... ok
+test_persistent_position_does_not_reenter_every_week (__main__.ResearchInvariants.test_persistent_position_does_not_reenter_every_week) ... ok
+test_saved_folds_are_purged (__main__.ResearchInvariants.test_saved_folds_are_purged) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.868s
+
+OK

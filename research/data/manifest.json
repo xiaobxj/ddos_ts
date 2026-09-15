@@ -1,0 +1,418 @@
+[
+  {
+    "secid": "1.000300",
+    "rows": 4046,
+    "start": "2010-01-04",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "1_000300_tencent_2010.json",
+        "sha256": "caa3d0d445445716f64e7c5c24f5a95e2a85a75db1830e2ce618d862e769a531",
+        "retrieved_utc": "2026-09-09T09:26:10.588293+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "1_000300_tencent_2015.json",
+        "sha256": "2fe5bc86a4dd3dc3b330841f3ad3c3db111dee2864297a10b9a1c8141975324e",
+        "retrieved_utc": "2026-09-09T09:26:10.631150+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "1_000300_tencent_2020.json",
+        "sha256": "6dc3a6ebb9f4035da5ee2c49dee6c2109e8fb0b0600e28698ce69908d8b9c95e",
+        "retrieved_utc": "2026-09-09T09:26:10.639140+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "1_000300_tencent_2025.json",
+        "sha256": "ee353f59cfc8c9027663907e3fede32d57b2f7998402908ed0b626c0a606047b",
+        "retrieved_utc": "2026-09-09T09:26:10.721594+00:00"
+      }
+    ],
+    "csv_sha256": "e3a1eddea03ce5c24d50068b4ef68ba8dfea257c92c8c27a314e1b0e8a90ac86",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 6,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "1.000001",
+    "rows": 4046,
+    "start": "2010-01-04",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "1_000001_tencent_2010.json",
+        "sha256": "008462958f3b646e413805a02bc83ed5ed477cf1b07ecfc41a0702bdad1cc2c6",
+        "retrieved_utc": "2026-09-09T09:26:10.845809+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "1_000001_tencent_2015.json",
+        "sha256": "a1a1be7f0d84d54e0aa4cfed31cf0ba0295e5575d09778e9c2575cb47eb3f1d1",
+        "retrieved_utc": "2026-09-09T09:26:10.826869+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "1_000001_tencent_2020.json",
+        "sha256": "df3e5b2e8cc353267ff57d90fad7f96fd219c84a2c77885a1877a29253ddfc41",
+        "retrieved_utc": "2026-09-09T09:26:10.923049+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000001,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "1_000001_tencent_2025.json",
+        "sha256": "02e2ca1f0ec1a48cd8796e8529e59df337f5a9d75abd9e7ef39d7717bd7dca72",
+        "retrieved_utc": "2026-09-09T09:26:10.940247+00:00"
+      }
+    ],
+    "csv_sha256": "9ce4f09c62b7b05a15563fd1d04d7876ddbb20bc9dbc7bc60afa5003b06ddabb",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 7,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "1.000016",
+    "rows": 4046,
+    "start": "2010-01-04",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000016,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "1_000016_tencent_2010.json",
+        "sha256": "5dc1af617d9fb36a48938dbfc79e1fcf35b46dc4b205b327acbc2447c40fbc94",
+        "retrieved_utc": "2026-09-09T09:26:11.074831+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000016,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "1_000016_tencent_2015.json",
+        "sha256": "1372652fbd85947f05c16a29d386cf801d1fe047d2074468b08cfa4a4e98e5cc",
+        "retrieved_utc": "2026-09-09T09:26:11.100909+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000016,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "1_000016_tencent_2020.json",
+        "sha256": "21f16cde2dd416fe2086ec64e43043c6c05e81d08779aff4c92c370f33099b39",
+        "retrieved_utc": "2026-09-09T09:26:11.149448+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000016,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "1_000016_tencent_2025.json",
+        "sha256": "2f133da0d9bd5e156753323c68a502d1ff8e846dec974a3eaad43c3dc6662451",
+        "retrieved_utc": "2026-09-09T09:26:11.226796+00:00"
+      }
+    ],
+    "csv_sha256": "df67b2eed46516f52e5c583599e9ef56d4b901de618eaaf94dca53a306e2d554",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 8,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "1.000905",
+    "rows": 4046,
+    "start": "2010-01-04",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000905,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "1_000905_tencent_2010.json",
+        "sha256": "36cf4ff8f34620ba6775eeed3c45efc5698aa5918b427cbc08466fa5f23301d4",
+        "retrieved_utc": "2026-09-09T09:26:11.281626+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000905,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "1_000905_tencent_2015.json",
+        "sha256": "7a29e80c83cb2ddbb6842c6fce9dfc9200f94960d328906dc773c5bd7fdad024",
+        "retrieved_utc": "2026-09-09T09:26:11.359279+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000905,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "1_000905_tencent_2020.json",
+        "sha256": "fb28e95e16c57f56f662047a25439104126e52185952c5f3e64ebd7de20bdb90",
+        "retrieved_utc": "2026-09-09T09:26:11.405473+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000905,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "1_000905_tencent_2025.json",
+        "sha256": "e161348963bec41942c1e6a0f7c3a6b560c98b0f5b036695009f167b2239bc54",
+        "retrieved_utc": "2026-09-09T09:26:11.418734+00:00"
+      }
+    ],
+    "csv_sha256": "cf05d31eeeff6f5f44bcfbfcd89e4870181d63fef816d0c20c9292098593db33",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 4,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "1.000852",
+    "rows": 2888,
+    "start": "2014-10-17",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000852,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "1_000852_tencent_2010.json",
+        "sha256": "d78563d28bf8d9af56b7817ea9205bfd7be7ed422a7f775900a701ab49a137e1",
+        "retrieved_utc": "2026-09-09T09:26:11.529561+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000852,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "1_000852_tencent_2015.json",
+        "sha256": "a2ac807bac9a27f4c30f121dedd66c7c29a0f37b75aced19bafe956c00f492d6",
+        "retrieved_utc": "2026-09-09T09:26:11.609992+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000852,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "1_000852_tencent_2020.json",
+        "sha256": "13b6246b5bbe08bcc019a489b9fd07ddde150455556db96669ef4140adce508a",
+        "retrieved_utc": "2026-09-09T09:26:11.622632+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000852,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "1_000852_tencent_2025.json",
+        "sha256": "ac036a27cfe7b39d2aaad1cea761c577ba9e733341d259aae721cc573386509f",
+        "retrieved_utc": "2026-09-09T09:26:11.708194+00:00"
+      }
+    ],
+    "csv_sha256": "987bd0b2b4328f1221fb95f6693bfe6f707c29c4d8c5771caab844820e66f761",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 1,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "0.399001",
+    "rows": 4046,
+    "start": "2010-01-04",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399001,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "0_399001_tencent_2010.json",
+        "sha256": "eed62ddc0d6ff9231f26efa3216cfbf88a94130d35205ed5ff826b40b4de7ece",
+        "retrieved_utc": "2026-09-09T09:26:11.811297+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399001,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "0_399001_tencent_2015.json",
+        "sha256": "7ee2cad937b83b4a79c78222ad8d23cd14677358e0abc501826802a21bc58b33",
+        "retrieved_utc": "2026-09-09T09:26:11.830727+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399001,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "0_399001_tencent_2020.json",
+        "sha256": "ac4518abbdfc094278c83eaef263451a4416d8dd5b750297a30badf53c7e8795",
+        "retrieved_utc": "2026-09-09T09:26:11.891471+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399001,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "0_399001_tencent_2025.json",
+        "sha256": "3a0578e68d80a74036e0e027f3e3b4b61032842bfd067e1ece6894de460e9cc5",
+        "retrieved_utc": "2026-09-09T09:26:11.976183+00:00"
+      }
+    ],
+    "csv_sha256": "bca32527c6a96debd808281c1fa2da8b5a383c66dd4103c70e000d05bb22c61e",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 18,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "0.399005",
+    "rows": 4046,
+    "start": "2010-01-04",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399005,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "0_399005_tencent_2010.json",
+        "sha256": "5f82dec764583813a4cafeb29191c367be49beba555656fe9212e3e2f2746411",
+        "retrieved_utc": "2026-09-09T09:26:12.072768+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399005,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "0_399005_tencent_2015.json",
+        "sha256": "c97ea5f1a1d3ba923862b6f42768158734f7abc3f0c14b06bf8827096a35e78c",
+        "retrieved_utc": "2026-09-09T09:26:12.106211+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399005,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "0_399005_tencent_2020.json",
+        "sha256": "c47b7d85b7dd52c6d928d7935d84acb64a5effbdbf4b87b38de0422377419353",
+        "retrieved_utc": "2026-09-09T09:26:12.181451+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399005,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "0_399005_tencent_2025.json",
+        "sha256": "1a618b714c1e6a1a6df1984052e53d8b2c68c35bb8e1e80387c03502b9f92217",
+        "retrieved_utc": "2026-09-09T09:26:12.234180+00:00"
+      }
+    ],
+    "csv_sha256": "003acd067e6769c0ff9419af4cb2676d6cc653d6d50482ef5e7d17664f35d736",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 28,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  },
+  {
+    "secid": "0.399006",
+    "rows": 3946,
+    "start": "2010-06-02",
+    "end": "2026-08-31",
+    "sources": [
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399006,day,2010-01-01,2015-01-01,2000,qfq",
+        "file": "0_399006_tencent_2010.json",
+        "sha256": "be52ee7c44f132e0ff0cf932276eb96c3e68c36bb31e1063631887ecce9b5d06",
+        "retrieved_utc": "2026-09-09T09:26:12.349855+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399006,day,2015-01-01,2020-01-01,2000,qfq",
+        "file": "0_399006_tencent_2015.json",
+        "sha256": "4566cb518bb2959ab59869e3a9423c3e099ee10708a02655de84165788c85d96",
+        "retrieved_utc": "2026-09-09T09:26:12.373679+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399006,day,2020-01-01,2025-01-01,2000,qfq",
+        "file": "0_399006_tencent_2020.json",
+        "sha256": "cbd0f86232437c6849013ca536d2ceac1f790393d64da5d075cc504c7f2e931d",
+        "retrieved_utc": "2026-09-09T09:26:12.467110+00:00"
+      },
+      {
+        "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399006,day,2025-01-01,2027-01-01,2000,qfq",
+        "file": "0_399006_tencent_2025.json",
+        "sha256": "650162bde0f5f928655bc6de5f7c491d24d84e6ef61ce97b2ae84e30ca4cdce6",
+        "retrieved_utc": "2026-09-09T09:26:12.500944+00:00"
+      }
+    ],
+    "csv_sha256": "ea85b97a32c64e2bd673cf9d4d0755c6b6813146aaa91c050120f14e7439263e",
+    "duplicate_dates": 0,
+    "missing_values": 0,
+    "material_ohlc_violations": 1,
+    "invalid_ohlc_dates": [
+      "2015-03-27"
+    ],
+    "rounding_ohlc_violations": 8,
+    "rounding_tolerance": 0.011,
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "adjustment": "index raw day branch returned by qfq endpoint; no constituent-level adjustment applied",
+    "volume_unit": "provider-native; checked against initially received Eastmoney volume on 2010-01-04: 66101080 for CSI300",
+    "amount": "unavailable, excluded from model",
+    "vintage": "historical download, not a point-in-time revision archive"
+  }
+]

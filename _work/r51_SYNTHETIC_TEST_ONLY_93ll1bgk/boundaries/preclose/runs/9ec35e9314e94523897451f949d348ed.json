@@ -1,0 +1,40 @@
+{
+  "after": {
+    "date_cst": "2026-09-18",
+    "due_parameter_cutoffs": [],
+    "fetch_needed": false,
+    "journal_events": 0,
+    "labels": 0,
+    "latest_snapshot_end": null,
+    "next_parameter_cutoff": "2026-06-30",
+    "next_unrecorded_signal": "2026-09-18",
+    "now_utc": "2026-09-18T09:59:59+00:00",
+    "pending_labels": 0,
+    "recorded_predictions": 0,
+    "recording_window_open": false,
+    "scheduler_installed": false,
+    "status": "PRE_CLOSE_WAIT"
+  },
+  "before": {
+    "date_cst": "2026-09-18",
+    "due_parameter_cutoffs": [],
+    "fetch_needed": false,
+    "journal_events": 0,
+    "labels": 0,
+    "latest_snapshot_end": null,
+    "next_parameter_cutoff": "2026-06-30",
+    "next_unrecorded_signal": "2026-09-18",
+    "now_utc": "2026-09-18T09:59:59+00:00",
+    "pending_labels": 0,
+    "recorded_predictions": 0,
+    "recording_window_open": false,
+    "scheduler_installed": false,
+    "status": "PRE_CLOSE_WAIT"
+  },
+  "completed_utc": "2026-09-18T09:59:59+00:00",
+  "run_id": "9ec35e9314e94523897451f949d348ed",
+  "source_freeze_sha256": "2c6f21ddfafc7dd3f20318cfb67c0ddacc26f7ac3c85372c3b47f87a91af13c2",
+  "started_utc": "2026-09-18T09:59:59+00:00",
+  "status": "PRE_CLOSE_WAIT",
+  "steps": []
+}

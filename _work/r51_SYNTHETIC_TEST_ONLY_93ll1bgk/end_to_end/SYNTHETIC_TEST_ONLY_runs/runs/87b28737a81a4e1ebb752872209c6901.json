@@ -1,0 +1,275 @@
+{
+  "after": {
+    "date_cst": "2026-09-25",
+    "due_parameter_cutoffs": [],
+    "fetch_needed": false,
+    "journal_events": 4,
+    "labels": 0,
+    "latest_snapshot_end": "2026-09-25",
+    "next_parameter_cutoff": "2026-09-30",
+    "next_unrecorded_signal": "2026-10-02",
+    "now_utc": "2026-09-25T15:05:00+00:00",
+    "pending_labels": 1,
+    "recorded_predictions": 1,
+    "recording_window_open": false,
+    "scheduler_installed": false,
+    "status": "READY_FOR_MANUAL_CYCLE"
+  },
+  "before": {
+    "date_cst": "2026-09-25",
+    "due_parameter_cutoffs": [],
+    "fetch_needed": true,
+    "journal_events": 3,
+    "labels": 0,
+    "latest_snapshot_end": "2026-09-18",
+    "next_parameter_cutoff": "2026-09-30",
+    "next_unrecorded_signal": "2026-10-02",
+    "now_utc": "2026-09-25T15:05:00+00:00",
+    "pending_labels": 1,
+    "recorded_predictions": 1,
+    "recording_window_open": false,
+    "scheduler_installed": false,
+    "status": "READY_FOR_MANUAL_CYCLE"
+  },
+  "completed_utc": "2026-09-25T15:05:00+00:00",
+  "evaluation": {
+    "comparisons": [],
+    "complete_mature_signals": 0,
+    "coverage": [
+      {
+        "date": "2026-09-18",
+        "status": "PENDING_LABEL"
+      },
+      {
+        "date": "2026-09-25",
+        "status": "NO_TIMELY_PREDICTION"
+      },
+      {
+        "date": "2026-10-02",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-10-09",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-10-16",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-10-23",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-10-30",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-11-06",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-11-13",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-11-20",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-11-27",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-12-04",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-12-11",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-12-18",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2026-12-25",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-01-01",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-01-08",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-01-15",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-01-22",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-01-29",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-02-05",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-02-12",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-02-19",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-02-26",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-03-05",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-03-12",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-03-19",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-03-26",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-04-02",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-04-09",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-04-16",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-04-23",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-04-30",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-05-07",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-05-14",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-05-21",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-05-28",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-06-04",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-06-11",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-06-18",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-06-25",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-07-02",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-07-09",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-07-16",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-07-23",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-07-30",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-08-06",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-08-13",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-08-20",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-08-27",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-09-03",
+        "status": "NOT_DUE"
+      },
+      {
+        "date": "2027-09-10",
+        "status": "NOT_DUE"
+      }
+    ],
+    "generated_utc": "2026-09-25T15:05:00+00:00",
+    "limitations": "Fixed recipes and same future cohort; local timestamps only. No trading PnL. Missing slots are explicit; observed subset can still be selective.",
+    "metrics": [],
+    "primary_review_not_before": "2027-10-01",
+    "recorded_predictions": 1,
+    "status": "DESCRIPTIVE_ONLY"
+  },
+  "run_id": "87b28737a81a4e1ebb752872209c6901",
+  "source_freeze_sha256": "2c6f21ddfafc7dd3f20318cfb67c0ddacc26f7ac3c85372c3b47f87a91af13c2",
+  "started_utc": "2026-09-25T15:05:00+00:00",
+  "status": "COMPLETED",
+  "steps": [
+    {
+      "action": "fetch",
+      "end": "2026-09-25",
+      "sequence": 4
+    },
+    {
+      "action": "record",
+      "status": "OUTSIDE_RECORDING_WINDOW"
+    },
+    {
+      "action": "settle",
+      "committed": 0,
+      "pending": 1
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2014-12-31_20260910",
+    "gate": "excess_order",
+    "cutoff": "2014-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "job": "learned_order_extension_2014-12-31_20260910"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2014-12-31_20260911",
+    "gate": "excess_order",
+    "cutoff": "2014-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "job": "learned_order_extension_2014-12-31_20260911"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2014-12-31_20260912",
+    "gate": "excess_order",
+    "cutoff": "2014-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "job": "learned_order_extension_2014-12-31_20260912"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2015-12-31_20260910",
+    "gate": "excess_order",
+    "cutoff": "2015-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "job": "learned_order_extension_2015-12-31_20260910"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2015-12-31_20260911",
+    "gate": "excess_order",
+    "cutoff": "2015-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "job": "learned_order_extension_2015-12-31_20260911"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2015-12-31_20260912",
+    "gate": "excess_order",
+    "cutoff": "2015-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "job": "learned_order_extension_2015-12-31_20260912"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2016-12-31_20260910",
+    "gate": "excess_order",
+    "cutoff": "2016-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "job": "learned_order_extension_2016-12-31_20260910"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2016-12-31_20260911",
+    "gate": "excess_order",
+    "cutoff": "2016-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "job": "learned_order_extension_2016-12-31_20260911"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2016-12-31_20260912",
+    "gate": "excess_order",
+    "cutoff": "2016-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "job": "learned_order_extension_2016-12-31_20260912"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2017-12-31_20260910",
+    "gate": "excess_order",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "job": "learned_order_extension_2017-12-31_20260910"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2017-12-31_20260911",
+    "gate": "excess_order",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "job": "learned_order_extension_2017-12-31_20260911"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2017-12-31_20260912",
+    "gate": "excess_order",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "job": "learned_order_extension_2017-12-31_20260912"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2018-12-31_20260910",
+    "gate": "excess_order",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "job": "learned_order_extension_2018-12-31_20260910"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2018-12-31_20260911",
+    "gate": "excess_order",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "job": "learned_order_extension_2018-12-31_20260911"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2018-12-31_20260912",
+    "gate": "excess_order",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "job": "learned_order_extension_2018-12-31_20260912"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2019-12-31_20260910",
+    "gate": "excess_order",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "dimensions": 31,
+    "job": "learned_order_extension_2019-12-31_20260910"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2019-12-31_20260911",
+    "gate": "excess_order",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "dimensions": 31,
+    "job": "learned_order_extension_2019-12-31_20260911"
+  },
+  {
+    "method": "learned_order_extension",
+    "source_job": "learned_vol_interaction_2019-12-31_20260912",
+    "gate": "excess_order",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "dimensions": 31,
+    "job": "learned_order_extension_2019-12-31_20260912"
+  },
+  {
+    "method": "raw_order_extension",
+    "source_job": "raw_vol_interaction_2014-12-31_-1",
+    "gate": "excess_order",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "job": "raw_order_extension_2014-12-31_-1"
+  },
+  {
+    "method": "raw_order_extension",
+    "source_job": "raw_vol_interaction_2015-12-31_-1",
+    "gate": "excess_order",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "job": "raw_order_extension_2015-12-31_-1"
+  },
+  {
+    "method": "raw_order_extension",
+    "source_job": "raw_vol_interaction_2016-12-31_-1",
+    "gate": "excess_order",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "job": "raw_order_extension_2016-12-31_-1"
+  },
+  {
+    "method": "raw_order_extension",
+    "source_job": "raw_vol_interaction_2017-12-31_-1",
+    "gate": "excess_order",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "job": "raw_order_extension_2017-12-31_-1"
+  },
+  {
+    "method": "raw_order_extension",
+    "source_job": "raw_vol_interaction_2018-12-31_-1",
+    "gate": "excess_order",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "job": "raw_order_extension_2018-12-31_-1"
+  },
+  {
+    "method": "raw_order_extension",
+    "source_job": "raw_vol_interaction_2019-12-31_-1",
+    "gate": "excess_order",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "dimensions": 28,
+    "job": "raw_order_extension_2019-12-31_-1"
+  },
+  {
+    "method": "order_only",
+    "source_job": null,
+    "gate": "excess_order",
+    "cutoff": "2014-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "order_only_2014-12-31_0"
+  },
+  {
+    "method": "order_only",
+    "source_job": null,
+    "gate": "excess_order",
+    "cutoff": "2015-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "order_only_2015-12-31_0"
+  },
+  {
+    "method": "order_only",
+    "source_job": null,
+    "gate": "excess_order",
+    "cutoff": "2016-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "order_only_2016-12-31_0"
+  },
+  {
+    "method": "order_only",
+    "source_job": null,
+    "gate": "excess_order",
+    "cutoff": "2017-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "order_only_2017-12-31_0"
+  },
+  {
+    "method": "order_only",
+    "source_job": null,
+    "gate": "excess_order",
+    "cutoff": "2018-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "order_only_2018-12-31_0"
+  },
+  {
+    "method": "order_only",
+    "source_job": null,
+    "gate": "excess_order",
+    "cutoff": "2019-12-31",
+    "seed": 0,
+    "dimensions": 1,
+    "job": "order_only_2019-12-31_0"
+  }
+]

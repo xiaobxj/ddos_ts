@@ -1,0 +1,303 @@
+{
+  "version": 22,
+  "experiment": "Two separate fixed causal state gates: relative volatility and log-price path efficiency, with one shared signal modifier each",
+  "scope": "Research only. Retain all20old methods and original round19interaction. Test the two gate definitions separately, no joint gate or new expert networks. Full-history equal-weight labels and unchanged R18feature coordinates and supervised ray.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "variants": [
+    {
+      "method": "learned_relativevol_interaction",
+      "parent": "learned_market",
+      "gate": "relative_volatility",
+      "dimensions": 30,
+      "fits": 18
+    },
+    {
+      "method": "raw_relativevol_interaction",
+      "parent": "raw_trend",
+      "gate": "relative_volatility",
+      "dimensions": 27,
+      "fits": 6
+    },
+    {
+      "method": "learned_persistence_interaction",
+      "parent": "learned_market",
+      "gate": "persistence",
+      "dimensions": 30,
+      "fits": 18
+    },
+    {
+      "method": "raw_persistence_interaction",
+      "parent": "raw_trend",
+      "gate": "persistence",
+      "dimensions": 27,
+      "fits": 6
+    },
+    {
+      "method": "relativevol_only",
+      "parent": null,
+      "gate": "relative_volatility",
+      "dimensions": 1,
+      "fits": 6
+    },
+    {
+      "method": "persistence_only",
+      "parent": null,
+      "gate": "persistence",
+      "dimensions": 1,
+      "fits": 6
+    }
+  ],
+  "states": {
+    "relative_volatility": "sd20,sd120 are populationSD of trailing20and120valid daily close log returns. u=(sd20-sd120)/max(sd20+sd120,1e-8). Bounded[-1,1]; dimensionless change in scale relative to trailing baseline.",
+    "persistence": "ER60=clip(abs(sum trailing60close log returns)/max(sum absolute trailing60log returns,1e-8),0,1); u=2*ER60-1. Uses absolute log-price displacement, so it measures path efficiency regardless of direction. A log-price adaptation of efficiency ratio, not a claim of the standard raw-price KER implementation.",
+    "flat_case": "Both SDs zero gives relativevol0; zero path length gives ER0, persistence-1. Constants fixed; no horizon, threshold, smoothing or parameter search.",
+    "memory": "Require all121OHLC bars through signal t valid,close finitepositive. First120anchors missing. A bad bar renders anchors bad_index through bad_index+120missing. No filling or reindex compression. Existing125bar observation mask already stricter; no changed classifier training/test membership.",
+    "causal": "No fitted state parameters; identical past-only function for training and next-year dates. Features on any prefix invariant to later data; no state identifier OOF-fitting mismatch. The inherited backbone/ray, OLS projection and classifier still fit on each whole training fold, so the entire learner is not OOF."
+  },
+  "interaction": {
+    "volatility": "Replace HMM gate by exactly one relativevol or persistence coordinate. Same frozen parent,train-only OLS residualization,SDfloor1e-6,rcond1e-12 and one extra slope.",
+    "signal": "r=X[:,0:25] @ parent.coefficients[0:25]. This is the representation-only logit contribution of the already fitted round18parent. It excludes that parent appended market coefficients and intercept. Raw25itself already contains three market summaries. Ray weights are supervised training-fit coefficients, not out-of-fold predictions; no next-year labels are used.",
+    "product": "q=v*r. Only one fixed product, no separate25-dimensional products, higher powers, horizon grid or expert models.",
+    "projection": "Using only this fold training inputs, solve min_gamma ||q-[X,1]gamma||^2 with numpy.linalg.lstsq rcond=1e-12. This removes the product component linearly representable by existing additive coordinates. Freeze gamma, training residual mean and populationSD (floor1e-6). h=(q-[X,1]gamma-residual_mean)/residual_sd; append h to unchanged X.",
+    "normalization": "No additional clipping of product or residual. Constituent inputs retain their existing training-only clipping. Do not recompute projection, means, SDs or ray on held-out data.",
+    "model": "Refit the full ridge logistic head on [X,h], one extra slope. All additive slopes and intercept may refit; interaction ray stays fixed. Zero new slope nests the original parent exactly. Same lambda=.01 applies to every slope, intercept unpenalized.",
+    "interpretation": "This is a one-dimensional interaction along an inherited signal direction, with training-linear redundancy removed. Residualization changes the ridge parameterization relative to an unresidualized-product model; that alternative is not tested. Coefficient signs/components are not causal importance or OOF calibration evidence.",
+    "sd_floor": 1e-06,
+    "projection_rcond": 1e-12,
+    "rank_tolerance": 1e-08,
+    "training_orthogonality_tolerance": 1e-08
+  },
+  "controls": "Two separate one-coordinate standardized-state logistic controls; six annual heads each, same lambda. No signal inputs.",
+  "probe": {
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "Independently verify all60convex heads; alternate coefficients never predict heldout dates."
+  },
+  "projection_verification": {
+    "method": "scipy.linalg.lstsq, pivoted-QR gelsy",
+    "rcond": 1e-12,
+    "training_fitted_value_absolute_tolerance": 1e-09,
+    "training_standardized_residual_absolute_tolerance": 1e-08,
+    "validation_standardized_residual_absolute_tolerance": 1e-08
+  },
+  "stability": "Descriptive only: each gate on pre-cutoff daily history and next-year daily bars; fixed labels relativevol>0elevated,otherwise subdued; ER>=.2persistent,otherwisechoppy. Fourcrosscells too. Report occupancy,mean,SD,10/90quantiles,adjacent daily autocorrelation,switches,runs. Missing bars break adjacency; annual/history boundaries censor runs. Observed run lengths including censored runs are not true market-state durations. Thresholds for tabulation only.",
+  "training_diagnostics": "Full-history state features are deterministic and causal. Classifier training signals and states retained. Gate novelty diagnostic: correlation with existing raw volatility20 and absolute trend60 descriptors, plus training OLS R2 from existing standardized additive X. These are descriptive collinearity checks, not selection or causal identification.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_relativevol_interaction",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_relativevol_interaction",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_relativevol_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_relativevol_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_relativevol_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_relativevol_interaction",
+      "reference": "relativevol_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_relativevol_interaction",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_relativevol_interaction",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_relativevol_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_relativevol_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_relativevol_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_relativevol_interaction",
+      "reference": "relativevol_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_persistence_interaction",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_persistence_interaction",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_persistence_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_persistence_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_persistence_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_persistence_interaction",
+      "reference": "persistence_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_persistence_interaction",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_persistence_interaction",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_persistence_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_persistence_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_persistence_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_persistence_interaction",
+      "reference": "persistence_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "relativevol_only",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "persistence_only",
+      "reference": "training_frequency",
+      "metric": "brier"
+    }
+  ],
+  "inference": "52fixed contrasts (26perwindow),jointHolm. Candidate-reference loss negativebetter; circular8retained-observation blocks,10000replicates,seed20260910 separately perwindow. Centered two-sided p; marginal95percentintervals not selection-adjusted. No pooled primary.",
+  "descriptive_screen": "11strict flags per candidate per window: accuracy above R18parent,R19interaction,nativeMSE,fullfrequency(4); Brier below parent,originalinteraction,frequency,matchingstateonly(4); logloss belowfrequency(1); at least2years accuracy above native and2years Brier belowfrequency(2). Bothwindows all11for descriptive PASS. No automatic selection of best of two gates or promotion of controls.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "budget": "60heads,48projections,94650training feature rows,1476coefficients includingintercepts.2610new probabilities,8613old modelrows→11223;5220old ensembles→6786(26methods*261).Preserve3166old evidencefiles.1520metricgroups including23statecells*26methods*2windows;250reliabilitybins;52primarycontrasts. No new neural forward/training/HMMfit.",
+  "sequencing": "Freeze protocol/core/inputs before real candidate fitting. Contract synthetic/causality checks then all60heads finish before new heldout scoring. Next-year raw state diagnostics computed during scoring. Some earlier evaluation dates legitimately belong to later mature-label training folds.",
+  "user_steering": "Preserve original full-history interaction including lateaccuracy58.16percent; inspect stable meaning and incremental content before training larger separate experts. A failed new variant does not erase prior results.",
+  "sources": [
+    "https://doc.stocksharp.com/en/topics/api/indicators/list_of_indicators/kaufman_efficiency_ratio",
+    "https://scikit-learn.org/stable/modules/cross_validation.html"
+  ]
+}

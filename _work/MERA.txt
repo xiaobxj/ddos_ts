@@ -1,0 +1,892 @@
+=== PAGE 1 ===
+MERA: Mixture of Experts with Retrieval-Augmented
+Representation for Modeling Diversified Stock Patterns
+YuJun Liu
+Tsinghua University
+Shenzhen, China
+lyj697020@sina.com
+Chen-Hui Song
+E Fund Management Co., LTD.
+Guangzhou, China
+songchenhui@efunds.com.cn
+Peiyuan Liu
+Tsinghua University
+Shenzhen, China
+lpy23@mails.tsinghua.edu.cn
+Naiqi Li∗
+Tsinghua University
+Shenzhen, China
+linaiqi@sz.tsinghua.edu.cn
+Tao Dai∗
+ShenZhen University
+Shenzhen, China
+daitao.edu@gmail.com
+Jigang Bao
+Tsinghua University
+Shenzhen, China
+baojg19@mails.tsinghua.edu.cn
+Yong Jiang
+Tsinghua University
+Shenzhen, China
+jiangy@sz.tsinghua.edu.cn
+Shu-Tao Xia
+Tsinghua University
+Shenzhen, China
+xiast@sz.tsinghua.edu.cn
+Abstract
+Successful quantitative investment relies on accurate predictions
+of the future stock price. Deep learning-based solutions have re-
+cently demonstrated a superior ability to capture the intricate and
+nonlinear interactions among various market variables. However,
+most existing methods use the same parameters to fit all samples,
+without considering that the real stock market often exhibits mul-
+tiple patterns. To alleviate this issue, we propose a novel module
+called Mixture of Experts with Retrieval-Augmented Representa-
+tion (MERA). Essentially, MERA consists of a set of independent
+experts for differentiated modeling as well as a GateNet that dy-
+namically allocates data of different patterns to the most suitable
+experts. The model backbone is responsible for learning the coarse-
+grained representations for all stock patterns. Then, each expert
+in the MERA module focuses on the specific pattern and performs
+a more fine-grained analysis. However, accurate data allocation
+remains challenging due to the lack of explicit pattern identifiers.
+To overcome this, MERA retrieves relevant samples using high-
+level representations from self-supervised pre-training. The label
+information of neighbor samples is promising discriminative sig-
+nals to indicate the target stock pattern. Extensive experiments on
+real-world stock markets show significant improvements. Our code
+is released at https://github.com/chenchen1104/MERA.
+CCS Concepts
+• Computing methodologies →Artificial intelligence; • Ap-
+plied computing →Economics.
+∗Corresponding authors are Naiqi Li and Tao Dai.
+This work is licensed under a Creative Commons Attribution Inter-
+national 4.0 License.
+WWW Companion ’25, Sydney, NSW, Australia
+© 2025 Copyright held by the owner/author(s).
+ACM ISBN 979-8-4007-1331-6/2025/04
+https://doi.org/10.1145/3701716.3715513
+Keywords
+Stock Prediction, Mixture of Expert, Retrieval-Augmented Repre-
+sentation
+ACM Reference Format:
+YuJun Liu, Chen-Hui Song, Peiyuan Liu, Naiqi Li, Tao Dai, Jigang Bao, Yong
+Jiang, and Shu-Tao Xia. 2025. MERA: Mixture of Experts with Retrieval-
+Augmented Representation for Modeling Diversified Stock Patterns. In
+Companion Proceedings of the ACM Web Conference 2025 (WWW Companion
+’25), April 28-May 2, 2025, Sydney, NSW, Australia. ACM, New York, NY, USA,
+5 pages. https://doi.org/10.1145/3701716.3715513
+1
+Introduction
+Stock market prediction is a crucial research area that empowers
+investors to make informed investment decisions and maximize
+investment profits. However, the dynamic and intricate nature of
+the stock market makes accurate forecasting challenging.
+Over the past decade, deep learning techniques have emerged
+as a popular approach for stock prediction and quantitative invest-
+ment. Unlike traditional statistical methods [3, 6], deep learning
+models [2, 8, 10, 11] excel at capturing complex and nonlinear re-
+lationships between various market variables. Despite the success
+of these methods, most of them involve supervised training on a
+single-branch model to fit all samples. This paradigm struggles
+to accommodate the diverse patterns inherent in real-world stock
+markets, resulting in suboptimal predictive performance. For exam-
+ple, during the early COVID-19 pandemic, high-performing stocks
+such as e-commerce and medical technology surged, driven by
+shifts in consumer behavior and market sentiment. In contrast,
+low-performing sectors like energy and aviation faced setbacks
+due to macroeconomic factors. This highlights the need for models
+capable of distinguishing and learning the diverse stock patterns.
+This paper introduces a Sparse Mixture of Experts (SMoE) [5] as
+an extension module for capturing diverse stock patterns. SMoE
+consists of a GateNet and several independent experts. Each expert
+focuses on specific stock patterns, while GateNet assigns data with
+the particular pattern to the corresponding expert for processing. As
+1148
+
+
+=== PAGE 2 ===
+WWW Companion ’25, April 28-May 2, 2025, Sydney, NSW, Australia
+YuJun Liu et al.
+shown in Figure 1, unlike the vanilla single-branch model, our multi-
+branch expert model employs GateNet to dynamically allocate each
+stock data to a tailored subset of experts, enabling fine-grained
+analysis of stocks with varying performance.
+Experts
+…
+Vanilla single-branch model
+Our multi-branch expert model
+Expert Pool
+Activated Experts
+high-performing Expert
+Low-performing Expert
+Stock Data
+Model Backbone
+Stock Data
+Y                    Y
+Y                                         Y
+GateNet
+Figure 1: The comparison between the vanilla single-branch
+model and our multi-branch expert model.
+However, accurate data allocation is still challenging due to the
+absence of explicit pattern identifiers. While stock patterns can be
+distinguished based on labels during the training phase, the lack of
+labels during testing complicates this process. The key challenge,
+therefore, is to develop a unified solution for distinguishing stock
+patterns during all phases. Recent retrieval-augmented (RA) tech-
+niques [1, 7] offer methods to estimate target stock patterns across
+all phases. The RA paradigm retrieves relevant information and
+uses it to enhance analysis for the target. When integrated into
+our framework, a self-supervised pre-training task is first used to
+transform raw noisy data into compact high-level representations.
+Then, for the target stock sample, similar samples are retrieved
+based on high-level representations, and an aggregation operation
+is performed over the retrieved samples. The aggregated label is
+a strong signal to indicate the target stock pattern, which is sent
+to GateNet for accurate data allocation. Meanwhile, both the ag-
+gregated feature and the target feature are directed to the specific
+expert for more fine-grained analysis.
+In summary, our contributions are as follows: (1) Our proposed
+Mixture-of-Experts with Retrieval-Augmented representation mod-
+ule can capture multiple stock patterns, such as differentiated model-
+ing for high-performing and low-performing stocks; (2) To enhance
+the accuracy of GateNet in distinguishing diverse stock patterns, we
+utilize self-supervised high-level representations to retrieve similar
+samples. Both the features and labels of the retrieved samples are
+strong signals to indicate the target stock pattern; (3) Extensive
+experiments conducted on the real-world stock market demonstrate
+the superiority of our approach over benchmarks and SOTAs. Fur-
+thermore, MERA is a plug-and-play module that can be introduced
+to any DL-based model.
+2
+Method
+2.1
+Problem Formulation
+Formally, our objective is to develop a model 𝑓𝜃(·) that can predict
+future stock returns ˆ𝑦𝑠
+𝑡from intra-day minute-level data 𝑥𝑠
+𝑡. Specif-
+ically, for each stock 𝑠on trading day 𝑡, there is a corresponding
+minute-level data 𝑥𝑠
+𝑡= {𝑥𝑠
+𝑡[0], · · · ,𝑥𝑠
+𝑡[𝑘−1]} ∈R𝑐×𝑘, where 𝑥𝑠
+𝑡[𝑖]
+denotes the stock feature with dimension 𝑐for the 𝑖-th minute.
+There are 𝑘minutes of trading sessions per day. It includes informa-
+tion such as the opening price, closing price, highest price, lowest
+price, trading volume, turnover, and more. For the prediction label,
+we define it as the daily return ratio:
+𝑦𝑠
+𝑡=
+close_price𝑠
+𝑡+1 −close_price𝑠
+𝑡
+close_price𝑠
+𝑡
+.
+(1)
+Since stock investment is to rank and select the most profitable
+stocks, we apply daily Z-score normalization to the return ratios to
+encode the labels with the rankings.
+2.2
+Self-supervised Pre-training
+The stock market’s raw data is often noisy, which challenges the
+subsequent modules’ ability to retrieve similar samples effectively.
+To address this issue, we employ a pre-training strategy to transform
+the raw data into compact high-level representations.
+Masked autoencoders are a widely used self-supervised pre-
+training method with many successful applications [4]. The core
+concept is straightforward: randomly remove portions of the input
+sequence and train the model to reconstruct the missing parts.
+Input Time Series
+…
+!!"#$%
+!&'()
+MSE Loss
+Token Masking & Embedding
+mask
+mask
+…
+mask
+Transformer Encoder
+Decoder: Linear
+!*
+( [0]
+!*
+([1]
+!*
+([k-1]
+!*
+([2]
+!*
+([3]
+!*
+([k-2]
+Figure 2: Masked self-supervised representation learning.
+As shown in Figure 2, an autoencoder usually consists of an
+encoder that encodes inputs to high-level latent features and the
+decoder decodes latent features to reconstruct the input. Here, we
+choose a vanilla transformer as the model backbone. Given the
+input 𝑥∈R𝑐∗𝑘and a masking ratio 𝑚, we randomly select a subset
+of indices in each stock time series and mask the corresponding
+inputs with zeros. The model 𝑓is trained with MSE loss to make the
+reconstructed part 𝑥𝑟𝑒𝑐𝑜𝑛, derived from the context of the visible
+part 𝑥𝑣𝑖𝑠, as similar as possible to the original mask part 𝑥𝑚𝑎𝑠𝑘.
+Given 𝑆as the size of the stock pool, it can be expressed as,
+𝐿= 𝑀𝑆𝐸(𝑥𝑟𝑒𝑐𝑜𝑛,𝑥𝑚𝑎𝑠𝑘) = 1
+𝑆
+𝑆
+∑︁
+𝑖=1
+(𝑥𝑟𝑒𝑐𝑜𝑛𝑖−𝑥𝑚𝑎𝑠𝑘𝑖)2.
+(2)
+2.3
+Retrieval Augmentation
+2.3.1
+Overview. Figure 3 provides an overview of our proposed
+MERA module. We first construct the retrieval pool 𝑃based on pre-
+trained high-level representations of the training set 𝐷= {(𝑥1
+1,𝑦1
+1),
+· · · , (𝑥𝑆
+𝑇,𝑦𝑆
+𝑇)}. Here, 𝑆represents the size of the stock pool, and 𝑇
+1149
+
+
+=== PAGE 3 ===
+Mixture of Experts with Retrieval-Augmented Representation for Modeling Diversified Stock Patterns
+WWW Companion ’25, April 28-May 2, 2025, Sydney, NSW, Australia
+Target
+Input !!
+"
+Pretrained
+Transformer
+❄
+Target
+Embedding "!
+"
+Pretrained
+Transformer
+❄
+…
+Search
+Engine
+…
+Aggregation 
+Layer
+SMoE
+Aggregate Label
+Embedding !!
+"
+Predict
+Head
+Retrieval Module
+Predict Module
+…
+Linear 
+& 
+Softmax
+Expert 1
+Expert 2
+Expert 4
+Aggregate Label
+Embedding !!
+"
+Aggregate Feature
+Embedding "!
+"
+Sparse Mixture-of-Experts
+GateNet
+Frozen Layer
+❄
+Tuned Layer
+"
+Query
+× ST
+Training Set D
+Retrieval Pool P
+Retrieval
+Neighbors R(!!
+")
+K/V
+Q
+Aggregate Label
+Embedding "!
+"
+Feature
+Label
+"
+"
+"
+"
+"
+❄
+TopN
+× N
+× ST
+Expert 3
+Figure 3: The overall architecture of our MERA Module.
+includes the trading days in the training set. When a prediction
+request 𝑥𝑠
+𝑡is received, the pre-trained model backbone is first used
+to extract its feature embedding 𝑒𝑠
+𝑡, which will be regarded as a
+query to retrieve 𝑇𝑜𝑝𝑁similar samples from the retrieval pool.
+Subsequently, the aggregation layer operates on features and labels,
+as both types of information are crucial.
+The prediction module takes the representations of aggregated
+relevant samples and the target sample as the inputs. The aggre-
+gated label embedding 𝑙𝑠
+𝑡is sent to GateNet for accurate routing.
+The features (𝑒𝑠
+𝑡,𝑟𝑠
+𝑡) are combined and fed into the expert modules
+for more fine-grained analysis.
+2.3.2
+Retrieval module. The retrieval module is responsible for
+retrieving data samples that have relations with the target through
+nearest neighbor search.
+When constructing the retrieval pool, we store both the pre-
+trained high-level representations and the label information. No-
+tably, Continuous labels are discretized into categorical variables
+by dividing them into 𝐵(𝐵= 10 as default) classes based on their
+numerical value. This is sufficient because label information is used
+to indicate stock patterns and determine which expert modules to
+activate, without requiring precise numerical values.
+When a prediction request 𝑥𝑠
+𝑡is made, its feature embedding 𝑒𝑠
+𝑡
+is extracted as the query. The search engine retrieves 𝑇𝑜𝑝𝑁most
+similar samples based on MSE metrics. These retrieved samples
+are then aggregated using a target-aware, order-invariant attention
+mechanism, which assigns a relevance-based scaling coefficient to
+each sample. The aggregated feature embedding 𝑟𝑠
+𝑡is formulated
+as:
+𝒓𝒔
+𝒕=
+𝑁
+∑︁
+𝑖=1
+𝛼𝑖· 𝒔𝑓
+𝑖,𝑠𝑖∈R  𝑥𝑠
+𝑡
+ .
+(3)
+where R  𝑥𝑠
+𝑡
+ is the retrieval set of target sample 𝑥𝑠
+𝑡and 𝑠𝑓
+𝑖is
+the feature part of sample 𝑠𝑖. 𝛼𝑖is the attention weight of the 𝑖-th
+retrieved sample, which is defined as:
+𝛼𝑖=
+exp
+
+𝒙𝑇
+𝑖𝑾𝒙𝒔
+𝒕
+
+Í𝑁
+𝑗=1 exp
+
+𝒙𝑇
+𝑗𝑾𝒙𝑠
+𝑡
+
+(4)
+Where 𝑊is the attention layer parameter matrix. The label
+information is also aggregated using the same attention weights:
+𝒍𝒔
+𝒕=
+𝑁
+∑︁
+𝑖=1
+𝛼𝑖· 𝒔𝒍
+𝒊,𝑠𝑖∈R  𝑥𝑠
+𝑡
+ .
+(5)
+Finally, the target stock embedding 𝑒𝑠
+𝑡, the aggregated represen-
+tations 𝑟𝑠
+𝑡, and 𝑙𝑠
+𝑡are fed into the prediction module to enhance the
+final predictions.
+2.3.3
+Predict module. The prediction module is responsible for
+calculating the final predictions based on the representations of the
+target sample and retrieved samples.
+To capture the diversified stock patterns, the SMoE layer is first
+used for differentiated modeling. Given stock data, the output is a
+weighted sum of the outputs from 𝑘most relevant experts, with
+the weights determined by GateNet 𝐺. Only the 𝑘experts with
+the largest weights are activated, then unused experts need not
+be computed. As the key part, GateNet is responsible for selecting
+corresponding expert modules for data with specific stock patterns.
+Aggregated label embedding 𝑙𝑠
+𝑡is a strong signal to indicate the
+target pattern and is sent to GateNet for accurate allocation.
+𝐺(𝑙𝑠
+𝑡) = 𝑇𝑜𝑝𝐾(𝑆𝑜𝑓𝑡𝑚𝑎𝑥(𝑙𝑠
+𝑡·𝑊𝑔)).
+(6)
+The aggregated feature embedding 𝑟𝑠
+𝑡and target feature em-
+bedding 𝑒𝑠
+𝑡are fed into the activated expert modules for a more
+1150
+
+
+=== PAGE 4 ===
+WWW Companion ’25, April 28-May 2, 2025, Sydney, NSW, Australia
+YuJun Liu et al.
+Table 1: Quantitative comparisons among different methods in CSI300, CSI500 and CSI1000 dataset. Bold represent the optimal
+results.
+Dataset
+Method
+Ranking Metrics
+Portfolio Metrics
+IC
+ICIR
+RankIC
+RankIR
+𝑅𝑒𝑡𝑢𝑟𝑛+
+𝑅𝑒𝑡𝑢𝑟𝑛−
+Return
+CSI300
+MLP
+0.071
+0.830
+0.068
+0.846
+0.431
+-0.772
+0.602
+LightGBM
+0.092
+0.814
+0.080
+0.807
+0.614
+-0.911
+0.763
+TCN
+0.087
+0.732
+0.085
+0.830
+0.543
+-0.974
+0.759
+SFM
+0.080
+0.801
+0.079
+0.823
+0.482
+-0.922
+0.702
+GRU
+0.091
+0.796
+0.079
+0.742
+0.606
+-0.909
+0.757
+ALSTM
+0.093
+0.775
+0.082
+0.712
+0.599
+-0.988
+0.794
+Transformer
+0.095
+0.821
+0.094
+0.848
+0.658
+-1.015
+0.837
+Transformer+TRA
+0.098
+0.827
+0.096
+0.848
+0.701
+-1.047
+0.874
+Transformer+CISP
+0.102
+0.832
+0.100
+0.850
+0.707
+-1.064
+0.886
+Transformer+MERA
+0.107↑0.012
+0.855↑0.034
+0.106↑0.012
+0.859↑0.011
+0.726↑0.068
+-1.104↑0.089
+0.915 ↑0.078
+CSI500
+MLP
+0.080
+0.962
+0.078
+1.011
+0.701
+-1.023
+0.862
+LightGBM
+0.100
+0.997
+0.093
+0.178
+0.874
+-1.343
+1.109
+SFM
+0.089
+0.888
+0.092
+1.203
+0.799
+-1.369
+1.084
+TCN
+0.100
+0.969
+0.096
+1.184
+0.847
+-1.393
+1.120
+GRU
+0.101
+0.970
+0.090
+1.024
+0.798
+-1.333
+1.066
+ALSTM
+0.104
+0.981
+0.101
+1.142
+0.868
+-1.433
+1.151
+Transformer
+0.109
+1.045
+0.102
+1.203
+0.889
+-1.524
+1.207
+Transformer+TRA
+0.114
+1.089
+0.106
+1.250
+1.012
+-1.558
+1.275
+Transformer+CISP
+0.113
+1.092
+0.108
+1.257
+1.013
+-1.556
+1.280
+Transformer+MERA
+0.117↑0.008
+1.097↑0.052
+0.112↑0.010
+1.262↑0.059
+1.018↑0.129
+-1.551↑0.027
+1.285 ↑0.078
+CSI1000
+MLP
+0.093
+1.211
+0.086
+1.241
+1.171
+-2.113
+1.643
+LightGBM
+0.120
+1.365
+0.093
+1.152
+1.498
+-2.414
+1.596
+SFM
+0.113
+1.396
+0.092
+1.232
+1.315
+-2.423
+1.869
+TCN
+0.121
+1.393
+0.099
+1.200
+1.521
+-2.640
+2.081
+GRU
+0.119
+1.411
+0.097
+1.132
+1.504
+-2.538
+2.022
+ALSTM
+0.122
+1.371
+0.090
+1.017
+1.479
+-2.620
+2.050
+Transformer
+0.124
+1.377
+0.108
+1.203
+1.564
+-2.601
+2.083
+Transformer+TRA
+0.125
+1.432
+0.108
+1.190
+1.662
+-2.690
+2.165
+Transformer+CISP
+0.126
+1.437
+0.108
+1.195
+1.669
+-2.685
+2.170
+Transformer+MERA
+0.129↑0.005
+1.444↑0.067
+0.110↑0.002
+1.256↑0.053
+1.675↑0.111
+-2.677↑0.076
+2.176 ↑0.093
+fine-grained analysis. Here, we choose GRU as the expert architec-
+ture to construct an attention-GRU hybrid model. Model backbone
+employs self-attention layers for long-term dependencies. MERA
+module uses recurrent GRU layers for local processing. By simulta-
+neously focusing on global information and local details, the model
+can perform a more comprehensive analysis.
+Finally, with the residual connection, the stock embedding is
+encoded with both the information from the overall market and
+the personal information and is fed into a predictor for label regres-
+sion. We use an MLP equipped with an activation function as the
+predictor, and the forecasting quality is measured by the MSE loss.
+ˆ𝑦𝑠
+𝑡= 𝑀𝐿𝑃(
+𝐾
+∑︁
+𝑘=1
+𝐺𝑘(𝑙𝑠
+𝑡) · 𝐸𝑘((𝑒𝑠
+𝑡,𝑟𝑠
+𝑡))).
+(7)
+𝐿𝑀= 𝑀𝑆𝐸( ˆ𝑦,𝑦) = 1
+𝑆
+1
+𝑇
+∑︁
+𝑠∈𝑆
+∑︁
+𝑡∈𝑇
+∥ˆ𝑦𝑠
+𝑡−𝑦𝑠
+𝑡∥2.
+(8)
+3
+Experiment
+3.1
+Experiment Setups
+To evaluate our approach, we conducted experiments using real-
+world intra-day minute-level data from three major Chinese A-share
+indexes: CSI300, CSI500, and CSI1000. These datasets are diverse
+and representative, offering a comprehensive assessment of model
+performance. We divided the dataset into a training set (2018/06/01 -
+2022/05/31), a validation set (2022/06/01 - 2022/12/31), and a testing
+set (2023/01/01 - 2024/03/31) sets based on a time sequence.
+Regarding the transformer architecture, we employ a standard
+two-layer transformer encoder with a feature dimension of 128.
+The MERA module is configured with 4 experts (𝑀= 4), 1 of
+whom (𝐾= 1) are activated for analysis. To ensure that relevant
+information can be obtained without introducing noise, we set
+the number of retrieved samples 𝑁to 10 as the default setting.
+We compared with existing methods (e.g. Transformer+TRA [9],
+Transformer+CISP [10]) using key evaluation metrics for predictive
+ability (IC, RankIC, ICIR, RankIR), and profitability (Long Return
+𝑅𝑒𝑡𝑢𝑟𝑛+, Short Return 𝑅𝑒𝑡𝑢𝑟𝑛−, Long-Short Return 𝑅𝑒𝑡𝑢𝑟𝑛).
+1151
+
+
+=== PAGE 5 ===
+Mixture of Experts with Retrieval-Augmented Representation for Modeling Diversified Stock Patterns
+WWW Companion ’25, April 28-May 2, 2025, Sydney, NSW, Australia
+3.2
+Experimental Results
+From the results presented in Table 1, it can be found that: (1)
+The MERA module significantly improves the performance of the
+backbone models, achieving SOTA results, thereby demonstrating
+the effectiveness of our proposed approach in enhancing stock
+prediction. (2) Portfolio metrics further reveal that the MERA mod-
+ule generates higher returns, which can be successfully applied in
+real-world investment scenarios to deliver superior returns.
+3.3
+Further Analysis
+3.3.1
+Visualization of data allocation. To demonstrate that our
+module adaptively allocates data of different patterns to the appro-
+priate experts for analysis, figure 4 visualizes the logits of experts
+being selected for each label class. The x-axis represents expert ID,
+while the y-axis denotes label classes. The activation map exhibits
+extremely high sparsity. It can be observed that label class 3/4/5
+select expert 3, while the label class 7/8/9 select expert 0, indi-
+cating that expert allocation is not random, and exhibits a strong
+correlation with stock patterns.
+Label Class
+Expert ID
+Figure 4: Visualization of the logits that experts are selected
+for each label class.
+3.3.2
+Ablation study. Our MERA module consists of two key com-
+ponents – SMoE and RA representations. We conducted ablation
+studies to verify the effectiveness of each component. The results
+show the following: (1) Comparing the performance of feeding 𝑥𝑠
+𝑡,
+𝑟𝑠
+𝑡, and 𝑙𝑠
+𝑡directly into a single GRU layer without MoE architec-
+ture demonstrates that the multi-branch expert structure achieves
+differentiated modeling and improves prediction accuracy. (2) The
+model’s performance drops when RA representations are omitted,
+highlighting their importance. (3) Using only the feature part of
+retrieved samples as input to GateNet significantly reduces perfor-
+mance without label information. Label embeddings serve as crucial
+discriminative features, aiding in identifying the stock pattern and
+allocating the data to the appropriate expert.
+4
+Conclusion
+In this work, we propose a novel multi-branch module for capturing
+diverse stock patterns. Firstly, we design a self-supervised pretext
+Table 2: Ablation study of SMoE and RA representations.
+Model
+SMoE
+RA
+label
+IC
+ICIR
+Return
+MERA
+✓
+✓
+✓
+0.107
+0.855
+0.915
+✓
+✓
+0.101
+0.834
+0.889
+✓
+✓
+0.102
+0.828
+0.871
+✓
+0.102
+0.823
+0.863
+0.095
+0.821
+0.837
+task to pre-train the transformer. The learned high-level representa-
+tions are stored in the retrieval pool, including not only the feature
+part but also the label part. Subsequently, for the target stock sample,
+we retrieve similar samples and perform an aggregation operation.
+The aggregated label part is sent to GateNet to indicate the target
+stock pattern and achieve accurate allocation adaptively, while the
+aggregated feature part is fed to activated experts for differentiated
+modeling. Extensive experiments demonstrate the superiority of
+our approach over benchmarks and SOTAs.
+Acknowledgments
+This work is supported in part by the National Natural Science Foun-
+dation of China, under Grant (62302309,62171248), Shenzhen Sci-
+ence and Technology Program (JCYJ20220818101014030, JCYJ2022
+0818101012025), and the PCNL KEY project (PCL2023AS6-1).
+References
+[1] Sebastian Borgeaud, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Ruther-
+ford, Katie Millican, George Bm Van Den Driessche, Jean-Baptiste Lespiau, Bog-
+dan Damoc, Aidan Clark, et al. 2022. Improving language models by retrieving
+from trillions of tokens. In International conference on machine learning. PMLR,
+2206–2240.
+[2] Siyu Gao, Yunbo Wang, and Xiaokang Yang. 2023. Stockformer: Learning hybrid
+trading machines with predictive coding. In Proceedings of the Thirty-Second
+International Joint Conference on Artificial Intelligence, IJCAI-23. 4766–4774.
+[3] Campbell R Harvey, Edward Hoyle, Russell Korgaonkar, Sandy Rattray, Matthew
+Sargaison, and Otto Van Hemert. 2018. The impact of volatility targeting. Avail-
+able at SSRN 3175538 (2018).
+[4] Kaiming He, Xinlei Chen, Saining Xie, Yanghao Li, Piotr Dollár, and Ross Girshick.
+2022. Masked autoencoders are scalable vision learners. In Proceedings of the
+IEEE/CVF conference on computer vision and pattern recognition. 16000–16009.
+[5] Robert A Jacobs, Michael I Jordan, Steven J Nowlan, and Geoffrey E Hinton. 1991.
+Adaptive mixtures of local experts. Neural computation 3, 1 (1991), 79–87.
+[6] Abby Y Kim, Yiuman Tse, and John K Wald. 2016. Time series momentum and
+volatility scaling. Journal of Financial Markets 30 (2016), 103–124.
+[7] Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin,
+Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel,
+et al. 2020. Retrieval-augmented generation for knowledge-intensive nlp tasks.
+Advances in Neural Information Processing Systems 33 (2020), 9459–9474.
+[8] Tong Li, Zhaoyang Liu, Yanyan Shen, Xue Wang, Haokun Chen, and Sen Huang.
+2024. Master: Market-guided stock transformer for stock price forecasting. In
+Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 38. 162–170.
+[9] Hengxu Lin, Dong Zhou, Weiqing Liu, and Jiang Bian. 2021. Learning multiple
+stock trading patterns with temporal routing adaptor and optimal transport. In
+Proceedings of the 27th ACM SIGKDD conference on knowledge discovery & data
+mining. 1017–1026.
+[10] Chen-Hui Song, Xi Xiao, Bin Zhang, and Shu-Tao Xia. 2023. Follow the Will
+of the Market: A Context-Informed Drift-Aware Method for Stock Prediction.
+In Proceedings of the 32nd ACM International Conference on Information and
+Knowledge Management. 2311–2320.
+[11] Shuo Sun, Xinrun Wang, Wanqi Xue, Xiaoxuan Lou, and Bo An. 2023. Mastering
+stock markets with efficient mixture of diversified trading experts. In Proceedings
+of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
+2109–2119.
+1152

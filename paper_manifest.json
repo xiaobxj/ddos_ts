@@ -1,0 +1,169 @@
+[
+  {
+    "key": "GPT4FTS",
+    "title": "Beyond Fixed Patches: Enhancing GPTs for Financial Prediction with Adaptive Segmentation and Learnable Wavelets",
+    "authors": "Renjun Jia; Zian Liu; Peng Zhu; Dawei Cheng; Yuqi Liang",
+    "version": "arXiv:2505.02880v2 (2026-01-18); first submitted 2025-05-05",
+    "role": "Adapted segmentation method used in article",
+    "landing": "https://arxiv.org/abs/2505.02880v2",
+    "urls": [
+      "https://arxiv.org/pdf/2505.02880v2"
+    ],
+    "file": "01_GPT4FTS_Beyond_Fixed_Patches_2505.02880v2.pdf",
+    "checks": [
+      "beyond fixed patches",
+      "learnable wavelets"
+    ],
+    "attempts": [
+      {
+        "url": "https://arxiv.org/pdf/2505.02880v2",
+        "status": 200
+      }
+    ],
+    "status": "downloaded_and_title_verified",
+    "downloaded_url": "https://arxiv.org/pdf/2505.02880v2",
+    "pages": 9,
+    "bytes": 2674303,
+    "sha256": "a9d17fc284a7bc3cd2b61a114e3e7d115edc3be22597c2894806ec50c68668e8",
+    "retrieved_utc": "2026-09-09T08:40:28.482568+00:00"
+  },
+  {
+    "key": "Kronos",
+    "title": "Kronos: A Foundation Model for the Language of Financial Markets",
+    "authors": "Yu Shi; Zongliang Fu; Shuo Chen; Bohan Zhao; Wei Xu; Changshui Zhang; Jian Li",
+    "version": "arXiv:2508.02739v1 (2025-08-02)",
+    "role": "Tokenizer used; full model is comparison baseline",
+    "landing": "https://arxiv.org/abs/2508.02739v1",
+    "urls": [
+      "https://arxiv.org/pdf/2508.02739v1"
+    ],
+    "file": "02_Kronos_2508.02739v1.pdf",
+    "checks": [
+      "kronos",
+      "language of financial markets"
+    ],
+    "attempts": [
+      {
+        "url": "https://arxiv.org/pdf/2508.02739v1",
+        "status": 200
+      }
+    ],
+    "status": "downloaded_and_title_verified",
+    "downloaded_url": "https://arxiv.org/pdf/2508.02739v1",
+    "pages": 36,
+    "bytes": 11260064,
+    "sha256": "5d39f93cfaeeff869d24cf2039f0e044b7557cd54f448f34b07471d6686cda57",
+    "retrieved_utc": "2026-09-09T08:40:27.210514+00:00"
+  },
+  {
+    "key": "Crossformer",
+    "title": "Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting",
+    "authors": "Yunhao Zhang; Junchi Yan",
+    "version": "ICLR 2023",
+    "role": "Backbone used in article",
+    "landing": "https://openreview.net/forum?id=vSVLM2j9eie",
+    "urls": [
+      "https://openreview.net/pdf?id=vSVLM2j9eie"
+    ],
+    "file": "03_Crossformer_ICLR2023.pdf",
+    "checks": [
+      "crossformer",
+      "cross-dimension"
+    ],
+    "attempts": [
+      {
+        "url": "https://openreview.net/pdf?id=vSVLM2j9eie",
+        "error": "403 Client Error: Forbidden for url: https://openreview.net/pdf?id=vSVLM2j9eie"
+      },
+      {
+        "url": "https://media.githubusercontent.com/media/dimitarpg13/deep_learning_for_time_series_forecasting/main/literature/articles/Crossformer-Transformer_Utilizing_Cross-Dimension_Dependency_for_Multivariate_Time_Series_Forecasting_Zhang_ICLR_2023.pdf",
+        "status": 200
+      },
+      {
+        "url": "https://openreview.net/pdf/1d793d6ba7c00ecfe98128614d58e2493255bd89.pdf",
+        "status": 403
+      }
+    ],
+    "status": "downloaded_and_title_verified",
+    "downloaded_url": "https://media.githubusercontent.com/media/dimitarpg13/deep_learning_for_time_series_forecasting/main/literature/articles/Crossformer-Transformer_Utilizing_Cross-Dimension_Dependency_for_Multivariate_Time_Series_Forecasting_Zhang_ICLR_2023.pdf",
+    "pages": 21,
+    "bytes": 18941392,
+    "sha256": "a5fcad16cd810492124af3efad2fa18f7c5f9556fb303bb88360cceaf396183a",
+    "retrieved_utc": "2026-09-09T08:45:15.164628+00:00",
+    "note": "Public GitHub mirror of author paper; title, authors, conference and 21 pages checked"
+  },
+  {
+    "key": "MERA",
+    "title": "MERA: Mixture of Experts with Retrieval-Augmented Representation for Modeling Diversified Stock Patterns",
+    "authors": "YuJun Liu; Chen-Hui Song; Peiyuan Liu; Naiqi Li; Tao Dai; Jigang Bao; Yong Jiang; Shu-Tao Xia",
+    "version": "WWW Companion 2025; DOI:10.1145/3701716.3715513",
+    "role": "Alternative encoder training reference, not reported used",
+    "landing": "https://doi.org/10.1145/3701716.3715513",
+    "urls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3701716.3715513"
+    ],
+    "file": "04_MERA_WWW2025.pdf",
+    "checks": [
+      "mera",
+      "diversified stock patterns"
+    ],
+    "attempts": [
+      {
+        "url": "https://dl.acm.org/doi/pdf/10.1145/3701716.3715513",
+        "error": "403 Client Error: Forbidden for url: https://dl.acm.org/doi/pdf/10.1145/3701716.3715513"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/chenchen1104/MERA/main/poster.pdf",
+        "status": 200
+      }
+    ],
+    "status": "user_provided_full_paper_verified",
+    "pages": 5,
+    "bytes": 1683836,
+    "sha256": "bbf5b02423500f7f2f6c98278e2829da029d308261ac0ef334a7fce3cde7f7b9",
+    "note": "Formal WWW Companion 2025 paper; title, authors, DOI, pages 1148-1152, references and all five page renders verified. Renamed only; original bytes preserved.",
+    "supplementary_files": [
+      {
+        "file": "04_MERA_WWW2025_OFFICIAL_POSTER_NOT_FULL_PAPER.pdf",
+        "downloaded_url": "https://raw.githubusercontent.com/chenchen1104/MERA/main/poster.pdf",
+        "pages": 1,
+        "bytes": 1139747,
+        "sha256": "2bb166df05b8fa0484cd115b4e5fc326ff1be1e80a939496c5cade2560252d10",
+        "retrieved_utc": "2026-09-09T08:45:15.261137+00:00",
+        "kind": "official_author_poster"
+      }
+    ],
+    "verified_utc": "2026-09-09T08:57:56.784484+00:00",
+    "original_filename": "3701716.3715513.pdf",
+    "source": "User downloaded and placed file in papers directory; transport URL not independently observed",
+    "publisher_pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3701716.3715513"
+  },
+  {
+    "key": "TimeMosaic",
+    "title": "TimeMosaic: Temporal Heterogeneity Guided Time Series Forecasting via Adaptive Granularity Patch and Segment-wise Decoding",
+    "authors": "Kuiye Ding; Fanda Fan; Chunyi Hou; Zheya Wang; Lei Wang; Zhengxin Yang; Jianfeng Zhan",
+    "version": "arXiv:2509.19406v5 (2026-01-05); first submitted 2025-09-23",
+    "role": "Optional prediction-head reference, not reported used",
+    "landing": "https://arxiv.org/abs/2509.19406v5",
+    "urls": [
+      "https://arxiv.org/pdf/2509.19406v5"
+    ],
+    "file": "05_TimeMosaic_2509.19406v5.pdf",
+    "checks": [
+      "timemosaic",
+      "segment-wise decoding"
+    ],
+    "attempts": [
+      {
+        "url": "https://arxiv.org/pdf/2509.19406v5",
+        "status": 200
+      }
+    ],
+    "status": "downloaded_and_title_verified",
+    "downloaded_url": "https://arxiv.org/pdf/2509.19406v5",
+    "pages": 27,
+    "bytes": 6925341,
+    "sha256": "0db80d679d4252008ee92109dacf12433fb5a4c68f71f5d2babe7f5bbe2d4e22",
+    "retrieved_utc": "2026-09-09T08:40:28.419776+00:00"
+  }
+]

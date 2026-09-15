@@ -1,0 +1,16 @@
+{
+  "example_clustered": {
+    "observed": 0.9661016949152542,
+    "permutation_expectation": 0.096045197740113,
+    "excess_order": 0.8700564971751412
+  },
+  "example_interleaved": {
+    "observed": -0.3559322033898305,
+    "permutation_expectation": 0.096045197740113,
+    "excess_order": -0.4519774011299435
+  },
+  "same_positive_count": 40,
+  "same_negative_count": 20,
+  "significant_improvements": 0,
+  "significant_deteriorations": 0
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T06:36:20.660336+00:00",
+  "reviewer": "Codex via view_image; both final PNGs inspected",
+  "files": {
+    "results\\shrinkage_comparison.png": "4a1984d567dc1899dac27cae16b6beb6529d048a981b388f2ca89d185b0c1ed9",
+    "results\\shrinkage_mechanism.png": "9783625022e4220bc9f72a946b1917417ab351c1cb3c494334c070d93c1b4bb1"
+  },
+  "checks": [
+    "Both full-size final PNGs reviewed after label-background adjustment.",
+    "Chinese text, point labels, axes and legends legible with no clipping.",
+    "Original-parent dashed baselines are explicitly identified; baseline labels have white backgrounds.",
+    "Coefficient ratios and yearly correct-count deltas match verified tables.",
+    "Line-plot y-axis limits are visible; no truncated bars are used for accuracy."
+  ]
+}

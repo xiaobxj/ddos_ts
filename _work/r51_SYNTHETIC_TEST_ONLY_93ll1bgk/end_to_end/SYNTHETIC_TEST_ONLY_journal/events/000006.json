@@ -1,0 +1,23 @@
+{
+  "blobs": {},
+  "key": "2026-09-18",
+  "kind": "label",
+  "payload": {
+    "actual_up": 1,
+    "entry_date": "2026-09-21",
+    "exec_return": 0.004975124378109541,
+    "exit_date": "2026-09-28",
+    "joint_completed": "2026-09-28",
+    "next_same_weekday": "2026-09-25",
+    "prediction_sha256": "af8cd00ad2f2669547ae980fe7a212d521f72e46d6ab0b81a8d3d9bd5068e7e4",
+    "reason": "valid",
+    "signal_date": "2026-09-18",
+    "snapshot_sequence": 5,
+    "snapshot_sha256": "376d09511294a49541cd9fa2f8ae65454ebcd88238dcfa1287d70c2fc9346409",
+    "status": "MATURE"
+  },
+  "previous_sha256": "376d09511294a49541cd9fa2f8ae65454ebcd88238dcfa1287d70c2fc9346409",
+  "recorded_utc": "2026-09-28T10:30:00+00:00",
+  "scope": "prospective",
+  "sequence": 6
+}

@@ -1,0 +1,9 @@
+window,method,reference,changed,correct_to_wrong,wrong_to_correct
+early_2015_2017,learned_clip,learned_probe,0,0,0
+early_2015_2017,learned_clip,native_mse,16,6,10
+early_2015_2017,raw25_clip,raw25_probe,8,4,4
+early_2015_2017,raw25_clip,native_mse,66,36,30
+late_2018_2020,learned_clip,learned_probe,2,0,2
+late_2018_2020,learned_clip,native_mse,15,10,5
+late_2018_2020,raw25_clip,raw25_probe,8,3,5
+late_2018_2020,raw25_clip,native_mse,48,28,20

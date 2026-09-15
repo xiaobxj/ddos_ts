@@ -1,0 +1,10 @@
+{
+  "comparisons": 9,
+  "huber_models_with_lower_own_training_objective": 1,
+  "mean_mse_model_huber_joint": 0.8376735336764587,
+  "mean_huber_model_huber_joint": 0.8544004881947497,
+  "additional_fitting": false,
+  "training_only": true,
+  "evaluation_mode": true,
+  "interpretation": "Same evaluation-mode data-fit objective, not proof of convergence or the dropout-averaged regularized training objective."
+}

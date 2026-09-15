@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "model_states_replayed": 36,
+  "exact_legacy_reconstructions": 9,
+  "full40_epoch_paths": 18,
+  "physical_epoch_orders_and_boundaries": 540,
+  "training_loss_passes_replayed": 243,
+  "paired_training_comparisons": 54,
+  "validation_seed_predictions": 1269,
+  "validation_weeks": 141,
+  "primary_comparisons_recomputed": 4,
+  "flags": {
+    "ensemble_beats_constant40": true,
+    "ensemble_beats_archived20": true,
+    "ensemble_beats_mean": true,
+    "at_least_two_seeds_beat_mean": false,
+    "at_least_two_paired_seeds_beat_constant40": true,
+    "at_least_two_paired_seeds_beat_archived20": false,
+    "at_least_two_years_beat_constant40": true,
+    "at_least_two_years_beat_archived20": false
+  },
+  "maximum_prediction_replay_error": 9.974659986866641e-17,
+  "maximum_reassignment_replay_error": 9.974659986866641e-17,
+  "maximum_training_loss_replay_error": 2.220446049250313e-16,
+  "previous_files_preserved": 2248,
+  "elapsed_seconds": 95.22614693641663,
+  "completed_utc": "2026-09-11T05:31:58.258771+00:00"
+}

@@ -1,0 +1,3 @@
+method,early_accuracy_retained,late_parent_accuracy_retained,early_brier_retained,late_brier_retained,all_targets_met,independent_confirmation
+learned_order_offset,True,False,True,False,False,False
+raw_order_offset,False,True,True,True,False,False

@@ -1,0 +1,4 @@
+cutoff,train_n,epochs,seeds,steps_per_epoch,last_batch_n,total_steps_all_seeds,presentations_all_seeds
+2017-12-31,1678,20,3,14,14,840,100680
+2018-12-31,1921,20,3,16,1,960,115260
+2019-12-31,2165,20,3,17,117,1020,129900

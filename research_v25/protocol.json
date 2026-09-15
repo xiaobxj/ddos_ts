@@ -1,0 +1,210 @@
+{
+  "version": 25,
+  "experiment": "Fixed original volatility-interaction parent plus one fitted scalar sign-order correction",
+  "scope": "Research only. Two families,one fixed lambda=.01. Lock all R19parent slopes AND intercept,fit only gamma on unchanged R23order feature. No penalty grid,blend,intercept recalibration,expert selector or new data. Compare with same-lambda jointly-refitted R23and parentR19; retain all33older methods.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "order_state": {
+    "signs": "s_i=+1 if close_i>close_i-1, -1 if less,0 if exactly equal, on trailing60dailychanges. Use direct close comparison for neutral signs; no epsilon, demeaning or fitted classification threshold.",
+    "observed": "A=(1/59)*sum(s_i*s_i-1), i=2..60. Positive adjacent product for same nonzero signs,negative for opposite,zero when either sign is0.",
+    "permutation_expectation": "B=((sum s)^2-sum(s^2))/(60*59). Exact expected adjacentproduct when uniformly permuting the fixed60sign multiset. Not an estimate from future dates or random shuffles.",
+    "gate": "u=A-B. Positive indicates excess same-sign adjacency conditional on sign counts,negative excess alternation. Unstandardized before product; no clipping or lag/horizon grid. A and B are each in[-1,1]; u is a difference,not a posterior probability or a standard correlation statistic.",
+    "limits": "Allpositive,allnegative or allzero windows give u=0: with a single sign there is no order variation conditional on counts. Gate deliberately removes this count-imbalance explanation; it is not a universal trend detector. It ignores return magnitudes and is invariant to time reversal, though generally not arbitrary permutations.",
+    "context": "Require same121validOHLCbar context as R22for comparable state diagnostics; direct order formula itself needs61closes. Existing125bar samplemask is stricter,so no changes to classifier membership. Bad bars break diagnosis; no filling or compression.",
+    "labels": "For descriptivegroups only: u<-.05negative_order,u>.05positive_order,otherwise near_zero_order. No claim nearzero proves random order. Modelusescontinuousu."
+  },
+  "variants": [
+    {
+      "method": "learned_order_offset",
+      "parent": "learned_vol_interaction",
+      "source_method": "learned_order_extension",
+      "dimensions": 31,
+      "free_parameters": 1,
+      "free_intercepts": 0,
+      "order_lambda": 0.01,
+      "fits": 18
+    },
+    {
+      "method": "raw_order_offset",
+      "parent": "raw_vol_interaction",
+      "source_method": "raw_order_extension",
+      "dimensions": 28,
+      "free_parameters": 1,
+      "free_intercepts": 0,
+      "order_lambda": 0.01,
+      "fits": 6
+    }
+  ],
+  "model": "z_offset=z_R19+gamma*h_R23order. Parent includes originalvolinteraction. Parent coefficients,intercept,allinputtransforms,ray and orderprojection are immutable. h uses unchanged R23training normalization; no new normalization or projection. Setting gamma0 exactly recovers originalR19probabilities.",
+  "objective": "J(gamma)=mean(binaryNLL(z_parent+gamma*h,y))+.01/2*gamma^2. Fixedparent penalty C=.01/2*sum(parent slopes^2) omitted during scalaroptimization but added for comparisons with R19andR23. At optimum J_fixed+C<=J_R19 and J_R23_joint<=J_fixed+C up to numerical tolerance. These are in-sample nesting properties,not prediction guarantees.",
+  "probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "independent_solver": {
+    "method": "brentq root of scalargradient",
+    "xtol": 1e-13,
+    "rtol": 1e-14,
+    "max_iterations": 200,
+    "bracket": "[-B,+B], B=mean(abs(h))/.01+1 guarantees opposite gradient signs",
+    "coefficient_absolute_tolerance": 1e-07,
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-07,
+    "gradient_absolute_tolerance": 1e-09,
+    "purpose": "24independent bracketed roots with scipy expit and separate loss formula; no alternate forecast used."
+  },
+  "sequencing": "Freeze protocol/core/inputs before contract and fits. Complete all24scalar fits before any new nextyear scoring. Annual labels mature by cutoff. No full-pipelineOOFclaim: inherited neuralfeatures,ray,parent and projection trained in-sample within fold. No new neuralforward or training.",
+  "provenance": "Audit R23->R19->R18->R17->R16 feature-source job identities, cutoffs, exact row indices and label maturity. Reuse hash-preserved R17verification of18neural states; no new neural forward or checkpoint replay. Provenance is evidence from prior frozen records, not proof from a new full neural reconstruction.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_offset",
+      "reference": "order_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "raw_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "raw_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_offset",
+      "reference": "order_only",
+      "metric": "brier"
+    }
+  ],
+  "inference": "32fixed comparisons jointlyHolm,16perwindow. Candidate-reference losses,negativebetter. Circular8retained observations,10000replicates,seed20260910 separately perperiod; centeredtwo-sidedp,marginal95percentinterval. Not adjusted for repeated historicaldesign choices. No pooledprimary.",
+  "descriptive_screen": "11strict flags per candidate/window: accuracy above R19parent,R18additive,nativeMSE,frequency(4); Brier below R19parent,R18additive,frequency,order_only(4); logloss belowfrequency(1); at least2yearsaccuracy>native and2yearBrier<frequency(2). Tiesfail; bothwindows all11required. Gate-onlycontrol not auto-promoted.",
+  "retention_target": "Separately report whether each candidate has early accuracy>=R23weak extension, late accuracy>=R19parent, and Brier<=R23weak in BOTH periods. This is a frozen descriptive target, not statistical confirmation or promotion.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "diagnostics": "All26state cells,35methods,6years and seeds. Exact decomposition z_fixed-z_joint=(z_parent-z_joint_parent)+(gamma_fixed-gamma_joint)*h. Locking parents also changes optimalgamma,so compare as one coefficient-constraint intervention; do not interpret as separate causal market effects or score untrained counterfactual variants. Report full delta,each component,and probability changes.",
+  "budget": "24new scalarfits,24new trainablecoefficients,726frozenparentcoefficients,750serializedcombinedcoordinates,37860cumulative trainingrows.24reused orderprojections,0newprojectionfits.1044newprobabilities+14616oldmodelrecords=15660;9135ensembles=35*261dates.1820state groups,2261allmetricgroups,340reliabilitybins,32contrasts.3585oldfilespreserved,including prior failed-attempt archive.0new neuralforward/training/HMMfits.",
+  "user_steering": "Preserve original late58.16percent and R23early50.83percent partial improvement. Test fixedparent one-coefficient correction to separate this restriction from joint refitting; no automatic replacement or independent-confirmation claim."
+}

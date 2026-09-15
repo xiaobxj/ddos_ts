@@ -1,0 +1,68 @@
+[
+  {
+    "cutoff": "2014-12-31",
+    "train_n": 1077,
+    "last_training_signal": "2014-12-23",
+    "last_training_maturity": "2014-12-31",
+    "trend_lower": -0.5957924192832453,
+    "trend_upper": 0.41524780396591704,
+    "volatility_median": 0.011980023284114925,
+    "range_median": 0.015565805458438043,
+    "volume_median": 0.022470082524133517
+  },
+  {
+    "cutoff": "2015-12-31",
+    "train_n": 1190,
+    "last_training_signal": "2015-12-23",
+    "last_training_maturity": "2015-12-31",
+    "trend_lower": -0.562274231834988,
+    "trend_upper": 0.5005440542414303,
+    "volatility_median": 0.01228074009287573,
+    "range_median": 0.016036622997769156,
+    "volume_median": 0.010796568511507232
+  },
+  {
+    "cutoff": "2016-12-31",
+    "train_n": 1434,
+    "last_training_signal": "2016-12-22",
+    "last_training_maturity": "2016-12-30",
+    "trend_lower": -0.5239533939417084,
+    "trend_upper": 0.5099905546111715,
+    "volatility_median": 0.011992936693564748,
+    "range_median": 0.015627643625143593,
+    "volume_median": 0.0073444389505663565
+  },
+  {
+    "cutoff": "2017-12-31",
+    "train_n": 1678,
+    "last_training_signal": "2017-12-21",
+    "last_training_maturity": "2017-12-29",
+    "trend_lower": -0.4048604020395025,
+    "trend_upper": 0.6560558632782255,
+    "volatility_median": 0.011186087765818337,
+    "range_median": 0.014962512060257272,
+    "volume_median": 0.002949292455854291
+  },
+  {
+    "cutoff": "2018-12-31",
+    "train_n": 1921,
+    "last_training_signal": "2018-12-20",
+    "last_training_maturity": "2018-12-28",
+    "trend_lower": -0.4906839452449082,
+    "trend_upper": 0.5783571751863803,
+    "volatility_median": 0.01129992437705997,
+    "range_median": 0.0150260304689124,
+    "volume_median": -0.0011230476454890947
+  },
+  {
+    "cutoff": "2019-12-31",
+    "train_n": 2165,
+    "last_training_signal": "2019-12-23",
+    "last_training_maturity": "2019-12-31",
+    "trend_lower": -0.42186450554666316,
+    "trend_upper": 0.5806209925005695,
+    "volatility_median": 0.01122089842591005,
+    "range_median": 0.014883682354276085,
+    "volume_median": -0.0011230476454890947
+  }
+]

@@ -1,0 +1,313 @@
+{
+  "version": 24,
+  "experiment": "Two fixed levels of selective order-coefficient shrinkage; retain original volatility interaction",
+  "scope": "Research only. Fixed4x and16x penalties for the one R23order slope. All other feature coordinates and penalties unchanged. Report both levels and both families; no best-level selection, adaptive gate, yearly switching or new expert model.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "variants": [
+    {
+      "method": "learned_order_shrink4",
+      "parent": "learned_vol_interaction",
+      "source_method": "learned_order_extension",
+      "multiplier": 4,
+      "order_lambda": 0.04,
+      "feature_scale": 0.5,
+      "dimensions": 31,
+      "fits": 18
+    },
+    {
+      "method": "learned_order_shrink16",
+      "parent": "learned_vol_interaction",
+      "source_method": "learned_order_extension",
+      "multiplier": 16,
+      "order_lambda": 0.16,
+      "feature_scale": 0.25,
+      "dimensions": 31,
+      "fits": 18
+    },
+    {
+      "method": "raw_order_shrink4",
+      "parent": "raw_vol_interaction",
+      "source_method": "raw_order_extension",
+      "multiplier": 4,
+      "order_lambda": 0.04,
+      "feature_scale": 0.5,
+      "dimensions": 28,
+      "fits": 6
+    },
+    {
+      "method": "raw_order_shrink16",
+      "parent": "raw_vol_interaction",
+      "source_method": "raw_order_extension",
+      "multiplier": 16,
+      "order_lambda": 0.16,
+      "feature_scale": 0.25,
+      "dimensions": 28,
+      "fits": 6
+    }
+  ],
+  "order_state": {
+    "signs": "s_i=+1 if close_i>close_i-1, -1 if less,0 if exactly equal, on trailing60dailychanges. Use direct close comparison for neutral signs; no epsilon, demeaning or fitted classification threshold.",
+    "observed": "A=(1/59)*sum(s_i*s_i-1), i=2..60. Positive adjacent product for same nonzero signs,negative for opposite,zero when either sign is0.",
+    "permutation_expectation": "B=((sum s)^2-sum(s^2))/(60*59). Exact expected adjacentproduct when uniformly permuting the fixed60sign multiset. Not an estimate from future dates or random shuffles.",
+    "gate": "u=A-B. Positive indicates excess same-sign adjacency conditional on sign counts,negative excess alternation. Unstandardized before product; no clipping or lag/horizon grid. A and B are each in[-1,1]; u is a difference,not a posterior probability or a standard correlation statistic.",
+    "limits": "Allpositive,allnegative or allzero windows give u=0: with a single sign there is no order variation conditional on counts. Gate deliberately removes this count-imbalance explanation; it is not a universal trend detector. It ignores return magnitudes and is invariant to time reversal, though generally not arbitrary permutations.",
+    "context": "Require same121validOHLCbar context as R22for comparable state diagnostics; direct order formula itself needs61closes. Existing125bar samplemask is stricter,so no changes to classifier membership. Bad bars break diagnosis; no filling or compression.",
+    "labels": "For descriptivegroups only: u<-.05negative_order,u>.05positive_order,otherwise near_zero_order. No claim nearzero proves random order. Modelusescontinuousu."
+  },
+  "objective": "Mean binary NLL + .01/2 * sum(parent slopes squared) + lambda_order/2 * order_slope squared. Intercept unpenalized. lambda_order is .04 or .16; originalR23=.01 and parentR19has no order slope. Refit ALL coefficients including original volatility interaction. Setting neworder slope0 exactly nestsR19; lambda_order->infinity tends toR19. No intercept shift or postfit blend imposed.",
+  "implementation": "Reuse unchanged R23train-standardized input. Divide only last orderfeature by sqrt(multiplier), then fit the existing isotropic .01 solver; do NOT re-standardize the scaled column. Map solver slope back by dividing it by sqrt(multiplier). Independently solve on unscaled R23input using explicit diagonal ridge penalty.",
+  "transform": "Reuse all24R23order projections, rays, means and scales with hashes. No new projection or feature fitting. Original parent input and old volatility coordinate retained exactly. Never scale the old volatility coordinate.",
+  "probe": {
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Isotropic .01 ridge in solver coordinates after scaling ONLY order input by1/sqrt(multiplier). Effective original-coordinate order penalty is .04/.16; intercept unpenalized.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "48independent L-BFGS-B solutions in original unscaled coordinates with diagonal penalty; no alternate forecast used."
+  },
+  "monotonicity": "At fixed input and parent penalties, absolute optimal order coefficient must be nonincreasing as lambda_order rises .01,.04,.16. Verify this for all24sources. This does not imply any heldout metric or total-logit distance is monotone.",
+  "sequencing": "Freeze all core code, protocol and inputs, then synthetic contract and provenance checks. Complete48newheads before any new nextyear forecast. Only annual training rows with matured labels used. No within-training OOF selection: cached learned representations, supervised ray, original interaction and residualization fitted on the full corresponding training fold. Do not call a last-head temporal split full-pipeline OOF.",
+  "provenance": "Audit R23->R19->R18->R17->R16 feature-source job identities, cutoffs, exact row indices and label maturity. Reuse hash-preserved R17verification of18neural states; no new neural forward or checkpoint replay. Provenance is evidence from prior frozen records, not proof from a new full neural reconstruction.",
+  "primary_comparisons_per_window": [
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink4",
+      "reference": "order_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "learned_order_shrink16",
+      "reference": "order_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "raw_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "raw_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink4",
+      "reference": "order_only",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "raw_order_extension",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "raw_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "candidate": "raw_order_shrink16",
+      "reference": "order_only",
+      "metric": "brier"
+    }
+  ],
+  "inference": "64fixed contrasts jointly Holm:32in each period. Candidate-reference losses, negative better. Circular8retained observations,10000replicates,seed20260910 independently by period; centeredtwo-sidedp,marginal95percentinterval. No correction for previous rounds of historical design adaptation; no pooledprimary.",
+  "descriptive_screen": "11strict flags per candidate/window: accuracy above R19parent,R18additive,nativeMSE,frequency(4); Brier below R19parent,R18additive,frequency,order_only(4); logloss belowfrequency(1); at least2yearsaccuracy>native and2yearBrier<frequency(2). Tiesfail; bothwindows all11required. Gate-onlycontrol not auto-promoted.",
+  "retention_target": "Separately report whether each candidate has early accuracy>=R23weak extension, late accuracy>=R19parent, and Brier<=R23weak in BOTH periods. This is a frozen descriptive target, not statistical confirmation or promotion.",
+  "diagnostics": "All inherited26state cells; all33methods,6years and seeds. Report original-coordinate order coefficients, parent coefficient drift, train and test order-logit SD and RMS probability change vsR19andR23. No state subgroup selection.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "budget": "48newheads,1500classifiercoefficients,75720trainingrows;0newprojections,24reusedprojections.2088newprobabilities +12528oldrecords=14616modelrecords.8613ensembles=33methods*261dates.1716state groups,2130allmetricgroups,320reliabilitybins,64contrasts;3389oldfiles preserved.0neural forward/training/HMMfits.",
+  "user_steering": "Preserve R19late58.16percent and R23early50.83percent partial improvement. Test smaller order impact before any new learned state selector. No automatic replacement and no new independent dates."
+}

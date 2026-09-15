@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "timing": "Post-result arithmetic diagnosis, separate from the frozen primary comparisons",
+  "identity": "MSE = squared mean bias + prediction variance + target variance - 2*population covariance",
+  "definitions": "Population moments over the same141 pooled weeks; units are raw squared return. This is an accounting identity, not causal attribution.",
+  "model_states": 3,
+  "paired_changes": 2,
+  "additional_fitting": false,
+  "new_predictions": false,
+  "calibration_fitted_on_validation": false,
+  "changes": [
+    {
+      "candidate": "constant40",
+      "reference": "archived20",
+      "mse_change": 5.2681597752836764e-05,
+      "squared_bias_change": 9.944584559161675e-07,
+      "prediction_variance_change": 8.199499609957689e-05,
+      "negative_twice_covariance_change": -3.030785680265641e-05,
+      "target_variance_change": 0.0
+    },
+    {
+      "candidate": "decay40",
+      "reference": "archived20",
+      "mse_change": -8.017998234653061e-07,
+      "squared_bias_change": -6.397135996117738e-09,
+      "prediction_variance_change": 2.3292703303145573e-05,
+      "negative_twice_covariance_change": -2.408810599061487e-05,
+      "target_variance_change": 0.0
+    }
+  ]
+}

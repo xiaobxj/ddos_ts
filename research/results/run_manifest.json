@@ -1,0 +1,103 @@
+{
+  "protocol": {
+    "experiment": "CSI300 causal reverse-DTW segmentation ablation",
+    "version": 1,
+    "status": "frozen before computing prediction results",
+    "amendment_before_results": "Eastmoney disconnected persistently. Tencent fallback provides OHLCV only. Test five observed channels; do not fabricate turnover amount. Six-channel draft retained separately.",
+    "channels": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "data_quality": "Preserve source values. Flag OHLC violations exceeding 0.011 index point; exclude every target input/label window containing an invalid bar. Exclude P0 candidate segments crossing invalid source bars; do not delete calendar rows or impute values.",
+    "target": "1.000300",
+    "prototype_assets": [
+      "1.000001",
+      "1.000016",
+      "1.000905",
+      "1.000852",
+      "0.399001",
+      "0.399005",
+      "0.399006"
+    ],
+    "data_start": "20100101",
+    "data_end": "20260831",
+    "lookback": 125,
+    "horizon": 5,
+    "signal_weekday": 4,
+    "train_start": "2010-01-01",
+    "validation_start": "2018-01-01",
+    "validation_end": "2020-12-31",
+    "test_start": "2021-01-01",
+    "test_end": "2026-08-31",
+    "prototype_length": 15,
+    "prototype_count": 8,
+    "prototype_sample_limit": 1200,
+    "prototype_seed": 20260909,
+    "prototype_algorithm": "DTW farthest-point initialization then 3 partition/medoid iterations, at most 48 candidates per cluster",
+    "dtw_local_cost": "absolute difference of per-segment z-scored log-close",
+    "dtw_normalized_cost": "minimum cumulative path cost divided by the length of that same path; not minimum-average-cost DTW",
+    "minimum_length": 5,
+    "maximum_length": 25,
+    "remainder": "preserve leading residual shorter than minimum_length as a separate patch",
+    "feature": "5 OHLCV channels log-transformed and standardized within each observed 125-day window; each patch resampled to 5 points; append duration, end position, valid mask; right align at most 25 patches",
+    "label": "next 5 daily OHLCV in input-window normalization; close horizon-5 converted back to return for direction",
+    "ridge_alphas": [
+      1,
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "alpha_selection": "2018-2020 Friday close horizon-5 return RMSE, ties favor larger penalty",
+    "primary_pair": [
+      "adaptive_normalized",
+      "fixed_10"
+    ],
+    "secondary_models": [
+      "fixed_5",
+      "fixed_20",
+      "adaptive_raw",
+      "random_partition"
+    ],
+    "random_partition_definition": "seeded permutation of each window's adaptive-normalized patch-length multiset; preserves patch count and all durations, but changes boundaries/order; not fully shape-independent",
+    "baselines": [
+      "always_up",
+      "momentum_20",
+      "training_mean",
+      "zero_return"
+    ],
+    "refit": "annual expanding window; all training 5-day labels completed by previous year-end; P0 and scaler also fitted only on data available by cutoff",
+    "inference": "125 observed bars including Friday close; five trading-day label may overlap around holidays",
+    "execution": "next observed trading-day open after Friday; positions persist until next Friday signal's next open; final liquidation at last available open",
+    "cost_bps_per_one_way_change": [
+      0,
+      5,
+      10,
+      20
+    ],
+    "cost_interpretation": "hypothetical all-in friction scenarios on a nontradable index proxy, not an ETF fill simulation or actual exchange/broker fee schedule",
+    "statistics": "paired circular moving-block bootstrap, 8 weekly observations per block, 10000 replicates, fixed seed; McNemar exact as secondary descriptive test; no model chosen on test results",
+    "negative_control": "shuffle normalized-adaptive training labels using fixed seed, keeping the same validation-selected penalty",
+    "replication_scope": "operationalized core segmentation hypothesis, not an exact replication of the unpublished 78-index P0 / Kronos / Crossformer combination"
+  },
+  "protocol_sha256": "cd297fb273a682eb05872972af0d3d44fc8580f2683f9d53427c888babdcf318",
+  "source_sha256": {
+    "download_data.py": "8296888faedd27bc45d5790d6934cc6a12d1b6c54a7780dbd08bbd8a9b7a7596",
+    "download_tencent.py": "70ef30f31b4a5280d55a30b3549ef897f08b644efe77755d0c029aa2fcf3c067",
+    "probe_data.py": "253d06982d484756e973ac4a35fa78fd8831bc3b84e55d80ae5098f147a91516",
+    "run_experiment.py": "d523770803697fc7a510574c89fac8110b4ea486c5d46c2f2d3f48bcf265b2f7",
+    "segmentation.py": "e742213965a79966c57f08ac4a03cf8b38218ca053387b6578de4a927b5ebaa8",
+    "test_invariants.py": "b8286eadfa3525aeca5c8eec7e5d8b2d81a5e97473f0d0051a56b9156ba79010"
+  },
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "F:\\aido\\artifacts\\experiments\\mse_tv\\regression\\511520-recovery-backtest\\20260826_memory_parity_r1\\runtime\\python313\\python.exe",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "started_utc": "2026-09-09T09:29:01.487919+00:00",
+  "numpy": "2.5.2",
+  "pandas": "3.0.5",
+  "elapsed_seconds": 49.546239376068115,
+  "finished_utc": "2026-09-09T09:29:50.916319+00:00"
+}

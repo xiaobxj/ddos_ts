@@ -1,0 +1,434 @@
+[
+  {
+    "job": "learned_market_2014-12-31_20260910",
+    "method": "learned_market",
+    "cutoff": "2014-12-31",
+    "seed": 20260910,
+    "parent_job": "learned_2014-12-31_20260910_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2014-12-31_20260911",
+    "method": "learned_market",
+    "cutoff": "2014-12-31",
+    "seed": 20260911,
+    "parent_job": "learned_2014-12-31_20260911_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2014-12-31_20260912",
+    "method": "learned_market",
+    "cutoff": "2014-12-31",
+    "seed": 20260912,
+    "parent_job": "learned_2014-12-31_20260912_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2015-12-31_20260910",
+    "method": "learned_market",
+    "cutoff": "2015-12-31",
+    "seed": 20260910,
+    "parent_job": "learned_2015-12-31_20260910_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2015-12-31_20260911",
+    "method": "learned_market",
+    "cutoff": "2015-12-31",
+    "seed": 20260911,
+    "parent_job": "learned_2015-12-31_20260911_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2015-12-31_20260912",
+    "method": "learned_market",
+    "cutoff": "2015-12-31",
+    "seed": 20260912,
+    "parent_job": "learned_2015-12-31_20260912_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2016-12-31_20260910",
+    "method": "learned_market",
+    "cutoff": "2016-12-31",
+    "seed": 20260910,
+    "parent_job": "learned_2016-12-31_20260910_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2016-12-31_20260911",
+    "method": "learned_market",
+    "cutoff": "2016-12-31",
+    "seed": 20260911,
+    "parent_job": "learned_2016-12-31_20260911_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2016-12-31_20260912",
+    "method": "learned_market",
+    "cutoff": "2016-12-31",
+    "seed": 20260912,
+    "parent_job": "learned_2016-12-31_20260912_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2017-12-31_20260910",
+    "method": "learned_market",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "parent_job": "learned_2017-12-31_20260910_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2017-12-31_20260911",
+    "method": "learned_market",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "parent_job": "learned_2017-12-31_20260911_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2017-12-31_20260912",
+    "method": "learned_market",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "parent_job": "learned_2017-12-31_20260912_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2018-12-31_20260910",
+    "method": "learned_market",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "parent_job": "learned_2018-12-31_20260910_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2018-12-31_20260911",
+    "method": "learned_market",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "parent_job": "learned_2018-12-31_20260911_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2018-12-31_20260912",
+    "method": "learned_market",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "parent_job": "learned_2018-12-31_20260912_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2019-12-31_20260910",
+    "method": "learned_market",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "parent_job": "learned_2019-12-31_20260910_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2019-12-31_20260911",
+    "method": "learned_market",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "parent_job": "learned_2019-12-31_20260911_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "learned_market_2019-12-31_20260912",
+    "method": "learned_market",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "parent_job": "learned_2019-12-31_20260912_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 29
+  },
+  {
+    "job": "market4_2014-12-31_-1",
+    "method": "market4",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "parent_job": null,
+    "representation_dimensions": 0,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 4
+  },
+  {
+    "job": "market4_2015-12-31_-1",
+    "method": "market4",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "parent_job": null,
+    "representation_dimensions": 0,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 4
+  },
+  {
+    "job": "market4_2016-12-31_-1",
+    "method": "market4",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "parent_job": null,
+    "representation_dimensions": 0,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 4
+  },
+  {
+    "job": "market4_2017-12-31_-1",
+    "method": "market4",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "parent_job": null,
+    "representation_dimensions": 0,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 4
+  },
+  {
+    "job": "market4_2018-12-31_-1",
+    "method": "market4",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "parent_job": null,
+    "representation_dimensions": 0,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 4
+  },
+  {
+    "job": "market4_2019-12-31_-1",
+    "method": "market4",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "parent_job": null,
+    "representation_dimensions": 0,
+    "market_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dimensions": 4
+  },
+  {
+    "job": "raw_trend_2014-12-31_-1",
+    "method": "raw_trend",
+    "cutoff": "2014-12-31",
+    "seed": -1,
+    "parent_job": "raw_2014-12-31_-1_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0
+    ],
+    "dimensions": 26
+  },
+  {
+    "job": "raw_trend_2015-12-31_-1",
+    "method": "raw_trend",
+    "cutoff": "2015-12-31",
+    "seed": -1,
+    "parent_job": "raw_2015-12-31_-1_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0
+    ],
+    "dimensions": 26
+  },
+  {
+    "job": "raw_trend_2016-12-31_-1",
+    "method": "raw_trend",
+    "cutoff": "2016-12-31",
+    "seed": -1,
+    "parent_job": "raw_2016-12-31_-1_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0
+    ],
+    "dimensions": 26
+  },
+  {
+    "job": "raw_trend_2017-12-31_-1",
+    "method": "raw_trend",
+    "cutoff": "2017-12-31",
+    "seed": -1,
+    "parent_job": "raw_2017-12-31_-1_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0
+    ],
+    "dimensions": 26
+  },
+  {
+    "job": "raw_trend_2018-12-31_-1",
+    "method": "raw_trend",
+    "cutoff": "2018-12-31",
+    "seed": -1,
+    "parent_job": "raw_2018-12-31_-1_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0
+    ],
+    "dimensions": 26
+  },
+  {
+    "job": "raw_trend_2019-12-31_-1",
+    "method": "raw_trend",
+    "cutoff": "2019-12-31",
+    "seed": -1,
+    "parent_job": "raw_2019-12-31_-1_clip",
+    "representation_dimensions": 25,
+    "market_indices": [
+      0
+    ],
+    "dimensions": 26
+  }
+]

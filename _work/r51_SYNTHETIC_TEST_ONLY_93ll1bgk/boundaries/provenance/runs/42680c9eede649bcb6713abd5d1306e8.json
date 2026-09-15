@@ -1,0 +1,10 @@
+{
+  "completed_utc": "2026-09-18T10:30:00+00:00",
+  "error": "fixture provenance failure",
+  "error_type": "ValueError",
+  "run_id": "42680c9eede649bcb6713abd5d1306e8",
+  "source_freeze_sha256": "2c6f21ddfafc7dd3f20318cfb67c0ddacc26f7ac3c85372c3b47f87a91af13c2",
+  "started_utc": "2026-09-18T10:30:00+00:00",
+  "status": "FAILED",
+  "steps": []
+}

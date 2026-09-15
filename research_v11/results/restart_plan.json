@@ -1,0 +1,146 @@
+[
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2017-12-31_20260910_epoch20.pt",
+    "starting_sha256": "115b355544ca59416d70418943d38cebc40df540471d7c29712dafab01db21dc"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2017-12-31_20260910_epoch20.pt",
+    "starting_sha256": "115b355544ca59416d70418943d38cebc40df540471d7c29712dafab01db21dc"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2017-12-31_20260911_epoch20.pt",
+    "starting_sha256": "6d08c172aa8f7e1cab7cb09ba911233fd299516dbd7a047a5248f573b1dc83a2"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2017-12-31_20260911_epoch20.pt",
+    "starting_sha256": "6d08c172aa8f7e1cab7cb09ba911233fd299516dbd7a047a5248f573b1dc83a2"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2017-12-31_20260912_epoch20.pt",
+    "starting_sha256": "06529cdf77252315701f3f7f83a02ce17cea228574539e44cbaad4049cffaea6"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2017-12-31_20260912_epoch20.pt",
+    "starting_sha256": "06529cdf77252315701f3f7f83a02ce17cea228574539e44cbaad4049cffaea6"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2018-12-31_20260910_epoch20.pt",
+    "starting_sha256": "7f99a5e05209f071d39d911600c49ec07f775bdd49311598acf23ea7e96e417d"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2018-12-31_20260910_epoch20.pt",
+    "starting_sha256": "7f99a5e05209f071d39d911600c49ec07f775bdd49311598acf23ea7e96e417d"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2018-12-31_20260911_epoch20.pt",
+    "starting_sha256": "6da80a7d153ecc89fdda3c1ec4c3a1353c1dafc83b8b20988d648b3392666138"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2018-12-31_20260911_epoch20.pt",
+    "starting_sha256": "6da80a7d153ecc89fdda3c1ec4c3a1353c1dafc83b8b20988d648b3392666138"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2018-12-31_20260912_epoch20.pt",
+    "starting_sha256": "d82ee5a7ff53e2ee655ee357ea1be757ccbe6722cd1737d5d73d707f235c7a16"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2018-12-31_20260912_epoch20.pt",
+    "starting_sha256": "d82ee5a7ff53e2ee655ee357ea1be757ccbe6722cd1737d5d73d707f235c7a16"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2019-12-31_20260910_epoch20.pt",
+    "starting_sha256": "e8ffe14a137269b3f68c72c4a6cd6d644b7a8df54dddc07a890aa12427aa129a"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2019-12-31_20260910_epoch20.pt",
+    "starting_sha256": "e8ffe14a137269b3f68c72c4a6cd6d644b7a8df54dddc07a890aa12427aa129a"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2019-12-31_20260911_epoch20.pt",
+    "starting_sha256": "fe84bd84e5c627067ea576bc5c01b751525bda239721cbabf37a65c2e1fd0f6d"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2019-12-31_20260911_epoch20.pt",
+    "starting_sha256": "fe84bd84e5c627067ea576bc5c01b751525bda239721cbabf37a65c2e1fd0f6d"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "state": "joint",
+    "auxiliary_weight": 0.1,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2019-12-31_20260912_epoch20.pt",
+    "starting_sha256": "b813d9055cf93506a5b935aabc33a433918a0aa6b0402d230a3e91e8199b090e"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "state": "return_only",
+    "auxiliary_weight": 0.0,
+    "starting_project_file": "research_v10\\results\\huber_checkpoints\\2019-12-31_20260912_epoch20.pt",
+    "starting_sha256": "b813d9055cf93506a5b935aabc33a433918a0aa6b0402d230a3e91e8199b090e"
+  }
+]

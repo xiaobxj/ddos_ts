@@ -1,0 +1,9 @@
+method,reference,year,n,changed,correct_to_wrong,wrong_to_correct
+probe_mse,archived20,all,141,17,12,5
+probe_mse,archived20,2018,49,5,4,1
+probe_mse,archived20,2019,46,4,3,1
+probe_mse,archived20,2020,46,8,5,3
+probe_bce,direction_bce,all,141,31,15,16
+probe_bce,direction_bce,2018,49,4,2,2
+probe_bce,direction_bce,2019,46,21,12,9
+probe_bce,direction_bce,2020,46,6,1,5

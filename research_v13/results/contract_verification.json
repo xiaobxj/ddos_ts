@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "tests": [
+    "causal training/rolling membership, labels, packed features and exact scales",
+    "least-squares recovery, clipping endpoints, zero denominator and insufficient history",
+    "training-mean centering, endpoint identities and equal-seed ensemble commutation",
+    "bit-exact real-model weights/AdamW/dropout state versus the original MSE update"
+  ],
+  "protocol_sha256": "b042b63ed761852f1e306642cea0c41d860005cd4bd9ef29d57c96650103f4de",
+  "source_sha256": {
+    "research_v13\\common13.py": "b1b0f9bd99f0ba495c4ef2c3947ddf68557ba3c7f8c5e0d6fc94de299cac3de6",
+    "research_v13\\prepare13.py": "56e88f7661680fc6d992426aa7b704c1d5ce6079a21f1a2e932acc12303df7fd",
+    "research_v13\\contract13.py": "0af980d2effa796a2ffe80e9d0d386754b50bd098b0d9cf43ed2ad473c3246d1",
+    "research_v13\\train13.py": "986684abb767f927a058fab72ddb990836ff6893df210911ef941438a4b1732e",
+    "research_v13\\rolling13.py": "434f6808544cf8cc03043b85f816e6eb283deb833f0ecbd0224a850faa2d531c",
+    "research_v13\\calibrate13.py": "3973b3271f41bef41125081545e06773b66557ef2634995e320dd1422bbbc66e",
+    "research_v13\\score13.py": "a8aac940a83bd97944dc7803bc2b50ca37ffdb0904616b0f8e7c719fd44b9310",
+    "research_v13\\evaluate13.py": "1c35947912e4e9bf2bacaf56d3bc913f90bd459933b83d92ce3c9da944e9e39b",
+    "research_v13\\verify13.py": "2b5237ecb2378d6db9838a63cdf5ecde4bb9f9cac2c09207dbd2d4e03b1cfd1a",
+    "research_v12\\common12.py": "a2fa769ab5eddb78940d455d7d3634911dd2c4b5133354bd41fe3517c4787cc4",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v6\\train6.py": "e9e8ee6515f1e517d48c4db87aa534a174795c5cfe64ad5cc38d2c7c8301113e",
+    "research_v6\\evaluate6.py": "abd9e3b354e655d24fe80c0c4a2d61dda47303eece861b167668ce664d8eb7bf",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "completed_utc": "2026-09-11T06:05:12.753387+00:00"
+}

@@ -1,0 +1,3 @@
+method,date,actual_up,parent_probability,joint_probability,fixed_probability,joint_correct,fixed_correct
+learned_order_offset,2016-12-09,0,0.500718181191673,0.5001470280424057,0.4987161213567981,False,True
+raw_order_offset,2015-11-20,0,0.5099990166750443,0.4988967991507382,0.5004191691116201,True,False

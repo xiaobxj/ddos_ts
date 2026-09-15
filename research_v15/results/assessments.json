@@ -1,0 +1,56 @@
+[
+  {
+    "method": "probe_mse",
+    "source": "archived20",
+    "counts": {
+      "seeds_beating_original_accuracy": 0,
+      "seeds_beating_frequency_brier": 1,
+      "years_beating_original_accuracy": 0,
+      "years_beating_frequency_brier": 2
+    },
+    "flags": {
+      "ensemble_accuracy_beats_original": false,
+      "ensemble_accuracy_beats_frequency": false,
+      "ensemble_brier_beats_frequency": true,
+      "ensemble_log_loss_beats_frequency": true,
+      "at_least_two_seeds_beat_original_accuracy": false,
+      "at_least_two_seeds_beat_frequency_brier": false,
+      "at_least_two_years_beat_original_accuracy": false,
+      "at_least_two_years_beat_frequency_brier": true
+    },
+    "descriptive_screen_pass": false,
+    "accuracy_difference_vs_original": -0.049645390070921946,
+    "brier_skill_vs_training_frequency": 0.026789060636331352,
+    "log_loss_skill_vs_training_frequency": 0.019636336021597867,
+    "significant_improvements": 0,
+    "independent_confirmation": false,
+    "strategy_promotion": false
+  },
+  {
+    "method": "probe_bce",
+    "source": "direction_bce",
+    "counts": {
+      "seeds_beating_original_accuracy": 0,
+      "seeds_beating_frequency_brier": 0,
+      "years_beating_original_accuracy": 2,
+      "years_beating_frequency_brier": 1
+    },
+    "flags": {
+      "ensemble_accuracy_beats_original": false,
+      "ensemble_accuracy_beats_frequency": true,
+      "ensemble_brier_beats_frequency": false,
+      "ensemble_log_loss_beats_frequency": false,
+      "at_least_two_seeds_beat_original_accuracy": false,
+      "at_least_two_seeds_beat_frequency_brier": false,
+      "at_least_two_years_beat_original_accuracy": true,
+      "at_least_two_years_beat_frequency_brier": false
+    },
+    "descriptive_screen_pass": false,
+    "accuracy_difference_vs_original": -0.028368794326241065,
+    "brier_skill_vs_training_frequency": -0.013140241473055925,
+    "log_loss_skill_vs_training_frequency": -0.010000735784299497,
+    "significant_improvements": 0,
+    "independent_confirmation": false,
+    "strategy_promotion": false
+  }
+]

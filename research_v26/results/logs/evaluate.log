@@ -1,0 +1,21 @@
+             window                  method  correct_directions   n  accuracy    brier  log_loss
+extension_2021_2023          learned_market                  67 147  0.455782 0.265938  0.726265
+extension_2021_2023 learned_order_extension                  65 147  0.442177 0.266073  0.726467
+extension_2021_2023    learned_order_offset                  65 147  0.442177 0.266028  0.726370
+extension_2021_2023 learned_vol_interaction                  65 147  0.442177 0.265783  0.726036
+extension_2021_2023              native_mse                  68 147  0.462585      NaN       NaN
+extension_2021_2023      training_frequency                  62 147  0.421769 0.253892  0.700939
+   recent_2024_2026          learned_market                  61 125  0.488000 0.255818  0.705250
+   recent_2024_2026 learned_order_extension                  60 125  0.480000 0.256462  0.706507
+   recent_2024_2026    learned_order_offset                  59 125  0.472000 0.256470  0.706523
+   recent_2024_2026 learned_vol_interaction                  60 125  0.480000 0.256965  0.707631
+   recent_2024_2026              native_mse                  63 125  0.504000      NaN       NaN
+   recent_2024_2026      training_frequency                  66 125  0.528000 0.250021  0.693189
+   pooled_2021_2026          learned_market                 128 272  0.470588 0.261287  0.716607
+   pooled_2021_2026 learned_order_extension                 125 272  0.459559 0.261656  0.717294
+   pooled_2021_2026    learned_order_offset                 124 272  0.455882 0.261635  0.717249
+   pooled_2021_2026 learned_vol_interaction                 125 272  0.459559 0.261730  0.717578
+   pooled_2021_2026              native_mse                 131 272  0.481618      NaN       NaN
+   pooled_2021_2026      training_frequency                 128 272  0.470588 0.252113  0.697377
+
+EXIT_CODE=0

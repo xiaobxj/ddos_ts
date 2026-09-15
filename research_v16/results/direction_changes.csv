@@ -1,0 +1,5 @@
+window,method,reference,changed,correct_to_wrong,wrong_to_correct
+early_2015_2017,learned_probe,native_mse,16,6,10
+early_2015_2017,raw25_probe,native_mse,66,36,30
+late_2018_2020,learned_probe,native_mse,17,12,5
+late_2018_2020,raw25_probe,native_mse,50,30,20

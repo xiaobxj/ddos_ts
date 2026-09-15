@@ -1,0 +1,50 @@
+[
+  {
+    "cutoff": "2014-12-31",
+    "training_end_anchor": 1211,
+    "iterations": 905,
+    "gradient_inf": 9.907452047677536e-08,
+    "cache_file": "research_v21\\cache\\hmm_2014-12-31.npz",
+    "cache_sha256": "d27c96ec526c8a70d4c1af3dba3dcbebe78d23c665b34fa5d51215264b8def96"
+  },
+  {
+    "cutoff": "2015-12-31",
+    "training_end_anchor": 1455,
+    "iterations": 65,
+    "gradient_inf": 9.297883223156254e-08,
+    "cache_file": "research_v21\\cache\\hmm_2015-12-31.npz",
+    "cache_sha256": "f44a7a91728813008ae8a23929511a4b80c0632983c38e7b0b26881a595b7766"
+  },
+  {
+    "cutoff": "2016-12-31",
+    "training_end_anchor": 1699,
+    "iterations": 61,
+    "gradient_inf": 9.444122185091559e-08,
+    "cache_file": "research_v21\\cache\\hmm_2016-12-31.npz",
+    "cache_sha256": "eed865a5cadbf9ae3de038731b205b1f64140501880d2dffbab2dc99e132b07c"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "training_end_anchor": 1943,
+    "iterations": 125,
+    "gradient_inf": 9.437861630240433e-08,
+    "cache_file": "research_v21\\cache\\hmm_2017-12-31.npz",
+    "cache_sha256": "6905fcf7b290f6aad1d95529ad11a695cca7c02e75e90cc74ddbed6b27ef011b"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "training_end_anchor": 2186,
+    "iterations": 85,
+    "gradient_inf": 9.711042237265549e-08,
+    "cache_file": "research_v21\\cache\\hmm_2018-12-31.npz",
+    "cache_sha256": "2027cb262577865c8f80c21b22a6ae41c8a5a6a0764c92efdb3edfc9e21e3524"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "training_end_anchor": 2430,
+    "iterations": 100,
+    "gradient_inf": 9.574877265728172e-08,
+    "cache_file": "research_v21\\cache\\hmm_2019-12-31.npz",
+    "cache_sha256": "379eaaecdd827cb348d9ce9f8e73c7beb8d0f5ab5c153bb8a449ae9ce07d5b79"
+  }
+]

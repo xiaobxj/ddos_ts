@@ -1,0 +1,11 @@
+{
+  "comparison": "f_multi_exp_quarter vs d_multi_exp_annual",
+  "differing_position_intervals": 7,
+  "largest_positive_contribution_signal": "2024-09-20",
+  "largest_log_return_contribution": 0.18478049212603812,
+  "total_log_return_gap": 0.17176440566026233,
+  "gap_excluding_largest_interval": -0.013016086465775789,
+  "interpretation": "descriptive decomposition of fixed forecasts, not re-training or a new selected backtest",
+  "validation_selected_rmse": 0.03056180183899,
+  "validation_zero_rmse": 0.030560409554175362
+}

@@ -1,0 +1,9 @@
+method,year,n,changed,correct_to_wrong,wrong_to_correct,non_up_to_up,up_to_non_up,original_correct,candidate_correct,mse_skill_vs_original
+rolling_shrink,all,141,21,15,6,21,0,84,75,-0.01729060390837467
+rolling_shrink,2018,49,15,13,2,15,0,32,21,-0.031948958037572917
+rolling_shrink,2019,46,6,2,4,6,0,26,28,-0.03825422449907867
+rolling_shrink,2020,46,0,0,0,0,0,26,26,0.006910059253848799
+half_shrink,all,141,15,13,2,15,0,84,73,0.005777295789889725
+half_shrink,2018,49,12,11,1,12,0,32,22,-0.012145978257238177
+half_shrink,2019,46,1,0,1,1,0,26,27,-0.015487998908658707
+half_shrink,2020,46,2,2,0,2,0,26,24,0.0329363246437997

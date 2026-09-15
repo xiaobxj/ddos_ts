@@ -1,0 +1,711 @@
+{
+  "plan": {
+    "now_utc": "2026-09-15T03:24:32.876915+00:00",
+    "date_cst": "2026-09-15",
+    "status": "PRE_CLOSE_WAIT",
+    "recording_window_open": false,
+    "latest_snapshot_end": "2026-09-28",
+    "fetch_needed": false,
+    "due_parameter_cutoffs": [],
+    "next_parameter_cutoff": "2026-09-30",
+    "next_unrecorded_signal": "2026-09-25",
+    "recorded_predictions": 1,
+    "labels": 1,
+    "pending_labels": 0,
+    "journal_events": 7,
+    "scheduler_installed": false
+  },
+  "weeks": [
+    {
+      "date": "2026-09-18",
+      "status": "COMPLETE",
+      "recorded_utc": "2026-09-18T10:30:00+00:00",
+      "label": {
+        "actual_up": 1,
+        "entry_date": "2026-09-21",
+        "exec_return": 0.004975124378109541,
+        "exit_date": "2026-09-28",
+        "joint_completed": "2026-09-28",
+        "next_same_weekday": "2026-09-25",
+        "prediction_sha256": "af8cd00ad2f2669547ae980fe7a212d521f72e46d6ab0b81a8d3d9bd5068e7e4",
+        "reason": "valid",
+        "signal_date": "2026-09-18",
+        "snapshot_sequence": 5,
+        "snapshot_sha256": "376d09511294a49541cd9fa2f8ae65454ebcd88238dcfa1287d70c2fc9346409",
+        "status": "MATURE"
+      },
+      "package": "research_v49\\results\\bootstrap_package.json"
+    },
+    {
+      "date": "2026-09-25",
+      "status": "NO_TIMELY_PREDICTION",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-10-02",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-10-09",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-10-16",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-10-23",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-10-30",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-11-06",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-11-13",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-11-20",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-11-27",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-12-04",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-12-11",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-12-18",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2026-12-25",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-01-01",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-01-08",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-01-15",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-01-22",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-01-29",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-02-05",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-02-12",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-02-19",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-02-26",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-03-05",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-03-12",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-03-19",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-03-26",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-04-02",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-04-09",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-04-16",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-04-23",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-04-30",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-05-07",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-05-14",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-05-21",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-05-28",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-06-04",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-06-11",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-06-18",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-06-25",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-07-02",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-07-09",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-07-16",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-07-23",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-07-30",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-08-06",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-08-13",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-08-20",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-08-27",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-09-03",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    },
+    {
+      "date": "2027-09-10",
+      "status": "NOT_DUE",
+      "recorded_utc": null,
+      "label": null,
+      "package": null
+    }
+  ],
+  "forecasts": {
+    "2026-09-18": {
+      "signal_date": "2026-09-18",
+      "state": "negative_low",
+      "ensemble_predictions": [
+        {
+          "direction_up": 1,
+          "history": "rolling5_annual20",
+          "method": "learned_market",
+          "probability": 0.5942398727221914
+        },
+        {
+          "direction_up": 1,
+          "history": "rolling5_annual20",
+          "method": "learned_vol_interaction",
+          "probability": 0.6186429044243418
+        },
+        {
+          "direction_up": 1,
+          "history": "rolling5_annual20",
+          "method": "learned_order_extension",
+          "probability": 0.6160149051746558
+        },
+        {
+          "direction_up": 1,
+          "history": "rolling5_annual20",
+          "method": "learned_order_offset",
+          "probability": 0.6156780724142177
+        },
+        {
+          "direction_up": 1,
+          "history": "weekly_state_validated",
+          "method": "learned_market",
+          "probability": 0.5942398727221914
+        },
+        {
+          "direction_up": 1,
+          "history": "weekly_state_validated",
+          "method": "learned_vol_interaction",
+          "probability": 0.6186429044243418
+        },
+        {
+          "direction_up": 1,
+          "history": "weekly_state_validated",
+          "method": "learned_order_extension",
+          "probability": 0.6160149051746558
+        },
+        {
+          "direction_up": 1,
+          "history": "weekly_state_validated",
+          "method": "learned_order_offset",
+          "probability": 0.6156780724142177
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_timeweight2y",
+          "method": "learned_market",
+          "probability": 0.6060933906270808
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_timeweight2y",
+          "method": "learned_vol_interaction",
+          "probability": 0.624983904442792
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_timeweight2y",
+          "method": "learned_order_extension",
+          "probability": 0.6264797577175271
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_timeweight2y",
+          "method": "learned_order_offset",
+          "probability": 0.6262966477433628
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_intercept",
+          "method": "learned_market",
+          "probability": 0.615180151517233
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_intercept",
+          "method": "learned_vol_interaction",
+          "probability": 0.6391803062928575
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_intercept",
+          "method": "learned_order_extension",
+          "probability": 0.6373662809442932
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_intercept",
+          "method": "learned_order_offset",
+          "probability": 0.6370423249857495
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_slopes",
+          "method": "learned_market",
+          "probability": 0.585178743928908
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_slopes",
+          "method": "learned_vol_interaction",
+          "probability": 0.6041546532856378
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_slopes",
+          "method": "learned_order_extension",
+          "probability": 0.605116104686484
+        },
+        {
+          "direction_up": 1,
+          "history": "annual_head_weighted_slopes",
+          "method": "learned_order_offset",
+          "probability": 0.6049788175873146
+        }
+      ],
+      "controls": {
+        "native_direction_up": 1,
+        "native_mean_return": 0.0033750788349283436,
+        "native_returns_by_seed": {
+          "20260910": 0.010528020658657688,
+          "20260911": -0.0011680292475776616,
+          "20260912": 0.0007652450937050054
+        },
+        "training_frequency": 0.4792703150912106,
+        "training_frequency_up": 0
+      }
+    }
+  },
+  "metrics": [
+    {
+      "history": "rolling5_annual20",
+      "method": "learned_market",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.16464128088850347
+    },
+    {
+      "history": "rolling5_annual20",
+      "method": "learned_vol_interaction",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.14543323434590172
+    },
+    {
+      "history": "rolling5_annual20",
+      "method": "learned_order_extension",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.14744455304802853
+    },
+    {
+      "history": "rolling5_annual20",
+      "method": "learned_order_offset",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.1477033440232513
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_market",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.16464128088850347
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_vol_interaction",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.14543323434590172
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_order_extension",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.14744455304802853
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_order_offset",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.1477033440232513
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_market",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.15516241690766958
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_vol_interaction",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.140637071926973
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_extension",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.13951737139475728
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_offset",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.13965419548784827
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_market",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.14808631578629972
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_vol_interaction",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.13019085136691613
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_extension",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.13150321419617333
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_offset",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.13173827385175027
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_market",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.17207667448839847
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_vol_interaction",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.15669353851541365
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_extension",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.15593329077797585
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_offset",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0,
+      "brier": 0.15604173455471604
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "fixture",
+      "valid_from": "2026-07-01",
+      "valid_until": "2026-09-30"
+    }
+  ],
+  "latest_prediction": "2026-09-18",
+  "mature_signals": 1,
+  "evaluation_status": "DESCRIPTIVE_ONLY",
+  "primary_review_not_before": "2027-10-01",
+  "updated_utc": "2026-09-28T10:30:00+00:00",
+  "synthetic_test_only": true
+}

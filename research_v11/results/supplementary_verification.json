@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "paired_dropout_variability_rows": 45,
+  "legacy_training_objectives_checked": 18,
+  "maximum_legacy_loss_rounding_difference": 8.551288344094132e-09,
+  "additional_fitting": false,
+  "new_forward_passes": 0
+}

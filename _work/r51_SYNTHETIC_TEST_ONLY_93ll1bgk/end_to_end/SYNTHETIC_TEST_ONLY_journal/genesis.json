@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-18T09:59:59+00:00",
+  "protocol_sha256": "fb5ff21528a016bcf2aef7fb32ca6edf6702af588f6c4c031b52a63739002475",
+  "scope": "prospective",
+  "source_freeze_sha256": "46c8085c944b5ed025851362ec5ca34970a7516e56eef721e7d82206ceb18866",
+  "synthetic_test_only": true,
+  "warning": "ISOLATED ENGINEERING FIXTURE. SIMULATED FUTURE DATES AND PRICES. NOT RESEARCH PERFORMANCE."
+}

@@ -1,0 +1,22 @@
+{
+  "flags": {
+    "ensemble_beats_mse_model": false,
+    "ensemble_beats_mean": false,
+    "ensemble_beats_huber_intercept": false,
+    "at_least_two_seeds_beat_both_constants": false,
+    "at_least_two_seeds_beat_mse_models": false,
+    "at_least_two_years_beat_mse_model": false
+  },
+  "descriptive_screen_pass": false,
+  "new_seeds_better_than_mean": 0,
+  "new_seeds_better_than_huber_intercept": 0,
+  "new_seeds_better_than_both_constants": 0,
+  "new_seeds_better_than_mse_models": 1,
+  "new_years_better_than_mse_model": 1,
+  "mse_skill_vs_mse_model": -0.024680272373381662,
+  "primary_significant_improvements": 0,
+  "primary_comparisons": 3,
+  "exploratory_historical_reuse": true,
+  "no_selection": true,
+  "scored_utc": "2026-09-11T03:25:16.926194+00:00"
+}

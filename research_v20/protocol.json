@@ -1,0 +1,260 @@
+{
+  "version": 20,
+  "experiment": "Three-calendar-year final classifier window, keeping the existing interaction as a factorial comparator",
+  "user_steering": "Retain round19volatility interaction and its later-period directional improvement as a continuing research hypothesis. Failure of cross-period screening does not erase the historical comparison or preclude testing it again in a controlled new setting.",
+  "scope": "Research only. Same261historically examined dates. Recent means the final3calendar years before each historical cutoff, not new2026observations. Freeze full-past backbone, preprocessing and interaction basis; change only classifier loss sample membership. This is not an end-to-end recent-data model.",
+  "folds": [
+    {
+      "cutoff": "2014-12-31",
+      "end": "2015-12-31",
+      "train_n": 1077,
+      "test_n": 22,
+      "recent_start": "2012-01-01",
+      "recent_train_n": 720
+    },
+    {
+      "cutoff": "2015-12-31",
+      "end": "2016-12-31",
+      "train_n": 1190,
+      "test_n": 48,
+      "recent_start": "2013-01-01",
+      "recent_train_n": 590
+    },
+    {
+      "cutoff": "2016-12-31",
+      "end": "2017-12-31",
+      "train_n": 1434,
+      "test_n": 50,
+      "recent_start": "2014-01-01",
+      "recent_train_n": 596
+    },
+    {
+      "cutoff": "2017-12-31",
+      "end": "2018-12-31",
+      "train_n": 1678,
+      "test_n": 49,
+      "recent_start": "2015-01-01",
+      "recent_train_n": 595
+    },
+    {
+      "cutoff": "2018-12-31",
+      "end": "2019-12-31",
+      "train_n": 1921,
+      "test_n": 46,
+      "recent_start": "2016-01-01",
+      "recent_train_n": 725
+    },
+    {
+      "cutoff": "2019-12-31",
+      "end": "2020-12-31",
+      "train_n": 2165,
+      "test_n": 46,
+      "recent_start": "2017-01-01",
+      "recent_train_n": 725
+    }
+  ],
+  "windows": [
+    {
+      "name": "early_2015_2017",
+      "start": "2015-01-01",
+      "end": "2017-12-31",
+      "n": 120
+    },
+    {
+      "name": "late_2018_2020",
+      "start": "2018-01-01",
+      "end": "2020-12-31",
+      "n": 141
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "data": "Unchanged CSI300 OHLCV and round5observation/label masks. All training joint_completed<=cutoff. Friday signals in the following calendar year with joint_completed<=2020-12-31. Target raw executable weekly return>0. Same samples, label maturity and training-frequency references for both feature families. Earlier held-out rows may enter later training only after completion. Retain invalid-OHLC exclusions, including the incomplete2015coverage; no forward-fill or new sample screening.",
+  "variants": [
+    {
+      "method": "learned_recent_additive",
+      "source_method": "learned_market",
+      "source_round": 18,
+      "family": "learned",
+      "interaction": false,
+      "dimensions": 29,
+      "fits": 18
+    },
+    {
+      "method": "raw_recent_additive",
+      "source_method": "raw_trend",
+      "source_round": 18,
+      "family": "raw",
+      "interaction": false,
+      "dimensions": 26,
+      "fits": 6
+    },
+    {
+      "method": "learned_recent_interaction",
+      "source_method": "learned_vol_interaction",
+      "source_round": 19,
+      "family": "learned",
+      "interaction": true,
+      "dimensions": 30,
+      "fits": 18
+    },
+    {
+      "method": "raw_recent_interaction",
+      "source_method": "raw_vol_interaction",
+      "source_round": 19,
+      "family": "raw",
+      "interaction": true,
+      "dimensions": 27,
+      "fits": 6
+    }
+  ],
+  "window": "Retain full-fold rows with signal_date>=January1(cutoff_year-2), already joint_completed<=cutoff. Exactly3calendar years, no window grid, recency weights, label-based exclusions or tuning. Earlier historical bars may form retained signals; only label fitting membership changes.",
+  "coordinates": "Reuse unchanged standardized additive X from round18and augmented[X,h] from round19. Do not refit clipping quantiles, means,SDs,neural weights,signal ray,OLS projection or residual scale. The interaction ray still uses full-fold supervised parent coefficients; this inherited older-label path is intentional and is not OOF. This isolates fitting-window effects conditional on fixed coordinates; it does not remove all older-data influence.",
+  "interaction": {
+    "volatility": "Reuse the exact round18training-clipped/standardized volatility20 coordinate, market index1, frozen separately each cutoff.",
+    "signal": "r=X[:,0:25] @ parent.coefficients[0:25]. This is the representation-only logit contribution of the already fitted round18parent. It excludes that parent appended market coefficients and intercept. Raw25itself already contains three market summaries. Ray weights are supervised training-fit coefficients, not out-of-fold predictions; no next-year labels are used.",
+    "product": "q=v*r. Only one fixed product, no separate25-dimensional products, higher powers, horizon grid or expert models.",
+    "projection": "Using only this fold training inputs, solve min_gamma ||q-[X,1]gamma||^2 with numpy.linalg.lstsq rcond=1e-12. This removes the product component linearly representable by existing additive coordinates. Freeze gamma, training residual mean and populationSD (floor1e-6). h=(q-[X,1]gamma-residual_mean)/residual_sd; append h to unchanged X.",
+    "normalization": "No additional clipping of product or residual. Constituent inputs retain their existing training-only clipping. Do not recompute projection, means, SDs or ray on held-out data.",
+    "model": "Refit the full ridge logistic head on [X,h], one extra slope. All additive slopes and intercept may refit; interaction ray stays fixed. Zero new slope nests the original parent exactly. Same lambda=.01 applies to every slope, intercept unpenalized.",
+    "interpretation": "This is a one-dimensional interaction along an inherited signal direction, with training-linear redundancy removed. Residualization changes the ridge parameterization relative to an unresidualized-product model; that alternative is not tested. Coefficient signs/components are not causal importance or OOF calibration evidence.",
+    "sd_floor": 1e-06,
+    "projection_rcond": 1e-12,
+    "rank_tolerance": 1e-08,
+    "training_orthogonality_tolerance": 1e-08
+  },
+  "interaction_note": "All round19transform parameters are inherited as-is; no new projection is fit. Recent-subset h need not have mean0,SD1 or remain orthogonal to X. Compare nested recent additive/interaction classifiers on identical rows and unchanged lambda; zero interaction slope still nests the recent additive head.",
+  "probe": {
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "independent_solver": {
+    "method": "L-BFGS-B",
+    "options": {
+      "ftol": 1e-15,
+      "gtol": 1e-11,
+      "maxiter": 2000,
+      "maxls": 40
+    },
+    "objective_absolute_tolerance": 1e-10,
+    "training_probability_absolute_tolerance": 1e-05,
+    "gradient_infinity_tolerance": 5e-07,
+    "purpose": "Verify all48new classifiers; alternate coefficients never used for forecasts."
+  },
+  "budget": "48new classifier fits:18learned and6raw for each of additive and interaction.31608feature rows across fits. No new neural forwards/training/projection fitting.2088new per-model probabilities; reuse5220old model rows for7308total. Add261deterministic recent-frequency forecasts only to ensembles, like prior frequency baselines.17methods*261dates=4437ensemble records.1428fitted coefficients including intercepts. Preserve2958old evidence files.",
+  "forecasts": "All48fits must finish before new held-out scoring. Three seed probabilities averaged for learned models; raw deterministic. Strict p>0.5. Retain all12old methods including round19interaction. Add recent_frequency per cutoff from the exact recent training labels. Keep full training_frequency too; metadata training_frequency continues to mean the old full-fold baseline.",
+  "primary_comparisons_per_window": [
+    {
+      "family": "learned",
+      "candidate": "learned_recent_additive",
+      "reference": "learned_market",
+      "metric": "brier"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_additive",
+      "reference": "learned_market",
+      "metric": "direction_error"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_interaction",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_interaction",
+      "reference": "learned_recent_additive",
+      "metric": "brier"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_interaction",
+      "reference": "learned_recent_additive",
+      "metric": "direction_error"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "family": "learned",
+      "candidate": "learned_recent_interaction",
+      "reference": "recent_frequency",
+      "metric": "brier"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_additive",
+      "reference": "raw_trend",
+      "metric": "brier"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_additive",
+      "reference": "raw_trend",
+      "metric": "direction_error"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_interaction",
+      "reference": "raw_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_interaction",
+      "reference": "raw_recent_additive",
+      "metric": "brier"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_interaction",
+      "reference": "raw_recent_additive",
+      "metric": "direction_error"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_interaction",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "family": "raw",
+      "candidate": "raw_recent_interaction",
+      "reference": "recent_frequency",
+      "metric": "brier"
+    }
+  ],
+  "inference": "32fixed contrasts:8per family per period. Candidate-reference loss,negativebetter. Circular8retained-observation blocks,10000replicates,seed20260910 separately each period. Centered two-sided p,Holm across32. Intervals not simultaneous and not adjusted for repeated historical design selection. No pooled primary test.",
+  "factorial_diagnostic": "For each family/window and Brier/direction_error, report (recent_interaction-recent_additive)-(full_interaction-full_additive). Negative means the interaction loss increment is more favorable under the recent fitting window. Algebraic paired-loss diagnostic only, not a causal mechanism or extra hypothesis test.",
+  "descriptive_screen": "Focus on recent interaction candidates.12strict flags per window: accuracy exceeds full interaction,recent additive,nativeMSE,full frequency,recent frequency(5); Brier below full interaction,recent additive,full frequency,recent frequency(4); logloss below recent frequency(1); at least2years accuracy exceeds nativeMSE and at least2years Brier below recent frequency(2). Ties fail. Bothwindows all12required for descriptive PASS. Additive heads are factorial controls; no posthoc winner promotion.",
+  "metrics": "Accuracy, balanced accuracy, AUROC, confusion counts, predicted-up fraction; Brier/log loss/probability moments only for probability methods. Clip log-loss probabilities to[1e-12,1-1e-12] for reporting only and record clip counts. Report bothwindows,all6years,all3learned/native seeds and pooled descriptive results. Training scores remain supervised in-sample diagnostics. Five fixed reliability bins per probability method per window, including empty bins.",
+  "pooled": "261weeks pooled only for descriptive metrics. All comparisons and state analyses use separate120-week early and141-week late windows. Report six years and learned/native seed results.",
+  "diagnostics": "All annual,seed,state,reliability results. Use existing full-fold state definitions for consistent groups; no recent-state relabeling. Report direction changes, coefficient deltas and the inherited h distribution on full/recent/test inputs. Allstatecells<20marked sparse.",
+  "verification": "Hash freeze of old evidence/core/protocol/inputs. Independently reconstruct date/maturity masks, original validation forecasts and exact fixed input joins. Verify nested recent models,Newton replay,L-BFGS-B independent objectives,all new/reused predictions,ensembles,624metric groups,160bins,32block comparisons and8factorial rows. No new neural replay or projection-fitting claim."
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "window": "early_2015_2017",
+    "method": "learned_vol_interaction",
+    "parent": "learned_market",
+    "round17_anchor": "learned_clip",
+    "counts": {
+      "years_beating_native_accuracy": 1,
+      "years_beating_frequency_brier": 0
+    },
+    "flags": {
+      "accuracy_beats_parent": false,
+      "accuracy_beats_round17": false,
+      "accuracy_beats_native": false,
+      "accuracy_beats_frequency": false,
+      "brier_beats_parent": true,
+      "brier_beats_round17": false,
+      "brier_beats_frequency": false,
+      "log_loss_beats_frequency": false,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "brier_skill_vs_frequency": -0.0790843787748845,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  },
+  {
+    "window": "early_2015_2017",
+    "method": "raw_vol_interaction",
+    "parent": "raw_trend",
+    "round17_anchor": "raw25_clip",
+    "counts": {
+      "years_beating_native_accuracy": 0,
+      "years_beating_frequency_brier": 0
+    },
+    "flags": {
+      "accuracy_beats_parent": false,
+      "accuracy_beats_round17": false,
+      "accuracy_beats_native": false,
+      "accuracy_beats_frequency": false,
+      "brier_beats_parent": true,
+      "brier_beats_round17": true,
+      "brier_beats_frequency": false,
+      "log_loss_beats_frequency": false,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "brier_skill_vs_frequency": -0.13514577470167533,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  },
+  {
+    "window": "late_2018_2020",
+    "method": "learned_vol_interaction",
+    "parent": "learned_market",
+    "round17_anchor": "learned_clip",
+    "counts": {
+      "years_beating_native_accuracy": 0,
+      "years_beating_frequency_brier": 2
+    },
+    "flags": {
+      "accuracy_beats_parent": true,
+      "accuracy_beats_round17": true,
+      "accuracy_beats_native": false,
+      "accuracy_beats_frequency": true,
+      "brier_beats_parent": false,
+      "brier_beats_round17": false,
+      "brier_beats_frequency": true,
+      "log_loss_beats_frequency": true,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_frequency_brier": true
+    },
+    "window_descriptive_pass": false,
+    "brier_skill_vs_frequency": 0.018243437743343693,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  },
+  {
+    "window": "late_2018_2020",
+    "method": "raw_vol_interaction",
+    "parent": "raw_trend",
+    "round17_anchor": "raw25_clip",
+    "counts": {
+      "years_beating_native_accuracy": 1,
+      "years_beating_frequency_brier": 1
+    },
+    "flags": {
+      "accuracy_beats_parent": false,
+      "accuracy_beats_round17": true,
+      "accuracy_beats_native": false,
+      "accuracy_beats_frequency": false,
+      "brier_beats_parent": false,
+      "brier_beats_round17": true,
+      "brier_beats_frequency": false,
+      "log_loss_beats_frequency": false,
+      "two_years_beat_native_accuracy": false,
+      "two_years_beat_frequency_brier": false
+    },
+    "window_descriptive_pass": false,
+    "brier_skill_vs_frequency": -0.008151485063793373,
+    "independent_confirmation": false,
+    "strategy_promotion": false,
+    "cross_period_descriptive_pass": false,
+    "significant_improvements": 0
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "SCORING_STOPPED_BEFORE_NEW_FORECAST_EXPORT",
+  "completed_utc": "2026-09-11T07:28:41.808016+00:00",
+  "cause": "Changing all requires_grad flags to False changes floating-point inference numerics. Restoring original True flags under inference_mode exactly reproduces archived forecasts.",
+  "models_checked": 18,
+  "old_files_preserved": 2479,
+  "new_probe_forecasts_exported": 0,
+  "new_ensemble_metrics_computed": 0,
+  "frozen_maximum_error": 2.6740996861285282e-08,
+  "restored_maximum_error": 9.974659986866641e-17,
+  "changed_native_directions": 0,
+  "all_model_states_unchanged": true,
+  "correction": "Keep requires_grad=False for all new feature extraction. Replay archived native predictions under original requires_grad=True plus inference_mode, then restore flags. No tolerance relaxation, hyperparameter or feature-policy change."
+}

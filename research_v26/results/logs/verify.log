@@ -1,0 +1,21 @@
+Verified 1/18 backbones and 4/72 solvers
+Verified 2/18 backbones and 8/72 solvers
+Verified 3/18 backbones and 12/72 solvers
+Verified 4/18 backbones and 16/72 solvers
+Verified 5/18 backbones and 20/72 solvers
+Verified 6/18 backbones and 24/72 solvers
+Verified 7/18 backbones and 28/72 solvers
+Verified 8/18 backbones and 32/72 solvers
+Verified 9/18 backbones and 36/72 solvers
+Verified 10/18 backbones and 40/72 solvers
+Verified 11/18 backbones and 44/72 solvers
+Verified 12/18 backbones and 48/72 solvers
+Verified 13/18 backbones and 52/72 solvers
+Verified 14/18 backbones and 56/72 solvers
+Verified 15/18 backbones and 60/72 solvers
+Verified 16/18 backbones and 64/72 solvers
+Verified 17/18 backbones and 68/72 solvers
+Verified 18/18 backbones and 72/72 solvers
+Verification PASS: all models, convex heads, predictions, metrics and old evidence.
+
+EXIT_CODE=0

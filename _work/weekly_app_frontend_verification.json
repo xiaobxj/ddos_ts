@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": [
+    "empty_state_does_not_show_zero_accuracy",
+    "all20_probabilities_and_latest_date_render",
+    "all52_slots_and_missing_friday_visible",
+    "recorded_filter_selects_only_timely_predictions",
+    "metrics_tab_has20_common_sample_rows",
+    "new_week_automatically_selects_new_prediction",
+    "running_disables_repeat_submission_and_quit",
+    "preclose_gives_specific_nonrecording_reason",
+    "duplicate_run_message_is_unambiguous",
+    "changed_prefix_failure_has_actionable_message",
+    "help_open_close_handlers",
+    "session_token_saved_for_browser_reload",
+    "quit_stops_periodic_rendering"
+  ],
+  "scope": "Node VM with DOM stubs; not a real-browser visual or end-to-end test"
+}

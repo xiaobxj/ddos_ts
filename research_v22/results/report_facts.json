@@ -1,0 +1,14 @@
+{
+  "permutation_example": {
+    "n": 60,
+    "efficiency_a": 0.3333333333333332,
+    "efficiency_b": 0.33333333333333337,
+    "same_sign_neighbors_a": 58,
+    "same_sign_neighbors_b": 19,
+    "adjacent_pairs": 59
+  },
+  "heldout_efficiency_abs_trend_correlation_min": 0.994913078227362,
+  "heldout_efficiency_abs_trend_correlation_max": 0.9988379107537136,
+  "significant_improvements": 0,
+  "significant_deteriorations": 1
+}

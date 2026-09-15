@@ -1,0 +1,200 @@
+[
+  {
+    "cutoff": "2020-12-31",
+    "seed": 20260910,
+    "epoch": 20,
+    "train_n": 2408,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2020-12-31_20260910_epoch20.pt",
+    "sha256": "ae38544670181da9889fd4ecc6307a7cbc9060d06740c2a5a731e242f1483ec9",
+    "model_sha256": "979e6b5d06703730f692bee57d7243e46519f2b46a67c878aa04b91f3d3d3866",
+    "optimizer_sha256": "e59cb55c86aaf4044221b0b36cf4844eb96654cba64a079fda11d546efc341be",
+    "rng_sha256": "5aacdd7ef7136e370866ce3828dd2543577fc6332716bd7bb4a4dda4e1a6d871"
+  },
+  {
+    "cutoff": "2020-12-31",
+    "seed": 20260911,
+    "epoch": 20,
+    "train_n": 2408,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2020-12-31_20260911_epoch20.pt",
+    "sha256": "62ef561faaeb82aab0c5a3d14c8052e17599e1503b3a5641fc60aa905035125b",
+    "model_sha256": "4f1b24a0060bed898a4509f5d7e59b28b76321e68f618884a835d2a84b478c22",
+    "optimizer_sha256": "892be0638431404654d5152abd2e4e14b12e21a887021116e0555d74d2f76128",
+    "rng_sha256": "5f206ca948c7c07561a367a193dd3e88808a2b7521cc2814d4c7301386d29d7a"
+  },
+  {
+    "cutoff": "2020-12-31",
+    "seed": 20260912,
+    "epoch": 20,
+    "train_n": 2408,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2020-12-31_20260912_epoch20.pt",
+    "sha256": "04b552e25601417fb47caeca6fe3139da901e3e310762ff019d88fc3cb8cdcea",
+    "model_sha256": "b5a9e1a41797e9ac501173fe8c8b388d9f239fa14104616facbf3da8618d62db",
+    "optimizer_sha256": "d4a8ffb8f6d73f6377163ebd8ffff002d933c34808b08289c99e36cc8a8159db",
+    "rng_sha256": "f4e3d68f86ed47c02320945fe00f3a443c3997016aca667ecd751926717d53b1"
+  },
+  {
+    "cutoff": "2021-12-31",
+    "seed": 20260910,
+    "epoch": 20,
+    "train_n": 2651,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2021-12-31_20260910_epoch20.pt",
+    "sha256": "192dee7c044cb90f67a269b7f8e07edd64aecf3971f64646761210fa1dbd179b",
+    "model_sha256": "b96305c09cf690eb66260bab509b4004f8104a3e786b2fbddd25194a0eeaf9e9",
+    "optimizer_sha256": "3e5490d5d7e13c002bbca52f945a3fad4165903693a30deb6889fb7223eb7a9b",
+    "rng_sha256": "4aea4c8dcfdf59f40699c2b9fe9088f4eb00dd40554adbdb3122a8d10eff35af"
+  },
+  {
+    "cutoff": "2021-12-31",
+    "seed": 20260911,
+    "epoch": 20,
+    "train_n": 2651,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2021-12-31_20260911_epoch20.pt",
+    "sha256": "846b7589ff40375117ec3bd899e8d649b20a2e8791539f51d8860a3cb25d608d",
+    "model_sha256": "e2b932c530700381a353ed60b3c79482dfb35628d5daaca392f64f6e60e4e06b",
+    "optimizer_sha256": "ab8d8297696aa384db03b9ad611c469bf2e539b8250c6cd23871e8b8c413e21f",
+    "rng_sha256": "f7a6327e23bb7cb24af6df544bbe5d562f18728a6552531fcc409cf9b6206f39"
+  },
+  {
+    "cutoff": "2021-12-31",
+    "seed": 20260912,
+    "epoch": 20,
+    "train_n": 2651,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2021-12-31_20260912_epoch20.pt",
+    "sha256": "0df89008438560d1314cfff2ecfdb19d21978f92157577241e44fcf4feab40e5",
+    "model_sha256": "4f0c2f92a0165594f9f8e0dfdc0038cc421db1da22fa61c0576b5c465b584393",
+    "optimizer_sha256": "d2dd47afff82cc1f4e9623148cd77c96f0573d2b9886acfe13b8a52509cf2354",
+    "rng_sha256": "203b78c5567f0bfc668fccdfb6df12224055b79a7bcc3407ff626355612e6d13"
+  },
+  {
+    "cutoff": "2022-12-31",
+    "seed": 20260910,
+    "epoch": 20,
+    "train_n": 2893,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2022-12-31_20260910_epoch20.pt",
+    "sha256": "ff0b0d5006809fe79b6cdbe4a16c239372930860eb03bcca22d8597c0183efe8",
+    "model_sha256": "ee2b0b6a023204e2628583aa027d20738ecaa3e7c650ac4ed283eae62be135e3",
+    "optimizer_sha256": "63c9588f00c06e43bc73f68736ecb73dcf7ce7e2b6ade2f31bade85fd7b29681",
+    "rng_sha256": "a16cdc431ff3710253257ba2c1339eec9458998ba8784723443fa7f80f8aae20"
+  },
+  {
+    "cutoff": "2022-12-31",
+    "seed": 20260911,
+    "epoch": 20,
+    "train_n": 2893,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2022-12-31_20260911_epoch20.pt",
+    "sha256": "4ca5129b2372399afd7e09a4543b2a31a0a9024efa39fad12e612d4a19c996f0",
+    "model_sha256": "c420628d3feae86235f0b0885a598b239b5579b476f4a04aefaa3a47f74830e0",
+    "optimizer_sha256": "cf0a610d7a58ae221965d71595aeea9cb58a9e8721b958523d09d775ff0c6aeb",
+    "rng_sha256": "f11e0ca74474fac3d884cf78d9ab06fad57e2b1260a7cd2f05b78096edb45af8"
+  },
+  {
+    "cutoff": "2022-12-31",
+    "seed": 20260912,
+    "epoch": 20,
+    "train_n": 2893,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2022-12-31_20260912_epoch20.pt",
+    "sha256": "2c57be7c9f18881da4568b21be2cf9d7ceaa5f43a0012a0d0fdea558b065b96d",
+    "model_sha256": "af244a4873ca92aa89e5eda341ca82c5f38762cad690a39a0b44953ad6f25d6b",
+    "optimizer_sha256": "d30a93f49de48d39804102f462656efc89244303aac053d9aacdfe2abc121c59",
+    "rng_sha256": "80b7a12207068510a142f6e597e9c1dca8025b20cc021c695487b0937ffa30aa"
+  },
+  {
+    "cutoff": "2023-12-31",
+    "seed": 20260910,
+    "epoch": 20,
+    "train_n": 3135,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2023-12-31_20260910_epoch20.pt",
+    "sha256": "b54825ba9400a0e4de98fabbf9bdf0134f42a3cc24310b3fec44df41050dc7ca",
+    "model_sha256": "730e44fc24b259fc8ce19ff9ba494f6d3937e9ef45287e042e2ade3712f80247",
+    "optimizer_sha256": "3e03cd0a90b43f599d890f109617e7448f2ab9ce9e83301389e389e0305ea114",
+    "rng_sha256": "d72139f745ad051a3853bd9a7a3c608e9b1dc2478f26ac1f549db3f1d1b0890c"
+  },
+  {
+    "cutoff": "2023-12-31",
+    "seed": 20260911,
+    "epoch": 20,
+    "train_n": 3135,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2023-12-31_20260911_epoch20.pt",
+    "sha256": "4a94751de8bfc74f51d0e07873af26b290ac5daf86dd1bef38e9517a24be2e79",
+    "model_sha256": "983d16714cfa5bcf0e8e5855a487f6b2d5a917873ba9bb55e048c5d0e2d9eee3",
+    "optimizer_sha256": "ed4f6f94cd2902e0aebb1a77e1d3c4f1058ce782923b0a8ecac3e15f1410397d",
+    "rng_sha256": "92e3927ae8beb719a035c4f9d77525983cd9de37efaa7ca098c09e14f4df9a79"
+  },
+  {
+    "cutoff": "2023-12-31",
+    "seed": 20260912,
+    "epoch": 20,
+    "train_n": 3135,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2023-12-31_20260912_epoch20.pt",
+    "sha256": "4b04434b94d5e882f40acf77c267eb91a93c8dbbb6be62cad3c05da521e13e11",
+    "model_sha256": "4e7488e400e9307ebe28a774842aec1559a293f6236ab7b22b6f5f624a88b6c5",
+    "optimizer_sha256": "bce1a925fd1a361409b01124c62a4f0eddd679f8c20e7df2a211779ef6a828c4",
+    "rng_sha256": "ab2c418fc1289b150575b4f8e518fb728d153965c2a2be2f6cbe645a15277898"
+  },
+  {
+    "cutoff": "2024-12-31",
+    "seed": 20260910,
+    "epoch": 20,
+    "train_n": 3377,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2024-12-31_20260910_epoch20.pt",
+    "sha256": "1c8a9629992cf618a4a5a338ee1de84e98a8744b8c380787361fa14ea6bdb06e",
+    "model_sha256": "d924867db055de4d1d67bcb468164a37c2df5faf0f65074eba5cb1b535e719a5",
+    "optimizer_sha256": "28e054d6e1927acc74033dce628b3edd25ea2a8672e2efabfc61a883d83e6848",
+    "rng_sha256": "78adad4b21faf812e04a90a34381842d40071640d5fdb960ba22d7fc1f01a77f"
+  },
+  {
+    "cutoff": "2024-12-31",
+    "seed": 20260911,
+    "epoch": 20,
+    "train_n": 3377,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2024-12-31_20260911_epoch20.pt",
+    "sha256": "bb5826fed94b59221bbba16c8b506bb4b8b7685c2fe74641bd7a189ba0386ee0",
+    "model_sha256": "b44eff8a22715fe74fede37e63de046e627bacb6e250a1fd1ad378d0d5b43c52",
+    "optimizer_sha256": "cd12aaa4ed51476d07269068cb356ee0a73ad6f35976200c4ab71f887e8734c1",
+    "rng_sha256": "f32b71b0be1607718813ee8cfa447ae25bb0d8034a7e66236612d71d9b3847c6"
+  },
+  {
+    "cutoff": "2024-12-31",
+    "seed": 20260912,
+    "epoch": 20,
+    "train_n": 3377,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2024-12-31_20260912_epoch20.pt",
+    "sha256": "7e3b54038c6d8a93e34dae760aadd40d5b8dc2de95489b63022d379c0dcbbb86",
+    "model_sha256": "772a5b6bff3477560aea7cc5db38a5853c6dd85496eb07ef94305845e1b2f36f",
+    "optimizer_sha256": "13638aca5c028b67e9c62b8f265d2a40b0284b5064710c0761e8d773e66a9f04",
+    "rng_sha256": "7a5c9b47ff7dc15c370cf6702af24e8c3b06b79498a031f3a9dd02647de610e2"
+  },
+  {
+    "cutoff": "2025-12-31",
+    "seed": 20260910,
+    "epoch": 20,
+    "train_n": 3620,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2025-12-31_20260910_epoch20.pt",
+    "sha256": "befe8130be53cc718f5fa51b12fa14a08c9492b98e562f207b6e9d8ab23d5dd3",
+    "model_sha256": "32e712f132bf5931e712c030d94d9f629843b7384d0297f8a812cafac5791ad0",
+    "optimizer_sha256": "d1dcd08aec4caf9180e98edcc1463a593c463853f1f8a1ca6735e425b0022278",
+    "rng_sha256": "e580f86884728801f0ec6179bfb5a287b44e17800adcb4de4d0cd21939f192e3"
+  },
+  {
+    "cutoff": "2025-12-31",
+    "seed": 20260911,
+    "epoch": 20,
+    "train_n": 3620,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2025-12-31_20260911_epoch20.pt",
+    "sha256": "7bd6cf4852fb762080598660031a009978b979db7cae6c68af2edbd728662e47",
+    "model_sha256": "d00ed8be0fbdd741335eccceb4c73839fb033ba9fdc9d350960ee7dbb4b1b615",
+    "optimizer_sha256": "4298e49bd45310c15d67ce01e469d0c8dac0f383bb027a1fcfa72177c6383cf5",
+    "rng_sha256": "e11aa28b7daa0cc751913003220f553f5ee1c05016b3fbb7295a1f24f14cd876"
+  },
+  {
+    "cutoff": "2025-12-31",
+    "seed": 20260912,
+    "epoch": 20,
+    "train_n": 3620,
+    "project_file": "research_v26\\results\\checkpoints\\combined_full_2025-12-31_20260912_epoch20.pt",
+    "sha256": "1376007ec6a50d13995ffed1e8a5e485def94ff8ac8a09bbfbb7fb0e127d1e60",
+    "model_sha256": "6e2c1c3be8cb83e4767d45ed8c4a42945a855ce7afaac9daa5fee8ebda1e1aa5",
+    "optimizer_sha256": "90cfe342b51aaa979f9e7a43ee14758aef14a47f966edaa0d2721530b3ade4d4",
+    "rng_sha256": "927ae5a13571f502c6d14e5d885be21402984fba794cf974fd08f84d722c6f4c"
+  }
+]

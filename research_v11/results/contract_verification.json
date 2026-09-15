@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Exact causal training-only arrays, target scales and original batch budgets",
+    "Scaled Huber formula and derivative against installed PyTorch",
+    "Real-model row-weighted gradient partition and joint-gradient identities",
+    "Dropout losses/gradients deterministic and preserve RNG, module modes, weights and .grad",
+    "Paired stochastic updates identical even when fixed-state audits are inserted"
+  ],
+  "checks_passed": 5,
+  "gradient_partition_relative_errors": [
+    1.5305575212115977e-07,
+    1.4184511471020346e-07
+  ],
+  "joint_gradient_relative_error": 1.4857352843978618e-07,
+  "source_sha256": {
+    "research_v11\\common11.py": "0f9d187f48be4efadd356670eb675a455900d0472d687ef52c778b595636c1e3",
+    "research_v11\\prepare11.py": "44e98fec7e971bfe5513d8d0d02f6a8d3f04788432cd7394e9ad472b45ffe541",
+    "research_v11\\contract11.py": "a4c1845069617defaaadcd9092b6dad01563f41f15488f78e8953686cd69a6b6",
+    "research_v11\\probe11.py": "4fd8652bcba4f6b49f3d424a8e8cd78cff2e07dfad7404fd70bf7a91cd0ef045",
+    "research_v11\\train11.py": "11c43070ca1c445542189c3df4f484400079448a66c8932aeef11adfc6890387",
+    "research_v11\\analyze11.py": "674ff0933ceb247012b18bbf14500a1295837e44caea87dcdcfe5c2af72de807",
+    "research_v11\\verify11.py": "93c0b565153dfe382047251eb169e327452cdc17da1f621435dea2ed8cc7ff02",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "protocol_sha256": "36de252cb0e7a20f75f9bd89def00d93f3ca9776ccd853dccffedd56a2a79001",
+  "completed_utc": "2026-09-11T04:21:11.849945+00:00",
+  "training_only": true
+}
