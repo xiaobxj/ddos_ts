@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "unit_tests": 4,
+  "shared_observations": 3780,
+  "capacity_samples": 32,
+  "auxiliary_target_coordinates_recomputed": 94500,
+  "real_and_permuted_capacity_checkpoints_replayed": 45,
+  "validation_checkpoints_replayed": 108,
+  "max_capacity_replay_error": 4.440892098500626e-16,
+  "max_validation_replay_error": 9.996344030316351e-17,
+  "capacity_prediction_rows": 1440,
+  "validation_seed_prediction_rows": 5076,
+  "validation_weeks": 141,
+  "old_evidence_files_preserved": 1147,
+  "all_source_and_cache_hashes_match": true,
+  "pretrained_representation_excluded_from_historical_validation": true,
+  "all_training_labels_mature": true,
+  "selection_recomputed": true,
+  "checked_utc": "2026-09-10T04:34:12.344466+00:00"
+}

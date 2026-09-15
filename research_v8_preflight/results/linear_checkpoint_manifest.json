@@ -1,0 +1,128 @@
+[
+  {
+    "policy": "full",
+    "cutoff": "2017-12-31",
+    "file": "results\\linear_models\\full_2017-12-31.npz",
+    "sha256": "6ae1c1b24fc6d92acbb0402c6fef205e006e31cdd57ccfd907effb715743b446",
+    "normal_equation_max_error": 7.904787935331115e-14
+  },
+  {
+    "policy": "disjoint0",
+    "cutoff": "2017-12-31",
+    "file": "results\\linear_models\\disjoint0_2017-12-31.npz",
+    "sha256": "8f8561a908b1657ab463a7d9aa07f249fa52438dd6ff515f7007f84779f88dd6",
+    "normal_equation_max_error": 1.7563728249569976e-13
+  },
+  {
+    "policy": "disjoint1",
+    "cutoff": "2017-12-31",
+    "file": "results\\linear_models\\disjoint1_2017-12-31.npz",
+    "sha256": "cf38a3b0d181bb61b8e479f14b76abd08cc838914d657ea6b6854ace822d79f7",
+    "normal_equation_max_error": 2.1804780203638074e-13
+  },
+  {
+    "policy": "disjoint2",
+    "cutoff": "2017-12-31",
+    "file": "results\\linear_models\\disjoint2_2017-12-31.npz",
+    "sha256": "acbc3ed519a200e1dc75be48dcfbbcb9f2abd698a7612f4f147bb74afcccb09b",
+    "normal_equation_max_error": 1.8385293287792592e-13
+  },
+  {
+    "policy": "quarter_equal",
+    "cutoff": "2017-12-31",
+    "file": "results\\linear_models\\quarter_equal_2017-12-31.npz",
+    "sha256": "b03c4a65f7ae2520f2acff7eaed61fdf2028470884885446163dab3e91ab7a2c",
+    "normal_equation_max_error": 6.57529586334249e-14
+  },
+  {
+    "policy": "recent3y",
+    "cutoff": "2017-12-31",
+    "file": "results\\linear_models\\recent3y_2017-12-31.npz",
+    "sha256": "697934e9926d78670e4061342b7a3a7160f133edf1d4d3c73220915907a34326",
+    "normal_equation_max_error": 1.4566126083082054e-13
+  },
+  {
+    "policy": "full",
+    "cutoff": "2018-12-31",
+    "file": "results\\linear_models\\full_2018-12-31.npz",
+    "sha256": "d70e3951d7fcf706111e36d8baf24550514cabf76fa0f01a2ec27f88be9d20cd",
+    "normal_equation_max_error": 9.481304630298837e-14
+  },
+  {
+    "policy": "disjoint0",
+    "cutoff": "2018-12-31",
+    "file": "results\\linear_models\\disjoint0_2018-12-31.npz",
+    "sha256": "3343ba53621ba68fa80bd27f687ad2bb3e0838818fb9c5c06af18875c87e98eb",
+    "normal_equation_max_error": 1.9628743075372768e-13
+  },
+  {
+    "policy": "disjoint1",
+    "cutoff": "2018-12-31",
+    "file": "results\\linear_models\\disjoint1_2018-12-31.npz",
+    "sha256": "7ec16c6b7b8134b4e463d5816f11ca58f475b1416f759775f5a0319d5457e5a0",
+    "normal_equation_max_error": 2.255973186038318e-13
+  },
+  {
+    "policy": "disjoint2",
+    "cutoff": "2018-12-31",
+    "file": "results\\linear_models\\disjoint2_2018-12-31.npz",
+    "sha256": "772d945a746763ed1ad4703eec80086da25e94fc41db50996450d47005ade351",
+    "normal_equation_max_error": 2.0827783941967937e-13
+  },
+  {
+    "policy": "quarter_equal",
+    "cutoff": "2018-12-31",
+    "file": "results\\linear_models\\quarter_equal_2018-12-31.npz",
+    "sha256": "f36bc1240bd2be48bb6cdb5c5c842886fff59b535a2b3b2a3418eae38e2a238d",
+    "normal_equation_max_error": 7.37188088351104e-14
+  },
+  {
+    "policy": "recent3y",
+    "cutoff": "2018-12-31",
+    "file": "results\\linear_models\\recent3y_2018-12-31.npz",
+    "sha256": "85c98ea83689f966306f88e97471d346909c7e50896120fb3fdbf293adc0e657",
+    "normal_equation_max_error": 1.4549472737712676e-13
+  },
+  {
+    "policy": "full",
+    "cutoff": "2019-12-31",
+    "file": "results\\linear_models\\full_2019-12-31.npz",
+    "sha256": "76c527aa141689eb9cc2a31a8ce35b5d029f8ebb4b55e7fc33e227ae3a19beb2",
+    "normal_equation_max_error": 7.771561172376096e-14
+  },
+  {
+    "policy": "disjoint0",
+    "cutoff": "2019-12-31",
+    "file": "results\\linear_models\\disjoint0_2019-12-31.npz",
+    "sha256": "38d9fb7befac1a473d93f4916ef159f6001802049669b3d027d22c0373fbcb34",
+    "normal_equation_max_error": 3.3439917501709715e-13
+  },
+  {
+    "policy": "disjoint1",
+    "cutoff": "2019-12-31",
+    "file": "results\\linear_models\\disjoint1_2019-12-31.npz",
+    "sha256": "777ebc0f3456562c5619bcdeca842ccaa2959d4757d771868ab47bd9c736ad4e",
+    "normal_equation_max_error": 2.7045032879868813e-13
+  },
+  {
+    "policy": "disjoint2",
+    "cutoff": "2019-12-31",
+    "file": "results\\linear_models\\disjoint2_2019-12-31.npz",
+    "sha256": "93d2505d3ab80dd9d9c012ce1c56c5f02fc327ea8f9544d9c8b2541ac8a32f37",
+    "normal_equation_max_error": 3.3306690738754696e-13
+  },
+  {
+    "policy": "quarter_equal",
+    "cutoff": "2019-12-31",
+    "file": "results\\linear_models\\quarter_equal_2019-12-31.npz",
+    "sha256": "e0cdaa9f898eca13928d3c56030d9f3c884d62eca95b5f81ae35bea771fb049d",
+    "normal_equation_max_error": 7.638334409421077e-14
+  },
+  {
+    "policy": "recent3y",
+    "cutoff": "2019-12-31",
+    "file": "results\\linear_models\\recent3y_2019-12-31.npz",
+    "sha256": "5fad8e89f4a078c2593d92e7f46594622289678b56d372548ddbaae7b6cc0951",
+    "normal_equation_max_error": 1.6697754290362354e-13
+  }
+]

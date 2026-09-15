@@ -1,0 +1,29 @@
+{
+  "annual": "Exact R28 rolling5 jointly mature daily members, raw125-to25x5pack, original25auxiliary targets and target scaling, three seeds, natural20epochs, AdamWlr.001weight_decay.1, batch128, gradientnorm1, joint return+.1auxloss. Original Ufeature clipping/scales and supervised rays; R47weighted heads use730.5day half-life and lambda.01 on identical coordinates. R25gamma conditional on respectiveR19 parent.",
+  "calibration_bank": "Reuse original R39 frozen bank through its historical end; extend with cutoff-mature joint-valid Fridays. Prefer actual committed U predictions; otherwise generate fixed annual inference explicitly tagged calibration-only replay. Never backfill a prospective prediction. Historical bank may span annual model/state boundaries as in R39.",
+  "cohort_protocol_sha256": "fb5ff21528a016bcf2aef7fb32ca6edf6702af588f6c4c031b52a63739002475",
+  "created_utc": "2026-09-15T01:39:49.079846+00:00",
+  "limits": "Historical replay establishes implementation parity, not independent prediction performance. Upcoming Sep30 andDec31 parameters cannot yet be fitted. No claims about prospective accuracy or profit; keep existing discoveries and records unchanged.",
+  "package_lifecycle": "Freeze all package files and validate before registration. Exact annual+quarter routing; no stale fallback, no duplicate registration, no replacement after any prediction in that quarter. Previous quarter required. New snapshots must preserve prior observed prefix. Failed builds remain unregistered with failure evidence; no active package overwrite.",
+  "quarter": "Original R39 mature weekly52train/13validation with maturity purge, four observed states associated with the annual model at each signal, state train>=10/validation>=5, sumridge20, cap.5,60bisection, Brier improvement>1e-12 and direction count not lower, annualDec31reset. Only state family is needed by retainedQ policy.",
+  "return_target_vintage": "Preserve original R5 numerical target vintage: default-pandas CSV reparse of R4 raw execution returns before target standardization; auxiliary targets unchanged. First preflight failure before any fitting is preserved in research_v50_attempt1.",
+  "runtime": "New run50 CLI uses original prospective_r49 journal and frozenR49cohort/evaluation; parameters in prospective_r50/builds. Register verified bootstrap once after R50engineeringPASS. Manual refresh/record/fetch/settle/evaluate commands; no background scheduling installed.",
+  "scope": "Engineering extension only; no candidate, seed, threshold, window, training-budget, evaluation-family or signal-time change. No future-cutoff training before data availability. No retrospective forecast becomes a prospective observation.",
+  "task": "Implement and verify quarterly/annual parameter refresh for the unchanged R49 prospective cohort",
+  "verification": {
+    "adversarial": "Future cutoff/stale snapshot, missing member, annualreset, purged validation, future poison, revised prefix, expired/wrong package, failed verification, duplicate and late replacement, calibration replays distinct from real predictions.",
+    "annual_checkpoint_comparison": "Exact model/optimizer/RNG digest equality to R28; training input/labels/membership/scales exact replay required before fitting.",
+    "annual_replay_cutoff": "2025-12-31",
+    "checkpoint_feature_tolerance": 2e-05,
+    "engineering_forecast_weeks": 8,
+    "forecast_probability_tolerance": 2e-06,
+    "gradient_tolerance": 2e-09,
+    "natural_epochs_per_seed": 20,
+    "neural_replays": 3,
+    "new_engineering_head_fits": 24,
+    "parameter_tolerance": 1e-08,
+    "quarter_offset_tolerance": 1e-11,
+    "quarter_replay": "All23 originalR39 cutoff dates;48stateoffsets and16gates each, compare stored decisions and independent brentq solutions."
+  },
+  "version": 50
+}

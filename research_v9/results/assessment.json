@@ -1,0 +1,19 @@
+{
+  "flags": {
+    "ensemble_beats_legacy": false,
+    "ensemble_beats_mean": false,
+    "at_least_two_seeds_beat_mean": false,
+    "at_least_two_seeds_beat_legacy": false,
+    "at_least_two_years_beat_legacy": false
+  },
+  "descriptive_screen_pass": false,
+  "new_seeds_better_than_mean": 0,
+  "new_seeds_better_than_legacy": 0,
+  "new_years_better_than_legacy": 1,
+  "mse_skill_vs_legacy": -0.03387866515111648,
+  "primary_significant_improvements": 0,
+  "primary_comparisons": 2,
+  "exploratory_historical_reuse": true,
+  "no_selection": true,
+  "scored_utc": "2026-09-11T03:02:07.144224+00:00"
+}

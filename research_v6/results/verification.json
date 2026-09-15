@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "contract_tests": 4,
+  "observations": 3780,
+  "main": {
+    "checkpoints_replayed": 180,
+    "maximum_prediction_error": 9.996344030316351e-17,
+    "prediction_rows": 8460
+  },
+  "blocks": {
+    "checkpoints_replayed": 45,
+    "maximum_prediction_error": 9.996344030316351e-17,
+    "prediction_rows": 2115
+  },
+  "main_candidates": 20,
+  "weekly_dates": 141,
+  "round5_baseline_predictions_matched": 1692,
+  "round5_maximum_prediction_difference": 0.0,
+  "selected_arm": "combined",
+  "selected_epoch": 20,
+  "all_input_and_source_hashes_match": true,
+  "all_training_labels_mature": true,
+  "all_retained_training_scales_recomputed": true,
+  "all_update_budgets_match": true,
+  "prior_evidence_files_preserved": 1353,
+  "total_fits": 90,
+  "total_checkpoints_replayed": 225,
+  "elapsed_seconds": 54.1102569103241,
+  "checked_utc": "2026-09-10T05:42:16.479409+00:00"
+}

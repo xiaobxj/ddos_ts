@@ -1,0 +1,28 @@
+[
+  {
+    "policy": "disjoint0",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911,
+    "job_index": 1,
+    "worker": 1,
+    "file": "results\\worker1_checkpoints\\disjoint0_2017-12-31_20260911.pt",
+    "project_file": "research_v8\\results\\worker1_checkpoints\\disjoint0_2017-12-31_20260911.pt",
+    "sha256": "feb7bd1efd705d6c284af51ab124b214148c676a5b6dec277a26a33112698121",
+    "epoch": 20,
+    "source": "new_round8_fit"
+  },
+  {
+    "policy": "disjoint1",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910,
+    "job_index": 3,
+    "worker": 1,
+    "file": "results\\worker1_checkpoints\\disjoint1_2017-12-31_20260910.pt",
+    "project_file": "research_v8\\results\\worker1_checkpoints\\disjoint1_2017-12-31_20260910.pt",
+    "sha256": "9719095d017ced85de854befc3abdcc9aa08d7f3eb0d5a01a3758a63587236bd",
+    "epoch": 20,
+    "source": "new_round8_fit"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:04:35.984105+00:00",
+  "controls": 196,
+  "verifier_sha256": "82e7775e3e414804b78d005b0372d69ccb3e775a996d309922e36d9c03ff0f51",
+  "max_gradient": 9.981577784364676e-10
+}

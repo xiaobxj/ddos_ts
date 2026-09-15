@@ -1,0 +1,33 @@
+{
+  "experiment": "Round 7: fixed 20-epoch candidate under multiseed training-history deletion",
+  "version": 7,
+  "scope": "Complete the stability gap identified in round 6. No candidate or epoch search, new prices, new evaluation dates, pretrained representations, transaction simulation or live changes. The 141 validation weeks in 2018-2020 have been inspected repeatedly and are not independent confirmation.",
+  "data": "Reuse round-5 3780 raw OHLCV windows, targets, and strict joint eligibility; reuse round-6 full/drop_early/drop_middle/drop_recent sample masks byte-for-byte. Fixed 125-bar windows, 25 x 5 patches, 5 dimensions. Training labels must have joint_completed <= cutoff. Retained mature labels alone determine return and auxiliary scaling.",
+  "models": "Call frozen research_v6.models6.make_model directly. Candidate combined: d_model16/d_ff32, dropout0.3, AdamW weight_decay0.1, 38551 parameters. Baseline: d_model32/d_ff64, dropout0.1, weight_decay0.01, 138471 parameters. Both retain two encoder layers, four heads, factor4, zero return head and isolated-seed auxiliary head.",
+  "objective": "Unchanged standardized execution-return MSE + 0.1 * standardized five-future-bar OHLCV MSE.",
+  "roles": [
+    {"name": "candidate20", "arm": "combined", "epoch": 20, "role": "The fixed round-6 selected candidate; the only candidate under stability review."},
+    {"name": "baseline10", "arm": "baseline", "epoch": 10, "role": "Primary neural comparator: the previously selected round-5 baseline at its frozen training length."},
+    {"name": "baseline20", "arm": "baseline", "epoch": 20, "role": "Secondary matched-optimizer-budget attribution reference; cannot alone establish candidate success."},
+    {"name": "combined10", "arm": "combined", "epoch": 10, "role": "Diagnostic prefix to connect round-6 near-constant forecasts to 20-epoch behavior; never a selection candidate."}
+  ],
+  "folds": [
+    {"cutoff": "2017-12-31", "end": "2018-12-31"},
+    {"cutoff": "2018-12-31", "end": "2019-12-31"},
+    {"cutoff": "2019-12-31", "end": "2020-12-31"}
+  ],
+  "training": {"arms": ["baseline", "combined"], "seeds": [20260910, 20260911, 20260912], "epochs": 20, "checkpoints": [10, 20], "batch_size": 128, "learning_rate": 0.001, "gradient_clip_norm": 1.0, "auxiliary_weight": 0.1},
+  "histories": ["full", "drop_early", "drop_middle", "drop_recent"],
+  "deletions": "As in round 6: split each fold's sorted mature labeled anchors into five consecutive index groups, omit group0/2/4. This omits about 20% of labeled samples, not all underlying bars from overlapping windows. Each nominal epoch still presents the full-history sample count by appending fresh retained-only permutations and truncating. Retained rows may repeat. Paired arms/seeds have identical observations, scales, batch counts and sampling orders.",
+  "budget": "54 new fits = 2 architectures x 3 deletions x 3 folds x 3 seeds, all trained 20 epochs. Save 10 and 20: 108 new checkpoints and 5076 seed prediction rows. Reuse 36 frozen full-history checkpoints and 1692 seed prediction rows from round 6 for the same architectures/seeds/epochs. Total replay coverage144 checkpoints. No rerun of full-history model fitting and no outcome-dependent extra fits.",
+  "execution": "Two independent workers separated by architecture, each with 27 fits and its own outputs/model/optimizer/RNG/CUDA context. Existing research_v4/.venv_gpu, deterministic CUDA float32, TF32 off, CUBLAS_WORKSPACE_CONFIG=:4096:8, four CPU threads per process. No environment changes.",
+  "primary_comparisons": "For each of the three deleted histories, compare three-seed-ensemble candidate20 against baseline10 and the retained-sample training mean: six paired weekly MSE comparisons. Circular 8-observation block bootstrap, 10000 replicates, seed20260910, centered two-sided p, Holm across all six. Full-history comparisons are descriptive because they influenced candidate selection. Baseline20 and combined10 are diagnostic references, not alternative candidates.",
+  "stability_flags": {
+    "absolute_advantage": "Candidate20 ensemble MSE is below retained-sample training-mean MSE in all three deleted histories.",
+    "relative_advantage": "Candidate20 ensemble MSE is below baseline10 ensemble MSE in all three deleted histories.",
+    "seed_consistency": "At least two of the three individual candidate20 seeds have MSE below retained training mean in each deleted history.",
+    "interpretation": "Report all three prespecified flags and every value. A consistency screen is satisfied only if all three flags are true; this is a local descriptive screen, not statistical confirmation, independent evidence or deployment permission. Report the six adjusted p values separately. Do not choose the best deletion or seed."
+  },
+  "diagnostics": "Report all roles by history, year and seed; per-history training mean and zero-return references; candidate minus baseline10 and baseline20 errors; complete-window input reassignment within validation fold; forecast RMS shift and direction disagreement relative to the same seed/full history, with training-mean changes removed separately; within-fold forecast SD and between-fold variance share to detect near-constant behavior. Reassignment is an inference diagnostic only, never used for training or selection.",
+  "verification": "Freeze source/input/previous-evidence hashes and fit plan before training. Test removing unused early validation evaluations leaves training state/RNG unchanged. Check masks, maturity, retained-only sampling and role/reuse plan. Reproduce all18 round-6 deletion-prefix checkpoints at seed20260910/epoch10. Recompute all scales and per-epoch order hashes, all metrics and stability flags; replay all108 new and36 reused checkpoints. Preserve previous six rounds."
+}

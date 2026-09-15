@@ -1,0 +1,11 @@
+{
+  "status": "PREFLIGHT_FAILED_BEFORE_TRAINING",
+  "failure": "Exact return target scale parity assertion",
+  "raw_return_mean_gap": 2.3852447794681098e-18,
+  "raw_return_sd_gap": 3.469446951953614e-17,
+  "maximum_raw_return_gap": 9.974659986866641e-17,
+  "diagnostic": "Original R5 returns were obtained by pandas default CSV parsing of R4 observation_table; reapplying this exact CSV serialization/parsing stage reproduces the archived target vector bit-for-bit. Aux targets, packed inputs, float32 standardized labels and membership already matched.",
+  "new_neural_fits": 0,
+  "new_head_fits": 0,
+  "registered_parameters": 0
+}

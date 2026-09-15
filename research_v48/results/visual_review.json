@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T14:50:47.951105+00:00",
+  "review": "Both final PNGs inspected using view_image. Annual accuracy: all three panels, five-series legend, yearly sample counts and partial-2026 footnote readable. Factorial figure: all six panels, zero lines, negative shares, total-change diamonds, symmetric-share legend and non-causal footnote readable. No clipped labels or overlapping text. Figure quantities agree with metric and factorial tables.",
+  "artifacts": {
+    "results\\yearly_accuracy.png": "e0cde3d5ce0697b3ef191700aedad2743935eb8467a791096f8899de0d1176f7",
+    "results\\yearly_accuracy.svg": "5f12a4a8a34bcd02035be1c6ff93b59ed516a5e3b39dea416cdac6a4cd5e61bb",
+    "results\\factorial_attribution.png": "8ab40697b5fca6337fb27f26cf97edd47eab01436872d6a55e03e16e7b7a9915",
+    "results\\factorial_attribution.svg": "8a1ecace4390a4c824beeb144bcc20525afb5bdb82e42b66fd7c6bfb9240fa8c"
+  }
+}

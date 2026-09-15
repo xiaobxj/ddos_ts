@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T09:24:35.197372+00:00",
+  "checks": [
+    {
+      "cutoff": "2022-12-31",
+      "train_n": 809,
+      "checkpoint_replays": 3,
+      "heads_checked": 25,
+      "max_gradient": 8.98949856610945e-11,
+      "max_feature_gap": 0.0
+    },
+    {
+      "cutoff": "2023-12-31",
+      "train_n": 1023,
+      "checkpoint_replays": 3,
+      "heads_checked": 25,
+      "max_gradient": 4.964334932716641e-12,
+      "max_feature_gap": 0.0
+    },
+    {
+      "cutoff": "2024-12-31",
+      "train_n": 1206,
+      "checkpoint_replays": 3,
+      "heads_checked": 25,
+      "max_gradient": 6.812986394662268e-11,
+      "max_feature_gap": 0.0
+    },
+    {
+      "cutoff": "2025-12-31",
+      "train_n": 1206,
+      "checkpoint_replays": 3,
+      "heads_checked": 25,
+      "max_gradient": 1.7337961773743193e-10,
+      "max_feature_gap": 0.0
+    }
+  ]
+}

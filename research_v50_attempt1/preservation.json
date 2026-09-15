@@ -1,0 +1,17 @@
+{
+  "status": "PRESERVED",
+  "original_root": "D:\\ddos_v3\\research_v50",
+  "files": {
+    "annual50.py": "d9a8723279127cddb479bac53cc1a8453a01ad90ca413de4dad83b2e46111423",
+    "build50.py": "121bed6212a4d099dc64560b95623bc2caa9db33f54056c904d783f7a5ca6de7",
+    "common50.py": "209e18abff480ef75798f288cbdcaefa63996a90e2ed735f8dec2e04e5c9a04e",
+    "dataset50.py": "5e812f6f4c5727d9be0758c74839eaa70eb1c94ae56a084e446ec130cd8e31e0",
+    "prepare50.py": "e5ee90cb021859f6a0988ac6e645e991da9cf80e6c050ad9aa783114f0e5147b",
+    "protocol.json": "8f4b6a0b55760f3aa62e4163b2d51a5eba3e58e99c6b82f8f627647f0c3488a3",
+    "quarter50.py": "cc594f28b69a57655cb1186ece747e193972126948969d9c9bc3ce84c18e0b25",
+    "run50.py": "85d75d0a4af28624972d07fca1f78722691186bd3efc3bc4896fd15fa95e0157",
+    "validate50.py": "2aed774c8e3c69721f07a7c3d51df94b8456acc01a4861044dce964bc4939dfc",
+    "verify50.py": "5e3581fe4fd3f465dfa850d0403ee3f5560d765791ac94df9cd7b54c842a0367",
+    "results\\freeze.json": "8a66bc652bc386234d5768e53e663efd27b93dbcd92416c12a36c4e704665604"
+  }
+}

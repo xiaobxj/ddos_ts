@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T14:28:30.008937+00:00",
+  "review": "Both final PNGs inspected with view_image:annual accuracy legends/partial2026footnote and all3panels readable;trainingn,Kish concentration,recent2yearmass andclassfrequency axes/legends legible;no clipping or overlapping text. Data labels and metric tables agree.",
+  "artifacts": {
+    "results\\yearly_accuracy.png": "888710d352d826596ea057335bbb76249f479b5a9b1c2474a2e09927e997d47c",
+    "results\\yearly_accuracy.svg": "4c27d4e8b4e61d9704af70ccda7c7f3a5e6732172b3939750565afdf7c8636ae",
+    "results\\training_weights.png": "7ec6b3f35ea97f5c252ef278882adbce50bf0c02adabeda0e6b237769c0378d8",
+    "results\\training_weights.svg": "90f7f8ac51d51506b471fa59b341907948febaa31de86b47a86ab41a36da852d"
+  }
+}

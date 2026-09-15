@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-15T09:06:47.854198+00:00",
+  "freeze_sha256": "bfb3aff5bfe8401bf56bd10cfed07ac0566403f5923e6ffc9a23961c70a842ff",
+  "checks": [
+    "Six forward-adjustment prefixes reproduce full vintage without future actions",
+    "Four annual mature-label memberships and tensors invariant to future perturbation",
+    "Every gross holding-period label independently reconstructed; all gap windows excluded",
+    "Injected missing stock session removes affected observations",
+    "Fresh 38551-parameter stock network has finite nonzero training update (contract model discarded)"
+  ],
+  "label_reconstruction_max_difference": 2.220446049250313e-16,
+  "contract_model_saved": false
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "total_neural_checkpoints_replayed": 54,
+  "new_neural_fits": 45,
+  "reused_neural_checkpoints": 9,
+  "linear_models_replayed": 18,
+  "training_order_hashes_recomputed": 900,
+  "maximum_neural_replay_error": 9.974659986866641e-17,
+  "maximum_reassignment_replay_error": 9.974659986866641e-17,
+  "maximum_linear_replay_error": 1.249000902703301e-16,
+  "maximum_linear_normal_equation_residual": 2.803243748239481e-13,
+  "primary_comparisons_recomputed": 10,
+  "policy_screens": {
+    "disjoint0": false,
+    "disjoint1": false,
+    "disjoint2": false,
+    "quarter_equal": false,
+    "recent3y": false
+  },
+  "previous_seven_round_files_preserved": 1794,
+  "withdrawn_preflight_files_preserved": 62,
+  "previous_and_preflight_files_preserved": 1856,
+  "source_input_and_protocol_unchanged": true,
+  "no_preflight_predictions_used": true,
+  "elapsed_seconds": 22.751986265182495,
+  "completed_utc": "2026-09-11T02:36:11.551387+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T09:27:17.920113+00:00",
+  "freeze_sha256": "bfb3aff5bfe8401bf56bd10cfed07ac0566403f5923e6ffc9a23961c70a842ff",
+  "checks": [
+    "All 25 output combinations use identical mature weeks; independent accuracy/Brier and three-seed means",
+    "Saved stock labels reproduce source reconstruction exactly; latest Friday remains unscored",
+    "Causal truncated-date inference replays across all annual checkpoints",
+    "Every state calibration identical with all future rows removed"
+  ],
+  "model_verification_sha256": "3da05cf156e5baad31736593754f97d7699804c03b7e0570b854222a08d7b36a",
+  "quarter_verification_sha256": "d0e3671a6e3eb5ac831938803843ea0cfff0658e41681c00ef5f13516696c298",
+  "common_mature_weeks": 175,
+  "causal_prediction_replays": 96,
+  "max_probability_gap": 7.387836723493635e-07
+}

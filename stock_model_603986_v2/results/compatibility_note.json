@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-15T14:12:29.929358+00:00",
+  "first_output_verification": "Scientific checks PASS; PowerShell returned 1 on pandas mixed metadata-column DtypeWarning",
+  "rerun": "Same frozen verifier, same input and predictions; suppress only pandas.errors.DtypeWarning; CLI exit 0",
+  "decisions_identical": true,
+  "changed_training_or_scoring": false,
+  "original_result_sha256": "9b91d3ee48d1cbe14126579632810cd2fe50f79464a0aa873c0c0a6c6492bead",
+  "final_result_sha256": "fa5a462416287f0add8431297710d4c4bf95948111f071200668028a5cb5d2e4"
+}

@@ -1,0 +1,15 @@
+{
+  "policy_screens": {
+    "disjoint0": false,
+    "disjoint1": false,
+    "disjoint2": false,
+    "quarter_equal": false,
+    "recent3y": false
+  },
+  "disjoint_family_screen": false,
+  "primary_comparisons": 10,
+  "primary_significant_improvements": 0,
+  "no_policy_or_phase_selection": true,
+  "historical_reuse": true,
+  "scored_utc": "2026-09-11T02:35:21.742209+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "date_cst": "2026-09-15",
+  "due_parameter_cutoffs": [],
+  "fetch_needed": false,
+  "journal_events": 2,
+  "labels": 0,
+  "latest_snapshot_end": "2026-09-14",
+  "next_parameter_cutoff": "2026-09-30",
+  "next_unrecorded_signal": "2026-09-18",
+  "now_utc": "2026-09-15T02:39:32.965247+00:00",
+  "pending_labels": 0,
+  "recorded_predictions": 0,
+  "recording_window_open": false,
+  "scheduler_installed": false,
+  "status": "PRE_CLOSE_WAIT"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T08:00:49.786137+00:00",
+  "review": "Both PNGs inspected via view_image. Chinese text legible; six annual panels, both legends and partial2026 footnote visible; support denominators11/52,14/26,11/52,13/26,11/52 and coverage values including zeros correct; no clipping or overlap. Original and new directions overlap intentionally and are disclosed.",
+  "artifacts": {
+    "results\\yearly_accuracy.png": "e2592fa7ccd49587929e455930b91d49628ac59d19bbebe11f8512d355fbef97",
+    "results\\yearly_accuracy.svg": "e2d50301cf83b0fff539d7509a774e9dceee7829374cc7b2b761fa48d3be1c21",
+    "results\\support_and_coverage.png": "e7577b432faeecea75d179d2945581eab5df70fecb928c225b28d7f5cc42287d",
+    "results\\support_and_coverage.svg": "23aea56e6af04738d8e1865bb43430f4025888695c6f48630c919cb885f2c03c"
+  }
+}

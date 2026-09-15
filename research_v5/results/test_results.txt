@@ -1,0 +1,9 @@
+test_auxiliary_objective_connects_backbone_at_zero_readout (__main__.Contracts.test_auxiliary_objective_connects_backbone_at_zero_readout) ... ok
+test_same_dimension_and_prequant_signs (__main__.Contracts.test_same_dimension_and_prequant_signs) ... ok
+test_shared_joint_maturity_and_future_input_boundary (__main__.Contracts.test_shared_joint_maturity_and_future_input_boundary) ... ok
+test_unused_auxiliary_preserves_frozen_model_and_rng (__main__.Contracts.test_unused_auxiliary_preserves_frozen_model_and_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.415s
+
+OK

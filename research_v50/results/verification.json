@@ -1,0 +1,95 @@
+{
+  "annual": {
+    "checkpoint_replays": 3,
+    "heads_checked": 24,
+    "maximum_feature_gap": 0.0,
+    "maximum_gradient": 2.385698932242525e-10,
+    "status": "PASS",
+    "training_n": 1206
+  },
+  "annual_replay_cutoff": "2025-12-31",
+  "artifacts": {
+    "research_v50\\results\\annual_replay\\annual.json": "5ec529f5c1dcaf38d5502f2d06c9aba2f1d295a0a38db2cf788de8288450a90b",
+    "research_v50\\results\\annual_replay\\membership.csv": "047bc03e21c50c4aa17bcdece2ea3d3f7dbd2fb9af71b5ea25bc294e2672f1f9",
+    "research_v50\\results\\annual_replay\\model_20260910.pt": "095ce238e8b9c2244322037d56fbf549c6f0ba2f5df9b69ad5ba344b954b1546",
+    "research_v50\\results\\annual_replay\\model_20260911.pt": "e4af868d790115882e578db7bfeef6e4a69a29acb6f31d2b2939a9bc5046eaf0",
+    "research_v50\\results\\annual_replay\\model_20260912.pt": "cd964043cf9cbb93f9951f75f69148f5205d3e9b7135616014740d9f32fd2439",
+    "research_v50\\results\\annual_replay\\pipeline_20260910.npz": "bb1cb0be713685efb0816fb1d3d1bcb8a3687969d25c480567b8af35459534d1",
+    "research_v50\\results\\annual_replay\\pipeline_20260911.npz": "4e5f551d55d4dd0dfedc7e0196dd09f72de333cf35d2d0aa96e88b0fec6de9f4",
+    "research_v50\\results\\annual_replay\\pipeline_20260912.npz": "be1f21eb7a37034724e958fb7f7db5e38be9f7807f9b717ba6c4ae64c16442f4",
+    "research_v50\\results\\annual_replay\\scales.json": "d7688c1be21401c047cf5cbc7988d84845b38171e5d4dbd6bda22f11bbe7a4f7",
+    "research_v50\\results\\annual_replay\\training_curves.csv": "8a513e8b0ab1812b148292793295964b85ef08dcc190bcd953914c6ae1e53d37",
+    "research_v50\\results\\annual_replay\\training_interface.npz": "4e6000dbba8ce0994f6aa8128d5a12da7b27a4434c8afd2864c7e4c87e95935a",
+    "research_v50\\results\\annual_replay\\training_weights.npz": "e9b762e89ae597a8da2ce4eb10965a8cb7594085e58cf2270657dcb243e8cbad",
+    "research_v50\\results\\calibration_extension_check.csv": "90902f406bec6ccfe517b49b099416e93a3ffeaecc912cbce10060205b4c7f36",
+    "research_v50\\results\\quarter_replay_checks.csv": "e34ffa67e81b9250619c1ced4029b0eb149034fbef239125e7625506939952fe"
+  },
+  "calibration_added_dates": [
+    "2026-08-28",
+    "2026-09-04"
+  ],
+  "calibration_added_seed_rows": 24,
+  "cases": [
+    "original1206mature_members_exact",
+    "all_training_packs_and_labels_exact",
+    "training_scales_exact",
+    "future_nan_poison_excluded_before_validation",
+    "three_exact_final_model_optimizer_rng_replays",
+    "60natural_epochs_600optimizer_steps",
+    "24head_parameter_replays",
+    "independent_annual_checkpoint_features_and_head_stationarity",
+    "1104quarter_state_offset_replays",
+    "368heldout_gate_replays",
+    "independent_quarter_brentq_and_maturity_purge",
+    "annual_reset_and_exact_zero_fallback",
+    "rebuilt_annual_checkpoint_drives49prefix_engine",
+    "480forecast_directions_preserved_in_engineering_replay",
+    "new_mature_calibration_only_replays_separate_from_forecasts",
+    "old_calibration_bank_preserved",
+    "new_calibration_labels_match_cutoff_data",
+    "future_Sep30_andDec31_refits_rejected",
+    "stale_snapshot_and_nonquarter_cutoff_rejected",
+    "missing_offset_and_wrong_validity_or_annual_cutoff_rejected",
+    "revised_snapshot_prefix_rejected",
+    "state10_validation5_and_Brier_tie_boundaries"
+  ],
+  "checkpoint_digests": [
+    {
+      "model_sha256": "1b65885d7ce18d12ab9c451bc659cd3266ac6f0f9e9ab88f4591f987c0f784d8",
+      "optimizer_sha256": "a029883d287a8b446642cc46883cf5ab14b2acc8eaaea7f3997b56b63c0d1648",
+      "rng_sha256": "bfc40af678c3bd9bf727904eadb0883303c00463ac0ec6b47785f64631385680",
+      "seed": 20260910
+    },
+    {
+      "model_sha256": "5fe14b48bb02cff589103e66c93237aee93c0d5c1196818b79be0e43bfef4643",
+      "optimizer_sha256": "b29861ad0ea80987cd3daf6ce4b9b389cc1f98bb91cc813ca32ea95fad9618e5",
+      "rng_sha256": "011302d9da12e808ec87e3a7825fe66c509930b1fec510f7d15601b2a0e82b1f",
+      "seed": 20260911
+    },
+    {
+      "model_sha256": "14b324618629e064c31682edd02fe8fb7d7ab95b26934ca4777c538dc57b5328",
+      "optimizer_sha256": "06422a4322b7eda7fa0ea49daf6ce41323ea0806c7e215ceb51687a7767b2c39",
+      "rng_sha256": "3451905eb503ff428836826dd5e929599b6e92d8d971be52eaabf3cd827bfa7e",
+      "seed": 20260912
+    }
+  ],
+  "completed_utc": "2026-09-15T01:45:04.978946+00:00",
+  "engineering_only": true,
+  "epochs": 60,
+  "freeze_sha256": "d1ec04c82c10539db887b42a14c7da50cc7c5b43753bda68fb2fe17527929685",
+  "future_cutoff_fits": 0,
+  "head_fits": 24,
+  "maximum_archived_quarter_gap": 0.0,
+  "maximum_coefficient_gap": 0.0,
+  "maximum_probability_gap": 7.794401195027056e-07,
+  "neural_replays": 3,
+  "old_files_preserved": 6230,
+  "optimizer_steps": 600,
+  "prospective_predictions": 0,
+  "protocol_sha256": "9f0add5c92f6667af4dcae93bcf0e35297ba2e2fde03e0afa766088ceca68b28",
+  "quarter_cutoffs": 23,
+  "quarter_gate_cells": 368,
+  "quarter_offsets": 1104,
+  "started_utc": "2026-09-15T01:40:05.861483+00:00",
+  "status": "PASS"
+}

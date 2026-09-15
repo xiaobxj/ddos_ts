@@ -1,0 +1,379 @@
+{
+  "annual_recipe": "Original R28 rolling5 calendar years, jointly mature labels, natural20 epochs,3 fixed seeds; original equal-weight pipeline andR47half-life730.5days weighted heads on the same coordinates. Annual cutoff priorDec31; do not optimize candidates from prospective results.",
+  "cohort": {
+    "calendar_fridays": 52,
+    "coverage": "Show every scheduled Friday, including no timely prediction, invalid OHLC labels, pending labels and complete records. Missing slots are never replaced to chase the minimum. Forty is an operational minimum, not a statistical power guarantee.",
+    "descriptive_checkpoints": [
+      13,
+      26,
+      39
+    ],
+    "first_slot": "2026-09-18",
+    "last_slot": "2027-09-10",
+    "minimum_complete_mature_signals": 40,
+    "no_optional_stopping": "No pvalues or automatic model promotion before the single final review. Less than40complete valid paired signals or pending recorded labels at review => insufficient evidence, no primary claim.",
+    "primary_review_not_before": "2027-10-01"
+  },
+  "comparisons": [
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "weekly_state_validated",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "rolling5_annual20"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_vol_interaction",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_vol_interaction",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_extension",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_extension",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_offset",
+      "metric": "direction_error",
+      "reference_history": "weekly_state_validated"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "method": "learned_order_offset",
+      "metric": "brier",
+      "reference_history": "weekly_state_validated"
+    }
+  ],
+  "created_utc": "2026-09-14T15:06:39.200903+00:00",
+  "data_revisions": "Public provider raw response preserved; downloaded overlap with frozen historical OHLCV must match exactly. Later label snapshots must match every stored prediction prefix. Revisions stop settlement and require a separately documented data review, never overwrite prior prediction or label.",
+  "diagnostic_methods": [
+    "learned_market"
+  ],
+  "ensemble": "Original three-seed pandas Series.mean of probabilities; up iff p>0.5. All methods and seeds present in one immutable prediction event, no candidate-specific omission. Native MSE and unweighted training frequency remain separate diagnostic controls.",
+  "entry_exit": "Entry at first observed daily open after signal; exit at first observed daily open after the next observed same-weekday bar. Label maturity also requires 5 future OHLCV bars and original joint OHLC eligibility. Use source bars, never a guessed holiday calendar.",
+  "experiment": "Prospective weekly registry with frozen candidate recipes; no retrospective promotion",
+  "histories": [
+    "rolling5_annual20",
+    "weekly_state_validated",
+    "annual_head_timeweight2y",
+    "annual_head_weighted_intercept",
+    "annual_head_weighted_slopes"
+  ],
+  "hybrids": "Original U slopes+W intercept, andW slopes+U intercept; R25ordergamma is a slope. No new conditional refit or parameter selection.",
+  "inference": {
+    "block_weeks": 8,
+    "bootstrap_replicates": 10000,
+    "holm_family": 42,
+    "missing": "Resample circular blocks over the52calendar slots, retain missing slots and compute each resample mean over observed paired losses. Do not compress gaps into adjacent trading weeks.",
+    "seed": 20260910,
+    "two_sided_centered": true
+  },
+  "inherited_recipe_protocols": {
+    "research_v26\\protocol.json": "535da4e21c6ed47af82f8f6b13ebf83ca612df2f4d388a49de1bb2907a23428a",
+    "research_v28\\protocol.json": "a4eb970769c94600dd081a6d9cd5d53bacbac658353940e399688a6665810721",
+    "research_v36\\protocol.json": "6147fabb809e0e1b8584237dfad47b1e70474091435d3ac78dcf7a40bc8735e2",
+    "research_v39\\protocol.json": "cda20f35aa213f2d084be2a9dd3b763c96b3746c5942d4dfe515d50bddd9e66e",
+    "research_v47\\protocol.json": "c51f45284e70a6227667842e63450fca2e24014e2fd1a1a09a422f974b96badb",
+    "research_v48\\protocol.json": "19a18c0a3d0b63d19ad2bf248df739529ecb5a25edee916c6f5f7019081cca5d",
+    "research_v6\\protocol.json": "3f61d2695183195b2799d27027a4e49d0d97423718d4c6068622f3a7f6357f63"
+  },
+  "inputs": "125 observed OHLCV bars, raw log prices/log1p volume standardized within window and fixed25x5 patches; original frozen neural feature clipping/scaling, supervised ray and market/order interactions.",
+  "limits": "No independent holdout results until future records mature. No trading profit, deployment or economic causal claim. Preserve all previous research and local improvements.",
+  "parameter_lifecycle": "Bootstrap package reuses annual2025-12-31 andquarter2026-06-30 evidence; valid only through2026-09-30. Runtime rejects stale annual or quarterly cutoffs. Future parameter packages must be built and independently verified under these exact inherited recipes before their first signal. R49 does not implement or schedule the future refitting job; its data and resulting package do not yet exist.",
+  "primary_methods": [
+    "learned_vol_interaction",
+    "learned_order_extension",
+    "learned_order_offset"
+  ],
+  "quarter_recipe": "Original R39 state-gated quarterly correction on original annual head: prior quarter end, mature weekly52training/13validation with purge; state train>=10 and validation>=5; sum-ridge20, cap0.5,60bisection steps; Brier strictly better beyond original tolerance, direction correct count not worse; exact zero-offset fallback. Annual state boundaries unchanged until annual update.",
+  "runtime": "Manual CLI; no background service or automatic weekly job installed. State lives in prospective_r49 outside immutable research_v49 delivery.",
+  "scope": "Operational registry, strict observed-prefix inference, append-only snapshots/predictions/labels, delayed fixed-cohort evaluation. No new model fit or efficacy search in R49.",
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "signal_rule": "Friday with an observed final daily bar. Record only on that same calendar Friday, 18:00 inclusive to23:00 exclusive Asia/Shanghai, after data retrieval. No backfilling; this is stricter than merely before label maturity. Friday without a bar is not replaced by Thursday. Calendar gaps remain explicit; absence of a bar is not automatically called an exchange holiday.",
+  "signal_slots": [
+    "2026-09-18",
+    "2026-09-25",
+    "2026-10-02",
+    "2026-10-09",
+    "2026-10-16",
+    "2026-10-23",
+    "2026-10-30",
+    "2026-11-06",
+    "2026-11-13",
+    "2026-11-20",
+    "2026-11-27",
+    "2026-12-04",
+    "2026-12-11",
+    "2026-12-18",
+    "2026-12-25",
+    "2027-01-01",
+    "2027-01-08",
+    "2027-01-15",
+    "2027-01-22",
+    "2027-01-29",
+    "2027-02-05",
+    "2027-02-12",
+    "2027-02-19",
+    "2027-02-26",
+    "2027-03-05",
+    "2027-03-12",
+    "2027-03-19",
+    "2027-03-26",
+    "2027-04-02",
+    "2027-04-09",
+    "2027-04-16",
+    "2027-04-23",
+    "2027-04-30",
+    "2027-05-07",
+    "2027-05-14",
+    "2027-05-21",
+    "2027-05-28",
+    "2027-06-04",
+    "2027-06-11",
+    "2027-06-18",
+    "2027-06-25",
+    "2027-07-02",
+    "2027-07-09",
+    "2027-07-16",
+    "2027-07-23",
+    "2027-07-30",
+    "2027-08-06",
+    "2027-08-13",
+    "2027-08-20",
+    "2027-08-27",
+    "2027-09-03",
+    "2027-09-10"
+  ],
+  "target": "CSI300 sh000300; original provider-native raw OHLCV",
+  "timestamp_contract": "Local actual UTC clock recorded at archive/commit; source snapshot and model hashes preserved. Hash chaining detects edits relative to retained evidence but is not independent timestamp notarization. No simulation-clock CLI; past snapshots cannot create a prospective prediction.",
+  "validation": "Offline historical replay is engineering parity only, not a new prospective observation. Rebuild raw inputs, inference and labels; test timing, stale package, duplicate, tamper, pending/invalid labels, all-seed completeness and primary-evaluation gates.",
+  "version": 49
+}

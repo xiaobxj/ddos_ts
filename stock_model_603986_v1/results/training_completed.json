@@ -1,0 +1,12 @@
+{
+  "completed_utc": "2026-09-15T09:23:25.566681+00:00",
+  "annual_fits": 4,
+  "neural_fits": 12,
+  "epochs_per_fit": 20,
+  "annual_manifests": {
+    "2022-12-31": "05618fc9929f810b29ad0d2367d50e8ac6fa2d5e6f316b0d5d280364ceb9c76c",
+    "2023-12-31": "c95d08371c5866634f28d1ea2b579f806ee2bc1a3eb2b465d489f27050367dd9",
+    "2024-12-31": "cba0af60518698c843a63e3e616f4ae573f721441654d9c6b711d8aae61d33d3",
+    "2025-12-31": "6ff79903713eb3ff8ed64c10e24ebfe52589d3a64ce342a43c98a9d0bda7dd1d"
+  }
+}

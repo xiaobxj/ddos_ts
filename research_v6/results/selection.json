@@ -1,0 +1,52 @@
+{
+  "selected": {
+    "arm": "combined",
+    "epoch": 20,
+    "mse": 0.0009241108443090148,
+    "rmse": 0.030399191507489386,
+    "accuracy": 0.5957446808510638,
+    "correlation": 0.1237952411233704,
+    "forecast_std": 0.006587837813449706,
+    "n": 141,
+    "balanced_accuracy": 0.5819722335647203,
+    "predicted_up_fraction": 0.624113475177305,
+    "mse_skill_vs_training_mean": 0.0112088643707694,
+    "within_fold_forecast_std": 0.006102895770451835,
+    "between_fold_variance_share": 0.14180474637322815
+  },
+  "baseline_metrics": [
+    {
+      "method": "training_mean",
+      "mse": 0.0009345864976034037,
+      "rmse": 0.030571007467916456,
+      "accuracy": 0.5602836879432624,
+      "correlation": -0.16173700050739112,
+      "forecast_std": 0.00039875909620241663,
+      "n": 141,
+      "balanced_accuracy": 0.5,
+      "predicted_up_fraction": 1.0,
+      "mse_skill_vs_training_mean": 0.0,
+      "within_fold_forecast_std": 0.0,
+      "between_fold_variance_share": 1.0
+    },
+    {
+      "method": "zero_return",
+      "mse": 0.0009339386321189327,
+      "rmse": 0.030560409554175362,
+      "accuracy": 0.4397163120567376,
+      "correlation": null,
+      "forecast_std": 0.0,
+      "n": 141,
+      "balanced_accuracy": 0.5,
+      "predicted_up_fraction": 0.0,
+      "mse_skill_vs_training_mean": 0.0006932108329538167,
+      "within_fold_forecast_std": 0.0,
+      "between_fold_variance_share": null
+    }
+  ],
+  "candidates": 20,
+  "validation_weeks": 141,
+  "rule": "After every main fit is finished, average the three seeds per week and rank all 20 arm/epoch candidates by pooled RMSE. Ties prefer fewer epochs, then protocol arm order. Selection uses only full-history validation, never block sensitivity, direction accuracy or training loss. Winner is exploratory and receives no independent confirmation claim.",
+  "full_history_only": true,
+  "selected_utc": "2026-09-10T05:41:17.049097+00:00"
+}

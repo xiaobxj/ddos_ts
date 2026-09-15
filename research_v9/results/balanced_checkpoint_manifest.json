@@ -1,0 +1,92 @@
+[
+  {
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2017-12-31_20260910_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2017-12-31_20260910_epoch20.pt",
+    "sha256": "56c4601701757f789eade3b13e3dddf2aff12254d20e5028b205b53f43501f64"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2017-12-31_20260911_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2017-12-31_20260911_epoch20.pt",
+    "sha256": "91954141eded9e549a4a82d7bfd3288675272c591e2f6f3faa2b3792ab7de787"
+  },
+  {
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2017-12-31_20260912_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2017-12-31_20260912_epoch20.pt",
+    "sha256": "cf228e6189fe1876428c87b7ee382b5d69b443ca6b7dfd719c74ccdb6427dd5b"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2018-12-31_20260910_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2018-12-31_20260910_epoch20.pt",
+    "sha256": "a2350c2dd714d36f0abf0ecc079c9c34ec74c68e55082d6fcb92df2f32deb66e"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2018-12-31_20260911_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2018-12-31_20260911_epoch20.pt",
+    "sha256": "d25066ebe8a58ddab4d4a93a6f6f41d6bcbcdc6c0eb55f38babd3be0e61a27ad"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2018-12-31_20260912_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2018-12-31_20260912_epoch20.pt",
+    "sha256": "2cb2f865bfddf11a67b5ca7bf612087296911f60ef0d851b2177810c4e6436b1"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2019-12-31_20260910_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2019-12-31_20260910_epoch20.pt",
+    "sha256": "ab76c0672321f8a296f251c7b02d8b439a6d053d9fa9a0ae86053a8fe497348b"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2019-12-31_20260911_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2019-12-31_20260911_epoch20.pt",
+    "sha256": "b7304df18825273e69eb28b18fb9addd99e4ac91e6431ebe911a835f17b6390d"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912,
+    "rule": "balanced",
+    "epoch": 20,
+    "project_file": "research_v9\\results\\balanced_checkpoints\\2019-12-31_20260912_epoch20.pt",
+    "file": "results\\balanced_checkpoints\\2019-12-31_20260912_epoch20.pt",
+    "sha256": "cef7fee84de39c1e1e507c10ab68dd6de5c5f6200464fa83611d2ab3400e4e1a"
+  }
+]

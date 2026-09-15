@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-14T06:57:14.442273+00:00",
+  "observations": "Both corrected-run PNGs visually inspected. All yearly lines and partial-2026 caption visible. Support panel explicitly shows distinct denominators52/26/26 and mutually exclusive support conditions. Actual recent coverage panel shows6/3/3,2/0/0,42/34/34 with zero labels, matching repaired ensemble-exact fallback. Legends/captions are readable and not clipped. Artifact hashes match report manifest.",
+  "artifacts": {
+    "results/yearly_accuracy.png": "b614da29d3910d054b9cf06a8563b2d80f38ab1ec410915c2a1161cac5daca1d",
+    "results/yearly_accuracy.svg": "76160c17dfdfdbe62611f021e1e3935173555e12567c8f4839b50917127d73fa",
+    "results/support_and_coverage.png": "4bbfaf6a58e958442e12f06a5462fb4a774543c422326494bc9b33c4d7766a81",
+    "results/support_and_coverage.svg": "7716a20643d5d61c4a62b535e3d64f133a764a1f1f1d3790b054f044fcbf37de"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "all_prior_windows": 3785,
+  "compared_prequant_sign_coordinates": 9462500,
+  "sign_mismatches": 0,
+  "maximum_continuous_unit_norm_error": 1.7881393432617188e-07,
+  "selected_observations": 3780,
+  "old_observations": 3785,
+  "capacity_samples": 32,
+  "capacity_last_completed": "2017-12-29",
+  "pre2018_pretrained_inputs_role": "IN_SAMPLE_CAPACITY_DIAGNOSTIC_ONLY"
+}

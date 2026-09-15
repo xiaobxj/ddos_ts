@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-15T13:58:20.271664+00:00",
+  "before_scoring": true,
+  "before_control_verification": true,
+  "reason": "Match explicitly float64 clipping/normalization; no change to scoring, model or tolerances; original verifier archived.",
+  "files": {
+    "verify_controls.py": "82e7775e3e414804b78d005b0372d69ccb3e775a996d309922e36d9c03ff0f51"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T08:00:49.793172+00:00",
+  "checks": [
+    "primary_directions_identical_to_quarter4_all272weeks",
+    "early_recent_pooled_2026_counts",
+    "all_six_candidates_Brier_worse_than_quarter4_early_recent_pooled",
+    "recent_Brier_and_coverage_values",
+    "old_local_gains_and_losses_retained",
+    "parent_rejected_child_accepted_March2024",
+    "child_insufficient_support_June2024_and_June2026",
+    "original_training_validation_support_identical",
+    "known_two_recovery_dates_only_vs_annual",
+    "72_comparisons_all_Holm1",
+    "588_parameters_reused_byte_identity",
+    "25oldhistories_5986oldfiles_unchanged",
+    "future_timeweight_candidate_not_started",
+    "markdown_tables_and_links",
+    "old_budget_R25_distinct_from_natural20_and_R23"
+  ],
+  "artifacts": {
+    "results\\结果解读与下一步.md": "15ef369dc6ed57863f41f12219ef84a6b917f849e9230a4cf03b19e2f5d47e8f",
+    "results\\第四十六轮实验报告.md": "d6597370b0a1a1a592da1390ad6c1937a69b4d6819a4da42f822dfb380eb8695",
+    "results\\visual_review.json": "589376f8d09ffcb10016991afad3deb1c808569b693abf4f261606df95d68889",
+    "results\\verification.json": "7f85efe69cc4ecac311565d76e6547ef0352ce205dcba02988fbb4c4ce75c395"
+  }
+}

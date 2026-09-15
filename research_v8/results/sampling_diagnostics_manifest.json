@@ -1,0 +1,7 @@
+{
+  "training_only": true,
+  "changed_training": false,
+  "purpose": "Interpretation of frozen policies and inherited final partial batches; no validation-dependent intervention.",
+  "source_sha256": "c10a3f58ebe0092f9be63602d2e123df081775da41794c1dd95573c8854f687a",
+  "completed_utc": "2026-09-11T02:27:31.707029+00:00"
+}

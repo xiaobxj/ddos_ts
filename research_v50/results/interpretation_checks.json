@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "research_v50\\README.md": "76fe8c831b19a39b1c6ee94d1c82c1142b8fbed47bfe2e591948c3eb9a3f9e95",
+    "research_v50\\results\\bootstrap_activation.json": "5236080111165f98e9b883e718b97349a6fe637f8465244c4b4125ceb637c09c",
+    "research_v50\\results\\bootstrap_verification.json": "bd3f4ca85440d88418927fe490dd783d78b23050686769f98001cad03d8ae460",
+    "research_v50\\results\\lifecycle_verification.json": "3d4a9c35f92092b4ea6b321590f1a5401e7466ad3d6da1ddd0dffef7a6e3eb5a",
+    "research_v50\\results\\runtime_handoff_manifest.json": "860eaf03cd93c4f0e923ef0464a08acaf580e792c02982bd8a79b4b9476514fd",
+    "research_v50\\results\\startup_status.json": "c7352ce70c89a7c96b8e78ebcddf86826b50bce516fdc573ff0a5e734f9be34f",
+    "research_v50\\results\\verification.json": "820e1146727d9e1938c47711fed6c2276c2316d80b31a69fa59e17109e5e8fac",
+    "research_v50\\results\\结果解读与下一步.md": "9a4b6e1cfe3a62cdad622c2fbb93a4b6c8740f566a2bcbf5dc97ebdb1f0afd8f"
+  },
+  "checks": [
+    "three_checkpoint_digest_triplets_exact",
+    "60epochs600steps24heads",
+    "23quarters1104offsets368gates",
+    "480engineering_directions_with_roundoff_disclosed",
+    "24calibration_rows_not_prospective",
+    "first_preflight_failure_preserved",
+    "bootstrap_unchanged_registered_only_after_validation",
+    "no_future_cutoff_fit_or_prospective_prediction",
+    "49cohort_rules_unchanged_and_manual_scheduler",
+    "6230oldfiles_and13archivefiles_preserved",
+    "Chinese_encoding_tables_and_local_links"
+  ],
+  "completed_utc": "2026-09-15T01:47:18.088194+00:00",
+  "status": "PASS"
+}

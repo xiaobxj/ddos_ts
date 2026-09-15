@@ -1,0 +1,8 @@
+test_masks_maturity_and_three_seed_sampling_budget (__main__.Contracts.test_masks_maturity_and_three_seed_sampling_budget) ... ok
+test_plan_and_reused_candidate_are_frozen (__main__.Contracts.test_plan_and_reused_candidate_are_frozen) ... ok
+test_unused_early_evaluation_does_not_change_training (__main__.Contracts.test_unused_early_evaluation_does_not_change_training) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 28.618s
+
+OK

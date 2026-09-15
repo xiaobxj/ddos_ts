@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T06:57:14.443104+00:00",
+  "numeric_facts": [
+    {
+      "period": "recent_2024_2026",
+      "history": "weekly_state_validated",
+      "n": 125,
+      "correct": [
+        69,
+        73,
+        72
+      ],
+      "brier": [
+        0.246156,
+        0.248903,
+        0.248933
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "history": "quarter_trend2_validated",
+      "n": 125,
+      "correct": [
+        68,
+        72,
+        71
+      ],
+      "brier": [
+        0.247539,
+        0.24979,
+        0.249824
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "history": "quarter_volatility2_validated",
+      "n": 125,
+      "correct": [
+        68,
+        72,
+        71
+      ],
+      "brier": [
+        0.247831,
+        0.249816,
+        0.24984
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "history": "rolling5_annual20",
+      "n": 125,
+      "correct": [
+        68,
+        72,
+        71
+      ],
+      "brier": [
+        0.246843,
+        0.24979,
+        0.249824
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "history": "weekly_state_validated",
+      "n": 147,
+      "correct": [
+        72,
+        69,
+        69
+      ],
+      "brier": [
+        0.277416,
+        0.27561,
+        0.275517
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "history": "quarter_trend2_validated",
+      "n": 147,
+      "correct": [
+        71,
+        69,
+        69
+      ],
+      "brier": [
+        0.277157,
+        0.275379,
+        0.275287
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "history": "quarter_volatility2_validated",
+      "n": 147,
+      "correct": [
+        72,
+        70,
+        69
+      ],
+      "brier": [
+        0.277453,
+        0.274654,
+        0.275558
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "weekly_state_validated",
+      "n": 30,
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "quarter_trend2_validated",
+      "n": 30,
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "brier": [
+        0.260401,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "quarter_volatility2_validated",
+      "n": 30,
+      "correct": [
+        11,
+        16,
+        16
+      ],
+      "brier": [
+        0.260833,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "period": "pooled_2021_2026",
+      "history": "weekly_state_validated",
+      "n": 272,
+      "correct": [
+        141,
+        142,
+        141
+      ],
+      "brier": [
+        0.26305,
+        0.263337,
+        0.2633
+      ]
+    },
+    {
+      "period": "pooled_2021_2026",
+      "history": "quarter_volatility2_validated",
+      "n": 272,
+      "correct": [
+        140,
+        142,
+        140
+      ],
+      "brier": [
+        0.26384,
+        0.263239,
+        0.263739
+      ]
+    }
+  ],
+  "checks": [
+    "All cited period counts and Brier",
+    "Support denominator distinctions",
+    "Corrected accepted coverage and quarterly reference counts",
+    "All recent recovery/regression dates and 2026 deterioration",
+    "Preserved early and pooled local R23 improvement",
+    "Merged-group validation contributions and original-state future effects",
+    "48 fixed comparisons nonsignificant",
+    "Numerical repair: identical fit/gate/seed files and unchanged direction forecasts; invalid attempt retained",
+    "Original protocol58.4distinctions and no new blindholdout",
+    "Next shared-fit four-state-gate experiment not started",
+    "Independent verification counts and both corrected figures actually inspected"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "887c2a1c6ffd88ff9f1b31a479c67ec954cc3690a8f7a2d1916e080f750f2162",
+    "results/visual_review.json": "a5c541d7d899a3812fe4deafe4cd9f62f72f3efeb306f25b92f968ef5cb0f141"
+  }
+}

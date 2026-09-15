@@ -1,0 +1,42 @@
+[
+  {
+    "name": "baseline",
+    "d_model": 32,
+    "d_ff": 64,
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "parameter_count": 138471
+  },
+  {
+    "name": "small",
+    "d_model": 16,
+    "d_ff": 32,
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "parameter_count": 38551
+  },
+  {
+    "name": "dropout",
+    "d_model": 32,
+    "d_ff": 64,
+    "dropout": 0.3,
+    "weight_decay": 0.01,
+    "parameter_count": 138471
+  },
+  {
+    "name": "decay",
+    "d_model": 32,
+    "d_ff": 64,
+    "dropout": 0.1,
+    "weight_decay": 0.1,
+    "parameter_count": 138471
+  },
+  {
+    "name": "combined",
+    "d_model": 16,
+    "d_ff": 32,
+    "dropout": 0.3,
+    "weight_decay": 0.1,
+    "parameter_count": 38551
+  }
+]

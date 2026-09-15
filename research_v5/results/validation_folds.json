@@ -1,0 +1,32 @@
+[
+  {
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "train_n": 1678,
+    "test_n": 49,
+    "last_train_label": "2017-12-29",
+    "first_signal": "2018-01-05",
+    "last_signal": "2018-12-28",
+    "representation": "raw"
+  },
+  {
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "train_n": 1921,
+    "test_n": 46,
+    "last_train_label": "2018-12-28",
+    "first_signal": "2019-01-04",
+    "last_signal": "2019-12-27",
+    "representation": "raw"
+  },
+  {
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "train_n": 2165,
+    "test_n": 46,
+    "last_train_label": "2019-12-31",
+    "first_signal": "2020-01-03",
+    "last_signal": "2020-12-18",
+    "representation": "raw"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "completed_utc": "2026-09-15T09:25:59.361118+00:00",
+  "mature_weeks": 175,
+  "latest_signal": "2026-09-11",
+  "pending_dates": [
+    "2026-09-11"
+  ],
+  "seed_rows": 11088,
+  "ensemble_rows": 4400
+}

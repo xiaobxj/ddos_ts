@@ -1,0 +1,30 @@
+{
+  "completed_utc": "2026-09-14T15:11:12.780149+00:00",
+  "files": {
+    "README.md": "e97f8fc009666c58e8c7130dbd6829dfc95d7aa79419fe16435f6b03f2f73c4e",
+    "common49.py": "1b4a87955fb2e2f9c9c730f573e3b9e2e9a7ecd7737763df69d3a358840be6ac",
+    "data49.py": "ea7201cc31ed6fea6e5dc6f2621a4e3d572f5ee15873ca0625f520c7384246e7",
+    "evaluate49.py": "ac583cc610454e78f6e105be4d26358b5b1e2a22d63e7580c6807e42e3d07ce6",
+    "forecast49.py": "79c88627229bbce506789473578e4f08f723f2b92bc0e580f4a6e1edab3ac101",
+    "prepare49.py": "dbcf92c28d97515b229bb5c3e1354c7c76a4f39516a3a69b68169f2701cb4e05",
+    "protocol.json": "fb5ff21528a016bcf2aef7fb32ca6edf6702af588f6c4c031b52a63739002475",
+    "results\\bootstrap_package.json": "13d5afbea2658c47aa0572c345d3168b018652193f69d4b4b26cd8e79d82030d",
+    "results\\engineering_replay.csv": "7db390c133197996f26b3fc12db4e6c0ec83a7a5e3c8744c7f4b236430a1fdc0",
+    "results\\freeze.json": "46c8085c944b5ed025851362ec5ca34970a7516e56eef721e7d82206ceb18866",
+    "results\\initial_cohort_status.json": "e50409a8f0fc5cd8121a5c4bc1f0e906bda04c526df8fbcf71cd61b10c53a33c",
+    "results\\interpretation_checks.json": "dd169340f7b3c994afe7aff83077313356c517b044806528a5115cf69a8525c0",
+    "results\\runtime_initial_manifest.json": "3f3260d8f307c2552b0fc07b999afe58ce113e38792ee6dd5fc8333eef506946",
+    "results\\snapshot_validation.json": "3001b065ddf616789d8f9212820ef921f5bfa2817567881ce82cde028d664359",
+    "results\\startup_status.json": "bc6ddc7d5bf97eb4ff91f2179e7538564b0fd21b54103e732facb3ee7e20aea9",
+    "results\\verification.json": "7cb96d71e271668094c24ce6a7f515713f441a9c19677c6cdcbedcc05990b679",
+    "results\\结果解读与下一步.md": "143d56a9dc4fc4ec022ae7bd51d4da393bdd85253443ade3eb3bb4948c47ab67",
+    "run49.py": "afdbef9a0dbd33e75b7109af4297cceb066a408b6c78d1355737a050ecb76279",
+    "verify49.py": "3fb45fb54b9d5cbf2103c78cb654c75cc20034741c60e143153dbce121fc1727"
+  },
+  "freeze_sha256": "46c8085c944b5ed025851362ec5ca34970a7516e56eef721e7d82206ceb18866",
+  "old_files_preserved": 6206,
+  "protocol_sha256": "fb5ff21528a016bcf2aef7fb32ca6edf6702af588f6c4c031b52a63739002475",
+  "runtime_initial_manifest": "results/runtime_initial_manifest.json",
+  "runtime_is_separate_append_only": true,
+  "status": "PASS"
+}

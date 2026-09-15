@@ -1,0 +1,11 @@
+{
+  "status": "WITHDRAWN_DESIGN_PREFLIGHT",
+  "reason": "Greedy starts 0/1/2 immediately converge at the first eligibility gap. Training-anchor intersections were277/278,318/319,360/361, so the intended phase-sensitivity contrast was not meaningful.",
+  "detected_from": "Training masks and dates only, before inspecting or aggregating any new neural or linear validation scores.",
+  "completed_neural_fits": 4,
+  "interrupted_workers": [0,1],
+  "completed_linear_fits": 18,
+  "disposition": "Preserve every file in research_v8_preflight. Exclude these four neural fits and all preflight linear fits from final round8 comparisons. No checkpoint restart or warm start. Fresh round8 protocol uses original trading-bar anchor modulo6 phases0/1/2, then a joint-label nonoverlap filter. All other policies, model settings, seeds, budgets and statistical family remain unchanged.",
+  "validation_scores_used_for_revision": false,
+  "limitations": "Validation forecasts were automatically generated for completed fits and remain archived, although their values were not inspected before this design correction. This preflight itself does not supply independent evidence."
+}

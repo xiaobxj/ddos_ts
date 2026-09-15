@@ -1,0 +1,57 @@
+{
+  "selected": {
+    "variant": "joint_ohlcv",
+    "epoch": 10,
+    "mse": 0.0009277190677898134,
+    "rmse": 0.030458481048630994,
+    "correlation": 0.08300168205324457,
+    "forecast_std": 0.004189616836641299,
+    "accuracy": 0.5886524822695035,
+    "n": 141,
+    "balanced_accuracy": 0.5791139240506329,
+    "forecast_positive_fraction": 0.5886524822695035,
+    "actual_positive_fraction": 0.5602836879432624,
+    "within_fold_forecast_std": 0.004163108502852687,
+    "between_fold_share_of_forecast_variation": 0.012614266992936218,
+    "mse_skill_vs_training_mean": 0.007348094404531547,
+    "reassigned_mse": 0.0009607709663742667,
+    "reassignment_mse_increase": 3.305189858445335e-05
+  },
+  "baseline_metrics": [
+    {
+      "method": "training_mean",
+      "mse": 0.0009345864976034037,
+      "rmse": 0.030571007467916456,
+      "correlation": -0.16173700050739112,
+      "forecast_std": 0.00039875909620241663,
+      "accuracy": 0.5602836879432624,
+      "n": 141,
+      "balanced_accuracy": 0.5,
+      "forecast_positive_fraction": 1.0,
+      "actual_positive_fraction": 0.5602836879432624,
+      "within_fold_forecast_std": 0.0,
+      "between_fold_share_of_forecast_variation": 1.0,
+      "mse_skill_vs_training_mean": 0.0
+    },
+    {
+      "method": "zero_return",
+      "mse": 0.0009339386321189327,
+      "rmse": 0.030560409554175362,
+      "correlation": null,
+      "forecast_std": 0.0,
+      "accuracy": 0.4397163120567376,
+      "n": 141,
+      "balanced_accuracy": 0.5,
+      "forecast_positive_fraction": 0.0,
+      "actual_positive_fraction": 0.5602836879432624,
+      "within_fold_forecast_std": 0.0,
+      "between_fold_share_of_forecast_variation": null,
+      "mse_skill_vs_training_mean": 0.0006932108329538167
+    }
+  ],
+  "selection_rule": "After every fit is complete, compute three-seed mean predictions, select variant/epoch by minimum pooled RMSE; ties prefer fewer epochs then protocol variant order. No health-result-dependent pruning, new hyperparameters or budget extension. Report every candidate, per-year and per-seed errors, raw training-mean and zero-return baselines.",
+  "candidate_count": 12,
+  "validation_weeks": 141,
+  "selection_after_all_models_finished": true,
+  "selection_utc": "2026-09-10T04:34:40.108437+00:00"
+}

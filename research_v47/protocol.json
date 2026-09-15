@@ -1,0 +1,190 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "states": [
+    "negative_low",
+    "negative_high",
+    "nonnegative_low",
+    "nonnegative_high"
+  ],
+  "state_definition": "Four coarse observable groups, not learned or validated hidden regimes. Trend sign uses inherited trend60 =60bar close log change / (population sd of60daily log returns floored1e-8 * sqrt60). Negative if trend60<0; exactzero nonnegative. Volatility20 is inherited population sd of20daily log returns; low if <=annual mature rolling5 training median(linear .5 quantile), high otherwise. Annual calibration only; reset at priorDec31, same boundaries for every quarter, method and seed. No choice of state count, sign cutoff, quantile or features from subgroup outcomes. This is a new4cell diagnostic using existing descriptors, not the old R17sixcell partition or R29state90 update trigger.",
+  "preserved_results": "Original old-budget R25 recent73/12558.4%; natural20annualR25 71/12556.8%; R39quarterR23 73/12558.4%; R42 R19/R23/R25 recent69/72/71 correct unchanged.",
+  "version": 47,
+  "experiment": "Annual fixed5-year frozen-design logistic heads with fixed2-year exponential sample weighting",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-12-31",
+    "2022-12-31",
+    "2023-12-31",
+    "2024-12-31",
+    "2025-12-31"
+  ],
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Weighted MEAN binary log loss (positive weights normalized to sum1) +.01/2*sum(squared slopes) in frozen original annual standardized coordinates. Free unpenalized intercept, initialized logit(weighted training up frequency); original full-batch float64 Newton settings. No re-estimation of clipping/scales/rays/projections or neural features.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "scope": "One new annual policy only; R19/R23/R25 primary, R18 diagnostic. Keep5-calendar-year mature daily anchors, original nextopen-to-nextopen weekly target, annual natural20 neural models, all27oldhistories and fourstate diagnostic labels. Change only supervised head loss sample weights. No neural fits/inference, no extra calibration, gate, window/cadence/half-life/seed selection.",
+  "weights": "At priorDec31 cutoff, age=(cutoff-original signal date) in calendar days. Raw weight=2**(-age/730.5),2years=730.5days fixed; no floors or clipping; normalized weight=raw/sum(raw). Weight depends on date only. Membership requires joint label maturity<=cutoff and signaldate>=cutoff minus5calendar years plus1day. Allretained rows have positive mass. No latest outcomes or volatility-dependent weighting. Kish1/sum(w^2)descriptive concentration, not independent sample size.",
+  "features": "Reuse R28 annual rolling5 training/testing arrays x18,x19,x23 exactly. Neural features, market descriptor clipping/means/sd, original unweighted supervisedR18 ray and vol/order least-squares projections remain frozen. WeightedR18 fit is diagnostic and does not redefine interaction rays. Training-state residual orthogonality remains the original unweighted property; no weighted orthogonality claim. This isolates weighted convex coefficients under fixed supervised feature engineering, not a fully weighted pipeline or OOF experiment.",
+  "fitting": "18annualcutoff/seedjobs. Fit weightedR18,R19,R23 jointly in respective frozen29/30/31-feature coordinates; forR25 freeze newly weightedR19 allcoefficients/intercept and fit onlygamma on frozenorder residual. Originallambda.01, free intercept exceptR25 none, no new coefficient caps. Normalized weighted objective keeps regularization scale comparable; 54joint+18scalar=72candidatefits. Trainall72beforeANYnewweeklyscoring.",
+  "controls": "Copy annual native_mse and unweighted training_frequency exactly into candidatehistory. Separately report timeweighted training frequency and its weekly forecasts as descriptive diagnostic only, to expose class-prior shifts; no additional candidate fits or p-value tests for it.",
+  "scoring": "Annual cutoff=priorDec31 strictly earlier than originalweeklysignal. Three original seed mean probabilities using original per-groupSeries.mean;strict>.5up. Frozen same272weeks2021-Aug2026 and no future labels in fitting. No posthoc probability calibration. One newhistory,27oldhistories preserved.",
+  "primary_comparisons_per_window": [
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_timeweight2y",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    }
+  ],
+  "inference": "24predeclared exploratorycomparisons:1candidate x2references x3primarymethods x2losses x2periods. Circular8week10000bootstrap,seed20260910,centered2sidedp andHolmacross24. Allhistoryviewed; no blindholdout or adjustmentforadaptivepriorrounds.",
+  "verification": "Freeze11sources,protocol,weightmembership,inputhashes and6056oldfiles; inheritedverified18annualmodel/cacheprovenance. Independentlyreconstruct membership,causality,calendarweights,ESS,andfrozenfeaturealgebra. Equalweightobjective/gradient/Hessian equivalence tooriginal; finite differences andweightscaling checks. Archiveduniformheads must still satisfyoriginaloptimalityandpredictions. Freeze72candidatefits;independently solve54viaL-BFGS-B and18viaBrent. Poisonfuture/outside-trainingdata andrequire unchangedtraininginterface; verify allpredictions,exactcontrols,27oldhistories,metrics,diagnosticsand24comparisons;reportvisualreviewanddelivery.",
+  "limitations": "Daily labels overlap; weight concentration is not independent N. Learned frozen features/rays already use same historical training labels as original, no OOFclaim. Dateweighting doesnot identify latentstates. R25conditionalparent refit uses sameweightedtrainingrows. Allhistoricaloutcomes previouslyviewed; no strategyPnL, baselinepromotionordeployment claim.",
+  "budgets": {
+    "source_files": 11,
+    "old_files": 6056,
+    "annual_cutoffs": 6,
+    "seeds": 3,
+    "jobs": 18,
+    "new_head_fits": 72,
+    "joint_fits": 54,
+    "scalar_fits": 18,
+    "new_neural_fits": 0,
+    "new_feature_inference": 0,
+    "old_histories": 27,
+    "total_histories": 28,
+    "new_learned_seed_predictions": 3264,
+    "new_model_rows": 4352,
+    "total_model_rows": 121856,
+    "total_ensemble_rows": 45696,
+    "comparisons": 24
+  }
+}

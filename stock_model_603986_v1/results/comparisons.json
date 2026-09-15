@@ -1,0 +1,27 @@
+{
+  "main_history": "rolling5_annual20",
+  "main_method": "learned_vol_interaction",
+  "block_weeks": 8,
+  "replicates": 10000,
+  "interpretation": "Descriptive retrospective uncertainty, not untouched confirmation or trading profitability.",
+  "comparisons": [
+    {
+      "reference": "training_frequency",
+      "n": 175,
+      "brier_difference": 0.016022313784362977,
+      "ci95_low": -0.003983366505046115,
+      "ci95_high": 0.03645060964584792,
+      "p_centered_two_sided": 0.11888811118888111,
+      "p_holm_two": 0.19198080191980801
+    },
+    {
+      "reference": "market4",
+      "n": 175,
+      "brier_difference": 0.015221992198644913,
+      "ci95_low": -0.0026514747731093647,
+      "ci95_high": 0.03279503268894319,
+      "p_centered_two_sided": 0.09599040095990401,
+      "p_holm_two": 0.19198080191980801
+    }
+  ]
+}

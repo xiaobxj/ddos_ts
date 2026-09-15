@@ -1,0 +1,245 @@
+{
+  "changed_prefix_blocked": true,
+  "ensemble_predictions": 20,
+  "evaluation_status": "DESCRIPTIVE_ONLY",
+  "fixture_files": {
+    "SYNTHETIC_TEST_ONLY_journal\\blobs\\1e0b72d54a74e381abcc1bf3553a51c711edf4a517385b44c10b7bade5787e0c.csv": "1e0b72d54a74e381abcc1bf3553a51c711edf4a517385b44c10b7bade5787e0c",
+    "SYNTHETIC_TEST_ONLY_journal\\blobs\\25204fd884d5787b380a65534e6346b2682149e53f57eb090d1a9c8cdfcb496d.csv": "25204fd884d5787b380a65534e6346b2682149e53f57eb090d1a9c8cdfcb496d",
+    "SYNTHETIC_TEST_ONLY_journal\\blobs\\360f5adfa7b6eee0d23e049bac181d29aa8bc186e7d428b273b3011b09579efd.csv": "360f5adfa7b6eee0d23e049bac181d29aa8bc186e7d428b273b3011b09579efd",
+    "SYNTHETIC_TEST_ONLY_journal\\blobs\\9ae85ce98d8e13457d09bae15c8f4ed3e4453d6afceeb4b9de62ab27b71aa92d.csv": "9ae85ce98d8e13457d09bae15c8f4ed3e4453d6afceeb4b9de62ab27b71aa92d",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000001.json": "991e569b800dee83c770e80ffeee617ab9fc0b7d7c88f2ba150726932367ae0f",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000002.json": "bbc53e5b080ea960d4f2ff3c6c28e0ba57bc21af0231c3a24a090e6ce5a86c6f",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000003.json": "af8cd00ad2f2669547ae980fe7a212d521f72e46d6ab0b81a8d3d9bd5068e7e4",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000004.json": "4ca0a22cb47eba9e0c653f7c111f8598b8629d71aae5426a940c3c180b9b20a6",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000005.json": "376d09511294a49541cd9fa2f8ae65454ebcd88238dcfa1287d70c2fc9346409",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000006.json": "870680f3dde5808767313709852ad907a41fea2b27b170ad1badacf2d576f377",
+    "SYNTHETIC_TEST_ONLY_journal\\events\\000007.json": "c74fae7a61400a00d8cf5c6fd42ca4eb7feea8553ddc5178c7b32b7306126d93",
+    "SYNTHETIC_TEST_ONLY_journal\\genesis.json": "286d71ee44a0b37270bf9d6013934bf26cea0c53994e02eb28fc04bf26995793",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\0d7f226323c244a18a37a4776f7fd46b.json": "b97bce2242e7096c12f8c58a6438664868bb7dc772021c233011eb8631f41d0d",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\0d7f226323c244a18a37a4776f7fd46b.started.json": "784918cc4072319faf47a1d57a7e5058a68f5148eb59b5324bb2edd0178337fa",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\171cfbbf79c247c79ca8fa368d4279bc.json": "eed4bc80b3753235439c377ae62a85bc995e7d7d37293aca3e2f205e7d768b20",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\171cfbbf79c247c79ca8fa368d4279bc.started.json": "36cf32eb900a3d2128e2b0de0b2e99022564c95ce809ee6173ca405eed1377e5",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\4fff55d6bf1f4cfdb6ef9234f003cfae.json": "7789a7ded93db79ccdd6c79697f4dda87fce61bddd756a7e486c7c9b11927005",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\4fff55d6bf1f4cfdb6ef9234f003cfae.started.json": "e3501bc72d86770569becf07a30fc7e970fb38f38fd0874e65f171ffa73b8357",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\87b28737a81a4e1ebb752872209c6901.json": "01617a42b8df6e28cd116a959ab33b99a5cc339459c46952b82f635980d8dea0",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\87b28737a81a4e1ebb752872209c6901.started.json": "420497b747f537a37b0daec7f4d393a86722d961856b80749b7fc0145e3557d4",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\91f10f4a754a448b888b81f336b7ed70.json": "c23ab14ba8c23a9315b4ae153a8c4b1becd078a64fe3122498c13158b056d340",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\91f10f4a754a448b888b81f336b7ed70.started.json": "557fbf2fba72b923fec8b7c13d5147d9f82c9a788f32650acd0fcb9b1768316b",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\df6d648a70b743a4a6b52d65f9b0d802.json": "a51e6232228f428ae6b9c7cdecb2ba80785cc666bdbcbf074ab4a0c65dc4b1d0",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\df6d648a70b743a4a6b52d65f9b0d802.started.json": "d9f17e1bd8cb681ab96436a26b697718c7ea2fff71da376273dc28f62f084419",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\e0b6b45fbc574cd3aa36f4a0556677e6.json": "d96b2d563165d0cbed6b446888593566bb567ec1d0f174723bd0da9f6dfb9ea8",
+    "SYNTHETIC_TEST_ONLY_runs\\runs\\e0b6b45fbc574cd3aa36f4a0556677e6.started.json": "10ea2c822feb8f25364062570369aad7bf55817ef14ee337115acd5c59e81560"
+  },
+  "future_parameter_fits": 0,
+  "label": {
+    "actual_up": 1,
+    "entry_date": "2026-09-21",
+    "exec_return": 0.004975124378109541,
+    "exit_date": "2026-09-28",
+    "joint_completed": "2026-09-28",
+    "status": "MATURE"
+  },
+  "model_package_sha256": "13d5afbea2658c47aa0572c345d3168b018652193f69d4b4b26cd8e79d82030d",
+  "no_september25_backfill": true,
+  "seed_predictions": 60,
+  "stages": [
+    {
+      "counts": {
+        "date_cst": "2026-09-18",
+        "due_parameter_cutoffs": [],
+        "fetch_needed": false,
+        "journal_events": 1,
+        "labels": 0,
+        "latest_snapshot_end": null,
+        "next_parameter_cutoff": "2026-09-30",
+        "next_unrecorded_signal": "2026-09-18",
+        "now_utc": "2026-09-18T09:59:59+00:00",
+        "pending_labels": 0,
+        "recorded_predictions": 0,
+        "recording_window_open": false,
+        "scheduler_installed": false,
+        "status": "PRE_CLOSE_WAIT"
+      },
+      "stage": "before_friday_close",
+      "status": "PRE_CLOSE_WAIT",
+      "steps": []
+    },
+    {
+      "counts": {
+        "date_cst": "2026-09-18",
+        "due_parameter_cutoffs": [],
+        "fetch_needed": false,
+        "journal_events": 3,
+        "labels": 0,
+        "latest_snapshot_end": "2026-09-18",
+        "next_parameter_cutoff": "2026-09-30",
+        "next_unrecorded_signal": "2026-09-25",
+        "now_utc": "2026-09-18T10:30:00+00:00",
+        "pending_labels": 1,
+        "recorded_predictions": 1,
+        "recording_window_open": true,
+        "scheduler_installed": false,
+        "status": "READY_FOR_MANUAL_CYCLE"
+      },
+      "stage": "friday_timely_prediction",
+      "status": "COMPLETED",
+      "steps": [
+        {
+          "action": "fetch",
+          "end": "2026-09-18",
+          "sequence": 2
+        },
+        {
+          "action": "record",
+          "date": "2026-09-18",
+          "sequence": 3
+        },
+        {
+          "action": "settle",
+          "committed": 0,
+          "pending": 1
+        }
+      ]
+    },
+    {
+      "counts": {
+        "date_cst": "2026-09-18",
+        "due_parameter_cutoffs": [],
+        "fetch_needed": false,
+        "journal_events": 3,
+        "labels": 0,
+        "latest_snapshot_end": "2026-09-18",
+        "next_parameter_cutoff": "2026-09-30",
+        "next_unrecorded_signal": "2026-09-25",
+        "now_utc": "2026-09-18T10:31:00+00:00",
+        "pending_labels": 1,
+        "recorded_predictions": 1,
+        "recording_window_open": true,
+        "scheduler_installed": false,
+        "status": "READY_FOR_MANUAL_CYCLE"
+      },
+      "stage": "same_friday_rerun",
+      "status": "COMPLETED",
+      "steps": [
+        {
+          "action": "record",
+          "status": "ALREADY_RECORDED"
+        },
+        {
+          "action": "settle",
+          "committed": 0,
+          "pending": 1
+        }
+      ]
+    },
+    {
+      "counts": {
+        "date_cst": "2026-09-25",
+        "due_parameter_cutoffs": [],
+        "fetch_needed": false,
+        "journal_events": 4,
+        "labels": 0,
+        "latest_snapshot_end": "2026-09-25",
+        "next_parameter_cutoff": "2026-09-30",
+        "next_unrecorded_signal": "2026-10-02",
+        "now_utc": "2026-09-25T15:05:00+00:00",
+        "pending_labels": 1,
+        "recorded_predictions": 1,
+        "recording_window_open": false,
+        "scheduler_installed": false,
+        "status": "READY_FOR_MANUAL_CYCLE"
+      },
+      "stage": "next_friday_after_deadline",
+      "status": "COMPLETED",
+      "steps": [
+        {
+          "action": "fetch",
+          "end": "2026-09-25",
+          "sequence": 4
+        },
+        {
+          "action": "record",
+          "status": "OUTSIDE_RECORDING_WINDOW"
+        },
+        {
+          "action": "settle",
+          "committed": 0,
+          "pending": 1
+        }
+      ]
+    },
+    {
+      "counts": {
+        "date_cst": "2026-09-28",
+        "due_parameter_cutoffs": [],
+        "fetch_needed": false,
+        "journal_events": 6,
+        "labels": 1,
+        "latest_snapshot_end": "2026-09-28",
+        "next_parameter_cutoff": "2026-09-30",
+        "next_unrecorded_signal": "2026-10-02",
+        "now_utc": "2026-09-28T10:30:00+00:00",
+        "pending_labels": 0,
+        "recorded_predictions": 1,
+        "recording_window_open": false,
+        "scheduler_installed": false,
+        "status": "READY_FOR_MANUAL_CYCLE"
+      },
+      "stage": "following_monday_mature_label",
+      "status": "COMPLETED",
+      "steps": [
+        {
+          "action": "fetch",
+          "end": "2026-09-28",
+          "sequence": 5
+        },
+        {
+          "action": "record",
+          "status": "OUTSIDE_RECORDING_WINDOW"
+        },
+        {
+          "action": "settle",
+          "committed": 1,
+          "pending": 0
+        }
+      ]
+    },
+    {
+      "counts": {
+        "date_cst": "2026-09-28",
+        "due_parameter_cutoffs": [],
+        "fetch_needed": false,
+        "journal_events": 6,
+        "labels": 1,
+        "latest_snapshot_end": "2026-09-28",
+        "next_parameter_cutoff": "2026-09-30",
+        "next_unrecorded_signal": "2026-10-02",
+        "now_utc": "2026-09-28T10:31:00+00:00",
+        "pending_labels": 0,
+        "recorded_predictions": 1,
+        "recording_window_open": false,
+        "scheduler_installed": false,
+        "status": "READY_FOR_MANUAL_CYCLE"
+      },
+      "stage": "mature_label_rerun",
+      "status": "COMPLETED",
+      "steps": [
+        {
+          "action": "record",
+          "status": "OUTSIDE_RECORDING_WINDOW"
+        },
+        {
+          "action": "settle",
+          "committed": 0,
+          "pending": 0
+        }
+      ]
+    }
+  ],
+  "statistical_comparisons": 0,
+  "status": "PASS",
+  "synthetic_prediction_dates": [
+    "2026-09-18"
+  ],
+  "synthetic_test_only": true
+}

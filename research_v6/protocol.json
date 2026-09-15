@@ -1,0 +1,37 @@
+{
+  "experiment": "Round 6: model width, regularization, and chronological training-block sensitivity",
+  "version": 6,
+  "scope": "Controlled exploratory research using the already inspected 2018-2020 raw-input validation window. No new 2024-2026 scoring, market data, pretrained representations, transaction simulation or live changes.",
+  "data": "Reuse all 3780 shared observations, raw 25 x 5 x 5 fixed patches, geometry, masks and return/auxiliary labels from round 5 byte-for-byte. Keep its five stricter auxiliary-target exclusions. All training labels must have joint_completed <= annual cutoff.",
+  "fixed_objective": "Standardized execution-return MSE + 0.1 * standardized future-five-bar OHLCV MSE. Identical zero-initialized scalar head and isolated-seed auxiliary head from round-5 joint_ohlcv. This weak round-5 candidate is an attribution anchor, not an established successful predictor. Label scaling uses only the retained mature training observations.",
+  "architecture": {"dims": 5, "n_heads": 4, "e_layers": 2, "factor": 4},
+  "arms": [
+    {"name": "baseline", "d_model": 32, "d_ff": 64, "dropout": 0.1, "weight_decay": 0.01},
+    {"name": "small", "d_model": 16, "d_ff": 32, "dropout": 0.1, "weight_decay": 0.01},
+    {"name": "dropout", "d_model": 32, "d_ff": 64, "dropout": 0.3, "weight_decay": 0.01},
+    {"name": "decay", "d_model": 32, "d_ff": 64, "dropout": 0.1, "weight_decay": 0.1},
+    {"name": "combined", "d_model": 16, "d_ff": 32, "dropout": 0.3, "weight_decay": 0.1}
+  ],
+  "factor_interpretation": "The first three changes are one-factor contrasts against baseline. Combined is a bundled candidate; the design is not a full factorial and cannot identify every interaction. Width changes preserve number of layers and heads; per-head width changes accordingly.",
+  "folds": [
+    {"cutoff": "2017-12-31", "end": "2018-12-31"},
+    {"cutoff": "2018-12-31", "end": "2019-12-31"},
+    {"cutoff": "2019-12-31", "end": "2020-12-31"}
+  ],
+  "validation_rows": "Friday signals after cutoff and through fold end, with joint_completed <= 2020-12-31. Identical 141 weeks for every arm and training-history perturbation.",
+  "training": {"seeds": [20260910, 20260911, 20260912], "epochs": [2, 5, 10, 20], "max_epochs": 20, "batch_size": 128, "learning_rate": 0.001, "optimizer": "AdamW", "gradient_clip_norm": 1.0, "auxiliary_weight": 0.1},
+  "main_budget": "5 arms x 3 annual folds x 3 seeds = 45 fits, trained for all 20 epochs, with 180 saved checkpoints. No early pruning or outcome-dependent changes.",
+  "selection": "After every main fit is finished, average the three seeds per week and rank all 20 arm/epoch candidates by pooled RMSE. Ties prefer fewer epochs, then protocol arm order. Selection uses only full-history validation, never block sensitivity, direction accuracy or training loss. Winner is exploratory and receives no independent confirmation claim.",
+  "primary_comparisons": {"epoch": 10, "reference": "baseline", "arms": ["small", "dropout", "decay", "combined"], "loss": "paired weekly squared execution-return error of three-seed ensemble predictions", "bootstrap": "10000 circular moving-block replicates of 8 consecutive validation observations, seed 20260910; centered two-sided p; Holm adjustment across four comparisons. Historical reuse remains a limitation even with multiplicity adjustment."},
+  "training_block_sensitivity": {
+    "seed": 20260910, "epochs": 10,
+    "masks": ["drop_early", "drop_middle", "drop_recent"],
+    "definition": "Sort each fold's mature training observations chronologically, divide indices into five consecutive groups with numpy.array_split, and omit group 0, 2 or 4. These are labeled-anchor deletions of approximately 20%, not purges of the underlying bars from every remaining lookback. All arms use exactly the same retained observations.",
+    "update_budget": "Each nominal epoch presents the original full training count. Shuffle retained indices without replacement; if more presentations are needed, append a fresh permutation and truncate. Full-history epochs retain exactly the round-5 permutation routine. Batch count, final batch size, learning rate and optimizer steps match full history, so smaller retained sets do not simply get fewer updates. Retained observations are repeated to match this budget; this is a sensitivity stress, not an ordinary unweighted reduced-data refit.",
+    "budget": "3 deletions x 5 arms x 3 folds x one fixed seed = 45 fits and 45 checkpoints. Reuse the same seed's main epoch-10 forecasts as full-history reference. Never choose the best deletion or change epochs based on these results.",
+    "outputs": "All history/arm errors vs their retained-sample training mean; matched-history arm minus baseline error; changes relative to full history; prediction RMS shift, sign disagreement and rank stability. Yearly and seed results are also reported. Single-seed deletion results cannot separate all initialization interactions."
+  },
+  "baselines": "Recompute mature training mean and zero-return references; preserve round-5 joint_ohlcv and round-4 selected raw-fixed forecasts unchanged. Round-6 baseline must reproduce all round-5 joint forecasts at all four epochs. Round-4 reference has five additional early training observations and is descriptive, not a strictly controlled size/regularization comparison.",
+  "verification": "Before training, test baseline state/RNG parity, nonzero auxiliary-to-backbone gradients, small-model dimensions, deterministic retained-only update budgets and masks. Freeze protocol, source, input and prior-evidence hashes. After training, replay all 225 checkpoints, independently recompute every fold/mask/target scale, compare baseline predictions to round 5, and recompute metrics and selection. Preserve all previous research evidence.",
+  "execution": "Existing research_v4/.venv_gpu CUDA float32 runtime, deterministic algorithms, CUBLAS_WORKSPACE_CONFIG=:4096:8, TF32 off, four CPU threads. No package installation or shared environment edits."
+}

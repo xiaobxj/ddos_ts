@@ -1,0 +1,30 @@
+             period                  history                  method  correct_directions   n    brier
+extension_2021_2023 annual_head_timeweight2y learned_order_extension                  71 147 0.269979
+extension_2021_2023 annual_head_timeweight2y    learned_order_offset                  70 147 0.270223
+extension_2021_2023 annual_head_timeweight2y learned_vol_interaction                  70 147 0.272968
+extension_2021_2023        rolling5_annual20 learned_order_extension                  68 147 0.276195
+extension_2021_2023        rolling5_annual20    learned_order_offset                  68 147 0.276108
+extension_2021_2023        rolling5_annual20 learned_vol_interaction                  71 147 0.277967
+extension_2021_2023   weekly_state_validated learned_order_extension                  69 147 0.275610
+extension_2021_2023   weekly_state_validated    learned_order_offset                  69 147 0.275517
+extension_2021_2023   weekly_state_validated learned_vol_interaction                  72 147 0.277416
+   recent_2024_2026 annual_head_timeweight2y learned_order_extension                  64 125 0.255758
+   recent_2024_2026 annual_head_timeweight2y    learned_order_offset                  65 125 0.255844
+   recent_2024_2026 annual_head_timeweight2y learned_vol_interaction                  66 125 0.252067
+   recent_2024_2026        rolling5_annual20 learned_order_extension                  72 125 0.249790
+   recent_2024_2026        rolling5_annual20    learned_order_offset                  71 125 0.249824
+   recent_2024_2026        rolling5_annual20 learned_vol_interaction                  68 125 0.246843
+   recent_2024_2026   weekly_state_validated learned_order_extension                  73 125 0.248903
+   recent_2024_2026   weekly_state_validated    learned_order_offset                  72 125 0.248933
+   recent_2024_2026   weekly_state_validated learned_vol_interaction                  69 125 0.246156
+          year_2026 annual_head_timeweight2y learned_order_extension                  12  30 0.257244
+          year_2026 annual_head_timeweight2y    learned_order_offset                  12  30 0.257143
+          year_2026 annual_head_timeweight2y learned_vol_interaction                  13  30 0.257902
+          year_2026        rolling5_annual20 learned_order_extension                  16  30 0.257140
+          year_2026        rolling5_annual20    learned_order_offset                  16  30 0.257098
+          year_2026        rolling5_annual20 learned_vol_interaction                  12  30 0.257501
+          year_2026   weekly_state_validated learned_order_extension                  16  30 0.257140
+          year_2026   weekly_state_validated    learned_order_offset                  16  30 0.257098
+          year_2026   weekly_state_validated learned_vol_interaction                  12  30 0.258700
+
+EXIT_CODE=0

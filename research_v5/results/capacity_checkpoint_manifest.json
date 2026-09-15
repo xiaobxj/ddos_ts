@@ -1,0 +1,362 @@
+[
+  {
+    "representation": "raw",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\raw_return_zero_real_20260910.pt",
+    "sha256": "8965aa92f66cce18aab2f38c35d93be65e95c242f8db8a0b1b12b7f8dcb13b69"
+  },
+  {
+    "representation": "raw",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\raw_return_zero_real_20260911.pt",
+    "sha256": "3b14a629975f7b0c61f94009bba158e70054b2d5cf04e4b6cae2a155ac7c05a7"
+  },
+  {
+    "representation": "raw",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\raw_return_zero_real_20260912.pt",
+    "sha256": "c390b7a89ac98721d591a4bf8e5b480edf24087c6d8e991d29b4bc1c8e7f7236"
+  },
+  {
+    "representation": "raw",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\raw_return_nonzero_real_20260910.pt",
+    "sha256": "b129da4a5de24da57cbcdc4a293262ff19d42ff04307abba55b2ce7875ae2d0d"
+  },
+  {
+    "representation": "raw",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\raw_return_nonzero_real_20260911.pt",
+    "sha256": "850390768d2c5f18eac88aa4385d41c7d9891f9736e66154328b681b92ab95e5"
+  },
+  {
+    "representation": "raw",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\raw_return_nonzero_real_20260912.pt",
+    "sha256": "c030629dd200d192c5a93228f38d241ee7a3c5493d4cc60f04d3d5ab80d7cd1a"
+  },
+  {
+    "representation": "raw",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\raw_joint_ohlcv_real_20260910.pt",
+    "sha256": "efd6a6e255e2629595e538b5bee4b7d24cd1b3befbc5e3a6565894c3e1bb1273"
+  },
+  {
+    "representation": "raw",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\raw_joint_ohlcv_real_20260911.pt",
+    "sha256": "252058a806307fa8b57b719006e85683d21c67510de739e417ca917bb19a0a2e"
+  },
+  {
+    "representation": "raw",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\raw_joint_ohlcv_real_20260912.pt",
+    "sha256": "130f97848d8087f4ba5a84a8f01983db215d96e66b22858d34b88fa6e79de471"
+  },
+  {
+    "representation": "raw",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\raw_mlp_real_20260910.pt",
+    "sha256": "495f3a6734f80f081c6ab024b9392112c7e8ce91e23acdc6c7d17d578971f540"
+  },
+  {
+    "representation": "raw",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\raw_mlp_real_20260911.pt",
+    "sha256": "9fbdc416d3e067388ab07b2deed832803409ebefa936af9432d56cf9be3f3f77"
+  },
+  {
+    "representation": "raw",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\raw_mlp_real_20260912.pt",
+    "sha256": "b0ec96560de21281ac9cf6f69afc3d958ceb942b293b24ea737a9b43ad949e7d"
+  },
+  {
+    "representation": "raw",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\raw_mlp_permuted_20260910.pt",
+    "sha256": "5a17c35425ad6374f98127004d70fed8745871cd2caa01dbb8f44497c8d37436"
+  },
+  {
+    "representation": "raw",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\raw_mlp_permuted_20260911.pt",
+    "sha256": "016de995f41c91700423e2181fb624bb4b2c83fefcd2ddb342279cff9fe28bf4"
+  },
+  {
+    "representation": "raw",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\raw_mlp_permuted_20260912.pt",
+    "sha256": "4d96e2488ad8cb5688d2b04fe981f8cf63dbb008319a91188020fd4528e4e32b"
+  },
+  {
+    "representation": "bits",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\bits_return_zero_real_20260910.pt",
+    "sha256": "958182d275a36741ef73eb5ac23d999abbf59e2517376a5787c9cdbbcfef3132"
+  },
+  {
+    "representation": "bits",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\bits_return_zero_real_20260911.pt",
+    "sha256": "5f54830857e76d185f7521e650e7f81ae366715bc849d7d77cd2522f8849f11e"
+  },
+  {
+    "representation": "bits",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\bits_return_zero_real_20260912.pt",
+    "sha256": "5af0206d81399faa0748588163b135e86852ac6a861ca935fd72f2b64eab8049"
+  },
+  {
+    "representation": "bits",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\bits_return_nonzero_real_20260910.pt",
+    "sha256": "5e1f754f7dce66610bd104cc0b54af5fedce929aafd12fa2938c9f1e1850bf2c"
+  },
+  {
+    "representation": "bits",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\bits_return_nonzero_real_20260911.pt",
+    "sha256": "4c19a8e86b092b499818e7e1c82506b6a149bd3824fd042956c86a1c13f3b0a6"
+  },
+  {
+    "representation": "bits",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\bits_return_nonzero_real_20260912.pt",
+    "sha256": "c725364569d89104db26f821518604b9b96739e6af52fdac87cb689a7dd80206"
+  },
+  {
+    "representation": "bits",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\bits_joint_ohlcv_real_20260910.pt",
+    "sha256": "6eece6cf16f571d22c92fd70f0149bb2408146058c9ee6aa0e42d7f671a43764"
+  },
+  {
+    "representation": "bits",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\bits_joint_ohlcv_real_20260911.pt",
+    "sha256": "8d67d14d72e0c55d9e05ab6e7cca0ee77aa2db9bd0a916d3708b0f91fa20ccdd"
+  },
+  {
+    "representation": "bits",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\bits_joint_ohlcv_real_20260912.pt",
+    "sha256": "db2d10eff0a8005a084aa43bb37c20ef27fbe4cd3b4622d3bfff9f629123d045"
+  },
+  {
+    "representation": "bits",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\bits_mlp_real_20260910.pt",
+    "sha256": "91fa259325d372fce8868ab25362046552f3270ebc3e17d3331baae1e3c4c9bb"
+  },
+  {
+    "representation": "bits",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\bits_mlp_real_20260911.pt",
+    "sha256": "e6edb6da91e0951207c16d616ee1c0275073408e350de45ef768f35b72f39ec9"
+  },
+  {
+    "representation": "bits",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\bits_mlp_real_20260912.pt",
+    "sha256": "ae33377d1fb115c8902a87e176f67628b613d5ade2f65c72106c118a8b67b7e3"
+  },
+  {
+    "representation": "bits",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\bits_mlp_permuted_20260910.pt",
+    "sha256": "30aec7084ad26d169185e44bc61ee3e17fc87c8086c795e7a8731cc902dee1b3"
+  },
+  {
+    "representation": "bits",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\bits_mlp_permuted_20260911.pt",
+    "sha256": "0d6ebf3ebe952ea99953c6636e5f74f15db5081ed6333304be14ac69e41e8852"
+  },
+  {
+    "representation": "bits",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\bits_mlp_permuted_20260912.pt",
+    "sha256": "de8350b852550923b2e479eec0eeec3ce3c831af201b9616fa295dadb4a297d9"
+  },
+  {
+    "representation": "continuous",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\continuous_return_zero_real_20260910.pt",
+    "sha256": "527241f7adbdf0707fda9474f07e363dcf52bfee06130974f668ccbfe214c968"
+  },
+  {
+    "representation": "continuous",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\continuous_return_zero_real_20260911.pt",
+    "sha256": "f7e97535ddc1befb7d90179cc61c385b4d15acd1618727bccfedec4912887774"
+  },
+  {
+    "representation": "continuous",
+    "variant": "return_zero",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\continuous_return_zero_real_20260912.pt",
+    "sha256": "16f4df3215f8a3d5d077fd47f13f49f1a31a7f0f8749cf9eaf865a0e90dbe940"
+  },
+  {
+    "representation": "continuous",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\continuous_return_nonzero_real_20260910.pt",
+    "sha256": "24d6307c810bf09aabcb86fb9b31d9d43f7d6af4eea1bab8353b069f77c61d14"
+  },
+  {
+    "representation": "continuous",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\continuous_return_nonzero_real_20260911.pt",
+    "sha256": "e1f95255a40d70ccf1d99219c8a7bf3b462a38e941908521ee29b6123c40066f"
+  },
+  {
+    "representation": "continuous",
+    "variant": "return_nonzero",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\continuous_return_nonzero_real_20260912.pt",
+    "sha256": "cca6348cfdc6ee1292d10ffb1a93f60dee33b8df6212d14fecfb2da0d7ad1148"
+  },
+  {
+    "representation": "continuous",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\continuous_joint_ohlcv_real_20260910.pt",
+    "sha256": "45c8cce9ea3bbe6cfe9254c865ada4c4474a21dcccfa0a3c69cc7e6e08c83146"
+  },
+  {
+    "representation": "continuous",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\continuous_joint_ohlcv_real_20260911.pt",
+    "sha256": "c76b56d231dc6b0e0edf4126a0ad741a1e572701320755aff60c176853532443"
+  },
+  {
+    "representation": "continuous",
+    "variant": "joint_ohlcv",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\continuous_joint_ohlcv_real_20260912.pt",
+    "sha256": "7574df5296222def3f1d1cf515041851485ab85772f2f3b6427bb294297f4e06"
+  },
+  {
+    "representation": "continuous",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\continuous_mlp_real_20260910.pt",
+    "sha256": "86d0a5818c5119366721c4bfdf737777957b564a1d1fd62403b30c2406598158"
+  },
+  {
+    "representation": "continuous",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\continuous_mlp_real_20260911.pt",
+    "sha256": "719a8b8198d35d87d28490e613fe8d57d7cde90e28dfd7418faaed5cdd16d6c0"
+  },
+  {
+    "representation": "continuous",
+    "variant": "mlp",
+    "label_kind": "real",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\continuous_mlp_real_20260912.pt",
+    "sha256": "8df4a071923085cb7426c6c0432e1cc06d0d0286ed165d0664cdfb399efea19b"
+  },
+  {
+    "representation": "continuous",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260910,
+    "file": "results\\capacity_checkpoints\\continuous_mlp_permuted_20260910.pt",
+    "sha256": "6a23e79ce04d216ef5d735814cfc064b958a1d352a0bf8ed79ed7670674f7b54"
+  },
+  {
+    "representation": "continuous",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260911,
+    "file": "results\\capacity_checkpoints\\continuous_mlp_permuted_20260911.pt",
+    "sha256": "49cfd6533ee049b0c22a802a4c7cc9c2699414074e25b5e93354fd6e9794c945"
+  },
+  {
+    "representation": "continuous",
+    "variant": "mlp",
+    "label_kind": "permuted",
+    "seed": 20260912,
+    "file": "results\\capacity_checkpoints\\continuous_mlp_permuted_20260912.pt",
+    "sha256": "79f19061fc99ac9395f867d328065fec511c6a534233f8753166bf409ba20c4b"
+  }
+]

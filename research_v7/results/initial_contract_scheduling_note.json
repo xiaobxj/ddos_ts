@@ -1,0 +1,5 @@
+{
+  "issue": "Contract tests were started before the asynchronous preparation command finished generating reused_full_predictions.csv.",
+  "observed_failure": "One FileNotFoundError; two other tests passed. No training worker had been started.",
+  "resolution": "Wait for preparation to finish successfully, then rerun the unchanged contract tests. Protocol, inputs, training code and test assertions remain unchanged. Preserve the initial error log."
+}

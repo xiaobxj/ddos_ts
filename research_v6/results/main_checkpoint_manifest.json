@@ -1,0 +1,1622 @@
+[
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260910_epoch2.pt",
+    "sha256": "f7e75e37ec22a4bcd05d84d35d33937c23140729fe9c660dbc43506830457c4a",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260910_epoch5.pt",
+    "sha256": "0723edb579629de417c811dd497640513750877655e7ff6de77004ed21e83ba4",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260910_epoch10.pt",
+    "sha256": "9879e4d890e1247d2f016e841cffb207f7b7d3084cabc34d9de872c793fba833",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260910_epoch20.pt",
+    "sha256": "30ec96c1cf991752d1457d254492d26d9bfc11bea606796f45e3f468134d9e60",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260911_epoch2.pt",
+    "sha256": "53ac71c9f73d3257a6ce11af34c272fd506b0687ee93aac5d0d4c7590866b5ec",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260911_epoch5.pt",
+    "sha256": "f46838985d1fd48342ea9cf9f29093bca4ea46b2750fafe5a0ba666ba899d8f5",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260911_epoch10.pt",
+    "sha256": "e77f64c0cfe943efe1ff090b1cd7b5d388b4d3e659f50a7c38b3123252fe2d75",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260911_epoch20.pt",
+    "sha256": "75c4714c117c68ee158faf7ed2c4b2ec4a5abf1454728b0a5ef9a87f86c89241",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260912_epoch2.pt",
+    "sha256": "6db5c3d0bff22c50420b9c9205a50e6ea62b3848b82fb9ada837ad3b68eba565",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260912_epoch5.pt",
+    "sha256": "69d83d8aae8eed09bc8e1d1a022b97ef0cfa50366ddb7e7f9ccb0fd5e4cf162b",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260912_epoch10.pt",
+    "sha256": "8c95d354fcb1444ca0fc1377e66c486849345c966b766f92db8511dd88563292",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2017-12-31_20260912_epoch20.pt",
+    "sha256": "66f5daa4e09420095323499b75867db5a913467e1b972317f8d2a6d6a10d1acb",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260910_epoch2.pt",
+    "sha256": "a064b3d92dcbf445ba88212f1ed2f0980dc7e3f4a05605f029e449571d10acb6",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260910_epoch5.pt",
+    "sha256": "6fcaf11b45435971faccf1fed8ad94541d5ecc0e11ce790d864e54de90c1e550",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260910_epoch10.pt",
+    "sha256": "86faf8be984630e1b1afd5cd38696874b3af38b004a624c715422a5214968e86",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260910_epoch20.pt",
+    "sha256": "0b63caedf7e3e84ca14fde42886633403da1003d83c983033683e787963e5fe6",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260911_epoch2.pt",
+    "sha256": "8ad349c43692d067ee9b68605484e74d99023cfc07a95196b10dd74797227523",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260911_epoch5.pt",
+    "sha256": "dff854f2087c1f4a6a07855f660c3921d9bf76bf3cb1d818c57e34db3d321387",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260911_epoch10.pt",
+    "sha256": "d1d23830339de961e942e85189c531980f34435910090eae50dba6bfeb385de5",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260911_epoch20.pt",
+    "sha256": "cc03104e45977a4e2f4945ae42809f187c6c9c74ca31dcda57fb0e9074ea5f2f",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260912_epoch2.pt",
+    "sha256": "99621d791db510d449cefbd773ea084322979d48cb4d68a4fa192ba8750969d0",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260912_epoch5.pt",
+    "sha256": "d8c2e0873d96eafbfe72fc8061d9f9e18012a888cfd12243935411a333b5b3d5",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260912_epoch10.pt",
+    "sha256": "d045a738b276768dd835d9bcf7a29ac2bac4f1dbaef6c6386e14c33b746008c4",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2017-12-31_20260912_epoch20.pt",
+    "sha256": "bceadf6f5af50bfe8c9084f264cbefccf032f290debbb6be3f77132671c522b2",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260910_epoch2.pt",
+    "sha256": "69cbe390b700e546a2c90f68ff3e36c2a868bd9f54a81b0cfb2ec9e518a8c14c",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260910_epoch5.pt",
+    "sha256": "fae3863d055728e6d3f3bf27e51c84668c8d4b92780b12527d1fcc7449081d78",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260910_epoch10.pt",
+    "sha256": "87f8187deef5ad924ab7c05248c872154bc4403ee523660aeb01e5dd20ea8bcd",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260910_epoch20.pt",
+    "sha256": "407e74dad25cc0f97f9b63310adf13da262d4ed1d29b6184949fa4caf0bc42a1",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260911_epoch2.pt",
+    "sha256": "23b406397c56a33143c7de01c221685085d6d54278d235d24023de76c9533a64",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260911_epoch5.pt",
+    "sha256": "4969b91654645068283499df967fc82913e0ca05c1c2f2fb8da5b17059774075",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260911_epoch10.pt",
+    "sha256": "a3ee233ec63be67baedf9088fc046ec7afb6dded64e23b64a03ce3c8d461fbdc",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260911_epoch20.pt",
+    "sha256": "01476c968bbd76ab37f1451ae824ff52535f96c8f930a4671d0aba9dec3eae56",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260912_epoch2.pt",
+    "sha256": "d75e939d82f528a52846fe2e34195e0c1a4d58f35d46608b588139fc977b343a",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260912_epoch5.pt",
+    "sha256": "611b8ef17d4daab9fcef4337541d3b19ab25b3a054be5b2a5d7e2a5275da8c00",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260912_epoch10.pt",
+    "sha256": "f516aadd8527252da528e69c71626206aa5824f42f361f726172c0a4fa31ad5d",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2017-12-31_20260912_epoch20.pt",
+    "sha256": "d0236dfbdd8522bf53de415c4352ed209ba44e0537da8d6a0d2e6fa347584703",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260910_epoch2.pt",
+    "sha256": "499dac21ee951e8e391dd8b3b976d8891d8c87365e83c77408d559f6634127ca",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260910_epoch5.pt",
+    "sha256": "67d36ae1bd5e0669a298fc37194bbd418856b17f3f70be33ccf1771ad4b5cfdd",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260910_epoch10.pt",
+    "sha256": "9ae2d307d8717be278cc81ea78ffaa3d3e3653be226ebf61267d4a5364a39f73",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260910_epoch20.pt",
+    "sha256": "7ff31cb253a9f82980449e6a8759625b0b90d837f8fc7d55a04c91b51df83fd2",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260911_epoch2.pt",
+    "sha256": "5feba6c7f01cc66006bb6ed5043ef8fc7d86da25ecb8b0923650e0ab361ce6f9",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260911_epoch5.pt",
+    "sha256": "f5f1a12396e8e7b9fd7fa79b12e2d8545f7cd346fc3f1429605194330c113f1e",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260911_epoch10.pt",
+    "sha256": "07a978083b79bece3d133d0c806df34eba7a4b6f6cca6636e871dc85bfa545d0",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260911_epoch20.pt",
+    "sha256": "796e0a4f24cfce6d59d55002b0bc9b09755242003183225752afde20a08fb51a",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260912_epoch2.pt",
+    "sha256": "f3b4ff8b2dac2fc9376ac7d81984ce963c0623ee3593806c4861d0f5dc612f27",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260912_epoch5.pt",
+    "sha256": "e651fe95d77bc1cd2977da38578b5905c4efeaec0b464c0d9597f3d0a626e025",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260912_epoch10.pt",
+    "sha256": "ae2aad017405d66c296b56891631fc5418c9d0fefe51f936aaa7253a561776bb",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2017-12-31_20260912_epoch20.pt",
+    "sha256": "6a743c329be79362c54514b4f62a0ea22949762e095bb42a53f6f021480c5b35",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260910_epoch2.pt",
+    "sha256": "82c0f8e9ac9ebe2aea64ec1785e697a79d468da61754788da279c65e7ace9d66",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260910_epoch5.pt",
+    "sha256": "c09770da5953f19a4c750a5d253667c4deead56fddc6e57b3ec6c38a2a40f29f",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260910_epoch10.pt",
+    "sha256": "553588ab33ba426663732e9872ef7c4fe2bcf60b84797a1c31f0db5ea33f7d7d",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260910_epoch20.pt",
+    "sha256": "b3c705b8991f73a93b9407977e6975902234fced399479cfee6871676b916df9",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260911_epoch2.pt",
+    "sha256": "3bc40b0c260c0031a4926ae756d1d0b556923dc8ba2d754febea0cf88d1d9627",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260911_epoch5.pt",
+    "sha256": "7db017b76b3ce4d2480f4480c6acab1711fc120ab781bb058eca472c9fb3e6f5",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260911_epoch10.pt",
+    "sha256": "492bb130a3da3cc1217b5aa72410f770624bc8fe9c4106a6592d049e20c0c9be",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260911_epoch20.pt",
+    "sha256": "232caa5e87496d61deb822d958d09ce301d83f24145dd89a127becf2a706cac7",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260912_epoch2.pt",
+    "sha256": "ba0fc753d77271de36f03c38fc3a8fe1115e54797327c4536e896cfdb8d4aa07",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260912_epoch5.pt",
+    "sha256": "26a229f33f5fbe0e9a83e719cfe877142feb02750e7bfd13326ef8ab183dcfe8",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260912_epoch10.pt",
+    "sha256": "12bb0d178769f974640acf6c6df344da6fb2924d6f3e4e792b9208fe4d37549e",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2017-12-31_20260912_epoch20.pt",
+    "sha256": "1168b7bc8654066aa89a874be12b357dae519968c9531a6e5b599806caf32abb",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2017-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260910_epoch2.pt",
+    "sha256": "f6600b4671fc74a7c72c43d56fe5a29a742c7a4205f9799b5315f14167b49855",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260910_epoch5.pt",
+    "sha256": "cb61a261f6c530acd50845cb8431431b69329f8ad32770d955be2a969ca398c5",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260910_epoch10.pt",
+    "sha256": "9b196fab94dd0dc612a53d3253d7488597518ce8b7dcf0d116675fbdfb8ee037",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260910_epoch20.pt",
+    "sha256": "8d0d4e5d9dfaf216372aad1d6d8c042816480de45efbe1ad4b5b104a93ac7380",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260911_epoch2.pt",
+    "sha256": "4042d02e4731eef24cf25b6f3e40e66b7a8e95777525351823eab15c17165bc4",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260911_epoch5.pt",
+    "sha256": "8d75cce2c8c23d93df9fd5ce7fa64fd13d9add3a865ee4e277d4f36614fbd6bc",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260911_epoch10.pt",
+    "sha256": "135fd1db64abcd4f7492225e304b1ba11e083ef9a2cf00c0ce0ff1ef0896fffa",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260911_epoch20.pt",
+    "sha256": "900dd5295ac15d75ddf9eef61e09ccbaa67cb031af02d89339c89739f48c536e",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260912_epoch2.pt",
+    "sha256": "8a01a16ec670c556cb42775fa6700ad58ffb27ccd7d1ecc3d71dfe4077a88aac",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260912_epoch5.pt",
+    "sha256": "32803709021807b447b7c296d500e50b2e0fdabdbe200237d0a9267431e5f6d8",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260912_epoch10.pt",
+    "sha256": "11279066b437ff44f226270157208dacd2a0cfa2bea0374d3cca98bd53dedfa7",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2018-12-31_20260912_epoch20.pt",
+    "sha256": "0d05ca708ff33ca78f11fe9699852bc10860c63cf0476060aa733914a55b70c6",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260910_epoch2.pt",
+    "sha256": "bb940f1e66b16a0c880145358970a7ec4dda7c60367648a6709d0d69d1ed28aa",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260910_epoch5.pt",
+    "sha256": "16b6faccd734f4c8936d487cbf36e470d0e265150f2d2c5b727534b24c513bce",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260910_epoch10.pt",
+    "sha256": "135ed63ac1c554d581c38d11dde134d3224a6da688d6094a27d12010384bcde4",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260910_epoch20.pt",
+    "sha256": "3bbcf7af54172f0b40d62f5cfa35c2fcf2e52f4a501f349f609cd370dfd516ab",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260911_epoch2.pt",
+    "sha256": "5bf368a41fd1df1ce3480869b12b91b9fcf1b0f5330636f3b895f1c4d0489c60",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260911_epoch5.pt",
+    "sha256": "d56fd9da1d8e2bb70a3749f40d7c3e584a560add875b72d929b21b3a4c980208",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260911_epoch10.pt",
+    "sha256": "38ee3144896b4afaec1a1ce58278b15359262dcb416182ab567e479eaf36756c",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260911_epoch20.pt",
+    "sha256": "99f80a9391e4b0647fcf12f7f4e65de7f94f57114a349f6e9c047933a0b6a5fd",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260912_epoch2.pt",
+    "sha256": "6f817074264b6fe96fb65920a3aa65f26af016ee01feb36db044c932dd4cf1fe",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260912_epoch5.pt",
+    "sha256": "e50ef29cfc0ec317eb521af7ced4bcde4bbe110663b5d24e8c2faaed31f259a0",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260912_epoch10.pt",
+    "sha256": "6a11886c55cb9277fc647197090f258267f30f185f7e43046a17fc1d0314b18a",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2018-12-31_20260912_epoch20.pt",
+    "sha256": "534462f90d6192a556b7bdfad5098e2f04cf886a33170b209bff32cb4b78e78c",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260910_epoch2.pt",
+    "sha256": "6520bb84be536b36f5e287260bedcb334b9b1f84b4e554a9069ac125caf45eda",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260910_epoch5.pt",
+    "sha256": "a5bc80d6711e5614b65f2296f3c71d0db6a41d7e92eef749a7fbee9b2fec92f9",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260910_epoch10.pt",
+    "sha256": "e07df536ce71f56394608ecfe5ff52cb4999b9f2f5406d77b8958f4742c54fe1",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260910_epoch20.pt",
+    "sha256": "7b1a86145115d9d2b77a0490c90f9eea8f67bcd6086d0423e715794e242a442e",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260911_epoch2.pt",
+    "sha256": "7c8cf8d1d8d381f2c99ac799d640f92aaf5e07d9ce9194fa363145f6abbd53f6",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260911_epoch5.pt",
+    "sha256": "1f5fb8e872307a8b3dcda884eb7e80498fc22fdac26a12c206d32a51e77ce597",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260911_epoch10.pt",
+    "sha256": "1b3214cecc04287925242235ecd3b4a539dcf1e6566f24a5900b28a128bb706a",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260911_epoch20.pt",
+    "sha256": "42a5fca4cfc92e83bcb29308c99843f8730e7b892b18792fba59217251bd5552",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260912_epoch2.pt",
+    "sha256": "6c500c248fd6441b2befe549e8fe4ad55812d9f4a9a95c649e82b479bf7efd71",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260912_epoch5.pt",
+    "sha256": "9e1e46cb90d3834728e1779a2c9d5c8a63727fc505418795329e6dd14afd3c8a",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260912_epoch10.pt",
+    "sha256": "052bfe9f6719a1e7f519911b4d7c45b5fa779d5ac60b5e585c5eeb0a5aa828f5",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2018-12-31_20260912_epoch20.pt",
+    "sha256": "ab94da947e938359a1f8821c4fbb9ee61f4c3b96ef1c0caf6fe91db10f2888a4",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260910_epoch2.pt",
+    "sha256": "5a462c6f93af8fe3e8afbb9efa2259e6f79af59268ac15cce4d543adc3c652bd",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260910_epoch5.pt",
+    "sha256": "82359a4c79274be6b3c7f9dc783e297d73b382b6db480df7a8330f23f3abdb36",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260910_epoch10.pt",
+    "sha256": "025228c00eaae9de7f6b9c36b70cfe420d99f5a06701d880f3096b43fc77ade6",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260910_epoch20.pt",
+    "sha256": "d5b393363dc0394e47620ca8d4e5776fe173fb46fa77e224f1929c6406a2305e",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260911_epoch2.pt",
+    "sha256": "820e1923943cfd01a5f6f6720b81c2f9d1c45e4da9a22c0eb2a918ad80debf6d",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260911_epoch5.pt",
+    "sha256": "76bd263365dca4b223a9ef14befa2da276cc9b5464ec1216d2a2582120c216ca",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260911_epoch10.pt",
+    "sha256": "74af068f53d582693a4f5223c9080fa1aba3a3adafe54a785f9c8d9a924f880d",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260911_epoch20.pt",
+    "sha256": "3cbffbc9d331385bcc96ebea04536d40a39629e5afe91a9f964e86024a3cd4b2",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260912_epoch2.pt",
+    "sha256": "3ef5b7a5288ed7bd0902dce76d10394f1c27e4b52d1f18910db8df4b1d4fbe8e",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260912_epoch5.pt",
+    "sha256": "9a2664102fbf7aee11227956b4de14500e053e3a0d87d47b91d64f4abf309857",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260912_epoch10.pt",
+    "sha256": "7d5c864991f00fba505c3800b69ab3469ab1018b967a13f5f157939986ce5661",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2018-12-31_20260912_epoch20.pt",
+    "sha256": "5d2f8eea52ee8a9eea2b008538405d2c3e45dc574297634ad50627f074c957a0",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260910_epoch2.pt",
+    "sha256": "98cdea8ec377bee5a09322d2c61aec6dd73ad6c727ab5cd36dbf7e6ac1be3060",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260910_epoch5.pt",
+    "sha256": "ca91c1b700bd34c064098b025280315085cf9e5d1025708004681befdf882f8f",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260910_epoch10.pt",
+    "sha256": "71c9ab5bc7139d4da71bde7677a3da07487c8522a24817f6f1a53c12756289ed",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260910_epoch20.pt",
+    "sha256": "f0c1b62ac6d545a1ea11e58854459ec38946ef60bb531962e9a509d836279491",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260911_epoch2.pt",
+    "sha256": "ba364a92210c68010a72c9a362cfe2dc73818e1d4ade9a594529deeb693e3b47",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260911_epoch5.pt",
+    "sha256": "375d6d2c354f5c6af084efce9fe59a841970179d1cd00f196e8c012145124bbe",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260911_epoch10.pt",
+    "sha256": "b9cbc0d8c4c85daffd475f9a9c8fb8d6d5bfa7b167219a5f6d83856da73ed720",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260911_epoch20.pt",
+    "sha256": "79a95caaaa912348994e3a4b1a00e075224ed404c0995885e5235c302d92d48b",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260912_epoch2.pt",
+    "sha256": "344c90d32afc6152afe50855b604d56facd74e7197ec426172b1e0e3eaf03e71",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260912_epoch5.pt",
+    "sha256": "dd84fda27c785f315d7c62ad130ca3f60bb1e6f27628b00fc57cfc9a52c39213",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260912_epoch10.pt",
+    "sha256": "5e1f844001bd8f3d87ad1467ab2dbb0398552f258c32498ae20360f5d4084616",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2018-12-31_20260912_epoch20.pt",
+    "sha256": "f17d82835837765dec43b3bee5ff657a6709a11a17b6fc6d9cb6aacd386486c1",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2018-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260910_epoch2.pt",
+    "sha256": "a5bef92a6e1925adf3872b91fa5c08e22555602b11a879f87c8effbafe152e72",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260910_epoch5.pt",
+    "sha256": "dd2fe40a8996f1bb4f231d26fbdc52bdb8e832c6fd3571021f50f1fcf7d16f43",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260910_epoch10.pt",
+    "sha256": "30f916324e19a0bade2ab3760092c5fa588ce05f387eae80e81a78a81c9bf08d",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260910_epoch20.pt",
+    "sha256": "ab4e3e6b5da2d2c287496b1ff02106311f3760079f40d28faf7e00c164055a76",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260911_epoch2.pt",
+    "sha256": "f7364fec5cd3f0c051302167dfcd21d31e06cc114d18b77e5a1f551507708823",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260911_epoch5.pt",
+    "sha256": "9722d46f0d5a9f8881ab5a512714ea17c9d0814ba7448df3b179509e6f1e580e",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260911_epoch10.pt",
+    "sha256": "8b3905fc7a9c59ab9024a3daccf0eb0e5a6e81e4683ee0b3f8bbcb9b02febe3c",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260911_epoch20.pt",
+    "sha256": "e367db512e096a9d0da948b7a4c45b8643dcb7a5394cea0995ece73a5597cc82",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260912_epoch2.pt",
+    "sha256": "25ea5a996401bf3907628cba72fb2aa736e2b07754bd3af76d1a03a7a073831e",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260912_epoch5.pt",
+    "sha256": "36ccdadb5afcd988ba7d72612eebaea56e8585dd1e1a4b351de453b8f39bf805",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260912_epoch10.pt",
+    "sha256": "e93e5a2530a771414e43a4c0772738db471c7705f2159071517d62690ab4f415",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\baseline_full_2019-12-31_20260912_epoch20.pt",
+    "sha256": "8e5ae10c9771cc7f6df4e4e4a06e09ce8d8cf5e7b57564472f8783a5ea7a63f1",
+    "arm": "baseline",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260910_epoch2.pt",
+    "sha256": "b2fa3dd67918a4f4f0c93d1af001c218757a505779d273fecedc645c459f5648",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260910_epoch5.pt",
+    "sha256": "d2af96bb8401d18a8108797d5c60355683ca884e54ae8ae2a60b32e955517172",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260910_epoch10.pt",
+    "sha256": "9801914d464e3f6c184a8121ec7ce02ccad345918c2fcdb95507c6e16d27a012",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260910_epoch20.pt",
+    "sha256": "2ad424d6075a530d7269e6e9c51f1b6f067238ebe61b082813ee92902ecb8343",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260911_epoch2.pt",
+    "sha256": "53251dff3a185dc3eda91d8f87578847c626a0cbefd360cf033a89351fa45879",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260911_epoch5.pt",
+    "sha256": "ddd03ac79026ab6424f419796347bc9c2543e1fce6523e4210c2379502fdb173",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260911_epoch10.pt",
+    "sha256": "fb71f5f46c9a01d8f31a2adfea1083efe41cb90254cfffdab756c435a211f687",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260911_epoch20.pt",
+    "sha256": "d9492780f19f356844d8a2d572e14d085f20f62d9d7b51587160cf7ffcb51476",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260912_epoch2.pt",
+    "sha256": "e5906c28b33c24137827141d36e46a7fda6690fa1923864744d7165e7a15d5ee",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260912_epoch5.pt",
+    "sha256": "42b02c739defeb6d46ea8526545e85bfff93f1aab1f8e747cb7044722958256b",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260912_epoch10.pt",
+    "sha256": "8cc2066fe67eb213206b378a626d6641c14ef2544d2a8d3a9e6f2227255d545e",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\small_full_2019-12-31_20260912_epoch20.pt",
+    "sha256": "d5f60d1c83c49dd034e2afcd9b3103b323871362e7a1d7f613de039cc22d44cd",
+    "arm": "small",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260910_epoch2.pt",
+    "sha256": "71bb2a8d00e60929adbb0bf4afc8efb866018b84ecc79bd69cec9ac8cc4c3568",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260910_epoch5.pt",
+    "sha256": "484ed594153686998fbe472b18b73e7bde968d77c90dd89c752376400309d37e",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260910_epoch10.pt",
+    "sha256": "0e547c7c6bb4043266deed265ed9e5f5051f97c7c4d92cb3dc9c9b19a4863a11",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260910_epoch20.pt",
+    "sha256": "e151400b8d2f3627b496311d00408a42c0ea28e82105ccbfba87d8fd76861da5",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260911_epoch2.pt",
+    "sha256": "ead354fe46d321b76c1c96456830d4dee5009ff7d63d09f8e4507c1ab922959c",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260911_epoch5.pt",
+    "sha256": "e4936949b7e25195ee1b0af66d43fd63f4e642c6f17fa2b9f5ec2645054985e1",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260911_epoch10.pt",
+    "sha256": "26ef03f956d49d4196e6f50e8e2603913c97c066ccb07d21f018c0b5153dc480",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260911_epoch20.pt",
+    "sha256": "2b296993f12cb5d935feffa3b87ae471616172195ab2e12b0309796e5bd2bc18",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260912_epoch2.pt",
+    "sha256": "d6c7e9962035a6799d512ccadcbf9afe23e90ddf29c0c128e3e0074a27b634a1",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260912_epoch5.pt",
+    "sha256": "7912958024f678333607ca07781c6e4a1bbd4cc12001a1a244a93d175d1d279b",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260912_epoch10.pt",
+    "sha256": "4b51cfd314af28928bd208c35e3fc034a7429bb8c336c253d15233eeb23a3848",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\dropout_full_2019-12-31_20260912_epoch20.pt",
+    "sha256": "991f70a4308a0265d302d5a0d3e4ff1df7a6a61a0a4db54a60a652633ef13fac",
+    "arm": "dropout",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260910_epoch2.pt",
+    "sha256": "2c8b1bdea68f57080e6dcd91bb51727334712feafa7e62c20e3cf915bd71f9fd",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260910_epoch5.pt",
+    "sha256": "4428ddea72ea37c4cfac08cbbba5c1d17f1464acbca79b0565b337d815c08022",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260910_epoch10.pt",
+    "sha256": "5039080f6796149a4b7acb6df104efeaf1a630808d6795ec8df2f68d53a5864f",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260910_epoch20.pt",
+    "sha256": "0709f9b69b905c22568b7374cdd80b4831cdda15eb1c747b2d49d0d31edbb71f",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260911_epoch2.pt",
+    "sha256": "3531d997542b66678945ab1cce4fe0ee9138ed889f97c70a1bb59ae298ca0c46",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260911_epoch5.pt",
+    "sha256": "63b769fe440907e35fe29494113ea4926240b7be62275a335be1119a21d8de63",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260911_epoch10.pt",
+    "sha256": "df7dc76d522d19b0705518902e5ebc91f5988354eb39089a800b59603b7ca9c1",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260911_epoch20.pt",
+    "sha256": "3ebe5c46b5059fa422b6e97641e75a34968cee6ec05c98e18c1d15a74e7c0b8a",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260912_epoch2.pt",
+    "sha256": "f4dd5de6d9c81f4ca34afe89ec9df6bccc51db6a609e36c7b18937b2bbb29226",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260912_epoch5.pt",
+    "sha256": "a0b0f3e447a2dc9eaa916b288f9a0e43c2e9f6cc2160564a733a67272d72f73e",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260912_epoch10.pt",
+    "sha256": "4cd9097b9c32cd70b2e7eb047191d16cbb9fa73c44f93b865692514fdabfdba4",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\decay_full_2019-12-31_20260912_epoch20.pt",
+    "sha256": "c26366cc1a059f0db1c36dcbc5e7097c69407d0efe642a79abed982023bd92d2",
+    "arm": "decay",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260910_epoch2.pt",
+    "sha256": "ba67e510c4d8df527923c41a4b819076582a15c6ddca1a4ee8dde4d625a0816f",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260910_epoch5.pt",
+    "sha256": "2860593ab4da7333902ace28adea0e6420383933631faad9cddf9fb4363f168f",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260910_epoch10.pt",
+    "sha256": "761e0c6e9529231956726f1ede521b01a77c289d759daa4bc54f4bcfc350f2be",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260910_epoch20.pt",
+    "sha256": "7755535be7d9d4327e26f1a5e0dfbe14ed64c383b4773642bf5f96b6caf9b940",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260911_epoch2.pt",
+    "sha256": "211a10618f986a95490aacdf41ea4895aecd625335fd5afff20e83d9694a0812",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260911_epoch5.pt",
+    "sha256": "fd1e358d9c64ee0f2b5b8e1388a867a5b9626a9d7affbe1f2896474a80bcca78",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260911_epoch10.pt",
+    "sha256": "fb261d5ffcd9a4f3d1afc6e2484ce98a803c43ff018678eee6af11ca1a9a7e65",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260911_epoch20.pt",
+    "sha256": "4844bb78e86556f87ee836deb4f0f75b9b45bed606bbfdab702075233ba363e4",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260911,
+    "epoch": 20
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260912_epoch2.pt",
+    "sha256": "609fb7f7564352c6549692649206083fbc44c5ff51ed889795c3c9d832c8078b",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 2
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260912_epoch5.pt",
+    "sha256": "b82c3129d590a51a7607a8783682a986830ea7b1dba616b089e4df8fa07dab41",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 5
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260912_epoch10.pt",
+    "sha256": "3a6857a518601dc3c4367ae22d62ca541415284cfad4d6a30351af6a41c85310",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 10
+  },
+  {
+    "file": "results\\main_checkpoints\\combined_full_2019-12-31_20260912_epoch20.pt",
+    "sha256": "40efc940132d5099580297441a85777940965d612bd4d0d7e919bcec22137661",
+    "arm": "combined",
+    "history": "full",
+    "cutoff": "2019-12-31",
+    "seed": 20260912,
+    "epoch": 20
+  }
+]

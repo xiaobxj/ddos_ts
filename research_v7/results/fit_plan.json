@@ -1,0 +1,380 @@
+[
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "end": "2018-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "end": "2019-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260910
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260911
+  },
+  {
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "end": "2020-12-31",
+    "seed": 20260912
+  }
+]

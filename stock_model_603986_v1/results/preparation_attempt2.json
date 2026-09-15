@@ -1,0 +1,5 @@
+{
+  "phase": "Before source freeze and any model training",
+  "status": "Source inventory failed on synthetic imported-module __file__",
+  "resolution": "Include only existing source files in dependency inventory. Preserve and require exact equality of prepared outputs when resuming preparation. No model predictions existed."
+}

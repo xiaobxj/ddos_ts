@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T14:28:30.016009+00:00",
+  "checks": [
+    "early_recent_pooled_2024_2025_2026_correctcounts",
+    "recent_Brier_all3references",
+    "local_early_probability_improvement_preserved",
+    "2026R19_gain_notgeneralized",
+    "recent_recovery_regression_counts",
+    "2026up_prediction_shift_vsobserved",
+    "weight_concentration_and_no_independentN_claim",
+    "weightedfrequency_diagnostic_separate",
+    "24raw_and_Holmpvalues",
+    "72newsolutions_and72uniformreplays",
+    "27oldhistories_6056oldfiles_unchanged",
+    "new_neural_fit_and_inference_zero",
+    "next_intercept_slope_combinations_not_started",
+    "old_budget_distinctions",
+    "markdown_links_and_table_shapes"
+  ],
+  "artifacts": {
+    "results\\结果解读与下一步.md": "0109da21e3d50c36a307083ef298badeb17c50e09016d9c6f55c94a84e19414c",
+    "results\\第四十七轮实验报告.md": "627022a0c1e3c353436ce4f5cd01f04f6996353dd16dcef609f74e7d0915fac1",
+    "results\\visual_review.json": "327abc7a69d9fae5edf883fe6b2aba6dc5ba40ce8c1692f56018f417323d4c88",
+    "results\\verification.json": "ea5861d7a5f7133a503ac69f6f460cd4a1164f25bb5d334cdc2afc2665cb8cb2"
+  }
+}

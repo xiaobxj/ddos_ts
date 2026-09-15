@@ -1,0 +1,336 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "states": [
+    "negative_low",
+    "negative_high",
+    "nonnegative_low",
+    "nonnegative_high"
+  ],
+  "state_definition": "Four coarse observable groups, not learned or validated hidden regimes. Trend sign uses inherited trend60 =60bar close log change / (population sd of60daily log returns floored1e-8 * sqrt60). Negative if trend60<0; exactzero nonnegative. Volatility20 is inherited population sd of20daily log returns; low if <=annual mature rolling5 training median(linear .5 quantile), high otherwise. Annual calibration only; reset at priorDec31, same boundaries for every quarter, method and seed. No choice of state count, sign cutoff, quantile or features from subgroup outcomes. This is a new4cell diagnostic using existing descriptors, not the old R17sixcell partition or R29state90 update trigger.",
+  "preserved_results": "Original old-budget R25 recent73/12558.4%; natural20annualR25 71/12556.8%; R39quarterR23 73/12558.4%; R42 R19/R23/R25 recent69/72/71 correct unchanged.",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-12-31",
+    "2022-12-31",
+    "2023-12-31",
+    "2024-12-31",
+    "2025-12-31"
+  ],
+  "version": 48,
+  "experiment": "Fixed two-by-two intercept and slope swaps of equal-weight and timeweighted annual heads",
+  "policies": [
+    "annual_head_weighted_intercept",
+    "annual_head_weighted_slopes"
+  ],
+  "references": [
+    "rolling5_annual20",
+    "annual_head_timeweight2y",
+    "weekly_state_validated"
+  ],
+  "scope": "Two mechanical hybrids only:Uslopes/Wintercept andWslopes/Uintercept; U=originalR28annualrolling5natural20 equal-weight heads;W=R47fixed2yearhalf-life weighted heads. Same6annualdates/3seeds/R18diagnostic/R19R23R25primary. No coefficient refitting, calibration, neural training/inference, half-life/cadence/window/threshold/seed search or selection after results.",
+  "coordinate_contract": "R47 used exact originalR28 x18/x19/x23 designs, unweighted neural-feature standardization and supervised rays/projections; verify this byte-for-byte for every source job. Coefficients use same coordinate order and final element is free intercept. R25 last slope is ordergamma; allslopes (includinggamma) copied together; originalR25 andweightedR25 each inherit their own R19 parent but hybrids are not new constrained optima.",
+  "assembly": "For everycutoff/seed/method u,w: I=concat(u[:-1],w[-1]),S=concat(w[:-1],u[-1]). Exact element copies, no arithmetic blend or optimization. Build all144records before any new weekly scoring. Source metadata is included; no labels or outcomes enter construction.",
+  "training_contract": "Inheritedsource training members unchanged:signaldate>=priorDec31minus5calendar years plus1day,alltargetsjoint_completed<=cutoff. R47rawdateweights2**(-age_days/730.5),sum-normalized;original lambda.01. Sourcecoefficients already verified. This round does not refit or redefine weights,scales,features or projections.",
+  "scoring": "AnnualpreviousDec31strictlyearlierthansignal;272originalweeklysignals2021-Aug2026 withoriginalmaturetarget. Frozen testing arrays; score each hybrid in exactsame design. Original3seedSeries.meanprobabilities andstrict>.5up. Copy native_mse andunweightedtraining_frequency exactly fromannual. Preserveall28oldhistories;2newhistories.",
+  "diagnostics": "Reportseedlogitidentity zW-zU=(bW-bU)+x@(betaW-betaU),andallfourcorneroutputs. Logit changesadd;sigmoidprobabilities,ensemble averaging,direction error andBrier do not generallyadd. Within sameyear/seed,intercept-only shifts preserve score ranking; pooledyears or three-seed ensembles need not. Report allseed/yearmetrics andoriginalfourstates includingzero cells.",
+  "factorial_diagnostics": "For eachweek/method anddirectionerror/Brier,losses U,I,S,W. Conditionalintercept effects I-U andW-S;conditionalslopeeffects S-U andW-I;interaction W-I-S+U. Symmetricalgebraicshares phiI=((I-U)+(W-S))/2,phiS=((S-U)+(W-I))/2;sum exactlyW-U. Direction shares canbe fractionalweek equivalents. Prespecifythese descriptive comparisons across9periods including6years, no addedpvalues. This is fixed-coordinate model-output attribution,not economic causal inference ornewoptima.",
+  "primary_comparisons_per_window": [
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_intercept",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_head_timeweight2y",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_head_weighted_slopes",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    }
+  ],
+  "inference": "72prespecifiedexploratorycomparisons:2hybrids x3refs x3primarymethods x2losses x2periods. Circular8week10000bootstrapseed20260910,centeredtwo-sidedp,Holmacross72. Allhistoryalreadyviewed;no blindholdout oradjustmentforpreviousadaptive rounds.",
+  "verification": "Freeze10sources,protocol,sourcecoefficients/caches and6143oldfiles. Validate6annualmaturemembershipsplits and18sharedfeaturejobs; replayboth72headendpoints. Verifyall144coefficientassemblies andeverycoordinate source; syntheticidentical-endpoint/boundary/logitidentitychecks. Independentreconstructnewpredictionsfromscalarsum/algebra;exactcontrols andoldhistories,seedrankingconstraint,allmetrics/logit/factorialdiagnostics and72statistics. Scientificsourceunchanged;report/visualQAthen delivery.",
+  "limitations": "Hybrids are mechanicalcross-combinations,not fitted optima. Intercept/slopedivision depends onchosen coordinates,which remainfrozen here. Dailytraininglabels overlap; supervisedfeatures inheritedsame-samplefitting, noOOFclaim. Attribution confined tothese fixed models andhistoricalforecasts. No baselinepromotion, tradingPnL,deployment orindependentholdout claim.",
+  "budgets": {
+    "source_files": 10,
+    "old_files": 6143,
+    "annual_cutoffs": 6,
+    "seeds": 3,
+    "source_jobs": 18,
+    "source_heads_per_endpoint": 72,
+    "assembled_heads": 144,
+    "new_head_fits": 0,
+    "new_neural_fits": 0,
+    "new_feature_inference": 0,
+    "old_histories": 28,
+    "total_histories": 30,
+    "new_learned_seed_predictions": 6528,
+    "new_model_rows": 8704,
+    "total_model_rows": 130560,
+    "total_ensemble_rows": 48960,
+    "seed_logit_cells": 3264,
+    "weekly_factorial_cells": 2176,
+    "period_factorial_cells": 72,
+    "comparisons": 72
+  }
+}

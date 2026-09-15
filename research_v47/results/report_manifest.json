@@ -1,0 +1,18 @@
+{
+  "phase": "report",
+  "finished_utc": "2026-09-14T14:27:43.170727+00:00",
+  "protocol_sha256": "c51f45284e70a6227667842e63450fca2e24014e2fd1a1a09a422f974b96badb",
+  "artifacts": {
+    "results\\第四十七轮实验报告.md": "627022a0c1e3c353436ce4f5cd01f04f6996353dd16dcef609f74e7d0915fac1",
+    "results\\yearly_accuracy.png": "888710d352d826596ea057335bbb76249f479b5a9b1c2474a2e09927e997d47c",
+    "results\\yearly_accuracy.svg": "4c27d4e8b4e61d9704af70ccda7c7f3a5e6732172b3939750565afdf7c8636ae",
+    "results\\training_weights.png": "7ec6b3f35ea97f5c252ef278882adbce50bf0c02adabeda0e6b237769c0378d8",
+    "results\\training_weights.svg": "90f7f8ac51d51506b471fa59b341907948febaa31de86b47a86ab41a36da852d",
+    "results\\visual_attempt1\\training_weights.png": "c0f305d621f1f42d3da3409b06cc06519aa55e28adcde98eb02a1ba938f328c4",
+    "results\\visual_attempt1\\training_weights.svg": "40ca6ca10d9b0735107a3bf1f7539495af87adeda68b3be3422a51906f60dc86",
+    "results\\visual_attempt1\\report_manifest.json": "bb2694d4c005f0374e716a80e939726dab9c5859ca0cb9c9e1d1cb5cde7c6599",
+    "results\\visual_revision.json": "fa787e5052b72c95b810ac3eb4e974e28aa728b572c0d09fba33a92834339495",
+    "results\\visual_revision_source.py.txt": "506c51208592b1eea6f14677531d67c7dfd7f9295c8301d29102258550971f1f"
+  },
+  "visual_revision": "results/visual_revision.json"
+}

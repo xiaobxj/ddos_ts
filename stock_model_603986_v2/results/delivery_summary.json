@@ -1,0 +1,36 @@
+{
+  "status": "VERIFIED_RESEARCH",
+  "completed_utc": "2026-09-15T14:11:06.193242+00:00",
+  "stock": "603986",
+  "source_close": 363.11,
+  "asof": "2026-09-15",
+  "headlines": [
+    {
+      "h": 1,
+      "n": 897,
+      "accuracy": 0.4983277591973244,
+      "brier": 0.2550627220807341,
+      "logloss": 0.7036554104277377,
+      "next_probability": 0.5259728891188176,
+      "target_end": "2026-09-16",
+      "baseline_accuracy": 0.5061315496098104,
+      "baseline_brier": 0.2500469048136302,
+      "delta_brier": 0.005015817267103885,
+      "holm_p": 0.0527947205279472
+    },
+    {
+      "h": 5,
+      "n": 893,
+      "accuracy": 0.5475923852183651,
+      "brier": 0.2650437738599766,
+      "logloss": 0.7283815835657942,
+      "next_probability": 0.7072913698459565,
+      "target_end": "2026-09-22",
+      "baseline_accuracy": 0.48712206047032475,
+      "baseline_brier": 0.25056986182616975,
+      "delta_brier": 0.014473912033806775,
+      "holm_p": 0.11638836116388361
+    }
+  ],
+  "statistical_note": "Exploratory reused history; Holm corrects four declared primary contrasts, not all past research selection"
+}

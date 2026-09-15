@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "new_fits": 9,
+  "reused_models": 9,
+  "total_checkpoints_replayed": 18,
+  "validation_weeks": 141,
+  "epoch_order_hashes_recomputed": 180,
+  "boundary_hashes_recomputed": 180,
+  "maximum_prediction_replay_error": 9.974659986866641e-17,
+  "maximum_reassignment_replay_error": 9.974659986866641e-17,
+  "primary_comparisons_recomputed": 2,
+  "flags": {
+    "ensemble_beats_legacy": false,
+    "ensemble_beats_mean": false,
+    "at_least_two_seeds_beat_mean": false,
+    "at_least_two_seeds_beat_legacy": false,
+    "at_least_two_years_beat_legacy": false
+  },
+  "source_input_protocol_preserved": true,
+  "previous_files_preserved": 1989,
+  "elapsed_seconds": 11.21311092376709,
+  "completed_utc": "2026-09-11T03:02:36.740814+00:00"
+}

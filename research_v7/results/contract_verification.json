@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "tests": 3,
+  "source_sha256": {
+    "research_v7\\common7.py": "5191996e284488d545d99f34e0b7aade538a2d57efe33020183f1e441ba88b9d",
+    "research_v7\\prepare7.py": "b86efe1907d01ae1e2a8a350416a911a6e702c98475f9a82d82703545050c303",
+    "research_v7\\train7.py": "c4ff0abbfa45fa2c94013a5392c7ab9c565e48b06dbb6f73bc107257f2062df8",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v6\\train6.py": "e9e8ee6515f1e517d48c4db87aa534a174795c5cfe64ad5cc38d2c7c8301113e",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "protocol_sha256": "5bdc15b4407cc8252034c2fa29314632730b09d3b5abb395dafc8fec9fb07c3f",
+  "test_source_sha256": "3f546bac29ce2b60010bd76cfc3257f4853176e861633604cd097b5a02ac74ec",
+  "checked_utc": "2026-09-10T06:21:32.187749+00:00"
+}

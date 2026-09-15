@@ -1,0 +1,18 @@
+{
+  "status": "INVALID_FOR_DELIVERY",
+  "reason": "GroupBy.agg mean changed floating reduction order relative to original per-group Series.mean.284 zero-offset learned ensemble rows differed from annual by at most2.220446049250313e-16 and were falsely counted as changed probability weeks. Existing verification checked seed-exact fallback and ensemble tolerance but missed ensemble-exact fallback. Preserve all outputs, restore original mean implementation and add exact ensemble fallback/control checks. No model/gate/hyperparameter change.",
+  "old_frozen_sources": {
+    "common45.py": "ae9d97f7f548336470e9b7f7c305441f2781e8ff044c17199edf6abcf3c499f7",
+    "contract45.py": "1e7f6d6bbaf85b7e5794721b6f22d5a26698af3d4ed6bb89df31a11137ccba32",
+    "delivery45.py": "9c591b2c8dae95ae7e8f0fffb99696357d8e2d949e40da6d9901a520f2c626f0",
+    "evaluate45.py": "679b1000d00a206c2a38484269df59c0d842733d22233c8e335074ec2eae561e",
+    "fit45.py": "62984d4c16268989ee28c92f175979592b8302631e172e0e23176999af298fcf",
+    "prepare45.py": "2370417066599ab1864ad1e21bd77ea951a22283350172e9f4499fa33cebbf29",
+    "report45.py": "fc5b90e6cb3534cb8e30a826db168d1f785c19de82a175aab910e06e54ea8a42",
+    "run45.py": "7721254879d17f54675a3e5fd048ac3cd922f8b92931bde6ab0a7eaa62bb6f1b",
+    "score45.py": "0c05e321dc7d1c9be4c1402724ff043b1edfb5bbf83425cb6302a226f3325fe4",
+    "validate45.py": "75f480ace72804d53dc4a04a1e4f393c15f156a626f014fda3da227e20f43d2d",
+    "verify45.py": "d9c261fec2c78888bdc8599ae729ec4f98e088d7543ebd2a7c79d42d9179b9d0"
+  },
+  "original_protocol_sha256": "e40c7dbd859530d5437dacc982a90ffa03129029aed02095993575f17383e378"
+}

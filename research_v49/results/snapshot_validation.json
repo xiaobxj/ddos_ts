@@ -1,0 +1,21 @@
+{
+  "completed_utc": "2026-09-14T15:11:09.657462+00:00",
+  "frozen_history_rows": 4046,
+  "latest_bar": "2026-09-14",
+  "merged_rows": 4056,
+  "new_daily_bars": 10,
+  "original_frozen_prefix_exact": true,
+  "prospective_labels": 0,
+  "prospective_predictions": 0,
+  "raw_and_csv_hashes_verified": true,
+  "settlement_without_predictions_is_noop": true,
+  "snapshot_sequence": 1,
+  "source": {
+    "adjustment": "raw index day branch",
+    "overlap_exact": true,
+    "overlap_rows": 403,
+    "provider": "Tencent",
+    "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2025-01-01,2026-09-14,2000,qfq"
+  },
+  "status": "PASS"
+}

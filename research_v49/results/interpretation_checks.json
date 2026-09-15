@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "README.md": "e97f8fc009666c58e8c7130dbd6829dfc95d7aa79419fe16435f6b03f2f73c4e",
+    "results\\initial_cohort_status.json": "e50409a8f0fc5cd8121a5c4bc1f0e906bda04c526df8fbcf71cd61b10c53a33c",
+    "results\\runtime_initial_manifest.json": "3f3260d8f307c2552b0fc07b999afe58ce113e38792ee6dd5fc8333eef506946",
+    "results\\snapshot_validation.json": "3001b065ddf616789d8f9212820ef921f5bfa2817567881ce82cde028d664359",
+    "results\\startup_status.json": "bc6ddc7d5bf97eb4ff91f2179e7538564b0fd21b54103e732facb3ee7e20aea9",
+    "results\\verification.json": "7cb96d71e271668094c24ce6a7f515713f441a9c19677c6cdcbedcc05990b679",
+    "results\\结果解读与下一步.md": "143d56a9dc4fc4ec022ae7bd51d4da393bdd85253443ade3eb3bb4948c47ab67"
+  },
+  "checks": [
+    "first_and_last52slots_and_delayed_primary_review",
+    "42comparisons_and_minimum40_gate",
+    "25engineering_checks_and_replay_counts",
+    "single_sample_roundoff_reported_exactly",
+    "successful_provider_snapshot_403_overlap_10new_bars",
+    "snapshot_archived_without_retrospective_forecast",
+    "zero_prospective_predictions_labels_and_metrics",
+    "manual_runtime_no_scheduler",
+    "bootstrap_expiry_and_future_refit_not_implemented_disclosed",
+    "6206oldfiles_and7sources_preserved",
+    "Chinese_encoding_tables_and_links"
+  ],
+  "completed_utc": "2026-09-14T15:11:12.772187+00:00",
+  "status": "PASS"
+}

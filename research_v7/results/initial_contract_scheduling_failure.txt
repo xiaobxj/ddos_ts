@@ -1,0 +1,40 @@
+test_masks_maturity_and_three_seed_sampling_budget (__main__.Contracts.test_masks_maturity_and_three_seed_sampling_budget) ... ok
+test_plan_and_reused_candidate_are_frozen (__main__.Contracts.test_plan_and_reused_candidate_are_frozen) ... ERROR
+test_unused_early_evaluation_does_not_change_training (__main__.Contracts.test_unused_early_evaluation_does_not_change_training) ... ok
+
+======================================================================
+ERROR: test_plan_and_reused_candidate_are_frozen (__main__.Contracts.test_plan_and_reused_candidate_are_frozen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\ddos_v3\research_v7\test_contracts7.py", line 64, in test_plan_and_reused_candidate_are_frozen
+    reused = pd.read_csv(OUT / 'reused_full_predictions.csv')
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\io\parsers\readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\io\common.py", line 930, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\ddos_v3\\research_v7\\results\\reused_full_predictions.csv'
+
+----------------------------------------------------------------------
+Ran 3 tests in 12.249s
+
+FAILED (errors=1)
+

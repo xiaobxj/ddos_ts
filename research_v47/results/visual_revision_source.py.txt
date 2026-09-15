@@ -1,0 +1,9 @@
+fig,axes=plt.subplots(1,3,figsize=(15,5.5));years=summary.cutoff.str[:4].astype(int).to_numpy()+1;x=np.arange(6)
+axes[0].bar(x-.18,summary.n,width=.36,color='#007DB5',label='保留的日样本数');axes[0].bar(x+.18,summary.kish_effective_n,width=.36,color='#009E8E',label='Kish权重集中度折算数');axes[0].set_ylim(0,1400);axes[0].set_title('成员不变，权重更集中');axes[0].set_ylabel('日样本数／权重折算数');axes[0].legend(loc='upper center',bbox_to_anchor=(.5,-.24),fontsize=9)
+uniform=[float(weights[weights.cutoff.eq(c)].age_days.le(730.5).mean()) for c in summary.cutoff]
+axes[1].plot(x,uniform,marker='o',color='#007DB5',label='等权');axes[1].plot(x,summary.recent_two_year_mass,marker='o',color='#009E8E',label='时间加权');axes[1].set_ylim(0,1);axes[1].yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1));axes[1].set_title('最近2年日样本的权重占比');axes[1].legend(loc='upper center',bbox_to_anchor=(.5,-.24),ncol=2,fontsize=9)
+axes[2].plot(x,summary.uniform_up_frequency,marker='o',color='#007DB5',label='等权标签频率');axes[2].plot(x,summary.weighted_up_frequency,marker='o',color='#009E8E',label='时间加权标签频率');axes[2].axhline(.5,color='#888888',linestyle=':',linewidth=1);axes[2].set_ylim(.35,.65);axes[2].yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1));axes[2].set_title('训练上涨比例的变化');axes[2].legend(loc='upper center',bbox_to_anchor=(.5,-.24),fontsize=9)
+for ax in axes:ax.set_xticks(x,years);ax.set_xlabel('后续预测年份');ax.spines[['top','right']].set_visible(False);ax.grid(axis='y',alpha=.12)
+fig.suptitle('时间加权改变了什么',fontsize=18);fig.text(.5,.018,'权重在前一年末固定，仅来自已成熟样本。Kish折算反映权重集中度；日标签重叠，不能视为独立样本量。',ha='center',fontsize=10);fig.subplots_adjust(left=.07,right=.98,top=.8,bottom=.34,wspace=.26)
+for ext in ['png','svg']:fig.savefig(OUT/f'training_weights.{ext}',dpi=170)
+plt.close(fig)

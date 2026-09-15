@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "tests_run": 3,
+  "errors": 0,
+  "failures": 0,
+  "source_sha256": {
+    "research_v9\\common9.py": "538dbb4d24515ed6266ee569cb39e72e1e98a8732c9867f8417a1872e09d7c88",
+    "research_v9\\prepare9.py": "6f423f0ad45db45c132a1e983497eac93b331605218bd5c6659b0d4d83786530",
+    "research_v9\\contract9.py": "e42d5973a64f5a7acc9d7a9977daa34dff9c96d5e0be23524f1e9b8e902c6614",
+    "research_v9\\probe9.py": "3c24b77f9292312b01aaf21f1d96fca71bb2b0794cb85cd5c4be878686e062a4",
+    "research_v9\\train9.py": "cf36ef185b4a089f4d9379c2c86419bb42da5e795e2e2f1f16939f8bc01bb9d1",
+    "research_v9\\evaluate9.py": "c6a6bef7a79d6336669243c1e3b4824c2393d6821a5d95968eacf9f0b0c99b1e",
+    "research_v6\\common6.py": "6c272603790fea9f80457eae768af9917336e26bf2e3c31fccf6a11a01037bfd",
+    "research_v6\\models6.py": "61d2dda2520e58d61ec5dd3e17b9c1a51ff8dec9ffc1e1194344cfbed4c4ef81",
+    "research_v6\\train6.py": "e9e8ee6515f1e517d48c4db87aa534a174795c5cfe64ad5cc38d2c7c8301113e",
+    "research_v6\\evaluate6.py": "abd9e3b354e655d24fe80c0c4a2d61dda47303eece861b167668ce664d8eb7bf",
+    "research_v4\\architecture.py": "e39e0f64a7c51e63fcfa184fe85d8bd8d31ae3bd7cd18356abcdb07a63b371d6",
+    "research_v4\\vendor\\Crossformer\\cross_models\\attn.py": "04a6d5964f395703944d5700510f17630370c53953d964d09ca05ede7fd89e61",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_decoder.py": "74d74cede70bbb3b254ab07b7538585e29291eb61631f70d100a061f9fe3c2e4",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_embed.py": "f2f3d9b74a5e7c2b0b8edc2c6c192d09097e01fed615b85f6f78cbc7c6c72b5b",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_encoder.py": "8313099589aff1d230be5634d045cddd4b329f216c3a57ad9ecae52753be86bd",
+    "research_v4\\vendor\\Crossformer\\cross_models\\cross_former.py": "0f1c292c8dbb6783bda2dc4e53b31d0e4982f5d04c9bbed3130cc63ed94fc1bf"
+  },
+  "protocol_sha256": "5aa9e8823e74c14312103a16df93df9b2715bf40afc109a5f850d09a14b3a6f2",
+  "completed_utc": "2026-09-11T02:55:50.512331+00:00"
+}

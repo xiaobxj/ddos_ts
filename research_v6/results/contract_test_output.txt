@@ -1,0 +1,9 @@
+test_baseline_weights_rng_and_training_step_match_round5 (__main__.Contracts.test_baseline_weights_rng_and_training_step_match_round5) ... ok
+test_sampling_keeps_retained_only_and_equal_optimizer_budget (__main__.Contracts.test_sampling_keeps_retained_only_and_equal_optimizer_budget) ... ok
+test_temporal_masks_and_shared_validation (__main__.Contracts.test_temporal_masks_and_shared_validation) ... ok
+test_width_and_regularization_are_configured_as_frozen (__main__.Contracts.test_width_and_regularization_are_configured_as_frozen) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 8.956s
+
+OK

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "raw_rows": 2240,
+  "calendar_rows": 2446,
+  "missing_stock_sessions": 206,
+  "start": "2016-08-18",
+  "end": "2026-09-14",
+  "corporate_actions": 9,
+  "vendor_hfq_max_difference": 0.0020799999998644125,
+  "training_windows": [
+    {
+      "cutoff": "2022-12-31",
+      "lower": "2018-01-01",
+      "train_n": 809,
+      "first_anchor": "2018-08-30",
+      "last_anchor": "2022-12-22",
+      "last_maturity": "2022-12-30"
+    },
+    {
+      "cutoff": "2023-12-31",
+      "lower": "2019-01-01",
+      "train_n": 1023,
+      "first_anchor": "2019-10-10",
+      "last_anchor": "2023-12-21",
+      "last_maturity": "2023-12-29"
+    },
+    {
+      "cutoff": "2024-12-31",
+      "lower": "2020-01-01",
+      "train_n": 1206,
+      "first_anchor": "2020-01-02",
+      "last_anchor": "2024-12-23",
+      "last_maturity": "2024-12-31"
+    },
+    {
+      "cutoff": "2025-12-31",
+      "lower": "2021-01-01",
+      "train_n": 1206,
+      "first_anchor": "2021-01-04",
+      "last_anchor": "2025-12-23",
+      "last_maturity": "2025-12-31"
+    }
+  ],
+  "missing_year_counts": {
+    "2016": 70,
+    "2017": 92,
+    "2018": 43,
+    "2019": 1
+  },
+  "mature_friday_counts": {
+    "2023": 48,
+    "2024": 47,
+    "2025": 48,
+    "2026": 32
+  },
+  "adjustment_sources": [
+    "https://www.etnet.com.hk/www/sc/ashares/quote_dividend.php?code=603986",
+    "https://pdf.dfcfw.com/pdf/H2_AN201805141143166795_1.pdf"
+  ],
+  "limitation": "Raw prices are a retrospective vendor vintage; forward corporate-action construction is causal, but cannot prove the vendor never revised raw history. Missing stock sessions are excluded without imputing a reason or fills."
+}

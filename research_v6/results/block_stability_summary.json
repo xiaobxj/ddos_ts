@@ -1,0 +1,72 @@
+[
+  {
+    "arm": "baseline",
+    "better_than_training_mean_histories": 0,
+    "better_than_matched_baseline_histories": 0,
+    "histories": 4,
+    "best_rmse": 0.03093376616038574,
+    "worst_rmse": 0.032437509454870984,
+    "best_rank": 4,
+    "worst_rank": 5,
+    "full_history_mse_gap_vs_baseline": 0.0,
+    "relative_advantage_sign_reversals": null,
+    "maximum_prediction_rms_shift": 0.009711536689436124,
+    "maximum_direction_disagreement": 0.41134751773049644
+  },
+  {
+    "arm": "small",
+    "better_than_training_mean_histories": 0,
+    "better_than_matched_baseline_histories": 4,
+    "histories": 4,
+    "best_rmse": 0.030579808156226573,
+    "worst_rmse": 0.030972196716751606,
+    "best_rank": 1,
+    "worst_rank": 4,
+    "full_history_mse_gap_vs_baseline": -4.445122885012216e-05,
+    "relative_advantage_sign_reversals": 0,
+    "maximum_prediction_rms_shift": 0.004984932757011198,
+    "maximum_direction_disagreement": 0.5673758865248227
+  },
+  {
+    "arm": "dropout",
+    "better_than_training_mean_histories": 1,
+    "better_than_matched_baseline_histories": 4,
+    "histories": 4,
+    "best_rmse": 0.030719241515898367,
+    "worst_rmse": 0.03141445108599132,
+    "best_rank": 1,
+    "worst_rank": 3,
+    "full_history_mse_gap_vs_baseline": -3.31361618079348e-05,
+    "relative_advantage_sign_reversals": 0,
+    "maximum_prediction_rms_shift": 0.007450135340673537,
+    "maximum_direction_disagreement": 0.46099290780141844
+  },
+  {
+    "arm": "decay",
+    "better_than_training_mean_histories": 0,
+    "better_than_matched_baseline_histories": 2,
+    "histories": 4,
+    "best_rmse": 0.030721663040206872,
+    "worst_rmse": 0.032631807748526434,
+    "best_rank": 3,
+    "worst_rank": 5,
+    "full_history_mse_gap_vs_baseline": -1.4399888181801336e-05,
+    "relative_advantage_sign_reversals": 2,
+    "maximum_prediction_rms_shift": 0.010909550966873623,
+    "maximum_direction_disagreement": 0.45390070921985815
+  },
+  {
+    "arm": "combined",
+    "better_than_training_mean_histories": 2,
+    "better_than_matched_baseline_histories": 4,
+    "histories": 4,
+    "best_rmse": 0.03046509610322909,
+    "worst_rmse": 0.030805006893202452,
+    "best_rank": 1,
+    "worst_rank": 2,
+    "full_history_mse_gap_vs_baseline": -4.334329380467584e-05,
+    "relative_advantage_sign_reversals": 0,
+    "maximum_prediction_rms_shift": 0.0023368373022539463,
+    "maximum_direction_disagreement": 0.23404255319148937
+  }
+]

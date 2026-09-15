@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-15T13:36:34.160959+00:00",
+  "target_math": "all mature rows independently recomputed",
+  "raw_rows": 2241,
+  "calendar_rows": 2447,
+  "missing_sessions": 206,
+  "source_prefix": "exact",
+  "horizons": [
+    1,
+    5
+  ],
+  "membership_prefix_checks": 28,
+  "prior_rounds": 51
+}

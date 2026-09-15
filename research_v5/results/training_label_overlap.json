@@ -1,0 +1,23 @@
+[
+  {
+    "cutoff": "2017-12-31",
+    "daily_training_rows": 1678,
+    "adjacent_pairs": 1675,
+    "adjacent_label_correlation": 0.7795795269584153,
+    "interpretation": "Overlapping-label diagnostic; not an estimate of independent sample size."
+  },
+  {
+    "cutoff": "2018-12-31",
+    "daily_training_rows": 1921,
+    "adjacent_pairs": 1918,
+    "adjacent_label_correlation": 0.7761958088808965,
+    "interpretation": "Overlapping-label diagnostic; not an estimate of independent sample size."
+  },
+  {
+    "cutoff": "2019-12-31",
+    "daily_training_rows": 2165,
+    "adjacent_pairs": 2162,
+    "adjacent_label_correlation": 0.7792983056599543,
+    "interpretation": "Overlapping-label diagnostic; not an estimate of independent sample size."
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "training_mean": {
+    "mse": 0.0009345864976034037,
+    "rmse": 0.030571007467916456,
+    "accuracy": 0.5602836879432624,
+    "correlation": -0.16173700050739112,
+    "forecast_std": 0.00039875909620241663,
+    "n": 141,
+    "balanced_accuracy": 0.5,
+    "predicted_up_fraction": 1.0,
+    "mse_skill_vs_training_mean": 0.0,
+    "within_fold_forecast_std": 0.0,
+    "between_fold_variance_share": 1.0,
+    "reassigned_mse": 0.0009345864976034037,
+    "reassignment_mse_relative_change": 0.0
+  },
+  "zero": {
+    "mse": 0.0009339386321189327,
+    "rmse": 0.030560409554175362,
+    "accuracy": 0.4397163120567376,
+    "correlation": null,
+    "forecast_std": 0.0,
+    "n": 141,
+    "balanced_accuracy": 0.5,
+    "predicted_up_fraction": 0.0,
+    "mse_skill_vs_training_mean": 0.0006932108329538167,
+    "within_fold_forecast_std": 0.0,
+    "between_fold_variance_share": null,
+    "reassigned_mse": 0.0009339386321189327,
+    "reassignment_mse_relative_change": 0.0
+  }
+}

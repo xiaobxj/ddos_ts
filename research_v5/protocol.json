@@ -1,0 +1,43 @@
+{
+  "experiment":"Round 5: real-window trainability, same-dimensional continuous representation, and auxiliary target diagnostics",
+  "version":5,
+  "scope":"Complete bounded diagnostic experiment and chronological raw-only validation. No new 2024-2026 forecasts or repeated development-window scoring in this round. Previously inspected historical validation is exploratory, not a virgin confirmation set.",
+  "data":"Reuse round-4 frozen 125-bar CSI300 inputs, daily matured execution labels, original OHLCV and model sources. Fixed 25 x 5 patches in all round-5 arms isolate representation, initialization and loss. No adaptive segmentation changes.",
+  "representations":["raw","bits","continuous"],
+  "continuous":"Official frozen Kronos tokenizer embed -> encoder -> quant_embed -> torch.nn.functional.normalize(p=2,dim=-1), immediately before BSQuantizer sign operation. Twenty dimensions and per-bar unit norm as for bipolar bits; no per-representation fitted scaling or PCA. Encode each observed 125-bar window independently using exact round-4 normalized float32 cached input.",
+  "provenance":"Reuse round-4 official Crossformer revision c10c8eadb153d1dd9798250967747ca3ebb81383 and round-3 Kronos revision 67b630e67f6a18c9e9be918d9b4337c960db1e9a / tokenizer checkpoint 0e0117387f39004a9016484a186a908917e22426. Freeze hashes of old evidence and dependencies; do not modify them.",
+  "pretraining_boundary":"Pretrained bits/continuous may be used on pre-2018 samples ONLY for explicitly in-sample capacity diagnostics. They are forbidden in 2018-2020 chronological validation, candidate selection or predictive claims because the paper states pretraining through June 2024.",
+  "targets":{
+    "return":"Unchanged next-same-weekday next-open execution return.",
+    "auxiliary":"Five following bars x OHLCV. Each price target is log(future price/current observed close); volume target is log1p(future volume) minus mean log1p(volume) of the last 20 observed bars. Each of 25 auxiliary coordinates is standardized with mature training labels only.",
+    "eligibility":"All five future OHLCV bars must be finite, positive OHLC, nonnegative volume and internally valid. Joint completed date is max(original return completed date, date at anchor+5). All compared arms use exactly these shared eligible/mature observations, even return-only arms.",
+    "limitation":"OHLCV auxiliary loss is an explicitly defined local objective, not a reproduction of missing article OHLCAV training details; no real amount is available."
+  },
+  "crossformer":{"d_model":32,"d_ff":64,"n_heads":4,"e_layers":2,"factor":4,"dropout_validation":0.1},
+  "variants":[
+    {"name":"return_zero","return_initialization":"zero","auxiliary_weight":0.0},
+    {"name":"return_nonzero","return_initialization":"xavier_uniform_gain_0.1_bias_zero","auxiliary_weight":0.0},
+    {"name":"joint_ohlcv","return_initialization":"zero","auxiliary_weight":0.1}
+  ],
+  "architecture":"Reuse round-4 masked Crossformer, geometry and scalar return head. Add the same per-decoder-coordinate linear D->5 auxiliary projection in every variant. Restore RNG state after initializing added projection so shared backbone/return initialization and subsequent dropout streams match; nonzero initialization uses an isolated seed+101 RNG fork. Return-only loss excludes auxiliary computation. Joint loss is standardized return MSE + 0.1 * standardized 25-coordinate auxiliary MSE. Do not detach the auxiliary branch.",
+  "seeds":[20260910,20260911,20260912],
+  "capacity":{
+    "sample_count":32,"sample_cutoff":"2017-12-31","selection":"32 equally spaced eligible observations with joint_completed <= cutoff, selected by rounded linspace indices without looking at target magnitude/sign.",
+    "steps":400,"batch":"all 32 observations per optimizer step","learning_rate":0.001,"weight_decay":0.0,"dropout":0.0,"gradient_clip_norm":1.0,
+    "runs":"3 representations x 3 Crossformer variants x 3 seeds = 27 real-label capacity fits. Additionally, flattened-input MLP(64 GELU -> scalar) for all 3 representations x real/permuted-return labels x 3 seeds = 18 positive capacity controls. One fixed label permutation seed 20260914 is used across representations and training seeds.",
+    "qualification":"Prespecified diagnostic PASS if final standardized real/shuffled return MSE <= 0.1 and return correlation >= 0.9. Always report final and minimum errors and all seeds. Fitting shuffled labels establishes memorization capacity only, not prediction skill. No early stopping or selected best seed.",
+    "metrics":"Initial and final backbone/return-head gradient norms; final return and auxiliary MSE; correlation; prediction std; evaluate original input and a cyclic reassignment of complete sample windows with geometry/mask intact. Save step 0,1,2,5,10,25,50,100,200,400 curves, final predictions and checkpoints."
+  },
+  "validation":{
+    "representation":"raw ONLY; fixed 25 x 5 patches",
+    "folds":[{"cutoff":"2017-12-31","end":"2018-12-31"},{"cutoff":"2018-12-31","end":"2019-12-31"},{"cutoff":"2019-12-31","end":"2020-12-31"}],
+    "selection_rows":"Friday signals in 2018-2020 whose joint labels are completed by 2020-12-31. All daily training rows have joint_completed <= each cutoff; no random split.",
+    "epochs":[2,5,10,20],"max_epochs":20,"batch_size":128,"optimizer":"AdamW","learning_rate":0.001,"weight_decay":0.01,"gradient_clip_norm":1.0,
+    "runs":"All 3 variants x 3 annual folds x 3 seeds = 27 fits; save checkpoints at each of the 4 epoch candidates.",
+    "selection":"After every fit is complete, compute three-seed mean predictions, select variant/epoch by minimum pooled RMSE; ties prefer fewer epochs then protocol variant order. No health-result-dependent pruning, new hyperparameters or budget extension. Report every candidate, per-year and per-seed errors, raw training-mean and zero-return baselines.",
+    "primary_comparisons":"At matched epochs 5 and 20: return_nonzero vs return_zero, joint_ohlcv vs return_zero. Four pooled-MSE comparisons, eight-observation circular block bootstrap, 10000 replicates, seed 20260910, Holm across four. Exploratory because historical validation and repeated research; selected winner is not independent out-of-sample evidence.",
+    "metrics":"RMSE, sign accuracy, forecast std, balanced accuracy, error vs training mean, fixed-final-model train MSE, held-out return MSE before/after cyclic within-fold input reassignment. Input reassignment is diagnostic only and must not drive selection."
+  },
+  "execution":"Use existing isolated research_v4/.venv_gpu Python 3.13 and CUDA float32, deterministic algorithms, CUBLAS_WORKSPACE_CONFIG=:4096:8, TF32 off, four CPU threads. No new packages or changes to shared runtimes.",
+  "verification":"Check prequant signs against official bits, per-bar unit norm, past-window causality, source/cache hashes, shared eligible dates and completed labels, gradient connectivity, every saved checkpoint hash and deterministic prediction replay. Preserve previous four rounds."
+}

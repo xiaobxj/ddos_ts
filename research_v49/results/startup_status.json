@@ -1,0 +1,13 @@
+{
+  "bootstrap_valid_until": "2026-09-30",
+  "journal_events": 1,
+  "journal_tip_sha256": "8d75c396a40e3e076d53ce69828cdf29adbbc104912bc228221f43eac11b26b6",
+  "labels": 0,
+  "latest_archived_snapshot": "2026-09-14",
+  "next_parameter_cutoff": "2026-09-30",
+  "next_scheduled_friday": "2026-09-18",
+  "now_utc": "2026-09-14T15:11:09.653148+00:00",
+  "predictions": 0,
+  "scheduler_installed": false,
+  "status": "WAIT_FOR_SIGNAL_WINDOW"
+}

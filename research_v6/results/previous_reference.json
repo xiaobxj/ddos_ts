@@ -1,0 +1,25 @@
+{
+  "round5_baseline_rows_matched": 1692,
+  "maximum_round5_prediction_difference": 0.0,
+  "round4_reference": {
+    "method": "round4_raw_fixed",
+    "epochs": 5,
+    "mse": 0.0009248550160290253,
+    "rmse": 0.03041142903628544,
+    "correlation": 0.11019052073875059,
+    "forecast_std": 0.0010241379674520697,
+    "accuracy": 0.5957446808510638,
+    "n": 141,
+    "balanced_accuracy": 0.5559412004899958,
+    "forecast_positive_fraction": 0.8368794326241135,
+    "actual_positive_fraction": 0.5602836879432624,
+    "within_fold_forecast_std": 0.0008816896409046363,
+    "between_fold_share_of_forecast_variation": 0.2588356138881075,
+    "same_validation_dates": true,
+    "training_sample_set_changed": true,
+    "current_selected_minus_previous_rmse": 4.705201234555395e-05,
+    "role": "Unchanged historical reference, not a controlled attribution of the five sample exclusions."
+  },
+  "winner_minus_round4_rmse": -1.2237528796053831e-05,
+  "winner_minus_round5_joint10_rmse": -5.928954114160778e-05
+}

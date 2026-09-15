@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T14:50:47.951990+00:00",
+  "checks": [
+    "early_recent_pooled_2026_correctcounts_all5schemes",
+    "recent_Brier_all5schemes",
+    "recent_R19_direction_gain_preserved",
+    "early_and_pooled_probability_gains_preserved",
+    "2026_slope_probability_gains_preserved",
+    "recent_recovery_regression_counts",
+    "2026_up_predictions_and_observed_counts",
+    "conditional_effects_vs_symmetric_decomposition",
+    "early_recent_2026_factorial_direction_values",
+    "recent_and2026_Brier_share_signs",
+    "72_raw_and_Holm_pvalues",
+    "zero_new_fits_and_inference",
+    "independent_verification_counts",
+    "28_old_histories_and6143_old_files_unchanged",
+    "prospective_work_recommended_not_started",
+    "old_budget_distinctions",
+    "markdown_encoding_links_and_table_shapes"
+  ],
+  "artifacts": {
+    "results\\结果解读与下一步.md": "61a881405c3076aa309f427f4d75480241b9be378d96610f16fbac2feeb1fe2a",
+    "results\\第四十八轮实验报告.md": "f7bd457673fb2b14d41c02692eb37d4caf2290a23baeccdcb53af328b00b9943",
+    "results\\visual_review.json": "8af63158381c192e9c145dc9a100a3b5b36e84fee958a5af89c5ddf64f32dd54",
+    "results\\verification.json": "0b98cbf6e7f09908046b4c2a330ac21ba612ed893ec59ef76fcf869d1e49fa57"
+  }
+}

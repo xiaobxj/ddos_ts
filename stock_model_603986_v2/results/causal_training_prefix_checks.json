@@ -1,0 +1,170 @@
+[
+  {
+    "task": "h1_mse_5y_2022-12-31",
+    "train_n": 819,
+    "status": "PASS",
+    "last_mature_label": "2022-12-30"
+  },
+  {
+    "task": "h1_mse_5y_2023-12-31",
+    "train_n": 1028,
+    "status": "PASS",
+    "last_mature_label": "2023-12-29"
+  },
+  {
+    "task": "h1_mse_5y_2024-12-31",
+    "train_n": 1211,
+    "status": "PASS",
+    "last_mature_label": "2024-12-31"
+  },
+  {
+    "task": "h1_mse_5y_2025-12-31",
+    "train_n": 1211,
+    "status": "PASS",
+    "last_mature_label": "2025-12-31"
+  },
+  {
+    "task": "h1_bce_5y_2022-12-31",
+    "train_n": 819,
+    "status": "PASS",
+    "last_mature_label": "2022-12-30"
+  },
+  {
+    "task": "h1_bce_5y_2023-12-31",
+    "train_n": 1028,
+    "status": "PASS",
+    "last_mature_label": "2023-12-29"
+  },
+  {
+    "task": "h1_bce_5y_2024-12-31",
+    "train_n": 1211,
+    "status": "PASS",
+    "last_mature_label": "2024-12-31"
+  },
+  {
+    "task": "h1_bce_5y_2025-12-31",
+    "train_n": 1211,
+    "status": "PASS",
+    "last_mature_label": "2025-12-31"
+  },
+  {
+    "task": "h1_mse_3y_2022-12-31",
+    "train_n": 727,
+    "status": "PASS",
+    "last_mature_label": "2022-12-30"
+  },
+  {
+    "task": "h1_mse_3y_2023-12-31",
+    "train_n": 726,
+    "status": "PASS",
+    "last_mature_label": "2023-12-29"
+  },
+  {
+    "task": "h1_mse_3y_2024-12-31",
+    "train_n": 725,
+    "status": "PASS",
+    "last_mature_label": "2024-12-31"
+  },
+  {
+    "task": "h1_mse_3y_2025-12-31",
+    "train_n": 726,
+    "status": "PASS",
+    "last_mature_label": "2025-12-31"
+  },
+  {
+    "task": "h1_mse_5y_2026-03-31",
+    "train_n": 1209,
+    "status": "PASS",
+    "last_mature_label": "2026-03-31"
+  },
+  {
+    "task": "h1_mse_5y_2026-06-30",
+    "train_n": 1209,
+    "status": "PASS",
+    "last_mature_label": "2026-06-30"
+  },
+  {
+    "task": "h5_mse_5y_2022-12-31",
+    "train_n": 811,
+    "status": "PASS",
+    "last_mature_label": "2022-12-30"
+  },
+  {
+    "task": "h5_mse_5y_2023-12-31",
+    "train_n": 1024,
+    "status": "PASS",
+    "last_mature_label": "2023-12-29"
+  },
+  {
+    "task": "h5_mse_5y_2024-12-31",
+    "train_n": 1207,
+    "status": "PASS",
+    "last_mature_label": "2024-12-31"
+  },
+  {
+    "task": "h5_mse_5y_2025-12-31",
+    "train_n": 1207,
+    "status": "PASS",
+    "last_mature_label": "2025-12-31"
+  },
+  {
+    "task": "h5_bce_5y_2022-12-31",
+    "train_n": 811,
+    "status": "PASS",
+    "last_mature_label": "2022-12-30"
+  },
+  {
+    "task": "h5_bce_5y_2023-12-31",
+    "train_n": 1024,
+    "status": "PASS",
+    "last_mature_label": "2023-12-29"
+  },
+  {
+    "task": "h5_bce_5y_2024-12-31",
+    "train_n": 1207,
+    "status": "PASS",
+    "last_mature_label": "2024-12-31"
+  },
+  {
+    "task": "h5_bce_5y_2025-12-31",
+    "train_n": 1207,
+    "status": "PASS",
+    "last_mature_label": "2025-12-31"
+  },
+  {
+    "task": "h5_mse_3y_2022-12-31",
+    "train_n": 723,
+    "status": "PASS",
+    "last_mature_label": "2022-12-30"
+  },
+  {
+    "task": "h5_mse_3y_2023-12-31",
+    "train_n": 722,
+    "status": "PASS",
+    "last_mature_label": "2023-12-29"
+  },
+  {
+    "task": "h5_mse_3y_2024-12-31",
+    "train_n": 721,
+    "status": "PASS",
+    "last_mature_label": "2024-12-31"
+  },
+  {
+    "task": "h5_mse_3y_2025-12-31",
+    "train_n": 722,
+    "status": "PASS",
+    "last_mature_label": "2025-12-31"
+  },
+  {
+    "task": "h5_mse_5y_2026-03-31",
+    "train_n": 1205,
+    "status": "PASS",
+    "last_mature_label": "2026-03-31"
+  },
+  {
+    "task": "h5_mse_5y_2026-06-30",
+    "train_n": 1205,
+    "status": "PASS",
+    "last_mature_label": "2026-06-30"
+  }
+]

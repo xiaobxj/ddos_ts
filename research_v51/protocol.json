@@ -1,0 +1,43 @@
+{
+  "before_18": "Read-only journal inspection, operational receipt only; no fetch, refit, prediction or label append.",
+  "clock": "Production uses actual system UTC, interpreted in UTC+8; CLI has no timestamp override.",
+  "cutoff": "Use original R50 request checks; no fitting before cutoff at 18:00 and covering observed snapshot. December delegates to unchanged annual refit.",
+  "data_pending": "Missing current Friday is never replaced by a Thursday or a historical backfill. No exchange holiday calendar is inferred.",
+  "evaluation": "Unchanged R49 descriptive-only checks until fixed final review; save primary event once.",
+  "failure": "Stop dependent steps, retain append-only scientific evidence and per-run write-ahead/final receipts; no automatic retry or lock removal.",
+  "locking": "Exclusive entire-cycle lock for run51, plus original per-append journal lock. Do not run older write commands concurrently.",
+  "no_recipe_or_selection_change": true,
+  "original_histories": [
+    "rolling5_annual20",
+    "weekly_state_validated",
+    "annual_head_timeweight2y",
+    "annual_head_weighted_intercept",
+    "annual_head_weighted_slopes"
+  ],
+  "original_methods": [
+    "learned_market",
+    "learned_vol_interaction",
+    "learned_order_extension",
+    "learned_order_offset"
+  ],
+  "original_seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "parameter_implementation_freeze_sha256": "d1ec04c82c10539db887b42a14c7da50cc7c5b43753bda68fb2fe17527929685",
+  "scheduler_installed": false,
+  "scientific_protocol_sha256": "fb5ff21528a016bcf2aef7fb32ca6edf6702af588f6c4c031b52a63739002475",
+  "scope": "manual operational orchestration and isolated engineering verification",
+  "sequence": [
+    "validate provenance and journal",
+    "fetch weekday final bars if latest snapshot ends before today",
+    "validate unchanged observed prefix",
+    "refresh missing due cohort quarters in chronological order",
+    "recheck clock and record only current Friday 18:00 inclusive to 23:00 exclusive",
+    "settle recorded predictions using original joint maturity rule",
+    "reuse or generate original fixed-cohort evaluation"
+  ],
+  "synthetic": "Test-only clock/feed substitutions, original production record/settle functions and models, isolated directory with synthetic_test_only genesis marker; never counted as real predictions.",
+  "version": 51
+}

@@ -1,0 +1,16 @@
+{
+  "stock": "603986",
+  "neural_fits": 12,
+  "mature_weeks": 175,
+  "main_accuracy": 0.52,
+  "main_correct": 91,
+  "main_brier": 0.26409445429872025,
+  "frequency_accuracy": 0.5485714285714286,
+  "frequency_brier": 0.2480721405143573,
+  "market4_accuracy": 0.56,
+  "market4_brier": 0.24887246210007535,
+  "conclusion": "本轮没有建立主模型稳定优于简单基线的证据，不能据此将它作为已经验证的选股或买卖工具。",
+  "latest_signal": "2026-09-11",
+  "latest_status": "retrospective_pending",
+  "built_utc": "2026-09-15T09:27:54.367834+00:00"
+}

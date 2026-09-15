@@ -1,0 +1,11 @@
+h,method,adjusted_dates,probability_changed_dates,direction_changed_dates
+1,cal.quarter_four_state,69,69,3
+1,cal.month_four_state,133,133,4
+1,cal.quarter_pooled,115,115,9
+1,cal.quarter_ungated,425,425,50
+1,cal.quarter_platt,180,180,65
+5,cal.quarter_four_state,111,111,20
+5,cal.month_four_state,66,66,18
+5,cal.quarter_pooled,111,111,9
+5,cal.quarter_ungated,359,359,67
+5,cal.quarter_platt,187,187,100

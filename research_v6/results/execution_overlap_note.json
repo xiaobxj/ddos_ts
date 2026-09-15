@@ -1,0 +1,7 @@
+{
+  "reason": "The frozen training-history deletions do not depend on main-candidate ranking. A second independent training process was started while the main process was running to use available GPU capacity.",
+  "phases": ["main", "blocks"],
+  "separation": "Each process owns its random state, model, optimizer, CUDA context, predictions, curves, manifest and checkpoint directory. Protocol, models, source hashes, masks, targets, training budgets and selection rules were not modified.",
+  "timing_interpretation": "Reported phase elapsed times overlap and must not be summed as total wall-clock duration.",
+  "verification": "All prior evidence is hashed separately by each phase; every saved checkpoint is replayed. All full-history baseline predictions must match round 5."
+}

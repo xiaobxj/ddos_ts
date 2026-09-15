@@ -1,0 +1,22 @@
+{
+  "candidate": "combined, epoch20",
+  "flags": {
+    "absolute_advantage": false,
+    "relative_advantage": false,
+    "seed_consistency": false
+  },
+  "consistency_screen_pass": false,
+  "rules": {
+    "absolute_advantage": "Candidate20 ensemble MSE is below retained-sample training-mean MSE in all three deleted histories.",
+    "relative_advantage": "Candidate20 ensemble MSE is below baseline10 ensemble MSE in all three deleted histories.",
+    "seed_consistency": "At least two of the three individual candidate20 seeds have MSE below retained training mean in each deleted history.",
+    "interpretation": "Report all three prespecified flags and every value. A consistency screen is satisfied only if all three flags are true; this is a local descriptive screen, not statistical confirmation, independent evidence or deployment permission. Report the six adjusted p values separately. Do not choose the best deletion or seed."
+  },
+  "deleted_histories_better_than_mean": 1,
+  "deleted_histories_better_than_baseline10": 2,
+  "primary_comparisons_with_holm_p_below_0_05": 0,
+  "primary_significant_candidate_improvements": 0,
+  "no_candidate_selection": true,
+  "historical_reuse": true,
+  "scored_utc": "2026-09-10T06:21:00.602357+00:00"
+}

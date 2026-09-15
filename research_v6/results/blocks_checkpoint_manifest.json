@@ -1,0 +1,407 @@
+[
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_early_2017-12-31_20260910_epoch10.pt",
+    "sha256": "2c1d35bfa39bc574bae1c80ed8eb746dad513c38539c6803f544cdae245614bb",
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_early_2017-12-31_20260910_epoch10.pt",
+    "sha256": "a8167bc03301d514b2aff2b00156a4b5b082529b8f1393fbbf0f9d8404cf1684",
+    "arm": "small",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_early_2017-12-31_20260910_epoch10.pt",
+    "sha256": "64618498af4b7f1a24c29ab89c9fe1672be682175ae1ed744cebf4c5aba6e143",
+    "arm": "dropout",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_early_2017-12-31_20260910_epoch10.pt",
+    "sha256": "bfe3a7e8456fc16730bf22ff07944c3c3f9a2b6cf9bd7760ec31f7d332c19f3f",
+    "arm": "decay",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_early_2017-12-31_20260910_epoch10.pt",
+    "sha256": "e6943143497ccc30a0346e52feea0d2e8e22559586f5f39cd0701269b0bcccef",
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_middle_2017-12-31_20260910_epoch10.pt",
+    "sha256": "c7d967348e8f8e642feb6e04a241e798805959c977b2336f4d6f371e68d3d922",
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_middle_2017-12-31_20260910_epoch10.pt",
+    "sha256": "2bb88644a52eb87c10632e180f295531c20a6d263f64da1eed314cc71edbf7f7",
+    "arm": "small",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_middle_2017-12-31_20260910_epoch10.pt",
+    "sha256": "a65095c9b0040ef2e0b7494a54c45d7ad20ad690834e4ba9d054493745f64699",
+    "arm": "dropout",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_middle_2017-12-31_20260910_epoch10.pt",
+    "sha256": "57e8f0fe46f43136254c4951736435a233e3bd125df1e79d53d142bb0faada6f",
+    "arm": "decay",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_middle_2017-12-31_20260910_epoch10.pt",
+    "sha256": "8270c3e45dbbe26d74e8b7b0a284415d25cd8b62331d6a229b2c63cc5b37649c",
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_recent_2017-12-31_20260910_epoch10.pt",
+    "sha256": "1be6f140990f78a87ef7b82fe11d590a6a009a7b728c0a3a887ec2839d8932bd",
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_recent_2017-12-31_20260910_epoch10.pt",
+    "sha256": "30dab4ece0d80f0faa20610c98411f45a69ee6fc50a184a7470de3f64ba55e5e",
+    "arm": "small",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_recent_2017-12-31_20260910_epoch10.pt",
+    "sha256": "c96a9696d809e8abfdfa403496e30b73297ef41e9e580c14f8b20a22e026530c",
+    "arm": "dropout",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_recent_2017-12-31_20260910_epoch10.pt",
+    "sha256": "bfb47d42f32c6cae9237e98522987a66a7e7b303b5346ee7bd2b9b3b632161ba",
+    "arm": "decay",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_recent_2017-12-31_20260910_epoch10.pt",
+    "sha256": "eb56cb616edaec5715acf24c61a078428fdfbd937ff0548d26c954ffaefaebb4",
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2017-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_early_2018-12-31_20260910_epoch10.pt",
+    "sha256": "a68fdfc3c5272c8c6b9a0f7b91f4c8dc2de8ed15f6a10af2f15487f7a249ba9b",
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_early_2018-12-31_20260910_epoch10.pt",
+    "sha256": "e24c017d166e5a155c964143ac45146b90ff533b4e9214b02934aef02b128298",
+    "arm": "small",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_early_2018-12-31_20260910_epoch10.pt",
+    "sha256": "f77ec919b4cdbd9ffb47ce872fc22024d64378213ef93bdba2b7d4f66604ba66",
+    "arm": "dropout",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_early_2018-12-31_20260910_epoch10.pt",
+    "sha256": "5d68f54a9d9e44ad91373ca8988e8588ab9e264c01c5c6cdba9b2220d5f400ca",
+    "arm": "decay",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_early_2018-12-31_20260910_epoch10.pt",
+    "sha256": "5a6e595ddc695c95f20ffdd3bbff501283ba1a921888d683bc1cbeeb561cda7a",
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_middle_2018-12-31_20260910_epoch10.pt",
+    "sha256": "f193abf87559cdfd3709c5d7f741cd33f8b4e9644f578b61e3d1d920c7a628eb",
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_middle_2018-12-31_20260910_epoch10.pt",
+    "sha256": "d9674f0d0e2bebe9320fdf38fb0303dca1b0f967f6be00fc362ae1be322026ce",
+    "arm": "small",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_middle_2018-12-31_20260910_epoch10.pt",
+    "sha256": "ee6d6dcb0b1f3845613b45a4a7938ced6b5daea5df6e8b28105338d5f273e63c",
+    "arm": "dropout",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_middle_2018-12-31_20260910_epoch10.pt",
+    "sha256": "93c214f1fe78d607dc59265ac9aa0eb5ff0374334386855ce626b9608294f800",
+    "arm": "decay",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_middle_2018-12-31_20260910_epoch10.pt",
+    "sha256": "515a782077b21c507c0d154a183913514d4bbf1719d4401891047083194ad271",
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_recent_2018-12-31_20260910_epoch10.pt",
+    "sha256": "ddd71be4e19ef5f3f96229a94267a84a093b51bbd6fd73db123eff845d0e1298",
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_recent_2018-12-31_20260910_epoch10.pt",
+    "sha256": "52a5fb8820e1dc81cf2799097b29e4b0a4dd13926abfe23f67ff13a8e8109bf3",
+    "arm": "small",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_recent_2018-12-31_20260910_epoch10.pt",
+    "sha256": "12599afa709581391533c0949b05e452bb96c702a8c9bc989a4e2e3d6936c8c3",
+    "arm": "dropout",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_recent_2018-12-31_20260910_epoch10.pt",
+    "sha256": "50673299045f875080e74dfa68f7694c17ace7a73fe39de052ff69d32748cdcf",
+    "arm": "decay",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_recent_2018-12-31_20260910_epoch10.pt",
+    "sha256": "56e4e7737d8a48c3957afff7c711516cea7728e991c0cbbe940050e93bb13c62",
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2018-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_early_2019-12-31_20260910_epoch10.pt",
+    "sha256": "7f68ea91bb4dc4d27a70c7cbe38a20815448f13affa5559de4ee8044d5aa30c5",
+    "arm": "baseline",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_early_2019-12-31_20260910_epoch10.pt",
+    "sha256": "89585cf49dd08a08878d0660ba7f6f67a9f8d5ab4d021f5595ce3cb026528205",
+    "arm": "small",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_early_2019-12-31_20260910_epoch10.pt",
+    "sha256": "c041b2cba7cf1b969edd33e4236de49f2760dc96cd6191f1adbd8f1dbc28d7f4",
+    "arm": "dropout",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_early_2019-12-31_20260910_epoch10.pt",
+    "sha256": "e70d65bcebe59595242f04f1241136dc218453c23c87d8e5d366a09f5bb81ea7",
+    "arm": "decay",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_early_2019-12-31_20260910_epoch10.pt",
+    "sha256": "e1fd54359b0ae7a85d756939107d4ef2ffc18cb2d398db2264cd5831b4a41f1d",
+    "arm": "combined",
+    "history": "drop_early",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_middle_2019-12-31_20260910_epoch10.pt",
+    "sha256": "51c3c9c0acafaa7cce4c498cb9b0add2c41e1df1b44b085824216242192f700f",
+    "arm": "baseline",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_middle_2019-12-31_20260910_epoch10.pt",
+    "sha256": "44f4094e29c4c38a75350a34abc4cd0668751449f6496ced3324b716d2d80f50",
+    "arm": "small",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_middle_2019-12-31_20260910_epoch10.pt",
+    "sha256": "7f8a71636583cebc0370ef5d47354c6aec22711b9516c126d5bae2a33e01cf27",
+    "arm": "dropout",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_middle_2019-12-31_20260910_epoch10.pt",
+    "sha256": "080672aaa70ebdaba9ef281422c37e05c2be194ac785a223a6840b74d612414e",
+    "arm": "decay",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_middle_2019-12-31_20260910_epoch10.pt",
+    "sha256": "e965814d7ab766e47b29be20ecbc53e0f0e35a120b533f8bea2c15d966c5e142",
+    "arm": "combined",
+    "history": "drop_middle",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\baseline_drop_recent_2019-12-31_20260910_epoch10.pt",
+    "sha256": "10ff47b86388951292fc20b581cb061d39050610e98bd1ebe22038d984e64e2b",
+    "arm": "baseline",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\small_drop_recent_2019-12-31_20260910_epoch10.pt",
+    "sha256": "916c36b72a58d992f554ce62aed0dcccf948f78d960ed691dc393a34d542922a",
+    "arm": "small",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\dropout_drop_recent_2019-12-31_20260910_epoch10.pt",
+    "sha256": "6dda3ba940cb220dad3570822002609a36b888e197260bdfeb366ef211180a2b",
+    "arm": "dropout",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\decay_drop_recent_2019-12-31_20260910_epoch10.pt",
+    "sha256": "3f4e8b2bd32ad73e901f6446b50cd0196962131df36ab1cab1a3e9be51f64345",
+    "arm": "decay",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  },
+  {
+    "file": "results\\blocks_checkpoints\\combined_drop_recent_2019-12-31_20260910_epoch10.pt",
+    "sha256": "66b35b5bdf8a430b3b0a0714c4fa5dd7699eeb500d63cb1db668eb1d5900b98e",
+    "arm": "combined",
+    "history": "drop_recent",
+    "cutoff": "2019-12-31",
+    "seed": 20260910,
+    "epoch": 10
+  }
+]

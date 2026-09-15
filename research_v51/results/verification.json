@@ -1,0 +1,41 @@
+{
+  "actual_future_parameter_fits": 0,
+  "actual_prospective_predictions": 0,
+  "cases": [
+    "preclose_has_no_fetch_or_scientific_writes",
+    "fetch_failure_stops_dependent_steps_and_keeps_receipt",
+    "missing_friday_never_uses_thursday",
+    "fetch_crossing_deadline_cannot_record",
+    "repeated_cycle_reuses_snapshot_and_prediction",
+    "weekend_has_no_same_day_fetch_or_prediction",
+    "provenance_failure_prevents_network_and_writes",
+    "whole_cycle_exclusive_lock_and_release",
+    "missed_quarters_dispatched_in_order_including_annual_cutoff_mock_only",
+    "cutoff_day_requires_covering_data",
+    "quarter_end_after18_refreshes_next_quarter",
+    "no_early_quarter_or_annual_dispatch",
+    "refresh_failure_keeps_snapshot_but_stops_prediction",
+    "refresh_crossing_deadline_cannot_record",
+    "primary_evaluation_saved_once_and_reused",
+    "real_models_snapshot_prediction_pending_mature_chain",
+    "synthetic_events_never_enter_real_journal",
+    "real_prediction_and_label_reruns_are_idempotent",
+    "actual_label_matches_hand_computed_open_return",
+    "one_mature_fixture_has_no_primary_tests",
+    "missed_friday_and_late_append_are_not_backfilled",
+    "changed_post_base_prefix_blocks_cycle"
+  ],
+  "completed_utc": "2026-09-15T02:37:07.456308+00:00",
+  "freeze_sha256": "2c6f21ddfafc7dd3f20318cfb67c0ddacc26f7ac3c85372c3b47f87a91af13c2",
+  "old_files_preserved": 6279,
+  "real_runtime_files": {
+    "prospective_r49\\blobs\\07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5.csv": "07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5",
+    "prospective_r49\\blobs\\db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29.response.json": "db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29",
+    "prospective_r49\\events\\000001.json": "8d75c396a40e3e076d53ce69828cdf29adbbc104912bc228221f43eac11b26b6",
+    "prospective_r49\\events\\000002.json": "5236080111165f98e9b883e718b97349a6fe637f8465244c4b4125ceb637c09c",
+    "prospective_r49\\genesis.json": "4288c11b9380c69b403162f3bbed64aaaedbd153e9804a01f225b015e954f6c6"
+  },
+  "status": "PASS",
+  "synthetic_fixture_directory": "_work\\r51_SYNTHETIC_TEST_ONLY_93ll1bgk",
+  "synthetic_rehearsal_sha256": "016f7306a6fd6080d89f025f9ba7a139f1ed4b0e727844c41ed49a7d8de06127"
+}

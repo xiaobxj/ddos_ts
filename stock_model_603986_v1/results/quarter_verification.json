@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "quarters": [
+    {
+      "cutoff": "2022-12-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 0,
+      "validation_n": 0,
+      "mode": "annual_reset"
+    },
+    {
+      "cutoff": "2023-03-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 0,
+      "validation_n": 10,
+      "mode": "insufficient_history"
+    },
+    {
+      "cutoff": "2023-06-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 8,
+      "validation_n": 13,
+      "mode": "insufficient_history"
+    },
+    {
+      "cutoff": "2023-09-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 21,
+      "validation_n": 13,
+      "mode": "insufficient_history"
+    },
+    {
+      "cutoff": "2023-12-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 32,
+      "validation_n": 13,
+      "mode": "annual_reset"
+    },
+    {
+      "cutoff": "2024-03-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 43,
+      "validation_n": 13,
+      "mode": "insufficient_history"
+    },
+    {
+      "cutoff": "2024-06-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 1.3877787807814457e-16,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    },
+    {
+      "cutoff": "2024-09-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 3.0704605524789486e-16,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    },
+    {
+      "cutoff": "2024-12-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "annual_reset"
+    },
+    {
+      "cutoff": "2025-03-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 2.2898349882893854e-15,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    },
+    {
+      "cutoff": "2025-06-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 5.551115123125783e-17,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    },
+    {
+      "cutoff": "2025-09-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 1.124100812432971e-15,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    },
+    {
+      "cutoff": "2025-12-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 0.0,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "annual_reset"
+    },
+    {
+      "cutoff": "2026-03-31",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 2.0539125955565396e-15,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    },
+    {
+      "cutoff": "2026-06-30",
+      "status": "PASS",
+      "offsets_checked": 48,
+      "gate_cells": 16,
+      "maximum_offset_gap": 3.3306690738754696e-16,
+      "training_n": 52,
+      "validation_n": 13,
+      "mode": "ready"
+    }
+  ]
+}

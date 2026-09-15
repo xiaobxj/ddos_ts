@@ -1,0 +1,7 @@
+{
+  "phase": "Before protocol freeze, contract and any model training",
+  "status": "Diagnostic tolerance check failed",
+  "observed_max_vendor_hfq_difference": 0.0020799999998644125,
+  "initial_tolerance": 0.0011,
+  "resolution": "Exact forward cash/share reconstruction versus vendor intermediate 3-decimal rounding requires cumulative tolerance. Set a 0.005 bound for nine actions before freezing; retain exact reconstructed values for training. No learned predictions or performance inspected."
+}

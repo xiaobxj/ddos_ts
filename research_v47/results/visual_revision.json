@@ -1,0 +1,16 @@
+{
+  "kind": "layout_only",
+  "completed_utc": "2026-09-14T14:27:43.170727+00:00",
+  "reason": "Original training-weight legends overlapped x-axis labels. Move legends lower and increase bottom margin. Data,limits,methods and scientific sources unchanged.",
+  "frozen_report_source_sha256": "b470ed811e3943615b05c44449fa518cc3a1138206ee9ce79c76d6b9849ce6cb",
+  "original_artifacts": {
+    "results\\visual_attempt1\\training_weights.png": "c0f305d621f1f42d3da3409b06cc06519aa55e28adcde98eb02a1ba938f328c4",
+    "results\\visual_attempt1\\training_weights.svg": "40ca6ca10d9b0735107a3bf1f7539495af87adeda68b3be3422a51906f60dc86",
+    "results\\visual_attempt1\\report_manifest.json": "bb2694d4c005f0374e716a80e939726dab9c5859ca0cb9c9e1d1cb5cde7c6599"
+  },
+  "revision_source_sha256": "506c51208592b1eea6f14677531d67c7dfd7f9295c8301d29102258550971f1f",
+  "updated_artifacts": {
+    "results\\training_weights.png": "7ec6b3f35ea97f5c252ef278882adbce50bf0c02adabeda0e6b237769c0378d8",
+    "results\\training_weights.svg": "90f7f8ac51d51506b471fa59b341907948febaa31de86b47a86ab41a36da852d"
+  }
+}

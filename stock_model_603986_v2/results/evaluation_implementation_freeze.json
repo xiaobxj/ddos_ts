@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-09-15T13:46:35.262350+00:00",
+  "before_any_new_oos_scoring": true,
+  "files": {
+    "score.py": "dfc36f34821e66a4bd61f166fd873a66f38d5f8fbb06c49bf8e5aa27cb761d7c",
+    "calibration.py": "68bdcdb48b88afcd15d76f2fdc4c89f0cccee45707079b782609b40ae0cb2158",
+    "verify.py": "aa7f59ea0afd4f21938c41ef58b62df3b4561e35ee26cb620328d6bf7a7435c9",
+    "test_contracts.py": "be8da783cdc628a17a99a1a2174973f25416212d057dc73e70640182a507b320"
+  },
+  "numerical_tolerances": {
+    "feature_replay": 0.0001,
+    "probability_replay": 5e-05,
+    "head_gradient": 3e-09
+  },
+  "common_state": "annual 5-year training reference assigned by issue year for every arm"
+}

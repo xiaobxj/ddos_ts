@@ -1,0 +1,21 @@
+{
+  "actual_prospective_predictions": 0,
+  "cases": [
+    "verified_bootstrap_registration_and_exact_date_routing",
+    "wrong_quarter_and_duplicate_registration_rejected",
+    "replacement_after_forecast_rejected",
+    "failed_receipt_and_engineering_package_rejected",
+    "registered_receipt_hash_tamper_rejected",
+    "committed_U_predictions_preferred_without_refitting",
+    "missed_week_calibration_replay_remains_separate",
+    "real_future_refresh_rejected_before_any_build_output",
+    "real_out_of_window_record_rejected_without_journal_mutation"
+  ],
+  "completed_utc": "2026-09-15T01:46:45.773391+00:00",
+  "freeze_sha256": "d1ec04c82c10539db887b42a14c7da50cc7c5b43753bda68fb2fe17527929685",
+  "future_build_files_created": 0,
+  "real_journal_unchanged": true,
+  "status": "PASS",
+  "synthetic_journals_isolated_and_removed": true,
+  "verification_sha256": "820e1146727d9e1938c47711fed6c2276c2316d80b31a69fa59e17109e5e8fac"
+}
