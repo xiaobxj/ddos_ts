@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:42:07.498936+00:00",
+  "checkpoints": 54,
+  "heads": 216,
+  "max_gradient": 9.957509948966409e-10,
+  "max_p_delta": 6.142948222986888e-06
+}

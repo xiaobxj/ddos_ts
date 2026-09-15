@@ -1,0 +1,18 @@
+{
+  "annual_cutoff": "2025-12-31",
+  "computed_utc": "2026-09-15T05:04:38.439708+00:00",
+  "implementation_freeze_sha256": "2c6f21ddfafc7dd3f20318cfb67c0ddacc26f7ac3c85372c3b47f87a91af13c2",
+  "input_prefix_sha256": "08f2bfd56cc27483679ee07dc8d1a5ee4877f644e4b6ad061102ef4d184b0898",
+  "interpretation": "Computed now from a later retrieved snapshot and later assembled model package. Input ends at signal, but this is not a contemporaneous or independent prospective forecast.",
+  "package_assembled_utc": "2026-09-14T15:06:39.368437+00:00",
+  "package_file": "research_v49\\results\\bootstrap_package.json",
+  "package_sha256": "13d5afbea2658c47aa0572c345d3168b018652193f69d4b4b26cd8e79d82030d",
+  "quarter_cutoff": "2026-06-30",
+  "requested_signal": "2026-09-11",
+  "scope": "historical_replay_not_prospective",
+  "script_sha256": "b0ac30629b4146457299a9100a89b71a814296636515195747ca12926401af43",
+  "source_snapshot_end": "2026-09-14",
+  "source_snapshot_recorded_utc": "2026-09-14T15:08:38.951038+00:00",
+  "source_snapshot_sequence": 1,
+  "source_snapshot_sha256": "8d75c396a40e3e076d53ce69828cdf29adbbc104912bc228221f43eac11b26b6"
+}

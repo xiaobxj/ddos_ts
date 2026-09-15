@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "backend_tests": 13,
+  "frontend_logic_checks": 13,
+  "lifecycle_checks": [
+    "hidden_loopback_server_starts",
+    "open_only_inspects",
+    "repeat_launch_reuses_server",
+    "quit_cleans_lock_and_exits"
+  ],
+  "frozen_files_preserved": 6296,
+  "real_journal_files_unchanged": {
+    "prospective_r49\\genesis.json": "4288c11b9380c69b403162f3bbed64aaaedbd153e9804a01f225b015e954f6c6",
+    "prospective_r49\\blobs\\07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5.csv": "07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5",
+    "prospective_r49\\blobs\\db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29.response.json": "db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29",
+    "prospective_r49\\events\\000001.json": "8d75c396a40e3e076d53ce69828cdf29adbbc104912bc228221f43eac11b26b6",
+    "prospective_r49\\events\\000002.json": "5236080111165f98e9b883e718b97349a6fe637f8465244c4b4125ceb637c09c"
+  },
+  "real_predictions": 0,
+  "real_labels": 0,
+  "browser_visual_verification": "NOT_AVAILABLE: CUA returned no browser or native app surfaces. HTTP and Node VM tests do not replace visual QA.",
+  "files": {
+    "weekly_app\\app.py": "d920473e52fb0cfdbff283a146643577f222bab419c24e736b1b9efb59162336",
+    "weekly_app\\launch.vbs": "6da8863dfe71042fba4caa92bd2e5ba6cbcd31b6c985cd42689206407ee2ea56",
+    "weekly_app\\README.md": "258247c66ecc2f1af84943eb97806f72d3f74e65759245168f6929862231a6ca",
+    "weekly_app\\test_app.py": "fc637ab3dba8e913edd56e34961d4a27d9945668cee464e11f6076e86f4189a4",
+    "weekly_app\\test_frontend.cjs": "1043356ec75bef81103a82c69b7dd4de4b3851b8313422815eb69e923bc00ed0",
+    "weekly_app\\worker.py": "6639bda4c879cd42177b7948e2a3e08184d008dc6ccaa5ca3a6ccb2ecca7ab67",
+    "weekly_app\\static\\app.js": "54c82ae1cbaecca1a3c5ddcf98b48e9adfd746d01403e628bc62b8b4d6efac0a",
+    "weekly_app\\static\\index.html": "8b519ec018756b4010a48baabf24a27761f66e549f78bd9c2e58b71115c60784",
+    "weekly_app\\static\\style.css": "f0d3a2da86241e6a8dfc0c0752aec311e967badcba591c820a791a0e3258af9f",
+    "打开每周预测.cmd": "7fae947383b702807312cee7e67ad20de0a5c8c4b27f7ebe6572dd2d99b34b13",
+    "打开每周预测.vbs": "4d813a63dd93ae676bbb61ee20d06c6d2a0e1f4ab50f17fec5c4fc1f2d5a5e5d"
+  },
+  "presentation_review": "Price sign-order labels match the original causal gate; training method identifiers unchanged."
+}

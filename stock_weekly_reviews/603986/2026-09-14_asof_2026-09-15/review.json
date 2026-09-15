@@ -1,0 +1,77 @@
+{
+  "stock": "603986",
+  "week": [
+    "2026-09-14",
+    "2026-09-18"
+  ],
+  "asof_cst": "2026-09-15T17:35:45.655163+08:00",
+  "quote": {
+    "timestamp": "20260915161451",
+    "price": 363.11,
+    "previous_close": 356.88,
+    "open": 356.87,
+    "high": 371.66,
+    "low": 356.0,
+    "volume_lots": 293180.0,
+    "daily_change_percent": 1.75
+  },
+  "metrics": {
+    "last_price": 363.11,
+    "previous_friday_close": 371.32,
+    "model_entry_open": 360.0,
+    "week_change_vs_previous_friday": -0.02211030916729495,
+    "change_vs_model_entry_open": 0.008638888888888863,
+    "current_week_low": 355.55,
+    "current_week_high": 371.66,
+    "sma5": 370.764,
+    "sma10": 376.91600000000005,
+    "sma20": 388.106,
+    "volume_vs_previous": 1.1089970306205437,
+    "volume_vs_prior5": 1.065623166745055
+  },
+  "model_input_date": "2026-09-11",
+  "model_constructed_date": "2026-09-15",
+  "model_entry_date": "2026-09-14",
+  "scheduled_model_exit_date": "2026-09-21",
+  "target": "Gross opening-price return including entitled distributions; no execution or cost claim; scheduled exit assumes stock tradable.",
+  "probabilities": {
+    "main": 0.6326972953927382,
+    "state": 0.6326972953927382,
+    "recent_weighted": 0.5776698401512407,
+    "market4": 0.5583905381302297,
+    "training_frequency": 0.4792703150912106
+  },
+  "model_status": "Historical reconstruction, not a forecast actually issued on Sep11. Label pending, no win/loss recorded.",
+  "historical_main_accuracy": 0.52,
+  "historical_common_weeks": 175,
+  "selected_levels": {
+    "lower_watch": [
+      355.55,
+      356.0
+    ],
+    "first_repair": [
+      371.0,
+      377.0
+    ],
+    "upper_repair": [
+      380.0,
+      388.0
+    ]
+  },
+  "interpretation": "Model leans toward rebound, while prices remain below 5/10/20-day averages; support/resistance levels are conditional observations, not guaranteed barriers.",
+  "model_source_hashes": {
+    "results/ensemble_predictions.csv": "7479d4d7c0b8c4f7ff1b54c0a0610833ca22f45fdb01adaf010235246c946b8d",
+    "results/seed_predictions.csv": "c321abfd14ae472a98f2b38e512c8571f15ace126e973ff3aaa12f1ad9bc6605",
+    "results/weekly_context.csv": "5cd30155e60d5c5df15f197b3cfb2967daf3e239b41536ea1bb5864413c1eb7e",
+    "results/summary.json": "bbf6395f1e456911fd577e9d94cfc97f82bf284bc206fb9d810e9b6e833fcec6",
+    "protocol.json": "2f06a3a42d4fe57c9073d2f6b14445cf659ae84385ac2c1932580f0ca12c7eb5",
+    "results/verification.json": "5c70502563e09d412ee9317ceea15bf4e0fff1ee507b4df600ffb240619ea4db"
+  },
+  "sources": {
+    "daily": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh603986,day,2026-01-01,2026-09-15,500,",
+    "quote": "https://qt.gtimg.cn/q=sh603986",
+    "calendar": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20251222_10802507.shtml"
+  },
+  "model_retrained": false,
+  "journals_modified": false
+}

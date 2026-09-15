@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-09",
+  "pdf_checks": [
+    {
+      "key": "GPT4FTS",
+      "pages": 9,
+      "all_pages_rendered": true,
+      "sha256_verified": true
+    },
+    {
+      "key": "Kronos",
+      "pages": 36,
+      "all_pages_rendered": true,
+      "sha256_verified": true
+    },
+    {
+      "key": "Crossformer",
+      "pages": 21,
+      "all_pages_rendered": true,
+      "sha256_verified": true
+    },
+    {
+      "key": "MERA",
+      "pages": 5,
+      "all_pages_rendered": true,
+      "sha256_verified": true,
+      "kind": "full_paper"
+    },
+    {
+      "key": "TimeMosaic",
+      "pages": 27,
+      "all_pages_rendered": true,
+      "sha256_verified": true
+    },
+    {
+      "key": "MERA_official_poster",
+      "kind": "official_poster",
+      "pages": 1,
+      "all_pages_rendered": true,
+      "sha256_verified": true
+    }
+  ],
+  "full_papers": 5,
+  "official_posters": 1,
+  "mera_full_paper_downloaded": true,
+  "protected_files_compared": 4602,
+  "protected_metadata_changes": [],
+  "git_diff_status": "unavailable: existing corrupt Git index; not modified",
+  "scope_check_method": "relative path, size, mtime_ns comparison; not byte-level diff",
+  "protected_files_modified_by_task": false,
+  "qmt_sync_or_deployment_run": false,
+  "research_output_directory": "F:\\aido\\artifacts\\experiments\\20260909_kline_framework_literature",
+  "broken_report_file_links": [],
+  "original_pdf_bytes_preserved": true,
+  "note": "MERA author poster triggers pypdf object-offset warnings; original preserved, renders successfully with PyMuPDF.",
+  "mera_full_paper_provided_by_user": true,
+  "mera_verified_utc": "2026-09-09T08:57:56.784484+00:00",
+  "mera_rename": {
+    "from": "3701716.3715513.pdf",
+    "to": "04_MERA_WWW2025.pdf",
+    "content_sha256_unchanged": true
+  },
+  "mera_update_protected_files_compared": 4602,
+  "mera_update_protected_metadata_changes": []
+}

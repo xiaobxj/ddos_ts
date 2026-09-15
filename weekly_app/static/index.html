@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>每周预测 · 沪深300研究台</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="每周预测首页"><span class="brand-icon">周</span><span>每周预测<small>沪深300研究台</small></span></a>
+    <div class="top-actions"><span class="local"><i></i>本机运行</span><span id="clock"></span><button class="text-button" id="help-button">使用说明</button><button class="text-button" id="quit-button">退出程序</button></div>
+  </header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">WEEKLY RESEARCH</p><h1>把每一周，认真记录下来。</h1><p class="muted">固定方案持续跟踪，收盘后运行，等待真实结果。</p></div><button class="secondary" id="refresh-button">↻ 刷新状态</button></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><div class="hero-tag" id="hero-tag">正在读取状态</div><h2 id="hero-title">连接你的本地研究记录</h2><p id="hero-message">正在检查已有数据和参数，请稍候。</p><div class="hero-meta"><span>记录时段 <b>周五 18:00—23:00 前</b></span><span>时区 <b>北京时间</b></span></div></div>
+      <div class="hero-action"><button class="primary" id="run-button" disabled><span id="run-label">运行本周流程</span><span>↗</span></button><p>采集 → 参数检查 → 预测 → 标签结算</p><span id="status-updated">打开界面不会自动提交预测</span></div>
+    </section>
+    <div class="notice hidden" id="notice" role="status" aria-live="polite"></div>
+    <section class="stats" aria-label="记录概览">
+      <article class="stat"><span>最新日线</span><strong id="stat-data">—</strong><small>已经存档的数据截止日</small></article>
+      <article class="stat"><span>已记录预测</span><strong id="stat-pred">—</strong><small>按周计数，同周不重复</small></article>
+      <article class="stat"><span>已成熟样本</span><strong id="stat-mature">—</strong><small>满足原联合成熟条件</small></article>
+      <article class="stat"><span>等待标签</span><strong id="stat-pending">—</strong><small>之后运行时继续结算</small></article>
+    </section>
+    <section class="panel progress-panel hidden" id="progress-panel" aria-label="本次运行进度"><div class="panel-heading"><h3 id="progress-title">正在运行</h3><span class="chip" id="progress-state">处理中</span></div><div id="progress-steps" class="steps"></div><p id="progress-message" class="muted" aria-live="polite"></p></section>
+    <section class="panel results-panel">
+      <div class="results-header"><div class="tabs" role="tablist" aria-label="结果视图"><button id="tab-forecast" class="tab active" role="tab" aria-controls="view-forecast" aria-selected="true" data-tab="forecast">预测对照</button><button id="tab-history" class="tab" role="tab" aria-controls="view-history" aria-selected="false" data-tab="history">周记录</button><button id="tab-metrics" class="tab" role="tab" aria-controls="view-metrics" aria-selected="false" data-tab="metrics">累计表现</button></div><span class="subtle-label">五套方案 · 三个固定种子</span></div>
+      <div id="view-forecast" role="tabpanel" aria-labelledby="tab-forecast">
+        <div class="view-toolbar"><div><h3>各方案的上涨概率</h3><p class="muted">四类方法并行展示；每格为三个种子的平均概率。</p></div><label class="select-label">预测日期 <select id="forecast-date" aria-label="选择预测日期"><option value="">暂无记录</option></select></label></div>
+        <div id="forecast-context" class="forecast-context hidden"></div><div id="forecast-content"></div>
+      </div>
+      <div id="view-history" role="tabpanel" aria-labelledby="tab-history" class="hidden">
+        <div class="view-toolbar"><div><h3>每周记录，完整保留</h3><p class="muted">错过的周次保留缺失；未成熟的结果不会提前计入。</p></div><div class="toolbar-buttons"><select id="history-filter" aria-label="筛选周记录"><option value="all">全部52周</option><option value="recorded">已记录</option><option value="due">已到期</option></select><button id="export-button" class="secondary small">导出记录</button></div></div><div id="history-content"></div>
+      </div>
+      <div id="view-metrics" role="tabpanel" aria-labelledby="tab-metrics" class="hidden"><div class="view-toolbar"><div><h3>成熟样本的累计表现</h3><p class="muted">按既定顺序展示，不按阶段成绩排序或自动替换方案。</p></div><span class="chip" id="evaluation-chip">描述性汇总</span></div><div id="metrics-content"></div><p class="footnote" id="review-note">主要评估最早2027-10-01，至少40个完整成熟共同样本，且没有待成熟的已提交预测。</p></div>
+    </section>
+    <div class="bottom-grid"><section class="panel compact"><div class="panel-heading"><h3>当前训练与参数</h3><span class="chip neutral">固定配方</span></div><div id="parameter-content" class="parameter-content"><p class="muted">读取中…</p></div><p class="footnote">到期且取得覆盖数据后，运行流程会按顺序更新。周五一次运行也会检查尚未结算的旧标签。</p></section>
+    <section class="panel compact"><div class="panel-heading"><h3>运行日志</h3><button class="text-button" id="log-button" aria-expanded="false">展开详情</button></div><p id="log-summary" class="muted">本次打开仅检查状态。</p><div id="log-content" class="log-content hidden" aria-label="运行日志详情"></div><p class="footnote">预测写入后保持原样。记录与运行进度自动保存在本机。</p></section></div>
+    <footer><span>沪深300 · 固定窗口滚动训练与市场状态识别</span><span>本地研究记录 / 手动运行</span></footer>
+  </main>
+  <dialog id="help-dialog"><div class="dialog-top"><h2>每周五这样运行</h2><button id="close-help" class="text-button" aria-label="关闭使用说明">✕</button></div><ol><li>双击项目里的「打开每周预测.cmd」。</li><li>周五北京时间18点后、23点前，点击「运行本周流程」。</li><li>等到界面显示完成，查看当天预测与运行说明。</li><li>用「退出程序」关闭。下周再打开，同一账本继续记录。</li></ol><div class="help-note">15点收盘后可先打开查看，正式记录仍要等18点。缺少当天完整日线时会提示等待，可在当晚窗口内重试。季度或年度更新可能较久，请保持程序运行。</div><p>只在周五运行也可以；标签通常需要之后的数据才成熟，系统会在后续周五继续结算。也可在其他工作日18点后运行，提前更新数据与标签。</p><p>这里展示的是预测与目标区间涨跌幅，尚未成熟时不计算准确率；目标涨跌幅不是交易账户收益。</p></dialog>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "label": {
+    "reason": "next_same_weekday_not_observed",
+    "status": "PENDING"
+  },
+  "scope": "historical_replay_only",
+  "snapshot_end": "2026-09-14"
+}

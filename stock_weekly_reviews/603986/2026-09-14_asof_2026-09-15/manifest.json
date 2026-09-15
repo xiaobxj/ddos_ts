@@ -1,0 +1,13 @@
+{
+  "created_cst": "2026-09-15T17:35:45.655163+08:00",
+  "files": {
+    "daily.csv": "8bb0882fada1e2431f12acfbef28302210b5375c9aa5f1503401c21bed0c1836",
+    "review.json": "9de27faef31414dc998ed22b52addbeb090e2400baf0f23a5bec312ed5524faf",
+    "tencent_daily.json": "6bc5697d202bfb3ea7c8a2f56a18b684ae382447fd14c086072f900e0c1383cc",
+    "tencent_quote.txt": "2e2c829e5d6187385af6826323d538d6cb90a66913fa26a19753c0ea6cd2a589",
+    "tencent_quote_gbk.bin": "3ed59555ab6a7e7c690ceb317265710526aff917d56c2aa0465a08d1a8a62f5f",
+    "week_model_outputs.csv": "3442de2621ea8e7e9839b59cbdfbb9d201ccd2d1e70a389180cdd227516be038",
+    "本周观察.md": "81fb86f8376df06acd63a57f8c8d0eff19ad54c83d29f0221e52ea2ebb789904"
+  },
+  "script_sha256": "a637b0da95b0c49137b321c74e0f689fa20ccd7b2b0876b9b45497d6f7f98e19"
+}

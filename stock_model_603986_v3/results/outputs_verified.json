@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:42:03.879052+00:00",
+  "calibration_prefix_checks": 240,
+  "old_annual_and_platt_replay": "exact within 2e-15",
+  "common_n": 893,
+  "old_files_preserved": 7161
+}

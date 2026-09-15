@@ -1,0 +1,26 @@
+{
+  "actual_label_status": "PENDING",
+  "ensemble_predictions": 20,
+  "files": {
+    "forecast.json": "3fc05f326f31203b94a0f8694ef7d8669a0b309460f8ec76fe6ded532203de90",
+    "label_status.json": "cc2cef15a2bff887fdd309b5d7ea63131b65267368c4c9caa4f3e14c229fdfbb",
+    "observed_prefix.csv": "08f2bfd56cc27483679ee07dc8d1a5ee4877f644e4b6ad061102ef4d184b0898",
+    "request.json": "f69174cc6397c38883475ace5eae590cb34ed2d7ec4e11a80234c8e3ff3a141d",
+    "上周五历史回放.md": "90ccca51205ef23f8b7deaacbae7c2e437214e61d4a3429815dea4c529f2d9e6"
+  },
+  "input_end": "2026-09-11",
+  "input_rows": 4055,
+  "new_prospective_predictions": 0,
+  "new_training_runs": 0,
+  "real_journal_files_unchanged": {
+    "prospective_r49\\blobs\\07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5.csv": "07ec96b57823f2db39058d65d0fa5a9634ec22d9c20cde893b1ca7a1d11bb5f5",
+    "prospective_r49\\blobs\\db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29.response.json": "db8d4d4e9e05c304cef83ea09c89b71c0a7ef0161ddfe4ff357667459e4cbf29",
+    "prospective_r49\\events\\000001.json": "8d75c396a40e3e076d53ce69828cdf29adbbc104912bc228221f43eac11b26b6",
+    "prospective_r49\\events\\000002.json": "5236080111165f98e9b883e718b97349a6fe637f8465244c4b4125ceb637c09c",
+    "prospective_r49\\genesis.json": "4288c11b9380c69b403162f3bbed64aaaedbd153e9804a01f225b015e954f6c6"
+  },
+  "scope": "historical_replay_not_prospective",
+  "seed_predictions": 60,
+  "source_end": "2026-09-14",
+  "status": "PASS"
+}

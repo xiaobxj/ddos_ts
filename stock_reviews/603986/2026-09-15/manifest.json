@@ -1,0 +1,11 @@
+{
+  "scope": "descriptive_stock_review",
+  "files": {
+    "603986_短期观察.png": "943a0973255601fd8631a628abd7bd379d175e816eb08523d255401eb45553d2",
+    "analysis.json": "239cf30cc1024f75e4a219023e205d512bd4311812c209593e81e88ad711d4b8",
+    "tencent_daily_response.json": "ceb68f42e3ae9b2d78e41d7280ced09f152ffe943d6eec9bc73fb953a058e427",
+    "tencent_quote_response.txt": "d9e6d84428cb9de6b830e24941652f69590eaa4104563c0c679ae034985b417b",
+    "短期分析.md": "0d0749ee4b082f51b9d199a488355fd010cbaf9d189541b62ccd3856916996c1"
+  },
+  "orders_sent": false
+}

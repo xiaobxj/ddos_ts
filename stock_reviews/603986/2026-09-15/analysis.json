@@ -1,0 +1,256 @@
+{
+  "scope": "single_stock_descriptive_review_not_a_trained_forecast",
+  "horizon": "1-4 weeks",
+  "retrieved_cst": "2026-09-15T15:40:29.795671+08:00",
+  "daily_branch": "qfqday",
+  "daily_endpoint_last_date": "2026-09-14",
+  "quote_appended_for_descriptive_indicators": true,
+  "quote": {
+    "name": "兆易创新",
+    "ticker": "603986",
+    "price": 363.11,
+    "previous_close": 356.88,
+    "open": 356.87,
+    "volume_lots": 293180.0,
+    "timestamp": "20260915154021",
+    "change": 6.23,
+    "change_percent": 1.75,
+    "high": 371.66,
+    "low": 356.0,
+    "turnover_percent": 4.37,
+    "provider_pe_ttm": 32.24,
+    "provider_pb": 6.82
+  },
+  "metrics": {
+    "sma5": 370.764,
+    "sma10": 376.91600000000005,
+    "sma20": 388.106,
+    "sma60": 477.999,
+    "return_5_sessions": -0.05920302622033358,
+    "return_10_sessions": -0.07605597964376587,
+    "return_20_sessions": -0.16859000778495215,
+    "volume_vs_prior5": 1.065623166745055,
+    "volume_vs_prior20": 0.8486366830283518,
+    "volume_vs_previous": 1.1089970306205437,
+    "low_last10": 355.55,
+    "high_last20": 420.0,
+    "drawdown_from_last20_high": -0.13545238095238088,
+    "mean_true_range14": 15.105000000000002,
+    "mean_true_range14_pct": 0.04159896450111537,
+    "interim_nonrecurring_net_share": 0.28785393268370707
+  },
+  "latest_bars": [
+    {
+      "date": "2026-08-12",
+      "open": 408.02,
+      "close": 413.17,
+      "high": 419.95,
+      "low": 401.68,
+      "volume_lots": 456116.0
+    },
+    {
+      "date": "2026-08-13",
+      "open": 425.26,
+      "close": 404.5,
+      "high": 431.91,
+      "low": 402.8,
+      "volume_lots": 544439.0
+    },
+    {
+      "date": "2026-08-14",
+      "open": 419.0,
+      "close": 417.48,
+      "high": 421.18,
+      "low": 406.55,
+      "volume_lots": 475007.0
+    },
+    {
+      "date": "2026-08-17",
+      "open": 423.95,
+      "close": 444.0,
+      "high": 444.0,
+      "low": 420.23,
+      "volume_lots": 588826.0
+    },
+    {
+      "date": "2026-08-18",
+      "open": 449.97,
+      "close": 436.74,
+      "high": 455.81,
+      "low": 429.06,
+      "volume_lots": 607573.0
+    },
+    {
+      "date": "2026-08-19",
+      "open": 417.0,
+      "close": 403.71,
+      "high": 420.0,
+      "low": 393.1,
+      "volume_lots": 662806.0
+    },
+    {
+      "date": "2026-08-20",
+      "open": 410.0,
+      "close": 403.5,
+      "high": 410.59,
+      "low": 397.83,
+      "volume_lots": 361764.0
+    },
+    {
+      "date": "2026-08-21",
+      "open": 405.0,
+      "close": 409.06,
+      "high": 411.0,
+      "low": 400.1,
+      "volume_lots": 340767.0
+    },
+    {
+      "date": "2026-08-24",
+      "open": 404.97,
+      "close": 381.66,
+      "high": 405.51,
+      "low": 377.98,
+      "volume_lots": 448627.0
+    },
+    {
+      "date": "2026-08-25",
+      "open": 367.0,
+      "close": 395.51,
+      "high": 398.5,
+      "low": 367.0,
+      "volume_lots": 396495.0
+    },
+    {
+      "date": "2026-08-26",
+      "open": 399.0,
+      "close": 392.5,
+      "high": 399.0,
+      "low": 384.88,
+      "volume_lots": 284629.0
+    },
+    {
+      "date": "2026-08-27",
+      "open": 397.01,
+      "close": 411.2,
+      "high": 412.0,
+      "low": 394.58,
+      "volume_lots": 407430.0
+    },
+    {
+      "date": "2026-08-28",
+      "open": 406.95,
+      "close": 396.82,
+      "high": 410.53,
+      "low": 396.5,
+      "volume_lots": 352520.0
+    },
+    {
+      "date": "2026-08-31",
+      "open": 387.06,
+      "close": 406.0,
+      "high": 406.61,
+      "low": 387.06,
+      "volume_lots": 317220.0
+    },
+    {
+      "date": "2026-09-01",
+      "open": 406.0,
+      "close": 393.0,
+      "high": 406.01,
+      "low": 391.54,
+      "volume_lots": 256551.0
+    },
+    {
+      "date": "2026-09-02",
+      "open": 388.0,
+      "close": 388.86,
+      "high": 395.95,
+      "low": 387.45,
+      "volume_lots": 209513.0
+    },
+    {
+      "date": "2026-09-03",
+      "open": 393.11,
+      "close": 383.2,
+      "high": 393.89,
+      "low": 380.19,
+      "volume_lots": 238566.0
+    },
+    {
+      "date": "2026-09-04",
+      "open": 387.58,
+      "close": 371.88,
+      "high": 388.97,
+      "low": 368.77,
+      "volume_lots": 299691.0
+    },
+    {
+      "date": "2026-09-07",
+      "open": 382.81,
+      "close": 385.44,
+      "high": 386.26,
+      "low": 380.3,
+      "volume_lots": 349656.0
+    },
+    {
+      "date": "2026-09-08",
+      "open": 385.82,
+      "close": 385.96,
+      "high": 398.0,
+      "low": 381.96,
+      "volume_lots": 374698.0
+    },
+    {
+      "date": "2026-09-09",
+      "open": 390.0,
+      "close": 381.87,
+      "high": 392.87,
+      "low": 380.0,
+      "volume_lots": 229047.0
+    },
+    {
+      "date": "2026-09-10",
+      "open": 380.83,
+      "close": 380.64,
+      "high": 387.5,
+      "low": 379.01,
+      "volume_lots": 215208.0
+    },
+    {
+      "date": "2026-09-11",
+      "open": 371.8,
+      "close": 371.32,
+      "high": 373.99,
+      "low": 363.0,
+      "volume_lots": 292309.0
+    },
+    {
+      "date": "2026-09-14",
+      "open": 360.0,
+      "close": 356.88,
+      "high": 365.88,
+      "low": 355.55,
+      "volume_lots": 264365.0
+    },
+    {
+      "date": "2026-09-15",
+      "open": 356.87,
+      "close": 363.11,
+      "high": 371.66,
+      "low": 356.0,
+      "volume_lots": 293180.0
+    }
+  ],
+  "sources": {
+    "daily": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh603986,day,2025-01-01,2026-09-15,700,qfq",
+    "quote": "https://qt.gtimg.cn/q=sh603986",
+    "interim": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225480384.PDF",
+    "buyback": "https://paper.cnstock.com/html/2026-09/02/content_2264110.htm"
+  },
+  "existing_CSI300_model_used": false,
+  "orders_sent": false,
+  "files": {
+    "tencent_daily_response.json": "ceb68f42e3ae9b2d78e41d7280ced09f152ffe943d6eec9bc73fb953a058e427",
+    "tencent_quote_response.txt": "d9e6d84428cb9de6b830e24941652f69590eaa4104563c0c679ae034985b417b"
+  }
+}

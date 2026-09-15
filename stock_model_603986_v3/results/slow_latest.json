@@ -1,0 +1,165 @@
+{
+  "computed_utc": "2026-09-15T14:40:39.479763+00:00",
+  "rows": [
+    {
+      "name": "annual.add.raw",
+      "probability": 0.7047038329752805,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.add.platt",
+      "probability": 0.7047038329752805,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.add.shrink",
+      "probability": 0.7047038329752805,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.vol.raw",
+      "probability": 0.7072913698459565,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.vol.platt",
+      "probability": 0.7072913698459565,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.vol.shrink",
+      "probability": 0.7072913698459565,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.cal_frequency.raw",
+      "probability": 0.5674603174603174,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.order_joint.raw",
+      "probability": 0.7456915380413305,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.order_joint.platt",
+      "probability": 0.7456915380413305,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.order_joint.shrink",
+      "probability": 0.7456915380413305,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.order_fixed.raw",
+      "probability": 0.7435464120711278,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.order_fixed.platt",
+      "probability": 0.7435464120711278,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.order_fixed.shrink",
+      "probability": 0.7435464120711278,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.frequency.raw",
+      "probability": 0.4987572493786247,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.market4.raw",
+      "probability": 0.5818353672632653,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "annual.constant50.raw",
+      "probability": 0.5,
+      "cutoff": "2025-12-31"
+    },
+    {
+      "name": "quarterly.add.raw",
+      "probability": 0.7276189922163298,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.add.platt",
+      "probability": 0.7276189922163298,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.add.shrink",
+      "probability": 0.7276189922163298,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.vol.raw",
+      "probability": 0.7318845969272777,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.vol.platt",
+      "probability": 0.7318845969272777,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.vol.shrink",
+      "probability": 0.7318845969272777,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.cal_frequency.raw",
+      "probability": 0.5674603174603174,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.order_joint.raw",
+      "probability": 0.7424568454362004,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.order_joint.platt",
+      "probability": 0.7424568454362004,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.order_joint.shrink",
+      "probability": 0.7424568454362004,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.order_fixed.raw",
+      "probability": 0.742439386323483,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.order_fixed.platt",
+      "probability": 0.742439386323483,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.order_fixed.shrink",
+      "probability": 0.742439386323483,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.frequency.raw",
+      "probability": 0.5053941908713693,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.market4.raw",
+      "probability": 0.5868403045750858,
+      "cutoff": "2026-06-30"
+    },
+    {
+      "name": "quarterly.constant50.raw",
+      "probability": 0.5,
+      "cutoff": "2026-06-30"
+    }
+  ]
+}
