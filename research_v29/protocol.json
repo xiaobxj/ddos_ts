@@ -1,0 +1,230 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "features": "Frozen eval requires_grad=False; 25 flattened decoded coordinates; training 1/99 percent clipping and population standardization with sd floor1e-6. Four R18 market descriptors clipped/scaled separately on same training rows. Supervised R18 coefficient ray[:25] shared by both products. Volatility interaction residualized over R18+intercept; order interaction residualized over R19+intercept. Training least squares rcond1e-12, residual sd floor1e-6. Order uses exact trailing60close signs, mean adjacent product minus permutation expectation; neutral exact zero. R23 jointly refits all coefficients; R25 freezes R19 including intercept and fits only gamma. No full-pipeline OOF claim.",
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "version": 29,
+  "experiment": "Annual fallback plus a single causal market-state change trigger at quarter ends",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-03-31",
+    "2021-06-30",
+    "2021-09-30",
+    "2021-12-31",
+    "2022-03-31",
+    "2022-06-30",
+    "2022-09-30",
+    "2022-12-31",
+    "2023-03-31",
+    "2023-06-30",
+    "2023-09-30",
+    "2023-12-31",
+    "2024-03-31",
+    "2024-06-30",
+    "2024-09-30",
+    "2024-12-31",
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31",
+    "2026-03-31",
+    "2026-06-30"
+  ],
+  "state": {
+    "observations": 60,
+    "percentile": 0.9,
+    "min_calibration_pairs": 252,
+    "features": [
+      "trend60",
+      "volatility20",
+      "range20",
+      "volume_change20"
+    ],
+    "scaling": "Same1/99quantile clipping and population standardization as R18, fitted using active model mature5year training rows. Apply unchanged to reference, calibration, and current states.",
+    "distance": "Mean across4coordinates of squared differences of60-observation mean standardized descriptors.",
+    "reference": "Last60available canonical daily signal anchors at active model cutoff, labels not required for state observation.",
+    "calibration": "All pairs of60-observation mean states within the5calendar-year anchor history ending at active model cutoff, separated by same number of available daily observations as current decision minus active cutoff. Rolling windows entirely in calibration anchor history; descriptor raw60bar context can precede window lower bound. At least252 pairs.90th percentile linear interpolation.",
+    "rule": "At each non-December quarterend: refit iff distance strictly exceeds calibrated90th percentile. On trigger reference/scaler resets to new model cutoff. At every December31 always refit. Events effective only for signaldates strictly after decision date. Same schedule for all methods and seeds; no target values, errors, probabilities, accuracy or model coefficients used."
+  },
+  "reuse": "Reuse immutable R28 rolling5 natural20 backbones and four heads; no neural/head refits.69 preexisting networks/276heads cover all23 candidate dates. Selected schedule determines counterfactual runtime training cost. No threshold/window/seed/rule grid.",
+  "predictions": "Reuse existing frozen R28 outputs wherever available. If a non-December model is retained beyond its formerly scored quarter, infer ONLY missing required rows in ascending order as one batch permodel/seed using frozen weights/scales. Original native requires_grad=True flag and frozen feature extraction batch128 retained. Never rewrite archived overlapping outputs. All extensions independently replayed.",
+  "baselines": [
+    "rolling5_matched",
+    "rolling5_annual20",
+    "rolling5_quarterly20"
+  ],
+  "policies": [
+    "rolling5_matched",
+    "rolling5_annual20",
+    "rolling5_quarterly20",
+    "state90"
+  ],
+  "primary_comparisons_per_window": [
+    {
+      "history": "state90",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "state90",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "history": "state90",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "state90",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    }
+  ],
+  "inference": "28contrasts jointlyHolm:2periods*(3mainrecipes*2losses*2schedulecomparators +R19vs own frequencyBrier and native direction).10000circular8-observation bootstrap,seed20260910,centeredtwo-sidedp,marginal95percentileCI; negative loss difference better. No across-round multiplicity claim.",
+  "sequencing": "Freeze protocol/source/input/4522oldfiles before generating trigger schedule. Freeze full state schedule and extension membership before any new inference. Contract independently reconstructs descriptors, scaler, windows, matched-lag calibration and routing without prediction/target columns. Then extend inference, evaluate and verify. All existing historical outcomes were already viewed.",
+  "verification": "Scalar market descriptors; independent loop means/quantiles and manual clipping/std; future-feature perturbation invariance for every decision; input target columns excluded by interface; exact active-cutoff route and archived output parity; replay each extension checkpoint and feature algebra/native/heads; independent metrics and all28contrasts; preservation4522files.",
+  "budgets": {
+    "old_files": 4522,
+    "new_neural_fits": 0,
+    "new_head_fits": 0,
+    "candidate_cutoffs": 23,
+    "mandatory_refits": 6,
+    "optional_checks": 17,
+    "model_rows": 17408,
+    "ensemble_rows": 6528,
+    "weeks": 272
+  },
+  "limitations": "This is an unsupervised mean-state change heuristic, not a validated regime classifier or a significance test. The empirical90th percentile is not a falsealarm guarantee: history pairs overlap. May miss short/transient changes and conditional predictive drift, or trigger harmless distribution changes. Quarter-end decisions only. Trigger-count and new-inference budget are derived once from observed historical features, not performance. A successful replay is not a predictive or profitability PASS. No automatic promotion."
+}

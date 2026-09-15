@@ -1,0 +1,254 @@
+[
+  {
+    "history": "rolling5",
+    "cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2020-12-31_20260910.npz",
+    "cache_sha256": "48bc8198ae739ece7c3ca0e4a5e04fed4f69024efc6131901a079d0da1aa6900"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2020-12-31_20260911.npz",
+    "cache_sha256": "feef1690d2338a6b3840d85659402490f9601e0c93cce9ce135344f401690bc9"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2020-12-31_20260912.npz",
+    "cache_sha256": "1064515f86142d45bdff6b21d151168e7f168bc9249aad5d260d67830f6dc9ea"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2021-12-31_20260910.npz",
+    "cache_sha256": "0460f9aa24cbc11479ff2f88eacc11067878439036e60fa6045bb9a60a1bcc3d"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2021-12-31_20260911.npz",
+    "cache_sha256": "6334aacd041e2a88df9ae90e9f78fb96156933b8decf377498e7cf9e5e27f67c"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2021-12-31_20260912.npz",
+    "cache_sha256": "5baab8f246e65b014eb4b8cc49dc0e97100f08d2f41ee3ad084750bd02d9e6d8"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2022-12-31_20260910.npz",
+    "cache_sha256": "1cc62156bd79ae419f0be4fd0f611e6ad00810fc4ef1946bc45b45f9342b89e0"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2022-12-31_20260911.npz",
+    "cache_sha256": "fe9ccf81084f3a1e2861d528d31f23019d3ca0f2dcab36f3dcb05a49a83ef592"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2022-12-31_20260912.npz",
+    "cache_sha256": "0653881780e8680e0dd0ef71629c653bf82422016b1166fb48a758dba5c3dde6"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2023-12-31_20260910.npz",
+    "cache_sha256": "f8604de13853acb8d3ef5ae1e09a6971c7212639abcdce999015f044b305a1a9"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2023-12-31_20260911.npz",
+    "cache_sha256": "2f703732e5de546ca24895691756bf6c263e8a9a26447cff2dc63a3629426ec3"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2023-12-31_20260912.npz",
+    "cache_sha256": "dc9dc1f53dba7faba04f679aa0b4bbfb6bbbbbf74876232e35af73265601c590"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2024-12-31_20260910.npz",
+    "cache_sha256": "f76d247c4ef69b934b73322709490ce21266f3927b1fe58a855e7fc2a1a82c68"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2024-12-31_20260911.npz",
+    "cache_sha256": "0877809d8b3728e6275aca0b6b06f3827f5c7a60ccace270e59dab4df5592ddb"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2024-12-31_20260912.npz",
+    "cache_sha256": "f636239a20bc358b3fadcd420da8aa4e4b73a481b539b428941aecfe0d6d98ad"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2025-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2025-12-31_20260910.npz",
+    "cache_sha256": "3eae90a1e019c386fa2701c7e30d7b7ae9d65f7a933b15004deedc982388953a"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2025-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2025-12-31_20260911.npz",
+    "cache_sha256": "23d6c0c452747db9cd303c68c118e5187273ef86014e85993b278c0afdfbaf8b"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2025-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling5_2025-12-31_20260912.npz",
+    "cache_sha256": "c354773432baacb42b5f69b233d46f069e75c034c5955240080006dd2efb7566"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2020-12-31_20260910.npz",
+    "cache_sha256": "a743b38234d979a70b8587dbdc5ca6d5ec4205a5848420d85abd0ff96f34a274"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2020-12-31_20260911.npz",
+    "cache_sha256": "2ac03baefdfd3d441479ff0a54ed72250f609f9ddb40793506c8cad6cf8be2c7"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2020-12-31_20260912.npz",
+    "cache_sha256": "a17cab63c6b28280e70e41d09b7e2df8cdc8d4fbb003d568431ecc76666249e2"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2021-12-31_20260910.npz",
+    "cache_sha256": "6d4174ef9115580182d2001746fe0aeb66bfc5046935b773437e688a3a158783"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2021-12-31_20260911.npz",
+    "cache_sha256": "c2a4154a48087e6973aef66d6eb16c58e185e61e8d4eb992d6c41eefab4542e6"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2021-12-31_20260912.npz",
+    "cache_sha256": "3ccc0c4e6be277fc643c21b0201aaf9542749ac51e4d91ebf5a000131ef5030c"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2022-12-31_20260910.npz",
+    "cache_sha256": "f30342334169887d9290261f551dcf2c83ad4ea475d8e42000f003a778dbb08f"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2022-12-31_20260911.npz",
+    "cache_sha256": "3ec4d0053a9a481b224de44a8e8b046128349f23cae7532e233660bc553c4056"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2022-12-31_20260912.npz",
+    "cache_sha256": "26815ce7d9fec3626cdf89707b4a56e77224fe96d579bc956758948ce1dd20c0"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2023-12-31_20260910.npz",
+    "cache_sha256": "c9769825c86df36ee4b89845bed9c2559ad82c3d96bc8ad17e15a10cc4a31c19"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2023-12-31_20260911.npz",
+    "cache_sha256": "100b351867fcaaa3e30a048bf65f4a658182b12a3292ea0ddfaf581f54bd5486"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2023-12-31_20260912.npz",
+    "cache_sha256": "7f74732bcf83f852ae02697624d8193452e26d49f5c1d5b57360118e1dceb0e1"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2024-12-31_20260910.npz",
+    "cache_sha256": "3dad0e872b7c95ccd96a5fef1742f8156ef5a627e4abee39d08474530ce04068"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2024-12-31_20260911.npz",
+    "cache_sha256": "851accee34064254ca1495cc18fff692657d294382d8fb9cb0b662ef28dc4ade"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2024-12-31_20260912.npz",
+    "cache_sha256": "8ec0820a7b07adb10ee1ba20a17a3838e5546b3e5c6f4856d855118881b070d2"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2025-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2025-12-31_20260910.npz",
+    "cache_sha256": "d4f26b4daef3d163d4dba4af29b1e7e7b488d9d539ff13c39f38bb9abb53268a"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2025-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2025-12-31_20260911.npz",
+    "cache_sha256": "470c3985f10024c8bca1ca6523b9ae891d9a511fdc85be0bc787a1f99c68db22"
+  },
+  {
+    "history": "rolling3",
+    "cutoff": "2025-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v27\\cache\\testing_rolling3_2025-12-31_20260912.npz",
+    "cache_sha256": "3f103f38c6abe8821346ed836a6391f23ee415e1ba5ecdd342e2a66758666aaf"
+  }
+]

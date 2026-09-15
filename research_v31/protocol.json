@@ -1,0 +1,367 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "features": "Frozen eval requires_grad=False; 25 flattened decoded coordinates; training 1/99 percent clipping and population standardization with sd floor1e-6. Four R18 market descriptors clipped/scaled separately on same training rows. Supervised R18 coefficient ray[:25] shared by both products. Volatility interaction residualized over R18+intercept; order interaction residualized over R19+intercept. Training least squares rcond1e-12, residual sd floor1e-6. Order uses exact trailing60close signs, mean adjacent product minus permutation expectation; neutral exact zero. R23 jointly refits all coefficients; R25 freezes R19 including intercept and fits only gamma. No full-pipeline OOF claim.",
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-03-31",
+    "2021-06-30",
+    "2021-09-30",
+    "2021-12-31",
+    "2022-03-31",
+    "2022-06-30",
+    "2022-09-30",
+    "2022-12-31",
+    "2023-03-31",
+    "2023-06-30",
+    "2023-09-30",
+    "2023-12-31",
+    "2024-03-31",
+    "2024-06-30",
+    "2024-09-30",
+    "2024-12-31",
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31",
+    "2026-03-31",
+    "2026-06-30"
+  ],
+  "version": 31,
+  "experiment": "Prospective incumbent/challenger trial with delayed promotion, and fixed annual-quarterly probability blend",
+  "policies": [
+    "rolling5_matched",
+    "rolling5_annual20",
+    "rolling5_quarterly20",
+    "state90",
+    "error16",
+    "shadow_trial",
+    "annual_quarter_half"
+  ],
+  "primary_comparisons_per_window": [
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "shadow_trial",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "shadow_trial",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_quarter_half",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "history": "annual_quarter_half",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_quarter_half",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_quarter_half",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_quarter_half",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_quarter_half",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_quarter_half",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_quarter_half",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "shadow_trial",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_quarter_half",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    }
+  ],
+  "shadow": {
+    "monitor": "learned_vol_interaction",
+    "min_paired_weeks": 8,
+    "rule": "At each non-December quarterend compare the incumbent with the challenger launched at the preceding quarterend. Use all common actually-issued Friday forecasts since that trial start whose joint_completed<=decision. Require at least8 mature pairedweeks, challenger strictly lower mean Brier AND strictly more correct directions at probability>.5. Otherwise hold; exacttieshold. Same monitor schedule shared by all6methods and3seeds. No search over monitor,minimum,lossgate,margin orcadence.",
+    "issuance": "During each quarter freeze the incumbent and challenger, record both forecasts on each signaldate. At quarterend assess only this pair and this just-finished trial, then launch current-cutoff model as NEXT challenger. A promotion selects the already-tested previous-quarter model, never the model just trained today. Decisions only affect signaldate>cutoff; a signal on decisiondate belongs to the previous trial.",
+    "annual": "Initial2020-12-31 and every December reset incumbent to newly trained annual model. The new challenger is identical to this incumbent, so March holds with same_model. December ignores trial performance and resets unconditionally. September trials still issue forecasts but cannot override mandatory yearend reset.",
+    "expected_calendar": "23 training dates,6mandatoryresets,17optionalchecks:6Marchsame_model and11potentialJune/Septemberpairdecisions. Atleast8 chosen as minimum evidence within onequarter, not an optimized threshold or a formal significance test."
+  },
+  "blend": {
+    "weight_annual": 0.5,
+    "weight_quarterly": 0.5,
+    "rule": "At every forecastdate use latest strictly-earlier December model and latest strictly-earlier quarterend model. Average their probabilities within the same seed, then equal3seed probabilities. Frequency probabilities samehalfaverage; native raw return forecasts samehalfaverage with zero threshold and no invented probability. In Q1 models identical. No fitted weights, no adaptive routing, no future labels.",
+    "cutoff_column": "For blend rows cutoff records the latest constituent training cutoff only, not a single trained model. blend_routing.csv records both constituent cutoffs and weights."
+  },
+  "coverage": "Reuse immutable R30 universal_model_predictions:671modelweeks covering all23R28rolling5natural20cutoffs through forecastyearend and272canonicalweeks. No additional inference, neuralfits or headfits. Verify completecalendarcoverage and old model provenance. Trial decisions may only read paired mature actually-issued records, not universal off-policy outcomes.",
+  "sequencing": "Freeze protocol,sources,inputs,and4696oldfiles before policy simulation. Contract tests coverage and synthetic pairs without actual policy outcomes. Then one chronological trial and deterministic halfblend; freeze events,paired ledger,trialmemberships and both routes before aggregate evaluation or following-quarter diagnostics.",
+  "inference": "68predefinedcontrasts jointHolm:2periods*[2newpolicies*(3mainrecipes*2losses*2references+R19vsownfrequencyBrier/nativeerror)+3mainrecipes*2losses shadowvshalf].10000circular8-observation bootstrap,seed20260910,centeredtwo-sidedp,marginal95CI,negativelossdifferencebetter. State90,error16,oldmatchedannual retained descriptively. No across-round adjustment.",
+  "diagnostic": "After policy freeze, compare evaluated challenger versus incumbent over nextquarter at each of11distinct nonannualtrial decisions, regardless of promotion. Descriptive only; never feed these future scores back into policy. Include held and promoted cases without searching for favorable subsets.",
+  "budgets": {
+    "old_files": 4696,
+    "new_neural_fits": 0,
+    "new_head_fits": 0,
+    "new_inference_passes": 0,
+    "training_cutoffs": 23,
+    "network_fits_if_online": 69,
+    "head_fits_if_online": 276,
+    "model_rows": 30464,
+    "ensemble_rows": 11424,
+    "weeks": 272
+  },
+  "verification": "Independent scalar chronological replay using source3seedprobabilities and canonicaltargets. Exact pairmembership,cutoffs,issuance,maturity and strictdirection/Briergates; perturb immaturelabels/futureprobs,unissuedmodelpredictions and stale trialrecords. Independent algebra ofhalfblend,nativeoutputandfrequency. Inherit frozenR28-30neural/head replay; verify69checkpointstates and all4696oldfiles. Recompute allmetrics and68contrasts; independent coreloss/bootstrap arithmetic and Holm.",
+  "limitations": "All272historical outcomes and some challenger/incumbent diagnostics were seen before this round; this is exploratory historical requalification, not a new blind test. Gate selected in response to R30 probability/accuracy mismatch; no outcome search within R31. Small trial samples can be noisy and slow; dual gate is a heuristic, not statistical proof. R19 shared schedule may not suit R23/R25. Shadow requires training challengers even when rejected, so no quarterly-training-cost saving claim. Annual reset retained, including bypass of yearend trial."
+}

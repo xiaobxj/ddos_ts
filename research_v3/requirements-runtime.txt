@@ -1,0 +1,12 @@
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.0
+threadpoolctl==3.6.0
+torch==2.14.0
+huggingface_hub==0.34.4
+safetensors==0.8.0
+einops==0.8.2
+tqdm==4.70.0
+pyyaml==6.0.3
+requests==2.34.2

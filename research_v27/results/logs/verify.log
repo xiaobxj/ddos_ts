@@ -1,0 +1,46 @@
+Verified 1/36 backbones and 4/144 solvers
+Verified 2/36 backbones and 8/144 solvers
+Verified 3/36 backbones and 12/144 solvers
+Verified 4/36 backbones and 16/144 solvers
+Verified 5/36 backbones and 20/144 solvers
+Verified 6/36 backbones and 24/144 solvers
+Verified 7/36 backbones and 28/144 solvers
+Verified 8/36 backbones and 32/144 solvers
+Verified 9/36 backbones and 36/144 solvers
+Verified 10/36 backbones and 40/144 solvers
+Verified 11/36 backbones and 44/144 solvers
+Verified 12/36 backbones and 48/144 solvers
+Verified 13/36 backbones and 52/144 solvers
+Verified 14/36 backbones and 56/144 solvers
+Verified 15/36 backbones and 60/144 solvers
+Verified 16/36 backbones and 64/144 solvers
+Verified 17/36 backbones and 68/144 solvers
+Verified 18/36 backbones and 72/144 solvers
+Verified 19/36 backbones and 76/144 solvers
+Verified 20/36 backbones and 80/144 solvers
+Verified 21/36 backbones and 84/144 solvers
+Verified 22/36 backbones and 88/144 solvers
+Verified 23/36 backbones and 92/144 solvers
+Verified 24/36 backbones and 96/144 solvers
+Verified 25/36 backbones and 100/144 solvers
+Verified 26/36 backbones and 104/144 solvers
+Verified 27/36 backbones and 108/144 solvers
+Verified 28/36 backbones and 112/144 solvers
+Verified 29/36 backbones and 116/144 solvers
+Verified 30/36 backbones and 120/144 solvers
+Verified 31/36 backbones and 124/144 solvers
+Verified 32/36 backbones and 128/144 solvers
+Verified 33/36 backbones and 132/144 solvers
+Verified 34/36 backbones and 136/144 solvers
+Verified 35/36 backbones and 140/144 solvers
+Verified 36/36 backbones and 144/144 solvers
+Traceback (most recent call last):
+  File "D:\ddos_v3\research_v27\verify27.py", line 87, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\ddos_v3\research_v27\verify27.py", line 85, in main
+    save(OUT/'verification.json',dict(status='PASS',completed_utc=now(),elapsed_seconds=time.time()-start,protocol_sha256=prep['protocol_sha256'],source_sha256=prep['source_sha256'],old_files_preserved=len(prep['old_evidence']),membership_checks=len(dcheck),checkpoint_replays=36,independent_head_solutions=144,maximum_feature_algebra_gap=maxfeatures,maximum_forecast_gap=maxpred,training_feature_rows=sum(r['train_n'] for r in models),testing_feature_rows=1632,independent_metrics=True,all_predefined_comparisons_recomputed=True,artifacts={n:sha(OUT/n) for n in ['independent_solutions.csv','checkpoint_replays.csv']}))
+                                                                                        ~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for -: 'float' and 'str'
+
+EXIT_CODE=1

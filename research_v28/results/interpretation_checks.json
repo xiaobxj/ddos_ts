@@ -1,0 +1,7 @@
+{
+  "rolling3_annual_frequency_unchanged": true,
+  "rolling5_annual_frequency_unchanged": true,
+  "natural20_brier_improvements_of_12": 12,
+  "holm_significant_improvements": 3,
+  "cadence_holm_significant": 0
+}

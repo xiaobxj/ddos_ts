@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T19:27:32.012304+00:00",
+  "reviewed_by": "Codex image inspection after layout revision",
+  "initial_review": "Legend and footnote overlapped; original artifacts preserved in results/visual_attempt1.",
+  "final_checks": [
+    "Chinese text and all three method panels legible",
+    "Axes include all observed accuracy values",
+    "Annual and shadow overlaps reflect identical observations",
+    "Legend and footnote now occupy separate rows without overlap",
+    "Partial 2026 sample and all6years labelled"
+  ],
+  "artifacts": {
+    "shadow_and_blend_yearly.png": "bddac988cb0eb0aa6e3487a6ef659b6ca4fbdd9dac6db2e58b5bd932c713ffee",
+    "shadow_and_blend_yearly.svg": "422ab48051024ffb556496ed3f79a4edf6149f191e20a973fd51b22e236e36af",
+    "第三十一轮测试报告.md": "501a25e6530662d6e55392cac6cdec87d2e02a7a56db342da8f81a61b6a16ee9",
+    "visual_revision.json": "ddf37ff98aa298a79cf4ba6084cfb238fad980a89be816f232ace4e8c5915ede"
+  }
+}

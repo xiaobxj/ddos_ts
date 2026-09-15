@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T14:59:43.105313+00:00",
+  "triggers": [
+    "2022-06-30",
+    "2023-06-30",
+    "2025-06-30"
+  ],
+  "warmup_checks": 9,
+  "nontrigger_ready_checks": 5,
+  "all40_significance_checks": true,
+  "minimum_holm_p": 0.6919308069193081,
+  "old58_4_preserved": true,
+  "year2021_2024_2026_predictions_exactly_annual": true,
+  "trigger_next_quarter_diagnostics_checked": true,
+  "recent_correct_counts": {
+    "rolling5_annual20": [
+      68,
+      72,
+      71
+    ],
+    "rolling5_quarterly20": [
+      63,
+      63,
+      63
+    ],
+    "state90": [
+      69,
+      71,
+      70
+    ],
+    "error16": [
+      67,
+      72,
+      71
+    ],
+    "rolling5_matched": [
+      70,
+      72,
+      73
+    ]
+  },
+  "interpretation_sha256": "4cff07dd9c4316b2dd6bb33f0cdcbc7a0b8699e2cb23376d8a0b244a3969f1ea"
+}

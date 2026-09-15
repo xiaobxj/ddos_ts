@@ -1,0 +1,96 @@
+{
+  "frozen_utc": "2026-09-10T02:14:18.327793+00:00",
+  "parameters": {
+    "ridge": {
+      "option": "10.0",
+      "setting": 10.0,
+      "validation_rmse": 0.03056180183899004
+    },
+    "hgb": {
+      "option": "2",
+      "setting": {
+        "max_leaf_nodes": 7,
+        "max_iter": 50
+      },
+      "validation_rmse": 0.03014313206095499
+    }
+  },
+  "rankings": [
+    {
+      "model": "ridge",
+      "option": "0.001",
+      "n": 141,
+      "rmse": 0.03419690805049275,
+      "setting": 0.001
+    },
+    {
+      "model": "ridge",
+      "option": "0.01",
+      "n": 141,
+      "rmse": 0.03364437509228158,
+      "setting": 0.01
+    },
+    {
+      "model": "ridge",
+      "option": "0.1",
+      "n": 141,
+      "rmse": 0.032347672162206666,
+      "setting": 0.1
+    },
+    {
+      "model": "ridge",
+      "option": "1.0",
+      "n": 141,
+      "rmse": 0.03114746737268503,
+      "setting": 1.0
+    },
+    {
+      "model": "ridge",
+      "option": "10.0",
+      "n": 141,
+      "rmse": 0.03056180183899004,
+      "setting": 10.0
+    },
+    {
+      "model": "hgb",
+      "option": "0",
+      "n": 141,
+      "rmse": 0.03032767439528919,
+      "setting": {
+        "max_leaf_nodes": 3,
+        "max_iter": 50
+      }
+    },
+    {
+      "model": "hgb",
+      "option": "1",
+      "n": 141,
+      "rmse": 0.03026542015134722,
+      "setting": {
+        "max_leaf_nodes": 3,
+        "max_iter": 150
+      }
+    },
+    {
+      "model": "hgb",
+      "option": "2",
+      "n": 141,
+      "rmse": 0.03014313206095499,
+      "setting": {
+        "max_leaf_nodes": 7,
+        "max_iter": 50
+      }
+    },
+    {
+      "model": "hgb",
+      "option": "3",
+      "n": 141,
+      "rmse": 0.03038740475344281,
+      "setting": {
+        "max_leaf_nodes": 7,
+        "max_iter": 150
+      }
+    }
+  ],
+  "rule": "Choose full-history target-only ridge lambda and HGB configuration by lowest pooled validation execution-return RMSE, ties favor stronger ridge/smaller HGB. Copy exact selected parameters to matched-history target-only and cross-index counterparts without retuning. Report matched-history and cross-index validation diagnostics. Freeze selections before any development prediction scoring. No test-selected threshold, seed, or model winner."
+}

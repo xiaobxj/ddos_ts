@@ -1,0 +1,11 @@
+test_cross_features_price_scale_invariance (__main__.ResearchContracts.test_cross_features_price_scale_invariance) ... ok
+test_kronos_mapping_uses_only_predicted_opens (__main__.ResearchContracts.test_kronos_mapping_uses_only_predicted_opens) ... ok
+test_labels_identical_to_previous_round_and_holiday_maturity (__main__.ResearchContracts.test_labels_identical_to_previous_round_and_holiday_maturity) ... ok
+test_panel_missing_and_invalid_bars_are_not_filled (__main__.ResearchContracts.test_panel_missing_and_invalid_bars_are_not_filled) ... ok
+test_previous_feature_and_ridge_parity (__main__.ResearchContracts.test_previous_feature_and_ridge_parity) ... ok
+test_target_and_panel_future_perturbation_invariance (__main__.ResearchContracts.test_target_and_panel_future_perturbation_invariance) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.601s
+
+OK

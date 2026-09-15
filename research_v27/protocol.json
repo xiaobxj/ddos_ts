@@ -1,0 +1,269 @@
+{
+  "version": 27,
+  "experiment": "Fixed optimizer-update-budget training memory: rolling3/rolling5 versus frozen full history",
+  "scope": "One intervention: retained labeled training anchors. Rebuild full upstream representations, target scales, clipping/scaling, rays, interactions and heads on retained training only. Three inherited main recipes R19/R23/R25 plus R18/native/frequency. Seed fusion is diagnostic only; no new aggregation policy or calibration fit.",
+  "folds": [
+    {
+      "cutoff": "2020-12-31",
+      "end": "2021-12-31",
+      "train_n": 2408,
+      "test_n": 50
+    },
+    {
+      "cutoff": "2021-12-31",
+      "end": "2022-12-31",
+      "train_n": 2651,
+      "test_n": 49
+    },
+    {
+      "cutoff": "2022-12-31",
+      "end": "2023-12-31",
+      "train_n": 2893,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2023-12-31",
+      "end": "2024-12-31",
+      "train_n": 3135,
+      "test_n": 47
+    },
+    {
+      "cutoff": "2024-12-31",
+      "end": "2025-12-31",
+      "train_n": 3377,
+      "test_n": 48
+    },
+    {
+      "cutoff": "2025-12-31",
+      "end": "2026-08-31",
+      "train_n": 3620,
+      "test_n": 30
+    }
+  ],
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "training_counts": {
+    "rolling3": [
+      724,
+      724,
+      722,
+      721,
+      720,
+      721
+    ],
+    "rolling5": [
+      1212,
+      1211,
+      1209,
+      1208,
+      1206,
+      1206
+    ]
+  },
+  "histories": [
+    "full",
+    "rolling5",
+    "rolling3"
+  ],
+  "new_histories": [
+    "rolling5",
+    "rolling3"
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "features": "Frozen eval requires_grad=False; 25 flattened decoded coordinates; training 1/99 percent clipping and population standardization with sd floor1e-6. Four R18 market descriptors clipped/scaled separately on same training rows. Supervised R18 coefficient ray[:25] shared by both products. Volatility interaction residualized over R18+intercept; order interaction residualized over R19+intercept. Training least squares rcond1e-12, residual sd floor1e-6. Order uses exact trailing60close signs, mean adjacent product minus permutation expectation; neutral exact zero. R23 jointly refits all coefficients; R25 freezes R19 including intercept and fits only gamma. No full-pipeline OOF claim.",
+  "decisions": "Equal mean of all three seed probabilities then strict p>.5. Native MSE equal mean of raw execution-return predictions then strict return>0, uses original requires_grad=True inference flags and all test rows as one batch. No invented probability for native MSE. Frequency uses exact mature annual train rows.",
+  "training_membership": "For rollingK at cutoff Dec31Y retain anchors with date>=Jan1(Y-K+1) and joint_completed<=cutoff. Same canonical test dates as R26.125bar feature lookback can precede window lower bound. No additional data cleaning; original OHLC rounding tolerance0.011. R26 raw input/label reconstruction reused by frozen hashes.",
+  "sampling": "20nominalepochs. Each presents Nfull mature annual observations, matching R26 optimizer steps,batch boundaries,lr,dropout,weight decay and gradient clipping. Draw random permutations of the Nretained positions without replacement,concatenate fresh permutations until Nfull,truncate last. Per-epoch counts differ at most1. Full branch exactly recovers R26 permutation order and reuses frozen models/scores. Shorter memory implies more repetitions per retained sample; no natural20pass claim. Unique retained rows define label scales and all convex head objectives; headfits unweighted once per unique sample.",
+  "sequencing": "Freeze protocol,source,inputs and3813olderfiles before contract/newfits. Complete all36newbackbones and144heads before new-weekly scoring. No epoch,window,seed or threshold selection after outcomes. Failures preserved and stop; no old evidence edits.",
+  "primary_comparisons_per_window": [
+    {
+      "history": "rolling5",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "full",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "full",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_order_extension",
+      "reference_history": "full",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_order_extension",
+      "reference_history": "full",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_order_offset",
+      "reference_history": "full",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_order_offset",
+      "reference_history": "full",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling5",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "full",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "full",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_order_extension",
+      "reference_history": "full",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_order_extension",
+      "reference_history": "full",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_order_offset",
+      "reference_history": "full",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_order_offset",
+      "reference_history": "full",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "history": "rolling3",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    }
+  ],
+  "inference": "32comparisons jointlyHolm,16perwindow.2memories*3mainrecipes*2losses vsfull=12perwindow plusR19vsown-frequencyBrier andown-native direction forbothmemories=4. 10000circular8observation bootstrap,seed20260910 perperiod,centeredtwo-sidedp,marginal95percentileinterval. Pooled272descriptiveonly. No adjustment for iterativehistorical design.",
+  "diagnostics": "Allhistories and4learnedrecipes: seed probabilities,upseedcounts,unanimity,meanprobability sign versus majority sign,seedmin/max/meanaccuracy,ensembleaccuracy,meanseedBrier and probabilityvariance identity. Mean vs majority is a descriptive flag,not a scored candidate policy; no majority accuracy ranking,weightfitting orbestseedchoice. Native keeps original rawreturn mean.",
+  "calibration_availability": "Audit previous3calendar-year mature weekly predictions perannualcutoff. Fullhistory source R25(2015-2020) plusR26(2021-2026); no target values used tofit/select. Newrolling memories only own earliercurrentfold forecasts. Verify source model cutoff<signaldate andlabelmaturity<=outercutoff. Archive membership plan before training,check newrolling actualdate coverage afterward. Coverage reflects availablefrozen predictions,not guaranteed completecalendarcoverage. No calibrationfits.",
+  "metrics": "All3histories*6methods*272dates; sixyears,two primarywindows,pooleddescriptive,3seeds andseedyears. Accuracy,balancedaccuracy,AUROC,Brier,NLL,confusion,probabilitymoments and5fixedbins. Loglossreportclip1e-12. Fullhistoryinteractionsoldresults preserved; noautomaticpromotion.",
+  "budget": {
+    "new_neural_fits": 36,
+    "reused_neural_models": 18,
+    "new_nominal_epochs": 720,
+    "new_optimizer_steps": 17280,
+    "new_sample_presentations": 2170080,
+    "new_unique_training_feature_rows": 34752,
+    "new_head_fits": 144,
+    "new_head_free_coefficients": 3384,
+    "new_projections": 72,
+    "new_model_prediction_rows": 8704,
+    "reused_model_prediction_rows": 4352,
+    "model_prediction_rows": 13056,
+    "ensemble_rows": 4896,
+    "weeks": 272,
+    "independent_new_solutions": 144,
+    "old_files": 3813
+  },
+  "verification": "18train/testmemberships;1080seed/epoch schedules independentconstruction andfull branch exactR26 orderhashparity; unique targetscales andcachebytes. Reuse frozenR26raw/label audit; independent market descriptors andexactsign formula. Replay36newcheckpoints/alltrainingtestfeatures/native outputs/optimizerstates/RNGs. Independent108L-BFGS-B solutions tolerancesobjective1e-10,probability1e-5,gradient5e-7;36brentqroots coefficient1e-7. Independentfeaturealgebra,predictions andmetrics. Baseline rows unchanged, all32comparisons andseedvarianceidentity reproduced. No alternate verification coefficients used.",
+  "limitations": "These2021-2026 outcomes were already viewed. Changed window under fixedupdates also changes repetition per retained sample; cannot attribute any result to natural20epochs or assume performance of otherbudgets. Marketstate causal attribution remains unproven. No independentconfirmation,tradingprofit ordeploymentclaim.",
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe"
+}

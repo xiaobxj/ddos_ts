@@ -1,0 +1,17 @@
+window,history,method,changed,wrong_to_correct,correct_to_wrong
+extension_2021_2023,shadow_trial,learned_market,8,3,5
+extension_2021_2023,shadow_trial,learned_vol_interaction,9,3,6
+extension_2021_2023,shadow_trial,learned_order_extension,8,3,5
+extension_2021_2023,shadow_trial,learned_order_offset,8,3,5
+extension_2021_2023,annual_quarter_half,learned_market,16,10,6
+extension_2021_2023,annual_quarter_half,learned_vol_interaction,13,7,6
+extension_2021_2023,annual_quarter_half,learned_order_extension,16,10,6
+extension_2021_2023,annual_quarter_half,learned_order_offset,16,10,6
+recent_2024_2026,shadow_trial,learned_market,0,0,0
+recent_2024_2026,shadow_trial,learned_vol_interaction,0,0,0
+recent_2024_2026,shadow_trial,learned_order_extension,0,0,0
+recent_2024_2026,shadow_trial,learned_order_offset,0,0,0
+recent_2024_2026,annual_quarter_half,learned_market,17,7,10
+recent_2024_2026,annual_quarter_half,learned_vol_interaction,15,6,9
+recent_2024_2026,annual_quarter_half,learned_order_extension,19,6,13
+recent_2024_2026,annual_quarter_half,learned_order_offset,20,7,13

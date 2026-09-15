@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "outside_2025_predictions_exactly_annual": true,
+  "weeks_using_different_cutoff_than_annual": 36,
+  "posthoc_quarter_diagnostic_only": true,
+  "diagnostic_sha256": "23a6481271aeaef6177ff43c50eea5cf826263213387d70e7d3695be3ba69da2"
+}

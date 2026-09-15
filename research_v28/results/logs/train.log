@@ -1,0 +1,417 @@
+Training 1/138 rolling5 2020-12-31 seed 20260910: natural epoch 10/20; elapsed 10.5s
+Training 1/138 rolling5 2020-12-31 seed 20260910: natural epoch 20/20; elapsed 16.0s
+Completed 1/138 backbones and 4/552 heads; no new weekly scoring.
+Training 2/138 rolling5 2020-12-31 seed 20260911: natural epoch 10/20; elapsed 21.9s
+Training 2/138 rolling5 2020-12-31 seed 20260911: natural epoch 20/20; elapsed 27.5s
+Completed 2/138 backbones and 8/552 heads; no new weekly scoring.
+Training 3/138 rolling5 2020-12-31 seed 20260912: natural epoch 10/20; elapsed 33.8s
+Training 3/138 rolling5 2020-12-31 seed 20260912: natural epoch 20/20; elapsed 39.9s
+Completed 3/138 backbones and 12/552 heads; no new weekly scoring.
+Training 4/138 rolling5 2021-03-31 seed 20260910: natural epoch 10/20; elapsed 46.6s
+Training 4/138 rolling5 2021-03-31 seed 20260910: natural epoch 20/20; elapsed 53.1s
+Completed 4/138 backbones and 16/552 heads; no new weekly scoring.
+Training 5/138 rolling5 2021-03-31 seed 20260911: natural epoch 10/20; elapsed 59.7s
+Training 5/138 rolling5 2021-03-31 seed 20260911: natural epoch 20/20; elapsed 66.3s
+Completed 5/138 backbones and 20/552 heads; no new weekly scoring.
+Training 6/138 rolling5 2021-03-31 seed 20260912: natural epoch 10/20; elapsed 72.7s
+Training 6/138 rolling5 2021-03-31 seed 20260912: natural epoch 20/20; elapsed 78.3s
+Completed 6/138 backbones and 24/552 heads; no new weekly scoring.
+Training 7/138 rolling5 2021-06-30 seed 20260910: natural epoch 10/20; elapsed 84.2s
+Training 7/138 rolling5 2021-06-30 seed 20260910: natural epoch 20/20; elapsed 89.8s
+Completed 7/138 backbones and 28/552 heads; no new weekly scoring.
+Training 8/138 rolling5 2021-06-30 seed 20260911: natural epoch 10/20; elapsed 95.9s
+Training 8/138 rolling5 2021-06-30 seed 20260911: natural epoch 20/20; elapsed 101.5s
+Completed 8/138 backbones and 32/552 heads; no new weekly scoring.
+Training 9/138 rolling5 2021-06-30 seed 20260912: natural epoch 10/20; elapsed 107.4s
+Training 9/138 rolling5 2021-06-30 seed 20260912: natural epoch 20/20; elapsed 113.1s
+Completed 9/138 backbones and 36/552 heads; no new weekly scoring.
+Training 10/138 rolling5 2021-09-30 seed 20260910: natural epoch 10/20; elapsed 119.4s
+Training 10/138 rolling5 2021-09-30 seed 20260910: natural epoch 20/20; elapsed 125.4s
+Completed 10/138 backbones and 40/552 heads; no new weekly scoring.
+Training 11/138 rolling5 2021-09-30 seed 20260911: natural epoch 10/20; elapsed 131.8s
+Training 11/138 rolling5 2021-09-30 seed 20260911: natural epoch 20/20; elapsed 137.9s
+Completed 11/138 backbones and 44/552 heads; no new weekly scoring.
+Training 12/138 rolling5 2021-09-30 seed 20260912: natural epoch 10/20; elapsed 144.2s
+Training 12/138 rolling5 2021-09-30 seed 20260912: natural epoch 20/20; elapsed 149.8s
+Completed 12/138 backbones and 48/552 heads; no new weekly scoring.
+Training 13/138 rolling5 2021-12-31 seed 20260910: natural epoch 10/20; elapsed 155.9s
+Training 13/138 rolling5 2021-12-31 seed 20260910: natural epoch 20/20; elapsed 161.4s
+Completed 13/138 backbones and 52/552 heads; no new weekly scoring.
+Training 14/138 rolling5 2021-12-31 seed 20260911: natural epoch 10/20; elapsed 167.4s
+Training 14/138 rolling5 2021-12-31 seed 20260911: natural epoch 20/20; elapsed 172.9s
+Completed 14/138 backbones and 56/552 heads; no new weekly scoring.
+Training 15/138 rolling5 2021-12-31 seed 20260912: natural epoch 10/20; elapsed 178.9s
+Training 15/138 rolling5 2021-12-31 seed 20260912: natural epoch 20/20; elapsed 184.5s
+Completed 15/138 backbones and 60/552 heads; no new weekly scoring.
+Training 16/138 rolling5 2022-03-31 seed 20260910: natural epoch 10/20; elapsed 190.8s
+Training 16/138 rolling5 2022-03-31 seed 20260910: natural epoch 20/20; elapsed 196.8s
+Completed 16/138 backbones and 64/552 heads; no new weekly scoring.
+Training 17/138 rolling5 2022-03-31 seed 20260911: natural epoch 10/20; elapsed 202.9s
+Training 17/138 rolling5 2022-03-31 seed 20260911: natural epoch 20/20; elapsed 208.6s
+Completed 17/138 backbones and 68/552 heads; no new weekly scoring.
+Training 18/138 rolling5 2022-03-31 seed 20260912: natural epoch 10/20; elapsed 214.4s
+Training 18/138 rolling5 2022-03-31 seed 20260912: natural epoch 20/20; elapsed 219.8s
+Completed 18/138 backbones and 72/552 heads; no new weekly scoring.
+Training 19/138 rolling5 2022-06-30 seed 20260910: natural epoch 10/20; elapsed 225.9s
+Training 19/138 rolling5 2022-06-30 seed 20260910: natural epoch 20/20; elapsed 231.6s
+Completed 19/138 backbones and 76/552 heads; no new weekly scoring.
+Training 20/138 rolling5 2022-06-30 seed 20260911: natural epoch 10/20; elapsed 238.9s
+Training 20/138 rolling5 2022-06-30 seed 20260911: natural epoch 20/20; elapsed 245.9s
+Completed 20/138 backbones and 80/552 heads; no new weekly scoring.
+Training 21/138 rolling5 2022-06-30 seed 20260912: natural epoch 10/20; elapsed 253.4s
+Training 21/138 rolling5 2022-06-30 seed 20260912: natural epoch 20/20; elapsed 260.5s
+Completed 21/138 backbones and 84/552 heads; no new weekly scoring.
+Training 22/138 rolling5 2022-09-30 seed 20260910: natural epoch 10/20; elapsed 268.0s
+Training 22/138 rolling5 2022-09-30 seed 20260910: natural epoch 20/20; elapsed 275.0s
+Completed 22/138 backbones and 88/552 heads; no new weekly scoring.
+Training 23/138 rolling5 2022-09-30 seed 20260911: natural epoch 10/20; elapsed 282.1s
+Training 23/138 rolling5 2022-09-30 seed 20260911: natural epoch 20/20; elapsed 289.0s
+Completed 23/138 backbones and 92/552 heads; no new weekly scoring.
+Training 24/138 rolling5 2022-09-30 seed 20260912: natural epoch 10/20; elapsed 296.1s
+Training 24/138 rolling5 2022-09-30 seed 20260912: natural epoch 20/20; elapsed 302.9s
+Completed 24/138 backbones and 96/552 heads; no new weekly scoring.
+Training 25/138 rolling5 2022-12-31 seed 20260910: natural epoch 10/20; elapsed 309.8s
+Training 25/138 rolling5 2022-12-31 seed 20260910: natural epoch 20/20; elapsed 316.4s
+Completed 25/138 backbones and 100/552 heads; no new weekly scoring.
+Training 26/138 rolling5 2022-12-31 seed 20260911: natural epoch 10/20; elapsed 323.7s
+Training 26/138 rolling5 2022-12-31 seed 20260911: natural epoch 20/20; elapsed 330.4s
+Completed 26/138 backbones and 104/552 heads; no new weekly scoring.
+Training 27/138 rolling5 2022-12-31 seed 20260912: natural epoch 10/20; elapsed 337.3s
+Training 27/138 rolling5 2022-12-31 seed 20260912: natural epoch 20/20; elapsed 343.9s
+Completed 27/138 backbones and 108/552 heads; no new weekly scoring.
+Training 28/138 rolling5 2023-03-31 seed 20260910: natural epoch 10/20; elapsed 350.9s
+Training 28/138 rolling5 2023-03-31 seed 20260910: natural epoch 20/20; elapsed 358.0s
+Completed 28/138 backbones and 112/552 heads; no new weekly scoring.
+Training 29/138 rolling5 2023-03-31 seed 20260911: natural epoch 10/20; elapsed 365.1s
+Training 29/138 rolling5 2023-03-31 seed 20260911: natural epoch 20/20; elapsed 371.5s
+Completed 29/138 backbones and 116/552 heads; no new weekly scoring.
+Training 30/138 rolling5 2023-03-31 seed 20260912: natural epoch 10/20; elapsed 378.7s
+Training 30/138 rolling5 2023-03-31 seed 20260912: natural epoch 20/20; elapsed 385.4s
+Completed 30/138 backbones and 120/552 heads; no new weekly scoring.
+Training 31/138 rolling5 2023-06-30 seed 20260910: natural epoch 10/20; elapsed 392.3s
+Training 31/138 rolling5 2023-06-30 seed 20260910: natural epoch 20/20; elapsed 398.7s
+Completed 31/138 backbones and 124/552 heads; no new weekly scoring.
+Training 32/138 rolling5 2023-06-30 seed 20260911: natural epoch 10/20; elapsed 405.6s
+Training 32/138 rolling5 2023-06-30 seed 20260911: natural epoch 20/20; elapsed 412.3s
+Completed 32/138 backbones and 128/552 heads; no new weekly scoring.
+Training 33/138 rolling5 2023-06-30 seed 20260912: natural epoch 10/20; elapsed 419.5s
+Training 33/138 rolling5 2023-06-30 seed 20260912: natural epoch 20/20; elapsed 426.1s
+Completed 33/138 backbones and 132/552 heads; no new weekly scoring.
+Training 34/138 rolling5 2023-09-30 seed 20260910: natural epoch 10/20; elapsed 433.4s
+Training 34/138 rolling5 2023-09-30 seed 20260910: natural epoch 20/20; elapsed 440.1s
+Completed 34/138 backbones and 136/552 heads; no new weekly scoring.
+Training 35/138 rolling5 2023-09-30 seed 20260911: natural epoch 10/20; elapsed 447.1s
+Training 35/138 rolling5 2023-09-30 seed 20260911: natural epoch 20/20; elapsed 453.8s
+Completed 35/138 backbones and 140/552 heads; no new weekly scoring.
+Training 36/138 rolling5 2023-09-30 seed 20260912: natural epoch 10/20; elapsed 461.0s
+Training 36/138 rolling5 2023-09-30 seed 20260912: natural epoch 20/20; elapsed 467.6s
+Completed 36/138 backbones and 144/552 heads; no new weekly scoring.
+Training 37/138 rolling5 2023-12-31 seed 20260910: natural epoch 10/20; elapsed 474.6s
+Training 37/138 rolling5 2023-12-31 seed 20260910: natural epoch 20/20; elapsed 481.1s
+Completed 37/138 backbones and 148/552 heads; no new weekly scoring.
+Training 38/138 rolling5 2023-12-31 seed 20260911: natural epoch 10/20; elapsed 488.3s
+Training 38/138 rolling5 2023-12-31 seed 20260911: natural epoch 20/20; elapsed 494.8s
+Completed 38/138 backbones and 152/552 heads; no new weekly scoring.
+Training 39/138 rolling5 2023-12-31 seed 20260912: natural epoch 10/20; elapsed 501.9s
+Training 39/138 rolling5 2023-12-31 seed 20260912: natural epoch 20/20; elapsed 508.5s
+Completed 39/138 backbones and 156/552 heads; no new weekly scoring.
+Training 40/138 rolling5 2024-03-31 seed 20260910: natural epoch 10/20; elapsed 515.5s
+Training 40/138 rolling5 2024-03-31 seed 20260910: natural epoch 20/20; elapsed 522.3s
+Completed 40/138 backbones and 160/552 heads; no new weekly scoring.
+Training 41/138 rolling5 2024-03-31 seed 20260911: natural epoch 10/20; elapsed 529.8s
+Training 41/138 rolling5 2024-03-31 seed 20260911: natural epoch 20/20; elapsed 536.7s
+Completed 41/138 backbones and 164/552 heads; no new weekly scoring.
+Training 42/138 rolling5 2024-03-31 seed 20260912: natural epoch 10/20; elapsed 543.6s
+Training 42/138 rolling5 2024-03-31 seed 20260912: natural epoch 20/20; elapsed 550.2s
+Completed 42/138 backbones and 168/552 heads; no new weekly scoring.
+Training 43/138 rolling5 2024-06-30 seed 20260910: natural epoch 10/20; elapsed 557.2s
+Training 43/138 rolling5 2024-06-30 seed 20260910: natural epoch 20/20; elapsed 564.0s
+Completed 43/138 backbones and 172/552 heads; no new weekly scoring.
+Training 44/138 rolling5 2024-06-30 seed 20260911: natural epoch 10/20; elapsed 571.0s
+Training 44/138 rolling5 2024-06-30 seed 20260911: natural epoch 20/20; elapsed 577.8s
+Completed 44/138 backbones and 176/552 heads; no new weekly scoring.
+Training 45/138 rolling5 2024-06-30 seed 20260912: natural epoch 10/20; elapsed 584.9s
+Training 45/138 rolling5 2024-06-30 seed 20260912: natural epoch 20/20; elapsed 591.6s
+Completed 45/138 backbones and 180/552 heads; no new weekly scoring.
+Training 46/138 rolling5 2024-09-30 seed 20260910: natural epoch 10/20; elapsed 598.9s
+Training 46/138 rolling5 2024-09-30 seed 20260910: natural epoch 20/20; elapsed 605.5s
+Completed 46/138 backbones and 184/552 heads; no new weekly scoring.
+Training 47/138 rolling5 2024-09-30 seed 20260911: natural epoch 10/20; elapsed 612.7s
+Training 47/138 rolling5 2024-09-30 seed 20260911: natural epoch 20/20; elapsed 619.2s
+Completed 47/138 backbones and 188/552 heads; no new weekly scoring.
+Training 48/138 rolling5 2024-09-30 seed 20260912: natural epoch 10/20; elapsed 626.4s
+Training 48/138 rolling5 2024-09-30 seed 20260912: natural epoch 20/20; elapsed 632.8s
+Completed 48/138 backbones and 192/552 heads; no new weekly scoring.
+Training 49/138 rolling5 2024-12-31 seed 20260910: natural epoch 10/20; elapsed 639.6s
+Training 49/138 rolling5 2024-12-31 seed 20260910: natural epoch 20/20; elapsed 646.1s
+Completed 49/138 backbones and 196/552 heads; no new weekly scoring.
+Training 50/138 rolling5 2024-12-31 seed 20260911: natural epoch 10/20; elapsed 653.2s
+Training 50/138 rolling5 2024-12-31 seed 20260911: natural epoch 20/20; elapsed 660.0s
+Completed 50/138 backbones and 200/552 heads; no new weekly scoring.
+Training 51/138 rolling5 2024-12-31 seed 20260912: natural epoch 10/20; elapsed 666.9s
+Training 51/138 rolling5 2024-12-31 seed 20260912: natural epoch 20/20; elapsed 673.5s
+Completed 51/138 backbones and 204/552 heads; no new weekly scoring.
+Training 52/138 rolling5 2025-03-31 seed 20260910: natural epoch 10/20; elapsed 680.4s
+Training 52/138 rolling5 2025-03-31 seed 20260910: natural epoch 20/20; elapsed 686.6s
+Completed 52/138 backbones and 208/552 heads; no new weekly scoring.
+Training 53/138 rolling5 2025-03-31 seed 20260911: natural epoch 10/20; elapsed 694.3s
+Training 53/138 rolling5 2025-03-31 seed 20260911: natural epoch 20/20; elapsed 701.2s
+Completed 53/138 backbones and 212/552 heads; no new weekly scoring.
+Training 54/138 rolling5 2025-03-31 seed 20260912: natural epoch 10/20; elapsed 708.4s
+Training 54/138 rolling5 2025-03-31 seed 20260912: natural epoch 20/20; elapsed 714.9s
+Completed 54/138 backbones and 216/552 heads; no new weekly scoring.
+Training 55/138 rolling5 2025-06-30 seed 20260910: natural epoch 10/20; elapsed 722.0s
+Training 55/138 rolling5 2025-06-30 seed 20260910: natural epoch 20/20; elapsed 728.4s
+Completed 55/138 backbones and 220/552 heads; no new weekly scoring.
+Training 56/138 rolling5 2025-06-30 seed 20260911: natural epoch 10/20; elapsed 735.3s
+Training 56/138 rolling5 2025-06-30 seed 20260911: natural epoch 20/20; elapsed 741.8s
+Completed 56/138 backbones and 224/552 heads; no new weekly scoring.
+Training 57/138 rolling5 2025-06-30 seed 20260912: natural epoch 10/20; elapsed 748.7s
+Training 57/138 rolling5 2025-06-30 seed 20260912: natural epoch 20/20; elapsed 754.8s
+Completed 57/138 backbones and 228/552 heads; no new weekly scoring.
+Training 58/138 rolling5 2025-09-30 seed 20260910: natural epoch 10/20; elapsed 761.6s
+Training 58/138 rolling5 2025-09-30 seed 20260910: natural epoch 20/20; elapsed 768.6s
+Completed 58/138 backbones and 232/552 heads; no new weekly scoring.
+Training 59/138 rolling5 2025-09-30 seed 20260911: natural epoch 10/20; elapsed 776.4s
+Training 59/138 rolling5 2025-09-30 seed 20260911: natural epoch 20/20; elapsed 782.4s
+Completed 59/138 backbones and 236/552 heads; no new weekly scoring.
+Training 60/138 rolling5 2025-09-30 seed 20260912: natural epoch 10/20; elapsed 789.0s
+Training 60/138 rolling5 2025-09-30 seed 20260912: natural epoch 20/20; elapsed 795.5s
+Completed 60/138 backbones and 240/552 heads; no new weekly scoring.
+Training 61/138 rolling5 2025-12-31 seed 20260910: natural epoch 10/20; elapsed 802.5s
+Training 61/138 rolling5 2025-12-31 seed 20260910: natural epoch 20/20; elapsed 808.9s
+Completed 61/138 backbones and 244/552 heads; no new weekly scoring.
+Training 62/138 rolling5 2025-12-31 seed 20260911: natural epoch 10/20; elapsed 815.7s
+Training 62/138 rolling5 2025-12-31 seed 20260911: natural epoch 20/20; elapsed 822.2s
+Completed 62/138 backbones and 248/552 heads; no new weekly scoring.
+Training 63/138 rolling5 2025-12-31 seed 20260912: natural epoch 10/20; elapsed 828.7s
+Training 63/138 rolling5 2025-12-31 seed 20260912: natural epoch 20/20; elapsed 835.0s
+Completed 63/138 backbones and 252/552 heads; no new weekly scoring.
+Training 64/138 rolling5 2026-03-31 seed 20260910: natural epoch 10/20; elapsed 841.8s
+Training 64/138 rolling5 2026-03-31 seed 20260910: natural epoch 20/20; elapsed 848.2s
+Completed 64/138 backbones and 256/552 heads; no new weekly scoring.
+Training 65/138 rolling5 2026-03-31 seed 20260911: natural epoch 10/20; elapsed 855.6s
+Training 65/138 rolling5 2026-03-31 seed 20260911: natural epoch 20/20; elapsed 862.6s
+Completed 65/138 backbones and 260/552 heads; no new weekly scoring.
+Training 66/138 rolling5 2026-03-31 seed 20260912: natural epoch 10/20; elapsed 869.9s
+Training 66/138 rolling5 2026-03-31 seed 20260912: natural epoch 20/20; elapsed 876.7s
+Completed 66/138 backbones and 264/552 heads; no new weekly scoring.
+Training 67/138 rolling5 2026-06-30 seed 20260910: natural epoch 10/20; elapsed 884.0s
+Training 67/138 rolling5 2026-06-30 seed 20260910: natural epoch 20/20; elapsed 891.0s
+Completed 67/138 backbones and 268/552 heads; no new weekly scoring.
+Training 68/138 rolling5 2026-06-30 seed 20260911: natural epoch 10/20; elapsed 898.4s
+Training 68/138 rolling5 2026-06-30 seed 20260911: natural epoch 20/20; elapsed 905.4s
+Completed 68/138 backbones and 272/552 heads; no new weekly scoring.
+Training 69/138 rolling5 2026-06-30 seed 20260912: natural epoch 10/20; elapsed 912.9s
+Training 69/138 rolling5 2026-06-30 seed 20260912: natural epoch 20/20; elapsed 919.4s
+Completed 69/138 backbones and 276/552 heads; no new weekly scoring.
+Training 70/138 rolling3 2020-12-31 seed 20260910: natural epoch 10/20; elapsed 924.1s
+Training 70/138 rolling3 2020-12-31 seed 20260910: natural epoch 20/20; elapsed 928.1s
+Completed 70/138 backbones and 280/552 heads; no new weekly scoring.
+Training 71/138 rolling3 2020-12-31 seed 20260911: natural epoch 10/20; elapsed 932.1s
+Training 71/138 rolling3 2020-12-31 seed 20260911: natural epoch 20/20; elapsed 936.1s
+Completed 71/138 backbones and 284/552 heads; no new weekly scoring.
+Training 72/138 rolling3 2020-12-31 seed 20260912: natural epoch 10/20; elapsed 940.4s
+Training 72/138 rolling3 2020-12-31 seed 20260912: natural epoch 20/20; elapsed 944.4s
+Completed 72/138 backbones and 288/552 heads; no new weekly scoring.
+Training 73/138 rolling3 2021-03-31 seed 20260910: natural epoch 10/20; elapsed 948.8s
+Training 73/138 rolling3 2021-03-31 seed 20260910: natural epoch 20/20; elapsed 952.6s
+Completed 73/138 backbones and 292/552 heads; no new weekly scoring.
+Training 74/138 rolling3 2021-03-31 seed 20260911: natural epoch 10/20; elapsed 956.5s
+Training 74/138 rolling3 2021-03-31 seed 20260911: natural epoch 20/20; elapsed 960.6s
+Completed 74/138 backbones and 296/552 heads; no new weekly scoring.
+Training 75/138 rolling3 2021-03-31 seed 20260912: natural epoch 10/20; elapsed 965.0s
+Training 75/138 rolling3 2021-03-31 seed 20260912: natural epoch 20/20; elapsed 969.2s
+Completed 75/138 backbones and 300/552 heads; no new weekly scoring.
+Training 76/138 rolling3 2021-06-30 seed 20260910: natural epoch 10/20; elapsed 973.6s
+Training 76/138 rolling3 2021-06-30 seed 20260910: natural epoch 20/20; elapsed 977.6s
+Completed 76/138 backbones and 304/552 heads; no new weekly scoring.
+Training 77/138 rolling3 2021-06-30 seed 20260911: natural epoch 10/20; elapsed 981.7s
+Training 77/138 rolling3 2021-06-30 seed 20260911: natural epoch 20/20; elapsed 985.6s
+Completed 77/138 backbones and 308/552 heads; no new weekly scoring.
+Training 78/138 rolling3 2021-06-30 seed 20260912: natural epoch 10/20; elapsed 989.9s
+Training 78/138 rolling3 2021-06-30 seed 20260912: natural epoch 20/20; elapsed 993.7s
+Completed 78/138 backbones and 312/552 heads; no new weekly scoring.
+Training 79/138 rolling3 2021-09-30 seed 20260910: natural epoch 10/20; elapsed 998.1s
+Training 79/138 rolling3 2021-09-30 seed 20260910: natural epoch 20/20; elapsed 1002.1s
+Completed 79/138 backbones and 316/552 heads; no new weekly scoring.
+Training 80/138 rolling3 2021-09-30 seed 20260911: natural epoch 10/20; elapsed 1006.1s
+Training 80/138 rolling3 2021-09-30 seed 20260911: natural epoch 20/20; elapsed 1010.0s
+Completed 80/138 backbones and 320/552 heads; no new weekly scoring.
+Training 81/138 rolling3 2021-09-30 seed 20260912: natural epoch 10/20; elapsed 1014.4s
+Training 81/138 rolling3 2021-09-30 seed 20260912: natural epoch 20/20; elapsed 1018.3s
+Completed 81/138 backbones and 324/552 heads; no new weekly scoring.
+Training 82/138 rolling3 2021-12-31 seed 20260910: natural epoch 10/20; elapsed 1022.9s
+Training 82/138 rolling3 2021-12-31 seed 20260910: natural epoch 20/20; elapsed 1027.1s
+Completed 82/138 backbones and 328/552 heads; no new weekly scoring.
+Training 83/138 rolling3 2021-12-31 seed 20260911: natural epoch 10/20; elapsed 1031.2s
+Training 83/138 rolling3 2021-12-31 seed 20260911: natural epoch 20/20; elapsed 1035.1s
+Completed 83/138 backbones and 332/552 heads; no new weekly scoring.
+Training 84/138 rolling3 2021-12-31 seed 20260912: natural epoch 10/20; elapsed 1039.6s
+Training 84/138 rolling3 2021-12-31 seed 20260912: natural epoch 20/20; elapsed 1043.8s
+Completed 84/138 backbones and 336/552 heads; no new weekly scoring.
+Training 85/138 rolling3 2022-03-31 seed 20260910: natural epoch 10/20; elapsed 1048.3s
+Training 85/138 rolling3 2022-03-31 seed 20260910: natural epoch 20/20; elapsed 1052.5s
+Completed 85/138 backbones and 340/552 heads; no new weekly scoring.
+Training 86/138 rolling3 2022-03-31 seed 20260911: natural epoch 10/20; elapsed 1056.8s
+Training 86/138 rolling3 2022-03-31 seed 20260911: natural epoch 20/20; elapsed 1060.9s
+Completed 86/138 backbones and 344/552 heads; no new weekly scoring.
+Training 87/138 rolling3 2022-03-31 seed 20260912: natural epoch 10/20; elapsed 1065.5s
+Training 87/138 rolling3 2022-03-31 seed 20260912: natural epoch 20/20; elapsed 1069.5s
+Completed 87/138 backbones and 348/552 heads; no new weekly scoring.
+Training 88/138 rolling3 2022-06-30 seed 20260910: natural epoch 10/20; elapsed 1073.8s
+Training 88/138 rolling3 2022-06-30 seed 20260910: natural epoch 20/20; elapsed 1077.7s
+Completed 88/138 backbones and 352/552 heads; no new weekly scoring.
+Training 89/138 rolling3 2022-06-30 seed 20260911: natural epoch 10/20; elapsed 1082.0s
+Training 89/138 rolling3 2022-06-30 seed 20260911: natural epoch 20/20; elapsed 1086.0s
+Completed 89/138 backbones and 356/552 heads; no new weekly scoring.
+Training 90/138 rolling3 2022-06-30 seed 20260912: natural epoch 10/20; elapsed 1090.5s
+Training 90/138 rolling3 2022-06-30 seed 20260912: natural epoch 20/20; elapsed 1094.5s
+Completed 90/138 backbones and 360/552 heads; no new weekly scoring.
+Training 91/138 rolling3 2022-09-30 seed 20260910: natural epoch 10/20; elapsed 1098.7s
+Training 91/138 rolling3 2022-09-30 seed 20260910: natural epoch 20/20; elapsed 1102.6s
+Completed 91/138 backbones and 364/552 heads; no new weekly scoring.
+Training 92/138 rolling3 2022-09-30 seed 20260911: natural epoch 10/20; elapsed 1106.8s
+Training 92/138 rolling3 2022-09-30 seed 20260911: natural epoch 20/20; elapsed 1110.6s
+Completed 92/138 backbones and 368/552 heads; no new weekly scoring.
+Training 93/138 rolling3 2022-09-30 seed 20260912: natural epoch 10/20; elapsed 1114.8s
+Training 93/138 rolling3 2022-09-30 seed 20260912: natural epoch 20/20; elapsed 1118.7s
+Completed 93/138 backbones and 372/552 heads; no new weekly scoring.
+Training 94/138 rolling3 2022-12-31 seed 20260910: natural epoch 10/20; elapsed 1123.3s
+Training 94/138 rolling3 2022-12-31 seed 20260910: natural epoch 20/20; elapsed 1127.2s
+Completed 94/138 backbones and 376/552 heads; no new weekly scoring.
+Training 95/138 rolling3 2022-12-31 seed 20260911: natural epoch 10/20; elapsed 1131.4s
+Training 95/138 rolling3 2022-12-31 seed 20260911: natural epoch 20/20; elapsed 1135.1s
+Completed 95/138 backbones and 380/552 heads; no new weekly scoring.
+Training 96/138 rolling3 2022-12-31 seed 20260912: natural epoch 10/20; elapsed 1139.2s
+Training 96/138 rolling3 2022-12-31 seed 20260912: natural epoch 20/20; elapsed 1143.3s
+Completed 96/138 backbones and 384/552 heads; no new weekly scoring.
+Training 97/138 rolling3 2023-03-31 seed 20260910: natural epoch 10/20; elapsed 1147.8s
+Training 97/138 rolling3 2023-03-31 seed 20260910: natural epoch 20/20; elapsed 1151.8s
+Completed 97/138 backbones and 388/552 heads; no new weekly scoring.
+Training 98/138 rolling3 2023-03-31 seed 20260911: natural epoch 10/20; elapsed 1156.2s
+Training 98/138 rolling3 2023-03-31 seed 20260911: natural epoch 20/20; elapsed 1160.2s
+Completed 98/138 backbones and 392/552 heads; no new weekly scoring.
+Training 99/138 rolling3 2023-03-31 seed 20260912: natural epoch 10/20; elapsed 1164.5s
+Training 99/138 rolling3 2023-03-31 seed 20260912: natural epoch 20/20; elapsed 1168.4s
+Completed 99/138 backbones and 396/552 heads; no new weekly scoring.
+Training 100/138 rolling3 2023-06-30 seed 20260910: natural epoch 10/20; elapsed 1172.5s
+Training 100/138 rolling3 2023-06-30 seed 20260910: natural epoch 20/20; elapsed 1176.2s
+Completed 100/138 backbones and 400/552 heads; no new weekly scoring.
+Training 101/138 rolling3 2023-06-30 seed 20260911: natural epoch 10/20; elapsed 1180.7s
+Training 101/138 rolling3 2023-06-30 seed 20260911: natural epoch 20/20; elapsed 1184.9s
+Completed 101/138 backbones and 404/552 heads; no new weekly scoring.
+Training 102/138 rolling3 2023-06-30 seed 20260912: natural epoch 10/20; elapsed 1189.3s
+Training 102/138 rolling3 2023-06-30 seed 20260912: natural epoch 20/20; elapsed 1193.5s
+Completed 102/138 backbones and 408/552 heads; no new weekly scoring.
+Training 103/138 rolling3 2023-09-30 seed 20260910: natural epoch 10/20; elapsed 1197.8s
+Training 103/138 rolling3 2023-09-30 seed 20260910: natural epoch 20/20; elapsed 1201.7s
+Completed 103/138 backbones and 412/552 heads; no new weekly scoring.
+Training 104/138 rolling3 2023-09-30 seed 20260911: natural epoch 10/20; elapsed 1205.9s
+Training 104/138 rolling3 2023-09-30 seed 20260911: natural epoch 20/20; elapsed 1209.9s
+Completed 104/138 backbones and 416/552 heads; no new weekly scoring.
+Training 105/138 rolling3 2023-09-30 seed 20260912: natural epoch 10/20; elapsed 1214.3s
+Training 105/138 rolling3 2023-09-30 seed 20260912: natural epoch 20/20; elapsed 1218.3s
+Completed 105/138 backbones and 420/552 heads; no new weekly scoring.
+Training 106/138 rolling3 2023-12-31 seed 20260910: natural epoch 10/20; elapsed 1222.4s
+Training 106/138 rolling3 2023-12-31 seed 20260910: natural epoch 20/20; elapsed 1226.4s
+Completed 106/138 backbones and 424/552 heads; no new weekly scoring.
+Training 107/138 rolling3 2023-12-31 seed 20260911: natural epoch 10/20; elapsed 1230.7s
+Training 107/138 rolling3 2023-12-31 seed 20260911: natural epoch 20/20; elapsed 1234.5s
+Completed 107/138 backbones and 428/552 heads; no new weekly scoring.
+Training 108/138 rolling3 2023-12-31 seed 20260912: natural epoch 10/20; elapsed 1238.9s
+Training 108/138 rolling3 2023-12-31 seed 20260912: natural epoch 20/20; elapsed 1243.1s
+Completed 108/138 backbones and 432/552 heads; no new weekly scoring.
+Training 109/138 rolling3 2024-03-31 seed 20260910: natural epoch 10/20; elapsed 1247.4s
+Training 109/138 rolling3 2024-03-31 seed 20260910: natural epoch 20/20; elapsed 1251.3s
+Completed 109/138 backbones and 436/552 heads; no new weekly scoring.
+Training 110/138 rolling3 2024-03-31 seed 20260911: natural epoch 10/20; elapsed 1255.7s
+Training 110/138 rolling3 2024-03-31 seed 20260911: natural epoch 20/20; elapsed 1259.4s
+Completed 110/138 backbones and 440/552 heads; no new weekly scoring.
+Training 111/138 rolling3 2024-03-31 seed 20260912: natural epoch 10/20; elapsed 1263.7s
+Training 111/138 rolling3 2024-03-31 seed 20260912: natural epoch 20/20; elapsed 1267.6s
+Completed 111/138 backbones and 444/552 heads; no new weekly scoring.
+Training 112/138 rolling3 2024-06-30 seed 20260910: natural epoch 10/20; elapsed 1271.9s
+Training 112/138 rolling3 2024-06-30 seed 20260910: natural epoch 20/20; elapsed 1275.8s
+Completed 112/138 backbones and 448/552 heads; no new weekly scoring.
+Training 113/138 rolling3 2024-06-30 seed 20260911: natural epoch 10/20; elapsed 1280.0s
+Training 113/138 rolling3 2024-06-30 seed 20260911: natural epoch 20/20; elapsed 1283.8s
+Completed 113/138 backbones and 452/552 heads; no new weekly scoring.
+Training 114/138 rolling3 2024-06-30 seed 20260912: natural epoch 10/20; elapsed 1288.1s
+Training 114/138 rolling3 2024-06-30 seed 20260912: natural epoch 20/20; elapsed 1292.0s
+Completed 114/138 backbones and 456/552 heads; no new weekly scoring.
+Training 115/138 rolling3 2024-09-30 seed 20260910: natural epoch 10/20; elapsed 1296.4s
+Training 115/138 rolling3 2024-09-30 seed 20260910: natural epoch 20/20; elapsed 1300.7s
+Completed 115/138 backbones and 460/552 heads; no new weekly scoring.
+Training 116/138 rolling3 2024-09-30 seed 20260911: natural epoch 10/20; elapsed 1305.0s
+Training 116/138 rolling3 2024-09-30 seed 20260911: natural epoch 20/20; elapsed 1309.1s
+Completed 116/138 backbones and 464/552 heads; no new weekly scoring.
+Training 117/138 rolling3 2024-09-30 seed 20260912: natural epoch 10/20; elapsed 1313.2s
+Training 117/138 rolling3 2024-09-30 seed 20260912: natural epoch 20/20; elapsed 1317.0s
+Completed 117/138 backbones and 468/552 heads; no new weekly scoring.
+Training 118/138 rolling3 2024-12-31 seed 20260910: natural epoch 10/20; elapsed 1321.2s
+Training 118/138 rolling3 2024-12-31 seed 20260910: natural epoch 20/20; elapsed 1325.1s
+Completed 118/138 backbones and 472/552 heads; no new weekly scoring.
+Training 119/138 rolling3 2024-12-31 seed 20260911: natural epoch 10/20; elapsed 1329.4s
+Training 119/138 rolling3 2024-12-31 seed 20260911: natural epoch 20/20; elapsed 1333.3s
+Completed 119/138 backbones and 476/552 heads; no new weekly scoring.
+Training 120/138 rolling3 2024-12-31 seed 20260912: natural epoch 10/20; elapsed 1337.7s
+Training 120/138 rolling3 2024-12-31 seed 20260912: natural epoch 20/20; elapsed 1341.6s
+Completed 120/138 backbones and 480/552 heads; no new weekly scoring.
+Training 121/138 rolling3 2025-03-31 seed 20260910: natural epoch 10/20; elapsed 1345.9s
+Training 121/138 rolling3 2025-03-31 seed 20260910: natural epoch 20/20; elapsed 1349.7s
+Completed 121/138 backbones and 484/552 heads; no new weekly scoring.
+Training 122/138 rolling3 2025-03-31 seed 20260911: natural epoch 10/20; elapsed 1353.7s
+Training 122/138 rolling3 2025-03-31 seed 20260911: natural epoch 20/20; elapsed 1357.3s
+Completed 122/138 backbones and 488/552 heads; no new weekly scoring.
+Training 123/138 rolling3 2025-03-31 seed 20260912: natural epoch 10/20; elapsed 1362.7s
+Training 123/138 rolling3 2025-03-31 seed 20260912: natural epoch 20/20; elapsed 1366.4s
+Completed 123/138 backbones and 492/552 heads; no new weekly scoring.
+Training 124/138 rolling3 2025-06-30 seed 20260910: natural epoch 10/20; elapsed 1370.7s
+Training 124/138 rolling3 2025-06-30 seed 20260910: natural epoch 20/20; elapsed 1374.8s
+Completed 124/138 backbones and 496/552 heads; no new weekly scoring.
+Training 125/138 rolling3 2025-06-30 seed 20260911: natural epoch 10/20; elapsed 1379.1s
+Training 125/138 rolling3 2025-06-30 seed 20260911: natural epoch 20/20; elapsed 1382.9s
+Completed 125/138 backbones and 500/552 heads; no new weekly scoring.
+Training 126/138 rolling3 2025-06-30 seed 20260912: natural epoch 10/20; elapsed 1387.3s
+Training 126/138 rolling3 2025-06-30 seed 20260912: natural epoch 20/20; elapsed 1391.2s
+Completed 126/138 backbones and 504/552 heads; no new weekly scoring.
+Training 127/138 rolling3 2025-09-30 seed 20260910: natural epoch 10/20; elapsed 1395.4s
+Training 127/138 rolling3 2025-09-30 seed 20260910: natural epoch 20/20; elapsed 1399.1s
+Completed 127/138 backbones and 508/552 heads; no new weekly scoring.
+Training 128/138 rolling3 2025-09-30 seed 20260911: natural epoch 10/20; elapsed 1403.3s
+Training 128/138 rolling3 2025-09-30 seed 20260911: natural epoch 20/20; elapsed 1407.3s
+Completed 128/138 backbones and 512/552 heads; no new weekly scoring.
+Training 129/138 rolling3 2025-09-30 seed 20260912: natural epoch 10/20; elapsed 1411.5s
+Training 129/138 rolling3 2025-09-30 seed 20260912: natural epoch 20/20; elapsed 1415.3s
+Completed 129/138 backbones and 516/552 heads; no new weekly scoring.
+Training 130/138 rolling3 2025-12-31 seed 20260910: natural epoch 10/20; elapsed 1420.1s
+Training 130/138 rolling3 2025-12-31 seed 20260910: natural epoch 20/20; elapsed 1423.8s
+Completed 130/138 backbones and 520/552 heads; no new weekly scoring.
+Training 131/138 rolling3 2025-12-31 seed 20260911: natural epoch 10/20; elapsed 1427.8s
+Training 131/138 rolling3 2025-12-31 seed 20260911: natural epoch 20/20; elapsed 1431.4s
+Completed 131/138 backbones and 524/552 heads; no new weekly scoring.
+Training 132/138 rolling3 2025-12-31 seed 20260912: natural epoch 10/20; elapsed 1435.4s
+Training 132/138 rolling3 2025-12-31 seed 20260912: natural epoch 20/20; elapsed 1439.1s
+Completed 132/138 backbones and 528/552 heads; no new weekly scoring.
+Training 133/138 rolling3 2026-03-31 seed 20260910: natural epoch 10/20; elapsed 1443.4s
+Training 133/138 rolling3 2026-03-31 seed 20260910: natural epoch 20/20; elapsed 1447.4s
+Completed 133/138 backbones and 532/552 heads; no new weekly scoring.
+Training 134/138 rolling3 2026-03-31 seed 20260911: natural epoch 10/20; elapsed 1451.6s
+Training 134/138 rolling3 2026-03-31 seed 20260911: natural epoch 20/20; elapsed 1455.5s
+Completed 134/138 backbones and 536/552 heads; no new weekly scoring.
+Training 135/138 rolling3 2026-03-31 seed 20260912: natural epoch 10/20; elapsed 1459.6s
+Training 135/138 rolling3 2026-03-31 seed 20260912: natural epoch 20/20; elapsed 1463.3s
+Completed 135/138 backbones and 540/552 heads; no new weekly scoring.
+Training 136/138 rolling3 2026-06-30 seed 20260910: natural epoch 10/20; elapsed 1467.4s
+Training 136/138 rolling3 2026-06-30 seed 20260910: natural epoch 20/20; elapsed 1471.2s
+Completed 136/138 backbones and 544/552 heads; no new weekly scoring.
+Training 137/138 rolling3 2026-06-30 seed 20260911: natural epoch 10/20; elapsed 1475.5s
+Training 137/138 rolling3 2026-06-30 seed 20260911: natural epoch 20/20; elapsed 1479.6s
+Completed 137/138 backbones and 548/552 heads; no new weekly scoring.
+Training 138/138 rolling3 2026-06-30 seed 20260912: natural epoch 10/20; elapsed 1483.9s
+Training 138/138 rolling3 2026-06-30 seed 20260912: natural epoch 20/20; elapsed 1488.0s
+Completed 138/138 backbones and 552/552 heads; no new weekly scoring.
+Training PASS:138backbones and552heads frozen before new scoring.
+
+EXIT_CODE=0

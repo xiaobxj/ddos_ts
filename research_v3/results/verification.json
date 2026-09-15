@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "unit_tests": 6,
+  "predictions": 2926,
+  "local_models": 6,
+  "kronos_input_arms": 2,
+  "full_development_weeks": 272,
+  "kronos_common_weeks": 103,
+  "official_seed_paths_recomputed": 618,
+  "refit_folds_checked": 222,
+  "previous_files_preserved": 111,
+  "source_and_weight_hashes_match": true,
+  "observation_and_feature_parity_with_round2": true,
+  "all_labels_independently_recomputed": true,
+  "paired_cross_feature_training_masks_identical": true,
+  "validation_choices_recomputed": true,
+  "kronos_forecasts_recomputed_from_saved_paths": true,
+  "amount_not_synthesized": true,
+  "float32_csv_paths_restored_and_ensemble_bitwise_matched": true,
+  "deterministic_kronos_repeatability": true,
+  "daily_weekly_and_analytic_buyhold_accounting_reconciled": true,
+  "checked_utc": "2026-09-10T02:36:30.073092+00:00"
+}

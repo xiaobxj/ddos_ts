@@ -1,0 +1,20 @@
+[
+  {
+    "cutoff": "2025-03-31",
+    "seed": 20260910,
+    "cache_file": "research_v29\\cache\\extension_2025-03-31_20260910.npz",
+    "cache_sha256": "fa98c5ca752d07310bda9536066e95f196d8fcb973e562276f3b51103a182ee7"
+  },
+  {
+    "cutoff": "2025-03-31",
+    "seed": 20260911,
+    "cache_file": "research_v29\\cache\\extension_2025-03-31_20260911.npz",
+    "cache_sha256": "a61cc04c2e3e579ba422826547047fafa8aabdcc41394ed5b89f1341cc44e25a"
+  },
+  {
+    "cutoff": "2025-03-31",
+    "seed": 20260912,
+    "cache_file": "research_v29\\cache\\extension_2025-03-31_20260912.npz",
+    "cache_sha256": "f2238b859a479ad08fc51fed2e22968a24e4e92cefbe70de3fe2a8fc5588bb9c"
+  }
+]

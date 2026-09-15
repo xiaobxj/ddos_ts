@@ -1,0 +1,707 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "features": "Frozen eval requires_grad=False; 25 flattened decoded coordinates; training 1/99 percent clipping and population standardization with sd floor1e-6. Four R18 market descriptors clipped/scaled separately on same training rows. Supervised R18 coefficient ray[:25] shared by both products. Volatility interaction residualized over R18+intercept; order interaction residualized over R19+intercept. Training least squares rcond1e-12, residual sd floor1e-6. Order uses exact trailing60close signs, mean adjacent product minus permutation expectation; neutral exact zero. R23 jointly refits all coefficients; R25 freezes R19 including intercept and fits only gamma. No full-pipeline OOF claim.",
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "version": 28,
+  "experiment": "Fixed 3/5-calendar-year windows, natural20 passes, annual versus quarterly WFO",
+  "folds": [
+    {
+      "cutoff": "2020-12-31",
+      "end": "2021-12-31",
+      "quarter_end": "2021-03-31",
+      "lower": {
+        "rolling5": "2016-01-01",
+        "rolling3": "2018-01-01"
+      },
+      "train_n": 2408,
+      "training_counts": {
+        "rolling5": 1212,
+        "rolling3": 724
+      },
+      "test_n": 50
+    },
+    {
+      "cutoff": "2021-03-31",
+      "end": "2021-06-30",
+      "quarter_end": "2021-06-30",
+      "lower": {
+        "rolling5": "2016-04-01",
+        "rolling3": "2018-04-01"
+      },
+      "train_n": 2466,
+      "training_counts": {
+        "rolling5": 1211,
+        "rolling3": 723
+      },
+      "test_n": 13
+    },
+    {
+      "cutoff": "2021-06-30",
+      "end": "2021-09-30",
+      "quarter_end": "2021-09-30",
+      "lower": {
+        "rolling5": "2016-07-01",
+        "rolling3": "2018-07-01"
+      },
+      "train_n": 2526,
+      "training_counts": {
+        "rolling5": 1210,
+        "rolling3": 723
+      },
+      "test_n": 13
+    },
+    {
+      "cutoff": "2021-09-30",
+      "end": "2021-12-31",
+      "quarter_end": "2021-12-31",
+      "lower": {
+        "rolling5": "2016-10-01",
+        "rolling3": "2018-10-01"
+      },
+      "train_n": 2590,
+      "training_counts": {
+        "rolling5": 1210,
+        "rolling3": 723
+      },
+      "test_n": 13
+    },
+    {
+      "cutoff": "2021-12-31",
+      "end": "2022-12-31",
+      "quarter_end": "2022-03-31",
+      "lower": {
+        "rolling5": "2017-01-01",
+        "rolling3": "2019-01-01"
+      },
+      "train_n": 2651,
+      "training_counts": {
+        "rolling5": 1211,
+        "rolling3": 724
+      },
+      "test_n": 49
+    },
+    {
+      "cutoff": "2022-03-31",
+      "end": "2022-06-30",
+      "quarter_end": "2022-06-30",
+      "lower": {
+        "rolling5": "2017-04-01",
+        "rolling3": "2019-04-01"
+      },
+      "train_n": 2709,
+      "training_counts": {
+        "rolling5": 1210,
+        "rolling3": 724
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2022-06-30",
+      "end": "2022-09-30",
+      "quarter_end": "2022-09-30",
+      "lower": {
+        "rolling5": "2017-07-01",
+        "rolling3": "2019-07-01"
+      },
+      "train_n": 2768,
+      "training_counts": {
+        "rolling5": 1209,
+        "rolling3": 723
+      },
+      "test_n": 14
+    },
+    {
+      "cutoff": "2022-09-30",
+      "end": "2022-12-31",
+      "quarter_end": "2022-12-31",
+      "lower": {
+        "rolling5": "2017-10-01",
+        "rolling3": "2019-10-01"
+      },
+      "train_n": 2833,
+      "training_counts": {
+        "rolling5": 1209,
+        "rolling3": 723
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2022-12-31",
+      "end": "2023-12-31",
+      "quarter_end": "2023-03-31",
+      "lower": {
+        "rolling5": "2018-01-01",
+        "rolling3": "2020-01-01"
+      },
+      "train_n": 2893,
+      "training_counts": {
+        "rolling5": 1209,
+        "rolling3": 722
+      },
+      "test_n": 48
+    },
+    {
+      "cutoff": "2023-03-31",
+      "end": "2023-06-30",
+      "quarter_end": "2023-06-30",
+      "lower": {
+        "rolling5": "2018-04-01",
+        "rolling3": "2020-04-01"
+      },
+      "train_n": 2952,
+      "training_counts": {
+        "rolling5": 1209,
+        "rolling3": 723
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2023-06-30",
+      "end": "2023-09-30",
+      "quarter_end": "2023-09-30",
+      "lower": {
+        "rolling5": "2018-07-01",
+        "rolling3": "2020-07-01"
+      },
+      "train_n": 3011,
+      "training_counts": {
+        "rolling5": 1208,
+        "rolling3": 723
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2023-09-30",
+      "end": "2023-12-31",
+      "quarter_end": "2023-12-31",
+      "lower": {
+        "rolling5": "2018-10-01",
+        "rolling3": "2020-10-01"
+      },
+      "train_n": 3075,
+      "training_counts": {
+        "rolling5": 1208,
+        "rolling3": 721
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2023-12-31",
+      "end": "2024-12-31",
+      "quarter_end": "2024-03-31",
+      "lower": {
+        "rolling5": "2019-01-01",
+        "rolling3": "2021-01-01"
+      },
+      "train_n": 3135,
+      "training_counts": {
+        "rolling5": 1208,
+        "rolling3": 721
+      },
+      "test_n": 47
+    },
+    {
+      "cutoff": "2024-03-31",
+      "end": "2024-06-30",
+      "quarter_end": "2024-06-30",
+      "lower": {
+        "rolling5": "2019-04-01",
+        "rolling3": "2021-04-01"
+      },
+      "train_n": 3193,
+      "training_counts": {
+        "rolling5": 1208,
+        "rolling3": 721
+      },
+      "test_n": 11
+    },
+    {
+      "cutoff": "2024-06-30",
+      "end": "2024-09-30",
+      "quarter_end": "2024-09-30",
+      "lower": {
+        "rolling5": "2019-07-01",
+        "rolling3": "2021-07-01"
+      },
+      "train_n": 3252,
+      "training_counts": {
+        "rolling5": 1207,
+        "rolling3": 720
+      },
+      "test_n": 13
+    },
+    {
+      "cutoff": "2024-09-30",
+      "end": "2024-12-31",
+      "quarter_end": "2024-12-31",
+      "lower": {
+        "rolling5": "2019-10-01",
+        "rolling3": "2021-10-01"
+      },
+      "train_n": 3316,
+      "training_counts": {
+        "rolling5": 1206,
+        "rolling3": 720
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2024-12-31",
+      "end": "2025-12-31",
+      "quarter_end": "2025-03-31",
+      "lower": {
+        "rolling5": "2020-01-01",
+        "rolling3": "2022-01-01"
+      },
+      "train_n": 3377,
+      "training_counts": {
+        "rolling5": 1206,
+        "rolling3": 720
+      },
+      "test_n": 48
+    },
+    {
+      "cutoff": "2025-03-31",
+      "end": "2025-06-30",
+      "quarter_end": "2025-06-30",
+      "lower": {
+        "rolling5": "2020-04-01",
+        "rolling3": "2022-04-01"
+      },
+      "train_n": 3434,
+      "training_counts": {
+        "rolling5": 1205,
+        "rolling3": 719
+      },
+      "test_n": 11
+    },
+    {
+      "cutoff": "2025-06-30",
+      "end": "2025-09-30",
+      "quarter_end": "2025-09-30",
+      "lower": {
+        "rolling5": "2020-07-01",
+        "rolling3": "2022-07-01"
+      },
+      "train_n": 3494,
+      "training_counts": {
+        "rolling5": 1206,
+        "rolling3": 720
+      },
+      "test_n": 13
+    },
+    {
+      "cutoff": "2025-09-30",
+      "end": "2025-12-31",
+      "quarter_end": "2025-12-31",
+      "lower": {
+        "rolling5": "2020-10-01",
+        "rolling3": "2022-10-01"
+      },
+      "train_n": 3560,
+      "training_counts": {
+        "rolling5": 1206,
+        "rolling3": 721
+      },
+      "test_n": 12
+    },
+    {
+      "cutoff": "2025-12-31",
+      "end": "2026-08-31",
+      "quarter_end": "2026-03-31",
+      "lower": {
+        "rolling5": "2021-01-01",
+        "rolling3": "2023-01-01"
+      },
+      "train_n": 3620,
+      "training_counts": {
+        "rolling5": 1206,
+        "rolling3": 721
+      },
+      "test_n": 30
+    },
+    {
+      "cutoff": "2026-03-31",
+      "end": "2026-06-30",
+      "quarter_end": "2026-06-30",
+      "lower": {
+        "rolling5": "2021-04-01",
+        "rolling3": "2023-04-01"
+      },
+      "train_n": 3676,
+      "training_counts": {
+        "rolling5": 1204,
+        "rolling3": 718
+      },
+      "test_n": 11
+    },
+    {
+      "cutoff": "2026-06-30",
+      "end": "2026-08-31",
+      "quarter_end": "2026-08-31",
+      "lower": {
+        "rolling5": "2021-07-01",
+        "rolling3": "2023-07-01"
+      },
+      "train_n": 3736,
+      "training_counts": {
+        "rolling5": 1204,
+        "rolling3": 719
+      },
+      "test_n": 8
+    }
+  ],
+  "memories": [
+    "rolling5",
+    "rolling3"
+  ],
+  "policies": [
+    "full",
+    "rolling5_matched",
+    "rolling3_matched",
+    "rolling5_annual20",
+    "rolling5_quarterly20",
+    "rolling3_annual20",
+    "rolling3_quarterly20"
+  ],
+  "scope": "Two controlled policy axes: annual natural20 vs frozen R27 matched updates; quarterly natural20 vs annual natural20 within same window. Quarterly does not equalize annual compute. No cadence/window/epoch/seed selection after scoring.",
+  "training_membership": "Trailing K calendar years of anchor dates: cutoff minus K years plus one calendar day; joint_completed<=cutoff. At year end identical rolling membership to R27.125bar input context may precede lower anchor boundary. Strict canonical data including original OHLC rounding tolerance0.011 unchanged.",
+  "training": "Reset full network and optimizer from same seed at every distinct cutoff/window.20 permutations, each retained row once per epoch, no upsampling or early stopping. All target scales, neural weights, clipping, rays, projections and heads fitted on same mature retained rows. Not warm-start fine-tuning.",
+  "routing": "Annual uses previous Dec31 cutoff all year; quarterly uses most recent calendar quarter-end strictly before signaldate.23 distinct cutoffs,6 shared yearends,17 extra. Models shared across policies at identical cutoff/window/seed; no duplicate fits.",
+  "inference_batching": "Score union of dates needed by each distinct model once. December model union is next full year (2026 throughAug31); other cutoff union is nextquarter. Frozen feature extraction batches128; original native requires_grad=True flags and whole union as one batch. Route identical stored outputs to policies. No test-batch fitted transforms.",
+  "decisions": "Mean probabilities of three fixed seeds, strictp>.5; native rawreturnmean>0 and no probability; frequency from identical mature training anchors. All six methods retained, all years and seeds reported.",
+  "sequencing": "Freeze protocol/source/input/4002old files then causal contract. Complete all138 new backbones and552 heads before ANY new weekly scores. No calibration fits, no majority rule changes, no new feature/hyperparameter search.",
+  "primary_comparisons_per_window": [
+    {
+      "intervention": "passes",
+      "history": "rolling5_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_matched",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling5_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_matched",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling5_annual20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_matched",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling5_annual20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_matched",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling5_annual20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_matched",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling5_annual20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_matched",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling5_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling5_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling5_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling3_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_matched",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling3_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_matched",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling3_annual20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling3_matched",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling3_annual20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling3_matched",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling3_annual20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling3_matched",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "passes",
+      "history": "rolling3_annual20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling3_matched",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling3_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling3_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling3_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "cadence",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling3_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling3_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_annual20",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling3_annual20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_annual20",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_quarterly20",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "intervention": "control",
+      "history": "rolling3_quarterly20",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling3_quarterly20",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    }
+  ],
+  "inference": "64 contrasts jointlyHolm: two periods*(2windows*2interventions*3mainrecipes*2losses +4newpolicies*2matched controls). Circular8-observation10000bootstrap seed20260910 centeredtwo-sidedp,marginal95interval; negative loss difference better. Pooled272descriptive. Within-round adjustment cannot correct repeated historical exploration.",
+  "diagnostics": "All methods, years, three seeds, reliability bins; seed probability variance identity and disagreement descriptive only. Cadence comparison reflects refreshing both data and parameters, not causal proof of a market regime. Total yearly compute differs; no fresh blind test.",
+  "verification": "Independent datetime membership, calendar routing and natural permutation/batch counts; inherited raw input proof with frozen hashes. Replay138 checkpoint states/features, independently solve414 full convex heads and138 scalar heads, reconstruct forecasts, route and aggregate, independently verify all metrics; reproduce all64 contrasts; preserve old4002files.",
+  "limitations": "All272 historical outcomes already viewed. Tests model age and data-window policy; cannot establish inherent necessity of rolling retraining or trading profitability. Quarter-end forecast labels near cutoff excluded until all targets mature. No automatic promotion.",
+  "budget": {
+    "new_neural_fits": 138,
+    "shared_annual_neural_models": 36,
+    "new_epochs": 2760,
+    "new_optimizer_steps": 22080,
+    "new_sample_presentations": 2662680,
+    "new_unique_training_feature_rows": 133134,
+    "new_head_fits": 552,
+    "new_projections": 276,
+    "unique_model_prediction_rows": 15232,
+    "new_routed_model_prediction_rows": 17408,
+    "reused_model_prediction_rows": 13056,
+    "model_prediction_rows": 30464,
+    "ensemble_rows": 11424,
+    "weeks": 272,
+    "old_files": 4002
+  }
+}

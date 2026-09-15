@@ -1,0 +1,27 @@
+    cutoff previous_model_cutoff  available_mature_weeks  older8_excess  recent8_excess                         reason selected_model_cutoff
+2020-12-31                                             0            NaN             NaN                         annual            2020-12-31
+2021-03-31            2020-12-31                      10            NaN             NaN                         warmup            2020-12-31
+2021-06-30            2020-12-31                      23      -0.000396       -0.026951 no_persistent_underperformance            2020-12-31
+2021-09-30            2020-12-31                      36      -0.077770        0.032896 no_persistent_underperformance            2020-12-31
+2021-12-31            2020-12-31                      48            NaN             NaN                         annual            2021-12-31
+2022-03-31            2021-12-31                      10            NaN             NaN                         warmup            2021-12-31
+2022-06-30            2021-12-31                      22       0.069224        0.035695    persistent_underperformance            2022-06-30
+2022-09-30            2022-06-30                      12            NaN             NaN                         warmup            2022-06-30
+2022-12-31            2022-06-30                      24            NaN             NaN                         annual            2022-12-31
+2023-03-31            2022-12-31                      10            NaN             NaN                         warmup            2022-12-31
+2023-06-30            2022-12-31                      22       0.026810        0.028674    persistent_underperformance            2023-06-30
+2023-09-30            2023-06-30                      11            NaN             NaN                         warmup            2023-06-30
+2023-12-31            2023-06-30                      22            NaN             NaN                         annual            2023-12-31
+2024-03-31            2023-12-31                       9            NaN             NaN                         warmup            2023-12-31
+2024-06-30            2023-12-31                      20      -0.042659       -0.014372 no_persistent_underperformance            2023-12-31
+2024-09-30            2023-12-31                      34      -0.005898       -0.040893 no_persistent_underperformance            2023-12-31
+2024-12-31            2023-12-31                      46            NaN             NaN                         annual            2024-12-31
+2025-03-31            2024-12-31                      11            NaN             NaN                         warmup            2024-12-31
+2025-06-30            2024-12-31                      22       0.026296        0.011837    persistent_underperformance            2025-06-30
+2025-09-30            2025-06-30                      12            NaN             NaN                         warmup            2025-06-30
+2025-12-31            2025-06-30                      24            NaN             NaN                         annual            2025-12-31
+2026-03-31            2025-12-31                      10            NaN             NaN                         warmup            2025-12-31
+2026-06-30            2025-12-31                      21      -0.007116        0.014239 no_persistent_underperformance            2025-12-31
+Scoring PASS: causal feedback policy and all frozen baselines.
+
+EXIT_CODE=0

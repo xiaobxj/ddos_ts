@@ -1,0 +1,14 @@
+{
+  "status": "LAYOUT_REVISED_PENDING_VISUAL_REVIEW",
+  "reason": "Initial bottom legend overlapped the sample-period footnote; use explicit non-overlapping rows for axes, legend and footnote.",
+  "research_sources_changed": false,
+  "protocol_changed": false,
+  "metrics_changed": false,
+  "completed_utc": "2026-09-12T19:24:51.317630+00:00",
+  "revision_source_sha256": "ee9b82899a2b99ed7bafdb3067198c2cbc3decdeef274e5090d324fc01252c9d",
+  "original_artifacts": {
+    "results\\visual_attempt1\\report_manifest.json": "bb66e6006abcc2ff9c41615b200ef113dca1a0d7f64484b155004c8a7df095d2",
+    "results\\visual_attempt1\\shadow_and_blend_yearly.png": "f0784f7599d684646775eaebb04a53a7327fe46540dc4114a14a37a4de8f4675",
+    "results\\visual_attempt1\\shadow_and_blend_yearly.svg": "54482e9588be5fce481a2a4cb9a195ce132b7e73fe03d670886f21617b3439a6"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "method": "kronos_ohlc_diagnostic",
+    "bars": 625,
+    "invalid_bars": 0,
+    "invalid_fraction": 0.0
+  },
+  {
+    "method": "kronos_ohlcv",
+    "bars": 625,
+    "invalid_bars": 0,
+    "invalid_fraction": 0.0
+  }
+]

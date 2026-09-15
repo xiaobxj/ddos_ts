@@ -1,0 +1,263 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "features": "Frozen eval requires_grad=False; 25 flattened decoded coordinates; training 1/99 percent clipping and population standardization with sd floor1e-6. Four R18 market descriptors clipped/scaled separately on same training rows. Supervised R18 coefficient ray[:25] shared by both products. Volatility interaction residualized over R18+intercept; order interaction residualized over R19+intercept. Training least squares rcond1e-12, residual sd floor1e-6. Order uses exact trailing60close signs, mean adjacent product minus permutation expectation; neutral exact zero. R23 jointly refits all coefficients; R25 freezes R19 including intercept and fits only gamma. No full-pipeline OOF claim.",
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-03-31",
+    "2021-06-30",
+    "2021-09-30",
+    "2021-12-31",
+    "2022-03-31",
+    "2022-06-30",
+    "2022-09-30",
+    "2022-12-31",
+    "2023-03-31",
+    "2023-06-30",
+    "2023-09-30",
+    "2023-12-31",
+    "2024-03-31",
+    "2024-06-30",
+    "2024-09-30",
+    "2024-12-31",
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31",
+    "2026-03-31",
+    "2026-06-30"
+  ],
+  "version": 30,
+  "experiment": "Persistent mature out-of-sample forecast underperformance triggers quarter-end updates",
+  "monitor": {
+    "method": "learned_vol_interaction",
+    "seeds": "all3 equal probability mean",
+    "lookback_weeks": 16,
+    "block_weeks": 8,
+    "threshold": 0.0,
+    "loss": "Brier relative to same active-cutoff training-frequency probability issued at forecast time.",
+    "rule": "At non-December quarterend, select the latest16mature weekly forecasts actually issued under the currently active model. Split in chronological order into older8 and recent8. Refit iff both block-average(modelBrier-frequencyBrier)>0. Missing16 means hold. Zero means hold. Reset feedback membership whenever model cutoff changes; no stale predecessor-model errors. Shared schedule for all6methods/seeds. AnnualDec31alwaysupdates.",
+    "maturity": "joint_completed<=decision cutoff, using inherited execution plus auxiliary target maturity convention. Model cutoff<signaldate; signal on decision date still uses incumbent. New selection applies strictly after decision.",
+    "warmup": "Begin Jan2021 with model cutoff2020-12-31. No earlier predictions or in-sample errors borrowed. Each new model accumulates its own issued forecasts."
+  },
+  "policies": [
+    "rolling5_matched",
+    "rolling5_annual20",
+    "rolling5_quarterly20",
+    "state90",
+    "error16"
+  ],
+  "primary_comparisons_per_window": [
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_quarterly20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "state90",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "state90",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_extension",
+      "reference_history": "state90",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_extension",
+      "reference_history": "state90",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_offset",
+      "reference_history": "state90",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_order_offset",
+      "reference_history": "state90",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "error16",
+      "reference": "training_frequency",
+      "metric": "brier"
+    },
+    {
+      "history": "error16",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "error16",
+      "reference": "native_mse",
+      "metric": "direction_error"
+    }
+  ],
+  "prediction_coverage": "Before adaptive simulation, precompute complete target-independent coverage: each of23R28 rolling5natural20 model cutoffs through its remaining forecast calendar year (Dec model through nextyear), same272eligibleweeks. Reuse immutable R28 and R29 outputs; only infer missing(model,date)rows, one sorted missing-row batch percutoff/seed. Preserve original native flags and feature batches. Universal coverage includes off-policy predictions; this is computational reuse, not access permission for trigger decisions.",
+  "sequencing": "Freeze protocol/source/inputs/4600oldfiles and calendar-only coverage before new inference. Contract validates coverage, maturity filters, boundaries and synthetic feedback cases. Complete universal inference extensions first. Then run one chronological policy simulation; its decision function receives only already-issued,current-model,mature forecasts. Future and other-model feedback never enters. Freeze route/feedback ledger before aggregate evaluation. No epoch,threshold,window,seed or rule search.",
+  "inference": "40predefined contrasts jointlyHolm:2periods*(3mainrecipes*2losses*3schedulecomparators+R19vsownfrequencyBrier and native direction).10000circular8-observation bootstrap,seed20260910,centeredtwo-sidedp,marginal95CI,negative lossdifference better. Oldmatchedannual retained descriptiveonly; allmethods/years/seeds reported. No across-round adjustment.",
+  "diagnostic": "After policy simulation, for each of17optional decisions report incumbent and fresh-model R19 performance over nextquarter on identicaldates; label trigger,warmup and held cases. This is descriptive counterfactual diagnosis,never used to choose current or later decisions and has no additional policy ranking/significance tests.",
+  "verification": "Replay all newly extended neural predictions and frozen-head algebra/native outputs; inherit immutable R28/R29 training/head verification. Independent chronological scalar policy replay from source seed probabilities and obs targets, exact feedback row/block membership. For each optionaldecision flip every still-unmatured label and perturb future forecast probabilities then replay prefix; events unchanged. Poison other model forecasts and non-current-model published errors before a local decision; unchanged. Synthetic insufficienthistory,positiveboth,oneblocknegative,strictzero,reset,maturity tests. Independent metrics/all40contrasts,source hashes,4600oldfiles.",
+  "budgets": {
+    "old_files": 4600,
+    "new_neural_fits": 0,
+    "new_head_fits": 0,
+    "candidate_cutoffs": 23,
+    "mandatory_refits": 6,
+    "optional_checks": 17,
+    "model_rows": 21760,
+    "ensemble_rows": 8160,
+    "weeks": 272
+  },
+  "limitations": "A small-window persistent loss deficit is a heuristic, not a statistically validated change detector; it need not indicate increasing error or guarantee a fresh model improves. The shared monitor is R19 and may not suit R23/R25.16mature weeks require warmup, so rapid changes can be missed. All historical outcomes previously viewed; no new blind confirmation,automaticpromotion,or tradingprofit claim. Universal off-policy grid is masked by chronological decision interface."
+}

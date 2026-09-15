@@ -1,0 +1,18 @@
+{
+  "phase": "report",
+  "started_utc": "2026-09-12T19:23:23.069663+00:00",
+  "finished_utc": "2026-09-12T19:24:51.317630+00:00",
+  "protocol_sha256": "87193d7ee975e98397bd498a3a7a1b828462bbb70053bd956594e5572ba9abbb",
+  "artifacts": {
+    "results\\第三十一轮测试报告.md": "501a25e6530662d6e55392cac6cdec87d2e02a7a56db342da8f81a61b6a16ee9",
+    "results\\shadow_and_blend_yearly.png": "bddac988cb0eb0aa6e3487a6ef659b6ca4fbdd9dac6db2e58b5bd932c713ffee",
+    "results\\shadow_and_blend_yearly.svg": "422ab48051024ffb556496ed3f79a4edf6149f191e20a973fd51b22e236e36af",
+    "results\\visual_revision.json": "ddf37ff98aa298a79cf4ba6084cfb238fad980a89be816f232ace4e8c5915ede",
+    "results\\visual_revision_source.py.txt": "ee9b82899a2b99ed7bafdb3067198c2cbc3decdeef274e5090d324fc01252c9d",
+    "results\\visual_attempt1\\report_manifest.json": "bb66e6006abcc2ff9c41615b200ef113dca1a0d7f64484b155004c8a7df095d2",
+    "results\\visual_attempt1\\shadow_and_blend_yearly.png": "f0784f7599d684646775eaebb04a53a7327fe46540dc4114a14a37a4de8f4675",
+    "results\\visual_attempt1\\shadow_and_blend_yearly.svg": "54482e9588be5fce481a2a4cb9a195ce132b7e73fe03d670886f21617b3439a6"
+  },
+  "layout_revision": "results/visual_revision.json",
+  "original_report_manifest_sha256": "bb66e6006abcc2ff9c41615b200ef113dca1a0d7f64484b155004c8a7df095d2"
+}

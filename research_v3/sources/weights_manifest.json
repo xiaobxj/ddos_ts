@@ -1,0 +1,60 @@
+[
+  {
+    "repo": "NeoQuasar/Kronos-small",
+    "revision": "901c26c1332695a2a8f243eb2f37243a37bea320",
+    "initial_model_revision": "ac5c409a313c4eadd1ca78201322f5cadb9c34ab",
+    "weights_identical_to_initial_upload": true,
+    "files": [
+      {
+        "file": "models\\Kronos-small\\README.md",
+        "bytes": 8855,
+        "sha256": "33ba1550110c020dc30da869c91a65749009af7671dff0dce98fc0a914f3fc04",
+        "url": "https://huggingface.co/NeoQuasar/Kronos-small/resolve/901c26c1332695a2a8f243eb2f37243a37bea320/README.md",
+        "lfs_sha256": null
+      },
+      {
+        "file": "models\\Kronos-small\\config.json",
+        "bytes": 228,
+        "sha256": "5e0f6a605d5f81b5c9b559fe5cf716a1acb041c744e6f41bd05b097b7a685396",
+        "url": "https://huggingface.co/NeoQuasar/Kronos-small/resolve/901c26c1332695a2a8f243eb2f37243a37bea320/config.json",
+        "lfs_sha256": null
+      },
+      {
+        "file": "models\\Kronos-small\\model.safetensors",
+        "bytes": 98980656,
+        "sha256": "b082dfcbd8e8c142a725c8bbb99781802f38fec81210e13479effb32b3c3e020",
+        "url": "https://huggingface.co/NeoQuasar/Kronos-small/resolve/901c26c1332695a2a8f243eb2f37243a37bea320/model.safetensors",
+        "lfs_sha256": "b082dfcbd8e8c142a725c8bbb99781802f38fec81210e13479effb32b3c3e020"
+      }
+    ]
+  },
+  {
+    "repo": "NeoQuasar/Kronos-Tokenizer-base",
+    "revision": "0e0117387f39004a9016484a186a908917e22426",
+    "initial_model_revision": "9ef143b98ee3c2488eebd85404e0c215c112b46a",
+    "weights_identical_to_initial_upload": true,
+    "files": [
+      {
+        "file": "models\\Kronos-Tokenizer-base\\README.md",
+        "bytes": 8863,
+        "sha256": "24d59758e911d355a79608b6686610a14f649270d6d852f3d86b2a1e8232ce89",
+        "url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base/resolve/0e0117387f39004a9016484a186a908917e22426/README.md",
+        "lfs_sha256": null
+      },
+      {
+        "file": "models\\Kronos-Tokenizer-base\\config.json",
+        "bytes": 301,
+        "sha256": "2366e7ccfec76cbc19cf3c4c1b9c5d901be336ca1e83f2d2292c9bff381b77a2",
+        "url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base/resolve/0e0117387f39004a9016484a186a908917e22426/config.json",
+        "lfs_sha256": null
+      },
+      {
+        "file": "models\\Kronos-Tokenizer-base\\model.safetensors",
+        "bytes": 15842368,
+        "sha256": "59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee",
+        "url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base/resolve/0e0117387f39004a9016484a186a908917e22426/model.safetensors",
+        "lfs_sha256": "59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee"
+      }
+    ]
+  }
+]

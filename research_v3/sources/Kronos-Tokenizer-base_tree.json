@@ -1,0 +1,32 @@
+[
+  {
+    "type": "file",
+    "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+    "size": 1519,
+    "path": ".gitattributes"
+  },
+  {
+    "type": "file",
+    "oid": "a1a20fa45ed35de0f6b4f94d434337cc6bd3f8b1",
+    "size": 8863,
+    "path": "README.md"
+  },
+  {
+    "type": "file",
+    "oid": "050b676e14720956dc6ff93a755e65dee5536807",
+    "size": 301,
+    "path": "config.json"
+  },
+  {
+    "type": "file",
+    "oid": "afc42b25addee24a49dbc7ba2d9dd8ed36a7f7b8",
+    "size": 15842368,
+    "lfs": {
+      "oid": "59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee",
+      "size": 15842368,
+      "pointerSize": 133
+    },
+    "xetHash": "37f0525a4e4797e437229dfddc6f9623eac479961a3f0313a6e2dcd0e96c6fc5",
+    "path": "model.safetensors"
+  }
+]

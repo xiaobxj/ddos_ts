@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T14:10:44.417034+00:00",
+  "reviewer": "assistant visual inspection",
+  "checked": [
+    "both panels readable",
+    "17 check dates visible",
+    "two red triggers match frozen events",
+    "all four policy bars and legend readable",
+    "Chinese text and numeric labels not clipped"
+  ],
+  "artifacts": {
+    "state_trigger.png": "8d106744d409dafc91df0b579d5c806495c15281e463482e67eca67163155b38",
+    "state_trigger.svg": "641a06967d57d6ff0deb5895049974b740680e417b3033e8e17b52e77a2debd7"
+  }
+}

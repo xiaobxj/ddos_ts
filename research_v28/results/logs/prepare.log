@@ -1,0 +1,3 @@
+{"status": "FROZEN", "protocol": "a4eb970769c94600dd081a6d9cd5d53bacbac658353940e399688a6665810721", "new_neural_fits": 138, "shared_annual_neural_models": 36, "new_epochs": 2760, "new_optimizer_steps": 22080, "new_sample_presentations": 2662680, "new_unique_training_feature_rows": 133134, "new_head_fits": 552, "new_projections": 276, "unique_model_prediction_rows": 15232, "new_routed_model_prediction_rows": 17408, "reused_model_prediction_rows": 13056, "model_prediction_rows": 30464, "ensemble_rows": 11424, "weeks": 272, "old_files": 4002}
+
+EXIT_CODE=0

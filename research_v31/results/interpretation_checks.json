@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T19:27:32.012304+00:00",
+  "recent_correct_counts": {
+    "rolling5_annual20": [
+      68,
+      72,
+      71
+    ],
+    "shadow_trial": [
+      68,
+      72,
+      71
+    ],
+    "annual_quarter_half": [
+      65,
+      65,
+      65
+    ],
+    "rolling5_matched": [
+      70,
+      72,
+      73
+    ]
+  },
+  "early_correct_counts": {
+    "rolling5_annual20": [
+      71,
+      68,
+      68
+    ],
+    "shadow_trial": [
+      68,
+      66,
+      66
+    ],
+    "annual_quarter_half": [
+      72,
+      72,
+      72
+    ]
+  },
+  "promotion_dates": [
+    "2021-09-30",
+    "2023-06-30",
+    "2023-09-30"
+  ],
+  "recent_shadow_exact_annual": true,
+  "year2026_counts_checked": true,
+  "following_quarter_diagnostics_checked": true,
+  "all68_significance_checks": true,
+  "minimum_holm_p": 0.9723027697230276,
+  "old58_4_preserved": true,
+  "interpretation_sha256": "74609cc242f5b8f63b7d9958bde2fbaf1d92c395e13104e20fdb29e24525951a"
+}

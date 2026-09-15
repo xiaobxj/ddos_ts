@@ -1,0 +1,30 @@
+[
+  {
+    "window": "post_pretrain_common",
+    "method": "kronos_ohlc_diagnostic",
+    "anchors": 103,
+    "unanimous_direction_rate": 0.6213592233009708,
+    "mean_across_seed_forecast_std": 0.0034934840208024373
+  },
+  {
+    "window": "post_pretrain_common",
+    "method": "kronos_ohlcv",
+    "anchors": 103,
+    "unanimous_direction_rate": 0.7184466019417476,
+    "mean_across_seed_forecast_std": 0.00651738954643527
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "kronos_ohlc_diagnostic",
+    "anchors": 48,
+    "unanimous_direction_rate": 0.7291666666666666,
+    "mean_across_seed_forecast_std": 0.0033097971073544666
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "kronos_ohlcv",
+    "anchors": 48,
+    "unanimous_direction_rate": 0.75,
+    "mean_across_seed_forecast_std": 0.007747873950508112
+  }
+]

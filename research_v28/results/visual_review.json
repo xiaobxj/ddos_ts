@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T13:50:26.037701+00:00",
+  "reviewer": "assistant visual inspection",
+  "checked": [
+    "four panels readable",
+    "Chinese labels and numeric labels visible",
+    "bars and axes not clipped",
+    "R19 metric labels and periods correct",
+    "50 percent line explicitly not a frequency baseline"
+  ],
+  "artifacts": {
+    "fixed_window_wfo.png": "e13659bf40a6255f113bbe87f74f16d36b431a0bda57e0885fe3a3d367c52c8d",
+    "fixed_window_wfo.svg": "7a671e7cb2e13801665ee9d92784b43253c04651f16dfc747a1ee3c0e990dbce"
+  }
+}

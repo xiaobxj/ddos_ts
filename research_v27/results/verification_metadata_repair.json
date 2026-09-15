@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "repair": "Rename only calibration lower-bound local variable start to calibration_start; no setting,condition,tolerance,fit,prediction or statistical change.",
+  "original_verifier_sha256": "2ab1274cc7aedcd19aeb276ca70d679ce8486aa7b6b632cde9c6b16515267bc1",
+  "executed_body_sha256": "89162828a2d4167b448695cf955f99aa302969305c6aca1733e26a08ce1be7c0",
+  "adapter_sha256": "bf8e4488378096ceec840b8026e7859b0939c8bb15b0ca98e8438766df701efd",
+  "adapter_copy": "verification_metadata_adapter.txt",
+  "failed_attempt": "verification_attempt1/preservation.json",
+  "primary_neural_fits_unchanged": 36,
+  "primary_head_fits_unchanged": 144,
+  "actual_verification_checkpoint_replays_including_failed_attempt": 72,
+  "actual_independent_solver_runs_including_failed_attempt": 288,
+  "elapsed_seconds": 37.21267771720886,
+  "independent_results_bitwise_equal_to_first_attempt": true
+}

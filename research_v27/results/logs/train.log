@@ -1,0 +1,111 @@
+Training 1/36 rolling5 2020-12-31 seed 20260910: nominal epoch 10/20; elapsed 14.9s
+Training 1/36 rolling5 2020-12-31 seed 20260910: nominal epoch 20/20; elapsed 27.4s
+Completed 1/36 backbones and 4/144 heads; no new weekly scoring.
+Training 2/36 rolling5 2020-12-31 seed 20260911: nominal epoch 10/20; elapsed 39.9s
+Training 2/36 rolling5 2020-12-31 seed 20260911: nominal epoch 20/20; elapsed 51.3s
+Completed 2/36 backbones and 8/144 heads; no new weekly scoring.
+Training 3/36 rolling5 2020-12-31 seed 20260912: nominal epoch 10/20; elapsed 63.3s
+Training 3/36 rolling5 2020-12-31 seed 20260912: nominal epoch 20/20; elapsed 75.1s
+Completed 3/36 backbones and 12/144 heads; no new weekly scoring.
+Training 4/36 rolling5 2021-12-31 seed 20260910: nominal epoch 10/20; elapsed 88.5s
+Training 4/36 rolling5 2021-12-31 seed 20260910: nominal epoch 20/20; elapsed 102.2s
+Completed 4/36 backbones and 16/144 heads; no new weekly scoring.
+Training 5/36 rolling5 2021-12-31 seed 20260911: nominal epoch 10/20; elapsed 117.4s
+Training 5/36 rolling5 2021-12-31 seed 20260911: nominal epoch 20/20; elapsed 132.9s
+Completed 5/36 backbones and 20/144 heads; no new weekly scoring.
+Training 6/36 rolling5 2021-12-31 seed 20260912: nominal epoch 10/20; elapsed 147.7s
+Training 6/36 rolling5 2021-12-31 seed 20260912: nominal epoch 20/20; elapsed 161.4s
+Completed 6/36 backbones and 24/144 heads; no new weekly scoring.
+Training 7/36 rolling5 2022-12-31 seed 20260910: nominal epoch 10/20; elapsed 175.8s
+Training 7/36 rolling5 2022-12-31 seed 20260910: nominal epoch 20/20; elapsed 189.8s
+Completed 7/36 backbones and 28/144 heads; no new weekly scoring.
+Training 8/36 rolling5 2022-12-31 seed 20260911: nominal epoch 10/20; elapsed 204.0s
+Training 8/36 rolling5 2022-12-31 seed 20260911: nominal epoch 20/20; elapsed 218.3s
+Completed 8/36 backbones and 32/144 heads; no new weekly scoring.
+Training 9/36 rolling5 2022-12-31 seed 20260912: nominal epoch 10/20; elapsed 232.6s
+Training 9/36 rolling5 2022-12-31 seed 20260912: nominal epoch 20/20; elapsed 246.5s
+Completed 9/36 backbones and 36/144 heads; no new weekly scoring.
+Training 10/36 rolling5 2023-12-31 seed 20260910: nominal epoch 10/20; elapsed 261.8s
+Training 10/36 rolling5 2023-12-31 seed 20260910: nominal epoch 20/20; elapsed 276.7s
+Completed 10/36 backbones and 40/144 heads; no new weekly scoring.
+Training 11/36 rolling5 2023-12-31 seed 20260911: nominal epoch 10/20; elapsed 291.9s
+Training 11/36 rolling5 2023-12-31 seed 20260911: nominal epoch 20/20; elapsed 307.1s
+Completed 11/36 backbones and 44/144 heads; no new weekly scoring.
+Training 12/36 rolling5 2023-12-31 seed 20260912: nominal epoch 10/20; elapsed 322.7s
+Training 12/36 rolling5 2023-12-31 seed 20260912: nominal epoch 20/20; elapsed 337.5s
+Completed 12/36 backbones and 48/144 heads; no new weekly scoring.
+Training 13/36 rolling5 2024-12-31 seed 20260910: nominal epoch 10/20; elapsed 353.6s
+Training 13/36 rolling5 2024-12-31 seed 20260910: nominal epoch 20/20; elapsed 369.9s
+Completed 13/36 backbones and 52/144 heads; no new weekly scoring.
+Training 14/36 rolling5 2024-12-31 seed 20260911: nominal epoch 10/20; elapsed 386.5s
+Training 14/36 rolling5 2024-12-31 seed 20260911: nominal epoch 20/20; elapsed 403.0s
+Completed 14/36 backbones and 56/144 heads; no new weekly scoring.
+Training 15/36 rolling5 2024-12-31 seed 20260912: nominal epoch 10/20; elapsed 420.0s
+Training 15/36 rolling5 2024-12-31 seed 20260912: nominal epoch 20/20; elapsed 437.8s
+Completed 15/36 backbones and 60/144 heads; no new weekly scoring.
+Training 16/36 rolling5 2025-12-31 seed 20260910: nominal epoch 10/20; elapsed 456.7s
+Training 16/36 rolling5 2025-12-31 seed 20260910: nominal epoch 20/20; elapsed 474.2s
+Completed 16/36 backbones and 64/144 heads; no new weekly scoring.
+Training 17/36 rolling5 2025-12-31 seed 20260911: nominal epoch 10/20; elapsed 492.3s
+Training 17/36 rolling5 2025-12-31 seed 20260911: nominal epoch 20/20; elapsed 510.4s
+Completed 17/36 backbones and 68/144 heads; no new weekly scoring.
+Training 18/36 rolling5 2025-12-31 seed 20260912: nominal epoch 10/20; elapsed 528.8s
+Training 18/36 rolling5 2025-12-31 seed 20260912: nominal epoch 20/20; elapsed 546.5s
+Completed 18/36 backbones and 72/144 heads; no new weekly scoring.
+Training 19/36 rolling3 2020-12-31 seed 20260910: nominal epoch 10/20; elapsed 558.7s
+Training 19/36 rolling3 2020-12-31 seed 20260910: nominal epoch 20/20; elapsed 570.1s
+Completed 19/36 backbones and 76/144 heads; no new weekly scoring.
+Training 20/36 rolling3 2020-12-31 seed 20260911: nominal epoch 10/20; elapsed 581.5s
+Training 20/36 rolling3 2020-12-31 seed 20260911: nominal epoch 20/20; elapsed 592.7s
+Completed 20/36 backbones and 80/144 heads; no new weekly scoring.
+Training 21/36 rolling3 2020-12-31 seed 20260912: nominal epoch 10/20; elapsed 605.0s
+Training 21/36 rolling3 2020-12-31 seed 20260912: nominal epoch 20/20; elapsed 617.0s
+Completed 21/36 backbones and 84/144 heads; no new weekly scoring.
+Training 22/36 rolling3 2021-12-31 seed 20260910: nominal epoch 10/20; elapsed 630.2s
+Training 22/36 rolling3 2021-12-31 seed 20260910: nominal epoch 20/20; elapsed 643.2s
+Completed 22/36 backbones and 88/144 heads; no new weekly scoring.
+Training 23/36 rolling3 2021-12-31 seed 20260911: nominal epoch 10/20; elapsed 656.5s
+Training 23/36 rolling3 2021-12-31 seed 20260911: nominal epoch 20/20; elapsed 669.3s
+Completed 23/36 backbones and 92/144 heads; no new weekly scoring.
+Training 24/36 rolling3 2021-12-31 seed 20260912: nominal epoch 10/20; elapsed 682.3s
+Training 24/36 rolling3 2021-12-31 seed 20260912: nominal epoch 20/20; elapsed 695.1s
+Completed 24/36 backbones and 96/144 heads; no new weekly scoring.
+Training 25/36 rolling3 2022-12-31 seed 20260910: nominal epoch 10/20; elapsed 709.3s
+Training 25/36 rolling3 2022-12-31 seed 20260910: nominal epoch 20/20; elapsed 723.4s
+Completed 25/36 backbones and 100/144 heads; no new weekly scoring.
+Training 26/36 rolling3 2022-12-31 seed 20260911: nominal epoch 10/20; elapsed 737.7s
+Training 26/36 rolling3 2022-12-31 seed 20260911: nominal epoch 20/20; elapsed 751.6s
+Completed 26/36 backbones and 104/144 heads; no new weekly scoring.
+Training 27/36 rolling3 2022-12-31 seed 20260912: nominal epoch 10/20; elapsed 765.4s
+Training 27/36 rolling3 2022-12-31 seed 20260912: nominal epoch 20/20; elapsed 779.4s
+Completed 27/36 backbones and 108/144 heads; no new weekly scoring.
+Training 28/36 rolling3 2023-12-31 seed 20260910: nominal epoch 10/20; elapsed 795.0s
+Training 28/36 rolling3 2023-12-31 seed 20260910: nominal epoch 20/20; elapsed 810.1s
+Completed 28/36 backbones and 112/144 heads; no new weekly scoring.
+Training 29/36 rolling3 2023-12-31 seed 20260911: nominal epoch 10/20; elapsed 825.1s
+Training 29/36 rolling3 2023-12-31 seed 20260911: nominal epoch 20/20; elapsed 840.1s
+Completed 29/36 backbones and 116/144 heads; no new weekly scoring.
+Training 30/36 rolling3 2023-12-31 seed 20260912: nominal epoch 10/20; elapsed 855.6s
+Training 30/36 rolling3 2023-12-31 seed 20260912: nominal epoch 20/20; elapsed 870.8s
+Completed 30/36 backbones and 120/144 heads; no new weekly scoring.
+Training 31/36 rolling3 2024-12-31 seed 20260910: nominal epoch 10/20; elapsed 887.9s
+Training 31/36 rolling3 2024-12-31 seed 20260910: nominal epoch 20/20; elapsed 904.4s
+Completed 31/36 backbones and 124/144 heads; no new weekly scoring.
+Training 32/36 rolling3 2024-12-31 seed 20260911: nominal epoch 10/20; elapsed 921.4s
+Training 32/36 rolling3 2024-12-31 seed 20260911: nominal epoch 20/20; elapsed 937.7s
+Completed 32/36 backbones and 128/144 heads; no new weekly scoring.
+Training 33/36 rolling3 2024-12-31 seed 20260912: nominal epoch 10/20; elapsed 956.0s
+Training 33/36 rolling3 2024-12-31 seed 20260912: nominal epoch 20/20; elapsed 972.2s
+Completed 33/36 backbones and 132/144 heads; no new weekly scoring.
+Training 34/36 rolling3 2025-12-31 seed 20260910: nominal epoch 10/20; elapsed 989.7s
+Training 34/36 rolling3 2025-12-31 seed 20260910: nominal epoch 20/20; elapsed 1007.2s
+Completed 34/36 backbones and 136/144 heads; no new weekly scoring.
+Training 35/36 rolling3 2025-12-31 seed 20260911: nominal epoch 10/20; elapsed 1025.0s
+Training 35/36 rolling3 2025-12-31 seed 20260911: nominal epoch 20/20; elapsed 1042.9s
+Completed 35/36 backbones and 140/144 heads; no new weekly scoring.
+Training 36/36 rolling3 2025-12-31 seed 20260912: nominal epoch 10/20; elapsed 1060.3s
+Training 36/36 rolling3 2025-12-31 seed 20260912: nominal epoch 20/20; elapsed 1077.4s
+Completed 36/36 backbones and 144/144 heads; no new weekly scoring.
+Training PASS:36backbones and144heads frozen before new scoring.
+
+EXIT_CODE=0

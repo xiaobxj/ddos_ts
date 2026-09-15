@@ -1,0 +1,5 @@
+{
+  "initial_local_failure": "pandas 3.0 read-only boolean array at first validation mask update; no validation or development predictions existed from the failed local run.",
+  "fix": "run_local.writable_masks copies arrays before inplace filtering. Frozen protocol unchanged. Initial source and manifest retained here.",
+  "dependency_policy": "Reuse D:/ddos/.venv Python 3.14 CPU torch/sklearn without modification; five additional packages installed only in research_v3/vendor_py. Official repository source and downloaded weights unmodified."
+}
