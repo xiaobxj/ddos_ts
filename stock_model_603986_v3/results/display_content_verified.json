@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:51:53.225780+00:00",
+  "forecast_rows": 8,
+  "pending_display_rows": 8,
+  "genuine_signal_days": 1,
+  "matured_labels": 0,
+  "local_document_links": "exist",
+  "python_syntax": "all new source files parsed",
+  "browser_screenshot": "not available: no browser exposed to this session"
+}

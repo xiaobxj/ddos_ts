@@ -1,0 +1,257 @@
+[
+  {
+    "round": 1,
+    "file": "research\\results\\方法测试报告.md",
+    "sha256": "072ba9decb898c0b365200670bd7f36093207b193ba882d591fea91d5d0ef38b"
+  },
+  {
+    "round": 2,
+    "file": "research_v2\\results\\第二轮测试报告.md",
+    "sha256": "0d8810ef19eaac8b0463a40f0d24ea8f4daa126680c91c30bd99ed5404c6fb25"
+  },
+  {
+    "round": 3,
+    "file": "research_v3\\results\\第三轮测试报告.md",
+    "sha256": "7f679f02415773b06d6c2fda930de17068c7c6aa14c7485ed028655764db2ba7"
+  },
+  {
+    "round": 4,
+    "file": "research_v4\\results\\第四轮测试报告.md",
+    "sha256": "2f393354e76c6682145696cc366f4728c3ed0929fa1b635b38c25fb964cef335"
+  },
+  {
+    "round": 5,
+    "file": "research_v5\\results\\第五轮测试报告.md",
+    "sha256": "31477d00797c3781622b9c7ea22d9c9ee82616c4f8eb5f91d06dc8866891ea6c"
+  },
+  {
+    "round": 6,
+    "file": "research_v6\\results\\第六轮测试报告.md",
+    "sha256": "cef6dbacbeee12c16f246834418460ce6bde497b64638d56b13cb5b05568340e"
+  },
+  {
+    "round": 7,
+    "file": "research_v7\\results\\第七轮测试报告.md",
+    "sha256": "aff231a35b8d9e88f9b2235580c55c59aa6b66d24b31f2f6ff97ffcf26271346"
+  },
+  {
+    "round": 8,
+    "file": "research_v8\\results\\第八轮测试报告.md",
+    "sha256": "2403e32bbbd9f1bb8d5531d302bc82c1e3657d5fe8b1ba3c9531a032c3f06ddd"
+  },
+  {
+    "round": 9,
+    "file": "research_v9\\results\\第九轮测试报告.md",
+    "sha256": "e7f676502878103c74ab72fc961436cf9e075d787815a1f829a8c45bda2b0f44"
+  },
+  {
+    "round": 10,
+    "file": "research_v10\\results\\第十轮测试报告.md",
+    "sha256": "55a0f7dd8da0c55855c2873b463bbc27f2f2abe62c49d5ab0f0e26a313ae282c"
+  },
+  {
+    "round": 11,
+    "file": "research_v11\\results\\第十一轮测试报告.md",
+    "sha256": "030a11719af5b2f792d0d71f2ee4376744b033c5f7f19d4b82b0e41352b862ab"
+  },
+  {
+    "round": 12,
+    "file": "research_v12\\results\\第十二轮测试报告.md",
+    "sha256": "35665ed4bc9cffb689c14d6b92d2850a9b4509f94a12685ddd2455977014985a"
+  },
+  {
+    "round": 13,
+    "file": "research_v13\\results\\第十三轮测试报告.md",
+    "sha256": "572f65bb4f6a5c885fdd45d0fb8a8d2885248fb99a292ee38f6db3791b2ff19a"
+  },
+  {
+    "round": 14,
+    "file": "research_v14\\results\\第十四轮测试报告.md",
+    "sha256": "19306d4d56a816ad533cc71946651b357bebd457780e388c71020c4e379d40a3"
+  },
+  {
+    "round": 15,
+    "file": "research_v15\\results\\第十五轮测试报告.md",
+    "sha256": "a9fa01df43e48b641dafe6279d86e4aecd7f874b9ec5da2324de8c27fc3bc9f6"
+  },
+  {
+    "round": 16,
+    "file": "research_v16\\results\\第十六轮测试报告.md",
+    "sha256": "f34f0294cc87e5b87ca6e08c1b0c47bb0b60ddd05ef2208b1e41e879beaacd9b"
+  },
+  {
+    "round": 17,
+    "file": "research_v17\\results\\第十七轮测试报告.md",
+    "sha256": "8206717f9a52f995a37ba8c2cbf184159ce8aaa2254730b133d91761c82ea450"
+  },
+  {
+    "round": 18,
+    "file": "research_v18\\results\\第十八轮测试报告.md",
+    "sha256": "0fa48ec58c01ae1588b1c434900110f395535cf0254349b044a3b52286be353c"
+  },
+  {
+    "round": 19,
+    "file": "research_v19\\results\\第十九轮测试报告.md",
+    "sha256": "69cce8bcd7a05e5b1f379e15740891203995d244832b09fd298ea50ab8a4acf1"
+  },
+  {
+    "round": 20,
+    "file": "research_v20\\results\\第二十轮测试报告.md",
+    "sha256": "db16de8ac909171f2cf34db0122b1a711b1140cfc81b6891a8d542bc4954120b"
+  },
+  {
+    "round": 21,
+    "file": "research_v21\\results\\第二十一轮测试报告.md",
+    "sha256": "70a9d0034200451ae73dbb44c724573d0628d9a04021442799ae5c51ace1134f"
+  },
+  {
+    "round": 22,
+    "file": "research_v22\\results\\第二十二轮测试报告.md",
+    "sha256": "91f95fb62c9d86d95eb07debf2a2ef0e28653dcb4b40675f0ac229dae280b0e7"
+  },
+  {
+    "round": 23,
+    "file": "research_v23\\results\\第二十三轮测试报告.md",
+    "sha256": "9b97cdfe761a7ccdf5a8b89991929ff327d9571c4b58b9971fe386929942578d"
+  },
+  {
+    "round": 24,
+    "file": "research_v24\\results\\第二十四轮测试报告.md",
+    "sha256": "8071d7ae50f2d935935a9cf4bff7e7999c6d5b06adf1d2b069dec1e850701909"
+  },
+  {
+    "round": 25,
+    "file": "research_v25\\results\\第二十五轮测试报告.md",
+    "sha256": "cd92483be0805e7f4c315513dcf70019eeb10b827a9182a51b082c0339c03bb7"
+  },
+  {
+    "round": 26,
+    "file": "research_v26\\results\\结果解读与下一步.md",
+    "sha256": "32df4b7a69c8ffaba03bc9d0b342a12f3d6f597b292d183631bdeb64ab25a23f"
+  },
+  {
+    "round": 27,
+    "file": "research_v27\\results\\执行记录补充.md",
+    "sha256": "a8bce3a9b7968b7948cb00e31c4dd631b589233a70cf4b33f2b22666e5f2d78a"
+  },
+  {
+    "round": 28,
+    "file": "research_v28\\results\\结果解读与下一步.md",
+    "sha256": "4903a71b3543f06cd1a965dfefdf3076f913515f7e54ebb155a0203468e92c3b"
+  },
+  {
+    "round": 29,
+    "file": "research_v29\\results\\结果解读与下一步.md",
+    "sha256": "5277b7ad55ff4755921273e0f3c879fd6ee98d15993f2680d64acb8fe3becbb0"
+  },
+  {
+    "round": 30,
+    "file": "research_v30\\results\\结果解读与下一步.md",
+    "sha256": "4cff07dd9c4316b2dd6bb33f0cdcbc7a0b8699e2cb23376d8a0b244a3969f1ea"
+  },
+  {
+    "round": 31,
+    "file": "research_v31\\results\\结果解读与下一步.md",
+    "sha256": "74609cc242f5b8f63b7d9958bde2fbaf1d92c395e13104e20fdb29e24525951a"
+  },
+  {
+    "round": 32,
+    "file": "research_v32\\results\\结果解读与下一步.md",
+    "sha256": "55d2ac5a1bc7888352a002e73cfae308ed0792731508a13e06b90020374c2e22"
+  },
+  {
+    "round": 33,
+    "file": "research_v33\\results\\结果解读与下一步.md",
+    "sha256": "b34b63d83bde5cdb1b6c47b97c9aefb3e006bb576746d2944b61dab65fccf2ca"
+  },
+  {
+    "round": 34,
+    "file": "research_v34\\results\\结果解读与下一步.md",
+    "sha256": "44600c5e5a30837276d55d1d069823c7f171d7fcb389e45749915bd72c93ead7"
+  },
+  {
+    "round": 35,
+    "file": "research_v35\\results\\结果解读与下一步.md",
+    "sha256": "4fa4d94956c7181480d4bbbaafd8ecf357903a0f95fbdf8886e0e9a567df6cb3"
+  },
+  {
+    "round": 36,
+    "file": "research_v36\\results\\结果解读与下一步.md",
+    "sha256": "d8094108d8f7e1d6fed694b2567724c64d2532f02f1104172b23f528585b5cba"
+  },
+  {
+    "round": 37,
+    "file": "research_v37\\results\\结果解读与下一步.md",
+    "sha256": "386210a94947bdae435f0b1a13f98cc166bd9ef0d7b7d297b1e26baa7b07dcac"
+  },
+  {
+    "round": 38,
+    "file": "research_v38\\results\\结果解读与下一步.md",
+    "sha256": "13b2a40142c8cfca842eb94bba3d81d2f12ad1a3359898e4ac6f2b698265216e"
+  },
+  {
+    "round": 39,
+    "file": "research_v39\\results\\结果解读与下一步.md",
+    "sha256": "7ca9d2b4baec73c41d8dc683cc68ee2335306c79a7d1ea780efd23e6b8dc9710"
+  },
+  {
+    "round": 40,
+    "file": "research_v40\\results\\结果解读与下一步.md",
+    "sha256": "3bd60f820a54b743da0d2782de263eb134e3b5f2dbce622b283c5e128434b134"
+  },
+  {
+    "round": 41,
+    "file": "research_v41\\results\\结果解读与下一步.md",
+    "sha256": "b22c68dc3f280dc7bffa241edd8fc9abea2c2f601f851474b0e996d4baac2441"
+  },
+  {
+    "round": 42,
+    "file": "research_v42\\results\\结果解读与下一步.md",
+    "sha256": "5577d2aebca835d938c02ec14c102dd7740099f76abf3576afde4158406e0181"
+  },
+  {
+    "round": 43,
+    "file": "research_v43\\results\\结果解读与下一步.md",
+    "sha256": "d804e04beb08de3ce1938a1626c4a106cd6b44bfc22e319cb04d1665d8ac9d9c"
+  },
+  {
+    "round": 44,
+    "file": "research_v44\\results\\第四十四轮可行性报告.md",
+    "sha256": "eed2e8050b5b4cb1c986712a30dc651f0341739c46e9a62ac32539590a09e510"
+  },
+  {
+    "round": 45,
+    "file": "research_v45\\results\\结果解读与下一步.md",
+    "sha256": "887c2a1c6ffd88ff9f1b31a479c67ec954cc3690a8f7a2d1916e080f750f2162"
+  },
+  {
+    "round": 46,
+    "file": "research_v46\\results\\结果解读与下一步.md",
+    "sha256": "15ef369dc6ed57863f41f12219ef84a6b917f849e9230a4cf03b19e2f5d47e8f"
+  },
+  {
+    "round": 47,
+    "file": "research_v47\\results\\结果解读与下一步.md",
+    "sha256": "0109da21e3d50c36a307083ef298badeb17c50e09016d9c6f55c94a84e19414c"
+  },
+  {
+    "round": 48,
+    "file": "research_v48\\results\\结果解读与下一步.md",
+    "sha256": "61a881405c3076aa309f427f4d75480241b9be378d96610f16fbac2feeb1fe2a"
+  },
+  {
+    "round": 49,
+    "file": "research_v49\\results\\结果解读与下一步.md",
+    "sha256": "143d56a9dc4fc4ec022ae7bd51d4da393bdd85253443ade3eb3bb4948c47ab67"
+  },
+  {
+    "round": 50,
+    "file": "research_v50\\results\\结果解读与下一步.md",
+    "sha256": "9a4b6e1cfe3a62cdad622c2fbb93a4b6c8740f566a2bcbf5dc97ebdb1f0afd8f"
+  },
+  {
+    "round": 51,
+    "file": "research_v51\\results\\结果与运行安排.md",
+    "sha256": "05ef11706055cc9379987841e8c10496db15d86f5fde3a85a5a6c4ad59ce8fc4"
+  }
+]

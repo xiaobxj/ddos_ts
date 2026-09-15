@@ -1,0 +1,1271 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:06:20.767308+00:00",
+  "calibration_prefix_decisions": 210,
+  "preserved_files": 6440,
+  "index_predictions_added": 0,
+  "index_labels_added": 0,
+  "stock_v1_modified": false,
+  "checks": [
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-02-28",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-10-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-11-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-02-29",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-10-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-11-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-02-28",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-10-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-11-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-02-28",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "month_four_state",
+      "cutoff": "2026-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_four_state",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_platt",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_pooled",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 1,
+      "policy": "quarter_ungated",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-02-28",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-10-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-11-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-02-29",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-10-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-11-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-02-28",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-10-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-11-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-01-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-02-28",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-04-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-05-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-07-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "month_four_state",
+      "cutoff": "2026-08-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_four_state",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_platt",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_pooled",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2022-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2023-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2024-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-06-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-09-30",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2025-12-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2026-03-31",
+      "status": "PASS"
+    },
+    {
+      "h": 5,
+      "policy": "quarter_ungated",
+      "cutoff": "2026-06-30",
+      "status": "PASS"
+    }
+  ]
+}

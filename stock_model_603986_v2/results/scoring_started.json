@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-09-15T14:04:09.437608+00:00",
+  "protocol_sha256": "7eb44a44bba1d2b29a2717e8677ec4c6d9002f139e2fce1be29dc0ec4b3803fd",
+  "evaluation_sources": {
+    "score.py": "dfc36f34821e66a4bd61f166fd873a66f38d5f8fbb06c49bf8e5aa27cb761d7c",
+    "calibration.py": "68bdcdb48b88afcd15d76f2fdc4c89f0cccee45707079b782609b40ae0cb2158"
+  }
+}

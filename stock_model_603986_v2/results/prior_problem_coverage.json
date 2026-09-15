@@ -1,0 +1,614 @@
+[
+  {
+    "round": 1,
+    "lesson": "论文复现边界、预训练未来信息、模型塌缩和简单参照",
+    "coverage": "保护＋诊断",
+    "action": "只重新训练原始 OHLCV 小型模型，无预训练权重；记录输入改变敏感性、预测方差和简单基准。未重跑 DTW／Kronos。",
+    "evidence": "protocol.json; results/metrics.csv; results/fits/*/heads_*.json",
+    "source": {
+      "round": 1,
+      "file": "research\\results\\方法测试报告.md",
+      "sha256": "072ba9decb898c0b365200670bd7f36093207b193ba882d591fea91d5d0ef38b"
+    }
+  },
+  {
+    "round": 2,
+    "lesson": "输入日频、标签周期、预测日与执行收益口径混淆",
+    "coverage": "重新验证",
+    "action": "H1／H5 收盘至收盘标签逐行独立计算；逐日预测；旧开盘至开盘目标不作直接优劣对照。",
+    "evidence": "results/contract.json; results/sample_counts.json",
+    "source": {
+      "round": 2,
+      "file": "research_v2\\results\\第二轮测试报告.md",
+      "sha256": "0d8810ef19eaac8b0463a40f0d24ea8f4daa126680c91c30bd99ed5404c6fb25"
+    }
+  },
+  {
+    "round": 3,
+    "lesson": "论文复现边界、预训练未来信息、模型塌缩和简单参照",
+    "coverage": "保护＋诊断",
+    "action": "只重新训练原始 OHLCV 小型模型，无预训练权重；记录输入改变敏感性、预测方差和简单基准。未重跑 DTW／Kronos。",
+    "evidence": "protocol.json; results/metrics.csv; results/fits/*/heads_*.json",
+    "source": {
+      "round": 3,
+      "file": "research_v3\\results\\第三轮测试报告.md",
+      "sha256": "7f679f02415773b06d6c2fda930de17068c7c6aa14c7485ed028655764db2ba7"
+    }
+  },
+  {
+    "round": 4,
+    "lesson": "论文复现边界、预训练未来信息、模型塌缩和简单参照",
+    "coverage": "保护＋诊断",
+    "action": "只重新训练原始 OHLCV 小型模型，无预训练权重；记录输入改变敏感性、预测方差和简单基准。未重跑 DTW／Kronos。",
+    "evidence": "protocol.json; results/metrics.csv; results/fits/*/heads_*.json",
+    "source": {
+      "round": 4,
+      "file": "research_v4\\results\\第四轮测试报告.md",
+      "sha256": "2f393354e76c6682145696cc366f4728c3ed0929fa1b635b38c25fb964cef335"
+    }
+  },
+  {
+    "round": 5,
+    "lesson": "训练误差下降不等于泛化改善，轮数和优化设定混在一起",
+    "coverage": "受控重测＋边界",
+    "action": "同一轨迹保留 10／20 遍；固定小模型和正则；不重新搜索 Huber、学习率或辅助权重。",
+    "evidence": "results/year_metrics.csv; results/native_metrics.csv; results/fits/*/training_curves.csv",
+    "source": {
+      "round": 5,
+      "file": "research_v5\\results\\第五轮测试报告.md",
+      "sha256": "31477d00797c3781622b9c7ea22d9c9ee82616c4f8eb5f91d06dc8866891ea6c"
+    }
+  },
+  {
+    "round": 6,
+    "lesson": "训练误差下降不等于泛化改善，轮数和优化设定混在一起",
+    "coverage": "受控重测＋边界",
+    "action": "同一轨迹保留 10／20 遍；固定小模型和正则；不重新搜索 Huber、学习率或辅助权重。",
+    "evidence": "results/year_metrics.csv; results/native_metrics.csv; results/fits/*/training_curves.csv",
+    "source": {
+      "round": 6,
+      "file": "research_v6\\results\\第六轮测试报告.md",
+      "sha256": "cef6dbacbeee12c16f246834418460ce6bde497b64638d56b13cb5b05568340e"
+    }
+  },
+  {
+    "round": 7,
+    "lesson": "选择种子或删除样本后的局部胜出被当成普遍效果",
+    "coverage": "受控重测＋保护",
+    "action": "三固定种子等权概率；公布全部种子波动；不按测试成绩选种子，不做事后删样本。",
+    "evidence": "results/seed_metrics.csv",
+    "source": {
+      "round": 7,
+      "file": "research_v7\\results\\第七轮测试报告.md",
+      "sha256": "aff231a35b8d9e88f9b2235580c55c59aa6b66d24b31f2f6ff97ffcf26271346"
+    }
+  },
+  {
+    "round": 8,
+    "lesson": "重叠标签、小批次损失权重以及删样本后重复曝光",
+    "coverage": "诊断＋保护",
+    "action": "记录末批大小与名义权重比；自然遍数不补齐步数；保留逐日样本，报告收益边复用和最大不重叠数，分块推断。未重跑均衡批次候选。",
+    "evidence": "results/sample_counts.json; results/bootstrap.csv; results/fits/*/training_curves.csv",
+    "source": {
+      "round": 8,
+      "file": "research_v8\\results\\第八轮测试报告.md",
+      "sha256": "2403e32bbbd9f1bb8d5531d302bc82c1e3657d5fe8b1ba3c9531a032c3f06ddd"
+    }
+  },
+  {
+    "round": 9,
+    "lesson": "重叠标签、小批次损失权重以及删样本后重复曝光",
+    "coverage": "诊断＋保护",
+    "action": "记录末批大小与名义权重比；自然遍数不补齐步数；保留逐日样本，报告收益边复用和最大不重叠数，分块推断。未重跑均衡批次候选。",
+    "evidence": "results/sample_counts.json; results/bootstrap.csv; results/fits/*/training_curves.csv",
+    "source": {
+      "round": 9,
+      "file": "research_v9\\results\\第九轮测试报告.md",
+      "sha256": "e7f676502878103c74ab72fc961436cf9e075d787815a1f829a8c45bda2b0f44"
+    }
+  },
+  {
+    "round": 10,
+    "lesson": "稳健损失看似降低极端误差却丢失方向信息",
+    "coverage": "保护，候选未重跑",
+    "action": "本轮不默认采用 Huber；原始收益 MSE、相关性、方差与概率指标分开报告。",
+    "evidence": "results/native_metrics.csv; results/metrics.csv",
+    "source": {
+      "round": 10,
+      "file": "research_v10\\results\\第十轮测试报告.md",
+      "sha256": "55a0f7dd8da0c55855c2873b463bbc27f2f2abe62c49d5ab0f0e26a313ae282c"
+    }
+  },
+  {
+    "round": 11,
+    "lesson": "训练误差下降不等于泛化改善，轮数和优化设定混在一起",
+    "coverage": "受控重测＋边界",
+    "action": "同一轨迹保留 10／20 遍；固定小模型和正则；不重新搜索 Huber、学习率或辅助权重。",
+    "evidence": "results/year_metrics.csv; results/native_metrics.csv; results/fits/*/training_curves.csv",
+    "source": {
+      "round": 11,
+      "file": "research_v11\\results\\第十一轮测试报告.md",
+      "sha256": "030a11719af5b2f792d0d71f2ee4376744b033c5f7f19d4b82b0e41352b862ab"
+    }
+  },
+  {
+    "round": 12,
+    "lesson": "训练误差下降不等于泛化改善，轮数和优化设定混在一起",
+    "coverage": "受控重测＋边界",
+    "action": "同一轨迹保留 10／20 遍；固定小模型和正则；不重新搜索 Huber、学习率或辅助权重。",
+    "evidence": "results/year_metrics.csv; results/native_metrics.csv; results/fits/*/training_curves.csv",
+    "source": {
+      "round": 12,
+      "file": "research_v12\\results\\第十二轮测试报告.md",
+      "sha256": "35665ed4bc9cffb689c14d6b92d2850a9b4509f94a12685ddd2455977014985a"
+    }
+  },
+  {
+    "round": 13,
+    "lesson": "把样本内残差当成可用的历史校准预测",
+    "coverage": "重新验证",
+    "action": "季度／月度校准只用真正因果的年度折外概率银行；训练头的 scalar_probe 明示为样本内监督拟合；校准训练验证按标签终点清除交叠。",
+    "evidence": "calibration.py; results/outputs_verified.json",
+    "source": {
+      "round": 13,
+      "file": "research_v13\\results\\第十三轮测试报告.md",
+      "sha256": "572f65bb4f6a5c885fdd45d0fb8a8d2885248fb99a292ee38f6db3791b2ff19a"
+    }
+  },
+  {
+    "round": 14,
+    "lesson": "直接分类不一定优于回归；标准化收益正负误作涨跌",
+    "coverage": "受控重测",
+    "action": "同成员、种子和结构比较 MSE／BCE；BCE 始终用原始收益 > 0；原生 MSE 不伪装成概率。",
+    "evidence": "results/synthetic_contract_checks.json; results/metrics.csv; results/native_metrics.csv",
+    "source": {
+      "round": 14,
+      "file": "research_v14\\results\\第十四轮测试报告.md",
+      "sha256": "19306d4d56a816ad533cc71946651b357bebd457780e388c71020c4e379d40a3"
+    }
+  },
+  {
+    "round": 15,
+    "lesson": "冻结特征的浮点路径改变，以及训练表示不是 OOF",
+    "coverage": "重新验证",
+    "action": "本轮统一 requires_grad=False 提取；逐检查点回放，界定数值容差；训练表示和监督交互不称 OOF。",
+    "evidence": "results/checkpoint_checks.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 15,
+      "file": "research_v15\\results\\第十五轮测试报告.md",
+      "sha256": "a9fa01df43e48b641dafe6279d86e4aecd7f874b9ec5da2324de8c27fc3bc9f6"
+    }
+  },
+  {
+    "round": 16,
+    "lesson": "复杂表征未超简单参照，截尾标准化或状态阈值偷看未来",
+    "coverage": "受控重测＋验证",
+    "action": "频率与仅四项行情特征同训练成员；分位数、均值、尺度、波动中位数来自截止前训练行。未重跑全部 25 项简单特征族。",
+    "evidence": "results/metrics.csv; results/causal_training_prefix_checks.json",
+    "source": {
+      "round": 16,
+      "file": "research_v16\\results\\第十六轮测试报告.md",
+      "sha256": "f34f0294cc87e5b87ca6e08c1b0c47bb0b60ddd05ef2208b1e41e879beaacd9b"
+    }
+  },
+  {
+    "round": 17,
+    "lesson": "复杂表征未超简单参照，截尾标准化或状态阈值偷看未来",
+    "coverage": "受控重测＋验证",
+    "action": "频率与仅四项行情特征同训练成员；分位数、均值、尺度、波动中位数来自截止前训练行。未重跑全部 25 项简单特征族。",
+    "evidence": "results/metrics.csv; results/causal_training_prefix_checks.json",
+    "source": {
+      "round": 17,
+      "file": "research_v17\\results\\第十七轮测试报告.md",
+      "sha256": "8206717f9a52f995a37ba8c2cbf184159ce8aaa2254730b133d91761c82ea450"
+    }
+  },
+  {
+    "round": 18,
+    "lesson": "市场条件能识别不代表可预测；交互近期方向收益伴随概率误差",
+    "coverage": "受控重测",
+    "action": "加性／波动交互并列，逐年 Brier、对数损失与方向一起比较；交互投影正交、增秩与残差尺度复核。",
+    "evidence": "results/year_metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 18,
+      "file": "research_v18\\results\\第十八轮测试报告.md",
+      "sha256": "0fa48ec58c01ae1588b1c434900110f395535cf0254349b044a3b52286be353c"
+    }
+  },
+  {
+    "round": 19,
+    "lesson": "市场条件能识别不代表可预测；交互近期方向收益伴随概率误差",
+    "coverage": "受控重测",
+    "action": "加性／波动交互并列，逐年 Brier、对数损失与方向一起比较；交互投影正交、增秩与残差尺度复核。",
+    "evidence": "results/year_metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 19,
+      "file": "research_v19\\results\\第十九轮测试报告.md",
+      "sha256": "69cce8bcd7a05e5b1f379e15740891203995d244832b09fd298ea50ab8a4acf1"
+    }
+  },
+  {
+    "round": 20,
+    "lesson": "只缩短最后分类头却声称全模型近期训练；窗口与步数／重训混淆",
+    "coverage": "受控重测",
+    "action": "3／5 年均从头训练整条表示和头，自然 10／20 遍；季度整网更新只检验 2026 年两个季度，不外推全部年份。",
+    "evidence": "results/training_membership_plan.csv; results/year_metrics.csv",
+    "source": {
+      "round": 20,
+      "file": "research_v20\\results\\第二十轮测试报告.md",
+      "sha256": "db16de8ac909171f2cf34db0122b1a711b1140cfc81b6891a8d542bc4954120b"
+    }
+  },
+  {
+    "round": 21,
+    "lesson": "HMM 平滑泄漏，训练期过滤误称逐期折外识别",
+    "coverage": "保护，HMM 未重跑",
+    "action": "本轮使用当时可知的趋势／波动，不使用 HMM 平滑；不把训练内状态参数解释为 OOF。",
+    "evidence": "protocol.json; results/causal_training_prefix_checks.json",
+    "source": {
+      "round": 21,
+      "file": "research_v21\\results\\第二十一轮测试报告.md",
+      "sha256": "70a9d0034200451ae73dbb44c724573d0628d9a04021442799ae5c51ace1134f"
+    }
+  },
+  {
+    "round": 22,
+    "lesson": "路径效率与既有趋势信息重复，微小概率改善被遗忘",
+    "coverage": "保留证据，候选未重跑",
+    "action": "保留原路径效率概率改善线索；本轮未重新测试该候选，不把价格顺序项等同于路径效率，也不把未采用说成无效。",
+    "evidence": "results/prior_report_sources.json; 历史问题核对.md",
+    "source": {
+      "round": 22,
+      "file": "research_v22\\results\\第二十二轮测试报告.md",
+      "sha256": "91f95fb62c9d86d95eb07debf2a2ef0e28653dcb4b40675f0ac229dae280b0e7"
+    }
+  },
+  {
+    "round": 23,
+    "lesson": "价格顺序扩展后跨期退步、惩罚搜索与共同重拟合归因",
+    "coverage": "受控重测",
+    "action": "并列联合顺序头与固定波动父头仅加顺序系数；固定同一岭强度，拒绝看结果后加罚搜索。",
+    "evidence": "results/metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 23,
+      "file": "research_v23\\results\\第二十三轮测试报告.md",
+      "sha256": "9b97cdfe761a7ccdf5a8b89991929ff327d9571c4b58b9971fe386929942578d"
+    }
+  },
+  {
+    "round": 24,
+    "lesson": "价格顺序扩展后跨期退步、惩罚搜索与共同重拟合归因",
+    "coverage": "受控重测",
+    "action": "并列联合顺序头与固定波动父头仅加顺序系数；固定同一岭强度，拒绝看结果后加罚搜索。",
+    "evidence": "results/metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 24,
+      "file": "research_v24\\results\\第二十四轮测试报告.md",
+      "sha256": "8071d7ae50f2d935935a9cf4bff7e7999c6d5b06adf1d2b069dec1e850701909"
+    }
+  },
+  {
+    "round": 25,
+    "lesson": "价格顺序扩展后跨期退步、惩罚搜索与共同重拟合归因",
+    "coverage": "受控重测",
+    "action": "并列联合顺序头与固定波动父头仅加顺序系数；固定同一岭强度，拒绝看结果后加罚搜索。",
+    "evidence": "results/metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 25,
+      "file": "research_v25\\results\\第二十五轮测试报告.md",
+      "sha256": "cd92483be0805e7f4c315513dcf70019eeb10b827a9182a51b082c0339c03bb7"
+    }
+  },
+  {
+    "round": 26,
+    "lesson": "历史扩展后原来的近期优势消失",
+    "coverage": "受控重测",
+    "action": "2023—2026 逐年展示，同期简单基准；2026 为截至 9 月的部分年；不能只报最近好年份。",
+    "evidence": "results/year_metrics.csv",
+    "source": {
+      "round": 26,
+      "file": "research_v26\\results\\结果解读与下一步.md",
+      "sha256": "32df4b7a69c8ffaba03bc9d0b342a12f3d6f597b292d183631bdeb64ab25a23f"
+    }
+  },
+  {
+    "round": 27,
+    "lesson": "只缩短最后分类头却声称全模型近期训练；窗口与步数／重训混淆",
+    "coverage": "受控重测",
+    "action": "3／5 年均从头训练整条表示和头，自然 10／20 遍；季度整网更新只检验 2026 年两个季度，不外推全部年份。",
+    "evidence": "results/training_membership_plan.csv; results/year_metrics.csv",
+    "source": {
+      "round": 27,
+      "file": "research_v27\\results\\执行记录补充.md",
+      "sha256": "a8bce3a9b7968b7948cb00e31c4dd631b589233a70cf4b33f2b22666e5f2d78a"
+    }
+  },
+  {
+    "round": 28,
+    "lesson": "只缩短最后分类头却声称全模型近期训练；窗口与步数／重训混淆",
+    "coverage": "受控重测",
+    "action": "3／5 年均从头训练整条表示和头，自然 10／20 遍；季度整网更新只检验 2026 年两个季度，不外推全部年份。",
+    "evidence": "results/training_membership_plan.csv; results/year_metrics.csv",
+    "source": {
+      "round": 28,
+      "file": "research_v28\\results\\结果解读与下一步.md",
+      "sha256": "4903a71b3543f06cd1a965dfefdf3076f913515f7e54ebb155a0203468e92c3b"
+    }
+  },
+  {
+    "round": 29,
+    "lesson": "漂移／误差触发、影子试用和融合都未稳定超过年度更新",
+    "coverage": "保护＋有限更新重测",
+    "action": "年度主模型固定；另测 2026 季度整网重训，不启用新触发器、影子择优或看成绩后融合。",
+    "evidence": "protocol.json; results/year_metrics.csv",
+    "source": {
+      "round": 29,
+      "file": "research_v29\\results\\结果解读与下一步.md",
+      "sha256": "5277b7ad55ff4755921273e0f3c879fd6ee98d15993f2680d64acb8fe3becbb0"
+    }
+  },
+  {
+    "round": 30,
+    "lesson": "漂移／误差触发、影子试用和融合都未稳定超过年度更新",
+    "coverage": "保护＋有限更新重测",
+    "action": "年度主模型固定；另测 2026 季度整网重训，不启用新触发器、影子择优或看成绩后融合。",
+    "evidence": "protocol.json; results/year_metrics.csv",
+    "source": {
+      "round": 30,
+      "file": "research_v30\\results\\结果解读与下一步.md",
+      "sha256": "4cff07dd9c4316b2dd6bb33f0cdcbc7a0b8699e2cb23376d8a0b244a3969f1ea"
+    }
+  },
+  {
+    "round": 31,
+    "lesson": "漂移／误差触发、影子试用和融合都未稳定超过年度更新",
+    "coverage": "保护＋有限更新重测",
+    "action": "年度主模型固定；另测 2026 季度整网重训，不启用新触发器、影子择优或看成绩后融合。",
+    "evidence": "protocol.json; results/year_metrics.csv",
+    "source": {
+      "round": 31,
+      "file": "research_v31\\results\\结果解读与下一步.md",
+      "sha256": "74609cc242f5b8f63b7d9958bde2fbaf1d92c395e13104e20fdb29e24525951a"
+    }
+  },
+  {
+    "round": 32,
+    "lesson": "更新分类头的坐标和系数混淆，删旧标签不等于骨干忘记旧数据",
+    "coverage": "受控重测＋边界",
+    "action": "时间加权及截距／斜率混合只在同一冻结坐标中对照；3 年整网重新训练。未重跑所有季度头更新／样本移除分解。",
+    "evidence": "results/head_gradient_checks.csv; results/metrics.csv",
+    "source": {
+      "round": 32,
+      "file": "research_v32\\results\\结果解读与下一步.md",
+      "sha256": "55d2ac5a1bc7888352a002e73cfae308ed0792731508a13e06b90020374c2e22"
+    }
+  },
+  {
+    "round": 33,
+    "lesson": "更新分类头的坐标和系数混淆，删旧标签不等于骨干忘记旧数据",
+    "coverage": "受控重测＋边界",
+    "action": "时间加权及截距／斜率混合只在同一冻结坐标中对照；3 年整网重新训练。未重跑所有季度头更新／样本移除分解。",
+    "evidence": "results/head_gradient_checks.csv; results/metrics.csv",
+    "source": {
+      "round": 33,
+      "file": "research_v33\\results\\结果解读与下一步.md",
+      "sha256": "b34b63d83bde5cdb1b6c47b97c9aefb3e006bb576746d2944b61dab65fccf2ca"
+    }
+  },
+  {
+    "round": 34,
+    "lesson": "更新分类头的坐标和系数混淆，删旧标签不等于骨干忘记旧数据",
+    "coverage": "受控重测＋边界",
+    "action": "时间加权及截距／斜率混合只在同一冻结坐标中对照；3 年整网重新训练。未重跑所有季度头更新／样本移除分解。",
+    "evidence": "results/head_gradient_checks.csv; results/metrics.csv",
+    "source": {
+      "round": 34,
+      "file": "research_v34\\results\\结果解读与下一步.md",
+      "sha256": "44600c5e5a30837276d55d1d069823c7f171d7fcb389e45749915bd72c93ead7"
+    }
+  },
+  {
+    "round": 35,
+    "lesson": "更新分类头的坐标和系数混淆，删旧标签不等于骨干忘记旧数据",
+    "coverage": "受控重测＋边界",
+    "action": "时间加权及截距／斜率混合只在同一冻结坐标中对照；3 年整网重新训练。未重跑所有季度头更新／样本移除分解。",
+    "evidence": "results/head_gradient_checks.csv; results/metrics.csv",
+    "source": {
+      "round": 35,
+      "file": "research_v35\\results\\结果解读与下一步.md",
+      "sha256": "4fa4d94956c7181480d4bbbaafd8ecf357903a0f95fbdf8886e0e9a567df6cb3"
+    }
+  },
+  {
+    "round": 36,
+    "lesson": "状态样本过少、日标签约五倍重叠、过拟合状态偏移",
+    "coverage": "受控重测＋诊断",
+    "action": "四状态共享基模型偏移；门控／无门控／合并组对照；训练与验证分别要求最大不重叠标签数。该数不叫有效独立样本量。",
+    "evidence": "results/calibration_coverage.csv; results/sample_counts.json; results/calibration_decisions_h1.json; results/calibration_decisions_h5.json",
+    "source": {
+      "round": 36,
+      "file": "research_v36\\results\\结果解读与下一步.md",
+      "sha256": "d8094108d8f7e1d6fed694b2567724c64d2532f02f1104172b23f528585b5cba"
+    }
+  },
+  {
+    "round": 37,
+    "lesson": "状态样本过少、日标签约五倍重叠、过拟合状态偏移",
+    "coverage": "受控重测＋诊断",
+    "action": "四状态共享基模型偏移；门控／无门控／合并组对照；训练与验证分别要求最大不重叠标签数。该数不叫有效独立样本量。",
+    "evidence": "results/calibration_coverage.csv; results/sample_counts.json; results/calibration_decisions_h1.json; results/calibration_decisions_h5.json",
+    "source": {
+      "round": 37,
+      "file": "research_v37\\results\\结果解读与下一步.md",
+      "sha256": "386210a94947bdae435f0b1a13f98cc166bd9ef0d7b7d297b1e26baa7b07dcac"
+    }
+  },
+  {
+    "round": 38,
+    "lesson": "状态样本过少、日标签约五倍重叠、过拟合状态偏移",
+    "coverage": "受控重测＋诊断",
+    "action": "四状态共享基模型偏移；门控／无门控／合并组对照；训练与验证分别要求最大不重叠标签数。该数不叫有效独立样本量。",
+    "evidence": "results/calibration_coverage.csv; results/sample_counts.json; results/calibration_decisions_h1.json; results/calibration_decisions_h5.json",
+    "source": {
+      "round": 38,
+      "file": "research_v38\\results\\结果解读与下一步.md",
+      "sha256": "13b2a40142c8cfca842eb94bba3d81d2f12ad1a3359898e4ac6f2b698265216e"
+    }
+  },
+  {
+    "round": 39,
+    "lesson": "最近验证通过不保证未来有效，月度更新增加覆盖可能变差",
+    "coverage": "受控重测",
+    "action": "季度四状态、月度四状态、季度合并组和 Platt 校准固定对照；Brier 改善且方向不退步才启用，验证后不重拟合。",
+    "evidence": "results/metrics.csv; results/calibration_coverage.csv; results/outputs_verified.json",
+    "source": {
+      "round": 39,
+      "file": "research_v39\\results\\结果解读与下一步.md",
+      "sha256": "7ca9d2b4baec73c41d8dc683cc68ee2335306c79a7d1ea780efd23e6b8dc9710"
+    }
+  },
+  {
+    "round": 40,
+    "lesson": "最近验证通过不保证未来有效，月度更新增加覆盖可能变差",
+    "coverage": "受控重测",
+    "action": "季度四状态、月度四状态、季度合并组和 Platt 校准固定对照；Brier 改善且方向不退步才启用，验证后不重拟合。",
+    "evidence": "results/metrics.csv; results/calibration_coverage.csv; results/outputs_verified.json",
+    "source": {
+      "round": 40,
+      "file": "research_v40\\results\\结果解读与下一步.md",
+      "sha256": "3bd60f820a54b743da0d2782de263eb134e3b5f2dbce622b283c5e128434b134"
+    }
+  },
+  {
+    "round": 41,
+    "lesson": "验证依赖少数观察，重复使用旧样本，却误称新增独立证据",
+    "coverage": "诊断",
+    "action": "删除 H 日信号区段的指标敏感性、相邻窗口复用、新加入日期均存档；标签跨区段仍可能重叠，不作独立重复试验。",
+    "evidence": "results/calibration_decisions_h1.json; results/calibration_decisions_h5.json; results/calibration_reuse_h1.csv; results/calibration_reuse_h5.csv",
+    "source": {
+      "round": 41,
+      "file": "research_v41\\results\\结果解读与下一步.md",
+      "sha256": "b22c68dc3f280dc7bffa241edd8fc9abea2c2f601f851474b0e996d4baac2441"
+    }
+  },
+  {
+    "round": 42,
+    "lesson": "旧状态参数保留与自动续期，收益集中在同一天",
+    "coverage": "保护，保留政策未重跑",
+    "action": "本轮不延续旧状态修正；每次按当时验证重新决定，Q1 回到年度基模型，独立记录实际改变日期。",
+    "evidence": "results/synthetic_contract_checks.json; results/calibration_coverage.csv",
+    "source": {
+      "round": 42,
+      "file": "research_v42\\results\\结果解读与下一步.md",
+      "sha256": "5577d2aebca835d938c02ec14c102dd7740099f76abf3576afde4158406e0181"
+    }
+  },
+  {
+    "round": 43,
+    "lesson": "验证依赖少数观察，重复使用旧样本，却误称新增独立证据",
+    "coverage": "诊断",
+    "action": "删除 H 日信号区段的指标敏感性、相邻窗口复用、新加入日期均存档；标签跨区段仍可能重叠，不作独立重复试验。",
+    "evidence": "results/calibration_decisions_h1.json; results/calibration_decisions_h5.json; results/calibration_reuse_h1.csv; results/calibration_reuse_h5.csv",
+    "source": {
+      "round": 43,
+      "file": "research_v43\\results\\结果解读与下一步.md",
+      "sha256": "d804e04beb08de3ce1938a1626c4a106cd6b44bfc22e319cb04d1665d8ac9d9c"
+    }
+  },
+  {
+    "round": 44,
+    "lesson": "验证依赖少数观察，重复使用旧样本，却误称新增独立证据",
+    "coverage": "诊断",
+    "action": "删除 H 日信号区段的指标敏感性、相邻窗口复用、新加入日期均存档；标签跨区段仍可能重叠，不作独立重复试验。",
+    "evidence": "results/calibration_decisions_h1.json; results/calibration_decisions_h5.json; results/calibration_reuse_h1.csv; results/calibration_reuse_h5.csv",
+    "source": {
+      "round": 44,
+      "file": "research_v44\\results\\第四十四轮可行性报告.md",
+      "sha256": "eed2e8050b5b4cb1c986712a30dc651f0341739c46e9a62ac32539590a09e510"
+    }
+  },
+  {
+    "round": 45,
+    "lesson": "合并状态增加样本支持却不一定提升预测，同一天的跨方法重复",
+    "coverage": "有限受控重测",
+    "action": "四状态与全市场合并校准对照；本轮未重跑趋势／波动两组子状态验证；按真实日期而不是模型数量解释覆盖。",
+    "evidence": "results/calibration_coverage.csv; results/metrics.csv",
+    "source": {
+      "round": 45,
+      "file": "research_v45\\results\\结果解读与下一步.md",
+      "sha256": "887c2a1c6ffd88ff9f1b31a479c67ec954cc3690a8f7a2d1916e080f750f2162"
+    }
+  },
+  {
+    "round": 46,
+    "lesson": "合并状态增加样本支持却不一定提升预测，同一天的跨方法重复",
+    "coverage": "有限受控重测",
+    "action": "四状态与全市场合并校准对照；本轮未重跑趋势／波动两组子状态验证；按真实日期而不是模型数量解释覆盖。",
+    "evidence": "results/calibration_coverage.csv; results/metrics.csv",
+    "source": {
+      "round": 46,
+      "file": "research_v46\\results\\结果解读与下一步.md",
+      "sha256": "15ef369dc6ed57863f41f12219ef84a6b917f849e9230a4cf03b19e2f5d47e8f"
+    }
+  },
+  {
+    "round": 47,
+    "lesson": "近期加权整体、截距、斜率作用不同，2026 局部改善不能替代全期",
+    "coverage": "受控重测",
+    "action": "固定 730.5 日半衰期，在同一特征坐标比较 U／W／I／S；逐年概率和方向分别报告。",
+    "evidence": "results/year_metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 47,
+      "file": "research_v47\\results\\结果解读与下一步.md",
+      "sha256": "0109da21e3d50c36a307083ef298badeb17c50e09016d9c6f55c94a84e19414c"
+    }
+  },
+  {
+    "round": 48,
+    "lesson": "近期加权整体、截距、斜率作用不同，2026 局部改善不能替代全期",
+    "coverage": "受控重测",
+    "action": "固定 730.5 日半衰期，在同一特征坐标比较 U／W／I／S；逐年概率和方向分别报告。",
+    "evidence": "results/year_metrics.csv; results/head_gradient_checks.csv",
+    "source": {
+      "round": 48,
+      "file": "research_v48\\results\\结果解读与下一步.md",
+      "sha256": "61a881405c3076aa309f427f4d75480241b9be378d96610f16fbac2feeb1fe2a"
+    }
+  },
+  {
+    "round": 49,
+    "lesson": "回填历史预测、参数提前生效、未成熟标签计分、改写旧证据",
+    "coverage": "保护＋工程验证",
+    "action": "前缀重放、成熟度排除和参数截止检查；历史结果只存研究目录，旧指数账本无新增预测或标签；本轮不部署自动日更入口。",
+    "evidence": "results/outputs_verified.json; results/latest_probabilities.json; results/preserved_files.json",
+    "source": {
+      "round": 49,
+      "file": "research_v49\\results\\结果解读与下一步.md",
+      "sha256": "143d56a9dc4fc4ec022ae7bd51d4da393bdd85253443ade3eb3bb4948c47ab67"
+    }
+  },
+  {
+    "round": 50,
+    "lesson": "回填历史预测、参数提前生效、未成熟标签计分、改写旧证据",
+    "coverage": "保护＋工程验证",
+    "action": "前缀重放、成熟度排除和参数截止检查；历史结果只存研究目录，旧指数账本无新增预测或标签；本轮不部署自动日更入口。",
+    "evidence": "results/outputs_verified.json; results/latest_probabilities.json; results/preserved_files.json",
+    "source": {
+      "round": 50,
+      "file": "research_v50\\results\\结果解读与下一步.md",
+      "sha256": "9a4b6e1cfe3a62cdad622c2fbb93a4b6c8740f566a2bcbf5dc97ebdb1f0afd8f"
+    }
+  },
+  {
+    "round": 51,
+    "lesson": "回填历史预测、参数提前生效、未成熟标签计分、改写旧证据",
+    "coverage": "保护＋工程验证",
+    "action": "前缀重放、成熟度排除和参数截止检查；历史结果只存研究目录，旧指数账本无新增预测或标签；本轮不部署自动日更入口。",
+    "evidence": "results/outputs_verified.json; results/latest_probabilities.json; results/preserved_files.json",
+    "source": {
+      "round": 51,
+      "file": "research_v51\\results\\结果与运行安排.md",
+      "sha256": "05ef11706055cc9379987841e8c10496db15d86f5fde3a85a5a6c4ad59ce8fc4"
+    }
+  }
+]

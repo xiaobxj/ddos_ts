@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-09-15T14:28:31.937516+00:00",
+  "sector_name": "国证芯片",
+  "sector_code": "980017",
+  "sector_source": "https://hq.cnindex.com.cn/market/market/getIndexDailyDataWithDataFormat",
+  "sector_identity": "https://www.cnindex.com.cn/docs/gz_980017.pdf",
+  "sector_rows": 2601,
+  "first_sector_date": "2016-01-04",
+  "last_sector_date": "2026-09-15",
+  "source_vintage": "current official historical index series; no reconstruction from present constituents; historical revisions cannot be excluded",
+  "features": {
+    "own": [
+      "trend60",
+      "vol20",
+      "range20",
+      "volume_change20",
+      "return1",
+      "return5",
+      "today_gap",
+      "today_intraday"
+    ],
+    "each_external": [
+      "index_return1",
+      "index_trend60",
+      "index_vol20",
+      "beta60_adjusted_relative_strength20"
+    ]
+  },
+  "relative": "beta=trailing60 cov(stock,index)/var(index); residual standardized over same trailing60, last20 sum / (std60*sqrt20)",
+  "members": "same input-valid H1 rows with finite all-context features; lower 5-year anchor bound; mature by annual cutoff",
+  "explicit_no_duplicate": "no redundant raw-return difference columns appended alongside their two original returns",
+  "before_fit": true,
+  "files": {
+    "stock_model_603986_v3\\data\\external_close.csv": "44a29f035d462d056e9627e7ab0ecbcf511a239393bb5dfcf7b162ae9c47f9c3",
+    "stock_model_603986_v3\\data\\probes\\cni980017_official.json": "0fa4e83803e0ae4aacb5439eafc1b61fac0e4e871a94fbaef53b0b5cdef76a3d",
+    "stock_model_603986_v3\\fast3.py": "320b0d9ec49148bb26eec7b6e0c0e8606067f135803f395a51d5425dff366b82"
+  }
+}

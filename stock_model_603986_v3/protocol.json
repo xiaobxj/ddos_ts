@@ -1,0 +1,131 @@
+{
+  "stock": "603986",
+  "data_end": "2026-09-15",
+  "purpose": "extend H5 quarterly WFO, constrain probabilities, H1 external context, genuine daily prospective records",
+  "new_cutoffs": [
+    "2023-03-31",
+    "2023-06-30",
+    "2023-09-30",
+    "2024-03-31",
+    "2024-06-30",
+    "2024-09-30",
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30"
+  ],
+  "neural_fits": 27,
+  "neural_recipe": "v2 H5 MSE 5-year, same 3 seeds and natural 20 epochs; all old fits reused with hashes",
+  "slow": {
+    "cadences": [
+      "annual",
+      "quarterly"
+    ],
+    "methods": [
+      "add",
+      "vol",
+      "order_joint",
+      "order_fixed"
+    ],
+    "schemes": [
+      "raw",
+      "platt",
+      "shrink"
+    ],
+    "primary": "quarterly.vol.shrink",
+    "train_daily": 252,
+    "validation_daily": 63,
+    "purge": "train target endpoints strictly before first validation anchor",
+    "reset": "Q1 raw base as v2",
+    "gate": "validation Brier improves >1e-12, number correct does not fall, no refit after validation",
+    "min_train_disjoint": 10,
+    "min_validation_disjoint": 5,
+    "platt": "same v2 unconstrained logit slope/intercept ridge .01",
+    "shrink": "q=training-bank up frequency; p_new=q+alpha*(p-q), alpha clipped to [0,1], train Brier minimizer; no ranking inversion",
+    "calibration_bank": "each cadence and method uses its own causal OOS probabilities; never borrow annual bank for quarterly model",
+    "controls": [
+      "same-window base_frequency",
+      "same-window market4",
+      "quarter calibration-train frequency",
+      "constant .5"
+    ],
+    "primary_comparisons": [
+      [
+        "quarterly.vol.raw",
+        "annual.vol.raw"
+      ],
+      [
+        "quarterly.vol.shrink",
+        "quarterly.vol.raw"
+      ],
+      [
+        "quarterly.vol.shrink",
+        "quarterly.frequency.raw"
+      ],
+      [
+        "quarterly.vol.shrink",
+        "quarterly.market4.raw"
+      ]
+    ],
+    "primary_metrics": [
+      "Brier",
+      "logloss",
+      "accuracy",
+      "balanced_accuracy",
+      "AUC",
+      "calibration_bins",
+      "year",
+      "state",
+      "seed"
+    ],
+    "bootstrap": {
+      "blocks": [
+        20,
+        40
+      ],
+      "draws": 10000,
+      "seed": 603987,
+      "holm": "four declared H5 Brier contrasts"
+    },
+    "old_interactions": "keep additive, vol, joint-order and fixed-parent-order; no post-result head selection"
+  },
+  "fast": {
+    "model": "simple train-only clipped/scaled ridge logistic .01",
+    "h": 1,
+    "cadence": "annual",
+    "lookback_years": 5,
+    "features": [
+      "own short OHLCV",
+      "own + CSI300 context",
+      "own + verified semiconductor index context",
+      "own + both"
+    ],
+    "matching": "identical eligible training members and test dates for context comparisons; full-own-history diagnostic retained",
+    "inference": "same-day close or older only; no present constituent backcast",
+    "minimum_train_rows": 400,
+    "secondary": "descriptive; no neural architecture search or selection from test results"
+  },
+  "live": {
+    "directory": "stock_daily_603986",
+    "mode": "manual daily after close, genuine same-date records only",
+    "record_window_cst": [
+      "18:00",
+      "23:59:59"
+    ],
+    "labels": "H1 and H5 close to close, calendar positions, no fills claimed",
+    "displayed_models": [
+      "v2 H1 annual vol",
+      "v2 H1 current quarterly vol",
+      "H5 quarterly raw/platt/shrink",
+      "H5 annual raw"
+    ],
+    "fixed_evaluation": "no retrospective inserts, append-only hash chained events, overlapping H5 samples flagged",
+    "parameter_expiry": "2026-09-30; block October predictions until a separately verified new parameter package exists",
+    "split_action_guard": "compare reconstructed forward-adjusted closes to vendor hfq; unknown corporate actions block",
+    "no_promotion": "prospective candidate family fixed before viewing new results"
+  },
+  "history": "all historical dates have already been examined: exploratory, not independent confirmation",
+  "exclusions": [
+    "no orders, account access, or modification of index app/ledger",
+    "no HMM/DTW/pretrained or unbounded parameter search"
+  ]
+}

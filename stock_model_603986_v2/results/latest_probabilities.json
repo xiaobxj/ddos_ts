@@ -1,0 +1,2742 @@
+{
+  "computed_utc": "2026-09-15T14:04:51.285960+00:00",
+  "provenance": "retrospective historical fits; current as-of model outputs, not past live issued forecasts",
+  "rows": [
+    {
+      "h": 1,
+      "method": "mse_5y_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5052520387495326,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5147150677062442,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5089084360586696,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5110629548613271,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5076913150689374,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.518727932047966,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5104830603011894,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5159386105279232,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5021338702956135,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5152325509388963,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.5056314296792129,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.5117381604542194,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.5021838023319448,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5131099530370035,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5049782085562106,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.5103189266576672,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.47258204243741364,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5211134486316499,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5102236953143287,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5215292981322558,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5098071037374572,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5259728891188176,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.5175864023168968,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5260187293699329,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5175389639476963,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5211418279148362,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5143808437524032,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.5214705817912975,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.5140490900489839,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.521179361996058,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5128897746751014,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5212249591613208,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.5128425514523879,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_5y_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.4802155322331376,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "frequency_5y",
+      "asof": "2026-09-15",
+      "probability": 0.4847233691164327,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "market4_5y",
+      "asof": "2026-09-15",
+      "probability": 0.48903158624650755,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5136323050244832,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.526756446051174,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5175979944835004,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5228015286700476,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5188827167886201,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.5337655814384883,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.52208849909295,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5305701646266042,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5147482415568405,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5316961122786393,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.5186166915892289,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.5278398430682586,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.5148637866873961,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5294827653890541,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5180722785592685,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.5262864123298668,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.484283136319321,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e10.native_bce.U",
+      "asof": "2026-09-15",
+      "probability": 0.4880307220270692,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5164796059066099,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5241423693722842,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5182346952307708,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.522390973964287,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5270242796680741,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.5387253377633585,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5285476671161571,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5372055406852831,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5232124635244889,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5346791676307582,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.5250443370291967,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.5328503637596405,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.523261449569989,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5336089804740114,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5247851113415689,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.532088356870236,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.4763225953041153,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "bce_5y_e20.native_bce.U",
+      "asof": "2026-09-15",
+      "probability": 0.4856573856552391,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.4996260326673718,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5380186216467765,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5037505254677083,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5339182307536648,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5012112271651193,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.540239766633865,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5053179273367959,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5361566030084651,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.49055970495193996,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.529760775370896,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.49476966815560575,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.5255621480160261,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.4907573334903271,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5288074206992613,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.4948656977139277,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.524710516822142,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.49220638626241797,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.48185916947167007,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5115413825610569,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.48574263306338983,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5076513553544152,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.4771616351275492,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.507726084935041,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.480904856550648,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5039746427038313,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.4687519672323615,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5004066498238847,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.47255927675296533,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.49658735506514146,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.4688322572714627,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5000989153624572,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.4725688078437163,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.4963509399759258,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_3y_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.49085314299631794,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "frequency_3y",
+      "asof": "2026-09-15",
+      "probability": 0.49173553719008267,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "market4_3y",
+      "asof": "2026-09-15",
+      "probability": 0.49429879459914994,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.521223822471265,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5613896141556611,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5313074779771846,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5514411554567924,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5268195709807205,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.5685592018866613,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5365864295424774,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5589441140529324,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5285045604294304,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5704014784248318,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.5385263188478523,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.560537412962808,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.5287377311841793,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.5707672601648032,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5385036036230626,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.5611591100181113,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.48713339315156795,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5536443832583984,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.5810629751318894,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5618711913219905,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.5729634377038134,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5575081373731388,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.584556862606474,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5656820877133653,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.5765153992202244,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5760172800771666,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.5991495762140704,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.5842178909835094,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.5910564500304942,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.5760861545963242,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.599204362613951,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5840755205963266,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.5913277508101707,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "mse_q2026_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.5034276478352601,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "frequency_q2026",
+      "asof": "2026-09-15",
+      "probability": 0.4904880066170389,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "market4_q2026",
+      "asof": "2026-09-15",
+      "probability": 0.48473558729158456,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "constant_0.5",
+      "asof": "2026-09-15",
+      "probability": 0.5,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "always_up",
+      "asof": "2026-09-15",
+      "probability": 1.0,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "always_down",
+      "asof": "2026-09-15",
+      "probability": 0.0,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "cal.quarter_four_state",
+      "asof": "2026-09-15",
+      "probability": 0.5259728891188176,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "cal.month_four_state",
+      "asof": "2026-09-15",
+      "probability": 0.5259728891188176,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "cal.quarter_pooled",
+      "asof": "2026-09-15",
+      "probability": 0.5396954503058978,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "cal.quarter_ungated",
+      "asof": "2026-09-15",
+      "probability": 0.5196411521128131,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 1,
+      "method": "cal.quarter_platt",
+      "asof": "2026-09-15",
+      "probability": 0.49964266403213753,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.653861362713317,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.6777636909606025,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.6632671328181031,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.6685737271303709,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.6510366961540135,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.6733255419694485,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.6599068163807837,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.6646607750997368,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.6564516687905124,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.6753936958511647,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.6653542467642191,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.6666725212559869,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.6560482665516297,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.6775930575129786,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.664871878368468,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.6689689419402037,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.4765434450015788,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.7047038329752805,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.7229207955922891,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.7175697838605567,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.7105646100125442,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.7072913698459565,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.7240501184790027,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.7196451513390681,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.7122292603666288,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.7456915380413305,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.7660633181452899,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.7573839299148964,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.755258552827466,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.7435464120711278,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.7639877324902736,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.7546908714851392,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.7535792377854835,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_5y_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.585534811390914,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "frequency_5y",
+      "asof": "2026-09-15",
+      "probability": 0.4987572493786247,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "market4_5y",
+      "asof": "2026-09-15",
+      "probability": 0.5818353672632653,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.6401957455603347,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.6680160058452526,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.6535244414434117,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.6548766428504172,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.6385402458771571,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.6674432674969161,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.6516671753047851,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.6545454169893955,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.6445527104960007,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.6677625417933725,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.6578585289869419,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.6545515229318245,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.6442875679896058,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.6740347578016502,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.6572919232298479,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.6612877244185166,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.48758354546805166,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e10.native_bce.U",
+      "asof": "2026-09-15",
+      "probability": 0.5008754038158988,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.6916907684290635,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.7125664890480247,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.7040007608585873,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.7004567955185083,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.6888063494990236,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.7056068294282207,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.7007100554203025,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.693769240738311,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.7008034210114643,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.7191487359302681,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.7123552289466115,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.7077092794134957,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.7007202545388829,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.722009240148617,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.7122736461824167,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.710655619766646,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.5152072383972754,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "bce_5y_e20.native_bce.U",
+      "asof": "2026-09-15",
+      "probability": 0.508315927789782,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5719603952832951,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.6220124604969756,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5820293852804975,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.6120163749220916,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5911908556156114,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.6400806419821908,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.6013699501575105,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.6301079044543507,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.565585410004006,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.6197707362353461,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.576056839100632,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.6093446109801367,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.5631361392623154,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.6188354830746704,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5732191026006324,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.6087748730594204,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.5137468141803827,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.5701650998724587,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.6197223274448099,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.5799210823424636,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.6101614821420783,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.5846679042027799,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.6341864342540738,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.5944395272523532,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.6246687688645489,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.5668958143140984,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.6184794847769124,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.576411398935614,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.609166002044609,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.5649285849151983,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.6182121015279979,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.5747895040705081,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.6085512594723038,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_3y_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.5272870509720576,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "frequency_3y",
+      "asof": "2026-09-15",
+      "probability": 0.5055401662049861,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "market4_3y",
+      "asof": "2026-09-15",
+      "probability": 0.5813065084896469,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.6495804775781044,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.6770242388465704,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.6711304374880903,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.6564668122355455,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.6553864737248346,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.691495597721887,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.676439848540526,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.6718387956217189,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.6455662782188903,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.6739371580974671,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.6668461752837347,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.6541987074262877,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.6453493166119624,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.6770396947549125,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.6661906361648938,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.6577222497119145,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e10.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.4941394473943614,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.add.U",
+      "asof": "2026-09-15",
+      "probability": 0.7276189922163298,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.add.W",
+      "asof": "2026-09-15",
+      "probability": 0.7733622867996574,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.add.I",
+      "asof": "2026-09-15",
+      "probability": 0.7438179532510949,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.add.S",
+      "asof": "2026-09-15",
+      "probability": 0.7583802113736503,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.vol.U",
+      "asof": "2026-09-15",
+      "probability": 0.7318845969272777,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.vol.W",
+      "asof": "2026-09-15",
+      "probability": 0.7757952382863128,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.vol.I",
+      "asof": "2026-09-15",
+      "probability": 0.7481625788412508,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.vol.S",
+      "asof": "2026-09-15",
+      "probability": 0.7607299993403224,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_joint.U",
+      "asof": "2026-09-15",
+      "probability": 0.7424568454362004,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_joint.W",
+      "asof": "2026-09-15",
+      "probability": 0.7813105415878755,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_joint.I",
+      "asof": "2026-09-15",
+      "probability": 0.7585240353713859,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_joint.S",
+      "asof": "2026-09-15",
+      "probability": 0.7663153310391747,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_fixed.U",
+      "asof": "2026-09-15",
+      "probability": 0.742439386323483,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_fixed.W",
+      "asof": "2026-09-15",
+      "probability": 0.7815204826113971,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_fixed.I",
+      "asof": "2026-09-15",
+      "probability": 0.7583436163478257,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.order_fixed.S",
+      "asof": "2026-09-15",
+      "probability": 0.7666902889648108,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "mse_q2026_e20.scalar_probe.U",
+      "asof": "2026-09-15",
+      "probability": 0.5941366698984473,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "frequency_q2026",
+      "asof": "2026-09-15",
+      "probability": 0.5053941908713693,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "market4_q2026",
+      "asof": "2026-09-15",
+      "probability": 0.5868403045750858,
+      "training_cutoff": "2026-06-30",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "constant_0.5",
+      "asof": "2026-09-15",
+      "probability": 0.5,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "always_up",
+      "asof": "2026-09-15",
+      "probability": 1.0,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "always_down",
+      "asof": "2026-09-15",
+      "probability": 0.0,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "cal.quarter_four_state",
+      "asof": "2026-09-15",
+      "probability": 0.7072913698459565,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "cal.month_four_state",
+      "asof": "2026-09-15",
+      "probability": 0.7072913698459565,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "cal.quarter_pooled",
+      "asof": "2026-09-15",
+      "probability": 0.7635485030950887,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "cal.quarter_ungated",
+      "asof": "2026-09-15",
+      "probability": 0.7072913698459565,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    },
+    {
+      "h": 5,
+      "method": "cal.quarter_platt",
+      "asof": "2026-09-15",
+      "probability": 0.7072913698459565,
+      "training_cutoff": "2025-12-31",
+      "state": 1,
+      "matured": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:40:07.085272+00:00",
+  "checks": [
+    "exclusive concurrent-run lock",
+    "no immature labels",
+    "independent H5 close-to-close arithmetic",
+    "idempotent settlement",
+    "halt/missing bar never compresses calendar or becomes a win",
+    "cash dividend entitlement across ex-date",
+    "official holiday-aware target dates",
+    "pre-close blocked",
+    "stale-day backfill blocked",
+    "package expiry blocked",
+    "same-day duplicate blocked",
+    "stale quote blocked",
+    "historical vendor revision blocked",
+    "event tamper detected",
+    "snapshot tamper detected",
+    "expired package still settles existing records without inference"
+  ],
+  "simulation": "temporary test directories only; no production events created"
+}

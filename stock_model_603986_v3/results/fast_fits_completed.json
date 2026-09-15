@@ -1,0 +1,133 @@
+{
+  "completed_utc": "2026-09-15T14:28:55.422451+00:00",
+  "fits": [
+    {
+      "cutoff": "2022-12-31",
+      "name": "own",
+      "n": 819,
+      "dimension": 8,
+      "rank": 9,
+      "gradient_inf": 1.800989912759121e-14
+    },
+    {
+      "cutoff": "2022-12-31",
+      "name": "market",
+      "n": 819,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 4.638368682197136e-13
+    },
+    {
+      "cutoff": "2022-12-31",
+      "name": "sector",
+      "n": 819,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 6.329121254866621e-13
+    },
+    {
+      "cutoff": "2022-12-31",
+      "name": "both",
+      "n": 819,
+      "dimension": 16,
+      "rank": 17,
+      "gradient_inf": 2.4732967410234785e-12
+    },
+    {
+      "cutoff": "2023-12-31",
+      "name": "own",
+      "n": 1028,
+      "dimension": 8,
+      "rank": 9,
+      "gradient_inf": 5.040889580754104e-15
+    },
+    {
+      "cutoff": "2023-12-31",
+      "name": "market",
+      "n": 1028,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 5.624016877203708e-14
+    },
+    {
+      "cutoff": "2023-12-31",
+      "name": "sector",
+      "n": 1028,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 3.596753971046862e-14
+    },
+    {
+      "cutoff": "2023-12-31",
+      "name": "both",
+      "n": 1028,
+      "dimension": 16,
+      "rank": 17,
+      "gradient_inf": 1.2949710748166865e-13
+    },
+    {
+      "cutoff": "2024-12-31",
+      "name": "own",
+      "n": 1211,
+      "dimension": 8,
+      "rank": 9,
+      "gradient_inf": 4.4082576131088125e-15
+    },
+    {
+      "cutoff": "2024-12-31",
+      "name": "market",
+      "n": 1211,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 5.937893406138262e-14
+    },
+    {
+      "cutoff": "2024-12-31",
+      "name": "sector",
+      "n": 1211,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 1.636820019801366e-14
+    },
+    {
+      "cutoff": "2024-12-31",
+      "name": "both",
+      "n": 1211,
+      "dimension": 16,
+      "rank": 17,
+      "gradient_inf": 8.221049709045136e-14
+    },
+    {
+      "cutoff": "2025-12-31",
+      "name": "own",
+      "n": 1211,
+      "dimension": 8,
+      "rank": 9,
+      "gradient_inf": 4.90059381963448e-17
+    },
+    {
+      "cutoff": "2025-12-31",
+      "name": "market",
+      "n": 1211,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 2.1718737919229625e-15
+    },
+    {
+      "cutoff": "2025-12-31",
+      "name": "sector",
+      "n": 1211,
+      "dimension": 12,
+      "rank": 13,
+      "gradient_inf": 2.211772431870429e-16
+    },
+    {
+      "cutoff": "2025-12-31",
+      "name": "both",
+      "n": 1211,
+      "dimension": 16,
+      "rank": 17,
+      "gradient_inf": 4.018595352317522e-15
+    }
+  ]
+}

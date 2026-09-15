@@ -1,0 +1,133 @@
+{
+  "stock": "603986",
+  "data_end": "2026-09-15",
+  "input_bars": 125,
+  "horizons": [
+    1,
+    5
+  ],
+  "target": "gross close(t) to close(t+H), corporate-action entitlement adjusted; no trading execution claim",
+  "annual_cutoffs": [
+    "2022-12-31",
+    "2023-12-31",
+    "2024-12-31",
+    "2025-12-31"
+  ],
+  "quarterly_full_cutoffs": [
+    "2026-03-31",
+    "2026-06-30"
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "epochs": [
+    10,
+    20
+  ],
+  "neural_fits": 84,
+  "primary": "mse_5y_e20.vol.U",
+  "threshold": 0.5,
+  "backbone": "fresh 38551 parameter raw fixed-patch regularized Crossformer; no pretrained weights",
+  "training": "AdamW lr .001 wd .1, dropout .3, batch 128 natural epochs; MSE standardized returns or BCE raw return>0; .1 auxiliary MSE on next H bars only",
+  "probability_heads": {
+    "methods": [
+      "add",
+      "vol",
+      "order_joint",
+      "order_fixed"
+    ],
+    "schemes": [
+      "U",
+      "W",
+      "I",
+      "S"
+    ],
+    "ridge": 0.01,
+    "clip": [
+      0.01,
+      0.99
+    ],
+    "half_life_days": 730.5
+  },
+  "auxiliary_ablation": "10 vs 20 checkpoints; no new Huber/balanced-batch/no-aux search; nominal batch imbalance diagnosed",
+  "controls": [
+    "training_frequency_same_members",
+    "market4_same_members",
+    "constant_0.5",
+    "always_up",
+    "always_down",
+    "BCE_native"
+  ],
+  "calibration": {
+    "source": "causal annual OOS primary ensemble only",
+    "train_daily": 252,
+    "validation_daily": 63,
+    "purge": "all train label endpoints strictly before first validation anchor",
+    "min_train_nonoverlap": 10,
+    "min_validation_nonoverlap": 5,
+    "ridge_sum_loss": 20,
+    "offset_cap": 0.5,
+    "accept": "Brier improves >1e-12 and correct count does not fall; no refit after validation",
+    "policies": [
+      "quarter_four_state",
+      "month_four_state",
+      "quarter_pooled",
+      "quarter_ungated",
+      "quarter_platt"
+    ],
+    "year_reset": "Q1 returns to annual baseline; no carry/renewal of old state parameters",
+    "diagnostics": [
+      "leave-one-disjoint-block validation sensitivity",
+      "adjacent-window sample reuse",
+      "actual coverage vs accepted cells",
+      "state-wise next-period performance"
+    ]
+  },
+  "evaluation": {
+    "start": "2023-01-01",
+    "end": "2026-09-15",
+    "strict_common_dates_per_horizon": true,
+    "metrics": [
+      "Brier",
+      "logloss",
+      "accuracy",
+      "balanced_accuracy",
+      "AUC",
+      "probability_sd",
+      "calibration_bins",
+      "per_year",
+      "per_state",
+      "seed_variability"
+    ],
+    "bootstrap_blocks": [
+      20,
+      40
+    ],
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 603986,
+    "primary_comparisons": "primary vs training_frequency and market4 in H1/H5, Brier differences; Holm 4 primary comparisons",
+    "secondary": "all other comparisons descriptive exploratory; no post-result promotion; historical dates previously researched",
+    "weekly_overlap": "daily H5 labels remain overlapping; greedy disjoint counts are not effective N"
+  },
+  "integrity": [
+    "no future data in inputs/scales/states/labels",
+    "independent target math",
+    "H1 no H5 maturity delay",
+    "future suffix and prefix replay",
+    "checkpoint and feature replay",
+    "head optimality and residual rank",
+    "pending targets excluded from scores",
+    "no historical prediction inserted into prospective ledger",
+    "old files preserved"
+  ],
+  "limitations": [
+    "single stock selected by user, not survivorship-free universe",
+    "retrospective vendor history not PIT revision archive",
+    "no intraday/news/fundamentals data",
+    "not full paper reproduction",
+    "no profitability test or same-close executable entry assumption",
+    "quarterly full-refit test limited to 2026; no expanding neural refit, HMM, trigger search or old-state memory policy in this round"
+  ]
+}

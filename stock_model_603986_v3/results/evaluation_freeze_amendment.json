@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-15T14:34:57.518477+00:00",
+  "before_slow_scoring": true,
+  "reason": "Implement two protocol-declared comparator details omitted in initial scoring code: constant .5; calibration frequency falls back to base training frequency (not raw neural probability). No fit, primary candidate, contrast, calibration or metric change. Original sources and original evaluation freeze retained.",
+  "previous_freeze_sha256": "49d279b6581e6ff5e8c7b46f20af902348195a26608cab2ce1426fd3a6c141f5",
+  "files": {
+    "slow3.py": "18d937ff5a12fe687350227b25fb28cda2eefe1653b6d47b0a0b489a6cb8ff69",
+    "verify3.py": "6b6a16d8b249066c3bbb4be092b2e3c905b3b88e1e07beb2b9cdb73d9c2e824a"
+  },
+  "previous_sources": {
+    "slow3.py": "163423cf5189c45e3341ed1c91447976f470a24f92876fd37a24e9410941f2d7",
+    "verify3.py": "ca13c4b74fb5dd5ce5c97c52f9c759b3b7e206a9ebe3e5b8f7c7d623edb7956e"
+  }
+}

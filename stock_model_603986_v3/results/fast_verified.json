@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T14:28:58.856188+00:00",
+  "train_prefix_checks": 16,
+  "fit_gradient_checks": 16,
+  "common_test_n": 897,
+  "all_training_rows_have_context": true,
+  "source": "official CNI close prices and Tencent CSI300; OHLC/volume missing in older CNI records unused"
+}

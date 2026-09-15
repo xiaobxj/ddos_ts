@@ -1,0 +1,56 @@
+[
+  {
+    "h": 1,
+    "mature_daily": 897,
+    "pending_daily": 1,
+    "greedy_max_disjoint": 897,
+    "covered_return_edges": 897,
+    "mean_edge_reuse": 1.0,
+    "max_edge_reuse": 1,
+    "first_signal": "2023-01-03",
+    "last_mature_signal": "2026-09-14",
+    "last_label": "2026-09-15",
+    "friday_only_primary": {
+      "n": 176,
+      "correct": 86,
+      "accuracy": 0.48863636363636365,
+      "balanced_accuracy": 0.48888888888888893,
+      "auc": 0.5015503875968992,
+      "brier": 0.25495976760030353,
+      "logloss": 0.7039214387076808,
+      "actual_up_frequency": 0.5113636363636364,
+      "predicted_up_fraction": 0.48863636363636365,
+      "probability_mean": 0.4947732388751369,
+      "probability_sd": 0.06361602523610785,
+      "probability_min": 0.2148733015744451,
+      "probability_max": 0.6586142787630527
+    }
+  },
+  {
+    "h": 5,
+    "mature_daily": 893,
+    "pending_daily": 5,
+    "greedy_max_disjoint": 179,
+    "covered_return_edges": 897,
+    "mean_edge_reuse": 4.977703455964326,
+    "max_edge_reuse": 5,
+    "first_signal": "2023-01-03",
+    "last_mature_signal": "2026-09-08",
+    "last_label": "2026-09-15",
+    "friday_only_primary": {
+      "n": 175,
+      "correct": 100,
+      "accuracy": 0.5714285714285714,
+      "balanced_accuracy": 0.5713819226750261,
+      "auc": 0.5442789968652038,
+      "brier": 0.2597643291703892,
+      "logloss": 0.7162328621856499,
+      "actual_up_frequency": 0.5028571428571429,
+      "predicted_up_fraction": 0.5085714285714286,
+      "probability_mean": 0.5035130040608007,
+      "probability_sd": 0.1246554557592188,
+      "probability_min": 0.19197112078043677,
+      "probability_max": 0.8181124518328001
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "cutoffs": 9,
+  "neural_fits": 27,
+  "prefix_memberships": "exact",
+  "data_end": "2026-09-15"
+}

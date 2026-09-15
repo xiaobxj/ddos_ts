@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-15T13:45:30.253699+00:00",
+  "checks": [
+    "H1 positive held-out alignment passes",
+    "H1 opposite validation outcomes reject",
+    "H1 future endpoint mutations have no effect",
+    "H1 Q1 reset enforced",
+    "H1 unsupported states fall back",
+    "H5 positive held-out alignment passes",
+    "H5 opposite validation outcomes reject",
+    "H5 future endpoint mutations have no effect",
+    "H5 Q1 reset enforced",
+    "H5 unsupported states fall back",
+    "Brier tie does not pass",
+    "Strict probability threshold .5",
+    "Constant reference Brier .25",
+    "H1 raw-up vs standardized-positive mismatch detected in 17 training rows",
+    "H5 raw-up vs standardized-positive mismatch detected in 37 training rows"
+  ],
+  "synthetic_only": "Business-day fixture is not an exchange calendar or forecast record"
+}
