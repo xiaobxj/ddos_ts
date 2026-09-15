@@ -1,0 +1,74 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "states": [
+    "negative_low",
+    "negative_high",
+    "nonnegative_low",
+    "nonnegative_high"
+  ],
+  "state_definition": "Four coarse observable groups, not learned or validated hidden regimes. Trend sign uses inherited trend60 =60bar close log change / (population sd of60daily log returns floored1e-8 * sqrt60). Negative if trend60<0; exactzero nonnegative. Volatility20 is inherited population sd of20daily log returns; low if <=annual mature rolling5 training median(linear .5 quantile), high otherwise. Annual calibration only; reset at priorDec31, same boundaries for every quarter, method and seed. No choice of state count, sign cutoff, quantile or features from subgroup outcomes. This is a new4cell diagnostic using existing descriptors, not the old R17sixcell partition or R29state90 update trigger.",
+  "settings": {
+    "training_weeks": 52,
+    "validation_weeks": 13,
+    "minimum_state_train": 10,
+    "minimum_state_validation": 5,
+    "ridge_sum_lambda": 20.0,
+    "absolute_logit_cap": 0.5,
+    "bisection_iterations": 60,
+    "brier_improvement_tolerance": 1e-12,
+    "annual_reset": true
+  },
+  "version": 44,
+  "experiment": "Fixed acceptance origin: availability of five new mature state weeks before unchanged expiry",
+  "scope": "Read-only metadata counts for all 84 original R40 formal state acceptances, including R18 diagnostic and three primary methods. Keep every acceptance as an independent observation origin even when a later monthly gate clears or replaces its actual record. These diagnostic tracks never alter original live or historical routing. No parameter fit, probability scoring, predictive accuracy, PnL or p values.",
+  "origins": "Formal accepted R40 state gates copied through R43 only; sourcecutoff,method,state,three seed coefficients and original evidence remain frozen. Do not choose origins by later outcomes. Deduplicate date/state events separately so repeated method acceptances are not portrayed as independent markets.",
+  "expiry": "First calendar quarter end strictly after original formal acceptance cutoff, unchanged from R42. Later formal acceptances do not reset an earlier diagnostic origin. At decision D>=expiry that old source is no longer actionable for subsequent signals. Count-only feasibility is distinct from parameter validity or authorization to retain a cleared/expired coefficient.",
+  "pool": "Original 272 weekly observations, deduplicated across four methods and three seeds after metadata equality checks. Counting uses only row_index,date,joint_completed,state,year and encoder_cutoff; never labels, returns or probabilities. A new observation means joint_completed strictly after sourcecutoff and no later than checkpoint. Signal date can precede sourcecutoff when its label was not mature yet; record this explicitly.",
+  "cadence": "Preplanned monthly calendar checkpoints source<D<=expiry. Include checkpoint at expiry for endpoint diagnostics, but primary actionable decision must satisfy D<expiry. All observed checkpoints are <=fixed label_end2026-08-31; Aug31 is a metadata-only extension beyond original candidate schedule lastJul31, with no new model/head/gate. Later checkpoints have unknown counts and are never treated as zero.",
+  "views": {
+    "cumulative": "All matching-state original weekly observations with source<joint_completed<=checkpoint, within source annual state-boundary year. This is the primary information-arrival count.",
+    "rolling13": "Intersect the same novel set with the latest13 overall mature original weekly observations at checkpoint, matching original validation-memory capacity. Report drops rather than assume all cumulative evidence remains in current validation."
+  },
+  "threshold": "Fixed5 unique state weeks; no threshold/expiry/state/cadence search. At every observed checkpoint record n>=5, terminal equality versus usable pre-expiry, original metadata provenance, fifth maturity date for cumulative, earliest decision for each view, remaining known signal opportunities after that decision and through expiry.",
+  "classification": "Per origin/view: reached_before_expiry if any observed checkpoint D<expiry has count>=5; reached_only_at_expiry if complete observation through expiry and only endpoint has count>=5; not_reached_by_expiry if complete lifetime but never enough; observation_censored if lifetime incomplete and no observed pre-expiry hit. Censored is not a negative result. Also classify scheduled_firstopportunity before expiry with zero remaining observed signal coverage separately via coverage fields; do not invent post-data signals.",
+  "availability": "Readiness is information capacity only. Count observed future signal dates strictly later than first ready decision and <=min(expiry,label_end), distinguishing same-state from all-state weeks and recording right censoring. Counts do not prove old/new parameters pass Brier or direction gates.",
+  "outputs": "Freeze all84 origins and deduplicated metadata before counting; retain all planned checkpoints including unknown future ones and all zero-evidence origins. Per-origin histories and source-week membership, view summaries by source year/early/recent/all and method, unique date/state events, only count-based feasibility. Original 23 histories, prediction and metric files byte-identical; 5800 old files unchanged.",
+  "verification": "Independent calendar month/quarter arithmetic, origin/metadata/source membership and earliest-readiness classification. Synthetic checks for inclusive maturity cutoff, strict old-source pre-expiry actionability, immature labels with earlier signal dates, duplicate observations, rolling13 capacity, no reset at lateracceptance and rightcensoring. Poison labels/probabilities/outcomes and nonaccepted/later source-gate fields without altering metadata; count outputs invariant. At every observed checkpoint remove as-yet immature metadata rows and require current count invariant. No future membership used in earlier readiness.",
+  "limitations": "All source history previously examined. This experiment changes only diagnostic anchoring and looks at sample availability, not strategy performance. Sources overlap in time and can share evidence; unique origin/week pairs are not independent sample size. Cumulative data may differ from retained13-window data. Existing source selection is conditioned on earlier formal validation. No new blindholdout or baseline promotion.",
+  "preserved_results": "Original old-budget R25 recent73/12558.4%; natural20annualR25 71/12556.8%; R39quarterR23 73/12558.4%; R42 R19/R23/R25 recent69/72/71 correct unchanged.",
+  "budgets": {
+    "sources": 8,
+    "old_files": 5800,
+    "origins": 84,
+    "primary_origins": 65,
+    "views": 2,
+    "original_weeks": 272,
+    "original_histories": 23,
+    "original_model_rows": 100096,
+    "original_ensemble_rows": 37536,
+    "new_fits": 0,
+    "new_policies": 0,
+    "new_pvalues": 0
+  },
+  "last_original_candidate_cutoff": "2026-07-31"
+}

@@ -1,0 +1,30 @@
+             period                 history                  method  correct_directions   n    brier
+extension_2021_2023   monthly_state_ungated learned_order_extension                  68 147 0.275006
+extension_2021_2023   monthly_state_ungated    learned_order_offset                  68 147 0.274909
+extension_2021_2023   monthly_state_ungated learned_vol_interaction                  69 147 0.276896
+extension_2021_2023 monthly_state_validated learned_order_extension                  67 147 0.275831
+extension_2021_2023 monthly_state_validated    learned_order_offset                  67 147 0.275735
+extension_2021_2023 monthly_state_validated learned_vol_interaction                  70 147 0.277601
+extension_2021_2023       rolling5_annual20 learned_order_extension                  68 147 0.276195
+extension_2021_2023       rolling5_annual20    learned_order_offset                  68 147 0.276108
+extension_2021_2023       rolling5_annual20 learned_vol_interaction                  71 147 0.277967
+   recent_2024_2026   monthly_state_ungated learned_order_extension                  69 125 0.247948
+   recent_2024_2026   monthly_state_ungated    learned_order_offset                  68 125 0.247957
+   recent_2024_2026   monthly_state_ungated learned_vol_interaction                  71 125 0.245439
+   recent_2024_2026 monthly_state_validated learned_order_extension                  71 125 0.249923
+   recent_2024_2026 monthly_state_validated    learned_order_offset                  70 125 0.249946
+   recent_2024_2026 monthly_state_validated learned_vol_interaction                  68 125 0.247415
+   recent_2024_2026       rolling5_annual20 learned_order_extension                  72 125 0.249790
+   recent_2024_2026       rolling5_annual20    learned_order_offset                  71 125 0.249824
+   recent_2024_2026       rolling5_annual20 learned_vol_interaction                  68 125 0.246843
+          year_2026   monthly_state_ungated learned_order_extension                  14  30 0.253837
+          year_2026   monthly_state_ungated    learned_order_offset                  14  30 0.253782
+          year_2026   monthly_state_ungated learned_vol_interaction                  13  30 0.254458
+          year_2026 monthly_state_validated learned_order_extension                  16  30 0.257140
+          year_2026 monthly_state_validated    learned_order_offset                  16  30 0.257098
+          year_2026 monthly_state_validated learned_vol_interaction                  12  30 0.258700
+          year_2026       rolling5_annual20 learned_order_extension                  16  30 0.257140
+          year_2026       rolling5_annual20    learned_order_offset                  16  30 0.257098
+          year_2026       rolling5_annual20 learned_vol_interaction                  12  30 0.257501
+
+EXIT_CODE=0

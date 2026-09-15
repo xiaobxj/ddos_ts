@@ -1,0 +1,20 @@
+[
+  {
+    "device": "cuda",
+    "dims": 5,
+    "batch": 128,
+    "steps": 12,
+    "seconds": 1.7553647000167985,
+    "seconds_per_step": 0.14628039166806653,
+    "parameters": 138441
+  },
+  {
+    "device": "cuda",
+    "dims": 20,
+    "batch": 128,
+    "steps": 12,
+    "seconds": 1.34895260000485,
+    "seconds_per_step": 0.11241271666707082,
+    "parameters": 150996
+  }
+]

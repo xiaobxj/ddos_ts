@@ -1,0 +1,24 @@
+{
+  "status": "LAYOUT_ONLY",
+  "completed_utc": "2026-09-13T07:43:48.004598+00:00",
+  "reason": "Rightmost long x-axis label touched the image boundary in the initial forecast chart. Increase right margin from1% to5%.",
+  "source_script_sha256": "c1b6a709d0603d72562b79855d91064f92e3700f0e8fdf8531c88deb5fb55237",
+  "render_helper_sha256": "535e0fe99351fb34ac040e7d5ed01b8dae0ef77bf9777dd72343d7d023e546ab",
+  "source_metrics_sha256": "5e468e2a64b44a60a4a5602a7719d03db12894015eb3ee05b5515fa988310dc2",
+  "initial_report_manifest_sha256": "1696d37bfb4c0ade1c20c5070cb34d1d4610de511527159166f58dab000ec85f",
+  "initial_artifacts": {
+    "results\\state_forecast_2026.png": {
+      "archive": "results\\state_forecast_2026_initial.png",
+      "sha256": "7c9b7f1767c0871590bdee4aab4fb903fa9224fd5a4adacc6a8cb3fda2db4f1b"
+    },
+    "results\\state_forecast_2026.svg": {
+      "archive": "results\\state_forecast_2026_initial.svg",
+      "sha256": "db9231255e63208540a9db11c1512f1d244388d049b8b07cfcd518174ef62abf"
+    }
+  },
+  "new_artifacts": {
+    "results\\state_forecast_2026.png": "7a695fac348f4efd458c4dcf98ec2bfd0a91b0b736d09f71d932c94ca8f5b2e0",
+    "results\\state_forecast_2026.svg": "7be4e33043f844e8e8f6eed625dc40636db12a1206476907905d5c0c9634b1ed"
+  },
+  "predictions_and_numbers_unchanged": true
+}

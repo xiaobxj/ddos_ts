@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T10:35:09.102257+00:00",
+  "numeric_facts": [
+    {
+      "cutoff": "2026-03-31",
+      "state": "nonnegative_low",
+      "counts": [
+        44,
+        8,
+        2
+      ],
+      "residual_pp": [
+        -15.3,
+        -23.59,
+        46.56
+      ]
+    },
+    {
+      "cutoff": "2026-06-30",
+      "state": "nonnegative_high",
+      "counts": [
+        36,
+        6,
+        2
+      ],
+      "residual_pp": [
+        23.47,
+        21.44,
+        -48.7
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "view": "daily",
+      "cells": 12,
+      "same_cells": 8
+    },
+    {
+      "period": "extension_2021_2023",
+      "view": "friday",
+      "cells": 12,
+      "same_cells": 8
+    },
+    {
+      "period": "recent_2024_2026",
+      "view": "daily",
+      "cells": 7,
+      "same_cells": 4
+    },
+    {
+      "period": "recent_2024_2026",
+      "view": "friday",
+      "cells": 7,
+      "same_cells": 3
+    },
+    {
+      "period": "pooled_2021_2026",
+      "view": "daily",
+      "cells": 19,
+      "same_cells": 12
+    },
+    {
+      "period": "pooled_2021_2026",
+      "view": "friday",
+      "cells": 19,
+      "same_cells": 11
+    }
+  ],
+  "checks": [
+    "2026 residual examples and signs",
+    "execution-overlap counts",
+    "cross-period agreement counts",
+    "strict retrospective support counts",
+    "Brier terms and93.7percent fraction",
+    "old2025improvement and2026regression retained",
+    "verification counts",
+    "report artifacts and visual review"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "13b2a40142c8cfca842eb94bba3d81d2f12ad1a3359898e4ac6f2b698265216e",
+    "results/visual_review.json": "47b1d8f7597cb9f0f76f18a54d9d6b47fba73cf04a0d8aa20b7610d4bc5b4814"
+  }
+}

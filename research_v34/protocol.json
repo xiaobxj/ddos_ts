@@ -1,0 +1,351 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "neural": {
+    "recipe": "R6 combined full-history MSE20 / R13",
+    "parameters": 38551,
+    "epochs": 20,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "objective": "Training-standardized execution-return MSE + .1 * training-standardized 5-bar OHLCV auxiliary MSE",
+    "input": "Raw 125 observed bars, fixed 25x5 patches; per-window log OHLC/log1p volume normalization, no pretrained tokenizer",
+    "runtime": "Existing CUDA deterministic float32 environment; TF32 off; four CPU threads; no installations"
+  },
+  "probe": {
+    "slope_parameters": 25,
+    "intercept_parameters": 1,
+    "l2_lambda": 0.01,
+    "objective": "Mean unweighted binary log loss plus lambda/2 times sum of squared slopes in standardized coordinates. Intercept is not penalized. No auxiliary or return loss. Initialize slopes0 and intercept logit(training_up_frequency). Same single regularization value and full-batch float64 Newton solver for both families. No lambda, window, feature, seed or threshold search.",
+    "max_iterations": 100,
+    "gradient_infinity_tolerance": 1e-09,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14
+  },
+  "offset_probe": {
+    "l2_lambda": 0.01,
+    "max_iterations": 100,
+    "gradient_absolute_tolerance": 1e-10,
+    "line_search_max_steps": 40,
+    "armijo": 0.0001,
+    "objective_roundoff_allowance": 1e-14,
+    "initial_gamma": 0.0,
+    "free_intercepts": 0
+  },
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-03-31",
+    "2021-06-30",
+    "2021-09-30",
+    "2021-12-31",
+    "2022-03-31",
+    "2022-06-30",
+    "2022-09-30",
+    "2022-12-31",
+    "2023-03-31",
+    "2023-06-30",
+    "2023-09-30",
+    "2023-12-31",
+    "2024-03-31",
+    "2024-06-30",
+    "2024-09-30",
+    "2024-12-31",
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30",
+    "2025-12-31",
+    "2026-03-31",
+    "2026-06-30"
+  ],
+  "version": 34,
+  "experiment": "Annual transformations with fraction-limited quarterly coefficient updates",
+  "policies": [
+    "rolling5_matched",
+    "rolling5_annual20",
+    "rolling5_quarterly20",
+    "state90",
+    "error16",
+    "shadow_trial",
+    "annual_quarter_half",
+    "annual_net_quarter_head",
+    "fixed_transform_step25",
+    "fixed_transform_step50",
+    "fixed_transform_step100"
+  ],
+  "updates": [
+    {
+      "history": "fixed_transform_step25",
+      "alpha": 0.25,
+      "role": "primary"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "alpha": 0.5,
+      "role": "sensitivity"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "alpha": 1.0,
+      "role": "unrestricted_coefficient_control"
+    }
+  ],
+  "primary_comparisons_per_window": [
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step50",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step100",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "fixed_transform_step100",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "fixed_transform_step100",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_extension",
+      "reference_history": "fixed_transform_step100",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_extension",
+      "reference_history": "fixed_transform_step100",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_offset",
+      "reference_history": "fixed_transform_step100",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_offset",
+      "reference_history": "fixed_transform_step100",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_net_quarter_head",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "annual_net_quarter_head",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_net_quarter_head",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_extension",
+      "reference_history": "annual_net_quarter_head",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_net_quarter_head",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "fixed_transform_step25",
+      "candidate": "learned_order_offset",
+      "reference_history": "annual_net_quarter_head",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    }
+  ],
+  "fixed_coordinates": "Reuse R28 annual rolling5 natural20 networks, neural target scales, rep/market clipping and standardization, supervised annual R18 rays, vol/order residual projections, means and scales. No new neural fit, feature inference, scaler or interaction fit. Reuse verified R32 raw feature banks; apply the annual transformations to each quarter training and test row. Annual interactions need not remain orthogonal on the shifted quarter training sample; do not re-residualize.",
+  "fitting": "At each nonDecember quarter end fit R18,R19,R23 ridge logistic coefficients separately on their frozen annual design matrices and same causal rolling5 daily members as R32. Original lambda=.01 penalizes slopes only, original float64 Newton tolerances. Fit R25 gamma on frozen annual order interaction with the newly fitted unrestricted same-quarter R19 as fixed offset; original gamma lambda=.01. The interaction rays remain the annual R18 ray even though the coefficient-only R18 is refit. Freeze all 204 fitted endpoints before weekly scoring.",
+  "update_rule": "For each seed/method and cutoff, theta(alpha)=theta(annual)+alpha*(theta(unrestricted quarter endpoint)-theta(annual)), including intercept and gamma. alpha=.25 primary, .50 sensitivity, 1.00 fixed-transform unrestricted control; annual source is alpha0. Alpha fixed before result computation, not selected per year/method/seed. Anchor resets to new annual model each year; always shrink toward that annual anchor, not toward the previous quarterly update. Norm of drift is alpha times endpoint drift in these fixed standardized coordinates. This is a deterministic post-fit coefficient interpolation, not a separately optimized constrained logistic optimum. It implies interpolation of annual and quarter logits within a seed; never interpolate probabilities and never sigmoid(mean seed logit). Three seed probabilities retain equal mean.",
+  "offset_semantics": "For each alpha the R25 nonorder coefficients and intercept equal the same-alpha R19 coefficients exactly. R25 gamma is interpolated between annual and unrestricted-quarter gamma. Intermediate gamma is not reoptimized conditional on interpolated R19. Record that distinction; only unrestricted endpoint is a scalar optimum.",
+  "causality": "December head and transformations are reused exactly from the corresponding annual model; Q1 predictions must equal annual. In later quarters the annual encoder remains unchanged while head training samples roll forward. Model/label maturity joint_completed<=headcutoff. Signaldate strictly>headcutoff; signal on quarterend still uses previoushead. Fivecalendar-year anchor window headcutoff-5years+1day through all joint-mature observations by headcutoff. Include all eligible weekdays, not just Fridays. Raw125bar context can precede anchor lowerbound. Neural target normalizations stay frozen at annual training; do not update neural scales. For each annualencoder reuse immutable R28 annual training decodedfeatures and annual full-year testing decodedfeatures. These memberships are disjoint. Form sorted union with all required quarterly head-trainingrows, extract only missing daily observations from this frozenencoder with original128batch featureextractor. Training interfaces select only head-trainingrows; testfeatures only used in scoring. Future rows existing in a computational bank are not training permission. Each bank stores source0annualtrain,1annualtest,2newextraction. No averaging of duplicate representations.",
+  "scoring": "All272 canonical weeks, all4 learned recipes plus native and training-frequency controls, all3 seeds. Q1 learned predictions copied exactly from annual baseline. Each candidate native is exact annual native, frequency exact full-quarterly frequency. Eight old policy predictions unchanged. 25% main candidate,50% sensitivity,100% control all reported with no retrospective winner selection.",
+  "inference": "60 predefined contrasts jointly Holm: 2 periods * (3 alphas * 3 main methods * 2 losses versus annual + main25 versus fixed100 and R32 for 3 methods * 2 losses). Existing 10000 circular8-observation bootstrap seed20260910, centered two-sided p, marginal95CI. No across-round multiplicity adjustment; comparisons are exploratory on previously viewed history. Old R32 comparisons archived unchanged.",
+  "sequencing": "Freeze protocol, all source code, inputs and4946oldfiles before fitting. Independently validate causal memberships, boundaries, source hashes, descriptors and synthetic coefficient/logit interpolation identities. Fit51 quarter-seed jobs /204 endpoints, construct612 policy coefficients and freeze before scoring. All3 policies evaluated once; no modification from observed weekly results. Independently solve endpoints, reconstruct frozen transforms, verify interpolation/R25 constraints, causal interfaces, probabilities, metrics and all60 statistical contrasts.",
+  "verification": "Independent L-BFGS-B on153 logistic endpoints and Brent roots on51 gamma endpoints. Scalar coordinate reconstruction from immutable annual pipeline, training inputs from strict causal rows. Poison all out-of-training raw features, market descriptors, order descriptors and labels; selected fitting interface must not change. Verify annual sources mature, Q1 exact annual, alpha0 endpoints, alpha1 endpoints,612 coefficient drift ratios, three-seed mean probabilities, raw native no artificial probability, all old hashes and frozen artifact phase order.",
+  "budgets": {
+    "old_files": 4946,
+    "annual_networks": 18,
+    "new_neural_fits": 0,
+    "new_feature_inference": 0,
+    "new_transform_fits": 0,
+    "new_head_jobs": 51,
+    "new_endpoint_fits": 204,
+    "derived_policy_heads": 612,
+    "reused_annual_heads": 72,
+    "weeks": 272,
+    "model_rows": 47872,
+    "ensemble_rows": 17952
+  },
+  "limits": "All272 historical outcomes already viewed; motivated by R33 attribution and thus not independent blind test. No guarantee a smaller coefficient norm drift improves prediction or preserves annual accuracy. Some neural features in-sample for head training, inherited from baseline. This intervention jointly fixes transformations and shrinks coefficients; fixed100 control isolates shrinkage conditional on fixed coordinates. It does not prove the R33 market/order components cause errors, does not remove either component, and does not imply later out-of-sample market predictability. Preserve R25 old-repeat recent73/125=58.4%. No automatic promotion, execution, cost or return claims."
+}

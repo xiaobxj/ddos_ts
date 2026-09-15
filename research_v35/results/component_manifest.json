@@ -1,0 +1,11 @@
+{
+  "status": "FROZEN",
+  "completed_utc": "2026-09-13T07:05:31.560890+00:00",
+  "protocol_sha256": "1b9e30f8d634387da2df8aec996fbc72d14ab1ea05c474b37c45db48a4fb9292",
+  "outcome_summary_started": false,
+  "artifacts": {
+    "results\\seed_effects.csv": "92f46d864559bb6a25e4cd0fd48368500179e7676cb7e18d2e32c73614e61a6f",
+    "results\\coefficient_effects.csv": "1a7677557827db10ebaa905816eb0541c3c0bcf4c30ec1fe47c9dd281664a5a9",
+    "results\\coefficient_effect_summary.csv": "3aefac8b7f151c4bbf23ce8ac8f674d5e78e4ff9ac4ba8c3b4861b5c976cd2d2"
+  }
+}

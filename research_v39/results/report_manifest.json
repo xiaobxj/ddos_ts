@@ -1,0 +1,13 @@
+{
+  "phase": "report",
+  "started_utc": "2026-09-13T15:19:58.310878+00:00",
+  "finished_utc": "2026-09-13T15:19:58.979922+00:00",
+  "protocol_sha256": "cda20f35aa213f2d084be2a9dd3b763c96b3746c5942d4dfe515d50bddd9e66e",
+  "artifacts": {
+    "results\\第三十九轮实验报告.md": "193d4ff08b235970a7e12519c9e9c8cde84ac6d2cd0826a7308b54a84a79357e",
+    "results\\yearly_accuracy.png": "d7fd3417ee3b52f9aa3da8b0234d28757ef7d0de834c50913871cb68459cea93",
+    "results\\yearly_accuracy.svg": "ddb6330e887b010924aaa4605a0ec98f5ecddd487c4e81793933f839b9b029e9",
+    "results\\correction_coverage.png": "5cfbdba63330e6f3448e2f6edc628f3bc947b2c8e325850aaffa5787bb683e20",
+    "results\\correction_coverage.svg": "d7defaeef1f7533dccf584ca1ea89fb11603800609bff4d193c962d23008b92a"
+  }
+}

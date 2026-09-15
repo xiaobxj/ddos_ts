@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-09-10T03:08:34.176607+00:00",
+  "selected_epochs": 5,
+  "rankings": [
+    {
+      "epochs": 2,
+      "rmse": 0.030526865022958576,
+      "accuracy": 0.5602836879432624
+    },
+    {
+      "epochs": 5,
+      "rmse": 0.030411429036285437,
+      "accuracy": 0.5957446808510638
+    },
+    {
+      "epochs": 10,
+      "rmse": 0.03098716295955346,
+      "accuracy": 0.524822695035461
+    }
+  ],
+  "training_mean_validation_rmse": 0.03057253221157933,
+  "zero_validation_rmse": 0.030560409554175362,
+  "selection_arm": "raw_fixed",
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "rule": "Train raw_fixed on each validation fold and seed through 10 epochs; pool mean predictions across the three seeds at epochs 2/5/10. Select the smallest validation RMSE, ties prefer fewer epochs. Freeze one epoch count for every development arm and seed. If no validation improvement vs mean-return baseline, still report development as unqualified exploratory tests, never silently expand the budget."
+}

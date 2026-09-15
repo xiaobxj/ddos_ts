@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T02:50:32.450516+00:00",
+  "numeric_facts": [
+    {
+      "period": "recent_2024_2026",
+      "n": 125,
+      "history": "monthly_state_retained",
+      "correct": [
+        69,
+        72,
+        71
+      ],
+      "brier": [
+        0.24655,
+        0.249036,
+        0.249054
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "n": 125,
+      "history": "monthly_state_validated",
+      "correct": [
+        68,
+        71,
+        70
+      ],
+      "brier": [
+        0.247415,
+        0.249923,
+        0.249946
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "n": 125,
+      "history": "weekly_state_validated",
+      "correct": [
+        69,
+        73,
+        72
+      ],
+      "brier": [
+        0.246156,
+        0.248903,
+        0.248933
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "n": 125,
+      "history": "rolling5_annual20",
+      "correct": [
+        68,
+        72,
+        71
+      ],
+      "brier": [
+        0.246843,
+        0.24979,
+        0.249824
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "n": 147,
+      "history": "monthly_state_retained",
+      "correct": [
+        70,
+        67,
+        67
+      ],
+      "brier": [
+        0.277601,
+        0.275831,
+        0.275735
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "n": 147,
+      "history": "monthly_state_validated",
+      "correct": [
+        70,
+        67,
+        67
+      ],
+      "brier": [
+        0.277601,
+        0.275831,
+        0.275735
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "n": 147,
+      "history": "weekly_state_validated",
+      "correct": [
+        72,
+        69,
+        69
+      ],
+      "brier": [
+        0.277416,
+        0.27561,
+        0.275517
+      ]
+    },
+    {
+      "period": "pooled_2021_2026",
+      "n": 272,
+      "history": "monthly_state_retained",
+      "correct": [
+        139,
+        139,
+        138
+      ],
+      "brier": [
+        0.263331,
+        0.263517,
+        0.263474
+      ]
+    },
+    {
+      "period": "pooled_2021_2026",
+      "n": 272,
+      "history": "weekly_state_validated",
+      "correct": [
+        141,
+        142,
+        141
+      ],
+      "brier": [
+        0.26305,
+        0.263337,
+        0.2633
+      ]
+    },
+    {
+      "period": "year_2026",
+      "n": 30,
+      "history": "monthly_state_retained",
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "period": "year_2026",
+      "n": 30,
+      "history": "monthly_state_validated",
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "period": "year_2026",
+      "n": 30,
+      "history": "weekly_state_validated",
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "period": "year_2026",
+      "n": 30,
+      "history": "rolling5_annual20",
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "brier": [
+        0.257501,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "method": "learned_vol_interaction",
+      "monthly_seed_correct": [
+        66,
+        67,
+        68
+      ],
+      "retained_seed_correct": [
+        66,
+        68,
+        68
+      ],
+      "all_seed_brier_lower": true
+    },
+    {
+      "method": "learned_order_extension",
+      "monthly_seed_correct": [
+        65,
+        69,
+        69
+      ],
+      "retained_seed_correct": [
+        65,
+        70,
+        69
+      ],
+      "all_seed_brier_lower": true
+    },
+    {
+      "method": "learned_order_offset",
+      "monthly_seed_correct": [
+        65,
+        68,
+        69
+      ],
+      "retained_seed_correct": [
+        65,
+        69,
+        69
+      ],
+      "all_seed_brier_lower": true
+    }
+  ],
+  "checks": [
+    "Independent verification counts",
+    "All cited period metrics and accuracy denominators",
+    "Carry decisions, fixed origins/expiries, ages and empty followups",
+    "All carried probabilities equal quarterly on three dates",
+    "One shared recovery date and no monthly direction regressions",
+    "No early or 2026 prediction changes",
+    "Recent seed direction counts and Brier",
+    "All 36 Holm comparisons nonsignificant",
+    "Known-history and original-58.4-protocol distinctions",
+    "Next diagnostic explicitly not performed",
+    "Frozen report hashes and visual inspection"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "5577d2aebca835d938c02ec14c102dd7740099f76abf3576afde4158406e0181",
+    "results/visual_review.json": "222d761e04a6fb292c16fff2d4584e8746b6b1222154331ffea68d5c0c1df206"
+  }
+}

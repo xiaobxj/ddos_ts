@@ -1,0 +1,271 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "states": [
+    "negative_low",
+    "negative_high",
+    "nonnegative_low",
+    "nonnegative_high"
+  ],
+  "state_definition": "Four coarse observable groups, not learned or validated hidden regimes. Trend sign uses inherited trend60 =60bar close log change / (population sd of60daily log returns floored1e-8 * sqrt60). Negative if trend60<0; exactzero nonnegative. Volatility20 is inherited population sd of20daily log returns; low if <=annual mature rolling5 training median(linear .5 quantile), high otherwise. Annual calibration only; reset at priorDec31, same boundaries for every quarter, method and seed. No choice of state count, sign cutoff, quantile or features from subgroup outcomes. This is a new4cell diagnostic using existing descriptors, not the old R17sixcell partition or R29state90 update trigger.",
+  "settings": {
+    "training_weeks": 52,
+    "validation_weeks": 13,
+    "minimum_state_train": 10,
+    "minimum_state_validation": 5,
+    "ridge_sum_lambda": 20.0,
+    "absolute_logit_cap": 0.5,
+    "bisection_iterations": 60,
+    "brier_improvement_tolerance": 1e-12,
+    "annual_reset": true
+  },
+  "decision_dates": [
+    "2020-12-31",
+    "2021-01-31",
+    "2021-02-28",
+    "2021-03-31",
+    "2021-04-30",
+    "2021-05-31",
+    "2021-06-30",
+    "2021-07-31",
+    "2021-08-31",
+    "2021-09-30",
+    "2021-10-31",
+    "2021-11-30",
+    "2021-12-31",
+    "2022-01-31",
+    "2022-02-28",
+    "2022-03-31",
+    "2022-04-30",
+    "2022-05-31",
+    "2022-06-30",
+    "2022-07-31",
+    "2022-08-31",
+    "2022-09-30",
+    "2022-10-31",
+    "2022-11-30",
+    "2022-12-31",
+    "2023-01-31",
+    "2023-02-28",
+    "2023-03-31",
+    "2023-04-30",
+    "2023-05-31",
+    "2023-06-30",
+    "2023-07-31",
+    "2023-08-31",
+    "2023-09-30",
+    "2023-10-31",
+    "2023-11-30",
+    "2023-12-31",
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31",
+    "2024-04-30",
+    "2024-05-31",
+    "2024-06-30",
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31",
+    "2025-06-30",
+    "2025-07-31",
+    "2025-08-31",
+    "2025-09-30",
+    "2025-10-31",
+    "2025-11-30",
+    "2025-12-31",
+    "2026-01-31",
+    "2026-02-28",
+    "2026-03-31",
+    "2026-04-30",
+    "2026-05-31",
+    "2026-06-30",
+    "2026-07-31"
+  ],
+  "version": 42,
+  "experiment": "Bounded retention of previously accepted state correction under validation support shortage",
+  "policy": "monthly_state_retained",
+  "references": [
+    "monthly_state_validated",
+    "weekly_state_validated",
+    "rolling5_annual20"
+  ],
+  "scope": "One new historicalrouting policy over frozen R40monthly candidate heads and gates. No neural fit, scalar refit, feature inference, cadence/state/window/lambda/cap/threshold search. Original22histories and5691oldfiles preserved. Fourlearnedmethods,3fixedseeds;R18diagnostic,3primarymethods.",
+  "retention": "A formal R40accepted gate saves its current3seed stateoffsets and sourcecutoff, with immutable expiry equal to the firstcalendarquarter-end strictly after sourcecutoff. It replaces any previous record. Only a current ready gate with training_n>=10, validation_n<5 and originalreason insufficient_validation may reuse an unexpired record from the same annualmodel/stateboundary year. Carrying does not update sourcecutoff or expiry. All other rejections clear the record, so later shortages cannot resurrect a rejected/expired record. Annualreset and January/Februaryguard clear everything. Enough currentvalidation with Brier_not_better or direction_worse clears rather than carries.",
+  "boundaries": "A record covers signals strictly after its sourcecutoff and on or before expiry. At a decisioncutoff D>=expiry the oldrecord is expired for subsequent signals. A new accepted gate at D may save a newrecord. A Friday exactly on a month/quarterend uses latestmonthlydecision strictlybefore its signaldate, thus can still use oldrecord through inclusiveexpiryday; nextday cannot. Expiry anchored to lastformalacceptance, never extended by carry. Sourceannualyear must match signalencoder and currentdecision year. Firstquarter fallback remains exactannual.",
+  "sequencing": "Freeze10sources,protocol,inputs andoldfiles; source/maturity/expirycontract; buildandfreeze all1088retentiondecisioncells using originalgates only; subsequentlyapply selected originalheadcoefficients to originalannual logits on272weeklysignals once; evaluate36comparisons; independently verify state machine, informationisolation, coefficients, predictions,metrics andstatistics; reportanddelivery. No futureoutcomes drive retention decisions.",
+  "controls": "Compare fixednewcandidate with immutable R40monthly immediatefallback, R39quarterlyvalidated and natural20annual. R40monthlydirect remains descriptive. Original native_mse andtraining_frequency copiedfromannual exactly. Sourceheadsandgates never edited. The rule does not prevent wellvalidated but laterharmfulfreshacceptances; it specifically tests handling of temporaryvalidationcountshortage.",
+  "inference": "36exploratory comparisons: newcandidate vs3references x3primarymethods x2losses(directionerror,Brier) x2fixedwindows. Circular8weekbootstrap10000seed20260910, centered2sidedp, Holm across36. No adjustment forprioradaptive research; no newblindholdout. Retention-triggering historicalcases alreadyexamined inR40/R41.",
+  "diagnostics": "Record everydecision previousrecord,source,expiry,actionandresetcause; everyseed selectedcoefficientsource; weeklydifferences versusmonthly andquarterly, retained signalcoverage and sourceage; futureemptydecisioncells retained. Distinguish carried statecells, coveredweeks, actualprobabilitychanges anddirectionchanges. Include all6years,pooled,seeds,states,R18diagnostic.",
+  "limitations": "Previouslyviewed272outcomes; this is newhistoricalrouting, not newblindtest or liveprediction. Retainedparameters can be stale; countshortage is notproof oldcorrection remainsvalid. The maxquarterhorizon was chosen frompriorresearch proposal, not optimized here. OldR25recent73/12558.4%, natural20annualR25 71/12556.8%,R39quarterR23 73/12558.4%,R37year2025gain and2026regressions kept separate.",
+  "budgets": {
+    "old_files": 5691,
+    "source_files": 10,
+    "new_policies": 1,
+    "weeks": 272,
+    "cutoffs": 68,
+    "decision_cells": 1088,
+    "new_neural_fits": 0,
+    "new_scalar_fits": 0,
+    "new_feature_inference": 0,
+    "new_learned_seed_rows": 3264,
+    "new_total_model_rows": 4352,
+    "total_model_rows": 100096,
+    "total_ensemble_rows": 37536,
+    "comparisons": 36
+  },
+  "primary_comparisons_per_window": [
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "monthly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "monthly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_extension",
+      "reference_history": "monthly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_extension",
+      "reference_history": "monthly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_offset",
+      "reference_history": "monthly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_offset",
+      "reference_history": "monthly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_retained",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    }
+  ]
+}

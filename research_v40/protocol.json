@@ -1,0 +1,356 @@
+{
+  "label_end": "2026-08-31",
+  "windows": [
+    {
+      "name": "extension_2021_2023",
+      "start": "2021-01-01",
+      "end": "2023-12-31",
+      "n": 147
+    },
+    {
+      "name": "recent_2024_2026",
+      "start": "2024-01-01",
+      "end": "2026-08-31",
+      "n": 125
+    }
+  ],
+  "seeds": [
+    20260910,
+    20260911,
+    20260912
+  ],
+  "report_python": "C:/Users/Isabel/AppData/Local/Programs/Python/Python314/python.exe",
+  "decision_dates": [
+    "2020-12-31",
+    "2021-01-31",
+    "2021-02-28",
+    "2021-03-31",
+    "2021-04-30",
+    "2021-05-31",
+    "2021-06-30",
+    "2021-07-31",
+    "2021-08-31",
+    "2021-09-30",
+    "2021-10-31",
+    "2021-11-30",
+    "2021-12-31",
+    "2022-01-31",
+    "2022-02-28",
+    "2022-03-31",
+    "2022-04-30",
+    "2022-05-31",
+    "2022-06-30",
+    "2022-07-31",
+    "2022-08-31",
+    "2022-09-30",
+    "2022-10-31",
+    "2022-11-30",
+    "2022-12-31",
+    "2023-01-31",
+    "2023-02-28",
+    "2023-03-31",
+    "2023-04-30",
+    "2023-05-31",
+    "2023-06-30",
+    "2023-07-31",
+    "2023-08-31",
+    "2023-09-30",
+    "2023-10-31",
+    "2023-11-30",
+    "2023-12-31",
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31",
+    "2024-04-30",
+    "2024-05-31",
+    "2024-06-30",
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31",
+    "2025-06-30",
+    "2025-07-31",
+    "2025-08-31",
+    "2025-09-30",
+    "2025-10-31",
+    "2025-11-30",
+    "2025-12-31",
+    "2026-01-31",
+    "2026-02-28",
+    "2026-03-31",
+    "2026-04-30",
+    "2026-05-31",
+    "2026-06-30",
+    "2026-07-31"
+  ],
+  "states": [
+    "negative_low",
+    "negative_high",
+    "nonnegative_low",
+    "nonnegative_high"
+  ],
+  "state_definition": "Four coarse observable groups, not learned or validated hidden regimes. Trend sign uses inherited trend60 =60bar close log change / (population sd of60daily log returns floored1e-8 * sqrt60). Negative if trend60<0; exactzero nonnegative. Volatility20 is inherited population sd of20daily log returns; low if <=annual mature rolling5 training median(linear .5 quantile), high otherwise. Annual calibration only; reset at priorDec31, same boundaries for every quarter, method and seed. No choice of state count, sign cutoff, quantile or features from subgroup outcomes. This is a new4cell diagnostic using existing descriptors, not the old R17sixcell partition or R29state90 update trigger.",
+  "version": 40,
+  "experiment": "Monthly versus quarterly refit and held-out validation of mature-week state probability corrections",
+  "policies": {
+    "state_gated": "monthly_state_validated",
+    "state_direct": "monthly_state_ungated"
+  },
+  "settings": {
+    "training_weeks": 52,
+    "validation_weeks": 13,
+    "minimum_state_train": 10,
+    "minimum_state_validation": 5,
+    "ridge_sum_lambda": 20.0,
+    "absolute_logit_cap": 0.5,
+    "bisection_iterations": 60,
+    "brier_improvement_tolerance": 1e-12,
+    "annual_reset": true
+  },
+  "input_role": "Only archived point-in-time natural20 rolling5 annual predictions on272Friday signals, with the R37 saved annual logits and original R36 signal-time states. Calibration training pools past annual model versions and their original annual-relative state labels. It does not retrospectively score older signals using the current network or current volatility median. Validation checks this sequential calibration rule on older base-model outputs, not proof that the latest/new-year network has been validated. No prior training-in-sample logits, extra daily rows or pre2021 model backfill.",
+  "limitations": "All272outcomes previously seen; count thresholds and memory fixed now without searching newcandidate results. Latest validation is delayed and may be small bystate; positive historical validation can fail forward. Underlying annual model versions and relative state boundaries change across pooled history. Q1fallback and earlywarmup limit coverage. This is new scalar calibration, not training or deployment of a new neural model. Old R25recent73/125=58.4%, natural20annualR25 71/125=56.8%, and2025R37localgain retained separately.",
+  "split": "Same R39 purged52train/13validation count rule at each monthly calendar end. Decision strictly earlier than the signal: a Friday on month-end still uses previous month-end. Preserve archived annual neural/head models, signal-time annual-relative state labels, maturity and original weekly panel. Refit and revalidate together; this is not validation-only cadence. No backfill before2021. Same-quarter-end candidate inputs, offsets and gates must match R39 exactly.",
+  "fitting": "State family only; four methods x three fixed seeds. Exactly R39 sum Bernoulli logloss plus20*d²/2, capabs.5,60bisection iterations, minstate train10 of52older mature weeks. No neural or feature fits, no hyperparameter search, no cumulative offsets.",
+  "validation": "Frozen offsets first, then last13mature weekly validation signals; each state requires train10 and validation5, Brier decrease>1e-12 and ensemblecorrect count no lower. Three seeds equally averaged for gate and reporting. Strict>.5up. No refit with validation labels. Insufficient support or rejected gate gives exactannual probability.",
+  "controls": "Two new monthly policies, validated and identical52train parameters ungated. Compare with immutable R39 quarterly state validated/ungated plus annual natural20baseline. December31 annual reset and January/February decisions both suppress correction to retain allQ1fallback. No new global family; all20old histories remain. Native_mse and training_frequency copy annual controls exactly.",
+  "scoring": "Latest month-end strictly before each original Friday signal routes fixed offsets by original signal state. Decisioninputs jointmature<=cutoff, training labelmature<earliestvalidation signal. Allgates frozen before subsequent historicalscoring. Samequarter dates and firstmonth forecast subset independently match R39. Moreupdates change membersandcoefficients as well as gates; distinguish chronological policychange from pure stopping-only effect.",
+  "sequencing": "Freeze13sources,protocol,inputs and5554oldfiles; contract; fit; validate; score once; evaluate60fixed comparisons and cadence diagnostics; independent verification; report and delivery. No after-score tuning. Initial nullcolumn compatibility is built into frozen verifier, only entirely undefined Briercolumns, unchanged numericaltolerances.",
+  "inference": "60exploratory comparisons: monthlygated vsquarterlygated, monthlydirect vsquarterlydirect, monthlygated vsmonthlydirect, eachmonthly vsannual; each3primarymethods x2losses x2fixedwindows. Circular8week bootstrap10000seed20260910, centered2sidedp andHolm across60. No correction forprioradaptive rounds. R18diagnostic. Allsixyears,seeds,states,emptyfuturecells retained. No newblindholdout.",
+  "diagnostics": "Fixed monthly-versus-quarterly weekly cases, Brierdifferences, probabilitychange coverage; annual-relative activation groups both,neither,monthlyonly,quarterlyonly. Gate transition register everycutoff/method/state, including suppressedQ1 andemptyfuturecells; extra-month stops/restarts compared with quarter gate. Acceptedfuture Brierworsening is retrospective, never an inputto gate. Counts of months/cells are not independenttrials or a statistical false-positive rate. More frequenttest opportunities may increasenoisyacceptances.",
+  "budgets": {
+    "old_files": 5554,
+    "new_neural_fits": 0,
+    "new_transform_fits": 0,
+    "new_feature_inference": 0,
+    "weeks": 272,
+    "cutoffs": 68,
+    "new_policies": 2,
+    "maximum_scalar_fits": 2400,
+    "head_cells": 3264,
+    "gate_cells": 1088,
+    "new_learned_seed_rows": 6528,
+    "new_total_seed_rows_with_copied_controls": 8704,
+    "total_model_rows": 95744,
+    "total_ensemble_rows": 35904,
+    "comparisons": 60
+  },
+  "primary_comparisons_per_window": [
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_validated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_ungated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "weekly_state_ungated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_ungated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_extension",
+      "reference_history": "weekly_state_ungated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_ungated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_offset",
+      "reference_history": "weekly_state_ungated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "monthly_state_ungated",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "monthly_state_ungated",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_extension",
+      "reference_history": "monthly_state_ungated",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_extension",
+      "reference_history": "monthly_state_ungated",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_offset",
+      "reference_history": "monthly_state_ungated",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_offset",
+      "reference_history": "monthly_state_ungated",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_validated",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_vol_interaction",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_vol_interaction",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_extension",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_extension",
+      "metric": "brier"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "direction_error"
+    },
+    {
+      "history": "monthly_state_ungated",
+      "candidate": "learned_order_offset",
+      "reference_history": "rolling5_annual20",
+      "reference": "learned_order_offset",
+      "metric": "brier"
+    }
+  ]
+}

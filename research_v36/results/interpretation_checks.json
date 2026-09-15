@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T07:46:38.814632+00:00",
+  "interpretation_sha256": "d8094108d8f7e1d6fed694b2567724c64d2532f02f1104172b23f528585b5cba",
+  "report_sha256": "8f76e6c58788bdc1e6bac7a0cf07f4bf9feb51ba6d338985ff06411e4f04244c",
+  "annual_counts": [
+    353,
+    334,
+    250,
+    269
+  ],
+  "added_counts": [
+    6,
+    19,
+    55,
+    36
+  ],
+  "weekly_state_counts": [
+    2,
+    10,
+    9,
+    9
+  ],
+  "label_mix_and_coverage_claims_verified": true,
+  "coverage": {
+    "annual": [
+      0.08955223880597014,
+      0.26064123825317853
+    ],
+    "added": [
+      0.008620689655172414,
+      0.25287356321839083
+    ]
+  },
+  "no_new_predictions_or_training": true,
+  "old584_preserved": true
+}

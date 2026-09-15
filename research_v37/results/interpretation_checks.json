@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T08:26:07.482585+00:00",
+  "checks": [
+    "all human-report count tables",
+    "six rounded recent Brier values and direction",
+    "2026 activation and regression counts",
+    "R23 yearly changes",
+    "all four2026 active R23 weeks",
+    "training residual examples",
+    "all48 adjusted comparisons",
+    "fit and verification counts",
+    "report artifacts unchanged",
+    "visual inspection"
+  ],
+  "numeric_count_facts": [
+    {
+      "period": "recent_2024_2026",
+      "history": "rolling5_annual20",
+      "correct": [
+        68,
+        72,
+        71
+      ],
+      "n": [
+        125,
+        125,
+        125
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "history": "annual_state_offset",
+      "correct": [
+        68,
+        71,
+        70
+      ],
+      "n": [
+        125,
+        125,
+        125
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "history": "annual_shared_offset",
+      "correct": [
+        70,
+        72,
+        71
+      ],
+      "n": [
+        125,
+        125,
+        125
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "history": "annual_state_offset_half",
+      "correct": [
+        68,
+        70,
+        69
+      ],
+      "n": [
+        125,
+        125,
+        125
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "rolling5_annual20",
+      "correct": [
+        12,
+        16,
+        16
+      ],
+      "n": [
+        30,
+        30,
+        30
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "annual_state_offset",
+      "correct": [
+        12,
+        13,
+        13
+      ],
+      "n": [
+        30,
+        30,
+        30
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "annual_shared_offset",
+      "correct": [
+        12,
+        14,
+        14
+      ],
+      "n": [
+        30,
+        30,
+        30
+      ]
+    },
+    {
+      "period": "year_2026",
+      "history": "annual_state_offset_half",
+      "correct": [
+        12,
+        13,
+        13
+      ],
+      "n": [
+        30,
+        30,
+        30
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "history": "rolling5_annual20",
+      "correct": [
+        71,
+        68,
+        68
+      ],
+      "n": [
+        147,
+        147,
+        147
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "history": "annual_state_offset",
+      "correct": [
+        67,
+        65,
+        65
+      ],
+      "n": [
+        147,
+        147,
+        147
+      ]
+    }
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "386210a94947bdae435f0b1a13f98cc166bd9ef0d7b7d297b1e26baa7b07dcac",
+    "results/visual_review.json": "cb3aa527319b0ab603baa1a60e6c0673e0ce94812238021b5eecdaadb9d8c380"
+  }
+}

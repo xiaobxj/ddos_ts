@@ -1,0 +1,6 @@
+Independent purged splits, solvers, validation gates and information isolation PASS.
+Independent forecast routing, fallback, metrics and quarter diagnostics PASS.
+Shared quarterly candidates, Q1fallback, first-month equality and cadence diagnostics PASS.
+R40 independent verification PASS.
+
+EXIT_CODE=0

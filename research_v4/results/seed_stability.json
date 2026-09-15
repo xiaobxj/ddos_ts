@@ -1,0 +1,86 @@
+[
+  {
+    "window": "common",
+    "method": "kronos_adaptive",
+    "unanimous_direction_rate": 0.2912621359223301,
+    "mean_across_seed_forecast_std": 0.0020695405673485058
+  },
+  {
+    "window": "common",
+    "method": "kronos_fixed",
+    "unanimous_direction_rate": 0.2912621359223301,
+    "mean_across_seed_forecast_std": 0.0016164568406804346
+  },
+  {
+    "window": "common",
+    "method": "kronos_permuted",
+    "unanimous_direction_rate": 0.2912621359223301,
+    "mean_across_seed_forecast_std": 0.0020094504469585694
+  },
+  {
+    "window": "common",
+    "method": "random_tokenizer_adaptive",
+    "unanimous_direction_rate": 0.2912621359223301,
+    "mean_across_seed_forecast_std": 0.0019584537184750813
+  },
+  {
+    "window": "common",
+    "method": "raw_adaptive",
+    "unanimous_direction_rate": 0.32038834951456313,
+    "mean_across_seed_forecast_std": 0.002163371390687542
+  },
+  {
+    "window": "common",
+    "method": "raw_fixed",
+    "unanimous_direction_rate": 0.6407766990291263,
+    "mean_across_seed_forecast_std": 0.0008161416522849033
+  },
+  {
+    "window": "common",
+    "method": "raw_permuted",
+    "unanimous_direction_rate": 0.3786407766990291,
+    "mean_across_seed_forecast_std": 0.0013871041488812499
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "kronos_adaptive",
+    "unanimous_direction_rate": 0.625,
+    "mean_across_seed_forecast_std": 0.002639534727241139
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "kronos_fixed",
+    "unanimous_direction_rate": 0.625,
+    "mean_across_seed_forecast_std": 0.001624834397691003
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "kronos_permuted",
+    "unanimous_direction_rate": 0.625,
+    "mean_across_seed_forecast_std": 0.002555026507681543
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "random_tokenizer_adaptive",
+    "unanimous_direction_rate": 0.625,
+    "mean_across_seed_forecast_std": 0.0020054552174695876
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "raw_adaptive",
+    "unanimous_direction_rate": 0.3541666666666667,
+    "mean_across_seed_forecast_std": 0.0026913511632420603
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "raw_fixed",
+    "unanimous_direction_rate": 0.6875,
+    "mean_across_seed_forecast_std": 0.0011970092158731691
+  },
+  {
+    "window": "post_release_sensitivity",
+    "method": "raw_permuted",
+    "unanimous_direction_rate": 0.20833333333333334,
+    "mean_across_seed_forecast_std": 0.0016246624796883125
+  }
+]

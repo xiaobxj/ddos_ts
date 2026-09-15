@@ -1,0 +1,8 @@
+history,refit_dates,neural_fits_if_run_online,head_fits_if_run_online,optimizer_steps_if_run_online,sample_presentations_if_run_online,actual_new_neural_fits,actual_new_head_fits,selected_incumbent_dates
+rolling5_annual20,6,18,72,3600,435120,0,0,
+rolling5_quarterly20,23,69,276,13800,1666920,0,0,
+state90,8,24,96,4800,579780,0,0,
+error16,9,27,108,5400,652500,0,0,
+shadow_trial,23,69,276,13800,1666920,0,0,9.0
+annual_quarter_half,23,69,276,13800,1666920,0,0,
+annual_net_quarter_head,23,18,276,3600,435120,0,204,6.0

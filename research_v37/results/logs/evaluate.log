@@ -1,0 +1,39 @@
+             period                  history                  method  correct_directions   n  accuracy    brier
+extension_2021_2023     annual_shared_offset learned_order_extension                  65 147  0.442177 0.276366
+extension_2021_2023     annual_shared_offset    learned_order_offset                  65 147  0.442177 0.276286
+extension_2021_2023     annual_shared_offset learned_vol_interaction                  66 147  0.448980 0.278101
+extension_2021_2023      annual_state_offset learned_order_extension                  65 147  0.442177 0.275735
+extension_2021_2023      annual_state_offset    learned_order_offset                  65 147  0.442177 0.275637
+extension_2021_2023      annual_state_offset learned_vol_interaction                  67 147  0.455782 0.277485
+extension_2021_2023 annual_state_offset_half learned_order_extension                  65 147  0.442177 0.275665
+extension_2021_2023 annual_state_offset_half    learned_order_offset                  65 147  0.442177 0.275573
+extension_2021_2023 annual_state_offset_half learned_vol_interaction                  68 147  0.462585 0.277420
+extension_2021_2023        rolling5_annual20 learned_order_extension                  68 147  0.462585 0.276195
+extension_2021_2023        rolling5_annual20    learned_order_offset                  68 147  0.462585 0.276108
+extension_2021_2023        rolling5_annual20 learned_vol_interaction                  71 147  0.482993 0.277967
+   recent_2024_2026     annual_shared_offset learned_order_extension                  72 125  0.576000 0.249677
+   recent_2024_2026     annual_shared_offset    learned_order_offset                  71 125  0.568000 0.249708
+   recent_2024_2026     annual_shared_offset learned_vol_interaction                  70 125  0.560000 0.246575
+   recent_2024_2026      annual_state_offset learned_order_extension                  71 125  0.568000 0.250854
+   recent_2024_2026      annual_state_offset    learned_order_offset                  70 125  0.560000 0.250870
+   recent_2024_2026      annual_state_offset learned_vol_interaction                  68 125  0.544000 0.248020
+   recent_2024_2026 annual_state_offset_half learned_order_extension                  70 125  0.560000 0.250119
+   recent_2024_2026 annual_state_offset_half    learned_order_offset                  69 125  0.552000 0.250143
+   recent_2024_2026 annual_state_offset_half learned_vol_interaction                  68 125  0.544000 0.247243
+   recent_2024_2026        rolling5_annual20 learned_order_extension                  72 125  0.576000 0.249790
+   recent_2024_2026        rolling5_annual20    learned_order_offset                  71 125  0.568000 0.249824
+   recent_2024_2026        rolling5_annual20 learned_vol_interaction                  68 125  0.544000 0.246843
+          year_2026     annual_shared_offset learned_order_extension                  14  30  0.466667 0.261401
+          year_2026     annual_shared_offset    learned_order_offset                  14  30  0.466667 0.261362
+          year_2026     annual_shared_offset learned_vol_interaction                  12  30  0.400000 0.261492
+          year_2026      annual_state_offset learned_order_extension                  13  30  0.433333 0.265715
+          year_2026      annual_state_offset    learned_order_offset                  13  30  0.433333 0.265674
+          year_2026      annual_state_offset learned_vol_interaction                  12  30  0.400000 0.265869
+          year_2026 annual_state_offset_half learned_order_extension                  13  30  0.433333 0.261296
+          year_2026 annual_state_offset_half    learned_order_offset                  13  30  0.433333 0.261254
+          year_2026 annual_state_offset_half learned_vol_interaction                  12  30  0.400000 0.261580
+          year_2026        rolling5_annual20 learned_order_extension                  16  30  0.533333 0.257140
+          year_2026        rolling5_annual20    learned_order_offset                  16  30  0.533333 0.257098
+          year_2026        rolling5_annual20 learned_vol_interaction                  12  30  0.400000 0.257501
+
+EXIT_CODE=0

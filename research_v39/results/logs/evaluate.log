@@ -1,0 +1,48 @@
+             period                 history                  method  correct_directions   n    brier
+extension_2021_2023       rolling5_annual20 learned_order_extension                  68 147 0.276195
+extension_2021_2023       rolling5_annual20    learned_order_offset                  68 147 0.276108
+extension_2021_2023       rolling5_annual20 learned_vol_interaction                  71 147 0.277967
+extension_2021_2023   weekly_global_ungated learned_order_extension                  73 147 0.267985
+extension_2021_2023   weekly_global_ungated    learned_order_offset                  73 147 0.267891
+extension_2021_2023   weekly_global_ungated learned_vol_interaction                  70 147 0.269914
+extension_2021_2023 weekly_global_validated learned_order_extension                  67 147 0.275686
+extension_2021_2023 weekly_global_validated    learned_order_offset                  67 147 0.275593
+extension_2021_2023 weekly_global_validated learned_vol_interaction                  69 147 0.277470
+extension_2021_2023    weekly_state_ungated learned_order_extension                  70 147 0.274027
+extension_2021_2023    weekly_state_ungated    learned_order_offset                  70 147 0.273930
+extension_2021_2023    weekly_state_ungated learned_vol_interaction                  71 147 0.275945
+extension_2021_2023  weekly_state_validated learned_order_extension                  69 147 0.275610
+extension_2021_2023  weekly_state_validated    learned_order_offset                  69 147 0.275517
+extension_2021_2023  weekly_state_validated learned_vol_interaction                  72 147 0.277416
+   recent_2024_2026       rolling5_annual20 learned_order_extension                  72 125 0.249790
+   recent_2024_2026       rolling5_annual20    learned_order_offset                  71 125 0.249824
+   recent_2024_2026       rolling5_annual20 learned_vol_interaction                  68 125 0.246843
+   recent_2024_2026   weekly_global_ungated learned_order_extension                  67 125 0.249022
+   recent_2024_2026   weekly_global_ungated    learned_order_offset                  67 125 0.249046
+   recent_2024_2026   weekly_global_ungated learned_vol_interaction                  69 125 0.246286
+   recent_2024_2026 weekly_global_validated learned_order_extension                  71 125 0.249998
+   recent_2024_2026 weekly_global_validated    learned_order_offset                  71 125 0.250034
+   recent_2024_2026 weekly_global_validated learned_vol_interaction                  66 125 0.248804
+   recent_2024_2026    weekly_state_ungated learned_order_extension                  68 125 0.248801
+   recent_2024_2026    weekly_state_ungated    learned_order_offset                  67 125 0.248814
+   recent_2024_2026    weekly_state_ungated learned_vol_interaction                  70 125 0.246324
+   recent_2024_2026  weekly_state_validated learned_order_extension                  73 125 0.248903
+   recent_2024_2026  weekly_state_validated    learned_order_offset                  72 125 0.248933
+   recent_2024_2026  weekly_state_validated learned_vol_interaction                  69 125 0.246156
+          year_2026       rolling5_annual20 learned_order_extension                  16  30 0.257140
+          year_2026       rolling5_annual20    learned_order_offset                  16  30 0.257098
+          year_2026       rolling5_annual20 learned_vol_interaction                  12  30 0.257501
+          year_2026   weekly_global_ungated learned_order_extension                  14  30 0.251696
+          year_2026   weekly_global_ungated    learned_order_offset                  14  30 0.251642
+          year_2026   weekly_global_ungated learned_vol_interaction                  14  30 0.253027
+          year_2026 weekly_global_validated learned_order_extension                  16  30 0.257140
+          year_2026 weekly_global_validated    learned_order_offset                  16  30 0.257098
+          year_2026 weekly_global_validated learned_vol_interaction                  11  30 0.263532
+          year_2026    weekly_state_ungated learned_order_extension                  13  30 0.255318
+          year_2026    weekly_state_ungated    learned_order_offset                  13  30 0.255264
+          year_2026    weekly_state_ungated learned_vol_interaction                  13  30 0.255995
+          year_2026  weekly_state_validated learned_order_extension                  16  30 0.257140
+          year_2026  weekly_state_validated    learned_order_offset                  16  30 0.257098
+          year_2026  weekly_state_validated learned_vol_interaction                  12  30 0.258700
+
+EXIT_CODE=0

@@ -1,0 +1,5 @@
+Independent memberships, overlap intervals and probability sources PASS.
+Independent residual metrics, decompositions and sign tallies PASS.
+R38 independent verification PASS.
+
+EXIT_CODE=0

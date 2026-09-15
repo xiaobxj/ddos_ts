@@ -1,0 +1,11 @@
+{
+  "phase": "report",
+  "started_utc": "2026-09-12T19:53:13.315045+00:00",
+  "finished_utc": "2026-09-12T19:53:13.764145+00:00",
+  "protocol_sha256": "de96ebbd3a541ef4f94893b09dfeaf8e5e0eb971848c94e1bc4d1e4ac4df0350",
+  "artifacts": {
+    "results\\第三十二轮测试报告.md": "5203806d7747ea021649dca6d93067b9aedb15efcbefadb2f757e51bc8e79440",
+    "results\\annual_net_quarter_head_yearly.png": "d2fed59eb5d70e243d91564b9c0b6d43f94cfab0b4a371848eaf62556bb235db",
+    "results\\annual_net_quarter_head_yearly.svg": "f5e44a6cc6bd73d42990668ea8c9da3b22611e3bb4f47dc8107dd2cdef90d09b"
+  }
+}

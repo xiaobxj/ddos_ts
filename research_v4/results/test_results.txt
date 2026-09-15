@@ -1,0 +1,26 @@
+== test_model.py ==
+test_all_valid_matches_official_crossformer (__main__.MaskContracts.test_all_valid_matches_official_crossformer) ... ok
+test_invalid_inputs_have_zero_gradient (__main__.MaskContracts.test_invalid_inputs_have_zero_gradient) ... ok
+test_masked_value_and_geometry_perturbations_do_not_change_output (__main__.MaskContracts.test_masked_value_and_geometry_perturbations_do_not_change_output) ... ok
+test_one_valid_patch_survives_all_scales (__main__.MaskContracts.test_one_valid_patch_survives_all_scales) ... ok
+test_training_can_fit_small_synthetic_batch (__main__.MaskContracts.test_training_can_fit_small_synthetic_batch) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.654s
+
+OK
+
+== test_data.py ==
+test_fixed_packing_preserves_every_input_value (__main__.DataContracts.test_fixed_packing_preserves_every_input_value) ... ok
+test_future_changes_cannot_change_observed_transforms (__main__.DataContracts.test_future_changes_cannot_change_observed_transforms) ... ok
+test_permutation_preserves_length_multiset_and_masks (__main__.DataContracts.test_permutation_preserves_length_multiset_and_masks) ... ok
+test_tokenizer_coordinates_are_scaled_bits_not_numeric_ids (__main__.DataContracts.test_tokenizer_coordinates_are_scaled_bits_not_numeric_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.480s
+
+OK
+
+== verify_tokenizer.py ==
+Loading weights from local directory
+Tokenizer cache independently re-encoded: PASS

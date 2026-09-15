@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "unit_tests": 9,
+  "tokenizer_windows_reencoded": 12,
+  "full_development_weeks": 103,
+  "post_release_weeks": 48,
+  "model_arms": 7,
+  "seeds_per_arm": 3,
+  "main_predictions": 1339,
+  "seed_predictions": 2163,
+  "development_checkpoints_replayed": 63,
+  "max_replayed_prediction_error": 9.996344030316351e-17,
+  "all_valid_official_crossformer_parity": true,
+  "padding_value_and_gradient_invariance": true,
+  "validation_epochs_recomputed": true,
+  "all_labels_recomputed": true,
+  "all_fold_boundaries_purged": true,
+  "fixed_permuted_adaptive_budget_matching": true,
+  "all_input_and_source_hashes_match": true,
+  "old_evidence_files_preserved": 994,
+  "daily_weekly_and_analytic_buyhold_accounting_match": true,
+  "checked_utc": "2026-09-10T03:28:22.667557+00:00"
+}

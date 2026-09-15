@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "windows_per_model": 6,
+  "models": 2,
+  "input_windows_independently_recomputed": 3785,
+  "restored_preparation_C_contiguous_layout": true,
+  "bitwise_encoding_match": true
+}

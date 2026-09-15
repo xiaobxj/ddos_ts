@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T15:23:54.970596+00:00",
+  "numeric_facts": [
+    {
+      "period": "extension_2021_2023",
+      "n": 147,
+      "annual": [
+        71,
+        68,
+        68
+      ],
+      "state_validated": [
+        72,
+        69,
+        69
+      ],
+      "annual_brier": [
+        0.277967,
+        0.276195,
+        0.276108
+      ],
+      "state_validated_brier": [
+        0.277416,
+        0.27561,
+        0.275517
+      ]
+    },
+    {
+      "period": "recent_2024_2026",
+      "n": 125,
+      "annual": [
+        68,
+        72,
+        71
+      ],
+      "state_validated": [
+        69,
+        73,
+        72
+      ],
+      "annual_brier": [
+        0.246843,
+        0.24979,
+        0.249824
+      ],
+      "state_validated_brier": [
+        0.246156,
+        0.248903,
+        0.248933
+      ]
+    },
+    {
+      "period": "pooled_2021_2026",
+      "n": 272,
+      "annual": [
+        139,
+        140,
+        139
+      ],
+      "state_validated": [
+        141,
+        142,
+        141
+      ],
+      "annual_brier": [
+        0.263664,
+        0.26406,
+        0.264029
+      ],
+      "state_validated_brier": [
+        0.26305,
+        0.263337,
+        0.2633
+      ]
+    },
+    {
+      "period": "year_2026",
+      "n": 30,
+      "annual": [
+        12,
+        16,
+        16
+      ],
+      "state_validated": [
+        12,
+        16,
+        16
+      ],
+      "annual_brier": [
+        0.257501,
+        0.25714,
+        0.257098
+      ],
+      "state_validated_brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ]
+    },
+    {
+      "method": "learned_vol_interaction",
+      "recent_seed_annual": [
+        66,
+        68,
+        68
+      ],
+      "recent_seed_state_validated": [
+        65,
+        68,
+        68
+      ]
+    },
+    {
+      "method": "learned_order_extension",
+      "recent_seed_annual": [
+        64,
+        69,
+        69
+      ],
+      "recent_seed_state_validated": [
+        64,
+        70,
+        69
+      ]
+    },
+    {
+      "method": "learned_order_offset",
+      "recent_seed_annual": [
+        64,
+        68,
+        69
+      ],
+      "recent_seed_state_validated": [
+        64,
+        69,
+        69
+      ]
+    }
+  ],
+  "checks": [
+    "Early, recent, pooled and2026 ensemble counts and Brier",
+    "All improvements concentrated on two identical signal dates across methods",
+    "Low coverage, zero-use accepted cells and2025/2026 exact R23/R25 fallback",
+    "Direct and global counterexamples retained",
+    "Per-seed differences and Brier",
+    "2026 rejected-gate examples",
+    "84Holm-adjusted comparisons and recent direction intervals",
+    "Frozen verification with narrowly scoped null compatibility and unchanged research hashes",
+    "Both report figures visually inspected and report artifacts unchanged",
+    "Old58.4percent and current natural20protocol results kept distinct"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "7ca9d2b4baec73c41d8dc683cc68ee2335306c79a7d1ea780efd23e6b8dc9710",
+    "results/visual_review.json": "34bfd4a3884b12719eaf152d4cbc47a015cec4737f44c610210f5ffa0bca12d7",
+    "results/verification_compatibility.json": "fae26153f117ecb6fc0fb768bc088bf203bd1572d0b305442d1d9a60570aa4aa",
+    "results/verification_null_compat.py.txt": "45ad85c0800d25d06cd915dee6f48cb2aead43b30e34f37da6529c8e85f974ef"
+  }
+}

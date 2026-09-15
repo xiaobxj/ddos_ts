@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-13T08:26:07.481528+00:00",
+  "images": [
+    "yearly_accuracy.png",
+    "recent_changes.png"
+  ],
+  "observations": "Both final PNGs inspected. Chinese text, labels, legends, numbers and notes visible without clipping or overlap. Yearly paths use same metric cells as report; recent bar signs label accuracy up and Brier down correctly. No presentation amendments.",
+  "artifacts": {
+    "results/yearly_accuracy.png": "3d2f997669bda13693563f61ac5fc02b1e2407a81e38681da847feb5419b1613",
+    "results/recent_changes.png": "2e353c5b232769df6ba626a89606716ec4e4b931e48837b82844cc941f4985fa",
+    "results/yearly_accuracy.svg": "63e10a29a5f1a3fb861cb0d882d73f78f20b2a05a2563ab3c5cbb0f4c36a0cbc",
+    "results/recent_changes.svg": "736507034aa02db58e0ab50166737beb6d8074d7fd506ad7795ab874cf4d5b5f"
+  }
+}

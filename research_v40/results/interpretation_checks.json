@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T01:25:04.927403+00:00",
+  "numeric_facts": [
+    {
+      "period": "recent_2024_2026",
+      "n": 125,
+      "annual": [
+        68,
+        72,
+        71
+      ],
+      "quarter": [
+        69,
+        73,
+        72
+      ],
+      "month": [
+        68,
+        71,
+        70
+      ],
+      "quarter_brier": [
+        0.246156,
+        0.248903,
+        0.248933
+      ],
+      "month_brier": [
+        0.247415,
+        0.249923,
+        0.249946
+      ]
+    },
+    {
+      "period": "extension_2021_2023",
+      "n": 147,
+      "annual": [
+        71,
+        68,
+        68
+      ],
+      "quarter": [
+        72,
+        69,
+        69
+      ],
+      "month": [
+        70,
+        67,
+        67
+      ],
+      "quarter_brier": [
+        0.277416,
+        0.27561,
+        0.275517
+      ],
+      "month_brier": [
+        0.277601,
+        0.275831,
+        0.275735
+      ]
+    },
+    {
+      "period": "pooled_2021_2026",
+      "n": 272,
+      "annual": [
+        139,
+        140,
+        139
+      ],
+      "quarter": [
+        141,
+        142,
+        141
+      ],
+      "month": [
+        138,
+        138,
+        137
+      ],
+      "quarter_brier": [
+        0.26305,
+        0.263337,
+        0.2633
+      ],
+      "month_brier": [
+        0.263729,
+        0.263925,
+        0.263883
+      ]
+    },
+    {
+      "period": "year_2026",
+      "n": 30,
+      "annual": [
+        12,
+        16,
+        16
+      ],
+      "quarter": [
+        12,
+        16,
+        16
+      ],
+      "month": [
+        12,
+        16,
+        16
+      ],
+      "quarter_brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ],
+      "month_brier": [
+        0.2587,
+        0.25714,
+        0.257098
+      ]
+    }
+  ],
+  "checks": [
+    "Four-period ensemble counts and Brier",
+    "Recent coverage and exact2026monthly-quarter equality",
+    "Complete direction changes and concrete R23 probability cases",
+    "Validation support dropout, accepted2022counterexample and following loss",
+    "Accepted state-month counts including empty future cells",
+    "Ungated local gains and early losses retained",
+    "All seeds:one increases,one decreases,one unchanged; all recent Brierworse versusquarter",
+    "60Holm comparisons",
+    "Independent audit counts",
+    "Historical protocols kept separate and no newholdout claim",
+    "Two figures visual QA and frozen report provenance"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "3bd60f820a54b743da0d2782de263eb134e3b5f2dbce622b283c5e128434b134",
+    "results/visual_review.json": "fa413646ed7dd66b06cc19a2c4828f534a6ff05725eb769762fe2816e66d784a"
+  }
+}

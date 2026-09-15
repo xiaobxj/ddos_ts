@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-14T02:50:32.448782+00:00",
+  "observations": "Both PNGs visually inspected: yearly panels have readable legends, axes, year counts and partial-2026 caption; plotted differences match metric tables. Recovery plot includes explicit zero counts, denominators, comparator and probability-versus-direction caveat. No clipped labels or problematic overlap. PNG/SVG artifact hashes match report manifest.",
+  "artifacts": {
+    "results/yearly_accuracy.png": "05af307b2e5d73a8e5c61f182c601c585e51b153e571df1a8ab8af3021a32c8b",
+    "results/yearly_accuracy.svg": "b33815bf28ef5b37cfb61c7a05fababe7f9809b046cc9e3de223230392e0ccb2",
+    "results/retention_direction_effect.png": "3eaa10565c8a75a250f97a4e663664701edced5aa6f34a00d9b2da91d93d18a2",
+    "results/retention_direction_effect.svg": "319ad0b1b99845113665c0a510f0343020b2d843dcaccd880cb5b13453af3355"
+  }
+}

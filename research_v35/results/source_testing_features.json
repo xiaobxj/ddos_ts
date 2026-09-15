@@ -1,0 +1,128 @@
+[
+  {
+    "history": "rolling5",
+    "cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2020-12-31_20260910.npz",
+    "cache_sha256": "45aaaa9513f868d41085d66572a6a681b7b4c0f1206867e1ccc652007fece758"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2020-12-31_20260911.npz",
+    "cache_sha256": "8dd75cdb0468d393108d872e862c68f943cbd8fcff7fdc6d2aa5ee7ea7c491f1"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2020-12-31_20260912.npz",
+    "cache_sha256": "fe72e471f48aac17e3564b323e371e8df3684258c8766e7cad76a2a800b2d44b"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2021-12-31_20260910.npz",
+    "cache_sha256": "3b861abf802e91fed1599dcce12857d3d91151a3fe481a34d7b92221f6407aba"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2021-12-31_20260911.npz",
+    "cache_sha256": "65e3d4eb23a4b7bef300d24cb8e852c5d6e8fc203af6ec965bdc8beb255db156"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2021-12-31_20260912.npz",
+    "cache_sha256": "087804335db1cb29082d6c42dcec084a8e893a860c26ea0de153874b2b2455a4"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2022-12-31_20260910.npz",
+    "cache_sha256": "2e17035c834d89e576ea9c0cbdbb9e7dd329bbc848fc760d0ce6074d1c59aa2e"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2022-12-31_20260911.npz",
+    "cache_sha256": "427d500af39f80b91e881721a65ede82b2ab838a563a5e6a8f2011f12d7dff70"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2022-12-31_20260912.npz",
+    "cache_sha256": "9a20a912b572da1e6a35a11d86e3b856f53076ea754076f85127a765699d8130"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2023-12-31_20260910.npz",
+    "cache_sha256": "0c3326d9811467bc59a3854e4f545f61162a28a8aba4a69035e1f80e9773c300"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2023-12-31_20260911.npz",
+    "cache_sha256": "1546d50cad12851a474971c7b814e4270e92265bc2906657a456831e2bef6e15"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2023-12-31_20260912.npz",
+    "cache_sha256": "6fd83a771a6cae2434dd9adb8c020a8e681337b89021dbd88fd875e92e77eaf4"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2024-12-31_20260910.npz",
+    "cache_sha256": "4fd5779ae912977393cfb179c09c8956e4798d92a05adc386056275576dea0ba"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2024-12-31_20260911.npz",
+    "cache_sha256": "0320a478da2a9af167b0cbe0ef7d234911f7b4186e9641d5d9fc71e675be942b"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2024-12-31_20260912.npz",
+    "cache_sha256": "ce9f8df477aa7b3167943e18c74b4efd252f5ea101214593a2fb27d34dbd941d"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2025-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2025-12-31_20260910.npz",
+    "cache_sha256": "04c7152f4c95d0dd4d789ed5ab36c8eed716da28cd65f73917b8d4435e9c949b"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2025-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2025-12-31_20260911.npz",
+    "cache_sha256": "511fec1c030cfbcf229698b7a81c1fc2936d9906795e2f125bf86c9cf69fd785"
+  },
+  {
+    "history": "rolling5",
+    "cutoff": "2025-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v28\\cache\\testing_rolling5_2025-12-31_20260912.npz",
+    "cache_sha256": "352096358abc6470303f46a212225dbc9bab0d7aae0c6e5737598efa5738ae9f"
+  }
+]

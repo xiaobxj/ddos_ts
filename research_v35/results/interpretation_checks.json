@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T07:09:48.425639+00:00",
+  "interpretation_sha256": "4fa4d94956c7181480d4bbbaafd8ecf357903a0f95fbdf8886e0e9a567df6cb3",
+  "report_sha256": "a09d55f19df3b160e0143c48c7405ba56e0673d115e2a29cdbd4d549ebb184dd",
+  "recent_counts": [
+    [
+      68,
+      72,
+      71
+    ],
+    [
+      63,
+      64,
+      66
+    ],
+    [
+      69,
+      69,
+      69
+    ],
+    [
+      65,
+      65,
+      67
+    ]
+  ],
+  "early_counts": [
+    [
+      71,
+      68,
+      68
+    ],
+    [
+      64,
+      65,
+      63
+    ],
+    [
+      71,
+      70,
+      70
+    ],
+    [
+      68,
+      63,
+      63
+    ]
+  ],
+  "year2026_counts": [
+    [
+      12,
+      16,
+      16
+    ],
+    [
+      9,
+      12,
+      12
+    ],
+    [
+      11,
+      14,
+      14
+    ],
+    [
+      10,
+      10,
+      11
+    ]
+  ],
+  "all_probability_effect_and_case_claims_verified": true,
+  "all60_not_significant": true,
+  "old584_preserved": true
+}

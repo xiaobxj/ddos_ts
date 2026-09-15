@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T19:56:00.824253+00:00",
+  "recent_correct_counts": {
+    "rolling5_annual20": [
+      68,
+      72,
+      71
+    ],
+    "annual_net_quarter_head": [
+      66,
+      65,
+      65
+    ],
+    "rolling5_quarterly20": [
+      63,
+      63,
+      63
+    ],
+    "rolling5_matched": [
+      70,
+      72,
+      73
+    ]
+  },
+  "early_correct_counts": {
+    "rolling5_annual20": [
+      71,
+      68,
+      68
+    ],
+    "annual_net_quarter_head": [
+      67,
+      65,
+      64
+    ],
+    "rolling5_quarterly20": [
+      74,
+      74,
+      75
+    ]
+  },
+  "year2025_2026_checked": true,
+  "direction_changes_checked": true,
+  "all28_significance_checks": true,
+  "minimum_holm_p": 0.3751624837516248,
+  "new_head_fits": 204,
+  "new_neural_fits": 0,
+  "feature_extension_rows": 2490,
+  "maximum_independent_solver_probability_gap": 1.991468612239089e-07,
+  "old58_4_preserved": true,
+  "interpretation_sha256": "55d2ac5a1bc7888352a002e73cfae308ed0792731508a13e06b90020374c2e22"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-14T02:04:17.855982+00:00",
+  "observations": "Both PNGs visually inspected. Mutually exclusive sensitivity categories, counts and legend visible; count-only versus metric sensitivity distinguished. Reuse charts show counts, percentages and comparable-pair denominators; all labels and captions inside figure, no clipping or overlaps requiring change. PNG/SVG hashes agree with frozen report manifest.",
+  "artifacts": {
+    "results/gate_sensitivity.png": "a92ea849dc927a759ad5b8fd153a421bb599ca7fea655f0d8a24c1879aad7a0a",
+    "results/gate_sensitivity.svg": "e6cee845870d6eb3a6e697d6bd705d5ebbae87d5dcc1f839b5321798cce30df9",
+    "results/sample_reuse.png": "bde8fa55ccaf08d6b1c8b84c91775ff66752db826a7531a3f6d9cfedb80d625e",
+    "results/sample_reuse.svg": "c6f7981747d9135c4354dbd386e0eb50cb4550f60f2d8ebbba7b8ab5acd05fc3"
+  }
+}

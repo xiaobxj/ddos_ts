@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-14T01:25:04.926361+00:00",
+  "observations": "Both PNGs visually inspected. Chinese headings and labels, all line points and bar counts, two-row legends and partial2026 notes visible; axes accommodate all values, no clipping or overlap requiring changes. Corresponding SVGs bound to report hashes.",
+  "artifacts": {
+    "results/yearly_accuracy.png": "af8ad55acdd6be8a59fe5ce5dac307fcd3b8481f395e6752ae2de39007d1bd7b",
+    "results/yearly_accuracy.svg": "c38920e24e350a4b0bc34d330b3b80a760d12a41da2d1dffcfc15ef211266e11",
+    "results/cadence_coverage.png": "18f72427c87a752b86a6ad222d2d0e65235093b2fa864122b2d4161dece61f92",
+    "results/cadence_coverage.svg": "73f25f3fd954bfdd73aa89a5a2709263da78599eb47ff54998269cb1a51e047a"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T05:55:56.670447+00:00",
+  "numeric_facts": [
+    {
+      "method": "learned_vol_interaction",
+      "all_origin_counts": [
+        21,
+        1,
+        4,
+        14,
+        2
+      ],
+      "recent_origin_counts": [
+        14,
+        0,
+        3,
+        9,
+        2
+      ]
+    },
+    {
+      "method": "learned_order_extension",
+      "all_origin_counts": [
+        22,
+        1,
+        5,
+        16,
+        0
+      ],
+      "recent_origin_counts": [
+        14,
+        0,
+        4,
+        10,
+        0
+      ]
+    },
+    {
+      "method": "learned_order_offset",
+      "all_origin_counts": [
+        22,
+        1,
+        5,
+        16,
+        0
+      ],
+      "recent_origin_counts": [
+        14,
+        0,
+        4,
+        10,
+        0
+      ]
+    }
+  ],
+  "checks": [
+    "All method and recent feasibility counts in both views",
+    "Single shared actionable historical event",
+    "Exact maturity/checkpoint/expiry timeline and remaining observed signals",
+    "Right censoring distinct from negative complete lifetime; all remaining pre-expiry slots already observed",
+    "No-window-drop equality",
+    "Shared event and no-preexpiry-opportunity counts",
+    "Earlier signal with later label maturity handled explicitly",
+    "Count feasibility is not validation success or predictive accuracy",
+    "Old evidence/protocol distinctions and next experiment not started",
+    "Independent verification counts and report provenance",
+    "Both figures actually viewed"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "277787f4f7f400565a73080de0a58cf43862884570a21cecec26d657ffdb86c2",
+    "results/visual_review.json": "732b82f524a3270ac1100e1dcabd7f0e14f304983e3ffc752111e031d9d73a0e"
+  }
+}

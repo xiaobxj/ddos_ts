@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "D:\ddos_v3\research_v39\verify39.py", line 97, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\ddos_v3\research_v39\verify39.py", line 94, in main
+    synthetic();ready=check_splits();sol,gates,fit=check_fits_and_gates();print('Independent purged splits, solvers, validation gates and information isolation PASS.',flush=True);pred=check_predictions();print('Independent forecast routing, fallback, metrics and quarter diagnostics PASS.',flush=True);check_inference();assert old_evidence()==prep['old_evidence'];assert fit['independent_scalar_solutions']==read(OUT/'fitting_manifest.json')['scalar_fits'];files=[]
+                                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\ddos_v3\research_v39\verify39.py", line 47, in check_fits_and_gates
+    poisoned=bank.copy();outside=~poisoned.row_index.isin(valids);poisoned.loc[outside,'actual_up']=1-poisoned.loc[outside,'actual_up'];poisoned.loc[outside,['annual_logit','probability']]=1e8;a,b=validate(poisoned,heads,schedule[schedule.cutoff.eq(c.cutoff)],members);expected=csv('gate_decisions');expected=expected[expected.cutoff.eq(c.cutoff)].reset_index(drop=True);pd.testing.assert_frame_equal(a,expected,check_dtype=False,atol=1e-14,rtol=0);poisons+=1
+                                                                                                                                                                                                                                                                                                                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\util\_decorators.py", line 220, in wrapper
+    return func(*args, **kwargs)
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\_testing\asserters.py", line 1347, in assert_frame_equal
+    assert_series_equal(
+    ~~~~~~~~~~~~~~~~~~~^
+        lcol,
+        ^^^^^
+    ...<12 lines>...
+        check_flags=False,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\util\_decorators.py", line 193, in wrapper
+    return func(*args, **kwargs)
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\_testing\asserters.py", line 1121, in assert_series_equal
+    _testing.assert_almost_equal(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        left._values,
+        ^^^^^^^^^^^^^
+    ...<5 lines>...
+        index_values=left.index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "pandas/_libs/testing.pyx", line 53, in pandas._libs.testing.assert_almost_equal
+  File "pandas/_libs/testing.pyx", line 171, in pandas._libs.testing.assert_almost_equal
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\pandas\_testing\asserters.py", line 619, in raise_assert_detail
+    raise AssertionError(msg)
+AssertionError: DataFrame.iloc[:, 12] (column name="brier_difference") are different
+
+DataFrame.iloc[:, 12] (column name="brier_difference") values are different (100.0 %)
+[index]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+[left]:  [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+[right]: [nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]
+At positional index 0, first diff: None != nan
+
+EXIT_CODE=1

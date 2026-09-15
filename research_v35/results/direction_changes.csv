@@ -1,0 +1,17 @@
+window,history,method,changed,wrong_to_correct,correct_to_wrong
+extension_2021_2023,fixed_transform_add_only,learned_market,9,2,7
+extension_2021_2023,fixed_transform_add_only,learned_vol_interaction,13,3,10
+extension_2021_2023,fixed_transform_add_only,learned_order_extension,11,4,7
+extension_2021_2023,fixed_transform_add_only,learned_order_offset,13,4,9
+extension_2021_2023,fixed_transform_remove_only,learned_market,11,7,4
+extension_2021_2023,fixed_transform_remove_only,learned_vol_interaction,10,5,5
+extension_2021_2023,fixed_transform_remove_only,learned_order_extension,12,7,5
+extension_2021_2023,fixed_transform_remove_only,learned_order_offset,12,7,5
+recent_2024_2026,fixed_transform_add_only,learned_market,12,4,8
+recent_2024_2026,fixed_transform_add_only,learned_vol_interaction,11,3,8
+recent_2024_2026,fixed_transform_add_only,learned_order_extension,14,3,11
+recent_2024_2026,fixed_transform_add_only,learned_order_offset,13,4,9
+recent_2024_2026,fixed_transform_remove_only,learned_market,9,5,4
+recent_2024_2026,fixed_transform_remove_only,learned_vol_interaction,9,5,4
+recent_2024_2026,fixed_transform_remove_only,learned_order_extension,13,5,8
+recent_2024_2026,fixed_transform_remove_only,learned_order_offset,12,5,7

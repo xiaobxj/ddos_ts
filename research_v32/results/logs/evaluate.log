@@ -1,0 +1,75 @@
+             window                 history                  method  correct_directions   n  accuracy    brier  log_loss
+extension_2021_2023 annual_net_quarter_head learned_vol_interaction                  67 147  0.455782 0.275662  0.746719
+extension_2021_2023 annual_net_quarter_head              native_mse                  73 147  0.496599      NaN       NaN
+extension_2021_2023 annual_net_quarter_head      training_frequency                  62 147  0.421769 0.255891  0.704963
+extension_2021_2023     annual_quarter_half learned_vol_interaction                  72 147  0.489796 0.269418  0.734408
+extension_2021_2023     annual_quarter_half              native_mse                  74 147  0.503401      NaN       NaN
+extension_2021_2023     annual_quarter_half      training_frequency                  62 147  0.421769 0.256111  0.705410
+extension_2021_2023                 error16 learned_vol_interaction                  66 147  0.448980 0.274670  0.745338
+extension_2021_2023                 error16              native_mse                  70 147  0.476190      NaN       NaN
+extension_2021_2023                 error16      training_frequency                  62 147  0.421769 0.256049  0.705285
+extension_2021_2023       rolling5_annual20 learned_vol_interaction                  71 147  0.482993 0.277967  0.752923
+extension_2021_2023       rolling5_annual20              native_mse                  73 147  0.496599      NaN       NaN
+extension_2021_2023       rolling5_annual20      training_frequency                  62 147  0.421769 0.256412  0.706022
+extension_2021_2023        rolling5_matched learned_vol_interaction                  67 147  0.455782 0.310966  0.838337
+extension_2021_2023        rolling5_matched              native_mse                  60 147  0.408163      NaN       NaN
+extension_2021_2023        rolling5_matched      training_frequency                  62 147  0.421769 0.256412  0.706022
+extension_2021_2023    rolling5_quarterly20 learned_vol_interaction                  74 147  0.503401 0.264609  0.724441
+extension_2021_2023    rolling5_quarterly20              native_mse                  68 147  0.462585      NaN       NaN
+extension_2021_2023    rolling5_quarterly20      training_frequency                  62 147  0.421769 0.255891  0.704963
+extension_2021_2023            shadow_trial learned_vol_interaction                  68 147  0.462585 0.277855  0.752026
+extension_2021_2023            shadow_trial              native_mse                  69 147  0.469388      NaN       NaN
+extension_2021_2023            shadow_trial      training_frequency                  62 147  0.421769 0.256732  0.706662
+extension_2021_2023                 state90 learned_vol_interaction                  71 147  0.482993 0.277967  0.752923
+extension_2021_2023                 state90              native_mse                  73 147  0.496599      NaN       NaN
+extension_2021_2023                 state90      training_frequency                  62 147  0.421769 0.256412  0.706022
+   recent_2024_2026 annual_net_quarter_head learned_vol_interaction                  66 125  0.528000 0.250407  0.694725
+   recent_2024_2026 annual_net_quarter_head              native_mse                  66 125  0.528000      NaN       NaN
+   recent_2024_2026 annual_net_quarter_head      training_frequency                  60 125  0.480000 0.252495  0.698143
+   recent_2024_2026     annual_quarter_half learned_vol_interaction                  65 125  0.520000 0.249695  0.692740
+   recent_2024_2026     annual_quarter_half              native_mse                  70 125  0.560000      NaN       NaN
+   recent_2024_2026     annual_quarter_half      training_frequency                  60 125  0.480000 0.252583  0.698319
+   recent_2024_2026                 error16 learned_vol_interaction                  67 125  0.536000 0.245633  0.684637
+   recent_2024_2026                 error16              native_mse                  61 125  0.488000      NaN       NaN
+   recent_2024_2026                 error16      training_frequency                  56 125  0.448000 0.252955  0.699065
+   recent_2024_2026       rolling5_annual20 learned_vol_interaction                  68 125  0.544000 0.246843  0.687439
+   recent_2024_2026       rolling5_annual20              native_mse                  66 125  0.528000      NaN       NaN
+   recent_2024_2026       rolling5_annual20      training_frequency                  56 125  0.448000 0.252748  0.698649
+   recent_2024_2026        rolling5_matched learned_vol_interaction                  70 125  0.560000 0.255385  0.708607
+   recent_2024_2026        rolling5_matched              native_mse                  69 125  0.552000      NaN       NaN
+   recent_2024_2026        rolling5_matched      training_frequency                  56 125  0.448000 0.252748  0.698649
+   recent_2024_2026    rolling5_quarterly20 learned_vol_interaction                  63 125  0.504000 0.254990  0.703625
+   recent_2024_2026    rolling5_quarterly20              native_mse                  68 125  0.544000      NaN       NaN
+   recent_2024_2026    rolling5_quarterly20      training_frequency                  60 125  0.480000 0.252495  0.698143
+   recent_2024_2026            shadow_trial learned_vol_interaction                  68 125  0.544000 0.246843  0.687439
+   recent_2024_2026            shadow_trial              native_mse                  66 125  0.528000      NaN       NaN
+   recent_2024_2026            shadow_trial      training_frequency                  56 125  0.448000 0.252748  0.698649
+   recent_2024_2026                 state90 learned_vol_interaction                  69 125  0.552000 0.245567  0.684795
+   recent_2024_2026                 state90              native_mse                  66 125  0.528000      NaN       NaN
+   recent_2024_2026                 state90      training_frequency                  56 125  0.448000 0.252315  0.697782
+   pooled_2021_2026 annual_net_quarter_head learned_vol_interaction                 133 272  0.488971 0.264056  0.722825
+   pooled_2021_2026 annual_net_quarter_head              native_mse                 139 272  0.511029      NaN       NaN
+   pooled_2021_2026 annual_net_quarter_head      training_frequency                 122 272  0.448529 0.254330  0.701829
+   pooled_2021_2026     annual_quarter_half learned_vol_interaction                 137 272  0.503676 0.260354  0.715259
+   pooled_2021_2026     annual_quarter_half              native_mse                 144 272  0.529412      NaN       NaN
+   pooled_2021_2026     annual_quarter_half      training_frequency                 122 272  0.448529 0.254490  0.702151
+   pooled_2021_2026                 error16 learned_vol_interaction                 133 272  0.488971 0.261326  0.717443
+   pooled_2021_2026                 error16              native_mse                 131 272  0.481618      NaN       NaN
+   pooled_2021_2026                 error16      training_frequency                 118 272  0.433824 0.254627  0.702427
+   pooled_2021_2026       rolling5_annual20 learned_vol_interaction                 139 272  0.511029 0.263664  0.722829
+   pooled_2021_2026       rolling5_annual20              native_mse                 139 272  0.511029      NaN       NaN
+   pooled_2021_2026       rolling5_annual20      training_frequency                 118 272  0.433824 0.254728  0.702634
+   pooled_2021_2026        rolling5_matched learned_vol_interaction                 137 272  0.503676 0.285424  0.778718
+   pooled_2021_2026        rolling5_matched              native_mse                 129 272  0.474265      NaN       NaN
+   pooled_2021_2026        rolling5_matched      training_frequency                 118 272  0.433824 0.254728  0.702634
+   pooled_2021_2026    rolling5_quarterly20 learned_vol_interaction                 137 272  0.503676 0.260189  0.714875
+   pooled_2021_2026    rolling5_quarterly20              native_mse                 136 272  0.500000      NaN       NaN
+   pooled_2021_2026    rolling5_quarterly20      training_frequency                 122 272  0.448529 0.254330  0.701829
+   pooled_2021_2026            shadow_trial learned_vol_interaction                 136 272  0.500000 0.263603  0.722345
+   pooled_2021_2026            shadow_trial              native_mse                 135 272  0.496324      NaN       NaN
+   pooled_2021_2026            shadow_trial      training_frequency                 118 272  0.433824 0.254901  0.702979
+   pooled_2021_2026                 state90 learned_vol_interaction                 140 272  0.514706 0.263077  0.721614
+   pooled_2021_2026                 state90              native_mse                 139 272  0.511029      NaN       NaN
+   pooled_2021_2026                 state90      training_frequency                 118 272  0.433824 0.254529  0.702235
+
+EXIT_CODE=0

@@ -1,0 +1,12 @@
+{
+  "status": "FROZEN",
+  "completed_utc": "2026-09-13T04:43:18.612474+00:00",
+  "protocol_sha256": "2fb768f6c80e8403e7f9f649f3dcd8facf4f5d6b1d901a04bdb536ecf0441cfc",
+  "artifacts": {
+    "results\\seed_components.csv": "48c892cba60741f71b65b0f7e3042047cacb3a0fc5e463bcd1bbefb443711a4c",
+    "results\\parameter_changes.csv": "4886b6a0a97244e8b4bfd8169a4365b012cf5e0b5822440159ee25c77a41272b",
+    "results\\transform_changes.csv": "0143f7a6557bb89247a3cf6389955f2fccbcce6a4e6016a8f5c351c7e8619aeb"
+  },
+  "outcome_based_summary_started": false,
+  "maximum_archived_probability_gap": 2.220446049250313e-16
+}

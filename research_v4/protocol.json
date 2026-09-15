@@ -1,0 +1,66 @@
+{
+  "experiment": "Fourth-round operationalized Crossformer/segmentation/tokenizer ablation",
+  "version": 4,
+  "classification": "Exploratory development experiment on previously inspected outcomes, not a virgin holdout or exact reproduction of the article.",
+  "data": "Unchanged frozen research/data Tencent OHLCV, 2010-01-04 through 2026-08-31. Reuse round-3 valid observation table and execution labels. Missing amount is explicitly zero, not synthesized.",
+  "lookback": 125,
+  "label": "Actual open after next same-weekday signal / open after current signal - 1, using all completed daily training labels. All prediction signals are the 103 prior Friday anchors from 2024-07-05 through 2026-08-21.",
+  "validation": "Only raw_fixed selects training epochs. Three annually expanding fits with cutoffs 2017-12-31, 2018-12-31, 2019-12-31, evaluated on 141 Friday signals in 2018-2020 with labels completed by 2020-12-31. Pretrained tokenizer does not participate in pre-2024 historical validation.",
+  "development_folds": [
+    {"cutoff":"2024-06-30", "end":"2024-12-31", "prototype_year":2024},
+    {"cutoff":"2024-12-31", "end":"2025-12-31", "prototype_year":2025},
+    {"cutoff":"2025-12-31", "end":"2026-08-31", "prototype_year":2026}
+  ],
+  "development_schedule": "All new models restart from initial weights at each cutoff, expand historical training, and use identical completed training observations. First mid-year cutoff accommodates paper-stated tokenizer pretraining end; thereafter annual refits match article cadence. No mid-period tuning.",
+  "arms": [
+    {"name":"raw_fixed", "representation":"raw", "segmentation":"fixed", "dimensions":5},
+    {"name":"raw_adaptive", "representation":"raw", "segmentation":"adaptive", "dimensions":5},
+    {"name":"raw_permuted", "representation":"raw", "segmentation":"permuted", "dimensions":5},
+    {"name":"kronos_fixed", "representation":"kronos", "segmentation":"fixed", "dimensions":20},
+    {"name":"kronos_adaptive", "representation":"kronos", "segmentation":"adaptive", "dimensions":20},
+    {"name":"kronos_permuted", "representation":"kronos", "segmentation":"permuted", "dimensions":20},
+    {"name":"random_tokenizer_adaptive", "representation":"random_tokenizer", "segmentation":"adaptive", "dimensions":20}
+  ],
+  "raw_representation": "log OHLC and log1p volume, each channel standardized within its observed 125-bar window; sd floor 1e-6. No fitting on test distribution.",
+  "tokenizer_representation": "Official frozen Kronos-Tokenizer-base: normalize raw OHLCVA per observed 125-bar window using official float32 mean/std+1e-5, clip +/-5, with absent amount set to zero. Encode each window separately, never tokenize the complete time series. encode(half=True) followed by official indices_to_bits(half=True) yields 20 bipolar coordinates scaled by 1/sqrt(20), not numerical token IDs.",
+  "random_tokenizer": "Identical official tokenizer architecture freshly initialized once with torch seed 20260913, held fixed for all observations and all downstream seeds. Same normalization, quantization and 20-coordinate interface. No random-model selection.",
+  "tokenizer_provenance": {
+    "repository":"https://github.com/shiyu-coder/Kronos",
+    "code_revision":"67b630e67f6a18c9e9be918d9b4337c960db1e9a",
+    "checkpoint_revision":"0e0117387f39004a9016484a186a908917e22426",
+    "checkpoint_path":"../research_v3/models/Kronos-Tokenizer-base",
+    "paper_stated_pretraining_end":"2024-06-30",
+    "limitation":"Reuse round-3 LFS-verified checkpoint; weight-specific training cutoff is not independently disclosed. Test timing relies on the paper statement and is not an availability-at-the-time reconstruction."
+  },
+  "segmentation": {
+    "fixed":"25 consecutive patches of five bars each.",
+    "adaptive":"Reuse frozen annual round-1 P0 and normalized reverse DTW boundaries: candidate length 5-25, minimum-total-path L1 cost normalized by that path length, leading remainder retained. Year-2024 prototypes are trained before 2024-01-01; 2025/2026 prototypes likewise use previous-year data.",
+    "permuted":"Use exactly the same adaptive length multiset, randomly reorder lengths with numpy default_rng(20260909+anchor), then segment the original chronological window. Maintains active patch count and lengths, disrupts shape-matched boundaries.",
+    "interface":"Linearly resample each patch to five points in its representation; right-align <=25 patches, zero-pad inactive slots, pass duration/125 and endpoint/125 plus a boolean validity mask. Interpolation of bipolar vectors is an explicit custom interface choice."
+  },
+  "crossformer": {
+    "repository":"https://github.com/Thinklab-SJTU/Crossformer",
+    "revision":"c10c8eadb153d1dd9798250967747ca3ebb81383",
+    "d_model":32,"d_ff":64,"n_heads":4,"e_layers":2,"factor":4,"dropout":0.1,
+    "in_len":125,"seg_len":5,"out_len":5,"win_size":2,
+    "components":"Use upstream DSW embedding, temporal/dimension attention routers, two hierarchical encoder scales and three additive decoder layers, all trainable. Mask keys and suppress padded states through attention/merging. Learned two-coordinate patch geometry embedding is added to DSW embeddings.",
+    "head":"Flatten the five-by-input-dimension decoder outputs and apply one trainable scalar return readout. Initialize this readout to zero. These decoder coordinates are latent features, not claimed OHLC forecasts. Per-fold standardize execution-return labels using training mean/std and invert after prediction.",
+    "fairness":"Fixed/adaptive/permuted have identical parameter count and all optimizer settings within each representation. Pretrained/random tokenizer arms have identical downstream dimensions/parameter count. Raw vs tokenizer differs in input dimension and therefore a small number of positional/readout parameters; do not attribute that contrast solely to pretraining."
+  },
+  "training": {
+    "device":"cuda", "dtype":"float32", "batch_size":128,
+    "optimizer":"AdamW", "learning_rate":0.001,"weight_decay":0.01,"gradient_clip_norm":1.0,
+    "epoch_candidates":[2,5,10], "seeds":[20260910,20260911,20260912],
+    "selection":"Train raw_fixed on each validation fold and seed through 10 epochs; pool mean predictions across the three seeds at epochs 2/5/10. Select the smallest validation RMSE, ties prefer fewer epochs. Freeze one epoch count for every development arm and seed. If no validation improvement vs mean-return baseline, still report development as unqualified exploratory tests, never silently expand the budget.",
+    "shuffle":"Only shuffle already-completed training samples. Use numpy default_rng(seed) permutations independent of model dimension; reset each model/fold from that seed. No random validation split.",
+    "determinism":"torch.use_deterministic_algorithms(True), CUBLAS_WORKSPACE_CONFIG=:4096:8, TF32 disabled, four CPU threads. Save every seed checkpoint and training curve. No test-based seed/epoch/threshold selection."
+  },
+  "benchmarks":["Ridge lambda=10 on prior 255 economic features, refit on exact new-model cutoffs and samples", "same-fold training mean", "buy and hold", "zero-return cash", "unchanged round-3 quarterly Ridge and official Kronos OHLCV predictions for descriptive context"],
+  "ensemble":"Arithmetic mean of the three inverse-scaled scalar return predictions. Position long iff ensemble return > 0. Report all seed outcomes separately.",
+  "evaluation_windows":{"common":"2024-07-01", "post_release_sensitivity":"2025-08-18"},
+  "execution":"Same frozen next-open persistent long/cash index proxy, zero cash interest, terminal liquidation 2026-08-31 open; flat start for each evaluated slice.",
+  "cost_bps":[0,5,10,20],
+  "primary_comparisons":[["raw_adaptive","raw_fixed"],["raw_adaptive","raw_permuted"],["kronos_adaptive","kronos_fixed"],["kronos_adaptive","kronos_permuted"],["kronos_fixed","raw_fixed"],["kronos_adaptive","raw_adaptive"],["kronos_adaptive","random_tokenizer_adaptive"]],
+  "statistics":"Reuse eight-observation circular block bootstrap with 10000 replicates, seed 20260910. Holm-adjust MSE tests across seven primary comparisons in each window. Direction and net-weekly-return uncertainty, per-year, per-seed and largest-week influence are exploratory diagnostics.",
+  "scope":"Complete seven-arm masked Crossformer segmentation/tokenizer test. Does not reproduce missing 78-index P0, true amount, article default-size network or future OHLCAV head; no account/deployment changes."
+}

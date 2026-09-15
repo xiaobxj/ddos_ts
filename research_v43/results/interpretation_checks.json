@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T03:44:02.293137+00:00",
+  "numeric_facts": [
+    {
+      "method": "learned_vol_interaction",
+      "in_life_counts": [
+        14,
+        7,
+        4,
+        3
+      ],
+      "pass_known_uses": 42,
+      "pass_total_uses": 60,
+      "pass_known_percent": 70.0,
+      "new_evidence_zero_cells": 7,
+      "new_evidence_max_n": 4,
+      "quality_clear_cells": 4,
+      "quality_clear_old_pass": 0,
+      "expired_cells": 9
+    },
+    {
+      "method": "learned_order_extension",
+      "in_life_counts": [
+        13,
+        7,
+        3,
+        3
+      ],
+      "pass_known_uses": 45,
+      "pass_total_uses": 59,
+      "pass_known_percent": 76.3,
+      "new_evidence_zero_cells": 8,
+      "new_evidence_max_n": 4,
+      "quality_clear_cells": 2,
+      "quality_clear_old_pass": 0,
+      "expired_cells": 12
+    },
+    {
+      "method": "learned_order_offset",
+      "in_life_counts": [
+        13,
+        7,
+        3,
+        3
+      ],
+      "pass_known_uses": 45,
+      "pass_total_uses": 59,
+      "pass_known_percent": 76.3,
+      "new_evidence_zero_cells": 8,
+      "new_evidence_max_n": 4,
+      "quality_clear_cells": 2,
+      "quality_clear_old_pass": 0,
+      "expired_cells": 12
+    }
+  ],
+  "checks": [
+    "All primary in-life evidence classifications and denominators",
+    "No source-novel supported in-life cells; zero counts separate",
+    "Known-label use counts among full-window passes",
+    "Current versus old quality rejection and four shared events",
+    "Fixed-source Brier reversal caused by removal of old validation members",
+    "Current-only passes retained as counterexamples",
+    "Expired records reported separately including all five supported novel cases",
+    "No new policy or accuracy, p values or blind-holdout claims",
+    "Original protocol distinctions preserved",
+    "Next feasibility diagnostic explicitly not started",
+    "Independent counts, report hashes and actual image inspection"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "d804e04beb08de3ce1938a1626c4a106cd6b44bfc22e319cb04d1665d8ac9d9c",
+    "results/visual_review.json": "1992b4296367d6770d8a9ebca844fd7d4321f9afcb2322f406296da825a03293"
+  }
+}

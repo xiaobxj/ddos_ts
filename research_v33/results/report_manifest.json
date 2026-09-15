@@ -1,0 +1,11 @@
+{
+  "phase": "report",
+  "started_utc": "2026-09-13T04:43:47.038338+00:00",
+  "finished_utc": "2026-09-13T04:43:47.440265+00:00",
+  "protocol_sha256": "2fb768f6c80e8403e7f9f649f3dcd8facf4f5d6b1d901a04bdb536ecf0441cfc",
+  "artifacts": {
+    "results\\第三十三轮归因报告.md": "0dec6420ff33bd562856dcad16b9f9c97ace5bf82f40cc0ed5ab3716435f0777",
+    "results\\probability_contributions_2026.png": "a1a380de3fe7b0eab15bda869607ccfc72bf019f9ef02a6af061fa7519870a58",
+    "results\\probability_contributions_2026.svg": "d75a94e8f3f766a324a5fc3531fe84b2357abb667f6e5a7de11f6d5f15835e67"
+  }
+}

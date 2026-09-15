@@ -1,0 +1,12 @@
+{
+  "phase": "report",
+  "finished_utc": "2026-09-14T03:39:32.563177+00:00",
+  "protocol_sha256": "7fadd21d36605cfd626128d185d244fc5928c74198f0065d9bf8e38bf068fc06",
+  "artifacts": {
+    "results\\第四十三轮诊断报告.md": "cd08f205591436abd3da21b2a2cb291aab4be17edadd638ff341519c45fa3911",
+    "results\\evidence_freshness.png": "f681444238c3996d1d2bfc7996f96e78fded1083122b8af0d6c70eda59face51",
+    "results\\evidence_freshness.svg": "304794da548bc28280df64b0b428b39ad8f47f1a2049520e2962d54105bc70b0",
+    "results\\quality_clear_evidence.png": "58b5d403cd93294f7ccc96edc6844ad4f2bec5ecb7f51db36b30d04215ec5136",
+    "results\\quality_clear_evidence.svg": "579b6e724c402c8633e87e5309f508e69d21ef702ec9ad4a7e4b9eff454988bc"
+  }
+}

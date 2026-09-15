@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-13T15:23:54.969607+00:00",
+  "observations": "Both PNGs visually inspected. Titles, Chinese axes, legends, all data points and coverage count labels visible. Year2026 partial-period marker and denominator notes present. No clipping or overlap requiring changes. PNG/SVG hashes agree with frozen report manifest.",
+  "artifacts": {
+    "results/yearly_accuracy.png": "d7fd3417ee3b52f9aa3da8b0234d28757ef7d0de834c50913871cb68459cea93",
+    "results/yearly_accuracy.svg": "ddb6330e887b010924aaa4605a0ec98f5ecddd487c4e81793933f839b9b029e9",
+    "results/correction_coverage.png": "5cfbdba63330e6f3448e2f6edc628f3bc947b2c8e325850aaffa5787bb683e20",
+    "results/correction_coverage.svg": "d7defaeef1f7533dccf584ca1ea89fb11603800609bff4d193c962d23008b92a"
+  }
+}

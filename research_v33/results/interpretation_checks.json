@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T04:47:57.979103+00:00",
+  "year2026_flip_counts_checked": true,
+  "shared_flip_dates_checked": true,
+  "dominant_groups_checked": true,
+  "signed_probability_point_totals": {
+    "learned_vol_interaction": [
+      -7.695126711886209,
+      0.8750143709799094,
+      -6.820112340906302
+    ],
+    "learned_order_extension": [
+      -6.5558715442852105,
+      0.42686337918603395,
+      -6.129008165099177
+    ],
+    "learned_order_offset": [
+      -6.582587938389837,
+      0.4270880680743435,
+      -6.155499870315493
+    ]
+  },
+  "training_window_shift_checked": true,
+  "recovery_example_checked": true,
+  "old58_4_preserved": true,
+  "new_training": 0,
+  "new_inferential_tests": 0,
+  "interpretation_sha256": "b34b63d83bde5cdb1b6c47b97c9aefb3e006bb576746d2944b61dab65fccf2ca"
+}

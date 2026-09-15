@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-09-13T15:14:56.101815+00:00",
+  "finished_utc": "2026-09-13T15:15:50.846187+00:00",
+  "reason": "Pandas3 empty-column representation: None versus NaN in zero-validation warmup cells. Original numeric tolerances and every substantive check retained.",
+  "normalizations": [
+    {
+      "column": "brier_difference",
+      "rows": 20
+    },
+    {
+      "column": "baseline_brier",
+      "rows": 20
+    },
+    {
+      "column": "candidate_brier",
+      "rows": 20
+    }
+  ],
+  "original_failure_log_sha256": "40d35ccc2338073ce798fcab85a779c24e81449e45b67c5f9d4ef9e90e221c53",
+  "original_verifier_sha256": "5b9b861dacd2dbbad0acd0464f7d3676f8ca238169c37b2703ad9272464baa45",
+  "helper_sha256": "45ad85c0800d25d06cd915dee6f48cb2aead43b30e34f37da6529c8e85f974ef",
+  "research_artifacts_unchanged": {
+    "results\\correction_heads.json": "0098ed293eb28c2f062cf743634feb0f604c165d2e1a2f7c74d30d4d995c1b0d",
+    "results\\training_interface.csv": "4072dddf40ec5771bf9e170a87b80415ae2609152f7065f8817c06d0b8915ead",
+    "results\\correction_parameters.csv": "b0353f745489f38e74a516f65844da4672003d0f1bcbce25dc802e698383e9b6",
+    "results\\gate_decisions.csv": "1f49a49e45bbed1378a2fc8a6274b6195a8e481042e69ec8629da8232168bdd4",
+    "results\\validation_predictions.csv": "032dfdc9ffc98966c98c77151cb3224693bb9d88d30e86da607877a76943179d",
+    "results\\model_predictions.csv": "9f54f3245c7ef4d437846dcfebf12e7139efbb45c7cc7b397ea6fcfcfd11ddd0",
+    "results\\ensemble_predictions.csv": "ba7e0475a22c6290273dab63d258975f9385f534f7d3b02bab295b6be3c635b4",
+    "results\\seed_routing.csv": "ea8cba7433ce484d009b8bad1adc61b4a00046b434cd515c0b9892b339b37527",
+    "results\\ensemble_metrics.csv": "c18ca5f044f2ba1df1b968c50f8bcfa26e929fb5f0e9490fb9d546053cea3341",
+    "results\\seed_metrics.csv": "bb2ed7c0b4b9c916779b73660f3964bf0cb76b4ed20923ae60ad80c363448ebc",
+    "results\\state_metrics.csv": "9f9751864f8e2d1f07116f514bfb80f24b65734e25584f0dc727284ac81c521a",
+    "results\\weekly_policy_effects.csv": "47efa3b6998693c8d82227d5549040380a64f5360649cdf681ca347cbea54dd4",
+    "results\\direction_changes.csv": "0a2cc12947f36ef51056c66dd04bcffa6564217261a53e415ef89c20c0a25459",
+    "results\\quarter_outcomes.csv": "8c66dd75756247dec48e9e21f19fd350a1eec1b02b1a9e356cc547047b41f4c7",
+    "results\\all_2026_cases.csv": "a8810b15443e598fe7d4687e825c12ffb95fc23d67a04fd3324129bac968c9b3",
+    "results\\primary_comparisons.json": "b239e787252ff29afdaa468ea987ffb17dca1d9f301f89978ff7899343b43f24"
+  },
+  "verification_sha256": "aad56c95b4424ee3b3b5e833845dddc157c941031217855093ca107a6be12219"
+}

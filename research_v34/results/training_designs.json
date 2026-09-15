@@ -1,0 +1,359 @@
+[
+  {
+    "cutoff": "2021-03-31",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2021-03-31_20260910.npz",
+    "cache_sha256": "daa8a80616b939881f12070c17339c556a2a3b90dc3cdd3e357eb0d2479f99d6"
+  },
+  {
+    "cutoff": "2021-03-31",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2021-03-31_20260911.npz",
+    "cache_sha256": "c26060d8b3f7fd7af396cf5076ef7463db570ecc3f32875e49d4966192b08958"
+  },
+  {
+    "cutoff": "2021-03-31",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2021-03-31_20260912.npz",
+    "cache_sha256": "3fcd15fae1b12617dba654fd518ff282bb839f8ab00b3ad6cc52acb706fd443b"
+  },
+  {
+    "cutoff": "2021-06-30",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2021-06-30_20260910.npz",
+    "cache_sha256": "8500ca2fee538bbc341459cdc21f390f5368dddd0aeae260bc7f793c77d460ea"
+  },
+  {
+    "cutoff": "2021-06-30",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2021-06-30_20260911.npz",
+    "cache_sha256": "5de17b0c2318dedd8ac4e43e3cb995b9863f460e9028bf3499d336aed4d0ac40"
+  },
+  {
+    "cutoff": "2021-06-30",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2021-06-30_20260912.npz",
+    "cache_sha256": "4c7da4e86925a3ac0f83ab5821efe3aadf2c18469af1f0276663d8890aedd2a7"
+  },
+  {
+    "cutoff": "2021-09-30",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2021-09-30_20260910.npz",
+    "cache_sha256": "b00e746c3f3da59f58725ce1687c090832c01c776f045a206da6bfcca87d51ff"
+  },
+  {
+    "cutoff": "2021-09-30",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2021-09-30_20260911.npz",
+    "cache_sha256": "0c20032ad3f83e4757e2150a0bd6c9a42701591b4e8f46d3e70ab051778791a3"
+  },
+  {
+    "cutoff": "2021-09-30",
+    "encoder_cutoff": "2020-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2021-09-30_20260912.npz",
+    "cache_sha256": "a7b37f544d1fa3fdabae1d08b6d17636c7e488bb37fa27a80ccfd206d73435c2"
+  },
+  {
+    "cutoff": "2022-03-31",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2022-03-31_20260910.npz",
+    "cache_sha256": "eedca90a572519d10906b8ad06284a841a24fa66a28c6d8ced5509903723ecae"
+  },
+  {
+    "cutoff": "2022-03-31",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2022-03-31_20260911.npz",
+    "cache_sha256": "253bbd1a844b293da7f4e1ad927bb23304a4b28c7bb145a156622afefa882af3"
+  },
+  {
+    "cutoff": "2022-03-31",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2022-03-31_20260912.npz",
+    "cache_sha256": "69455abfda938c8932d0ca9b01937e3d817dea09d234a6ec404369e4c8a5f154"
+  },
+  {
+    "cutoff": "2022-06-30",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2022-06-30_20260910.npz",
+    "cache_sha256": "79492d89c3f25c0a62aee285218476f2c6211cb51e767207f4c6a943581dca34"
+  },
+  {
+    "cutoff": "2022-06-30",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2022-06-30_20260911.npz",
+    "cache_sha256": "49cd33ae4b363c62b946bb55826904671d5d177c1fd8335c3b4bd023ef8ef3ee"
+  },
+  {
+    "cutoff": "2022-06-30",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2022-06-30_20260912.npz",
+    "cache_sha256": "73956ccd3d534f23742e1e60cfe36634713ba3c25ca6666a358fdef99a60444c"
+  },
+  {
+    "cutoff": "2022-09-30",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2022-09-30_20260910.npz",
+    "cache_sha256": "f9313b264af8759deb6885be8224ba0c13579f20883070f7b24e2d7c6e8ac718"
+  },
+  {
+    "cutoff": "2022-09-30",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2022-09-30_20260911.npz",
+    "cache_sha256": "dfa75bc9510d53b8406e26818f38edc7760d3b5b461e4518163ee3e9eba72fd1"
+  },
+  {
+    "cutoff": "2022-09-30",
+    "encoder_cutoff": "2021-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2022-09-30_20260912.npz",
+    "cache_sha256": "1a7c2a817110898bd3e634154fdf8392f6600e22ece609e8aad42875fabffacd"
+  },
+  {
+    "cutoff": "2023-03-31",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2023-03-31_20260910.npz",
+    "cache_sha256": "18f8073bb4b1f83953b16de354419aa8f561e0394330078cf3cb0aeccec275d6"
+  },
+  {
+    "cutoff": "2023-03-31",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2023-03-31_20260911.npz",
+    "cache_sha256": "6ec529055a3a23e3e9b8be4bc847f3455fac3c670baadd617b2bf31dc260326c"
+  },
+  {
+    "cutoff": "2023-03-31",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2023-03-31_20260912.npz",
+    "cache_sha256": "1326cfa8b92fa9c56ed936fd5d9b2ba00a862f79fa9b5958131fc4d03ecc30ab"
+  },
+  {
+    "cutoff": "2023-06-30",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2023-06-30_20260910.npz",
+    "cache_sha256": "6e368fbca3c7b0c719b83804923dbdae65d400e04cb4a64a9e289c66a731182a"
+  },
+  {
+    "cutoff": "2023-06-30",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2023-06-30_20260911.npz",
+    "cache_sha256": "3b8fa9c3c1470ca4bc265f617a94da253aeada244c65cd9477081065c2484d74"
+  },
+  {
+    "cutoff": "2023-06-30",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2023-06-30_20260912.npz",
+    "cache_sha256": "c737cc048bd8ddb24594a88730f6d521dfb0009917c86000b6050c23d319351a"
+  },
+  {
+    "cutoff": "2023-09-30",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2023-09-30_20260910.npz",
+    "cache_sha256": "f8a60c0c9aae2d27e8da29fe9075f5636d7e8cd6586d83e3f99c490b78affede"
+  },
+  {
+    "cutoff": "2023-09-30",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2023-09-30_20260911.npz",
+    "cache_sha256": "47c06bfe6437f80c60678b7253d0be1e592a0ece98e4a65bafa826cefe7a2202"
+  },
+  {
+    "cutoff": "2023-09-30",
+    "encoder_cutoff": "2022-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2023-09-30_20260912.npz",
+    "cache_sha256": "147e3e07f590af758172b9d836eb3dc894334f558e7f48e2dbbf9128d802cb54"
+  },
+  {
+    "cutoff": "2024-03-31",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2024-03-31_20260910.npz",
+    "cache_sha256": "711480274e63c85beede37eb402d4915b26e29ab58c793c84d890724754e7cbf"
+  },
+  {
+    "cutoff": "2024-03-31",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2024-03-31_20260911.npz",
+    "cache_sha256": "0e2302e3b279633e918f2db82c47ceb12f4e8c39c4364d480767b79b3dde5aec"
+  },
+  {
+    "cutoff": "2024-03-31",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2024-03-31_20260912.npz",
+    "cache_sha256": "72c695cb092af004dcd07ff4bd67814560d07a6ad5f62a65b6e08bafa5fc8008"
+  },
+  {
+    "cutoff": "2024-06-30",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2024-06-30_20260910.npz",
+    "cache_sha256": "8ec856bf1b6e611a08623a3324bb32b6bc1108258f2c21e41361bdd9afab44c8"
+  },
+  {
+    "cutoff": "2024-06-30",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2024-06-30_20260911.npz",
+    "cache_sha256": "fa7fb3e0a15245bdde3234aadadc8c1537808f238561716ae89eaef941087e7f"
+  },
+  {
+    "cutoff": "2024-06-30",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2024-06-30_20260912.npz",
+    "cache_sha256": "fab8097826b5c98b1970ee509cb2a5b945d9abf8bdcb24d47cff2035047aa03d"
+  },
+  {
+    "cutoff": "2024-09-30",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2024-09-30_20260910.npz",
+    "cache_sha256": "fc9a45fb4ec610c052ebe4bfe20dc0bbb3250827f066fbacaac6a117f79cd362"
+  },
+  {
+    "cutoff": "2024-09-30",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2024-09-30_20260911.npz",
+    "cache_sha256": "14f4675c56971940536da53691d9bd352fc7451e724001f9be8239defe07aba0"
+  },
+  {
+    "cutoff": "2024-09-30",
+    "encoder_cutoff": "2023-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2024-09-30_20260912.npz",
+    "cache_sha256": "f86d6c31f32db81a2c6d68f404fcd9e2a2717ac3f8804a6ffeafee571914f3bb"
+  },
+  {
+    "cutoff": "2025-03-31",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2025-03-31_20260910.npz",
+    "cache_sha256": "69649c83218723f0706f25130dc2ec44cfdf106568135c5552ca695026b0c35f"
+  },
+  {
+    "cutoff": "2025-03-31",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2025-03-31_20260911.npz",
+    "cache_sha256": "87bcb2661c833862f99c64f64ea60f9f0e47d993e0047007d6188e305698aad7"
+  },
+  {
+    "cutoff": "2025-03-31",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2025-03-31_20260912.npz",
+    "cache_sha256": "42c18629c5cf032218724a7462bcedbf64d3699c8cf82e7eeb173ae62b898731"
+  },
+  {
+    "cutoff": "2025-06-30",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2025-06-30_20260910.npz",
+    "cache_sha256": "42b2ab7b42654db08d38fcaa9b055f1b7b78067741add1b8b9d83e3caad50d99"
+  },
+  {
+    "cutoff": "2025-06-30",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2025-06-30_20260911.npz",
+    "cache_sha256": "2a131c6a0d90c9b6fc92bd6db1fdb8e435dc44a471fc4e0d5168a27220da7f5e"
+  },
+  {
+    "cutoff": "2025-06-30",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2025-06-30_20260912.npz",
+    "cache_sha256": "a268343404d45fc592fe2a89b0efcb3d67195552e1ad6a68b392699f12683769"
+  },
+  {
+    "cutoff": "2025-09-30",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2025-09-30_20260910.npz",
+    "cache_sha256": "9ac0205f74adb1f1844b3c870297a8a816025aef86f7b35eabf54cdb40ba5da4"
+  },
+  {
+    "cutoff": "2025-09-30",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2025-09-30_20260911.npz",
+    "cache_sha256": "76dd9a26a41fa6c46267e3ed39561dfe21c414eb028158f71808b83bb5fa135d"
+  },
+  {
+    "cutoff": "2025-09-30",
+    "encoder_cutoff": "2024-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2025-09-30_20260912.npz",
+    "cache_sha256": "ef082b1c32a2a85ee70da92c120a1e9d7f150e1d35f5c3453b1a42efffccc53e"
+  },
+  {
+    "cutoff": "2026-03-31",
+    "encoder_cutoff": "2025-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2026-03-31_20260910.npz",
+    "cache_sha256": "ecc5bce18a45c37e2c657a5d47c0191f98ab8079588d8a66e5c1de099d72ae6b"
+  },
+  {
+    "cutoff": "2026-03-31",
+    "encoder_cutoff": "2025-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2026-03-31_20260911.npz",
+    "cache_sha256": "01a4619b7941030634c5f7642540d41b043eb4804260842d3f874c5d50fde68b"
+  },
+  {
+    "cutoff": "2026-03-31",
+    "encoder_cutoff": "2025-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2026-03-31_20260912.npz",
+    "cache_sha256": "c49ae81fffe1aeb25a63f9d5f0dabdf9f9aaa953fff41a57065a98573b622f86"
+  },
+  {
+    "cutoff": "2026-06-30",
+    "encoder_cutoff": "2025-12-31",
+    "seed": 20260910,
+    "cache_file": "research_v34\\cache\\training_2026-06-30_20260910.npz",
+    "cache_sha256": "7145db07f7fbadda12286e2c0eea4eaaedfcb414dd1edfd0eaa6b062769db713"
+  },
+  {
+    "cutoff": "2026-06-30",
+    "encoder_cutoff": "2025-12-31",
+    "seed": 20260911,
+    "cache_file": "research_v34\\cache\\training_2026-06-30_20260911.npz",
+    "cache_sha256": "1764076d5f6c5dcdb508803344bb5929ed5969d9de9b2cc1fdccb5b831716a70"
+  },
+  {
+    "cutoff": "2026-06-30",
+    "encoder_cutoff": "2025-12-31",
+    "seed": 20260912,
+    "cache_file": "research_v34\\cache\\training_2026-06-30_20260912.npz",
+    "cache_sha256": "a062118589eb1df25572c836b5c458f6a28718438a90ecd384bef7f7370309e5"
+  }
+]

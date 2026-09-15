@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-12T19:56:00.824253+00:00",
+  "reviewed_by": "Codex image inspection",
+  "checks": [
+    "Chinese titles and three panels legible",
+    "All six years and partial2026 label present",
+    "Yearly values match frozen metrics",
+    "Legend and footnote have separate nonoverlapping rows",
+    "Axes include all reported accuracy values"
+  ],
+  "artifacts": {
+    "annual_net_quarter_head_yearly.png": "d2fed59eb5d70e243d91564b9c0b6d43f94cfab0b4a371848eaf62556bb235db",
+    "annual_net_quarter_head_yearly.svg": "f5e44a6cc6bd73d42990668ea8c9da3b22611e3bb4f47dc8107dd2cdef90d09b",
+    "第三十二轮测试报告.md": "5203806d7747ea021649dca6d93067b9aedb15efcbefadb2f757e51bc8e79440"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-09-14T05:55:56.669358+00:00",
+  "observations": "Both PNGs visually inspected. Method counts sum to original denominators; cumulative versus rolling13 and all four mutually exclusive classes readable. Event chart merges shared source/state events and labels strictly pre-expiry monthly opportunities. Captions distinguish count feasibility, expiry equality, incomplete observation and shared evidence. No clipped text or problematic overlaps. PNG/SVG hashes match report manifest.",
+  "artifacts": {
+    "results/feasibility_by_method.png": "c11cb8095ef29e0384cd2cf704f970ba30ff1efcb804f05acebe1b68e6d2e705",
+    "results/feasibility_by_method.svg": "30e1d515ec48a4b75e56054973784f87eb15ab970251be0c760e1f2b94dd5012",
+    "results/feasibility_by_opportunity.png": "1988c29308b17114d24eb270cc4cc50250a5a2446af67760fc4762c6b191be61",
+    "results/feasibility_by_opportunity.svg": "caccf9655b5d39c8509d1c2009d13ddf12890ebb3dc72c8666f62aa2aa2a778a"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "report",
+  "started_utc": "2026-09-13T07:40:48.664581+00:00",
+  "finished_utc": "2026-09-13T07:43:48.006739+00:00",
+  "protocol_sha256": "6147fabb809e0e1b8584237dfad47b1e70474091435d3ac78dcf7a40bc8735e2",
+  "artifacts": {
+    "results\\第三十六轮诊断报告.md": "8f76e6c58788bdc1e6bac7a0cf07f4bf9feb51ba6d338985ff06411e4f04244c",
+    "results\\state_label_shift.png": "54ce37dd76c5b92e012a00fb820a97c505dffa4406eaad5ce2cfce4d109dbadb",
+    "results\\state_label_shift.svg": "46410d65a8ab427cf14698282dd390255744f9f1c1fe64345b78dbfa4197bfca",
+    "results\\state_forecast_2026.png": "7a695fac348f4efd458c4dcf98ec2bfd0a91b0b736d09f71d932c94ca8f5b2e0",
+    "results\\state_forecast_2026.svg": "7be4e33043f844e8e8f6eed625dc40636db12a1206476907905d5c0c9634b1ed",
+    "results\\layout_adjustment.json": "8a0537a8ee29243380dff5c631a2ec849abcae07989cf55ac16dba495593d4eb",
+    "results\\report_manifest_initial.json": "1696d37bfb4c0ade1c20c5070cb34d1d4610de511527159166f58dab000ec85f",
+    "results\\state_forecast_2026_initial.png": "7c9b7f1767c0871590bdee4aab4fb903fa9224fd5a4adacc6a8cb3fda2db4f1b",
+    "results\\state_forecast_2026_initial.svg": "db9231255e63208540a9db11c1512f1d244388d049b8b07cfcd518174ef62abf",
+    "results\\layout_render_helper.py.txt": "535e0fe99351fb34ac040e7d5ed01b8dae0ef77bf9777dd72343d7d023e546ab"
+  },
+  "presentation_amendment": "results/layout_adjustment.json"
+}

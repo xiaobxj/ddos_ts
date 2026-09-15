@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T04:47:57.979103+00:00",
+  "reviewed_by": "Codex image inspection",
+  "checks": [
+    "All3method panels and Chinese labels legible",
+    "Signs and probability-point units match diagnostic tables",
+    "Different regression counts displayed explicitly",
+    "Zero order term forR19 shown correctly",
+    "Annotations, titles, axes and footnotes do not overlap or clip"
+  ],
+  "artifacts": {
+    "probability_contributions_2026.png": "a1a380de3fe7b0eab15bda869607ccfc72bf019f9ef02a6af061fa7519870a58",
+    "probability_contributions_2026.svg": "d75a94e8f3f766a324a5fc3531fe84b2357abb667f6e5a7de11f6d5f15835e67",
+    "第三十三轮归因报告.md": "0dec6420ff33bd562856dcad16b9f9c97ace5bf82f40cc0ed5ab3716435f0777"
+  }
+}

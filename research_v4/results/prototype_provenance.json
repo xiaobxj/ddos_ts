@@ -1,0 +1,23 @@
+[
+  {
+    "year": 2024,
+    "source": "research\\results\\prototypes_2024.npz",
+    "sha256": "1fd5b2ae7fef2623c4c15b56133c845da553da5da4e4a56c480f85a1537cfb55",
+    "cutoff": "2023-12-31",
+    "mean_patch_count": 9.367239101717304
+  },
+  {
+    "year": 2025,
+    "source": "research\\results\\prototypes_2025.npz",
+    "sha256": "6216b4452b0889f362ba663b336d0d05466dcc24068323bebc1bb1992250a7a1",
+    "cutoff": "2024-12-31",
+    "mean_patch_count": 9.415059445178336
+  },
+  {
+    "year": 2026,
+    "source": "research\\results\\prototypes_2026.npz",
+    "sha256": "1372230922b0972d66a1e81381dda726d8d9e6188dc7cdf66fe8a6b3daef5e23",
+    "cutoff": "2025-12-31",
+    "mean_patch_count": 9.619286657859973
+  }
+]

@@ -1,0 +1,55 @@
+== test_model.py ==
+test_all_valid_matches_official_crossformer (__main__.MaskContracts.test_all_valid_matches_official_crossformer) ... ok
+test_invalid_inputs_have_zero_gradient (__main__.MaskContracts.test_invalid_inputs_have_zero_gradient) ... ok
+test_masked_value_and_geometry_perturbations_do_not_change_output (__main__.MaskContracts.test_masked_value_and_geometry_perturbations_do_not_change_output) ... ok
+test_one_valid_patch_survives_all_scales (__main__.MaskContracts.test_one_valid_patch_survives_all_scales) ... ok
+test_training_can_fit_small_synthetic_batch (__main__.MaskContracts.test_training_can_fit_small_synthetic_batch) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.297s
+
+OK
+
+== test_data.py ==
+test_fixed_packing_preserves_every_input_value (__main__.DataContracts.test_fixed_packing_preserves_every_input_value) ... ok
+test_future_changes_cannot_change_observed_transforms (__main__.DataContracts.test_future_changes_cannot_change_observed_transforms) ... ok
+test_permutation_preserves_length_multiset_and_masks (__main__.DataContracts.test_permutation_preserves_length_multiset_and_masks) ... ok
+test_tokenizer_coordinates_are_scaled_bits_not_numeric_ids (__main__.DataContracts.test_tokenizer_coordinates_are_scaled_bits_not_numeric_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.682s
+
+OK
+
+== verify_tokenizer.py ==
+Traceback (most recent call last):
+  File "D:\ddos_v3\research_v4\verify_tokenizer.py", line 13, in <module>
+    np.testing.assert_array_equal(inputs,np.load(CACHE/'tokenizer_inputs.npy')[indices])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\numpy\testing\_private\utils.py", line 1128, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         verbose=verbose, header='Arrays are not equal',
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         strict=strict)
+                         ^^^^^^^^^^^^^^
+  File "F:\aido\artifacts\experiments\mse_tv\regression\511520-recovery-backtest\20260826_memory_parity_r1\runtime\python313\Lib\site-packages\numpy\testing\_private\utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 3246 / 4500 (72.1%)
+First 5 mismatches are at indices:
+ [0, 0, 0]: 1.6693532466888428 (ACTUAL), 1.669355034828186 (DESIRED)
+ [0, 0, 2]: 1.6026242971420288 (ACTUAL), 1.6026250123977661 (DESIRED)
+ [0, 0, 3]: 1.508290410041809 (ACTUAL), 1.5082930326461792 (DESIRED)
+ [0, 0, 4]: 0.7442542910575867 (ACTUAL), 0.7442545294761658 (DESIRED)
+ [0, 1, 0]: 1.5088541507720947 (ACTUAL), 1.508855938911438 (DESIRED)
+Max absolute difference among violations: 1.04904175e-05
+Max relative difference among violations: 0.01171868
+ ACTUAL: array([[[ 1.669353,  1.623652,  1.602624,  1.50829 ,  0.744254,
+          0.      ],
+        [ 1.508854,  1.553787,  1.474254,  1.607575,  1.969257,...
+ DESIRED: array([[[ 1.669355,  1.623652,  1.602625,  1.508293,  0.744255,
+          0.      ],
+        [ 1.508856,  1.553787,  1.474255,  1.607577,  1.969257,...

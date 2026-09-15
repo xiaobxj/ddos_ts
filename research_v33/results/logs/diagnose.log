@@ -1,0 +1,8 @@
+   period                  method  n  annual_correct  quarter_head_correct  annual_accuracy  quarter_head_accuracy  annual_brier  quarter_head_brier  regression  recovery  stable_correct  stable_wrong
+year_2026          learned_market 30              14                    11         0.466667               0.366667      0.257942            0.264951           4         1              10            15
+year_2026 learned_order_extension 30              16                    10         0.533333               0.333333      0.257140            0.264678           7         1               9            13
+year_2026    learned_order_offset 30              16                    10         0.533333               0.333333      0.257098            0.264657           7         1               9            13
+year_2026 learned_vol_interaction 30              12                    10         0.400000               0.333333      0.257501            0.264634           2         0              10            18
+Diagnostic accounting complete; independent verification pending.
+
+EXIT_CODE=0

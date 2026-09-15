@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-13T07:46:38.815428+00:00",
+  "review": "Viewed heatmap and final forecast chart. Chinese labels, per-cell counts, sparse markers, legends and colorbar readable. Corrected right margin of forecast chart from1% to5% after original rightmost label touched boundary, then viewed again; final labels fully visible. Initial plot and manifest plus exact render helper archived. Values and source metrics unchanged.",
+  "files": {
+    "state_label_shift.png": "54ce37dd76c5b92e012a00fb820a97c505dffa4406eaad5ce2cfce4d109dbadb",
+    "state_label_shift.svg": "46410d65a8ab427cf14698282dd390255744f9f1c1fe64345b78dbfa4197bfca",
+    "state_forecast_2026.png": "7a695fac348f4efd458c4dcf98ec2bfd0a91b0b736d09f71d932c94ca8f5b2e0",
+    "state_forecast_2026.svg": "7be4e33043f844e8e8f6eed625dc40636db12a1206476907905d5c0c9634b1ed"
+  },
+  "layout_adjustment_sha256": "8a0537a8ee29243380dff5c631a2ec849abcae07989cf55ac16dba495593d4eb"
+}

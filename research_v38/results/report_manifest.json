@@ -1,0 +1,13 @@
+{
+  "phase": "report",
+  "started_utc": "2026-09-13T10:30:56.235878+00:00",
+  "finished_utc": "2026-09-13T10:30:56.855703+00:00",
+  "protocol_sha256": "23725f858a0d948681ce87330dd632d79bbbd83d7ca43841b3ee12091df52c7e",
+  "artifacts": {
+    "results\\第三十八轮诊断报告.md": "73c691131ef215e763aa04c72e5aa1db44c5729d545e60d0a97086533e0dbcc4",
+    "results\\residual_transfer.png": "c1c9f24609e31a737692828aea32a65706b0613ff6e4319421ad7311d95856a4",
+    "results\\residual_transfer.svg": "ca99480479ec92ef1dd1998e749161eb9efad1f5ea23c299073b5c0a98bd2632",
+    "results\\brier_accounting_2026.png": "6efa6e57b6368ca7f96df5250069b437338143e66d087cd22535a8b7cead447c",
+    "results\\brier_accounting_2026.svg": "c8511bc1ac16e5a5eab0d84c9db2d012822cd80ad9dd0efb3674b70ecc864611"
+  }
+}

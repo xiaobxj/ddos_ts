@@ -1,0 +1,4 @@
+Independent incoming records, seed math, evidence views, zero-sample handling and summaries PASS.
+R43 independent verification PASS, including 68 future-data isolation checks and 5754 unchanged old files.
+
+EXIT_CODE=0

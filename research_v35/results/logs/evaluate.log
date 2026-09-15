@@ -1,0 +1,27 @@
+             window                     history                  method  correct_directions   n  accuracy    brier  log_loss
+extension_2021_2023    fixed_transform_add_only learned_order_extension                  65 147  0.442177 0.270017  0.735240
+extension_2021_2023    fixed_transform_add_only    learned_order_offset                  63 147  0.428571 0.269953  0.735101
+extension_2021_2023    fixed_transform_add_only learned_vol_interaction                  64 147  0.435374 0.275498  0.746584
+extension_2021_2023 fixed_transform_remove_only learned_order_extension                  70 147  0.476190 0.275851  0.748582
+extension_2021_2023 fixed_transform_remove_only    learned_order_offset                  70 147  0.476190 0.275527  0.747833
+extension_2021_2023 fixed_transform_remove_only learned_vol_interaction                  71 147  0.482993 0.277543  0.751668
+extension_2021_2023     fixed_transform_step100 learned_order_extension                  63 147  0.428571 0.270540  0.736072
+extension_2021_2023     fixed_transform_step100    learned_order_offset                  63 147  0.428571 0.270237  0.735439
+extension_2021_2023     fixed_transform_step100 learned_vol_interaction                  68 147  0.462585 0.275556  0.746478
+extension_2021_2023           rolling5_annual20 learned_order_extension                  68 147  0.462585 0.276195  0.749569
+extension_2021_2023           rolling5_annual20    learned_order_offset                  68 147  0.462585 0.276108  0.749367
+extension_2021_2023           rolling5_annual20 learned_vol_interaction                  71 147  0.482993 0.277967  0.752923
+   recent_2024_2026    fixed_transform_add_only learned_order_extension                  64 125  0.512000 0.249564  0.692845
+   recent_2024_2026    fixed_transform_add_only    learned_order_offset                  66 125  0.528000 0.249608  0.692938
+   recent_2024_2026    fixed_transform_add_only learned_vol_interaction                  63 125  0.504000 0.246831  0.687192
+   recent_2024_2026 fixed_transform_remove_only learned_order_extension                  69 125  0.552000 0.255122  0.704727
+   recent_2024_2026 fixed_transform_remove_only    learned_order_offset                  69 125  0.552000 0.255108  0.704698
+   recent_2024_2026 fixed_transform_remove_only learned_vol_interaction                  69 125  0.552000 0.251797  0.697829
+   recent_2024_2026     fixed_transform_step100 learned_order_extension                  65 125  0.520000 0.253135  0.700368
+   recent_2024_2026     fixed_transform_step100    learned_order_offset                  67 125  0.536000 0.253329  0.700757
+   recent_2024_2026     fixed_transform_step100 learned_vol_interaction                  65 125  0.520000 0.250445  0.694781
+   recent_2024_2026           rolling5_annual20 learned_order_extension                  72 125  0.576000 0.249790  0.693613
+   recent_2024_2026           rolling5_annual20    learned_order_offset                  71 125  0.568000 0.249824  0.693671
+   recent_2024_2026           rolling5_annual20 learned_vol_interaction                  68 125  0.544000 0.246843  0.687439
+
+EXIT_CODE=0

@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-14T02:04:17.858124+00:00",
+  "numeric_facts": [
+    {
+      "cadence": "monthly",
+      "method": "learned_vol_interaction",
+      "accepted_sensitivity": [
+        21,
+        8,
+        3,
+        10
+      ]
+    },
+    {
+      "cadence": "monthly",
+      "method": "learned_order_extension",
+      "accepted_sensitivity": [
+        22,
+        10,
+        2,
+        10
+      ]
+    },
+    {
+      "cadence": "monthly",
+      "method": "learned_order_offset",
+      "accepted_sensitivity": [
+        22,
+        10,
+        2,
+        10
+      ]
+    },
+    {
+      "cadence": "quarterly",
+      "method": "learned_vol_interaction",
+      "accepted_sensitivity": [
+        6,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "cadence": "quarterly",
+      "method": "learned_order_extension",
+      "accepted_sensitivity": [
+        5,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "cadence": "quarterly",
+      "method": "learned_order_offset",
+      "accepted_sensitivity": [
+        5,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "cadence": "monthly",
+      "role": "training",
+      "counts": [
+        34,
+        1768,
+        1634,
+        134
+      ],
+      "mean_retained_added": [
+        48.06,
+        3.94
+      ],
+      "reuse_percent": 92.4
+    },
+    {
+      "cadence": "monthly",
+      "role": "validation",
+      "counts": [
+        34,
+        442,
+        308,
+        134
+      ],
+      "mean_retained_added": [
+        9.06,
+        3.94
+      ],
+      "reuse_percent": 69.7
+    },
+    {
+      "cadence": "quarterly",
+      "role": "training",
+      "counts": [
+        8,
+        416,
+        318,
+        98
+      ],
+      "mean_retained_added": [
+        39.75,
+        12.25
+      ],
+      "reuse_percent": 76.4
+    },
+    {
+      "cadence": "quarterly",
+      "role": "validation",
+      "counts": [
+        8,
+        104,
+        7,
+        97
+      ],
+      "mean_retained_added": [
+        0.88,
+        12.12
+      ],
+      "reuse_percent": 6.7
+    },
+    {
+      "run_start": "2022-10-31",
+      "run_end": "2022-11-30",
+      "counts": [
+        2,
+        10,
+        5,
+        5
+      ]
+    },
+    {
+      "run_start": "2024-07-31",
+      "run_end": "2024-11-30",
+      "counts": [
+        5,
+        41,
+        14,
+        27
+      ]
+    },
+    {
+      "cadence": "monthly",
+      "cutoff": "2022-11-30",
+      "state": "negative_high",
+      "validation_n": 6,
+      "metric_flip_count": 0,
+      "future_n": 3,
+      "future_brier": 0.007113
+    },
+    {
+      "cadence": "monthly",
+      "cutoff": "2024-05-31",
+      "state": "nonnegative_low",
+      "validation_n": 8,
+      "metric_flip_count": 0,
+      "future_n": 1,
+      "future_brier": 0.004485
+    },
+    {
+      "cadence": "quarterly",
+      "cutoff": "2024-03-31",
+      "state": "negative_low",
+      "validation_n": 7,
+      "metric_flip_count": 4,
+      "future_n": 3,
+      "future_brier": -0.036977
+    }
+  ],
+  "checks": [
+    "All sensitivity categories forprimarymethods atbothcadences",
+    "Distinct metricflip versus mechanicalsupportfailure",
+    "Ready-pair overlapcounts andfractions",
+    "Repeated validation runs accounting",
+    "State supportattrition identities andduplicateevent caveat",
+    "Stable-but-harmful andfragile-but-helpful counterexamples",
+    "Nonmonotone retrospective cohortoutcomes",
+    "No newaccuracy,pvalues,blindholdout orcandidatepolicy claim",
+    "Independentcheckcounts andunchangedreporthashes",
+    "Bothfigures visuallyinspected"
+  ],
+  "artifacts": {
+    "results/结果解读与下一步.md": "b22c68dc3f280dc7bffa241edd8fc9abea2c2f601f851474b0e996d4baac2441",
+    "results/visual_review.json": "d8830d44620951c67eac8ca7c84793ea2fc012bb12b2ac85997110c0d500a45f"
+  }
+}
